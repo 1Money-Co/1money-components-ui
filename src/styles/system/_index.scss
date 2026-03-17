@@ -1,4 +1,4 @@
-// System entrypoint — responsive, variant DSL, and style compiler.
-@forward './breakpoints';
-@forward './variants';
-@forward './mixin' show om-sx;
+// System entrypoint — sx engine and system-owned helpers.
+@forward './props';
+@forward './sx';
+@forward './public';

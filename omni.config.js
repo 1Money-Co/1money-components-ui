@@ -8,7 +8,7 @@ module.exports = {
   type: 'component-react', // Project type, do not modify
 
   dev: {
-    port: 6205, // Dev server port
+    port: 6206, // Dev server port
     host: 'localhost', // Dev server host
     serverType: 'storybook' // Dev server type
   },

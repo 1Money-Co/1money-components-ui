@@ -1,0 +1,37 @@
+// Theme domain mixins — public wrappers around theme-owned typography and breakpoints.
+@use './breakpoints' as breakpoints;
+@use './functions' as internal;
+
+@mixin typography($category, $size, $strong: false) {
+  @include internal.om-typography($category, $size, $strong: $strong);
+}
+
+@mixin up($bp-name) {
+  @include breakpoints.om-up($bp-name) {
+    @content;
+  }
+}
+
+@mixin down($bp-name) {
+  @include breakpoints.om-down($bp-name) {
+    @content;
+  }
+}
+
+@mixin between($min-bp, $max-bp) {
+  @include breakpoints.om-between($min-bp, $max-bp) {
+    @content;
+  }
+}
+
+@mixin only($bp-name) {
+  @include breakpoints.om-only($bp-name) {
+    @content;
+  }
+}
+
+@mixin respond($bp-name) {
+  @include breakpoints.om-respond($bp-name) {
+    @content;
+  }
+}

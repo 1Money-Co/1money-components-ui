@@ -4,8 +4,8 @@
 @use 'sass:meta';
 @use 'sass:string';
 @use '../tokens' as tokens;
-@use '../theme' as theme;
-@use './breakpoints' as breakpoints;
+@use '../theme/functions' as theme-functions;
+@use '../theme/breakpoints' as breakpoints;
 @use './props' as props;
 
 @function om-alias-value($css-prop, $value) {
@@ -25,7 +25,7 @@
     @return om-alias-value(list.nth(map.get($config, css), 1), $value);
   }
 
-  @return theme.om-token(map.get($config, scale), $value);
+  @return theme-functions.om-token(map.get($config, scale), $value);
 }
 
 @mixin om-apply-system-prop($prop, $value) {

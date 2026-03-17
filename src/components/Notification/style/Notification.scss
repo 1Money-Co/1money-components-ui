@@ -1,43 +1,44 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
 
 $component: 'notification-beta';
-$notification-beta-variant-schema: om-variant-schema($component, icon-color, icon-bg);
+$notification-beta-variant-schema: variants.om-variant-schema($component, icon-color, icon-bg);
 $notification-beta-info-variant: (
-  icon-color: om-icon('brand'),
-  icon-bg: om-bg('brand-tertiary-hover'),
+  icon-color: theme.palette(icon, 'brand'),
+  icon-bg: theme.palette(bg, 'brand-tertiary-hover'),
 );
 $notification-beta-variants: (
   'info': $notification-beta-info-variant,
   'success': (
-    icon-color: om-icon('positive'),
-    icon-bg: om-bg('positive-tertiary-hover'),
+    icon-color: theme.palette(icon, 'positive'),
+    icon-bg: theme.palette(bg, 'positive-tertiary-hover'),
   ),
   'warning': (
-    icon-color: om-icon('warning'),
-    icon-bg: om-bg('warning-secondary-hover'),
+    icon-color: theme.palette(icon, 'warning'),
+    icon-bg: theme.palette(bg, 'warning-secondary-hover'),
   ),
   'error': (
-    icon-color: om-icon('danger'),
-    icon-bg: om-bg('danger-tertiary-hover'),
+    icon-color: theme.palette(icon, 'danger'),
+    icon-bg: theme.palette(bg, 'danger-tertiary-hover'),
   ),
 );
 
-.#{$prefix}-#{$component} {
-  @include om-variant-default($notification-beta-variants, 'info', $notification-beta-variant-schema);
+.#{theme.$prefix}-#{$component} {
+  @include variants.om-variant-default($notification-beta-variants, 'info', $notification-beta-variant-schema);
 
   display: flex;
-  gap: om-gap(200);
+  gap: theme.spacing(gap, 200);
   align-items: flex-start;
-  padding: om-component-padding(300);
-  background-color: om-bg('default-secondary');
-  border-radius: om-radius(300);
-  box-shadow: om-shadow(200);
+  padding: theme.spacing(component-padding, 300);
+  background-color: theme.palette(bg, 'default-secondary');
+  border-radius: theme.shape(300);
+  box-shadow: theme.shadows(200);
 
   // ── Content wrapper (icon + text) ──
   &-content-wrapper {
     display: flex;
     flex: 1 0 0;
-    gap: om-gap(300);
+    gap: theme.spacing(gap, 300);
     align-items: flex-start;
     min-width: 0;
   }
@@ -55,15 +56,15 @@ $notification-beta-variants: (
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    width: om-component-height('sm');
-    height: om-component-height('sm');
+    width: theme.sizing(component-height, 'sm');
+    height: theme.sizing(component-height, 'sm');
     color: var(--om-notification-beta-icon-color);
     background-color: var(--om-notification-beta-icon-bg);
-    border-radius: om-radius('full');
+    border-radius: theme.shape('full');
 
     svg {
-      width: om-spacing(400);
-      height: om-spacing(400);
+      width: theme.spacing(scale, 400);
+      height: theme.spacing(scale, 400);
     }
   }
 
@@ -72,32 +73,32 @@ $notification-beta-variants: (
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
-    gap: om-gap(100);
+    gap: theme.spacing(gap, 100);
     align-items: flex-start;
     min-width: 0;
-    padding-top: om-spacing(200);
+    padding-top: theme.spacing(scale, 200);
   }
 
   // ── Title ──
   &-title {
-    @include om-typography(title, sm);
+    @include theme.typography(title, sm);
 
-    color: om-text('default-secondary');
+    color: theme.palette(text, 'default-secondary');
   }
 
   // ── Body ──
   &-body {
-    @include om-typography(body, md);
+    @include theme.typography(body, md);
 
-    color: om-text('default-secondary');
+    color: theme.palette(text, 'default-secondary');
   }
 
   // ── Link ──
   &-link {
-    @include om-typography(body, md, $strong: true);
+    @include theme.typography(body, md, $strong: true);
 
     padding: 0;
-    color: om-text('brand');
+    color: theme.palette(text, 'brand');
     text-decoration: underline;
     background: none;
     border: none;
@@ -115,21 +116,21 @@ $notification-beta-variants: (
     align-items: center;
     justify-content: center;
     padding: 0;
-    color: om-icon('neutral-secondary');
+    color: theme.palette(icon, 'neutral-secondary');
     background: none;
     border: none;
     cursor: pointer;
 
     svg {
-      width: om-spacing(400);
-      height: om-spacing(400);
+      width: theme.spacing(scale, 400);
+      height: theme.spacing(scale, 400);
     }
 
     &:hover {
-      color: om-icon('neutral');
+      color: theme.palette(icon, 'neutral');
     }
   }
 
   // ── Status variants — icon background + icon color ──
-  @include om-variant-classes($notification-beta-variants, $notification-beta-variant-schema, $default: 'info');
+  @include variants.om-variant-classes($notification-beta-variants, $notification-beta-variant-schema, $default: 'info');
 }

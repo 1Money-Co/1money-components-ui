@@ -102,10 +102,17 @@ Consumers should import `@1money/components-ui/index.css`.
 When building or updating components inside this repository, SCSS files should import the internal style API:
 
 ```scss
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 ```
 
-The design token and utility system is documented in `src/styles/README.md`.
+The style system follows a layered boundary model:
+
+- `theme/` = design-domain API
+- `system/` = `sx` engine
+- `recipes/` = library recipe helpers
+- `public/` = consumer-facing facade exported by `src/styles/_api.scss`
+
+Component SCSS should not import `system/*` or `tokens/*` directly. `theme/functions` is reserved for rare library-only reader access such as `om-line-height(...)`. The design token and utility system is documented in `src/styles/README.md`.
 
 ## Development
 
@@ -143,7 +150,7 @@ Build output is generated in:
 ```text
 src/
 ├── components/   # Component source
-├── styles/       # SCSS tokens, theme helpers, utilities
+├── styles/       # SCSS public/theme/system/recipes/internal layers
 └── index.ts      # Root library exports
 ```
 

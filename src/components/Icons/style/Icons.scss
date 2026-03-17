@@ -1,8 +1,8 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 
 $component: 'icons';
 
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   &-wrapper {
     display: inline-flex;
     align-items: center;
@@ -58,24 +58,24 @@ $component: 'icons';
 
 
 
-.#{$prefix}-#{$component}-hover-wrapper {
+.#{theme.$prefix}-#{$component}-hover-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
-  background-color: om-bg(default-secondary);
-  border-radius: om-radius(200);
+  background-color: theme.palette(bg, default-secondary);
+  border-radius: theme.shape(200);
 
   &:hover {
-    background-color: om-bg(default-secondary-hover);
+    background-color: theme.palette(bg, default-secondary-hover);
   }
 
   &-disabled {
     cursor: not-allowed;
-    opacity: om-opacity(disabled);
+    opacity: theme.opacity(disabled);
 
     &:hover {
-      background-color: om-bg(default-secondary);
+      background-color: theme.palette(bg, default-secondary);
     }
   }
 }

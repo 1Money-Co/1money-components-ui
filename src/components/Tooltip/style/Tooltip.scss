@@ -1,36 +1,36 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 
 $component: 'tooltip-beta';
-$cls: #{$prefix}-#{$component};
+$cls: #{theme.$prefix}-#{$component};
 
 // ── Override react-tooltip defaults ──
 .#{$cls}[role='tooltip'] {
   min-width: 48px;
   max-width: 400px;
-  padding: om-spacing(200) om-spacing(300);
-  color: om-text('on-neutral');
-  background-color: om-bg('neutral');
-  border-radius: om-radius('200');
-  box-shadow: om-shadow('100');
+  padding: theme.spacing(scale, 200) theme.spacing(scale, 300);
+  color: theme.palette(text, 'on-neutral');
+  background-color: theme.palette(bg, 'neutral');
+  border-radius: theme.shape('200');
+  box-shadow: theme.shadows('100');
   opacity: 1;
 
   // ── Title ──
   .#{$cls}-title {
-    @include om-typography(title, sm, $strong: true);
+    @include theme.typography(title, sm, $strong: true);
   }
 
   // ── Body ──
   .#{$cls}-body {
-    @include om-typography(body, sm, $strong: true);
+    @include theme.typography(body, sm, $strong: true);
   }
 
   // ── Title + Body gap ──
   .#{$cls}-title + .#{$cls}-body {
-    margin-top: om-spacing(100);
+    margin-top: theme.spacing(scale, 100);
   }
 
   // ── Arrow ──
   .#{$cls}-arrow {
-    background-color: om-bg('neutral');
+    background-color: theme.palette(bg, 'neutral');
   }
 }

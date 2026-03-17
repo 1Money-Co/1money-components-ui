@@ -1,3 +1,6 @@
-// Theme entrypoint — re-exports scales and theme functions.
+// Theme entrypoint — internal barrel for theme domain implementation.
 @forward './scales';
 @forward './functions';
+@forward './breakpoints';
+@forward './values';
+@forward './mixins';

@@ -1,10 +1,10 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 
 $component: 'flex';
 $flex-gap-fallback: 0px;
 $flex-var-gap: '--om-flex-gap';
 
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   display: flex;
   gap: var(#{$flex-var-gap}, #{$flex-gap-fallback});
 

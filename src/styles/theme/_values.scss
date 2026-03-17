@@ -1,0 +1,68 @@
+// Theme domain value API — stable token accessors exposed through the public facade.
+@use 'sass:list';
+@use './functions' as internal;
+@use '../tokens' as tokens;
+
+$-palette-domains: ('bg', 'text', 'icon', 'border');
+$-spacing-domains: ('scale', 'gap', 'component-padding', 'section-padding');
+$-sizing-domains: ('scale', 'component-height');
+
+@function palette($domain, $token, $state: null) {
+  $normalized-domain: '#{$domain}';
+  $normalized-token: '#{$token}';
+  $key: if($state == null, $normalized-token, '#{$normalized-token}-#{$state}');
+
+  @if not list.index($-palette-domains, $normalized-domain) {
+    @error 'theme.palette(): invalid domain "#{$normalized-domain}". Allowed: #{$-palette-domains}.';
+  }
+
+  @return internal.om-token($normalized-domain, $key);
+}
+
+@function spacing($domain, $key) {
+  $normalized-domain: '#{$domain}';
+
+  @if not list.index($-spacing-domains, $normalized-domain) {
+    @error 'theme.spacing(): invalid domain "#{$normalized-domain}". Allowed: #{$-spacing-domains}.';
+  }
+
+  @if $normalized-domain == 'scale' {
+    @return internal.om-token(spacing, '#{$key}');
+  }
+
+  @if $normalized-domain == 'gap' {
+    @return internal.om-gap($key);
+  }
+
+  @if $normalized-domain == 'component-padding' {
+    @return internal.om-component-padding($key);
+  }
+
+  @return internal.om-section-padding($key);
+}
+
+@function shape($key) {
+  @return internal.om-token(radius, '#{$key}');
+}
+
+@function shadows($key) {
+  @return internal.om-token(shadow, '#{$key}');
+}
+
+@function sizing($domain, $key) {
+  $normalized-domain: '#{$domain}';
+
+  @if not list.index($-sizing-domains, $normalized-domain) {
+    @error 'theme.sizing(): invalid domain "#{$normalized-domain}". Allowed: #{$-sizing-domains}.';
+  }
+
+  @if $normalized-domain == 'scale' {
+    @return internal.om-token(sizing, '#{$key}');
+  }
+
+  @return internal.om-token(component-height, '#{$key}');
+}
+
+@function opacity($key) {
+  @return tokens.om-opacity($key);
+}

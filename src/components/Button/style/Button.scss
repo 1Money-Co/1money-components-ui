@@ -1,85 +1,86 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
 
 $component: 'button-beta';
-$button-beta-variant-schema: om-variant-schema(
+$button-beta-variant-schema: variants.om-variant-schema(
   $component, text, bg, hover-bg, disabled-text, disabled-bg, spinner-stroke
 );
 $button-beta-primary-variant: (
-  text: om-text('on-neutral'),
-  bg: om-bg('brand'),
-  hover-bg: om-bg('brand-hover'),
-  disabled-text: om-text('disabled-white'),
-  disabled-bg: om-bg('disabled-brand'),
-  spinner-stroke: om-text('on-neutral'),
+  text: theme.palette(text, 'on-neutral'),
+  bg: theme.palette(bg, 'brand'),
+  hover-bg: theme.palette(bg, 'brand-hover'),
+  disabled-text: theme.palette(text, 'disabled-white'),
+  disabled-bg: theme.palette(bg, 'disabled-brand'),
+  spinner-stroke: theme.palette(text, 'on-neutral'),
 );
 $button-beta-variants: (
   'primary': $button-beta-primary-variant,
   'secondary': (
-    text: om-text('brand'),
-    bg: om-bg('brand-secondary'),
-    hover-bg: om-bg('brand-secondary-hover'),
-    disabled-text: om-text('brand-secondary'),
-    disabled-bg: om-bg('brand-tertiary'),
-    spinner-stroke: om-text('brand'),
+    text: theme.palette(text, 'brand'),
+    bg: theme.palette(bg, 'brand-secondary'),
+    hover-bg: theme.palette(bg, 'brand-secondary-hover'),
+    disabled-text: theme.palette(text, 'brand-secondary'),
+    disabled-bg: theme.palette(bg, 'brand-tertiary'),
+    spinner-stroke: theme.palette(text, 'brand'),
   ),
   'grey': (
-    text: om-text('default'),
-    bg: om-bg('default-secondary'),
-    hover-bg: om-bg('default-secondary'),
-    disabled-text: om-text('disabled'),
-    disabled-bg: om-bg('disabled'),
-    spinner-stroke: om-text('default'),
+    text: theme.palette(text, 'default'),
+    bg: theme.palette(bg, 'default-secondary'),
+    hover-bg: theme.palette(bg, 'default-secondary'),
+    disabled-text: theme.palette(text, 'disabled'),
+    disabled-bg: theme.palette(bg, 'disabled'),
+    spinner-stroke: theme.palette(text, 'default'),
   ),
   'black': (
-    text: om-text('on-neutral'),
-    bg: om-bg('neutral'),
-    hover-bg: om-bg('neutral-hover'),
-    disabled-text: om-text('disabled-white'),
-    disabled-bg: om-bg('disabled-black'),
-    spinner-stroke: om-text('on-neutral'),
+    text: theme.palette(text, 'on-neutral'),
+    bg: theme.palette(bg, 'neutral'),
+    hover-bg: theme.palette(bg, 'neutral-hover'),
+    disabled-text: theme.palette(text, 'disabled-white'),
+    disabled-bg: theme.palette(bg, 'disabled-black'),
+    spinner-stroke: theme.palette(text, 'on-neutral'),
   ),
   'white': (
-    text: om-text('default'),
-    bg: om-bg('default'),
-    hover-bg: om-bg('default-hover'),
-    disabled-text: om-text('disabled'),
-    disabled-bg: om-bg('disabled'),
-    spinner-stroke: om-text('default'),
+    text: theme.palette(text, 'default'),
+    bg: theme.palette(bg, 'default'),
+    hover-bg: theme.palette(bg, 'default-hover'),
+    disabled-text: theme.palette(text, 'disabled'),
+    disabled-bg: theme.palette(bg, 'disabled'),
+    spinner-stroke: theme.palette(text, 'default'),
   ),
   'danger': (
-    text: om-text('danger'),
-    bg: om-bg('danger-secondary'),
-    hover-bg: om-bg('danger-secondary-hover'),
-    disabled-text: om-text('danger-tertiary'),
-    disabled-bg: om-bg('danger-tertiary'),
-    spinner-stroke: om-text('danger'),
+    text: theme.palette(text, 'danger'),
+    bg: theme.palette(bg, 'danger-secondary'),
+    hover-bg: theme.palette(bg, 'danger-secondary-hover'),
+    disabled-text: theme.palette(text, 'danger-tertiary'),
+    disabled-bg: theme.palette(bg, 'danger-tertiary'),
+    spinner-stroke: theme.palette(text, 'danger'),
   ),
   'warning': (
-    text: om-text('default'),
-    bg: om-bg('warning'),
-    hover-bg: om-bg('warning-hover'),
-    disabled-text: om-text('disabled'),
-    disabled-bg: om-bg('warning-secondary'),
-    spinner-stroke:x om-text('default'),
+    text: theme.palette(text, 'default'),
+    bg: theme.palette(bg, 'warning'),
+    hover-bg: theme.palette(bg, 'warning-hover'),
+    disabled-text: theme.palette(text, 'disabled'),
+    disabled-bg: theme.palette(bg, 'warning-secondary'),
+    spinner-stroke: theme.palette(text, 'default'),
   ),
 );
 
-.#{$prefix}-#{$component} {
-  @include om-variant-default($button-beta-variants, 'primary', $button-beta-variant-schema);
+.#{theme.$prefix}-#{$component} {
+  @include variants.om-variant-default($button-beta-variants, 'primary', $button-beta-variant-schema);
 
   display: inline-flex;
-  gap: om-gap(200);
+  gap: theme.spacing(gap, 200);
   align-items: center;
   justify-content: center;
-  padding: om-component-padding(400);
+  padding: theme.spacing(component-padding, 400);
   color: var(--om-button-beta-text);
   background-color: var(--om-button-beta-bg);
   border: none;
-  border-radius: om-radius(300);
+  border-radius: theme.shape(300);
   box-shadow: none;
   cursor: pointer;
 
-  @include om-typography(label, lg);
+  @include theme.typography(label, lg);
 
   &.p-disabled {
     color: var(--om-button-beta-disabled-text);
@@ -93,17 +94,17 @@ $button-beta-variants: (
 
   // ── Sizes ──
   &-medium {
-    padding: om-component-padding(300);
-    border-radius: om-radius(300);
+    padding: theme.spacing(component-padding, 300);
+    border-radius: theme.shape(300);
 
-    @include om-typography(label, md);
+    @include theme.typography(label, md);
   }
 
   &-small {
-    padding: om-component-padding(200);
-    border-radius: om-radius(200);
+    padding: theme.spacing(component-padding, 200);
+    border-radius: theme.shape(200);
 
-    @include om-typography(label, sm);
+    @include theme.typography(label, sm);
   }
 
   // ── Icon slots ──
@@ -118,7 +119,7 @@ $button-beta-variants: (
   &-loading-icon {
     width: 20px;
     height: 20px;
-    margin-right: om-spacing(200);
+    margin-right: theme.spacing(scale, 200);
     margin-left: 0;
 
     &-medium {
@@ -137,5 +138,5 @@ $button-beta-variants: (
   }
 
   // ── Color variants ──
-  @include om-variant-classes($button-beta-variants, $button-beta-variant-schema, $default: 'primary');
+  @include variants.om-variant-classes($button-beta-variants, $button-beta-variant-schema, $default: 'primary');
 }

@@ -1,10 +1,11 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
+@use '@/styles/theme/functions' as theme-internal;
 
 $component: 'checkbox-beta';
 
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   display: inline-flex;
-  gap: om-gap(300);
+  gap: theme.spacing(gap, 300);
   align-items: flex-start;
   cursor: pointer;
 
@@ -13,7 +14,7 @@ $component: 'checkbox-beta';
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    height: om-line-height(body, lg);
+    height: theme-internal.om-line-height(body, lg);
   }
 
   // ── PrimeReact checkbox overrides ──
@@ -22,12 +23,12 @@ $component: 'checkbox-beta';
       display: flex;
       align-items: center;
       justify-content: center;
-      width: om-spacing(400);
-      height: om-spacing(400);
+      width: theme.spacing(scale, 400);
+      height: theme.spacing(scale, 400);
       overflow: hidden;
-      background-color: om-bg('default');
-      border: 1px solid om-border('default-secondary');
-      border-radius: om-radius(100);
+      background-color: theme.palette(bg, 'default');
+      border: 1px solid theme.palette(border, 'default-secondary');
+      border-radius: theme.shape(100);
       transition:
         background-color 0.2s,
         border-color 0.2s;
@@ -36,43 +37,43 @@ $component: 'checkbox-beta';
       svg {
         width: 14px;
         height: 14px;
-        color: om-icon('on-brand');
+        color: theme.palette(icon, 'on-brand');
         fill: currentcolor;
       }
     }
 
     &.p-checkbox-checked .p-checkbox-box,
     &.p-highlight .p-checkbox-box {
-      background-color: om-bg('brand');
-      border-color: om-bg('brand');
+      background-color: theme.palette(bg, 'brand');
+      border-color: theme.palette(bg, 'brand');
     }
 
     &.p-checkbox-checked:not(.p-disabled) .p-checkbox-box:hover,
     &.p-highlight:not(.p-disabled) .p-checkbox-box:hover {
-      background-color: om-bg('brand-hover');
-      border-color: om-bg('brand-hover');
+      background-color: theme.palette(bg, 'brand-hover');
+      border-color: theme.palette(bg, 'brand-hover');
     }
 
     &:not(.p-checkbox-checked, .p-highlight, .p-disabled)
       .p-checkbox-box:hover {
-      border-color: om-border('default-tertiary');
+      border-color: theme.palette(border, 'default-tertiary');
     }
 
     // ── Disabled ──
     &.p-disabled .p-checkbox-box {
-      background-color: om-bg('disabled');
-      border-color: om-border('disabled');
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
       cursor: not-allowed;
 
       svg {
-        color: om-icon('disabled');
+        color: theme.palette(icon, 'disabled');
       }
     }
 
     &.p-checkbox-checked.p-disabled .p-checkbox-box,
     &.p-highlight.p-disabled .p-checkbox-box {
-      background-color: om-bg('disabled');
-      border-color: om-border('disabled');
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
     }
   }
 
@@ -85,34 +86,34 @@ $component: 'checkbox-beta';
   }
 
   &-label {
-    @include om-typography(body, lg, $strong: true);
+    @include theme.typography(body, lg, $strong: true);
 
-    color: om-text('default');
+    color: theme.palette(text, 'default');
   }
 
   &-description {
-    @include om-typography(body, md, $strong: true);
+    @include theme.typography(body, md, $strong: true);
 
-    color: om-text('default-tertiary');
+    color: theme.palette(text, 'default-tertiary');
   }
 
   // ── Disabled state (on root) ──
   &:has(.p-disabled) {
     cursor: not-allowed;
 
-    .#{$prefix}-#{$component}-label,
-    .#{$prefix}-#{$component}-description {
-      color: om-text('disabled');
+    .#{theme.$prefix}-#{$component}-label,
+    .#{theme.$prefix}-#{$component}-description {
+      color: theme.palette(text, 'disabled');
     }
   }
 
   // ── Direction: right ──
   &-right {
-    .#{$prefix}-#{$component}-box-wrapper {
+    .#{theme.$prefix}-#{$component}-box-wrapper {
       order: 1;
     }
 
-    .#{$prefix}-#{$component}-content {
+    .#{theme.$prefix}-#{$component}-content {
       order: 0;
     }
   }

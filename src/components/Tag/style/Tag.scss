@@ -1,65 +1,66 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
 
 $component: 'tag-beta';
 
 // ── Variant DSL ──
-$tag-beta-variant-schema: om-variant-schema($component, text, bg);
+$tag-beta-variant-schema: variants.om-variant-schema($component, text, bg);
 $tag-beta-variants: (
   'neutral': (
-    text: om-text('default-tertiary'),
-    bg: om-bg('neutral-tertiary'),
+    text: theme.palette(text, 'default-tertiary'),
+    bg: theme.palette(bg, 'neutral-tertiary'),
   ),
   'warning': (
-    text: om-text('warning'),
-    bg: om-bg('warning-secondary-hover'),
+    text: theme.palette(text, 'warning'),
+    bg: theme.palette(bg, 'warning-secondary-hover'),
   ),
   'negative': (
-    text: om-text('danger'),
-    bg: om-bg('danger-tertiary-hover'),
+    text: theme.palette(text, 'danger'),
+    bg: theme.palette(bg, 'danger-tertiary-hover'),
   ),
   'success': (
-    text: om-text('positive'),
-    bg: om-bg('positive-tertiary-hover'),
+    text: theme.palette(text, 'positive'),
+    bg: theme.palette(bg, 'positive-tertiary-hover'),
   ),
   'recommended': (
-    text: om-text('brand'),
-    bg: om-bg('brand-tertiary'),
+    text: theme.palette(text, 'brand'),
+    bg: theme.palette(bg, 'brand-tertiary'),
   ),
   'black': (
-    text: om-text('default'),
-    bg: om-bg('default-tertiary'),
+    text: theme.palette(text, 'default'),
+    bg: theme.palette(bg, 'default-tertiary'),
   ),
 );
 
-.#{$prefix}-#{$component} {
-  @include om-variant-default($tag-beta-variants, 'neutral', $tag-beta-variant-schema);
+.#{theme.$prefix}-#{$component} {
+  @include variants.om-variant-default($tag-beta-variants, 'neutral', $tag-beta-variant-schema);
 
   display: inline-flex;
-  gap: om-gap(100);
+  gap: theme.spacing(gap, 100);
   align-items: center;
   justify-content: center;
-  padding: om-spacing(100) om-component-padding(200);
+  padding: theme.spacing(scale, 100) theme.spacing(component-padding, 200);
   color: var(--om-tag-beta-text);
   background-color: var(--om-tag-beta-bg);
   border: none;
-  border-radius: om-radius('full');
+  border-radius: theme.shape('full');
   cursor: default;
 
-  @include om-typography(body, sm, $strong: true);
+  @include theme.typography(body, sm, $strong: true);
 
   // ── Size: medium ──
   &-medium {
-    padding: om-component-padding('050') om-component-padding(200);
+    padding: theme.spacing(component-padding, '050') theme.spacing(component-padding, 200);
 
-    @include om-typography(body, sm, $strong: true);
+    @include theme.typography(body, sm, $strong: true);
   }
 
   // ── Size: small ──
   &-small {
-    gap: om-gap('050');
-    padding: 0 om-spacing(100);
+    gap: theme.spacing(gap, '050');
+    padding: 0 theme.spacing(scale, 100);
 
-    @include om-typography(label, xs);
+    @include theme.typography(label, xs);
   }
 
   // ── Icon ──
@@ -85,10 +86,10 @@ $tag-beta-variants: (
     cursor: pointer;
 
     &:hover {
-      opacity: om-opacity('disabled-heavy');
+      opacity: theme.opacity('disabled-heavy');
     }
   }
 
   // ── Color variants ──
-  @include om-variant-classes($tag-beta-variants, $tag-beta-variant-schema, $default: 'neutral');
+  @include variants.om-variant-classes($tag-beta-variants, $tag-beta-variant-schema, $default: 'neutral');
 }

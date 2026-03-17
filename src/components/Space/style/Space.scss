@@ -1,11 +1,11 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 
 $component: 'space';
 $space-gap-x: '--om-space-gap-x';
 $space-gap-y: '--om-space-gap-y';
 $space-gap-fallback: 8px;
 
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   display: inline-flex;
   gap: var(#{$space-gap-y}, #{$space-gap-fallback}) var(#{$space-gap-x}, #{$space-gap-fallback});
 

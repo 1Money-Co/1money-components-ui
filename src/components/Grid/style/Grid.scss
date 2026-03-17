@@ -1,4 +1,4 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 @use 'sass:math';
 
 $component-row: 'grid-row';
@@ -28,7 +28,7 @@ $grid-var-col-flex-md: '--om-grid-col-flex-md';
 $grid-var-col-flex-lg: '--om-grid-col-flex-lg';
 $grid-justify-fallback: flex-start;
 
-.#{$prefix}-#{$component-row} {
+.#{theme.$prefix}-#{$component-row} {
   display: flex;
   flex-wrap: wrap;
   justify-content: var(#{$grid-var-justify}, #{$grid-justify-fallback});
@@ -81,25 +81,25 @@ $grid-justify-fallback: flex-start;
   }
 }
 
-@include om-down(lg) {
-  .#{$prefix}-#{$component-row} {
+@include theme.down(lg) {
+  .#{theme.$prefix}-#{$component-row} {
     justify-content: var(#{$grid-var-justify-lg}, var(#{$grid-var-justify}, #{$grid-justify-fallback}));
   }
 }
 
-@include om-down(md) {
-  .#{$prefix}-#{$component-row} {
+@include theme.down(md) {
+  .#{theme.$prefix}-#{$component-row} {
     justify-content: var(#{$grid-var-justify-md}, var(#{$grid-var-justify}, #{$grid-justify-fallback}));
   }
 }
 
-@include om-down(sm) {
-  .#{$prefix}-#{$component-row} {
+@include theme.down(sm) {
+  .#{theme.$prefix}-#{$component-row} {
     justify-content: var(#{$grid-var-justify-sm}, var(#{$grid-var-justify}, #{$grid-justify-fallback}));
   }
 }
 
-.#{$prefix}-#{$component-col} {
+.#{theme.$prefix}-#{$component-col} {
   position: relative;
   flex: var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback});
   max-width: $grid-col-max-width;
@@ -110,24 +110,24 @@ $grid-justify-fallback: flex-start;
 
 @mixin make-col-classes($infix: '') {
   @for $i from $grid-index-start through $grid-columns {
-    .#{$prefix}-#{$component-col}#{$infix}-#{$i} {
+    .#{theme.$prefix}-#{$component-col}#{$infix}-#{$i} {
       flex: 0 0 math.percentage(math.div($i, $grid-columns));
       max-width: math.percentage(math.div($i, $grid-columns));
     }
 
-    .#{$prefix}-#{$component-col}#{$infix}-offset-#{$i} {
+    .#{theme.$prefix}-#{$component-col}#{$infix}-offset-#{$i} {
       margin-left: math.percentage(math.div($i, $grid-columns));
     }
 
-    .#{$prefix}-#{$component-col}#{$infix}-order-#{$i} {
+    .#{theme.$prefix}-#{$component-col}#{$infix}-order-#{$i} {
       order: $i;
     }
 
-    .#{$prefix}-#{$component-col}#{$infix}-push-#{$i} {
+    .#{theme.$prefix}-#{$component-col}#{$infix}-push-#{$i} {
       left: math.percentage(math.div($i, $grid-columns));
     }
 
-    .#{$prefix}-#{$component-col}#{$infix}-pull-#{$i} {
+    .#{theme.$prefix}-#{$component-col}#{$infix}-pull-#{$i} {
       right: math.percentage(math.div($i, $grid-columns));
     }
   }
@@ -135,14 +135,14 @@ $grid-justify-fallback: flex-start;
 
 @include make-col-classes('');
 
-@include om-down(lg) {
-  .#{$prefix}-#{$component-col} {
+@include theme.down(lg) {
+  .#{theme.$prefix}-#{$component-col} {
     flex: var(#{$grid-var-col-flex-lg}, var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback}));
     padding-right: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
     padding-left: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
   }
 
-  .#{$prefix}-#{$component-row} {
+  .#{theme.$prefix}-#{$component-row} {
     margin-right: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
     margin-left: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
     row-gap: var(#{$grid-var-gutter-y-lg}, var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback}));
@@ -151,14 +151,14 @@ $grid-justify-fallback: flex-start;
   @include make-col-classes('-lg');
 }
 
-@include om-down(md) {
-  .#{$prefix}-#{$component-col} {
+@include theme.down(md) {
+  .#{theme.$prefix}-#{$component-col} {
     flex: var(#{$grid-var-col-flex-md}, var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback}));
     padding-right: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
     padding-left: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
   }
 
-  .#{$prefix}-#{$component-row} {
+  .#{theme.$prefix}-#{$component-row} {
     margin-right: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
     margin-left: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
     row-gap: var(#{$grid-var-gutter-y-md}, var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback}));
@@ -167,14 +167,14 @@ $grid-justify-fallback: flex-start;
   @include make-col-classes('-md');
 }
 
-@include om-down(sm) {
-  .#{$prefix}-#{$component-col} {
+@include theme.down(sm) {
+  .#{theme.$prefix}-#{$component-col} {
     flex: var(#{$grid-var-col-flex-sm}, var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback}));
     padding-right: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
     padding-left: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
   }
 
-  .#{$prefix}-#{$component-row} {
+  .#{theme.$prefix}-#{$component-row} {
     margin-right: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
     margin-left: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
     row-gap: var(#{$grid-var-gutter-y-sm}, var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback}));
