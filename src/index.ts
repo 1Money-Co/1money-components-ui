@@ -1,10 +1,21 @@
+export { Button } from './components/Button';
+export { Checkbox } from './components/Checkbox';
+export { Flex } from './components/Flex';
+export { Grid, Row, Col } from './components/Grid';
+export { Icons, IconWrapper, IconHover } from './components/Icons';
+export { Notification } from './components/Notification';
+export { Space } from './components/Space';
+export { Spinner } from './components/Spinner';
+export { Tag } from './components/Tag';
+export { Tooltip } from './components/Tooltip';
 
-import { Button } from './components/Button';
-import { Checkbox } from './components/Checkbox';
-import { Grid, Row, Col } from './components/Grid';
-import { Notification } from './components/Notification';
-
-import { Icons, IconWrapper, IconHover } from './components/Icons';
-import { Tag } from './components/Tag';
-import { Tooltip } from './components/Tooltip';
-
+export type { ButtonProps } from './components/Button';
+export type { CheckboxProps } from './components/Checkbox';
+export type { FlexProps } from './components/Flex';
+export type { GridRowProps, GridColProps } from './components/Grid';
+export type { IconName, IconsProps, IconWrapperProps, IconHoverProps } from './components/Icons';
+export type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './components/Notification';
+export type { SpaceProps } from './components/Space';
+export type { SpinnerProps } from './components/Spinner';
+export type { TagProps } from './components/Tag';
+export type { TooltipProps, TooltipBetaPlacement } from './components/Tooltip';

@@ -10,28 +10,36 @@ A layout helper component modeled after Ant Design's Space. It wraps each child 
 - Optional wrap for horizontal layouts
 - Optional split between items
 
+## Import
+
+```tsx
+import { Space } from '@1money/components-ui';
+// or
+import { Space } from '@1money/components-ui/Space';
+import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';
+```
+
 ## Basic Usage
 
 ```tsx
-import { Space } from '@1money/react-ui';
-import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/react-ui/Space';
-
 <Space size={SPACE_SIZE.middle} align={SPACE_ALIGN.center}>
   <span>Left</span>
   <span>Right</span>
 </Space>
 ```
 
-## Component Props
+## Props
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| align | Align items | 'start' \| 'end' \| 'center' \| 'baseline' | - |
-| direction | Spacing direction | 'horizontal' \| 'vertical' | 'horizontal' |
-| size | Gap size | 'small' \| 'middle' \| 'large' \| number \| [SpaceSize, SpaceSize] | 'small' |
-| split | Insert split element between items | ReactNode | - |
-| wrap | Auto wrap when horizontal | boolean | false |
-| prefixCls | Classname prefix | string | 'space' |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `align` | `'start' \| 'end' \| 'center' \| 'baseline'` | — | Align items |
+| `direction` | `'horizontal' \| 'vertical'` | `'horizontal'` | Spacing direction |
+| `size` | `'small' \| 'middle' \| 'large' \| number \| [SpaceSize, SpaceSize]` | `'small'` | Gap size |
+| `split` | `ReactNode` | — | Insert split element between items |
+| `wrap` | `boolean` | `false` | Auto wrap when horizontal |
+| `prefixCls` | `string` | `'space'` | CSS class prefix |
+
+This component also accepts all standard HTML div attributes.
 
 ## Vertical Layout
 

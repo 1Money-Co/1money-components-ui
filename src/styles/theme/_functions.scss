@@ -80,8 +80,6 @@
 
 @function om-shadow($key) { @return om-token(shadow, $key); }
 
-@function om-color($key) { @error 'om-color() is removed. Use semantic accessors: om-bg(), om-text(), om-icon(), om-border().'; }
-
 @function om-sizing($value) { @return om-token(sizing, $value); }
 
 @function om-component-height($key) {

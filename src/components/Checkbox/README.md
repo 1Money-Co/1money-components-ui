@@ -1,19 +1,19 @@
-# CheckboxBeta
+# Checkbox
 
 A checkbox component with label and description support, built on PrimeReact Checkbox with the 1Money design system tokens. Supports checked, unchecked, and indeterminate states with configurable label direction.
 
 ## Import
 
 ```tsx
-import { CheckboxBeta } from '@1money/react-ui';
+import { Checkbox } from '@1money/components-ui';
 // or
-import { CheckboxBeta } from '@1money/react-ui/CheckboxBeta';
+import { Checkbox } from '@1money/components-ui/Checkbox';
 ```
 
 ## Usage
 
 ```tsx
-<CheckboxBeta
+<Checkbox
   checked={isChecked}
   label="Accept terms"
   description="You must accept the terms to continue"
@@ -33,5 +33,8 @@ import { CheckboxBeta } from '@1money/react-ui/CheckboxBeta';
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `direction` | `'left' \| 'right'` | `'left'` | Position of the checkbox relative to the label |
 | `onChange` | `(checked: boolean) => void` | — | Callback when checked state changes |
+| `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
 | `prefixCls` | `string` | `'checkbox-beta'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
+
+This component also accepts all props from PrimeReact's `CheckboxProps` (except `checked`, `onChange`, `icon`, `size`, `ref`).

@@ -1,5 +1,4 @@
 @use '@/styles/api' as *;
-@use '@/styles/legacy-color' as *;
 
 $component: 'icons';
 
@@ -64,19 +63,19 @@ $component: 'icons';
   align-items: center;
   justify-content: center;
   padding: 8px;
-  background-color: $color-grey-light;
-  border-radius: 8px;
+  background-color: om-bg(default-secondary);
+  border-radius: om-radius(200);
 
   &:hover {
-    background-color: $color-grey-deep;
+    background-color: om-bg(default-secondary-hover);
   }
 
   &-disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: om-opacity(disabled);
 
     &:hover {
-      background-color: $color-grey-light;
+      background-color: om-bg(default-secondary);
     }
   }
 }

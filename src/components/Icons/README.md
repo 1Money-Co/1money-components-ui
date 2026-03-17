@@ -1,201 +1,128 @@
 # Icons
 
-A comprehensive icon system providing access to custom SVG icons, logos, illustrations, and deprecated icons with consistent styling and accessibility features.
-
-## Features
-
-- Custom SVG icon library
-- 1Money brand logos
-- Illustration graphics
-- Deprecated icon support for backward compatibility
-- Icon wrapper with consistent styling
-- Size variants
-- Color customization support
-- Accessibility attributes
+A comprehensive icon system providing access to custom SVG icons, logos, illustrations, and deprecated icons with consistent styling.
 
 ## Components
 
-### Icons
-Main icon component for displaying custom SVG icons.
+- **Icons**: Main icon component for displaying any icon by name.
+- **IconWrapper**: SVG wrapper providing consistent sizing and color.
+- **IconHover**: Hover-effect container for icon buttons.
 
-### IconWrapper
-Wrapper component for consistent icon styling and layout.
+## Import
 
-### Logo
-1Money brand logo components in various formats.
+```tsx
+import { Icons, IconWrapper, IconHover } from '@1money/components-ui';
+// or
+import { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';
 
-### Illustrations
-Larger graphic elements and illustrations.
-
-### Deprecated
-Legacy icon support for backward compatibility.
+// Type import
+import type { IconName } from '@1money/components-ui';
+```
 
 ## Basic Usage
 
 ```tsx
-import { Icons, IconWrapper, Logo } from '@1money/react-ui';
+// Basic icon (default 24px, color #131313)
+<Icons name="arrowRight" />
 
-// Basic icon
-<Icons name="arrow-right" />
+// Custom size and color
+<Icons name="settings" size={32} color="#3D73F2" />
 
-// Icon with wrapper
-<IconWrapper size="large">
-  <Icons name="user" />
-</IconWrapper>
+// With explicit width/height
+<Icons name="search" width={20} height={20} />
+
+// Icon with hover container
+<IconHover>
+  <Icons name="more" />
+</IconHover>
+
+// Disabled hover container
+<IconHover disabled>
+  <Icons name="settings" />
+</IconHover>
 
 // Logo
-<Logo variant="primary" />
-
-// Custom size and styling
-<Icons 
-  name="settings" 
-  className="text-primary" 
-  style={{ width: 24, height: 24 }} 
-/>
+<Icons name="logo" size={40} />
 ```
 
 ## Icons Props
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| prefixCls | The classname prefix for component styling | string | "icons" |
-| name | Icon name from the available icon set | IconName | - |
-| size | Predefined size variant | 'small' \| 'medium' \| 'large' \| 'xl' | 'medium' |
-| color | Icon color (CSS color value) | string | 'currentColor' |
-| className | Additional CSS classes | string | - |
-| style | Inline styles | CSSProperties | - |
+`IconsProps` extends `IconWrapperProps` with an additional `name` prop.
 
-## IconWrapper Props
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `name` | `IconName` | — | Icon name from the available icon set |
+| `size` | `number \| \`${number}\`` | `24` | Icon size in pixels (sets both width and height) |
+| `width` | `number \| \`${number}\`` | — | Override width independently |
+| `height` | `number \| \`${number}\`` | — | Override height independently |
+| `color` | `string` | `'#131313'` | Icon color (CSS color value) |
+| `fill` | `boolean` | — | Set SVG fill to `currentColor` |
+| `stroke` | `boolean` | — | Set SVG stroke to `currentColor` |
+| `viewBox` | `string` | `'0 0 24 24'` | SVG viewBox attribute |
+| `id` | `string` | — | HTML id attribute |
+| `className` | `string` | `''` | CSS class on the SVG element |
+| `wrapperCls` | `string` | `''` | CSS class on the wrapper `<i>` element |
+| `style` | `CSSProperties` | — | Inline styles on the wrapper |
+| `ariaLabel` | `string` | — | Accessibility label |
+| `tabIndex` | `number` | — | Tab index for keyboard navigation |
+| `onClick` | `(e: MouseEvent<HTMLElement>) => any` | — | Click handler |
+| `onKeyDown` | `(e: KeyboardEvent<HTMLElement>) => any` | — | Key down handler |
+| `prefixCls` | `string` | `'icons'` | CSS class prefix |
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| prefixCls | The classname prefix for component styling | string | "icon-wrapper" |
-| size | Size variant for consistent icon container | 'small' \| 'medium' \| 'large' \| 'xl' | 'medium' |
-| className | Additional CSS classes | string | - |
-| children | Icon content to wrap | ReactNode | - |
+## IconHover Props
 
-## Logo Props
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `disabled` | `boolean` | — | Disables hover effect and adds reduced opacity |
+| `prefixCls` | `string` | `'icons-hover'` | CSS class prefix |
+| `className` | `string` | — | Additional CSS classes |
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| variant | Logo variant to display | 'primary' \| 'secondary' \| 'symbol' \| 'text' | 'primary' |
-| size | Logo size | 'small' \| 'medium' \| 'large' | 'medium' |
-| className | Additional CSS classes | string | - |
+Also accepts all standard HTML div attributes.
 
 ## Available Icon Names
 
-The `IconName` type includes all available icons in the system. Common icons include:
+All icon names use **camelCase**. The `IconName` type provides full autocompletion.
 
-- Navigation: `arrow-left`, `arrow-right`, `arrow-up`, `arrow-down`, `chevron-left`, `chevron-right`
-- Actions: `plus`, `minus`, `close`, `check`, `edit`, `delete`, `copy`, `share`
-- Interface: `menu`, `search`, `filter`, `settings`, `more`, `info`, `warning`, `error`
-- User: `user`, `users`, `profile`, `account`
-- Communication: `mail`, `phone`, `message`, `notification`
-- Files: `document`, `image`, `video`, `download`, `upload`
-- Finance: `dollar`, `credit-card`, `bank`, `wallet`, `exchange`
+### Functional Icons
 
-## Styling
+`arrowUp`, `arrowDown`, `arrowLeft`, `arrowRight`, `add`, `minus`, `cross`, `more`, `chevronDown`, `chevronUp`, `chevronLeft`, `chevronRight`, `collapse`, `extend`, `spinner`, `check`, `remove`, `pix`
 
-Icons use SVG format and can be styled with CSS:
+### System Icons
 
-1. **Color**: Use `color` prop or CSS `color` property
-2. **Size**: Use `size` prop or CSS `width`/`height`
-3. **Custom styling**: Use `className` or `style` props
+`info`, `notifications`, `favorite`, `transferHistory`, `support`, `help`, `language`, `share`, `products`, `hub`, `systemSecurity`, `fees`, `settings`, `id`, `viewBalance`, `hideBalance`, `privacy`, `card`, `coin`, `wallet`, `email`, `rewards`, `time`, `location`, `calendar`, `securityCheck`, `devices`, `images`, `bank`, `coins`, `earn`, `scan`, `search`, `maintenance`, `editFile`, `document`, `upload`, `gift`, `filter`, `expand`, `systemCollapse`, `refresh`, `transfer`, `link`, `save`, `like`, `dislike`, `copy`, `mobile`, `chat`, `swap`, `clock`, `desktop`, `ach`, `businessAccount`, `individualAccount`, `apiKey`, `brokenLink`, `autoConversionRules`
 
-## Accessibility
+### Menu Icons
 
-- Proper ARIA attributes
-- Screen reader friendly
-- Keyboard navigation support when interactive
-- Semantic markup
+`dashboard`, `digitalAsset`, `addressBook`, `linkedBankAccounts`, `wire`, `swift`, `account`, `profile`, `security`, `logout`, `portfolio`, `home`, `convert`, `withdraw`, `send`, `menuDeposit`, `company`, `parties`, `transactions`, `fiat`, `money`, `sendCrypto`
 
-## Examples
+### Primary Icons
 
-### Icon Button
-```tsx
-<button className="icon-button">
-  <IconWrapper size="medium">
-    <Icons name="settings" />
-  </IconWrapper>
-  Settings
-</button>
-```
-
-### Navigation Icons
-```tsx
-const NavigationMenu = () => (
-  <nav>
-    <a href="/dashboard">
-      <Icons name="dashboard" />
-      Dashboard
-    </a>
-    <a href="/profile">
-      <Icons name="user" />
-      Profile
-    </a>
-    <a href="/settings">
-      <Icons name="settings" />
-      Settings
-    </a>
-  </nav>
-);
-```
+`deposit`, `withdrawal`, `conversion`, `mintToken`, `burnToken`, `accountLocked`, `pending`, `success`, `fail`, `error`
 
 ### Status Icons
-```tsx
-const StatusIcon = ({ status }) => {
-  const iconMap = {
-    success: 'check-circle',
-    warning: 'warning-triangle', 
-    error: 'x-circle',
-    info: 'info-circle'
-  };
-  
-  return (
-    <Icons 
-      name={iconMap[status]} 
-      className={`status-icon status-icon--${status}`}
-    />
-  );
-};
-```
 
-### Logo Usage
-```tsx
-// Header logo
-<header>
-  <Logo variant="primary" size="large" />
-</header>
+`statusSuccess`, `statusFail` (these accept an additional `innerColor` prop)
 
-// Footer logo  
-<footer>
-  <Logo variant="symbol" size="small" />
-</footer>
-```
+### Logo Icons
 
-### Custom Styled Icons
-```tsx
-<Icons 
-  name="heart"
-  style={{ 
-    color: '#ff6b6b', 
-    width: '32px', 
-    height: '32px',
-    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
-  }}
-/>
-```
+`logo`, `logoWord`, `logoNetwork`, `logoWithWords`, `logoBg`, `logoBeta`, `logoWithBeta`
 
-## Migration from Deprecated Icons
+### Illustrations
 
-If you're using deprecated icons, they're still available but consider migrating:
+`illusChecked`, `illusEmailError`, `illusLinkExpired`, `illus2FA`, `illusLocked`, `illusError`, `illusRegionNotSupported`, `illusIDCard`, `illusVerification`, `illusTransfer`, `illusSend`, `illusAccount`, `illusPending`
 
-```tsx
-// Old (still works)
-import { Deprecated } from '@1money/react-ui';
-<Deprecated name="old-icon-name" />
+### Deprecated Icons (legacy)
 
-// New (recommended)
-import { Icons } from '@1money/react-ui';
-<Icons name="new-icon-name" />
-```
+`burger`, `return`, `close`, `arrow`, `circle`, `times`, `doubleCheck`, `checkCircle`, `timesCircle`, `content`, `locked`, `exclamation`, `arrowLink`, `union`, `eyeClose`, `eyeOn`
+
+### Currency Icons
+
+`usd`, `eur`, `gbp`, `jpy`, `cny`
+
+### Social Icons
+
+`google`, `apple`, `twitter`, `linkedIn`, `passkey`, `pause`
+
+### Figma Aliases
+
+`depositFiatCrypto`, `withdrawFiatCrypto`, `accountdLocked`, `personalSettings`, `security2`, `iconPix`, `noApiKeys`
