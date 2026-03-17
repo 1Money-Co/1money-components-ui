@@ -1,0 +1,184 @@
+@use '@/styles/api' as *;
+@use 'sass:math';
+
+$component-row: 'grid-row';
+$component-col: 'grid-col';
+$grid-columns: 12;
+$grid-index-start: 1;
+$grid-col-min-height: 1px;
+$grid-col-max-width: 100%;
+$grid-gutter-divisor: 2;
+$grid-gutter-fallback: 0px;
+$grid-col-flex-fallback: 0 0 auto;
+$grid-var-gutter-x: '--om-grid-gutter-x';
+$grid-var-gutter-y: '--om-grid-gutter-y';
+$grid-var-gutter-x-sm: '--om-grid-gutter-x-sm';
+$grid-var-gutter-y-sm: '--om-grid-gutter-y-sm';
+$grid-var-gutter-x-md: '--om-grid-gutter-x-md';
+$grid-var-gutter-y-md: '--om-grid-gutter-y-md';
+$grid-var-gutter-x-lg: '--om-grid-gutter-x-lg';
+$grid-var-gutter-y-lg: '--om-grid-gutter-y-lg';
+$grid-var-justify: '--om-grid-justify';
+$grid-var-justify-sm: '--om-grid-justify-sm';
+$grid-var-justify-md: '--om-grid-justify-md';
+$grid-var-justify-lg: '--om-grid-justify-lg';
+$grid-var-col-flex: '--om-grid-col-flex';
+$grid-var-col-flex-sm: '--om-grid-col-flex-sm';
+$grid-var-col-flex-md: '--om-grid-col-flex-md';
+$grid-var-col-flex-lg: '--om-grid-col-flex-lg';
+$grid-justify-fallback: flex-start;
+
+.#{$prefix}-#{$component-row} {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: var(#{$grid-var-justify}, #{$grid-justify-fallback});
+  margin-right: calc(var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback}) / -#{$grid-gutter-divisor});
+  margin-left: calc(var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback}) / -#{$grid-gutter-divisor});
+  row-gap: var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback});
+
+  &-no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  &-align-top {
+    align-items: flex-start;
+  }
+
+  &-align-middle {
+    align-items: center;
+  }
+
+  &-align-bottom {
+    align-items: flex-end;
+  }
+
+  &-align-stretch {
+    align-items: stretch;
+  }
+
+  &-justify-start {
+    justify-content: flex-start;
+  }
+
+  &-justify-end {
+    justify-content: flex-end;
+  }
+
+  &-justify-center {
+    justify-content: center;
+  }
+
+  &-justify-space-between {
+    justify-content: space-between;
+  }
+
+  &-justify-space-around {
+    justify-content: space-around;
+  }
+
+  &-justify-space-evenly {
+    justify-content: space-evenly;
+  }
+}
+
+@include om-down(lg) {
+  .#{$prefix}-#{$component-row} {
+    justify-content: var(#{$grid-var-justify-lg}, var(#{$grid-var-justify}, #{$grid-justify-fallback}));
+  }
+}
+
+@include om-down(md) {
+  .#{$prefix}-#{$component-row} {
+    justify-content: var(#{$grid-var-justify-md}, var(#{$grid-var-justify}, #{$grid-justify-fallback}));
+  }
+}
+
+@include om-down(sm) {
+  .#{$prefix}-#{$component-row} {
+    justify-content: var(#{$grid-var-justify-sm}, var(#{$grid-var-justify}, #{$grid-justify-fallback}));
+  }
+}
+
+.#{$prefix}-#{$component-col} {
+  position: relative;
+  flex: var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback});
+  max-width: $grid-col-max-width;
+  min-height: $grid-col-min-height;
+  padding-right: calc(var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback}) / #{$grid-gutter-divisor});
+  padding-left: calc(var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback}) / #{$grid-gutter-divisor});
+}
+
+@mixin make-col-classes($infix: '') {
+  @for $i from $grid-index-start through $grid-columns {
+    .#{$prefix}-#{$component-col}#{$infix}-#{$i} {
+      flex: 0 0 math.percentage(math.div($i, $grid-columns));
+      max-width: math.percentage(math.div($i, $grid-columns));
+    }
+
+    .#{$prefix}-#{$component-col}#{$infix}-offset-#{$i} {
+      margin-left: math.percentage(math.div($i, $grid-columns));
+    }
+
+    .#{$prefix}-#{$component-col}#{$infix}-order-#{$i} {
+      order: $i;
+    }
+
+    .#{$prefix}-#{$component-col}#{$infix}-push-#{$i} {
+      left: math.percentage(math.div($i, $grid-columns));
+    }
+
+    .#{$prefix}-#{$component-col}#{$infix}-pull-#{$i} {
+      right: math.percentage(math.div($i, $grid-columns));
+    }
+  }
+}
+
+@include make-col-classes('');
+
+@include om-down(lg) {
+  .#{$prefix}-#{$component-col} {
+    flex: var(#{$grid-var-col-flex-lg}, var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback}));
+    padding-right: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
+    padding-left: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
+  }
+
+  .#{$prefix}-#{$component-row} {
+    margin-right: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
+    margin-left: calc(var(#{$grid-var-gutter-x-lg}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
+    row-gap: var(#{$grid-var-gutter-y-lg}, var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback}));
+  }
+
+  @include make-col-classes('-lg');
+}
+
+@include om-down(md) {
+  .#{$prefix}-#{$component-col} {
+    flex: var(#{$grid-var-col-flex-md}, var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback}));
+    padding-right: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
+    padding-left: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
+  }
+
+  .#{$prefix}-#{$component-row} {
+    margin-right: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
+    margin-left: calc(var(#{$grid-var-gutter-x-md}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
+    row-gap: var(#{$grid-var-gutter-y-md}, var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback}));
+  }
+
+  @include make-col-classes('-md');
+}
+
+@include om-down(sm) {
+  .#{$prefix}-#{$component-col} {
+    flex: var(#{$grid-var-col-flex-sm}, var(#{$grid-var-col-flex}, #{$grid-col-flex-fallback}));
+    padding-right: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
+    padding-left: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / #{$grid-gutter-divisor});
+  }
+
+  .#{$prefix}-#{$component-row} {
+    margin-right: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
+    margin-left: calc(var(#{$grid-var-gutter-x-sm}, var(#{$grid-var-gutter-x}, #{$grid-gutter-fallback})) / -#{$grid-gutter-divisor});
+    row-gap: var(#{$grid-var-gutter-y-sm}, var(#{$grid-var-gutter-y}, #{$grid-gutter-fallback}));
+  }
+
+  @include make-col-classes('-sm');
+}

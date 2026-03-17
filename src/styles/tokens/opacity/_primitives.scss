@@ -1,0 +1,11 @@
+// Opacity scale tokens — standardized opacity values for disabled/overlay states.
+
+$om-opacity-scale: (
+  'subtle': 0.05,
+  'light': 0.1,
+  'medium': 0.2,
+  'disabled-light': 0.3,
+  'overlay': 0.4,
+  'disabled': 0.5,
+  'disabled-heavy': 0.6,
+) !default;

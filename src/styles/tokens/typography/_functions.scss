@@ -1,0 +1,31 @@
+// Typography token helpers — pure access to the typography scale.
+@use 'sass:map';
+@use './semantic-typography' as scale;
+
+/// Retrieves the property map for a given category and size.
+/// @param {string} $category - Typography category (display, headline, title, body, link, label).
+/// @param {string} $size - Size key (xs, sm, md, lg, xl).
+/// @return {map} The full property map for the given category/size.
+@function -om-resolve-typography($category, $size) {
+  $cat-map: map.get(scale.$om-typography-categories, $category);
+
+  @if not $cat-map {
+    @error 'Unknown typography category "#{$category}". Available: #{map.keys(scale.$om-typography-categories)}';
+  }
+
+  $entry: map.get($cat-map, $size);
+
+  @if not $entry {
+    @error 'Unknown typography size "#{$size}" for category "#{$category}". Available: #{map.keys($cat-map)}';
+  }
+
+  @return $entry;
+}
+
+/// Returns the full property map for a typography category/size.
+/// @param {string} $category - Typography category.
+/// @param {string} $size - Size key.
+/// @return {map} Full property map (font-family, font-size, line-height, letter-spacing, font-weight, etc.).
+@function om-typography($category, $size) {
+  @return -om-resolve-typography($category, $size);
+}

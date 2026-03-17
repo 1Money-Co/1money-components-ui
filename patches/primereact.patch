@@ -1,0 +1,323 @@
+diff --git a/fieldset/fieldset.d.ts b/fieldset/fieldset.d.ts
+index dd1de804c831a751acebb81c1ff67be3a9d4b9db..c63eb6f28f9517bba1a2cb47e7dd38b591b17771 100644
+--- a/fieldset/fieldset.d.ts
++++ b/fieldset/fieldset.d.ts
+@@ -115,7 +115,7 @@ interface FieldsetToggleEvent {
+  * Defines valid properties in Fieldset component. In addition to these, all properties of HTMLFieldSetElement can be used in this component.
+  * @group Properties
+  */
+-export interface FieldsetProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLFieldSetElement>, HTMLFieldSetElement>, 'ref'> {
++export interface FieldsetProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLFieldSetElement>, HTMLFieldSetElement>, 'ref' | 'onToggle'> {
+     /**
+      * Header text of the fieldset.
+      */
+diff --git a/inplace/inplace.d.ts b/inplace/inplace.d.ts
+index 69edf6612882b775ab5d227c1423b881981ada2a..c5a0918dc4f7902b6afad1593be313790dc0cb1f 100644
+--- a/inplace/inplace.d.ts
++++ b/inplace/inplace.d.ts
+@@ -89,7 +89,7 @@ interface InplaceToggleEvent {
+  * Defines valid properties in Inplace component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface InplaceProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref'> {
++export interface InplaceProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref' | 'onToggle'> {
+     /**
+      * Whether the content is displayed or not. To use in controlled mode you must implement `onToggle` callback at a minimum.
+      * @defaultValue false
+diff --git a/overlaypanel/overlaypanel.cjs.js b/overlaypanel/overlaypanel.cjs.js
+index 52f63d3526dce32b2e73e17ff056d01bf26333a8..757cd2e3714a629b42b691cd0ff4b3a4e47f62ac 100644
+--- a/overlaypanel/overlaypanel.cjs.js
++++ b/overlaypanel/overlaypanel.cjs.js
+@@ -14,7 +14,7 @@ var portal = require('primereact/portal');
+ var ripple = require('primereact/ripple');
+ var utils = require('primereact/utils');
+ 
+-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
++function _interopDefaultLegacy(e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+ 
+ function _interopNamespace(e) {
+   if (e && e.__esModule) return e;
+@@ -139,7 +139,7 @@ function _slicedToArray(r, e) {
+ var classes = {
+   root: function root(_ref) {
+     _ref.props;
+-      var context = _ref.context;
++    var context = _ref.context;
+     return utils.classNames('p-overlaypanel p-component', {
+       'p-input-filled': context && context.inputStyle === 'filled' || PrimeReact__default["default"].inputStyle === 'filled',
+       'p-ripple-disabled': context && context.ripple === false || PrimeReact__default["default"].ripple === false
+@@ -186,15 +186,15 @@ var OverlayPanel = /*#__PURE__*/React__namespace.forwardRef(function (inProps, r
+     visibleState = _React$useState2[0],
+     setVisibleState = _React$useState2[1];
+   var _OverlayPanelBase$set = OverlayPanelBase.setMetaData({
+-      props: props,
+-      state: {
+-        visible: visibleState
+-      }
+-    }),
++    props: props,
++    state: {
++      visible: visibleState
++    }
++  }),
+     ptm = _OverlayPanelBase$set.ptm,
+     cx = _OverlayPanelBase$set.cx;
+-    _OverlayPanelBase$set.sx;
+-    var isUnstyled = _OverlayPanelBase$set.isUnstyled;
++  _OverlayPanelBase$set.sx;
++  var isUnstyled = _OverlayPanelBase$set.isUnstyled;
+   componentbase.useHandleStyle(OverlayPanelBase.css.styles, isUnstyled, {
+     name: 'overlaypanel'
+   });
+@@ -205,26 +205,26 @@ var OverlayPanel = /*#__PURE__*/React__namespace.forwardRef(function (inProps, r
+   var styleElement = React__namespace.useRef(null);
+   var overlayEventListener = React__namespace.useRef(null);
+   var _useOverlayListener = hooks.useOverlayListener({
+-      target: currentTargetRef,
+-      overlay: overlayRef,
+-      listener: function listener(event, _ref) {
+-        var type = _ref.type,
+-          valid = _ref.valid;
+-        if (valid) {
+-          if (type === 'outside') {
+-            if (props.dismissable && !isPanelClicked.current) {
+-              hide();
+-            }
+-            isPanelClicked.current = false;
+-          } else if (context.hideOverlaysOnDocumentScrolling) {
++    target: currentTargetRef,
++    overlay: overlayRef,
++    listener: function listener(event, _ref) {
++      var type = _ref.type,
++        valid = _ref.valid;
++      if (valid) {
++        if (type === 'outside') {
++          if (props.dismissable && !isPanelClicked.current) {
+             hide();
+-          } else if (!utils.DomHandler.isDocument(event.target)) {
+-            align();
+           }
++          isPanelClicked.current = false;
++        } else if (context && context.hideOverlaysOnDocumentScrolling) {
++          hide();
++        } else if (!utils.DomHandler.isDocument(event.target)) {
++          align();
+         }
+-      },
+-      when: visibleState
+-    }),
++      }
++    },
++    when: visibleState
++  }),
+     _useOverlayListener2 = _slicedToArray(_useOverlayListener, 2),
+     bindOverlayListener = _useOverlayListener2[0],
+     unbindOverlayListener = _useOverlayListener2[1];
+diff --git a/overlaypanel/overlaypanel.esm.js b/overlaypanel/overlaypanel.esm.js
+index e7c8f25f0697ca9522b7a48f51e63213e073aeee..cf519ca4ee0c9932ff07feaadda0a76885a161f0 100644
+--- a/overlaypanel/overlaypanel.esm.js
++++ b/overlaypanel/overlaypanel.esm.js
+@@ -112,7 +112,7 @@ function _slicedToArray(r, e) {
+ var classes = {
+   root: function root(_ref) {
+     _ref.props;
+-      var context = _ref.context;
++    var context = _ref.context;
+     return classNames('p-overlaypanel p-component', {
+       'p-input-filled': context && context.inputStyle === 'filled' || PrimeReact.inputStyle === 'filled',
+       'p-ripple-disabled': context && context.ripple === false || PrimeReact.ripple === false
+@@ -159,15 +159,15 @@ var OverlayPanel = /*#__PURE__*/React.forwardRef(function (inProps, ref) {
+     visibleState = _React$useState2[0],
+     setVisibleState = _React$useState2[1];
+   var _OverlayPanelBase$set = OverlayPanelBase.setMetaData({
+-      props: props,
+-      state: {
+-        visible: visibleState
+-      }
+-    }),
++    props: props,
++    state: {
++      visible: visibleState
++    }
++  }),
+     ptm = _OverlayPanelBase$set.ptm,
+     cx = _OverlayPanelBase$set.cx;
+-    _OverlayPanelBase$set.sx;
+-    var isUnstyled = _OverlayPanelBase$set.isUnstyled;
++  _OverlayPanelBase$set.sx;
++  var isUnstyled = _OverlayPanelBase$set.isUnstyled;
+   useHandleStyle(OverlayPanelBase.css.styles, isUnstyled, {
+     name: 'overlaypanel'
+   });
+@@ -178,26 +178,26 @@ var OverlayPanel = /*#__PURE__*/React.forwardRef(function (inProps, ref) {
+   var styleElement = React.useRef(null);
+   var overlayEventListener = React.useRef(null);
+   var _useOverlayListener = useOverlayListener({
+-      target: currentTargetRef,
+-      overlay: overlayRef,
+-      listener: function listener(event, _ref) {
+-        var type = _ref.type,
+-          valid = _ref.valid;
+-        if (valid) {
+-          if (type === 'outside') {
+-            if (props.dismissable && !isPanelClicked.current) {
+-              hide();
+-            }
+-            isPanelClicked.current = false;
+-          } else if (context.hideOverlaysOnDocumentScrolling) {
++    target: currentTargetRef,
++    overlay: overlayRef,
++    listener: function listener(event, _ref) {
++      var type = _ref.type,
++        valid = _ref.valid;
++      if (valid) {
++        if (type === 'outside') {
++          if (props.dismissable && !isPanelClicked.current) {
+             hide();
+-          } else if (!DomHandler.isDocument(event.target)) {
+-            align();
+           }
++          isPanelClicked.current = false;
++        } else if (context && context.hideOverlaysOnDocumentScrolling) {
++          hide();
++        } else if (!DomHandler.isDocument(event.target)) {
++          align();
+         }
+-      },
+-      when: visibleState
+-    }),
++      }
++    },
++    when: visibleState
++  }),
+     _useOverlayListener2 = _slicedToArray(_useOverlayListener, 2),
+     bindOverlayListener = _useOverlayListener2[0],
+     unbindOverlayListener = _useOverlayListener2[1];
+diff --git a/overlaypanel/overlaypanel.js b/overlaypanel/overlaypanel.js
+index 35b67f7c857d19bdb7c675278a89e584215092d5..9fd52fa44c43f63f71ff9c91ab6f73150205b470 100644
+--- a/overlaypanel/overlaypanel.js
++++ b/overlaypanel/overlaypanel.js
+@@ -2,7 +2,7 @@ this.primereact = this.primereact || {};
+ this.primereact.overlaypanel = (function (exports, React, PrimeReact, componentbase, csstransition, hooks, times, overlayservice, portal, ripple, utils) {
+   'use strict';
+ 
+-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
++  function _interopDefaultLegacy(e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+ 
+   function _interopNamespace(e) {
+     if (e && e.__esModule) return e;
+@@ -127,7 +127,7 @@ this.primereact.overlaypanel = (function (exports, React, PrimeReact, componentb
+   var classes = {
+     root: function root(_ref) {
+       _ref.props;
+-        var context = _ref.context;
++      var context = _ref.context;
+       return utils.classNames('p-overlaypanel p-component', {
+         'p-input-filled': context && context.inputStyle === 'filled' || PrimeReact__default["default"].inputStyle === 'filled',
+         'p-ripple-disabled': context && context.ripple === false || PrimeReact__default["default"].ripple === false
+@@ -174,15 +174,15 @@ this.primereact.overlaypanel = (function (exports, React, PrimeReact, componentb
+       visibleState = _React$useState2[0],
+       setVisibleState = _React$useState2[1];
+     var _OverlayPanelBase$set = OverlayPanelBase.setMetaData({
+-        props: props,
+-        state: {
+-          visible: visibleState
+-        }
+-      }),
++      props: props,
++      state: {
++        visible: visibleState
++      }
++    }),
+       ptm = _OverlayPanelBase$set.ptm,
+       cx = _OverlayPanelBase$set.cx;
+-      _OverlayPanelBase$set.sx;
+-      var isUnstyled = _OverlayPanelBase$set.isUnstyled;
++    _OverlayPanelBase$set.sx;
++    var isUnstyled = _OverlayPanelBase$set.isUnstyled;
+     componentbase.useHandleStyle(OverlayPanelBase.css.styles, isUnstyled, {
+       name: 'overlaypanel'
+     });
+@@ -193,26 +193,26 @@ this.primereact.overlaypanel = (function (exports, React, PrimeReact, componentb
+     var styleElement = React__namespace.useRef(null);
+     var overlayEventListener = React__namespace.useRef(null);
+     var _useOverlayListener = hooks.useOverlayListener({
+-        target: currentTargetRef,
+-        overlay: overlayRef,
+-        listener: function listener(event, _ref) {
+-          var type = _ref.type,
+-            valid = _ref.valid;
+-          if (valid) {
+-            if (type === 'outside') {
+-              if (props.dismissable && !isPanelClicked.current) {
+-                hide();
+-              }
+-              isPanelClicked.current = false;
+-            } else if (context.hideOverlaysOnDocumentScrolling) {
++      target: currentTargetRef,
++      overlay: overlayRef,
++      listener: function listener(event, _ref) {
++        var type = _ref.type,
++          valid = _ref.valid;
++        if (valid) {
++          if (type === 'outside') {
++            if (props.dismissable && !isPanelClicked.current) {
+               hide();
+-            } else if (!utils.DomHandler.isDocument(event.target)) {
+-              align();
+             }
++            isPanelClicked.current = false;
++          } else if (context && context.hideOverlaysOnDocumentScrolling) {
++            hide();
++          } else if (!utils.DomHandler.isDocument(event.target)) {
++            align();
+           }
+-        },
+-        when: visibleState
+-      }),
++        }
++      },
++      when: visibleState
++    }),
+       _useOverlayListener2 = _slicedToArray(_useOverlayListener, 2),
+       bindOverlayListener = _useOverlayListener2[0],
+       unbindOverlayListener = _useOverlayListener2[1];
+diff --git a/panel/panel.d.ts b/panel/panel.d.ts
+index acaafb239f641c85de193743aad9ec715a1c9686..95f0d3a6b3d770a462d42c4a434aa4295a501f3f 100644
+--- a/panel/panel.d.ts
++++ b/panel/panel.d.ts
+@@ -184,7 +184,7 @@ export interface PanelState {
+  * Defines valid properties in Panel component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface PanelProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref'> {
++export interface PanelProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref' | 'onToggle'> {
+     /**
+      * Custom header template of the panel.
+      */
+diff --git a/treeselect/treeselect.d.ts b/treeselect/treeselect.d.ts
+index d5cb2fa62a0240d017030bf8b40a07a4f3be6882..53fcc0505c4cfa3e67b3aee8c975157470696c34 100644
+--- a/treeselect/treeselect.d.ts
++++ b/treeselect/treeselect.d.ts
+@@ -386,7 +386,7 @@ interface TreeSelectNodeDoubleClickEvent extends TreeSelectNodeClickEvent {}
+  * Defines valid properties in TreeSelect component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface TreeSelectProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'onChange' | 'value' | 'ref' | 'pt'> {
++export interface TreeSelectProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'onChange' | 'value' | 'ref' | 'pt' | 'onToggle'> {
+     /**
+      * DOM element instance where the overlay panel should be mounted. Valid values are any DOM Element and 'self'. The self value is used to render a component where it is located.
+      * @defaultValue document.body
+diff --git a/treetable/treetable.d.ts b/treetable/treetable.d.ts
+index 5139b4beb04faa40065f7f1af9aa92149770a79f..6cad91b116c6e322d593de829df864b440f60613 100644
+--- a/treetable/treetable.d.ts
++++ b/treetable/treetable.d.ts
+@@ -580,7 +580,7 @@ interface TreeTableColReorderEvent {
+  * Defines valid properties in TreeTable component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface TreeTableProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'size' | 'onContextMenu' | 'onSelect' | 'ref' | 'value'> {
++export interface TreeTableProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'size' | 'onContextMenu' | 'onSelect' | 'ref' | 'value' | 'onToggle'> {
+     /**
+      * Whether to show it even there is only one page.
+      * @defaultValue true

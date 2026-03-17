@@ -1,0 +1,11 @@
+// Radius scale tokens — shared border-radius values for the theme and utility generator.
+// Aligned with Figma design system: Radius 100–600, Full.
+$om-radius-scale: (
+  '0': 0,
+  '100': 4px,
+  '200': 8px,
+  '300': 12px,
+  '400': 16px,
+  '600': 24px,
+  'full': 9999px,
+) !default;

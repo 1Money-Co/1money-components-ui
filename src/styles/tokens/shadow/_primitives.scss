@@ -1,0 +1,7 @@
+// Shadow scale tokens — shared box-shadow values for the theme and utility generator.
+// Aligned with Figma design system: Drop Shadow(Beta) 100–200.
+$om-shadow-scale: (
+  '0': none,
+  '100': (0 4px 8px rgba(65, 91, 130, 12%)),
+  '200': (0 10px 22px rgba(0, 0, 0, 10%)),
+) !default;

@@ -1,0 +1,95 @@
+// Breakpoint helpers — responsive mixins built from token data.
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+@use '../tokens' as tokens;
+
+@mixin om-assert-breakpoints-descending() {
+  $prev-value: null;
+
+  @each $bp-name, $bp-value in tokens.$om-breakpoints {
+    @if $prev-value and $bp-value >= $prev-value {
+      @error '$om-breakpoints must be ordered from large to small, e.g. lg -> md -> sm.';
+    }
+
+    $prev-value: $bp-value;
+  }
+}
+
+@include om-assert-breakpoints-descending;
+
+@function om-breakpoint($bp-name) {
+  @return map.get(tokens.$om-breakpoints, $bp-name);
+}
+
+// Subtract 0.02px (1px / 50) to avoid overlap with min-width queries at fractional browser zoom levels.
+@function om-max-width($value) {
+  @return $value - math.div(tokens.$om-breakpoint-step, 50);
+}
+
+@function om-next-breakpoint($bp-name) {
+  $keys: map.keys(tokens.$om-breakpoints);
+  $index: list.index($keys, $bp-name);
+
+  @if not $index or $index == list.length($keys) {
+    @return null;
+  }
+
+  @return list.nth($keys, $index + 1);
+}
+
+@mixin om-down($bp-name) {
+  $bp-value: om-breakpoint($bp-name);
+
+  @if $bp-value {
+    @media (max-width: om-max-width($bp-value)) {
+      @content;
+    }
+  }
+}
+
+@mixin om-up($bp-name) {
+  $bp-value: om-breakpoint($bp-name);
+
+  @if $bp-value {
+    @media (min-width: $bp-value) {
+      @content;
+    }
+  }
+}
+
+@mixin om-between($min-bp, $max-bp) {
+  $min-value: om-breakpoint($min-bp);
+  $max-value: om-breakpoint($max-bp);
+
+  @if $min-value and $max-value {
+    @media (min-width: $min-value) and (max-width: om-max-width($max-value)) {
+      @content;
+    }
+  }
+}
+
+@mixin om-only($bp-name) {
+  $bp-value: om-breakpoint($bp-name);
+  $next-bp-name: om-next-breakpoint($bp-name);
+
+  @if $bp-value {
+    @if not $next-bp-name {
+      @include om-down($bp-name) {
+        @content;
+      }
+    } @else {
+      $next-bp-value: om-breakpoint($next-bp-name);
+
+      @media (min-width: $next-bp-value) and (max-width: om-max-width($bp-value)) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin om-respond($bp-name) {
+  @include om-down($bp-name) {
+    @content;
+  }
+}

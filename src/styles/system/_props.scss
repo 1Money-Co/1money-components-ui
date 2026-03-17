@@ -1,0 +1,95 @@
+// System prop registry — maps shorthand/system keys to CSS properties, scales, and enum aliases.
+@use 'sass:map';
+
+$om-spacing-props: (
+  'p': (padding,),
+  'pt': (padding-top,),
+  'pr': (padding-right,),
+  'pb': (padding-bottom,),
+  'pl': (padding-left,),
+  'px': (padding-left, padding-right),
+  'py': (padding-top, padding-bottom),
+  'm': (margin,),
+  'mt': (margin-top,),
+  'mr': (margin-right,),
+  'mb': (margin-bottom,),
+  'ml': (margin-left,),
+  'mx': (margin-left, margin-right),
+  'my': (margin-top, margin-bottom),
+  'gap': (gap,),
+) !default;
+$om-enum-props: (
+  'd': (css: display, values: (flex, grid, block, inline, inline-flex, inline-block, none)),
+  'flex': (css: flex-direction, values: (row, column, row-reverse, column-reverse)),
+  'jc': (css: justify-content, values: (start, end, center, space-between, space-around, space-evenly)),
+  'ai': (css: align-items, values: (start, end, center, baseline, stretch)),
+  'fw': (css: flex-wrap, values: (wrap, nowrap, wrap-reverse)),
+) !default;
+$om-value-aliases: (
+  justify-content: (start: flex-start, end: flex-end),
+  align-items: (start: flex-start, end: flex-end),
+) !default;
+$om-sizing-props: (
+  'w': width,
+  'h': height,
+) !default;
+$om-scale-props: (
+  'radius': (css: border-radius, scale: radius),
+  'shadow': (css: box-shadow, scale: shadow),
+) !default;
+$om-color-props: (
+  'bg': (css: background-color, scale: bg),
+  'border': (css: border-color, scale: border),
+) !default;
+$om-system-aliases: (
+  'display': 'd',
+  'flexDirection': 'flex',
+  'justifyContent': 'jc',
+  'alignItems': 'ai',
+  'flexWrap': 'fw',
+  'width': 'w',
+  'height': 'h',
+  'borderRadius': 'radius',
+  'boxShadow': 'shadow',
+  'bgcolor': 'bg',
+  'bgColor': 'bg',
+  'borderColor': 'border',
+) !default;
+
+@function -om-build-system-props() {
+  $result: ();
+
+  // 1. Spacing — kind = scale, scale = spacing
+  @each $name, $css-props in $om-spacing-props {
+    $result: map.merge($result, ('#{$name}': (css: $css-props, kind: scale, flag: spacing, scale: spacing)));
+  }
+
+  // 2. Enum props — kind = enum
+  @each $name, $def in $om-enum-props {
+    $result: map.merge($result, ('#{$name}': (css: (map.get($def, css),), kind: enum, flag: layout, values: map.get($def, values))));
+  }
+
+  // 3. Sizing props — kind = scale, scale = sizing
+  @each $name, $css in $om-sizing-props {
+    $result: map.merge($result, ('#{$name}': (css: ($css,), kind: scale, flag: sizing, scale: sizing)));
+  }
+
+  // 4. Color props — kind = scale, with per-prop scale assignment
+  @each $name, $def in $om-color-props {
+    $result: map.merge($result, ('#{$name}': (css: (map.get($def, css),), kind: scale, flag: color, scale: map.get($def, scale))));
+  }
+
+  // 5. Scale props (radius, shadow) — kind = scale with named scale
+  @each $name, $def in $om-scale-props {
+    $result: map.merge($result, ('#{$name}': (css: (map.get($def, css),), kind: scale, flag: visual, scale: map.get($def, scale))));
+  }
+
+  // 6. Aliases — copy canonical entry under alias name
+  @each $alias, $canonical in $om-system-aliases {
+    $result: map.merge($result, ('#{$alias}': map.get($result, $canonical)));
+  }
+
+  @return $result;
+}
+
+$om-system-props: -om-build-system-props() !default;

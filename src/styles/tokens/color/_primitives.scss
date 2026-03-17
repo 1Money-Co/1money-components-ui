@@ -1,0 +1,46 @@
+// Primitive color tokens — raw color values organized by hue family.
+// These are the foundational layer; semantic tokens reference these.
+
+// ── Blue (Brand) ──
+$blue-900: #03163a;
+$blue-800: #052561;
+$blue-700: #073387;
+$blue-300: #a4bbe1;
+$blue-200: #c1d0eb;
+$blue-100: #dde6f4;
+$blue-50: #edf2f9;
+
+// ── Grey ──
+$grey-900: #131313;
+$grey-800: #404042;
+$grey-700: #646465;
+$grey-500: #9fa3a3;
+$grey-400: #bbbdc1;
+$grey-300: #d1d2d2;
+$grey-200: #e3e4e4;
+$grey-100: #f0f0f0;
+$grey-50: #f8f8f8;
+
+// ── Green (Positive) ──
+$green-900: #003104;
+$green-800: #1b4404;
+$green-700: #1f5800;
+
+// ── Yellow / Amber (Warning) ──
+$yellow-700: #db8600;
+$yellow-500: #f4c600;
+$yellow-400: #ffb300;
+$yellow-300: #ffa000;
+
+// ── Red (Danger) ──
+$red-800: #780000;
+$red-700: #920000;
+$red-600: #ae0000;
+
+// ── Neutral extremes ──
+$white: #fff;
+$black: #000;
+
+// ── Misc / Legacy ──
+$info-blue: #3d7cf5;
+$dimmer-dark: #1f2531;

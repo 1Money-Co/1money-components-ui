@@ -1,0 +1,27 @@
+// Typography primitives — font families, weights, line-heights, tracking, and default text color.
+
+@use '../color/primitives' as color;
+
+// ── Font families ──
+// stylelint-disable value-keyword-case -- Font names must preserve casing
+$om-font-display: var(--font-aeonik), Aeonik, sans-serif !default;
+$om-font-body: var(--font-inter), Inter, sans-serif !default;
+// stylelint-enable value-keyword-case
+
+// ── Font weights ──
+$om-font-weight-regular: 400 !default;
+$om-font-weight-medium: 500 !default;
+$om-font-weight-semibold: 600 !default;
+$om-font-weight-bold: 700 !default;
+
+// ── Line-height ratios ──
+$om-line-height-tight: 1.08 !default;
+$om-line-height-reading: 1.4 !default;
+
+// ── Letter spacing ──
+$om-tracking-tight: -0.25px !default;
+$om-tracking-none: 0 !default;
+
+// ── Default text color ──
+// Figma: Text(Beta)/Default/Default = #131313
+$om-text-color-default: color.$grey-900 !default;

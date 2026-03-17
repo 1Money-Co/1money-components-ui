@@ -1,0 +1,141 @@
+@use '@/styles/api' as *;
+
+$component: 'button-beta';
+$button-beta-variant-schema: om-variant-schema(
+  $component, text, bg, hover-bg, disabled-text, disabled-bg, spinner-stroke
+);
+$button-beta-primary-variant: (
+  text: om-text('on-neutral'),
+  bg: om-bg('brand'),
+  hover-bg: om-bg('brand-hover'),
+  disabled-text: om-text('disabled-white'),
+  disabled-bg: om-bg('disabled-brand'),
+  spinner-stroke: om-text('on-neutral'),
+);
+$button-beta-variants: (
+  'primary': $button-beta-primary-variant,
+  'secondary': (
+    text: om-text('brand'),
+    bg: om-bg('brand-secondary'),
+    hover-bg: om-bg('brand-secondary-hover'),
+    disabled-text: om-text('brand-secondary'),
+    disabled-bg: om-bg('brand-tertiary'),
+    spinner-stroke: om-text('brand'),
+  ),
+  'grey': (
+    text: om-text('default'),
+    bg: om-bg('default-secondary'),
+    hover-bg: om-bg('default-secondary'),
+    disabled-text: om-text('disabled'),
+    disabled-bg: om-bg('disabled'),
+    spinner-stroke: om-text('default'),
+  ),
+  'black': (
+    text: om-text('on-neutral'),
+    bg: om-bg('neutral'),
+    hover-bg: om-bg('neutral-hover'),
+    disabled-text: om-text('disabled-white'),
+    disabled-bg: om-bg('disabled-black'),
+    spinner-stroke: om-text('on-neutral'),
+  ),
+  'white': (
+    text: om-text('default'),
+    bg: om-bg('default'),
+    hover-bg: om-bg('default-hover'),
+    disabled-text: om-text('disabled'),
+    disabled-bg: om-bg('disabled'),
+    spinner-stroke: om-text('default'),
+  ),
+  'danger': (
+    text: om-text('danger'),
+    bg: om-bg('danger-secondary'),
+    hover-bg: om-bg('danger-secondary-hover'),
+    disabled-text: om-text('danger-tertiary'),
+    disabled-bg: om-bg('danger-tertiary'),
+    spinner-stroke: om-text('danger'),
+  ),
+  'warning': (
+    text: om-text('default'),
+    bg: om-bg('warning'),
+    hover-bg: om-bg('warning-hover'),
+    disabled-text: om-text('disabled'),
+    disabled-bg: om-bg('warning-secondary'),
+    spinner-stroke:x om-text('default'),
+  ),
+);
+
+.#{$prefix}-#{$component} {
+  @include om-variant-default($button-beta-variants, 'primary', $button-beta-variant-schema);
+
+  display: inline-flex;
+  gap: om-gap(200);
+  align-items: center;
+  justify-content: center;
+  padding: om-component-padding(400);
+  color: var(--om-button-beta-text);
+  background-color: var(--om-button-beta-bg);
+  border: none;
+  border-radius: om-radius(300);
+  box-shadow: none;
+  cursor: pointer;
+
+  @include om-typography(label, lg);
+
+  &.p-disabled {
+    color: var(--om-button-beta-disabled-text);
+    background-color: var(--om-button-beta-disabled-bg);
+    cursor: not-allowed;
+  }
+
+  &:hover:not(.p-disabled) {
+    background-color: var(--om-button-beta-hover-bg);
+  }
+
+  // ── Sizes ──
+  &-medium {
+    padding: om-component-padding(300);
+    border-radius: om-radius(300);
+
+    @include om-typography(label, md);
+  }
+
+  &-small {
+    padding: om-component-padding(200);
+    border-radius: om-radius(200);
+
+    @include om-typography(label, sm);
+  }
+
+  // ── Icon slots ──
+  &-icon-start,
+  &-icon-end {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // ── Loading icon ──
+  &-loading-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: om-spacing(200);
+    margin-left: 0;
+
+    &-medium {
+      width: 16px;
+      height: 16px;
+    }
+
+    &-small {
+      width: 14px;
+      height: 14px;
+    }
+
+    svg circle {
+      stroke: var(--om-button-beta-spinner-stroke);
+    }
+  }
+
+  // ── Color variants ──
+  @include om-variant-classes($button-beta-variants, $button-beta-variant-schema, $default: 'primary');
+}

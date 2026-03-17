@@ -1,0 +1,22 @@
+// Semantic spacing scale maps — subsets of the primitive spacing scale for each Figma usage group.
+// Each map picks specific keys from the primitive $om-spacing-scale to enforce allowed tokens.
+@use 'sass:map';
+@use './primitives' as p;
+
+@function -om-pick-spacing($keys...) {
+  $result: ();
+
+  @each $key in $keys {
+    @if not map.has-key(p.$om-spacing-scale, $key) {
+      @error 'Primitive spacing scale does not contain key "#{$key}"';
+    }
+
+    $result: map.set($result, $key, $key);
+  }
+
+  @return $result;
+}
+
+$om-gap-scale: -om-pick-spacing('050', '100', '200', '300', '400', '600', '1600') !default;
+$om-component-padding-scale: -om-pick-spacing('050', '100', '200', '300', '400', '600', '800') !default;
+$om-section-padding-scale: -om-pick-spacing('800', '1600', '2400', '4000') !default;

@@ -1,0 +1,389 @@
+{
+  "name": "@1money/react-ui",
+  "version": "1.17.2",
+  "description": "React Components based on primereact for 1money front-end projects",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./index.css": {
+      "import": "./es/index.css",
+      "require": "./lib/index.css"
+    },
+    "./Cell": {
+      "types": "./es/components/Cell/index.d.ts",
+      "import": "./es/components/Cell/index.js",
+      "require": "./lib/components/Cell/index.js"
+    },
+    "./Badge": {
+      "types": "./es/components/Badge/index.d.ts",
+      "import": "./es/components/Badge/index.js",
+      "require": "./lib/components/Badge/index.js"
+    },
+    "./Button": {
+      "types": "./es/components/Button/index.d.ts",
+      "import": "./es/components/Button/index.js",
+      "require": "./lib/components/Button/index.js"
+    },
+    "./Calendar": {
+      "types": "./es/components/Calendar/index.d.ts",
+      "import": "./es/components/Calendar/index.js",
+      "require": "./lib/components/Calendar/index.js"
+    },
+    "./Checkbox": {
+      "types": "./es/components/Checkbox/index.d.ts",
+      "import": "./es/components/Checkbox/index.js",
+      "require": "./lib/components/Checkbox/index.js"
+    },
+    "./Collapse": {
+      "types": "./es/components/Collapse/index.d.ts",
+      "import": "./es/components/Collapse/index.js",
+      "require": "./lib/components/Collapse/index.js"
+    },
+    "./ConfirmPopup": {
+      "types": "./es/components/ConfirmPopup/index.d.ts",
+      "import": "./es/components/ConfirmPopup/index.js",
+      "require": "./lib/components/ConfirmPopup/index.js"
+    },
+    "./Copy": {
+      "types": "./es/components/Copy/index.d.ts",
+      "import": "./es/components/Copy/index.js",
+      "require": "./lib/components/Copy/index.js"
+    },
+    "./Dropdown": {
+      "types": "./es/components/Dropdown/index.d.ts",
+      "import": "./es/components/Dropdown/index.js",
+      "require": "./lib/components/Dropdown/index.js"
+    },
+    "./Drawer": {
+      "types": "./es/components/Drawer/index.d.ts",
+      "import": "./es/components/Drawer/index.js",
+      "require": "./lib/components/Drawer/index.js"
+    },
+    "./Form": {
+      "types": "./es/components/Form/index.d.ts",
+      "import": "./es/components/Form/index.js",
+      "require": "./lib/components/Form/index.js"
+    },
+    "./ProForm": {
+      "types": "./es/components/ProForm/index.d.ts",
+      "import": "./es/components/ProForm/index.js",
+      "require": "./lib/components/ProForm/index.js"
+    },
+    "./Grid": {
+      "types": "./es/components/Grid/index.d.ts",
+      "import": "./es/components/Grid/index.js",
+      "require": "./lib/components/Grid/index.js"
+    },
+    "./Flex": {
+      "types": "./es/components/Flex/index.d.ts",
+      "import": "./es/components/Flex/index.js",
+      "require": "./lib/components/Flex/index.js"
+    },
+    "./Input": {
+      "types": "./es/components/Input/index.d.ts",
+      "import": "./es/components/Input/index.js",
+      "require": "./lib/components/Input/index.js"
+    },
+    "./InputAmount": {
+      "types": "./es/components/InputAmount/index.d.ts",
+      "import": "./es/components/InputAmount/index.js",
+      "require": "./lib/components/InputAmount/index.js"
+    },
+    "./Loading": {
+      "types": "./es/components/Loading/index.d.ts",
+      "import": "./es/components/Loading/index.js",
+      "require": "./lib/components/Loading/index.js"
+    },
+    "./Menu": {
+      "types": "./es/components/Menu/index.d.ts",
+      "import": "./es/components/Menu/index.js",
+      "require": "./lib/components/Menu/index.js"
+    },
+    "./Message": {
+      "types": "./es/components/Message/index.d.ts",
+      "import": "./es/components/Message/index.js",
+      "require": "./lib/components/Message/index.js"
+    },
+    "./Modal": {
+      "types": "./es/components/Modal/index.d.ts",
+      "import": "./es/components/Modal/index.js",
+      "require": "./lib/components/Modal/index.js"
+    },
+    "./Notification": {
+      "types": "./es/components/Notification/index.d.ts",
+      "import": "./es/components/Notification/index.js",
+      "require": "./lib/components/Notification/index.js"
+    },
+    "./Popup": {
+      "types": "./es/components/Popup/index.d.ts",
+      "import": "./es/components/Popup/index.js",
+      "require": "./lib/components/Popup/index.js"
+    },
+    "./Progress": {
+      "types": "./es/components/Progress/index.d.ts",
+      "import": "./es/components/Progress/index.js",
+      "require": "./lib/components/Progress/index.js"
+    },
+    "./Radio": {
+      "types": "./es/components/Radio/index.d.ts",
+      "import": "./es/components/Radio/index.js",
+      "require": "./lib/components/Radio/index.js"
+    },
+    "./RadioGroup": {
+      "types": "./es/components/RadioGroup/index.d.ts",
+      "import": "./es/components/RadioGroup/index.js",
+      "require": "./lib/components/RadioGroup/index.js"
+    },
+    "./Select": {
+      "types": "./es/components/Select/index.d.ts",
+      "import": "./es/components/Select/index.js",
+      "require": "./lib/components/Select/index.js"
+    },
+    "./Space": {
+      "types": "./es/components/Space/index.d.ts",
+      "import": "./es/components/Space/index.js",
+      "require": "./lib/components/Space/index.js"
+    },
+    "./Spinner": {
+      "types": "./es/components/Spinner/index.d.ts",
+      "import": "./es/components/Spinner/index.js",
+      "require": "./lib/components/Spinner/index.js"
+    },
+    "./Switch": {
+      "types": "./es/components/Switch/index.d.ts",
+      "import": "./es/components/Switch/index.js",
+      "require": "./lib/components/Switch/index.js"
+    },
+    "./Icons": {
+      "types": "./es/components/Icons/index.d.ts",
+      "import": "./es/components/Icons/index.js",
+      "require": "./lib/components/Icons/index.js"
+    },
+    "./Clipboard": {
+      "types": "./es/components/Clipboard/index.d.ts",
+      "import": "./es/components/Clipboard/index.js",
+      "require": "./lib/components/Clipboard/index.js"
+    },
+    "./Sidebar": {
+      "types": "./es/components/Sidebar/index.d.ts",
+      "import": "./es/components/Sidebar/index.js",
+      "require": "./lib/components/Sidebar/index.js"
+    },
+    "./Tab": {
+      "types": "./es/components/Tab/index.d.ts",
+      "import": "./es/components/Tab/index.js",
+      "require": "./lib/components/Tab/index.js"
+    },
+    "./Table": {
+      "types": "./es/components/Table/index.d.ts",
+      "import": "./es/components/Table/index.js",
+      "require": "./lib/components/Table/index.js"
+    },
+    "./Toast": {
+      "types": "./es/components/Toast/index.d.ts",
+      "import": "./es/components/Toast/index.js",
+      "require": "./lib/components/Toast/index.js"
+    },
+    "./Tooltip": {
+      "types": "./es/components/Tooltip/index.d.ts",
+      "import": "./es/components/Tooltip/index.js",
+      "require": "./lib/components/Tooltip/index.js"
+    },
+    "./Typography": {
+      "types": "./es/components/Typography/index.d.ts",
+      "import": "./es/components/Typography/index.js",
+      "require": "./lib/components/Typography/index.js"
+    },
+    "./Upload": {
+      "types": "./es/components/Upload/index.d.ts",
+      "import": "./es/components/Upload/index.js",
+      "require": "./lib/components/Upload/index.js"
+    }
+  },
+  "scripts": {
+    "start": "omni dev",
+    "dev": "omni dev",
+    "dev:mcp": "node scripts/mcp-server/index.mjs",
+    "test": "jest --passWithNoTests",
+    "test:snapshot": "jest --updateSnapshot",
+    "lint": "npm run lint:prettier && npm run lint:es && npm run lint:style",
+    "lint:fix": "npm run lint:prettier_fix && npm run lint:es_fix && npm run lint:style_fix",
+    "lint:es": "eslint src/",
+    "lint:es_fix": "eslint src/ --fix",
+    "lint:prettier": "prettier --check src/",
+    "lint:prettier_fix": "prettier --write src/",
+    "lint:style": "stylelint \"src/**/*.{css,less,scss,sass}\" --allow-empty-input",
+    "lint:style_fix": "stylelint \"src/**/*.{css,less,scss,sass}\" --fix --allow-empty-input",
+    "lint:commit": "commitlint -e $HUSKY_GIT_PARAMS",
+    "new": "omni new",
+    "build": "omni build",
+    "build:demo": "storybook build -c .storybook -o dist-story",
+    "release": "omni release",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:es_fix",
+      "npm run lint:prettier_fix"
+    ],
+    "src/**/*.{css,scss,sass,less}": [
+      "npm run lint:style_fix",
+      "npm run lint:prettier_fix"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1Money-Co/1money-react-ui"
+  },
+  "peerDependencies": {
+    "primeicons": ">=7",
+    "primereact": ">=10.9.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@1money/hooks": "0.1.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "bignumber.js": "^9.3.0",
+    "classnames": "~2.2.6",
+    "lodash.debounce": "^4.0.8",
+    "lodash.isequal": "^4.5.0",
+    "lottie-web": "^5.12.2",
+    "react-hook-form": "^7.54.0",
+    "react-number-format": "^5.4.4",
+    "react-pro-sidebar": "^1.1.0",
+    "react-tooltip": "^5.28.1"
+  },
+  "resolutions": {
+    "@types/react": "~19.1.2",
+    "@types/react-dom": "~19.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.25.9",
+    "@babel/plugin-proposal-class-properties": "~7.18.6",
+    "@babel/plugin-transform-runtime": "~7.25.9",
+    "@babel/preset-env": "~7.25.9",
+    "@babel/preset-react": "~7.25.9",
+    "@babel/preset-typescript": "~7.25.9",
+    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
+    "@chromatic-com/storybook": "^1.9.0",
+    "@commitlint/cli": "8.3.5",
+    "@eslint/js": "^9.24.0",
+    "@modelcontextprotocol/sdk": "^1.25.0",
+    "@omni-door/cli": "^3.2.2",
+    "@storybook/addon-actions": "^8.6.12",
+    "@storybook/addon-console": "^3.0.0",
+    "@storybook/addon-docs": "^8.6.12",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-knobs": "^8.0.1",
+    "@storybook/addon-links": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/addon-themes": "^8.6.12",
+    "@storybook/addon-viewport": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/manager-api": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@storybook/theming": "^8.6.12",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/classnames": "~2.2.11",
+    "@types/enzyme": "3.10.18",
+    "@types/jest": "29.5.12",
+    "@types/jsdom": "^21.1.7",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/lodash.isequal": "^4.5.8",
+    "@types/node": "~18.19.86",
+    "@types/react": "~19.1.2",
+    "@types/react-dom": "~19.1.2",
+    "@types/sinon": "^17.0.4",
+    "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/eslint-plugin": "~8.23.0",
+    "@typescript-eslint/parser": "~8.23.0",
+    "babel-loader": "~8.3.0",
+    "css-loader": "~3.4.2",
+    "del": "5.1.0",
+    "detect-port": "1.3.0",
+    "enzyme": "3.11.0",
+    "eslint": "~9.20.1",
+    "eslint-config-prettier": "~10.0.3",
+    "eslint-plugin-prettier": "~5.2.6",
+    "eslint-plugin-react": "~7.37.5",
+    "eslint-plugin-storybook": "^0.8.0",
+    "file-loader": "~5.0.2",
+    "globals": "^15.15.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-babel": "8.0.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-concat-css": "3.1.0",
+    "gulp-cssnano": "2.1.3",
+    "gulp-if": "3.0.0",
+    "gulp-less": "4.0.1",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-ts-alias": "1.3.0",
+    "gulp-typescript": "5.0.1",
+    "husky": "9.1.7",
+    "ip": "1.1.5",
+    "jest": "~29.7.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-transform-stub": "2.0.0",
+    "jsdom": "^24.1.3",
+    "jsdom-global": "^3.0.2",
+    "less": "4.2.0",
+    "less-loader": "~5.0.0",
+    "lint-staged": "15.4.3",
+    "prettier": "~3.5.3",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sass": "~1.84.0",
+    "sass-loader": "~10.2.1",
+    "sinon": "^18.0.1",
+    "storybook": "^8.6.12",
+    "style-loader": "~1.1.4",
+    "styled-components": "^6.1.17",
+    "stylelint": "16.14.1",
+    "stylelint-config-css-modules": "4.4.0",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-standard": "37.0.0",
+    "stylelint-config-standard-less": "3.0.1",
+    "stylelint-config-standard-scss": "14.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.8.0",
+    "stylelint-less": "3.0.1",
+    "stylelint-order": "6.0.4",
+    "stylelint-scss": "6.11.0",
+    "through2": "4.0.1",
+    "ts-jest": "~29.2.6",
+    "ts-node": "10.9.2",
+    "ts-patch": "~3.2.1",
+    "typescript": "~5.5.4",
+    "typescript-transform-paths": "~3.4.11",
+    "url-loader": "~3.0.0",
+    "vite": "^5.4.18"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "react-pro-sidebar": "patches/react-pro-sidebar.patch",
+      "primereact": "patches/primereact.patch"
+    }
+  }
+}

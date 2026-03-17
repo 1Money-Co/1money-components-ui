@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid renders responsive classes 1`] = `
+<div
+  class="om-react-ui-grid-row"
+  style="--om-grid-gutter-x: 8px; --om-grid-gutter-y: 0px;"
+>
+  <div
+    class="om-react-ui-grid-col om-react-ui-grid-col-12 om-react-ui-grid-col-push-1 om-react-ui-grid-col-pull-1 om-react-ui-grid-col-sm-6 om-react-ui-grid-col-md-4 om-react-ui-grid-col-md-offset-2 om-react-ui-grid-col-lg-3 om-react-ui-grid-col-lg-order-1"
+  />
+</div>
+`;
+
+exports[`Grid renders row/col with gutter + alignment 1`] = `
+<div
+  class="om-react-ui-grid-row om-react-ui-grid-row-align-middle om-react-ui-grid-row-justify-space-between"
+  style="--om-grid-gutter-x: 16px; --om-grid-gutter-y: 8px; --om-grid-justify: space-between;"
+>
+  <div
+    class="om-react-ui-grid-col om-react-ui-grid-col-6"
+  >
+    Left
+  </div>
+  <div
+    class="om-react-ui-grid-col om-react-ui-grid-col-6"
+  >
+    Right
+  </div>
+</div>
+`;

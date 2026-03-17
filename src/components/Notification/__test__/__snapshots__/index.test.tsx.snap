@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationBeta renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-notification-beta om-react-ui-notification-beta-info"
+      >
+        <div
+          class="om-react-ui-notification-beta-content-wrapper"
+        >
+          <div
+            class="om-react-ui-notification-beta-icon-wrapper"
+          >
+            <span
+              class="om-react-ui-notification-beta-icon"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 14.6667 14.6667"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </div>
+          <div
+            class="om-react-ui-notification-beta-content"
+          >
+            <div
+              class="om-react-ui-notification-beta-title"
+            >
+              Test title
+            </div>
+            <div
+              class="om-react-ui-notification-beta-body"
+            >
+              Test body
+            </div>
+          </div>
+        </div>
+        <button
+          aria-label="Close notification"
+          class="om-react-ui-notification-beta-close"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-notification-beta om-react-ui-notification-beta-info"
+    >
+      <div
+        class="om-react-ui-notification-beta-content-wrapper"
+      >
+        <div
+          class="om-react-ui-notification-beta-icon-wrapper"
+        >
+          <span
+            class="om-react-ui-notification-beta-icon"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 14.6667 14.6667"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          class="om-react-ui-notification-beta-content"
+        >
+          <div
+            class="om-react-ui-notification-beta-title"
+          >
+            Test title
+          </div>
+          <div
+            class="om-react-ui-notification-beta-body"
+          >
+            Test body
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Close notification"
+        class="om-react-ui-notification-beta-close"
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

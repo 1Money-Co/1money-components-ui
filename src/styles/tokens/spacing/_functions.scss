@@ -1,0 +1,51 @@
+// Spacing functions — programmatic access to the spacing scale.
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+@use './primitives' as *;
+
+/**
+  * Retrieves the spacing value for a given token key.
+  *
+  * @param {string} $key - The spacing token key (e.g., '100', '200').
+  * @return {length|null} The computed spacing value or null if the key is invalid.
+  * @example
+  *   .element {
+  *     padding: om-spacing-token('200'); // Returns 8px if $om-sys-spacing-unit is 4px
+  *   }
+  */
+@function om-spacing-token($key) {
+  $multiplier: map.get($om-spacing-scale, '#{$key}');
+
+  @if not $multiplier {
+    @return null;
+  }
+
+  @return $multiplier * $om-sys-spacing-unit;
+}
+
+/**
+  * Computes the spacing value based on a token key or a direct length value.
+  *
+  * @param {string|length} $value - The spacing token key (e.g., '100') or a direct length value (e.g., '16px').
+  * @return {length} The computed spacing value.
+  * @example
+  *   .element {
+  *     margin: om-spacing-value('300'); // Returns 12px if $om-sys-spacing-unit is 4px
+  *     padding: om-spacing-value(16px); // Returns 16px
+  *     gap: om-spacing-value(2); // Returns 8px if $om-sys-spacing-unit is 4px
+  *   }
+  */
+@function om-spacing-value($value) {
+  $result: om-spacing-token($value);
+
+  @if $result {
+    @return $result;
+  }
+
+  @if meta.type-of($value) == 'number' and math.is-unitless($value) {
+    @return $value * $om-sys-spacing-unit;
+  }
+
+  @return $value;
+}

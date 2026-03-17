@@ -1,0 +1,110 @@
+@use 'sass:list';
+@use 'sass:map';
+@use '../theme/scales' as scales;
+
+/// Build a hint string from the first variant's values for the missing keys.
+@function -om-variant-hint($template, $missing) {
+  $lines: '';
+
+  @each $key in $missing {
+    $val: if(map.has-key($template, '#{$key}'), map.get($template, '#{$key}'), '<value>');
+    $lines: $lines + '    #{$key}: #{$val}, ';
+  }
+
+  @return $lines;
+}
+
+/// Auto-generate a variant schema map from a component name and a list of token keys.
+/// Uses the system prefix from scales.$om-sys-prefix.
+@function om-variant-schema($component, $keys...) {
+  $schema: ();
+
+  @each $key in $keys {
+    $schema: map.set($schema, --#{scales.$om-sys-prefix}-#{$component}-#{$key}, '#{$key}');
+  }
+
+  @return $schema;
+}
+
+/// Validate that every variant contains all token keys required by the schema.
+/// Returns $variants unchanged; @errors on any missing key.
+@function -om-variant-validate($variants, $schema) {
+  $required-keys: map.values($schema);
+  $first-name: null;
+  $first-tokens: null;
+
+  @each $name, $tokens in $variants {
+    @if not $first-name {
+      $first-name: $name;
+      $first-tokens: $tokens;
+    }
+
+    $missing: ();
+
+    @each $key in $required-keys {
+      @if not map.has-key($tokens, '#{$key}') {
+        $missing: list.append($missing, $key);
+      }
+    }
+
+    @if list.length($missing) > 0 {
+      $hint: '';
+
+      @if $first-tokens and '#{$name}' != '#{$first-name}' {
+        $hint: ' Example from variant "#{$first-name}": #{-om-variant-hint($first-tokens, $missing)}';
+      }
+
+      @error 'Variant "#{$name}" is missing #{list.length($missing)} token(s): #{$missing}. Required keys: #{$required-keys}.#{$hint}';
+    }
+  }
+
+  @return $variants;
+}
+
+@function om-variant($variants, $name) {
+  $normalized-name: '#{$name}';
+
+  @if not map.has-key($variants, $normalized-name) {
+    @error 'Unknown variant "#{$normalized-name}". Available: #{map.keys($variants)}. Hint: add \'\"#{$normalized-name}\": (...)\' to your $variants map.';
+  }
+
+  @return map.get($variants, $normalized-name);
+}
+
+@function om-variant-value($tokens, $key) {
+  $normalized-key: '#{$key}';
+
+  @if not map.has-key($tokens, $normalized-key) {
+    @error 'Variant token map does not define "#{$normalized-key}". Available keys: #{map.keys($tokens)}. Hint: add \'#{$normalized-key}: <value>\' to this variant.';
+  }
+
+  @return map.get($tokens, $normalized-key);
+}
+
+@function om-variant-extend($base, $overrides) {
+  @return map.merge($base, $overrides);
+}
+
+@mixin om-variant-apply($schema, $tokens) {
+  @each $target, $source in $schema {
+    #{$target}: #{om-variant-value($tokens, $source)};
+  }
+}
+
+@mixin om-variant-default($variants, $name, $schema) {
+  $-validated: -om-variant-validate($variants, $schema);
+
+  @include om-variant-apply($schema, om-variant($variants, $name));
+}
+
+@mixin om-variant-classes($variants, $schema, $default: null, $selector-prefix: '&-') {
+  $-validated: -om-variant-validate($variants, $schema);
+
+  @each $name, $tokens in $variants {
+    @if not $default or '#{$default}' != '#{$name}' {
+      #{$selector-prefix}#{$name} {
+        @include om-variant-apply($schema, $tokens);
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+// Global settings — shared configuration consumed by all style layers.
+// This file sits below the tokens layer and must have zero @use dependencies
+// on any other style module to avoid circular imports.
+
+$om-sys-prefix: 'om' !default;

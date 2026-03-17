@@ -1,0 +1,54 @@
+// Utility generator — emits atomic utility classes from the theme scales and system registry.
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use '../theme' as theme;
+@use '../system/props' as props;
+
+$-flag-enabled: (
+  spacing: theme.$om-sys-enable-spacing,
+  layout: theme.$om-sys-enable-layout,
+  sizing: theme.$om-sys-enable-sizing,
+  color: theme.$om-sys-enable-color,
+  visual: theme.$om-sys-enable-visual,
+);
+
+@mixin gen-classes($bp: '') {
+  $pre: if($bp != '', '#{$bp}-', '');
+
+  @each $name, $config in props.$om-system-props {
+    // Skip alias entries — they share the same config as their canonical prop.
+    @if map.has-key(props.$om-system-aliases, $name) {
+      // no-op
+    } @else {
+      $flag: map.get($config, flag);
+
+      @if map.get($-flag-enabled, $flag) {
+        $kind: map.get($config, kind);
+        $css-props: map.get($config, css);
+
+        @if $kind == enum {
+          $css: list.nth($css-props, 1);
+          $vals: map.get($config, values);
+          $aliases: if(map.has-key(props.$om-value-aliases, $css), map.get(props.$om-value-aliases, $css), ());
+
+          @each $val in $vals {
+            $css-val: if(meta.type-of($aliases) == 'map' and map.has-key($aliases, $val), map.get($aliases, $val), $val);
+            .#{theme.$om-sys-prefix}-#{$pre}#{$name}-#{$val} { #{$css}: $css-val; }
+          }
+        } @else {
+          $scale-name: map.get($config, scale);
+          $scale: theme.om-scale-map($scale-name);
+
+          @each $key, $_ in $scale {
+            .#{theme.$om-sys-prefix}-#{$pre}#{$name}-#{$key} {
+              @each $css in $css-props {
+                #{$css}: theme.om-token($scale-name, $key);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

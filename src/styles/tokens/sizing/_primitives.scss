@@ -1,0 +1,12 @@
+// Component height tokens — standardized heights for interactive elements.
+// Converted from loose variables to a scale map for consistency.
+
+$om-component-height-scale: (
+  'xs': 24px,   // Badge, small chips
+  'sm': 32px,   // Small button, icon button
+  'md': 40px,   // Medium button, sidebar items
+  'lg': 44px,   // Small input/select
+  'xl': 48px,   // Cell, stepper step
+  '2xl': 52px,  // Default button
+  '3xl': 56px,  // Default input/select
+) !default;

@@ -1,0 +1,17 @@
+// Sizing token helpers — pure access to the component height scale.
+@use 'sass:map';
+@use './primitives' as primitives;
+
+/// Retrieves the raw component height token for a given size key.
+/// @param {string} $key - Size key (xs, sm, md, lg, xl, 2xl, 3xl).
+/// @return {length} Raw component height token value.
+@function om-component-height-token($key) {
+  $normalized-key: '#{$key}';
+  $value: map.get(primitives.$om-component-height-scale, $normalized-key);
+
+  @if not $value {
+    @error 'Unknown component height key "#{$normalized-key}". Available: #{map.keys(primitives.$om-component-height-scale)}';
+  }
+
+  @return $value;
+}

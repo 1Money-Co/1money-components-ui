@@ -1,0 +1,11 @@
+// Sizing percentage scale — standardized width/height percentage values.
+
+$om-sizing-scale: (
+  '25': 25%,
+  '33': 33.333%,
+  '50': 50%,
+  '66': 66.667%,
+  '75': 75%,
+  '100': 100%,
+  'auto': auto,
+) !default;

@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagBeta renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <span
+        class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+      >
+        <span
+          class="om-react-ui-tag-beta-label"
+        >
+          Test
+        </span>
+      </span>
+    </div>
+  </body>,
+  "container": <div>
+    <span
+      class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+    >
+      <span
+        class="om-react-ui-tag-beta-label"
+      >
+        Test
+      </span>
+    </span>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`TagBeta renders removable 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <span
+        class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+      >
+        <span
+          class="om-react-ui-tag-beta-label"
+        >
+          Test
+        </span>
+        <span
+          aria-label="Remove"
+          class="om-react-ui-tag-beta-remove"
+          role="button"
+          tabindex="0"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="color: rgb(19, 19, 19); width: 12px; height: 12px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="12"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </span>
+      </span>
+    </div>
+  </body>,
+  "container": <div>
+    <span
+      class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+    >
+      <span
+        class="om-react-ui-tag-beta-label"
+      >
+        Test
+      </span>
+      <span
+        aria-label="Remove"
+        class="om-react-ui-tag-beta-remove"
+        role="button"
+        tabindex="0"
+      >
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="color: rgb(19, 19, 19); width: 12px; height: 12px;"
+        >
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="12"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </span>
+    </span>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`TagBeta renders with icon 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <span
+        class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+      >
+        <span
+          class="om-react-ui-tag-beta-icon"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="color: rgb(19, 19, 19); width: 12px; height: 12px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="12"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </span>
+        <span
+          class="om-react-ui-tag-beta-label"
+        >
+          Test
+        </span>
+      </span>
+    </div>
+  </body>,
+  "container": <div>
+    <span
+      class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+    >
+      <span
+        class="om-react-ui-tag-beta-icon"
+      >
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="color: rgb(19, 19, 19); width: 12px; height: 12px;"
+        >
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="12"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 12L21 12M12 3L12 21"
+              stroke-width="2"
+            />
+          </svg>
+        </i>
+      </span>
+      <span
+        class="om-react-ui-tag-beta-label"
+      >
+        Test
+      </span>
+    </span>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

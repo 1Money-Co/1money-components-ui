@@ -1,0 +1,8 @@
+// Breakpoint tokens — responsive width thresholds (ordered large → small).
+
+$om-breakpoints: (
+  lg: 1280px,
+  md: 1024px,
+  sm: 768px,
+) !default;
+$om-breakpoint-step: 1px !default;

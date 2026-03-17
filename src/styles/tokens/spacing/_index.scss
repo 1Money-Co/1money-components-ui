@@ -1,0 +1,4 @@
+// Spacing entrypoint — re-exports primitives, functions, and semantic spacing tokens.
+@forward './primitives';
+@forward './functions';
+@forward './semantic-spacing';

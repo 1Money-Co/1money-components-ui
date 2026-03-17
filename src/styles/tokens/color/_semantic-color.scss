@@ -1,0 +1,170 @@
+// Semantic color tokens — contextual tokens organized by category, referencing primitives.
+// Categories: bg (background), text, icon, border (border color).
+@use './primitives' as p;
+@use '../opacity' as opacity;
+
+// ── Background ──
+$om-bg-scale: (
+  'default': p.$white,
+  'default-hover': p.$grey-100,
+  'default-secondary': p.$grey-50,
+  'default-secondary-hover': p.$grey-200,
+  'default-tertiary': p.$grey-200,
+  'default-tertiary-hover': p.$grey-300,
+  'disabled': p.$grey-100,
+  'disabled-brand': p.$blue-300,
+  'disabled-black': rgba(p.$black, opacity.om-opacity('light')),
+  'brand': p.$blue-700,
+  'brand-hover': p.$blue-800,
+  'brand-secondary': p.$blue-100,
+  'brand-secondary-hover': p.$blue-200,
+  'brand-tertiary': p.$blue-50,
+  'brand-tertiary-hover': p.$blue-100,
+  'neutral': p.$grey-900,
+  'neutral-hover': p.$grey-800,
+  'neutral-secondary': p.$grey-200,
+  'neutral-secondary-hover': p.$grey-300,
+  'neutral-tertiary': p.$grey-100,
+  'neutral-tertiary-hover': p.$grey-200,
+  'positive': p.$green-700,
+  'positive-hover': p.$green-800,
+  'positive-secondary': rgba(p.$green-700, opacity.om-opacity('light')),
+  'positive-secondary-hover': rgba(p.$green-700, opacity.om-opacity('medium')),
+  'positive-tertiary': rgba(p.$green-700, opacity.om-opacity('subtle')),
+  'positive-tertiary-hover': rgba(p.$green-700, opacity.om-opacity('light')),
+  'warning': p.$yellow-500,
+  'warning-hover': p.$yellow-400,
+  'warning-secondary': rgba(p.$yellow-500, opacity.om-opacity('light')),
+  'warning-secondary-hover': rgba(p.$yellow-500, opacity.om-opacity('medium')),
+  'warning-tertiary': rgba(p.$yellow-500, opacity.om-opacity('subtle')),
+  'warning-tertiary-hover': rgba(p.$yellow-500, opacity.om-opacity('light')),
+  'danger': p.$red-600,
+  'danger-hover': p.$red-700,
+  'danger-secondary': rgba(p.$red-600, opacity.om-opacity('light')),
+  'danger-secondary-hover': rgba(p.$red-600, opacity.om-opacity('medium')),
+  'danger-tertiary': rgba(p.$red-600, opacity.om-opacity('subtle')),
+  'danger-tertiary-hover': rgba(p.$red-600, opacity.om-opacity('light')),
+) !default;
+
+// ── Text ──
+$om-text-scale: (
+  // Base
+  'default': p.$grey-900,
+  'default-secondary': p.$grey-800,
+  'default-tertiary': p.$grey-700,
+  // Disabled
+  'disabled': p.$grey-400,
+  'disabled-black': p.$grey-400,
+  'disabled-white': p.$grey-50,
+  // Brand
+  'brand': p.$blue-700,
+  'brand-secondary': p.$blue-300,
+  'brand-tertiary': p.$blue-200,
+  'on-brand': p.$blue-100,
+  'on-brand-secondary': p.$blue-800,
+  'on-brand-tertiary': p.$blue-900,
+  // Neutral
+  'neutral': p.$grey-800,
+  'neutral-secondary': p.$grey-500,
+  'neutral-tertiary': p.$grey-400,
+  'on-neutral': p.$white,
+  'on-neutral-secondary': p.$grey-800,
+  'on-neutral-tertiary': p.$grey-700,
+  // Positive
+  'positive': p.$green-700,
+  'positive-secondary': rgba(p.$green-700, opacity.om-opacity('medium')),
+  'positive-tertiary': rgba(p.$green-700, opacity.om-opacity('light')),
+  'on-positive': rgba(p.$green-700, opacity.om-opacity('subtle')),
+  'on-positive-secondary': p.$green-800,
+  'on-positive-tertiary': p.$green-900,
+  // Warning
+  'warning': p.$yellow-700,
+  'warning-secondary': rgba(p.$yellow-500, opacity.om-opacity('medium')),
+  'warning-tertiary': rgba(p.$yellow-500, opacity.om-opacity('light')),
+  'on-warning': rgba(p.$yellow-500, opacity.om-opacity('subtle')),
+  'on-warning-secondary': p.$yellow-300,
+  'on-warning-tertiary': p.$yellow-700,
+  // Danger
+  'danger': p.$red-600,
+  'danger-secondary': rgba(p.$red-600, opacity.om-opacity('medium')),
+  'danger-tertiary': rgba(p.$red-600, opacity.om-opacity('light')),
+  'on-danger': rgba(p.$red-600, opacity.om-opacity('subtle')),
+  'on-danger-secondary': p.$red-700,
+  'on-danger-tertiary': p.$red-800,
+) !default;
+
+// ── Icon ──
+$om-icon-scale: (
+  // Base
+  'default': p.$grey-900,
+  'default-secondary': p.$grey-800,
+  'default-tertiary': p.$grey-700,
+  // Disabled
+  'disabled': p.$grey-300,
+  'on-disabled': p.$grey-400,
+  // Brand
+  'brand': p.$blue-700,
+  'brand-secondary': p.$blue-300,
+  'brand-tertiary': p.$blue-200,
+  'on-brand': p.$blue-100,
+  'on-brand-secondary': p.$blue-800,
+  'on-brand-tertiary': p.$blue-900,
+  // Neutral
+  'neutral': p.$grey-800,
+  'neutral-secondary': p.$grey-500,
+  'neutral-tertiary': p.$grey-400,
+  'on-neutral': p.$white,
+  'on-neutral-secondary': p.$grey-800,
+  'on-neutral-tertiary': p.$grey-700,
+  // Positive
+  'positive': p.$green-700,
+  'positive-secondary': rgba(p.$green-700, opacity.om-opacity('medium')),
+  'positive-tertiary': rgba(p.$green-700, opacity.om-opacity('light')),
+  'on-positive': rgba(p.$green-700, opacity.om-opacity('subtle')),
+  'on-positive-secondary': p.$green-800,
+  'on-positive-tertiary': p.$green-900,
+  // Warning
+  'warning': p.$yellow-700,
+  'warning-secondary': p.$yellow-500,
+  'warning-tertiary': rgba(p.$yellow-500, opacity.om-opacity('medium')),
+  'on-warning': rgba(p.$yellow-500, opacity.om-opacity('light')),
+  'on-warning-secondary': p.$yellow-300,
+  'on-warning-tertiary': p.$yellow-700,
+  // Danger
+  'danger': p.$red-600,
+  'danger-secondary': rgba(p.$red-600, opacity.om-opacity('medium')),
+  'danger-tertiary': rgba(p.$red-600, opacity.om-opacity('light')),
+  'on-danger': rgba(p.$red-600, opacity.om-opacity('subtle')),
+  'on-danger-secondary': p.$red-700,
+  'on-danger-tertiary': p.$red-800,
+) !default;
+
+// ── Border (Semantic) ──
+$om-border-scale: (
+  // Base
+  'default': p.$grey-300,
+  'default-secondary': p.$grey-500,
+  'default-tertiary': p.$grey-800,
+  // Disabled
+  'disabled': p.$grey-200,
+  // Brand
+  'brand': p.$blue-700,
+  'brand-secondary': p.$blue-300,
+  'brand-tertiary': p.$blue-100,
+  // Neutral
+  'neutral': p.$grey-200,
+  'neutral-secondary': p.$grey-100,
+  'neutral-tertiary': p.$grey-50,
+  // Positive
+  'positive': p.$green-700,
+  'positive-secondary': rgba(p.$green-700, opacity.om-opacity('medium')),
+  'positive-tertiary': rgba(p.$green-700, opacity.om-opacity('light')),
+  // Warning
+  'warning': p.$yellow-700,
+  'warning-secondary': p.$yellow-500,
+  'warning-tertiary': rgba(p.$yellow-500, opacity.om-opacity('light')),
+  // Danger
+  'danger': p.$red-600,
+  'danger-secondary': rgba(p.$red-600, opacity.om-opacity('light')),
+  'danger-tertiary': rgba(p.$red-600, opacity.om-opacity('subtle')),
+) !default;

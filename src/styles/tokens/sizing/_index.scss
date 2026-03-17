@@ -1,0 +1,4 @@
+// Sizing entrypoint — re-exports primitives, functions, and semantic sizing.
+@forward './primitives';
+@forward './functions';
+@forward './semantic-sizing';

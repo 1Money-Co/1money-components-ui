@@ -1,0 +1,3 @@
+// Color entrypoint — only exposes semantic color scales.
+// Raw primitives are internal; legacy code should: @use '@/styles/legacy-color' as *;
+@forward './semantic-color';

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex renders vertical layout 1`] = `
+<div
+  class="om-react-ui-flex om-react-ui-flex-vertical"
+  style="--om-flex-gap: 8px;"
+>
+  <div>
+    Top
+  </div>
+  <div>
+    Bottom
+  </div>
+</div>
+`;
+
+exports[`Flex renders with gap and alignment 1`] = `
+<div
+  class="om-react-ui-flex om-react-ui-flex-wrap-wrap om-react-ui-flex-align-center om-react-ui-flex-justify-space-between"
+  style="--om-flex-gap: 16px;"
+>
+  <div>
+    One
+  </div>
+  <div>
+    Two
+  </div>
+</div>
+`;

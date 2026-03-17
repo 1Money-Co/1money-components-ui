@@ -1,0 +1,11 @@
+// Tokens entrypoint — re-exports semantic design tokens only.
+// Raw primitives and internal helpers (color hex values, font definitions)
+// are kept private to their subsystems.
+@forward './breakpoint';
+@forward './color';
+@forward './opacity';
+@forward './spacing';
+@forward './radius';
+@forward './shadow';
+@forward './sizing';
+@forward './typography';

@@ -1,0 +1,82 @@
+@use '@/styles/api' as *;
+@use '@/styles/legacy-color' as *;
+
+$component: 'icons';
+
+.#{$prefix}-#{$component} {
+  &-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+  }
+
+  *:not(g, defs, clipPath, linearGradient, [fill], [stroke], [stroke-width]) {
+    fill: currentcolor;
+  }
+
+  *:not(g, defs, clipPath, linearGradient)[stroke-width]:not([stroke], [fill]) {
+    stroke: currentcolor;
+  }
+
+  &-logo-with-words {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+
+    i {
+      &:nth-last-child(1) {
+        padding-left: 5%;
+      }
+    }
+
+    &-with-network {
+      i {
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding-left: 2.5%;
+        }
+      }
+    }
+  }
+
+  &-logo-with-beta {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+
+    i:nth-of-type(2) {
+      padding-left: 4%;
+    }
+
+    i:nth-of-type(3) {
+      align-self: flex-end;
+      margin-bottom: calc(var(--logo-height) * 0.125);
+      padding-left: 1px;
+    }
+  }
+}
+
+
+
+.#{$prefix}-#{$component}-hover-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: $color-grey-light;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $color-grey-deep;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $color-grey-light;
+    }
+  }
+}

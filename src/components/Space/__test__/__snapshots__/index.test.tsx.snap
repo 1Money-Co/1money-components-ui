@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Space renders horizontal spacing with split 1`] = `
+<div
+  class="om-react-ui-space om-react-ui-space-align-center om-react-ui-space-wrap"
+  style="--om-space-gap-x: 16px; --om-space-gap-y: 16px;"
+>
+  <div
+    class="om-react-ui-space-item"
+  >
+    <div>
+      One
+    </div>
+  </div>
+  <span
+    class="om-react-ui-space-split"
+  >
+    <span>
+      |
+    </span>
+  </span>
+  <div
+    class="om-react-ui-space-item"
+  >
+    <div>
+      Two
+    </div>
+  </div>
+  <span
+    class="om-react-ui-space-split"
+  >
+    <span>
+      |
+    </span>
+  </span>
+  <div
+    class="om-react-ui-space-item"
+  >
+    <div>
+      Three
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Space renders vertical spacing with numeric sizes 1`] = `
+<div
+  class="om-react-ui-space om-react-ui-space-vertical"
+  style="--om-space-gap-x: 8px; --om-space-gap-y: 16px;"
+>
+  <div
+    class="om-react-ui-space-item"
+  >
+    <div>
+      Top
+    </div>
+  </div>
+  <div
+    class="om-react-ui-space-item"
+  >
+    <div>
+      Bottom
+    </div>
+  </div>
+</div>
+`;

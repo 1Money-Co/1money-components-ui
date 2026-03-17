@@ -1,0 +1,29 @@
+// Theme scales — aggregates token scales and defines system feature flags.
+@use 'sass:map';
+@use '../settings' as settings;
+@use '../tokens' as tokens;
+
+$om-sys-prefix: settings.$om-sys-prefix !default;
+$om-sys-enable-spacing: true !default;
+$om-sys-enable-layout: true !default;
+$om-sys-enable-sizing: true !default;
+$om-sys-enable-visual: true !default;
+$om-sys-enable-color: true !default;
+$om-spacing-resolved-scale: () !default;
+
+@each $key, $mult in tokens.$om-spacing-scale {
+  $om-spacing-resolved-scale: map.merge($om-spacing-resolved-scale, ($key: tokens.om-spacing-token($key)));
+}
+
+$om-theme-scales: (
+  spacing: $om-spacing-resolved-scale,
+  radius: tokens.$om-radius-scale,
+  shadow: tokens.$om-shadow-scale,
+  sizing: tokens.$om-sizing-scale,
+  component-height: tokens.$om-component-height-scale,
+  bg: tokens.$om-bg-scale,
+  text: tokens.$om-text-scale,
+  icon: tokens.$om-icon-scale,
+  border: tokens.$om-border-scale,
+) !default;
+$om-theme-css-var-scales: (spacing, radius, shadow, bg, text, icon, border, component-height) !default;

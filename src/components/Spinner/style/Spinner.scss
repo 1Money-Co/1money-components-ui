@@ -1,0 +1,7 @@
+@use '@/styles/api' as *;
+
+$component: 'spinner';
+
+.#{$prefix}-#{$component} {
+  display: block;
+}

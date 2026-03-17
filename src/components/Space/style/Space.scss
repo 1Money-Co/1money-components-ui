@@ -1,0 +1,40 @@
+@use '@/styles/api' as *;
+
+$component: 'space';
+$space-gap-x: '--om-space-gap-x';
+$space-gap-y: '--om-space-gap-y';
+$space-gap-fallback: 8px;
+
+.#{$prefix}-#{$component} {
+  display: inline-flex;
+  gap: var(#{$space-gap-y}, #{$space-gap-fallback}) var(#{$space-gap-x}, #{$space-gap-fallback});
+
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-align-start {
+    align-items: flex-start;
+  }
+
+  &-align-end {
+    align-items: flex-end;
+  }
+
+  &-align-center {
+    align-items: center;
+  }
+
+  &-align-baseline {
+    align-items: baseline;
+  }
+
+  &-item,
+  &-split {
+    display: inline-flex;
+  }
+}

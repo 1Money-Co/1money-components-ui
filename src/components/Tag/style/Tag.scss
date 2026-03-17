@@ -1,0 +1,94 @@
+@use '@/styles/api' as *;
+
+$component: 'tag-beta';
+
+// ── Variant DSL ──
+$tag-beta-variant-schema: om-variant-schema($component, text, bg);
+$tag-beta-variants: (
+  'neutral': (
+    text: om-text('default-tertiary'),
+    bg: om-bg('neutral-tertiary'),
+  ),
+  'warning': (
+    text: om-text('warning'),
+    bg: om-bg('warning-secondary-hover'),
+  ),
+  'negative': (
+    text: om-text('danger'),
+    bg: om-bg('danger-tertiary-hover'),
+  ),
+  'success': (
+    text: om-text('positive'),
+    bg: om-bg('positive-tertiary-hover'),
+  ),
+  'recommended': (
+    text: om-text('brand'),
+    bg: om-bg('brand-tertiary'),
+  ),
+  'black': (
+    text: om-text('default'),
+    bg: om-bg('default-tertiary'),
+  ),
+);
+
+.#{$prefix}-#{$component} {
+  @include om-variant-default($tag-beta-variants, 'neutral', $tag-beta-variant-schema);
+
+  display: inline-flex;
+  gap: om-gap(100);
+  align-items: center;
+  justify-content: center;
+  padding: om-spacing(100) om-component-padding(200);
+  color: var(--om-tag-beta-text);
+  background-color: var(--om-tag-beta-bg);
+  border: none;
+  border-radius: om-radius('full');
+  cursor: default;
+
+  @include om-typography(body, sm, $strong: true);
+
+  // ── Size: medium ──
+  &-medium {
+    padding: om-component-padding('050') om-component-padding(200);
+
+    @include om-typography(body, sm, $strong: true);
+  }
+
+  // ── Size: small ──
+  &-small {
+    gap: om-gap('050');
+    padding: 0 om-spacing(100);
+
+    @include om-typography(label, xs);
+  }
+
+  // ── Icon ──
+  &-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // ── Label ──
+  &-label {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  // ── Remove button ──
+  &-remove {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: om-opacity('disabled-heavy');
+    }
+  }
+
+  // ── Color variants ──
+  @include om-variant-classes($tag-beta-variants, $tag-beta-variant-schema, $default: 'neutral');
+}

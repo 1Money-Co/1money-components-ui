@@ -1,0 +1,216 @@
+// Typography scale — Sass maps encoding the complete Figma typography spec.
+// Key names (xl/lg/md/sm/xs) align with component size props.
+// Computed line-height values are pixel values from Figma (font-size × ratio).
+
+@use 'sass:map';
+@use './primitives' as *;
+
+// ── Display ──
+// Base: Aeonik / 500 / 108% / #131313
+$om-typography-display: (
+  'xl': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 76px,
+    line-height: 82.08px,
+    letter-spacing: $om-tracking-tight,
+  ),
+  'lg': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 64px,
+    line-height: 69.12px,
+    letter-spacing: $om-tracking-tight,
+  ),
+  'md': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 52px,
+    line-height: 56.16px,
+    letter-spacing: $om-tracking-none,
+  ),
+  'sm': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 46px,
+    line-height: 49.68px,
+    letter-spacing: $om-tracking-none,
+  ),
+  'xs': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 36px,
+    line-height: 38.88px,
+    letter-spacing: $om-tracking-none,
+  ),
+) !default;
+
+// ── Headline ──
+// Base: Aeonik / 500 / 108% / #131313
+$om-typography-headline: (
+  'lg': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 32px,
+    line-height: 34.56px,
+    letter-spacing: $om-tracking-none,
+  ),
+  'md': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 28px,
+    line-height: 30.24px,
+    letter-spacing: $om-tracking-none,
+  ),
+  'sm': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 24px,
+    line-height: 25.92px,
+    letter-spacing: $om-tracking-none,
+  ),
+  'xs': (
+    font-family: $om-font-display,
+    font-weight: $om-font-weight-medium,
+    font-size: 18px,
+    line-height: 19.44px,
+    letter-spacing: $om-tracking-none,
+  ),
+) !default;
+
+// ── Title ──
+// Base: Inter / 500 / 108% / #131313 — strong = 700
+$om-typography-title: (
+  'lg': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 18px,
+    line-height: 19.44px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-bold),
+  ),
+  'md': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 16px,
+    line-height: 17.28px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-bold),
+  ),
+  'sm': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 14px,
+    line-height: 15.12px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-bold),
+  ),
+) !default;
+
+// ── Body ──
+// Base: Inter / 400 / 140% / #131313 — strong = 500
+$om-typography-body: (
+  'lg': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-regular,
+    font-size: 16px,
+    line-height: 22.4px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-medium),
+  ),
+  'md': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-regular,
+    font-size: 14px,
+    line-height: 19.6px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-medium),
+  ),
+  'sm': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-regular,
+    font-size: 12px,
+    line-height: 16.8px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-medium),
+  ),
+) !default;
+
+// ── Link ──
+// Base: Inter / 500 / 140% / underline / #131313
+$om-typography-link: (
+  'md': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 14px,
+    line-height: 19.6px,
+    letter-spacing: $om-tracking-none,
+    text-decoration: underline,
+    text-decoration-skip-ink: none,
+  ),
+  'sm': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 12px,
+    line-height: 16.8px,
+    letter-spacing: $om-tracking-none,
+    text-decoration: underline,
+    text-decoration-skip-ink: none,
+  ),
+) !default;
+
+// ── Label ──
+// Base: Inter / 500 / 108% / #131313 — strong = 700 (xl) / 600 (rest)
+$om-typography-label: (
+  'xl': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 18px,
+    line-height: 19.44px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-bold),
+  ),
+  'lg': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 16px,
+    line-height: 17.28px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-semibold),
+  ),
+  'md': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 14px,
+    line-height: 15.12px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-semibold),
+  ),
+  'sm': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 12px,
+    line-height: 12.96px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-semibold),
+  ),
+  'xs': (
+    font-family: $om-font-body,
+    font-weight: $om-font-weight-medium,
+    font-size: 10px,
+    line-height: 10.8px,
+    letter-spacing: $om-tracking-none,
+    strong: (font-weight: $om-font-weight-semibold),
+  ),
+) !default;
+
+// ── Master lookup ──
+// Maps category name → scale map for programmatic access.
+$om-typography-categories: (
+  'display': $om-typography-display,
+  'headline': $om-typography-headline,
+  'title': $om-typography-title,
+  'body': $om-typography-body,
+  'link': $om-typography-link,
+  'label': $om-typography-label,
+) !default;

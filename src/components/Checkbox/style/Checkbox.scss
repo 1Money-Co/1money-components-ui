@@ -1,0 +1,119 @@
+@use '@/styles/api' as *;
+
+$component: 'checkbox-beta';
+
+.#{$prefix}-#{$component} {
+  display: inline-flex;
+  gap: om-gap(300);
+  align-items: flex-start;
+  cursor: pointer;
+
+  // ── Checkbox box wrapper ──
+  &-box-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: om-line-height(body, lg);
+  }
+
+  // ── PrimeReact checkbox overrides ──
+  &-box {
+    .p-checkbox-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: om-spacing(400);
+      height: om-spacing(400);
+      overflow: hidden;
+      background-color: om-bg('default');
+      border: 1px solid om-border('default-secondary');
+      border-radius: om-radius(100);
+      transition:
+        background-color 0.2s,
+        border-color 0.2s;
+
+      // Icon SVG inside the checkbox
+      svg {
+        width: 14px;
+        height: 14px;
+        color: om-icon('on-brand');
+        fill: currentcolor;
+      }
+    }
+
+    &.p-checkbox-checked .p-checkbox-box,
+    &.p-highlight .p-checkbox-box {
+      background-color: om-bg('brand');
+      border-color: om-bg('brand');
+    }
+
+    &.p-checkbox-checked:not(.p-disabled) .p-checkbox-box:hover,
+    &.p-highlight:not(.p-disabled) .p-checkbox-box:hover {
+      background-color: om-bg('brand-hover');
+      border-color: om-bg('brand-hover');
+    }
+
+    &:not(.p-checkbox-checked, .p-highlight, .p-disabled)
+      .p-checkbox-box:hover {
+      border-color: om-border('default-tertiary');
+    }
+
+    // ── Disabled ──
+    &.p-disabled .p-checkbox-box {
+      background-color: om-bg('disabled');
+      border-color: om-border('disabled');
+      cursor: not-allowed;
+
+      svg {
+        color: om-icon('disabled');
+      }
+    }
+
+    &.p-checkbox-checked.p-disabled .p-checkbox-box,
+    &.p-highlight.p-disabled .p-checkbox-box {
+      background-color: om-bg('disabled');
+      border-color: om-border('disabled');
+    }
+  }
+
+  // ── Content (label + description) ──
+  &-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &-label {
+    @include om-typography(body, lg, $strong: true);
+
+    color: om-text('default');
+  }
+
+  &-description {
+    @include om-typography(body, md, $strong: true);
+
+    color: om-text('default-tertiary');
+  }
+
+  // ── Disabled state (on root) ──
+  &:has(.p-disabled) {
+    cursor: not-allowed;
+
+    .#{$prefix}-#{$component}-label,
+    .#{$prefix}-#{$component}-description {
+      color: om-text('disabled');
+    }
+  }
+
+  // ── Direction: right ──
+  &-right {
+    .#{$prefix}-#{$component}-box-wrapper {
+      order: 1;
+    }
+
+    .#{$prefix}-#{$component}-content {
+      order: 0;
+    }
+  }
+}

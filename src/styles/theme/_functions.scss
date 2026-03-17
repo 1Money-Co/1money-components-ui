@@ -1,0 +1,243 @@
+// Theme functions — generate CSS variable references, themed accessors, and typography vars.
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use './scales' as scales;
+@use '../tokens' as tokens;
+
+@function om-scale-map($scale-name) {
+  @return map.get(scales.$om-theme-scales, $scale-name);
+}
+
+@function om-scale-has($scale-name, $key) {
+  $scale: om-scale-map($scale-name);
+
+  @return $scale != null and map.has-key($scale, '#{$key}');
+}
+
+@function om-scale-value($scale-name, $key) {
+  $scale: om-scale-map($scale-name);
+
+  @if not $scale or not map.has-key($scale, '#{$key}') {
+    @return null;
+  }
+
+  @return map.get($scale, '#{$key}');
+}
+
+@function om-theme-var-name($scale-name, $key) {
+  @return --#{scales.$om-sys-prefix}-#{$scale-name}-#{$key};
+}
+
+@function -om-css-fallback($value) {
+  @return if(meta.type-of($value) == 'list', meta.inspect($value), $value);
+}
+
+@function om-theme-ref($scale-name, $key) {
+  $value: om-scale-value($scale-name, $key);
+
+  @if not $value {
+    @return null;
+  }
+
+  @return var(#{om-theme-var-name($scale-name, $key)}, #{-om-css-fallback($value)});
+}
+
+/// Generic token resolver — returns a CSS variable reference for scales listed in
+/// `$om-theme-css-var-scales`, or the raw scale value otherwise.
+@function om-token($scale-name, $key) {
+  @if not list.index(scales.$om-theme-css-var-scales, $scale-name) {
+    $raw: om-scale-value($scale-name, '#{$key}');
+
+    @if $raw {
+      @return $raw;
+    }
+
+    @error 'om-token: "#{$key}" is not defined in non-CSS-var scale "#{$scale-name}".';
+  }
+
+  $token: om-theme-ref($scale-name, '#{$key}');
+
+  @if $token { @return $token; }
+
+  @if $scale-name == spacing { @return tokens.om-spacing-value($key); }
+
+  @error 'om-token: "#{$key}" is not defined in scale "#{$scale-name}".';
+}
+
+/// Generic scale accessor — use for any registered scale without a dedicated function.
+/// Simple:   om(radius, 300)          → om-token(radius, 300)
+/// Semantic: om(bg, 'brand', 'hover') → om-token(bg, 'brand-hover')
+@function om($scale, $key, $variant: null) {
+  $resolved: if($variant, '#{$key}-#{$variant}', $key);
+
+  @return om-token($scale, $resolved);
+}
+
+@function om-spacing($value) { @return om-token(spacing, $value); }
+
+@function om-radius($key) { @return om-token(radius, $key); }
+
+@function om-shadow($key) { @return om-token(shadow, $key); }
+
+@function om-color($key) { @error 'om-color() is removed. Use semantic accessors: om-bg(), om-text(), om-icon(), om-border().'; }
+
+@function om-sizing($value) { @return om-token(sizing, $value); }
+
+@function om-component-height($key) {
+  $-value: tokens.om-component-height-token($key);
+
+  @return om-token(component-height, $key);
+}
+
+@mixin om-emit-theme-vars($selector: ':root') {
+  #{$selector} {
+    @each $scale-name in scales.$om-theme-css-var-scales {
+      $scale: om-scale-map($scale-name);
+
+      @each $key, $value in $scale {
+        #{om-theme-var-name($scale-name, $key)}: #{-om-css-fallback(om-scale-value($scale-name, $key))};
+      }
+    }
+  }
+}
+
+@function -om-typography-var-name($category, $size, $suffix) {
+  @return --#{scales.$om-sys-prefix}-#{$category}-#{$size}-#{$suffix};
+}
+
+@mixin om-emit-typography-vars($selector: ':root') {
+  $standard-props: (font-size, font-family, line-height, letter-spacing, font-weight);
+
+  #{$selector} {
+    @each $category, $sizes in tokens.$om-typography-categories {
+      @each $size, $entry in $sizes {
+        @each $prop in $standard-props {
+          $val: map.get($entry, $prop);
+
+          @if $val {
+            #{-om-typography-var-name($category, $size, $prop)}: #{$val};
+          }
+        }
+
+        @if map.has-key($entry, strong) {
+          $strong-weight: map.get(map.get($entry, strong), font-weight);
+
+          @if $strong-weight {
+            #{-om-typography-var-name($category, $size, strong-font-weight)}: #{$strong-weight};
+          }
+        }
+
+        @if map.has-key($entry, text-decoration) {
+          #{-om-typography-var-name($category, $size, text-decoration)}: #{map.get($entry, text-decoration)};
+        }
+
+        @if map.has-key($entry, text-decoration-skip-ink) {
+          #{-om-typography-var-name($category, $size, text-decoration-skip-ink)}: #{map.get($entry, text-decoration-skip-ink)};
+        }
+      }
+    }
+  }
+}
+
+@function om-font-size($category, $size) {
+  $-entry: tokens.om-typography($category, $size);
+
+  @return var(#{-om-typography-var-name($category, $size, font-size)});
+}
+
+@function om-line-height($category, $size) {
+  $-entry: tokens.om-typography($category, $size);
+
+  @return var(#{-om-typography-var-name($category, $size, line-height)});
+}
+
+@function om-font-weight($category, $size) {
+  $-entry: tokens.om-typography($category, $size);
+
+  @return var(#{-om-typography-var-name($category, $size, font-weight)});
+}
+
+@function om-font-family($category, $size) {
+  $-entry: tokens.om-typography($category, $size);
+
+  @return var(#{-om-typography-var-name($category, $size, font-family)});
+}
+
+@function om-letter-spacing($category, $size) {
+  $-entry: tokens.om-typography($category, $size);
+
+  @return var(#{-om-typography-var-name($category, $size, letter-spacing)});
+}
+
+// stylelint-disable order/properties-order -- Mixin emits properties in Figma spec order, not CSS sort order.
+@mixin om-typography($category, $size, $strong: false) {
+  $entry: tokens.om-typography($category, $size);
+
+  font-size: var(#{-om-typography-var-name($category, $size, font-size)});
+  font-family: var(#{-om-typography-var-name($category, $size, font-family)});
+  line-height: var(#{-om-typography-var-name($category, $size, line-height)});
+  letter-spacing: var(#{-om-typography-var-name($category, $size, letter-spacing)});
+
+  @if $strong and map.has-key($entry, strong) {
+    font-weight: var(#{-om-typography-var-name($category, $size, strong-font-weight)});
+  } @else {
+    font-weight: var(#{-om-typography-var-name($category, $size, font-weight)});
+  }
+
+  @if map.has-key($entry, text-decoration) {
+    text-decoration: var(#{-om-typography-var-name($category, $size, text-decoration)});
+  }
+
+  @if map.has-key($entry, text-decoration-skip-ink) {
+    text-decoration-skip-ink: var(#{-om-typography-var-name($category, $size, text-decoration-skip-ink)});
+  }
+}
+
+// Semantic color accessors — resolve bg/text/icon/border keys to CSS variable references.
+@function om-bg($group, $variant: null) {
+  $key: if($variant, '#{$group}-#{$variant}', $group);
+
+  @return om-token(bg, $key);
+}
+
+@function om-text($group, $variant: null) {
+  $key: if($variant, '#{$group}-#{$variant}', $group);
+
+  @return om-token(text, $key);
+}
+
+@function om-icon($group, $variant: null) {
+  $key: if($variant, '#{$group}-#{$variant}', $group);
+
+  @return om-token(icon, $key);
+}
+
+@function om-border($group, $variant: null) {
+  $key: if($variant, '#{$group}-#{$variant}', $group);
+
+  @return om-token(border, $key);
+}
+
+// Semantic spacing aliases — validates allowed keys and resolves to primitive spacing tokens.
+@function -om-semantic-spacing-token($scale, $key, $scale-name) {
+  $normalized-key: '#{$key}';
+
+  @if not map.has-key($scale, $normalized-key) {
+    @error '#{$scale-name} does not define spacing token "#{$normalized-key}"';
+  }
+
+  @return map.get($scale, $normalized-key);
+}
+
+@function om-gap($key) {
+  @return om-spacing(-om-semantic-spacing-token(tokens.$om-gap-scale, $key, '$om-gap-scale'));
+}
+
+@function om-component-padding($key) {
+  @return om-spacing(-om-semantic-spacing-token(tokens.$om-component-padding-scale, $key, '$om-component-padding-scale'));
+}
+
+@function om-section-padding($key) {
+  @return om-spacing(-om-semantic-spacing-token(tokens.$om-section-padding-scale, $key, '$om-section-padding-scale'));
+}

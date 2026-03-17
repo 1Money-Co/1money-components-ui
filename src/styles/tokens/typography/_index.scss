@@ -1,0 +1,4 @@
+// Typography entrypoint — only exposes scale maps and accessor functions.
+// Raw primitives (font families, weights, etc.) are internal to the scale.
+@forward './semantic-typography';
+@forward './functions';
