@@ -7,7 +7,7 @@ import type {
 } from 'react';
 
 /**
- * Status variants for NotificationBeta.
+ * Status variants for Notification.
  * Each status maps to a distinct icon and icon-background color.
  */
 export const NOTIFICATION_STATUSES = ['info', 'success', 'warning', 'error'] as const;

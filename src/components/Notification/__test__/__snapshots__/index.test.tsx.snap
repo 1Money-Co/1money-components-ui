@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotificationBeta renders correctly 1`] = `
+exports[`Notification renders correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-notification-beta om-react-ui-notification-beta-info"
+        class="om-react-ui-notification om-react-ui-notification-info"
       >
         <div
-          class="om-react-ui-notification-beta-content-wrapper"
+          class="om-react-ui-notification-content-wrapper"
         >
           <div
-            class="om-react-ui-notification-beta-icon-wrapper"
+            class="om-react-ui-notification-icon-wrapper"
           >
             <span
-              class="om-react-ui-notification-beta-icon"
+              class="om-react-ui-notification-icon"
             >
               <svg
                 fill="none"
@@ -44,15 +44,15 @@ exports[`NotificationBeta renders correctly 1`] = `
             </span>
           </div>
           <div
-            class="om-react-ui-notification-beta-content"
+            class="om-react-ui-notification-content"
           >
             <div
-              class="om-react-ui-notification-beta-title"
+              class="om-react-ui-notification-title"
             >
               Test title
             </div>
             <div
-              class="om-react-ui-notification-beta-body"
+              class="om-react-ui-notification-body"
             >
               Test body
             </div>
@@ -60,7 +60,7 @@ exports[`NotificationBeta renders correctly 1`] = `
         </div>
         <button
           aria-label="Close notification"
-          class="om-react-ui-notification-beta-close"
+          class="om-react-ui-notification-close"
           type="button"
         >
           <svg
@@ -81,16 +81,16 @@ exports[`NotificationBeta renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-notification-beta om-react-ui-notification-beta-info"
+      class="om-react-ui-notification om-react-ui-notification-info"
     >
       <div
-        class="om-react-ui-notification-beta-content-wrapper"
+        class="om-react-ui-notification-content-wrapper"
       >
         <div
-          class="om-react-ui-notification-beta-icon-wrapper"
+          class="om-react-ui-notification-icon-wrapper"
         >
           <span
-            class="om-react-ui-notification-beta-icon"
+            class="om-react-ui-notification-icon"
           >
             <svg
               fill="none"
@@ -119,15 +119,15 @@ exports[`NotificationBeta renders correctly 1`] = `
           </span>
         </div>
         <div
-          class="om-react-ui-notification-beta-content"
+          class="om-react-ui-notification-content"
         >
           <div
-            class="om-react-ui-notification-beta-title"
+            class="om-react-ui-notification-title"
           >
             Test title
           </div>
           <div
-            class="om-react-ui-notification-beta-body"
+            class="om-react-ui-notification-body"
           >
             Test body
           </div>
@@ -135,7 +135,7 @@ exports[`NotificationBeta renders correctly 1`] = `
       </div>
       <button
         aria-label="Close notification"
-        class="om-react-ui-notification-beta-close"
+        class="om-react-ui-notification-close"
         type="button"
       >
         <svg

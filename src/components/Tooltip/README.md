@@ -39,7 +39,7 @@ import { Tooltip } from '@1money/components-ui/Tooltip';
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `placement` | `TooltipBetaPlacement` | `'top'` | Arrow direction and alignment |
+| `placement` | `TooltipPlacement` | `'top'` | Arrow direction and alignment |
 | `title` | `ReactNode` | — | Bold title text |
 | `body` | `ReactNode` | — | Body text content |
 | `arrow` | `boolean` | `true` | Whether to show the arrow |
@@ -47,7 +47,7 @@ import { Tooltip } from '@1money/components-ui/Tooltip';
 | `defaultOpen` | `boolean` | — | Default open state (uncontrolled) |
 | `onOpenChange` | `(open: boolean) => void` | — | Callback when the tooltip open state changes |
 | `anchorSelect` | `string` | — | CSS selector for the trigger element |
-| `prefixCls` | `string` | `'tooltip-beta'` | CSS class prefix |
+| `prefixCls` | `string` | `'tooltip'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 
 All other props from [react-tooltip ITooltip](https://react-tooltip.com/docs/options) are also supported (e.g., `openEvents`, `closeEvents`, `offset`, `delayShow`, `delayHide`), except `place`, `noArrow`, `children`, `isOpen`, and `setIsOpen` which are remapped to the props above.

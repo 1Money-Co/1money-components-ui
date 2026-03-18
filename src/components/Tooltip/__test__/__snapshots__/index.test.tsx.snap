@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TooltipBeta renders correctly 1`] = `
+exports[`Tooltip renders correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -61,7 +61,7 @@ exports[`TooltipBeta renders correctly 1`] = `
 }
 `;
 
-exports[`TooltipBeta renders in controlled closed state 1`] = `
+exports[`Tooltip renders in controlled closed state 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -122,40 +122,40 @@ exports[`TooltipBeta renders in controlled closed state 1`] = `
 }
 `;
 
-exports[`TooltipBeta renders in controlled open state 1`] = `
+exports[`Tooltip renders in controlled open state 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip-beta react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
         id="test-controlled"
         role="tooltip"
       >
         <div
-          class="om-react-ui-tooltip-beta-body"
+          class="om-react-ui-tooltip-body"
         >
           Controlled
         </div>
         <div
-          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-beta-arrow"
+          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip-beta react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
       id="test-controlled"
       role="tooltip"
     >
       <div
-        class="om-react-ui-tooltip-beta-body"
+        class="om-react-ui-tooltip-body"
       >
         Controlled
       </div>
       <div
-        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-beta-arrow"
+        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
       />
     </div>
   </div>,
@@ -213,7 +213,7 @@ exports[`TooltipBeta renders in controlled open state 1`] = `
 }
 `;
 
-exports[`TooltipBeta renders with bottom placement 1`] = `
+exports[`Tooltip renders with bottom placement 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -274,7 +274,7 @@ exports[`TooltipBeta renders with bottom placement 1`] = `
 }
 `;
 
-exports[`TooltipBeta renders with title 1`] = `
+exports[`Tooltip renders with title 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -335,7 +335,7 @@ exports[`TooltipBeta renders with title 1`] = `
 }
 `;
 
-exports[`TooltipBeta renders without arrow 1`] = `
+exports[`Tooltip renders without arrow 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

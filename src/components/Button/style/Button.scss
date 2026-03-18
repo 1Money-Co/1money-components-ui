@@ -1,11 +1,11 @@
 @use '@/styles/api' as theme;
 @use '@/styles/recipes/variants' as variants;
 
-$component: 'button-beta';
-$button-beta-variant-schema: variants.om-variant-schema(
+$component: 'button';
+$button-variant-schema: variants.om-variant-schema(
   $component, text, bg, hover-bg, disabled-text, disabled-bg, spinner-stroke
 );
-$button-beta-primary-variant: (
+$button-primary-variant: (
   text: theme.palette(text, 'on-neutral'),
   bg: theme.palette(bg, 'brand'),
   hover-bg: theme.palette(bg, 'brand-hover'),
@@ -13,8 +13,8 @@ $button-beta-primary-variant: (
   disabled-bg: theme.palette(bg, 'disabled-brand'),
   spinner-stroke: theme.palette(text, 'on-neutral'),
 );
-$button-beta-variants: (
-  'primary': $button-beta-primary-variant,
+$button-variants: (
+  'primary': $button-primary-variant,
   'secondary': (
     text: theme.palette(text, 'brand'),
     bg: theme.palette(bg, 'brand-secondary'),
@@ -66,15 +66,15 @@ $button-beta-variants: (
 );
 
 .#{theme.$prefix}-#{$component} {
-  @include variants.om-variant-default($button-beta-variants, 'primary', $button-beta-variant-schema);
+  @include variants.om-variant-default($button-variants, 'primary', $button-variant-schema);
 
   display: inline-flex;
   gap: theme.spacing(gap, 200);
   align-items: center;
   justify-content: center;
   padding: theme.spacing(component-padding, 400);
-  color: var(--om-button-beta-text);
-  background-color: var(--om-button-beta-bg);
+  color: var(--om-button-text);
+  background-color: var(--om-button-bg);
   border: none;
   border-radius: theme.shape(300);
   box-shadow: none;
@@ -83,13 +83,13 @@ $button-beta-variants: (
   @include theme.typography(label, lg);
 
   &.p-disabled {
-    color: var(--om-button-beta-disabled-text);
-    background-color: var(--om-button-beta-disabled-bg);
+    color: var(--om-button-disabled-text);
+    background-color: var(--om-button-disabled-bg);
     cursor: not-allowed;
   }
 
   &:hover:not(.p-disabled) {
-    background-color: var(--om-button-beta-hover-bg);
+    background-color: var(--om-button-hover-bg);
   }
 
   // ── Sizes ──
@@ -133,10 +133,10 @@ $button-beta-variants: (
     }
 
     svg circle {
-      stroke: var(--om-button-beta-spinner-stroke);
+      stroke: var(--om-button-spinner-stroke);
     }
   }
 
   // ── Color variants ──
-  @include variants.om-variant-classes($button-beta-variants, $button-beta-variant-schema, $default: 'primary');
+  @include variants.om-variant-classes($button-variants, $button-variant-schema, $default: 'primary');
 }

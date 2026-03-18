@@ -60,7 +60,7 @@ import { Notification } from '@1money/components-ui/Notification';
 | `closable` | `boolean` | `true` | Whether to show the close button |
 | `onClose` | `MouseEventHandler<HTMLButtonElement>` | — | Callback when close button is clicked |
 | `ref` | `RefObject<HTMLDivElement \| null>` | — | Ref to the root div element |
-| `prefixCls` | `string` | `'notification-beta'` | CSS class prefix |
+| `prefixCls` | `string` | `'notification'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 
 This component also accepts all standard HTML div attributes (except `title`).

@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagBeta renders correctly 1`] = `
+exports[`Tag renders correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <span
-        class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+        class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-tag-beta-label"
+          class="om-react-ui-tag-label"
         >
           Test
         </span>
@@ -18,10 +18,10 @@ exports[`TagBeta renders correctly 1`] = `
   </body>,
   "container": <div>
     <span
-      class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+      class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-tag-beta-label"
+        class="om-react-ui-tag-label"
       >
         Test
       </span>
@@ -81,22 +81,22 @@ exports[`TagBeta renders correctly 1`] = `
 }
 `;
 
-exports[`TagBeta renders removable 1`] = `
+exports[`Tag renders removable 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <span
-        class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+        class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-tag-beta-label"
+          class="om-react-ui-tag-label"
         >
           Test
         </span>
         <span
           aria-label="Remove"
-          class="om-react-ui-tag-beta-remove"
+          class="om-react-ui-tag-remove"
           role="button"
           tabindex="0"
         >
@@ -126,16 +126,16 @@ exports[`TagBeta renders removable 1`] = `
   </body>,
   "container": <div>
     <span
-      class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+      class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-tag-beta-label"
+        class="om-react-ui-tag-label"
       >
         Test
       </span>
       <span
         aria-label="Remove"
-        class="om-react-ui-tag-beta-remove"
+        class="om-react-ui-tag-remove"
         role="button"
         tabindex="0"
       >
@@ -216,16 +216,16 @@ exports[`TagBeta renders removable 1`] = `
 }
 `;
 
-exports[`TagBeta renders with icon 1`] = `
+exports[`Tag renders with icon 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <span
-        class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+        class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-tag-beta-icon"
+          class="om-react-ui-tag-icon"
         >
           <i
             class="om-react-ui-icons-wrapper"
@@ -248,7 +248,7 @@ exports[`TagBeta renders with icon 1`] = `
           </i>
         </span>
         <span
-          class="om-react-ui-tag-beta-label"
+          class="om-react-ui-tag-label"
         >
           Test
         </span>
@@ -257,10 +257,10 @@ exports[`TagBeta renders with icon 1`] = `
   </body>,
   "container": <div>
     <span
-      class="om-react-ui-tag-beta om-react-ui-tag-beta-neutral om-react-ui-tag-beta-large"
+      class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-tag-beta-icon"
+        class="om-react-ui-tag-icon"
       >
         <i
           class="om-react-ui-icons-wrapper"
@@ -283,7 +283,7 @@ exports[`TagBeta renders with icon 1`] = `
         </i>
       </span>
       <span
-        class="om-react-ui-tag-beta-label"
+        class="om-react-ui-tag-label"
       >
         Test
       </span>

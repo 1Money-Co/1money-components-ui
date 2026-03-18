@@ -34,7 +34,7 @@ import { Checkbox } from '@1money/components-ui/Checkbox';
 | `direction` | `'left' \| 'right'` | `'left'` | Position of the checkbox relative to the label |
 | `onChange` | `(checked: boolean) => void` | — | Callback when checked state changes |
 | `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
-| `prefixCls` | `string` | `'checkbox-beta'` | CSS class prefix |
+| `prefixCls` | `string` | `'checkbox'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 
 This component also accepts all props from PrimeReact's `CheckboxProps` (except `checked`, `onChange`, `icon`, `size`, `ref`).

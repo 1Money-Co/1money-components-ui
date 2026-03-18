@@ -43,7 +43,7 @@ const MinusIconSvg = (
 export const Checkbox: FC<CheckboxProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'checkbox-beta',
+    prefixCls = 'checkbox',
     checked,
     defaultChecked = false,
     indeterminate = false,

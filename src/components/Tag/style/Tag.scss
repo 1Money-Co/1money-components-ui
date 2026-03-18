@@ -1,11 +1,11 @@
 @use '@/styles/api' as theme;
 @use '@/styles/recipes/variants' as variants;
 
-$component: 'tag-beta';
+$component: 'tag';
 
 // ── Variant DSL ──
-$tag-beta-variant-schema: variants.om-variant-schema($component, text, bg);
-$tag-beta-variants: (
+$tag-variant-schema: variants.om-variant-schema($component, text, bg);
+$tag-variants: (
   'neutral': (
     text: theme.palette(text, 'default-tertiary'),
     bg: theme.palette(bg, 'neutral-tertiary'),
@@ -33,15 +33,15 @@ $tag-beta-variants: (
 );
 
 .#{theme.$prefix}-#{$component} {
-  @include variants.om-variant-default($tag-beta-variants, 'neutral', $tag-beta-variant-schema);
+  @include variants.om-variant-default($tag-variants, 'neutral', $tag-variant-schema);
 
   display: inline-flex;
   gap: theme.spacing(gap, 100);
   align-items: center;
   justify-content: center;
   padding: theme.spacing(scale, 100) theme.spacing(component-padding, 200);
-  color: var(--om-tag-beta-text);
-  background-color: var(--om-tag-beta-bg);
+  color: var(--om-tag-text);
+  background-color: var(--om-tag-bg);
   border: none;
   border-radius: theme.shape('full');
   cursor: default;
@@ -91,5 +91,5 @@ $tag-beta-variants: (
   }
 
   // ── Color variants ──
-  @include variants.om-variant-classes($tag-beta-variants, $tag-beta-variant-schema, $default: 'neutral');
+  @include variants.om-variant-classes($tag-variants, $tag-variant-schema, $default: 'neutral');
 }

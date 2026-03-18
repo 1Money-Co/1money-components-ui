@@ -25,7 +25,7 @@ jest.mock('lottie-web', () => ({
   })),
 }));
 
-describe('NotificationBeta', () => {
+describe('Notification', () => {
   it('renders correctly', () => {
     const wrapper = render(
       <Notification title="Test title" body="Test body" />
@@ -85,7 +85,7 @@ describe('NotificationBeta', () => {
     const { container } = render(
       <Notification title="No icon" showIcon={false} />
     );
-    expect(container.querySelector('.om-react-ui-notification-beta-icon')).toBeNull();
+    expect(container.querySelector('.om-react-ui-notification-icon')).toBeNull();
   });
 
   it('hides close button when closable is false', () => {

@@ -9,7 +9,7 @@ import type { TooltipProps } from './interface';
 export const Tooltip: FC<TooltipProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'tooltip-beta',
+    prefixCls = 'tooltip',
     placement = 'top',
     title,
     body,

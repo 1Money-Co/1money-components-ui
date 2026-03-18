@@ -1,7 +1,7 @@
 @use '@/styles/api' as theme;
 @use '@/styles/theme/functions' as theme-internal;
 
-$component: 'checkbox-beta';
+$component: 'checkbox';
 
 .#{theme.$prefix}-#{$component} {
   display: inline-flex;

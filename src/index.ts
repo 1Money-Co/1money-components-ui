@@ -18,4 +18,4 @@ export type { NotificationProps, NotificationLinkConfig, NotificationStatus } fr
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { TagProps } from './components/Tag';
-export type { TooltipProps, TooltipBetaPlacement } from './components/Tooltip';
+export type { TooltipProps, TooltipPlacement } from './components/Tooltip';

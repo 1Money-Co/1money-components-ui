@@ -1,14 +1,14 @@
 @use '@/styles/api' as theme;
 @use '@/styles/recipes/variants' as variants;
 
-$component: 'notification-beta';
-$notification-beta-variant-schema: variants.om-variant-schema($component, icon-color, icon-bg);
-$notification-beta-info-variant: (
+$component: 'notification';
+$notification-variant-schema: variants.om-variant-schema($component, icon-color, icon-bg);
+$notification-info-variant: (
   icon-color: theme.palette(icon, 'brand'),
   icon-bg: theme.palette(bg, 'brand-tertiary-hover'),
 );
-$notification-beta-variants: (
-  'info': $notification-beta-info-variant,
+$notification-variants: (
+  'info': $notification-info-variant,
   'success': (
     icon-color: theme.palette(icon, 'positive'),
     icon-bg: theme.palette(bg, 'positive-tertiary-hover'),
@@ -24,7 +24,7 @@ $notification-beta-variants: (
 );
 
 .#{theme.$prefix}-#{$component} {
-  @include variants.om-variant-default($notification-beta-variants, 'info', $notification-beta-variant-schema);
+  @include variants.om-variant-default($notification-variants, 'info', $notification-variant-schema);
 
   display: flex;
   gap: theme.spacing(gap, 200);
@@ -58,8 +58,8 @@ $notification-beta-variants: (
     justify-content: center;
     width: theme.sizing(component-height, 'sm');
     height: theme.sizing(component-height, 'sm');
-    color: var(--om-notification-beta-icon-color);
-    background-color: var(--om-notification-beta-icon-bg);
+    color: var(--om-notification-icon-color);
+    background-color: var(--om-notification-icon-bg);
     border-radius: theme.shape('full');
 
     svg {
@@ -132,5 +132,5 @@ $notification-beta-variants: (
   }
 
   // ── Status variants — icon background + icon color ──
-  @include variants.om-variant-classes($notification-beta-variants, $notification-beta-variant-schema, $default: 'info');
+  @include variants.om-variant-classes($notification-variants, $notification-variant-schema, $default: 'info');
 }

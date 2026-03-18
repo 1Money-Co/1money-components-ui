@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckboxBeta renders checked state 1`] = `
+exports[`Checkbox renders checked state 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <label
-        class="om-react-ui-checkbox-beta"
+        class="om-react-ui-checkbox"
       >
         <div
-          class="om-react-ui-checkbox-beta-box-wrapper"
+          class="om-react-ui-checkbox-box-wrapper"
         >
           <div
-            class="om-react-ui-checkbox-beta-box p-checkbox p-component p-highlight"
+            class="om-react-ui-checkbox-box p-checkbox p-component p-highlight"
             data-p-disabled="false"
             data-p-highlight="true"
             data-pc-name="checkbox"
@@ -48,10 +48,10 @@ exports[`CheckboxBeta renders checked state 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-checkbox-beta-content"
+          class="om-react-ui-checkbox-content"
         >
           <span
-            class="om-react-ui-checkbox-beta-label"
+            class="om-react-ui-checkbox-label"
           >
             Test
           </span>
@@ -61,13 +61,13 @@ exports[`CheckboxBeta renders checked state 1`] = `
   </body>,
   "container": <div>
     <label
-      class="om-react-ui-checkbox-beta"
+      class="om-react-ui-checkbox"
     >
       <div
-        class="om-react-ui-checkbox-beta-box-wrapper"
+        class="om-react-ui-checkbox-box-wrapper"
       >
         <div
-          class="om-react-ui-checkbox-beta-box p-checkbox p-component p-highlight"
+          class="om-react-ui-checkbox-box p-checkbox p-component p-highlight"
           data-p-disabled="false"
           data-p-highlight="true"
           data-pc-name="checkbox"
@@ -103,10 +103,10 @@ exports[`CheckboxBeta renders checked state 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-checkbox-beta-content"
+        class="om-react-ui-checkbox-content"
       >
         <span
-          class="om-react-ui-checkbox-beta-label"
+          class="om-react-ui-checkbox-label"
         >
           Test
         </span>
@@ -167,19 +167,19 @@ exports[`CheckboxBeta renders checked state 1`] = `
 }
 `;
 
-exports[`CheckboxBeta renders correctly 1`] = `
+exports[`Checkbox renders correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <label
-        class="om-react-ui-checkbox-beta"
+        class="om-react-ui-checkbox"
       >
         <div
-          class="om-react-ui-checkbox-beta-box-wrapper"
+          class="om-react-ui-checkbox-box-wrapper"
         >
           <div
-            class="om-react-ui-checkbox-beta-box p-checkbox p-component"
+            class="om-react-ui-checkbox-box p-checkbox p-component"
             data-p-disabled="false"
             data-p-highlight="false"
             data-pc-name="checkbox"
@@ -200,10 +200,10 @@ exports[`CheckboxBeta renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-checkbox-beta-content"
+          class="om-react-ui-checkbox-content"
         >
           <span
-            class="om-react-ui-checkbox-beta-label"
+            class="om-react-ui-checkbox-label"
           >
             Test
           </span>
@@ -213,13 +213,13 @@ exports[`CheckboxBeta renders correctly 1`] = `
   </body>,
   "container": <div>
     <label
-      class="om-react-ui-checkbox-beta"
+      class="om-react-ui-checkbox"
     >
       <div
-        class="om-react-ui-checkbox-beta-box-wrapper"
+        class="om-react-ui-checkbox-box-wrapper"
       >
         <div
-          class="om-react-ui-checkbox-beta-box p-checkbox p-component"
+          class="om-react-ui-checkbox-box p-checkbox p-component"
           data-p-disabled="false"
           data-p-highlight="false"
           data-pc-name="checkbox"
@@ -240,10 +240,10 @@ exports[`CheckboxBeta renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-checkbox-beta-content"
+        class="om-react-ui-checkbox-content"
       >
         <span
-          class="om-react-ui-checkbox-beta-label"
+          class="om-react-ui-checkbox-label"
         >
           Test
         </span>
@@ -304,28 +304,28 @@ exports[`CheckboxBeta renders correctly 1`] = `
 }
 `;
 
-exports[`CheckboxBeta renders direction right 1`] = `
+exports[`Checkbox renders direction right 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <label
-        class="om-react-ui-checkbox-beta om-react-ui-checkbox-beta-right"
+        class="om-react-ui-checkbox om-react-ui-checkbox-right"
       >
         <div
-          class="om-react-ui-checkbox-beta-content"
+          class="om-react-ui-checkbox-content"
         >
           <span
-            class="om-react-ui-checkbox-beta-label"
+            class="om-react-ui-checkbox-label"
           >
             Test
           </span>
         </div>
         <div
-          class="om-react-ui-checkbox-beta-box-wrapper"
+          class="om-react-ui-checkbox-box-wrapper"
         >
           <div
-            class="om-react-ui-checkbox-beta-box p-checkbox p-component"
+            class="om-react-ui-checkbox-box p-checkbox p-component"
             data-p-disabled="false"
             data-p-highlight="false"
             data-pc-name="checkbox"
@@ -350,22 +350,22 @@ exports[`CheckboxBeta renders direction right 1`] = `
   </body>,
   "container": <div>
     <label
-      class="om-react-ui-checkbox-beta om-react-ui-checkbox-beta-right"
+      class="om-react-ui-checkbox om-react-ui-checkbox-right"
     >
       <div
-        class="om-react-ui-checkbox-beta-content"
+        class="om-react-ui-checkbox-content"
       >
         <span
-          class="om-react-ui-checkbox-beta-label"
+          class="om-react-ui-checkbox-label"
         >
           Test
         </span>
       </div>
       <div
-        class="om-react-ui-checkbox-beta-box-wrapper"
+        class="om-react-ui-checkbox-box-wrapper"
       >
         <div
-          class="om-react-ui-checkbox-beta-box p-checkbox p-component"
+          class="om-react-ui-checkbox-box p-checkbox p-component"
           data-p-disabled="false"
           data-p-highlight="false"
           data-pc-name="checkbox"
@@ -441,19 +441,19 @@ exports[`CheckboxBeta renders direction right 1`] = `
 }
 `;
 
-exports[`CheckboxBeta renders disabled state 1`] = `
+exports[`Checkbox renders disabled state 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <label
-        class="om-react-ui-checkbox-beta"
+        class="om-react-ui-checkbox"
       >
         <div
-          class="om-react-ui-checkbox-beta-box-wrapper"
+          class="om-react-ui-checkbox-box-wrapper"
         >
           <div
-            class="om-react-ui-checkbox-beta-box p-checkbox p-component p-disabled"
+            class="om-react-ui-checkbox-box p-checkbox p-component p-disabled"
             data-p-disabled="true"
             data-p-highlight="false"
             data-pc-name="checkbox"
@@ -475,10 +475,10 @@ exports[`CheckboxBeta renders disabled state 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-checkbox-beta-content"
+          class="om-react-ui-checkbox-content"
         >
           <span
-            class="om-react-ui-checkbox-beta-label"
+            class="om-react-ui-checkbox-label"
           >
             Test
           </span>
@@ -488,13 +488,13 @@ exports[`CheckboxBeta renders disabled state 1`] = `
   </body>,
   "container": <div>
     <label
-      class="om-react-ui-checkbox-beta"
+      class="om-react-ui-checkbox"
     >
       <div
-        class="om-react-ui-checkbox-beta-box-wrapper"
+        class="om-react-ui-checkbox-box-wrapper"
       >
         <div
-          class="om-react-ui-checkbox-beta-box p-checkbox p-component p-disabled"
+          class="om-react-ui-checkbox-box p-checkbox p-component p-disabled"
           data-p-disabled="true"
           data-p-highlight="false"
           data-pc-name="checkbox"
@@ -516,10 +516,10 @@ exports[`CheckboxBeta renders disabled state 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-checkbox-beta-content"
+        class="om-react-ui-checkbox-content"
       >
         <span
-          class="om-react-ui-checkbox-beta-label"
+          class="om-react-ui-checkbox-label"
         >
           Test
         </span>
@@ -580,19 +580,19 @@ exports[`CheckboxBeta renders disabled state 1`] = `
 }
 `;
 
-exports[`CheckboxBeta renders indeterminate state 1`] = `
+exports[`Checkbox renders indeterminate state 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <label
-        class="om-react-ui-checkbox-beta om-react-ui-checkbox-beta-indeterminate"
+        class="om-react-ui-checkbox om-react-ui-checkbox-indeterminate"
       >
         <div
-          class="om-react-ui-checkbox-beta-box-wrapper"
+          class="om-react-ui-checkbox-box-wrapper"
         >
           <div
-            class="om-react-ui-checkbox-beta-box p-checkbox p-component p-highlight"
+            class="om-react-ui-checkbox-box p-checkbox p-component p-highlight"
             data-p-disabled="false"
             data-p-highlight="true"
             data-pc-name="checkbox"
@@ -628,10 +628,10 @@ exports[`CheckboxBeta renders indeterminate state 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-checkbox-beta-content"
+          class="om-react-ui-checkbox-content"
         >
           <span
-            class="om-react-ui-checkbox-beta-label"
+            class="om-react-ui-checkbox-label"
           >
             Test
           </span>
@@ -641,13 +641,13 @@ exports[`CheckboxBeta renders indeterminate state 1`] = `
   </body>,
   "container": <div>
     <label
-      class="om-react-ui-checkbox-beta om-react-ui-checkbox-beta-indeterminate"
+      class="om-react-ui-checkbox om-react-ui-checkbox-indeterminate"
     >
       <div
-        class="om-react-ui-checkbox-beta-box-wrapper"
+        class="om-react-ui-checkbox-box-wrapper"
       >
         <div
-          class="om-react-ui-checkbox-beta-box p-checkbox p-component p-highlight"
+          class="om-react-ui-checkbox-box p-checkbox p-component p-highlight"
           data-p-disabled="false"
           data-p-highlight="true"
           data-pc-name="checkbox"
@@ -683,10 +683,10 @@ exports[`CheckboxBeta renders indeterminate state 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-checkbox-beta-content"
+        class="om-react-ui-checkbox-content"
       >
         <span
-          class="om-react-ui-checkbox-beta-label"
+          class="om-react-ui-checkbox-label"
         >
           Test
         </span>
@@ -747,19 +747,19 @@ exports[`CheckboxBeta renders indeterminate state 1`] = `
 }
 `;
 
-exports[`CheckboxBeta renders with description 1`] = `
+exports[`Checkbox renders with description 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <label
-        class="om-react-ui-checkbox-beta"
+        class="om-react-ui-checkbox"
       >
         <div
-          class="om-react-ui-checkbox-beta-box-wrapper"
+          class="om-react-ui-checkbox-box-wrapper"
         >
           <div
-            class="om-react-ui-checkbox-beta-box p-checkbox p-component"
+            class="om-react-ui-checkbox-box p-checkbox p-component"
             data-p-disabled="false"
             data-p-highlight="false"
             data-pc-name="checkbox"
@@ -780,15 +780,15 @@ exports[`CheckboxBeta renders with description 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-checkbox-beta-content"
+          class="om-react-ui-checkbox-content"
         >
           <span
-            class="om-react-ui-checkbox-beta-label"
+            class="om-react-ui-checkbox-label"
           >
             Label
           </span>
           <span
-            class="om-react-ui-checkbox-beta-description"
+            class="om-react-ui-checkbox-description"
           >
             Description
           </span>
@@ -798,13 +798,13 @@ exports[`CheckboxBeta renders with description 1`] = `
   </body>,
   "container": <div>
     <label
-      class="om-react-ui-checkbox-beta"
+      class="om-react-ui-checkbox"
     >
       <div
-        class="om-react-ui-checkbox-beta-box-wrapper"
+        class="om-react-ui-checkbox-box-wrapper"
       >
         <div
-          class="om-react-ui-checkbox-beta-box p-checkbox p-component"
+          class="om-react-ui-checkbox-box p-checkbox p-component"
           data-p-disabled="false"
           data-p-highlight="false"
           data-pc-name="checkbox"
@@ -825,15 +825,15 @@ exports[`CheckboxBeta renders with description 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-checkbox-beta-content"
+        class="om-react-ui-checkbox-content"
       >
         <span
-          class="om-react-ui-checkbox-beta-label"
+          class="om-react-ui-checkbox-label"
         >
           Label
         </span>
         <span
-          class="om-react-ui-checkbox-beta-description"
+          class="om-react-ui-checkbox-description"
         >
           Description
         </span>

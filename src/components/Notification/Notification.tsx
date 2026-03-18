@@ -88,7 +88,7 @@ const STATUS_ICON_MAP: Record<NotificationStatus, ReactElement> = {
 export const Notification: FC<NotificationProps> = props => {
   const {
     className = '',
-    prefixCls = 'notification-beta',
+    prefixCls = 'notification',
     status = 'info',
     title,
     body,

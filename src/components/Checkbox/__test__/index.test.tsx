@@ -24,7 +24,7 @@ jest.mock('lottie-web', () => ({
   })),
 }));
 
-describe('CheckboxBeta', () => {
+describe('Checkbox', () => {
   it('renders correctly', () => {
     const wrapper = render(<Checkbox label="Test" />);
     expect(wrapper).toMatchSnapshot();

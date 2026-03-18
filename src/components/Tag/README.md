@@ -30,7 +30,7 @@ import { Tag } from '@1money/components-ui/Tag';
 | `removable` | `boolean` | `false` | Shows a remove button |
 | `onRemove` | `(e: MouseEvent<HTMLSpanElement>) => void` | — | Callback when remove button is clicked |
 | `ref` | `RefObject<HTMLSpanElement \| null>` | — | Ref to the root span element |
-| `prefixCls` | `string` | `'tag-beta'` | CSS class prefix |
+| `prefixCls` | `string` | `'tag'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 
 This component also accepts all standard HTML span attributes (except `color`).

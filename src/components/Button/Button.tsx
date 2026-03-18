@@ -12,7 +12,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = props => {
   const {
     children,
     className = '',
-    prefixCls = 'button-beta',
+    prefixCls = 'button',
     color = 'primary',
     size = 'medium',
     iconStart,

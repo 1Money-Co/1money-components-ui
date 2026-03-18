@@ -1,6 +1,6 @@
 @use '@/styles/api' as theme;
 
-$component: 'tooltip-beta';
+$component: 'tooltip';
 $cls: #{theme.$prefix}-#{$component};
 
 // ── Override react-tooltip defaults ──

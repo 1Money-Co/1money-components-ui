@@ -24,7 +24,7 @@ jest.mock('lottie-web', () => ({
   })),
 }));
 
-describe('TooltipBeta', () => {
+describe('Tooltip', () => {
   it('renders correctly', () => {
     const wrapper = render(<Tooltip id="test-tooltip" body="Test tooltip" />);
     expect(wrapper).toMatchSnapshot();

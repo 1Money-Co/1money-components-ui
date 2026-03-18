@@ -13,7 +13,7 @@ const ICON_SIZE_MAP = {
 export const Tag: FC<TagProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'tag-beta',
+    prefixCls = 'tag',
     color = 'neutral',
     size = 'large',
     label,

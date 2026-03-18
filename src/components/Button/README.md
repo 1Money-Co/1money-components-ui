@@ -43,7 +43,7 @@ import { Button } from '@1money/components-ui/Button';
 | `loading` | `boolean` | — | Shows a loading spinner and disables the button |
 | `disabled` | `boolean` | — | Disables the button |
 | `ref` | `RefObject<HTMLButtonElement \| null>` | — | Ref to the root button element |
-| `prefixCls` | `string` | `'button-beta'` | CSS class prefix |
+| `prefixCls` | `string` | `'button'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 | `children` | `ReactNode` | — | Button content |
 
