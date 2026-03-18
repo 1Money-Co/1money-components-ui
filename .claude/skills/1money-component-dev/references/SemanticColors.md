@@ -1,12 +1,14 @@
 # Semantic Colors Reference
 
-Complete key listing for all 4 semantic color functions. Source: `src/styles/tokens/color/_semantic-color.scss`.
+Complete key listing for all 4 semantic color domains accessed via `theme.palette()`. Source: `src/styles/tokens/color/_semantic-color.scss`.
 
-All functions accept `($group, $variant: null)`. Single-key calls like `om-bg('brand-hover')` and two-param calls like `om-bg('brand', 'hover')` are equivalent — the group and variant are concatenated with a hyphen internally.
+Usage: `theme.palette($domain, $token, $state?)` where `$domain` is one of `bg`, `text`, `icon`, `border`.
+
+Single-key calls like `theme.palette(bg, 'brand-hover')` and three-param calls like `theme.palette(bg, 'brand', 'hover')` are equivalent — the token and state are concatenated with a hyphen internally.
 
 ---
 
-## `om-bg($group, $variant: null)` — Background Colors (40 keys)
+## `theme.palette(bg, ...)` — Background Colors (40 keys)
 
 | Key | Primitive | Group |
 |-----|-----------|-------|
@@ -52,7 +54,7 @@ All functions accept `($group, $variant: null)`. Single-key calls like `om-bg('b
 
 ---
 
-## `om-text($group, $variant: null)` — Text Colors (36 keys)
+## `theme.palette(text, ...)` — Text Colors (36 keys)
 
 | Key | Primitive | Group |
 |-----|-----------|-------|
@@ -95,7 +97,7 @@ All functions accept `($group, $variant: null)`. Single-key calls like `om-bg('b
 
 ---
 
-## `om-icon($group, $variant: null)` — Icon Colors (36 keys)
+## `theme.palette(icon, ...)` — Icon Colors (36 keys)
 
 | Key | Primitive | Group |
 |-----|-----------|-------|
@@ -137,7 +139,7 @@ All functions accept `($group, $variant: null)`. Single-key calls like `om-bg('b
 
 ---
 
-## `om-border($group, $variant: null)` — Semantic Border Colors (19 keys)
+## `theme.palette(border, ...)` — Semantic Border Colors (19 keys)
 
 | Key | Primitive | Group |
 |-----|-----------|-------|
@@ -165,7 +167,7 @@ All functions accept `($group, $variant: null)`. Single-key calls like `om-bg('b
 
 ## Quick-Reference Tables
 
-For variant-specific token selection guidance (suffix rules, common component patterns, state pairing rules), see **`src/styles/README.md` → "Semantic Color Token Reference"** section. It provides lookup tables extracted from ButtonBeta and NotificationBeta real-world usage.
+For variant-specific token selection guidance (suffix rules, common component patterns, state pairing rules), see **`src/styles/README.md` → "Semantic Color Token Reference"** section. It provides lookup tables extracted from Button and Notification real-world usage.
 
 ---
 
@@ -175,29 +177,29 @@ For variant-specific token selection guidance (suffix rules, common component pa
 
 ```scss
 // Primary variant
-color: om-text('on-neutral');
-background-color: om-bg('brand');
-&:hover:not(.p-disabled) { background-color: om-bg('brand-hover'); }
-&.p-disabled { color: om-text('disabled-white'); background-color: om-bg('disabled-brand'); }
+color: theme.palette(text, 'on-neutral');
+background-color: theme.palette(bg, 'brand');
+&:hover:not(.p-disabled) { background-color: theme.palette(bg, 'brand-hover'); }
+&.p-disabled { color: theme.palette(text, 'disabled-white'); background-color: theme.palette(bg, 'disabled-brand'); }
 
 // Secondary variant
-color: om-text('brand');
-background-color: om-bg('brand-secondary');
-&:hover:not(.p-disabled) { background-color: om-bg('brand-secondary-hover'); }
+color: theme.palette(text, 'brand');
+background-color: theme.palette(bg, 'brand-secondary');
+&:hover:not(.p-disabled) { background-color: theme.palette(bg, 'brand-secondary-hover'); }
 
 // Danger variant
-color: om-text('danger');
-background-color: om-bg('danger-secondary');
-&:hover:not(.p-disabled) { background-color: om-bg('danger-secondary-hover'); }
+color: theme.palette(text, 'danger');
+background-color: theme.palette(bg, 'danger-secondary');
+&:hover:not(.p-disabled) { background-color: theme.palette(bg, 'danger-secondary-hover'); }
 ```
 
 ### Input-like components
 
 ```scss
-border-color: om-border('default');
-&:focus { border-color: om-border('brand'); }
-&.error { border-color: om-border('danger'); }
-&.p-disabled { border-color: om-border('disabled'); }
+border-color: theme.palette(border, 'default');
+&:focus { border-color: theme.palette(border, 'brand'); }
+&.error { border-color: theme.palette(border, 'danger'); }
+&.p-disabled { border-color: theme.palette(border, 'disabled'); }
 ```
 
 ### Disabled states
@@ -205,9 +207,9 @@ border-color: om-border('default');
 ```scss
 &.p-disabled {
   cursor: not-allowed;
-  opacity: om-opacity(disabled); // if using opacity approach
+  opacity: theme.opacity('disabled'); // if using opacity approach
   // OR use specific disabled color tokens:
-  color: om-text('disabled');
-  background-color: om-bg('disabled');
+  color: theme.palette(text, 'disabled');
+  background-color: theme.palette(bg, 'disabled');
 }
 ```

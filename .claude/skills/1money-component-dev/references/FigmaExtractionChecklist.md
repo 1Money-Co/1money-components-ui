@@ -8,7 +8,7 @@ Checklist for extracting design data from Figma when building new `@1money/compo
 
 - [ ] Figma URL is a design or node link (not a prototype or FigJam board)
 - [ ] Node ID is known, or top-level frames have been listed and the user has selected one
-- [ ] Component name confirmed (PascalCase, with `Beta` suffix if wrapping an existing library component)
+- [ ] Component name confirmed (PascalCase)
 
 ## Extraction Steps
 
@@ -57,23 +57,23 @@ Map every Figma design value to the internal style system. Consult `StyleSystemA
 
 ### Colors
 
-- [ ] Background fills mapped to `om-bg()` keys
-- [ ] Text colors mapped to `om-text()` keys
-- [ ] Icon colors mapped to `om-icon()` keys
-- [ ] Border colors mapped to `om-border()` keys
+- [ ] Background fills mapped to `theme.palette(bg, ...)` keys
+- [ ] Text colors mapped to `theme.palette(text, ...)` keys
+- [ ] Icon colors mapped to `theme.palette(icon, ...)` keys
+- [ ] Border colors mapped to `theme.palette(border, ...)` keys
 - [ ] No raw hex values remain unmapped
 
 ### Spacing
 
-- [ ] Padding values mapped to `om-component-padding()` or `om-spacing()`
-- [ ] Gap values mapped to `om-gap()`
-- [ ] Margin values mapped to `om-spacing()`
+- [ ] Padding values mapped to `theme.spacing(component-padding, key)` or `theme.spacing(scale, key)`
+- [ ] Gap values mapped to `theme.spacing(gap, key)`
+- [ ] Margin values mapped to `theme.spacing(scale, key)`
 - [ ] No raw pixel values for spacing remain unmapped
 
 ### Typography
 
 - [ ] Font family, size, weight, line-height identified per text layer
-- [ ] Mapped to `@include om-typography(category, size)` — find the closest match from:
+- [ ] Mapped to `@include theme.typography(category, size)` — find the closest match from:
   - `display`: xl/lg/md/sm/xs (Aeonik)
   - `headline`: lg/md/sm/xs (Aeonik)
   - `title`: lg/md/sm (Inter, strong=700)
@@ -84,16 +84,16 @@ Map every Figma design value to the internal style system. Consult `StyleSystemA
 
 ### Visual Properties
 
-- [ ] Border-radius mapped to `om-radius()` keys (0/100/200/300/400/600/full)
-- [ ] Box-shadow mapped to `om-shadow()` keys (0/100/200)
-- [ ] Opacity mapped to `om-opacity()` keys
-- [ ] Component heights mapped to `om-component-height()` keys (xs/sm/md/lg/xl/2xl/3xl)
+- [ ] Border-radius mapped to `theme.shape(key)` keys (0/100/200/300/400/600/full)
+- [ ] Box-shadow mapped to `theme.shadows(key)` keys (0/100/200)
+- [ ] Opacity mapped to `theme.opacity(key)` keys
+- [ ] Component heights mapped to `theme.sizing(component-height, key)` keys (xs/sm/md/lg/xl/2xl/3xl)
 
 ## Variant Identification
 
 - [ ] All visual variants listed (e.g., color variants: primary, secondary, danger, etc.)
 - [ ] All size variants listed (e.g., large, medium, small)
-- [ ] Variant naming aligned with existing library conventions (check ButtonBeta for reference)
+- [ ] Variant naming aligned with existing library conventions (check Button for reference)
 - [ ] Each variant's token mapping documented
 
 ## Slot Identification
@@ -135,10 +135,10 @@ Use this table format to document the mapping:
 ```markdown
 | Figma Element | Figma Value | Style System Function | Key |
 |---------------|-------------|----------------------|-----|
-| Background | #1D4ED8 | `om-bg()` | `brand` |
-| Text | #FFFFFF | `om-text()` | `on-neutral` |
-| Padding | 16px | `om-component-padding()` | `400` |
-| Border radius | 12px | `om-radius()` | `300` |
-| Height | 52px | `om-component-height()` | `2xl` |
-| Typography | Inter 14/500 | `om-typography()` | `label, md` |
+| Background | #1D4ED8 | `theme.palette(bg, ...)` | `brand` |
+| Text | #FFFFFF | `theme.palette(text, ...)` | `on-neutral` |
+| Padding | 16px | `theme.spacing(component-padding, ...)` | `400` |
+| Border radius | 12px | `theme.shape(...)` | `300` |
+| Height | 52px | `theme.sizing(component-height, ...)` | `2xl` |
+| Typography | Inter 14/500 | `theme.typography(...)` | `label, md` |
 ```

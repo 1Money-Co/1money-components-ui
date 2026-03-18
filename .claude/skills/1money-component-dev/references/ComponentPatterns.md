@@ -1,8 +1,8 @@
 # Component Patterns Reference
 
-Annotated templates for all 8 files in a `@1money/components-ui` component directory. Based on the canonical `ButtonBeta` component.
+Annotated templates for all 8 files in a `@1money/components-ui` component directory. Based on the canonical `Button` component.
 
-Replace `{Name}` with PascalCase name (e.g., `ChipBeta`) and `{kebab-name}` with kebab-case (e.g., `chip-beta`).
+Replace `{Name}` with PascalCase name (e.g., `Chip`) and `{kebab-name}` with kebab-case (e.g., `chip`).
 
 ---
 
@@ -76,18 +76,18 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 // classnames is a curried function:
 // classnames(prefix) returns a class generator
 
-const classes = classnames('button-beta');
+const classes = classnames('button');
 // classes is now: (suffix?, className?) => string
 
-classes(void 0)           // → 'om-react-ui-button-beta'
-classes('primary')        // → 'om-react-ui-button-beta-primary'
-classes('icon-start')     // → 'om-react-ui-button-beta-icon-start'
-classes(void 0, 'extra')  // → 'om-react-ui-button-beta extra'
-classes('sm', 'extra')    // → 'om-react-ui-button-beta-sm extra'
+classes(void 0)           // → 'om-react-ui-button'
+classes('primary')        // → 'om-react-ui-button-primary'
+classes('icon-start')     // → 'om-react-ui-button-icon-start'
+classes(void 0, 'extra')  // → 'om-react-ui-button extra'
+classes('sm', 'extra')    // → 'om-react-ui-button-sm extra'
 
 // joinCls concatenates non-falsy class strings
 joinCls(classes('primary'), classes('large'), className)
-// → 'om-react-ui-button-beta-primary om-react-ui-button-beta-large my-custom'
+// → 'om-react-ui-button-primary om-react-ui-button-large my-custom'
 ```
 
 ---
@@ -255,57 +255,57 @@ export const Sizes: Story = {
 ## 5. `style/{Name}.scss` — Component Styles
 
 ```scss
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
 
 $component: '{kebab-name}';
 
 // ── Variant DSL ──
 // 1. Schema: auto-generate from component name + token key list
 // Expands to: (--om-{kebab-name}-text: text, --om-{kebab-name}-bg: bg, ...)
-$component-variant-schema: om-variant-schema(
+$component-variant-schema: variants.om-variant-schema(
   $component, text, bg, hover-bg, disabled-text, disabled-bg
 );
 
 // 2. Variants map: each variant defines all keys from the schema
 $component-variants: (
   'primary': (
-    text: om-text('on-neutral'),
-    bg: om-bg('brand'),
-    hover-bg: om-bg('brand-hover'),
-    disabled-text: om-text('disabled-white'),
-    disabled-bg: om-bg('disabled-brand'),
+    text: theme.palette(text, 'on-neutral'),
+    bg: theme.palette(bg, 'brand'),
+    hover-bg: theme.palette(bg, 'brand-hover'),
+    disabled-text: theme.palette(text, 'disabled-white'),
+    disabled-bg: theme.palette(bg, 'disabled-brand'),
   ),
   'secondary': (
-    text: om-text('brand'),
-    bg: om-bg('brand-secondary'),
-    hover-bg: om-bg('brand-secondary-hover'),
-    disabled-text: om-text('brand-secondary'),
-    disabled-bg: om-bg('brand-tertiary'),
+    text: theme.palette(text, 'brand'),
+    bg: theme.palette(bg, 'brand-secondary'),
+    hover-bg: theme.palette(bg, 'brand-secondary-hover'),
+    disabled-text: theme.palette(text, 'brand-secondary'),
+    disabled-bg: theme.palette(bg, 'brand-tertiary'),
   ),
   // ... more variants
 );
 
 // Root selector — generates: .om-react-ui-{kebab-name}
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   // 3. Apply default variant + validate all variants against schema
-  @include om-variant-default($component-variants, 'primary', $component-variant-schema);
+  @include variants.om-variant-default($component-variants, 'primary', $component-variant-schema);
 
   // ── Base styles — consume variant CSS custom properties ──
   display: inline-flex;
-  gap: om-gap(200);
+  gap: theme.spacing(gap, 200);
   align-items: center;
   justify-content: center;
-  height: om-component-height('2xl');
-  padding: om-component-padding(400);
+  padding: theme.spacing(component-padding, 400);
   color: var(--om-{kebab-name}-text);
   background-color: var(--om-{kebab-name}-bg);
   border: none;
-  border-radius: om-radius(300);
+  border-radius: theme.shape(300);
   box-shadow: none;
   cursor: pointer;
 
   // Typography — emits font-family, font-size, line-height, etc.
-  @include om-typography(label, lg);
+  @include theme.typography(label, lg);
 
   // ── Disabled — reads variant custom properties ──
   &.p-disabled {
@@ -322,17 +322,15 @@ $component-variants: (
   // ── Size variants ──
   // Use &-{size} for variant classes
   &-medium {
-    height: om-component-height('md');
-    padding: om-component-padding(300);
-    border-radius: om-radius(300);
-    @include om-typography(label, md);
+    padding: theme.spacing(component-padding, 300);
+    border-radius: theme.shape(300);
+    @include theme.typography(label, md);
   }
 
   &-small {
-    height: om-component-height('sm');
-    padding: om-component-padding(300);
-    border-radius: om-radius(200);
-    @include om-typography(label, sm);
+    padding: theme.spacing(component-padding, 200);
+    border-radius: theme.shape(200);
+    @include theme.typography(label, sm);
   }
 
   // ── Slot styles ──
@@ -345,19 +343,19 @@ $component-variants: (
 
   // ── Color variants (Variant DSL) ──
   // Generate all modifier classes, skipping the default 'primary' variant
-  @include om-variant-classes($component-variants, $component-variant-schema, $default: 'primary');
+  @include variants.om-variant-classes($component-variants, $component-variant-schema, $default: 'primary');
 
   // ── Responsive ──
-  // @include om-down(md) { ... }
+  // @include theme.down(md) { ... }
 }
 ```
 
 ### SCSS Rules
 
-- First line: `@use '@/styles/api' as *;`
+- First lines: `@use '@/styles/api' as theme;` and `@use '@/styles/recipes/variants' as variants;` (if using variants)
 - `$component` is always kebab-case
-- Root: `.#{$prefix}-#{$component}` (do NOT hardcode `om-react-ui`)
-- **Color variants**: Use the Variant DSL (`om-variant-schema` + `om-variant-default` + `om-variant-classes`) with CSS custom properties instead of manual `&-{variant}` blocks for each color
+- Root: `.#{theme.$prefix}-#{$component}` (do NOT hardcode `om-react-ui`)
+- **Color variants**: Use the Variant DSL (`variants.om-variant-schema` + `variants.om-variant-default` + `variants.om-variant-classes`) with CSS custom properties instead of manual `&-{variant}` blocks for each color
 - **Size variants**: Use `&-{size}` nesting (these remain manual since they change structural properties, not just colors)
 - Disabled: target `.p-disabled` class (PrimeReact adds this)
 - Hover: `&:hover:not(.p-disabled)` to skip disabled elements
@@ -470,16 +468,11 @@ import { {Name} } from '@1money/components-ui/{Name}';
 After creating all component files, update the barrel export:
 
 ```ts
-// Add to import block (alphabetical order by component name)
-import { {Name} } from './components/{Name}';
-
-// Add to named export block
+// Add re-export for the component (alphabetical order)
 export { {Name} } from './components/{Name}';
-export type { {Name}Props } from './components/{Name}';
 
-// Add to default export object
-export default {
-  // ... existing components
-  {Name},
-};
+// Add type re-export
+export type { {Name}Props } from './components/{Name}';
 ```
+
+Note: The current `src/index.ts` uses only re-export statements — there is no import block and no default export object.

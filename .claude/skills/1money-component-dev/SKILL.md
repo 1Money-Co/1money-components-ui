@@ -30,7 +30,7 @@ metadata:
 
 - **Figma URL** (recommended): Design source URL for the component.
 - **Node ID** (optional): Specific Figma frame. If absent, auto-explore top-level frames.
-- **Component Name** (required): PascalCase name for the component (e.g., `ChipBeta`, `ToggleGroup`).
+- **Component Name** (required): PascalCase name for the component (e.g., `Chip`, `ToggleGroup`).
 - **Output Mode** (optional, default=Code): `Code` (implement files) or `Plan` (spec-write-plan document).
 
 ## Workflow
@@ -39,7 +39,7 @@ metadata:
 
 1. **Confirm Output Mode** *(gate)*: If the user did not explicitly state `Plan` or `Code`, ask now. Default is `Code`.
 
-2. **Confirm Component Name** *(gate)*: Validate the name is PascalCase. If the component wraps an existing PrimeReact component that already exists in the library, suggest appending `Beta` (e.g., `ButtonBeta`, `InputBeta`) to avoid conflicts.
+2. **Confirm Component Name** *(gate)*: Validate the name is PascalCase. Check if a component with the same name already exists in `src/components/` to avoid conflicts.
 
 3. **Extract Figma Design** (if URL provided): Follow `references/FigmaExtractionChecklist.md`.
    - Call `mcp__figma__get_design_context` to retrieve node structure.
@@ -49,7 +49,7 @@ metadata:
 
 ### Phase 2 — Analyze & Map
 
-4. **Identify PrimeReact Base**: Determine which `primereact/*` component to wrap. Check the [PrimeReact documentation](https://primereact.org/) for available components and their props. If no suitable PrimeReact base exists, build from scratch using native HTML elements.
+4. **Identify PrimeReact Base**: Determine which `primereact/*` component to wrap. Check the [PrimeReact documentation](https://primereact.org/) for available components and their props. If no suitable PrimeReact base exists, build from scratch using native HTML elements (see `Flex`, `Grid`, `Space`, `Notification`, `Tag` as examples of non-PrimeReact components).
 
 5. **Identify Icons**: When the design includes icons, **always check the existing `Icons` component first** (`src/components/Icons/`):
    - Read `src/components/Icons/SVGs.tsx` to browse all available icon names and their visual descriptions.
@@ -59,16 +59,14 @@ metadata:
    - Import icons as: `import { Icons } from '@/components/Icons';` and the type as `import type { IconName } from '@/components/Icons';`.
 
 6. **Map Design Tokens**: Using `references/StyleSystemAPI.md` and `references/SemanticColors.md`, map every visual value from the Figma design to the internal style system:
-   - Colors -> `om-bg()`, `om-text()`, `om-icon()`, `om-border()` (semantic — preferred for all new components). When a component has multiple color variants, use the Variant DSL with `om-variant-schema($component, $keys...)` to auto-generate the schema, then define a variants map. See `references/StyleSystemAPI.md` for the full Variant DSL reference and `src/styles/README.md` for semantic color token quick-reference tables.
-   - Spacing -> `om-spacing()`, `om-gap()`, `om-component-padding()`, `om-section-padding()`
-   - Typography -> `@include om-typography(category, size)` (emits `var()` references to `--om-{cat}-{size}-*` CSS custom properties)
-   - Heights -> `om-component-height()`
-   - Radius -> `om-radius()`
-   - Shadows -> `om-shadow()` (keys: `0`, `100`, `200`)
-   - Opacity -> `om-opacity()`
-   - Custom/new scales -> `om(scale, key)` — generic accessor for any registered scale without a dedicated function
+   - Colors -> `theme.palette(bg, ...)`, `theme.palette(text, ...)`, `theme.palette(icon, ...)`, `theme.palette(border, ...)` (semantic — preferred for all new components). When a component has multiple color variants, use the Variant DSL with `variants.om-variant-schema($component, $keys...)` to auto-generate the schema, then define a variants map. See `references/StyleSystemAPI.md` for the full Variant DSL reference and `src/styles/README.md` for semantic color token quick-reference tables.
+   - Spacing -> `theme.spacing(scale, key)`, `theme.spacing(gap, key)`, `theme.spacing(component-padding, key)`, `theme.spacing(section-padding, key)`
+   - Typography -> `@include theme.typography(category, size)` (emits `var()` references to `--om-{cat}-{size}-*` CSS custom properties)
+   - Heights -> `theme.sizing(component-height, key)`
+   - Radius -> `theme.shape(key)`
+   - Shadows -> `theme.shadows(key)` (keys: `0`, `100`, `200`)
+   - Opacity -> `theme.opacity(key)`
    - **No raw hex, px, or font-family values in SCSS** (except `!important` overrides on third-party styles)
-   - **Do NOT use `om-color()`** — it has been removed and triggers a compile-time error. Always use semantic color functions instead.
 
 7. **Identify Hooks**: Determine which library hooks the component needs — see `references/HooksGuide.md`:
    - Controlled/uncontrolled value → `useControlledState`
@@ -112,10 +110,8 @@ metadata:
 ### Phase 4 — Register Exports
 
 11. **Update Library Barrel** (`src/index.ts`):
-   - Add `import { {Name} } from './components/{Name}';` to the import block.
    - Add `export { {Name} } from './components/{Name}';` to the named export block.
    - Add `export type { {Name}Props } from './components/{Name}';` for the props type.
-   - Add `{Name},` to the default export object.
 
 ### Phase 5 — Generate Plan (Plan mode only)
 
@@ -143,22 +139,22 @@ metadata:
 
 ### SCSS Rules
 
-- **Import**: Always use `@use '@/styles/api' as *;` — nothing else.
+- **Import**: Always use `@use '@/styles/api' as theme;` and `@use '@/styles/recipes/variants' as variants;` (if using variants).
 - **Architecture**: The API forwards three layers — tokens (raw primitives), theme (CSS var resolvers, typography mixin, breakpoint mixins), and system (`om-sx` — for business code only, not component SCSS).
 - **Component variable**: Define `$component: '{kebab-case-name}';` at the top.
-- **Root selector**: `.#{$prefix}-#{$component}` where `$prefix` comes from the api module (`om-react-ui`).
-- **Color variants**: Use the Variant DSL (`om-variant-schema` + `om-variant-default` + `om-variant-classes` with `$default:` param) — see `references/StyleSystemAPI.md` Variant DSL section.
+- **Root selector**: `.#{theme.$prefix}-#{$component}` where `theme.$prefix` is `om-react-ui`.
+- **Color variants**: Use the Variant DSL (`variants.om-variant-schema` + `variants.om-variant-default` + `variants.om-variant-classes` with `$default:` param) — see `references/StyleSystemAPI.md` Variant DSL section.
 - **Size variants**: Use `&-{size}` nesting (e.g., `&-medium`, `&-small`).
 - **Disabled state**: Target `.p-disabled` class (PrimeReact convention). Styles must match the Figma design — do not invent disabled styles. Extract exact colors, opacity, and cursor values from the design file.
 - **No raw values**: Every color, spacing, radius, shadow, font, and height must use a token function.
-- **No `om-color()`**: This function has been removed and triggers a compile-time error. Use semantic functions (`om-bg`, `om-text`, `om-icon`, `om-border`) for all colors.
+- **Color functions**: Use `theme.palette(domain, token)` where domain is `bg`, `text`, `icon`, or `border`.
 
 ### TypeScript Rules
 
 - **Interface over type**: Use `interface` for all object structures.
 - **No `any`**: Define types precisely.
 - **No `enum`**: Use `as const` arrays + derived union types.
-- **Props naming**: `{Name}Props` (e.g., `ButtonBetaProps`).
+- **Props naming**: `{Name}Props` (e.g., `ButtonProps`).
 - **Component export**: Named export `export const {Name}` + `export default memo({Name})`.
 
 ### Hooks Rules
@@ -212,9 +208,10 @@ metadata:
 - Using inline SVGs or external icon libraries (e.g., `react-icons`, `lucide-react`) when the icon already exists in the `Icons` component
 - Using `Foundation` tokens or consumer-facing SCSS imports
 - Using `om-sx` mixin in component SCSS (that's for business code layout, not component internals)
-- Using removed `om-color()` (compile-time error) — always use semantic functions (`om-bg`, `om-text`, `om-icon`, `om-border`)
-- Writing manual `&-{variant}` blocks for color variants instead of using the Variant DSL (`om-variant-schema` + `om-variant-default` + `om-variant-classes`)
-- Hand-writing variant schema maps instead of using `om-variant-schema($component, $keys...)`
+- Using flat namespace `@use '@/styles/api' as *` — always use namespaced `@use '@/styles/api' as theme`
+- Using old function names like `om-bg()`, `om-text()`, `om-spacing()`, `om-radius()`, `om-shadow()`, `om-component-height()`, `om-gap()`, `om-component-padding()`, `om-opacity()` — always use `theme.palette()`, `theme.spacing()`, `theme.shape()`, `theme.shadows()`, `theme.sizing()`, `theme.opacity()` instead
+- Writing manual `&-{variant}` blocks for color variants instead of using the Variant DSL (`variants.om-variant-schema` + `variants.om-variant-default` + `variants.om-variant-classes`)
+- Hand-writing variant schema maps instead of using `variants.om-variant-schema($component, $keys...)`
 - Hardcoding colors, spacing, or fonts instead of using token functions
 - Using old shadow keys (`1`, `2`, `3`) instead of the current scale (`0`, `100`, `200`)
 - Creating `.css` files instead of `.scss`

@@ -67,33 +67,33 @@ Use this checklist to validate every new `@1money/components-ui` component. Walk
 
 ## SCSS (`style/{Name}.scss`)
 
-- [ ] First line: `@use '@/styles/api' as *;`
+- [ ] First line: `@use '@/styles/api' as theme;`
+- [ ] Second line (if using variants): `@use '@/styles/recipes/variants' as variants;`
 - [ ] `$component: '{kebab-name}';` defined
-- [ ] Root selector: `.#{$prefix}-#{$component}`
-- [ ] All colors use `om-bg()`, `om-text()`, `om-icon()`, `om-border()` (or `om()` for custom scales)
-- [ ] All spacing uses `om-spacing()`, `om-gap()`, `om-component-padding()`, or `om-section-padding()`
-- [ ] All border-radius uses `om-radius()`
-- [ ] All box-shadow uses `om-shadow()` (keys: 0/100/200)
-- [ ] All heights use `om-component-height()`
-- [ ] All opacity uses `om-opacity()`
-- [ ] Typography uses `@include om-typography(category, size)` (emits `var(--om-{cat}-{size}-*)` references)
-- [ ] Individual typography values use accessor functions (`om-font-size()`, `om-line-height()`, etc.) which return `var()` references
+- [ ] Root selector: `.#{theme.$prefix}-#{$component}`
+- [ ] All colors use `theme.palette(bg, ...)`, `theme.palette(text, ...)`, `theme.palette(icon, ...)`, `theme.palette(border, ...)`
+- [ ] All spacing uses `theme.spacing(scale, key)`, `theme.spacing(gap, key)`, `theme.spacing(component-padding, key)`, or `theme.spacing(section-padding, key)`
+- [ ] All border-radius uses `theme.shape(key)`
+- [ ] All box-shadow uses `theme.shadows(key)` (keys: 0/100/200)
+- [ ] All heights use `theme.sizing(component-height, key)`
+- [ ] All opacity uses `theme.opacity(key)`
+- [ ] Typography uses `@include theme.typography(category, size)` (emits `var(--om-{cat}-{size}-*)` references)
 - [ ] No raw hex values (e.g., `#073387`)
 - [ ] No raw pixel values for design tokens (e.g., `16px` for spacing)
 - [ ] No raw font-family declarations
-- [ ] No use of removed `om-color()` (compile-time error) — use semantic functions (`om-bg`, `om-text`, `om-icon`, `om-border`) instead
-- [ ] Color variants use the Variant DSL (`om-variant-schema` + `om-variant-default` + `om-variant-classes`)
-- [ ] Variant schema generated via `om-variant-schema($component, $keys...)` (not hand-written)
+- [ ] No old function names (`om-bg`, `om-text`, `om-spacing`, `om-radius`, etc.) — use `theme.*` namespaced functions
+- [ ] Color variants use the Variant DSL (`variants.om-variant-schema` + `variants.om-variant-default` + `variants.om-variant-classes`)
+- [ ] Variant schema generated via `variants.om-variant-schema($component, $keys...)` (not hand-written)
 - [ ] Variant schema variable named `$component-variant-schema`
 - [ ] Variants map variable named `$component-variants`
 - [ ] All variant names are quoted strings (e.g., `'primary'`, `'white'`)
-- [ ] `om-variant-default` called with default variant name
-- [ ] `om-variant-classes` called with `$default:` param to skip the default variant
+- [ ] `variants.om-variant-default` called with default variant name
+- [ ] `variants.om-variant-classes` called with `$default:` param to skip the default variant
 - [ ] Base styles consume variant values via `var(--om-{component}-{key})`
 - [ ] Size variants use `&-{size}` nesting (not the Variant DSL)
 - [ ] Disabled state targets `.p-disabled` (PrimeReact convention)
 - [ ] Hover states use `&:hover:not(.p-disabled)`
-- [ ] Responsive styles use `@include om-down()` (if needed)
+- [ ] Responsive styles use `@include theme.down()` (if needed)
 
 ## style/index.ts
 
@@ -142,10 +142,8 @@ Use this checklist to validate every new `@1money/components-ui` component. Walk
 
 ## Library Registration
 
-- [ ] `import { {Name} } from './components/{Name}';` added to `src/index.ts` import block
-- [ ] `export { {Name} } from './components/{Name}';` added to named exports
-- [ ] `export type { {Name}Props } from './components/{Name}';` added for props type
-- [ ] `{Name},` added to default export object
+- [ ] `export { {Name} } from './components/{Name}';` added to `src/index.ts`
+- [ ] `export type { {Name}Props } from './components/{Name}';` added to `src/index.ts`
 
 ## Validation
 
