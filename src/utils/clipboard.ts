@@ -1,5 +1,20 @@
 export const clipboard: (text: string | number, cb?: (succeeded: boolean) => any) => void = (text, cb) => {
   if (typeof window === 'undefined' || typeof text === 'undefined' || ('' + text) === 'null') return;
+
+  const str = '' + text;
+
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(str).then(
+      () => cb?.(true),
+      () => fallbackCopy(str, cb),
+    );
+    return;
+  }
+
+  fallbackCopy(str, cb);
+};
+
+function fallbackCopy(text: string, cb?: (succeeded: boolean) => any) {
   const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
   let fakeElem: HTMLTextAreaElement | null = document.createElement('textarea');
   // Prevent zooming on iOS
@@ -16,7 +31,7 @@ export const clipboard: (text: string | number, cb?: (succeeded: boolean) => any
   fakeElem.style.top = `${yPosition}px`;
 
   fakeElem.setAttribute('readonly', '');
-  fakeElem.value = '' + text;
+  fakeElem.value = text;
 
   document.body.appendChild(fakeElem);
 
@@ -30,14 +45,13 @@ export const clipboard: (text: string | number, cb?: (succeeded: boolean) => any
   } catch (error) {
     succeeded = false;
   }
-  cb && cb(succeeded);
+  cb?.(succeeded);
   // remove the selection
   const getSelection = window.getSelection();
-  getSelection && getSelection.removeAllRanges();
-
+  getSelection?.removeAllRanges();
 
   document.body.removeChild(fakeElem);
   fakeElem = null;
-};
+}
 
 export default clipboard;

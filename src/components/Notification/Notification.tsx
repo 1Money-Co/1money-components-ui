@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, ReactElement } from 'react';
-import type { NotificationProps, NotificationStatus } from './interface';
+import type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './interface';
 
 const CLOSE_NOTIFICATION_ARIA_LABEL = 'Close notification';
 
@@ -85,6 +85,37 @@ const STATUS_ICON_MAP: Record<NotificationStatus, ReactElement> = {
   error: ERROR_ICON,
 };
 
+const NotificationLink: FC<{
+  link: NotificationLinkConfig;
+  className: string;
+}> = ({ link, className }) => {
+  const linkRel = link.target === '_blank' ? (link.rel ?? 'noreferrer') : link.rel;
+
+  if (link.href) {
+    return (
+      <a
+        className={className}
+        href={link.href}
+        target={link.target}
+        rel={linkRel}
+        onClick={link.onClick}
+      >
+        {link.label}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      className={className}
+      onClick={link.onClick}
+    >
+      {link.label}
+    </button>
+  );
+};
+
 export const Notification: FC<NotificationProps> = props => {
   const {
     className = '',
@@ -102,37 +133,7 @@ export const Notification: FC<NotificationProps> = props => {
   } = props;
 
   const classes = classnames(prefixCls);
-
   const iconElement = icon ?? STATUS_ICON_MAP[status];
-  const linkRel = link?.target === '_blank' ? (link.rel ?? 'noreferrer') : link?.rel;
-
-  const renderLink = () => {
-    if (!link) return null;
-
-    if (link.href) {
-      return (
-        <a
-          className={classes('link')}
-          href={link.href}
-          target={link.target}
-          rel={linkRel}
-          onClick={link.onClick}
-        >
-          {link.label}
-        </a>
-      );
-    }
-
-    return (
-      <button
-        type="button"
-        className={classes('link')}
-        onClick={link.onClick}
-      >
-        {link.label}
-      </button>
-    );
-  };
 
   return (
     <div
@@ -154,7 +155,7 @@ export const Notification: FC<NotificationProps> = props => {
         <div className={classes('content')}>
           {title && <div className={classes('title')}>{title}</div>}
           {body && <div className={classes('body')}>{body}</div>}
-          {renderLink()}
+          {link && <NotificationLink link={link} className={classes('link')} />}
         </div>
       </div>
       {closable && (

@@ -18,14 +18,20 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
     prefixCls = 'icons',
     viewBox = '0 0 24 24',
     style,
+    ariaLabel,
+    tabIndex,
     onClick,
     onKeyDown,
   } = props;
   const classes = classnames(prefixCls);
+  const isInteractive = !!(onClick || onKeyDown);
 
   return <i
     style={{ color, width: width ?? size, height: height ?? size, ...style }}
     className={classes('wrapper', wrapperCls)}
+    role={isInteractive ? 'button' : undefined}
+    tabIndex={tabIndex ?? (isInteractive ? 0 : undefined)}
+    aria-label={ariaLabel}
     onClick={onClick}
     onKeyDown={onKeyDown}
   >
@@ -44,7 +50,7 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
 };
 
 
-export const IconHover: FC<PropsWithChildren<IconHoverProps>> = (props) => {
+const IconHoverInner: FC<PropsWithChildren<IconHoverProps>> = (props) => {
   const { children, prefixCls = 'icons-hover', className, disabled, ...rest } = props;
   const classes = classnames(prefixCls);
 
@@ -59,5 +65,7 @@ export const IconHover: FC<PropsWithChildren<IconHoverProps>> = (props) => {
     { children }
   </div>;
 };
+
+export const IconHover = memo(IconHoverInner);
 
 export default memo(IconWrapper);
