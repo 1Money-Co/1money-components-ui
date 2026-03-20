@@ -77,18 +77,20 @@ $button-variants: (
   background-color: var(--om-button-bg);
   border: none;
   border-radius: theme.shape(300);
+  outline: none;
   box-shadow: none;
   cursor: pointer;
 
   @include theme.typography(label, lg);
 
-  &.p-disabled {
+  &:disabled,
+  &-disabled {
     color: var(--om-button-disabled-text);
     background-color: var(--om-button-disabled-bg);
     cursor: not-allowed;
   }
 
-  &:hover:not(.p-disabled) {
+  &:hover:not(:disabled) {
     background-color: var(--om-button-hover-bg);
   }
 
@@ -107,20 +109,24 @@ $button-variants: (
     @include theme.typography(label, sm);
   }
 
+  &-rounded {
+    border-radius: theme.shape('full');
+  }
+
   // ── Icon slots ──
   &-icon-start,
   &-icon-end {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
   }
 
   // ── Loading icon ──
   &-loading-icon {
+    display: inline-flex;
     width: 20px;
     height: 20px;
-    margin-right: theme.spacing(scale, 200);
-    margin-left: 0;
 
     &-medium {
       width: 16px;

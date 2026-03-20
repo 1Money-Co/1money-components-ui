@@ -1,5 +1,6 @@
 import React from 'react';
 import { fn } from '@storybook/test';
+import { Icons } from '@/components/Icons';
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './index';
@@ -8,6 +9,7 @@ import './style';
 
 const COLORS = ['primary', 'secondary', 'grey', 'black', 'white', 'danger', 'warning'] as const;
 const SIZES = ['large', 'medium', 'small'] as const;
+const TYPES = ['button', 'submit', 'reset'] as const;
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -18,6 +20,7 @@ const meta: Meta<typeof Button> = {
     rounded: { control: 'boolean' },
     size: { control: 'radio', options: [...SIZES] },
     color: { control: 'radio', options: [...COLORS] },
+    type: { control: 'radio', options: [...TYPES] },
   },
   args: {
     disabled: false,
@@ -25,6 +28,7 @@ const meta: Meta<typeof Button> = {
     rounded: false,
     size: 'medium',
     color: 'primary',
+    type: 'button',
     onClick: fn(),
   },
   tags: ['autodocs'],
@@ -33,18 +37,6 @@ const meta: Meta<typeof Button> = {
 export default meta;
 
 type Story = StoryObj<typeof Button>;
-
-const ArrowIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const PlusIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 3.33v9.34M3.33 8h9.34" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 export const AllVariants: Story = {
   render: (args) => (
@@ -99,13 +91,17 @@ export const WithIcons: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-        <Button {...args} iconStart={<PlusIcon />}>
+        <Button {...args} iconStart={<Icons name="add" size={16} />}>
           Icon Start
         </Button>
-        <Button {...args} iconEnd={<ArrowIcon />}>
+        <Button {...args} iconEnd={<Icons name="arrowRight" size={16} />}>
           Icon End
         </Button>
-        <Button {...args} iconStart={<PlusIcon />} iconEnd={<ArrowIcon />}>
+        <Button
+          {...args}
+          iconStart={<Icons name="add" size={16} />}
+          iconEnd={<Icons name="arrowRight" size={16} />}
+        >
           Both Icons
         </Button>
       </div>

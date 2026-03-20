@@ -40,6 +40,8 @@ const InputBase: FC<InputProps> = (props) => {
   const classes = classnames(prefixCls);
   const [inputRef, syncRef] = useSyncRef<HTMLInputElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
+  const ariaRequired = required ? 'true' : 'false';
+  const ariaInvalid = status === 'error' ? 'true' : 'false';
 
   const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value;
@@ -79,8 +81,8 @@ const InputBase: FC<InputProps> = (props) => {
           disabled={disabled}
           value={innerValue}
           onChange={handleChange}
-          aria-required={required || undefined}
-          aria-invalid={status === 'error' || undefined}
+          aria-required={ariaRequired}
+          aria-invalid={ariaInvalid}
         />
         {showClearAction && (
           <button

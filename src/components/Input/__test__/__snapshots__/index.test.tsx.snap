@@ -30,6 +30,8 @@ exports[`Input renders default input with label and feedback 1`] = `
             class="om-react-ui-input-control"
           >
             <input
+              aria-invalid="false"
+              aria-required="false"
               class="om-react-ui-input-field"
               id="«r0»"
               placeholder="Value"
@@ -39,6 +41,7 @@ exports[`Input renders default input with label and feedback 1`] = `
         </div>
         <div
           class="om-react-ui-input-feedback"
+          role="status"
         >
           Feedback
         </div>
@@ -71,6 +74,8 @@ exports[`Input renders default input with label and feedback 1`] = `
           class="om-react-ui-input-control"
         >
           <input
+            aria-invalid="false"
+            aria-required="false"
             class="om-react-ui-input-field"
             id="«r0»"
             placeholder="Value"
@@ -80,6 +85,7 @@ exports[`Input renders default input with label and feedback 1`] = `
       </div>
       <div
         class="om-react-ui-input-feedback"
+        role="status"
       >
         Feedback
       </div>
@@ -161,6 +167,8 @@ exports[`Input renders with prefix and suffix 1`] = `
               </span>
             </span>
             <input
+              aria-invalid="false"
+              aria-required="false"
               class="om-react-ui-input-field"
               id="«r1»"
               value="100"
@@ -197,6 +205,8 @@ exports[`Input renders with prefix and suffix 1`] = `
             </span>
           </span>
           <input
+            aria-invalid="false"
+            aria-required="false"
             class="om-react-ui-input-field"
             id="«r1»"
             value="100"

@@ -66,8 +66,6 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
           maxLength={maxLength}
           value={innerValue}
           onChange={handleChange}
-          aria-required={required || undefined}
-          aria-invalid={status === 'error' || undefined}
         />
         {showCount && (
           <div className={classes('count')}>

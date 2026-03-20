@@ -1,46 +1,63 @@
-import { memo } from 'react';
-import { Button as PrimeButton } from 'primereact/button';
+import { forwardRef, memo } from 'react';
 import Spinner from '@/components/Spinner';
 import { default as classnames, joinCls } from '@/utils/classnames';
-/* import types */
-import type { FC, PropsWithChildren } from 'react';
 import type { ButtonProps } from './interface';
 
 const SPINNER_STROKE_WIDTH = '5';
 
-export const Button: FC<PropsWithChildren<ButtonProps>> = props => {
+const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
     children,
     className = '',
     prefixCls = 'button',
     color = 'primary',
     size = 'medium',
+    loading = false,
+    rounded = false,
     iconStart,
     iconEnd,
-    ref: _ref,
+    disabled = false,
+    type = 'button',
     ...rest
   } = props;
   const classes = classnames(prefixCls);
+  const isDisabled = disabled || loading;
+  const startAdornment = loading ? (
+    <Spinner
+      strokeWidth={SPINNER_STROKE_WIDTH}
+      className={joinCls(classes('loading-icon'), classes(`loading-icon-${size}`))}
+    />
+  ) : iconStart;
 
   return (
-    <PrimeButton
+    <button
       {...rest}
-      loadingIcon={
-        <Spinner
-          strokeWidth={SPINNER_STROKE_WIDTH}
-          className={joinCls(classes('loading-icon'), classes(`loading-icon-${size}`))}
-        />
-      }
+      ref={ref}
+      type={type}
+      disabled={isDisabled}
       className={classes(
         undefined,
-        joinCls(classes(color), classes(size), className),
+        joinCls(
+          classes(color),
+          classes(size),
+          rounded && classes('rounded'),
+          isDisabled && classes('disabled'),
+          loading && classes('loading'),
+          className,
+        ),
       )}
     >
-      {iconStart && <span className={classes('icon-start')}>{iconStart}</span>}
+      {startAdornment && <span className={classes('icon-start')}>{startAdornment}</span>}
       {children}
       {iconEnd && <span className={classes('icon-end')}>{iconEnd}</span>}
-    </PrimeButton>
+    </button>
   );
-};
+});
 
-export default memo(Button);
+ButtonBase.displayName = 'Button';
+
+export const Button = memo(ButtonBase);
+
+Button.displayName = 'Button';
+
+export default Button;

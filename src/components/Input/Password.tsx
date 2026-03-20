@@ -38,6 +38,8 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
   const classes = classnames(prefixCls);
   const [, syncRef] = useSyncRef<HTMLInputElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
+  const ariaRequired = required ? 'true' : 'false';
+  const ariaInvalid = status === 'error' ? 'true' : 'false';
 
   const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value;
@@ -75,8 +77,8 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
           type={visible ? 'text' : 'password'}
           value={innerValue}
           onChange={handleChange}
-          aria-required={required || undefined}
-          aria-invalid={status === 'error' || undefined}
+          aria-required={ariaRequired}
+          aria-invalid={ariaInvalid}
         />
         {visibilityToggle && (
           <button

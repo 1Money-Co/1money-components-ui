@@ -1,6 +1,6 @@
 # Button
 
-A button component with the 1Money design system tokens. Supports multiple color variants, three sizes, and optional leading/trailing icon slots.
+A native button component with the 1Money design system tokens. Supports multiple color variants, three sizes, optional leading/trailing icon slots, loading state, and rounded styling.
 
 ## Import
 
@@ -38,13 +38,16 @@ import { Button } from '@1money/components-ui/Button';
 |------|------|---------|-------------|
 | `color` | `'primary' \| 'secondary' \| 'grey' \| 'black' \| 'white' \| 'danger' \| 'warning'` | `'primary'` | Color variant |
 | `size` | `'large' \| 'medium' \| 'small'` | `'medium'` | Size variant |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Native button type |
+| `rounded` | `boolean` | `false` | Applies a pill-shaped border radius |
 | `iconStart` | `ReactNode` | — | Leading icon slot |
 | `iconEnd` | `ReactNode` | — | Trailing icon slot |
-| `loading` | `boolean` | — | Shows a loading spinner and disables the button |
-| `disabled` | `boolean` | — | Disables the button |
-| `ref` | `RefObject<HTMLButtonElement \| null>` | — | Ref to the root button element |
+| `loading` | `boolean` | `false` | Shows a loading spinner and disables the button |
+| `disabled` | `boolean` | `false` | Disables the button |
 | `prefixCls` | `string` | `'button'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 | `children` | `ReactNode` | — | Button content |
 
-This component also accepts the standard button props used by the underlying implementation (except the props managed directly by this component such as `label`, `severity`, and `size`).
+This component accepts standard native button attributes such as `name`, `value`, `form`, `aria-*`, and `data-*`.
+
+Refs are forwarded to the root `<button>` element.

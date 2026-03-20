@@ -89,8 +89,6 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
           value={innerValue}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          aria-required={required || undefined}
-          aria-invalid={status === 'error' || undefined}
         />
         {searchButton && (
           <button
