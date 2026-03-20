@@ -5,9 +5,9 @@ A dark tooltip component built on top of [react-tooltip](https://react-tooltip.c
 ## Import
 
 ```tsx
-import { TooltipBeta } from '@1money/react-ui';
+import { TooltipBeta } from '@1money/components-ui';
 // or
-import { TooltipBeta } from '@1money/react-ui/TooltipBeta';
+import { TooltipBeta } from '@1money/components-ui/TooltipBeta';
 ```
 
 ## Usage

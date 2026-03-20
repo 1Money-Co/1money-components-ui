@@ -5,9 +5,9 @@ A notification card component for displaying status messages with optional icon,
 ## Import
 
 ```tsx
-import { NotificationBeta } from '@1money/react-ui';
+import { NotificationBeta } from '@1money/components-ui';
 // or
-import { NotificationBeta } from '@1money/react-ui/NotificationBeta';
+import { NotificationBeta } from '@1money/components-ui/NotificationBeta';
 ```
 
 ## Usage

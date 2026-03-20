@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for dir in Tab Switch Radio Cell Selector Accordion Collapse LogoType Navigation Dropdown Search Select Input InputAmount InputNumber AutoComplete Alert Segment Empty Typography)",
+      "Bash(do [ -d \"/Users/bobbytalvin/Desktop/Github/1money-components-ui/src/components/$dir\" ])",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm test:*)"
+    ]
+  }
+}

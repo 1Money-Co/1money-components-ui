@@ -1,6 +1,6 @@
 # 1Money React UI
 
-This repository contains the source for `@1money/react-ui`, a React component library used across 1Money front-end projects.
+This repository contains the source for `@1money/components-ui`, a React component library used across 1Money front-end projects.
 
 It combines PrimeReact-based components with a 1Money SCSS design system, Storybook for local development, and dual CommonJS/ES module builds for distribution.
 
@@ -17,13 +17,13 @@ It combines PrimeReact-based components with a 1Money SCSS design system, Storyb
 Install the package and its peer dependencies:
 
 ```bash
-pnpm add @1money/react-ui react react-dom primereact primeicons
+pnpm add @1money/components-ui react react-dom primereact primeicons
 ```
 
 Then import the library stylesheet once in your app entrypoint:
 
 ```tsx
-import '@1money/react-ui/index.css';
+import '@1money/components-ui/index.css';
 ```
 
 ## Quick Start
@@ -39,8 +39,8 @@ import {
   Icons,
   Tag,
   Tooltip,
-} from '@1money/react-ui';
-import '@1money/react-ui/index.css';
+} from '@1money/components-ui';
+import '@1money/components-ui/index.css';
 
 export function Example() {
   return (
@@ -74,8 +74,8 @@ export function Example() {
 Tree-shakeable subpath imports are also supported:
 
 ```tsx
-import { Button } from '@1money/react-ui/Button';
-import { Spinner } from '@1money/react-ui/Spinner';
+import { Button } from '@1money/components-ui/Button';
+import { Spinner } from '@1money/components-ui/Spinner';
 ```
 
 ## Components In This Repository
@@ -97,7 +97,7 @@ The package manifest also defines additional subpath exports for published build
 
 ## Styling
 
-Consumers should import `@1money/react-ui/index.css`.
+Consumers should import `@1money/components-ui/index.css`.
 
 When building or updating components inside this repository, SCSS files should import the internal style API:
 
@@ -149,6 +149,6 @@ src/
 
 ## Release Notes
 
-- Package name: `@1money/react-ui`
+- Package name: `@1money/components-ui`
 - Repository: `https://github.com/1Money-Co/1money-react-ui`
 - License: `MIT`

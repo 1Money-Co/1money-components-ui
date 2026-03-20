@@ -9,7 +9,7 @@ const Configuration = {
   rules: {
     'type-enum': [2, 'always', [
       '[OMNI-DOOR]',
-      '[@1MONEY/REACT-UI]',
+      '[@1MONEY/COMPONENT-UI]',
       'feat',
       'feature',
       'fix',

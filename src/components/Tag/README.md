@@ -5,9 +5,9 @@ A compact pill-shaped label used to categorize, filter, or indicate status. Supp
 ## Import
 
 ```tsx
-import { TagBeta } from '@1money/react-ui';
+import { TagBeta } from '@1money/components-ui';
 // or
-import { TagBeta } from '@1money/react-ui/TagBeta';
+import { TagBeta } from '@1money/components-ui/TagBeta';
 ```
 
 ## Usage
