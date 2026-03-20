@@ -7,6 +7,9 @@ $component: 'icons';
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: var(--icon-width);
+    height: var(--icon-height);
+    color: var(--icon-color);
     font-style: normal;
   }
 

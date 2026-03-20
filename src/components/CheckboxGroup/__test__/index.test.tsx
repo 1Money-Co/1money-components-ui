@@ -7,16 +7,21 @@ import { Checkbox } from '../../Checkbox';
 import { CheckboxGroup } from '../index';
 
 const originalConsoleError = console.error;
-console.error = (message, ...optionalParams) => {
-  const errorMessage = typeof message === 'string' ? message : String(message);
-  if (
-    errorMessage.includes('Could not parse CSS stylesheet') ||
-    errorMessage.includes('findDOMNode is deprecated and will be removed')
-  ) {
-    return;
-  }
-  originalConsoleError(message, ...optionalParams);
-};
+beforeAll(() => {
+  console.error = (message: unknown, ...optionalParams: unknown[]) => {
+    const errorMessage = typeof message === 'string' ? message : String(message);
+    if (
+      errorMessage.includes('Could not parse CSS stylesheet') ||
+      errorMessage.includes('findDOMNode is deprecated and will be removed')
+    ) {
+      return;
+    }
+    originalConsoleError(message, ...optionalParams);
+  };
+});
+afterAll(() => {
+  console.error = originalConsoleError;
+});
 
 jest.mock('lottie-web', () => ({
   loadAnimation: jest.fn(() => ({
@@ -102,7 +107,7 @@ describe('CheckboxGroup', () => {
 
     await user.click(alphaCheckbox);
 
-    expect(handleChange).toHaveBeenLastCalledWith(['alpha', 'beta']);
+    expect(handleChange).toHaveBeenLastCalledWith(['beta', 'alpha']);
     expect(alphaCheckbox).toBeChecked();
   });
 

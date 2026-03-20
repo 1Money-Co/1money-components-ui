@@ -14,7 +14,7 @@ export const Spinner: FC<SpinnerProps> = props => {
   return (
     <ProgressSpinner
       {...rest}
-      className={classes(void 0, className)}
+      className={classes(undefined, className)}
     />
   );
 };

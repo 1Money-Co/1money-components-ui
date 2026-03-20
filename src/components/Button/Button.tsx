@@ -32,7 +32,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = props => {
         />
       }
       className={classes(
-        void 0,
+        undefined,
         joinCls(classes(color), classes(size), className),
       )}
     >

@@ -61,7 +61,7 @@ export const Col: FC<PropsWithChildren<GridColProps>> = props => {
     });
 
     const normalizedFlexValue = normalizeFlex(flex);
-    const nextClassNameValue = classes(void 0, joinCls(
+    const nextClassNameValue = classes(undefined, joinCls(
       span !== null && span !== undefined && !normalizedFlexValue && classes(`${span}`),
       offset !== null && offset !== undefined && classes(`${GRID_CLASS.offset}-${offset}`),
       order !== null && order !== undefined && classes(`${GRID_CLASS.order}-${order}`),

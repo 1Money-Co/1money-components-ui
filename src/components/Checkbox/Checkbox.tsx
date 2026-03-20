@@ -1,6 +1,7 @@
-import { memo, useEffect, useRef } from 'react';
+import { memo, useContext, useEffect, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import { CheckboxGroupContext } from '../CheckboxGroup/context';
 import type { ChangeEvent, FC } from 'react';
 import type { CheckboxProps } from './interface';
 
@@ -9,22 +10,28 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     className = '',
     prefixCls = 'checkbox',
     id,
-    name,
+    name: nameProp,
     value,
     required = false,
     title,
     'aria-label': ariaLabel,
     'aria-labelledby': ariaLabelledBy,
-    checked,
+    checked: checkedProp,
     defaultChecked = false,
     indeterminate = false,
-    disabled = false,
+    disabled: disabledProp = false,
     label,
     description,
-    direction = 'left',
+    labelPlacement = 'left',
     onChange,
     ref,
   } = props;
+
+  const groupContext = useContext(CheckboxGroupContext);
+  const isInGroup = groupContext !== null && value !== undefined;
+  const name = nameProp ?? (isInGroup ? groupContext.name : undefined);
+  const checked = isInGroup ? groupContext.isChecked(value!) : checkedProp;
+  const disabled = isInGroup ? disabledProp || groupContext.disabled : disabledProp;
 
   const [innerChecked, setInnerChecked] = useControlledState(
     defaultChecked,
@@ -51,6 +58,9 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     const nextChecked = event.target.checked;
     setInnerChecked(nextChecked);
     onChange?.(nextChecked);
+    if (isInGroup) {
+      groupContext.onChange(value!, nextChecked);
+    }
   });
 
   const checkboxElement = (
@@ -61,7 +71,7 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
         type="checkbox"
         id={id}
         name={name}
-        value={value === undefined ? undefined : String(value)}
+        value={value}
         required={required}
         title={title}
         aria-label={ariaLabel ?? inferredAriaLabel}
@@ -90,12 +100,12 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     <label
       ref={ref}
       className={classes(
-        void 0,
+        undefined,
         joinCls(
           innerChecked && classes('checked'),
           indeterminate && classes('indeterminate'),
           disabled && classes('disabled'),
-          direction === 'right' && classes('right'),
+          labelPlacement === 'right' && classes('right'),
           className,
         ),
       )}

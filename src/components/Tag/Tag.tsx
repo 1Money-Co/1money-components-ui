@@ -32,7 +32,7 @@ export const Tag: FC<TagProps> = (props) => {
       {...rest}
       ref={ref}
       className={classes(
-        void 0,
+        undefined,
         joinCls(classes(color), classes(size), className),
       )}
     >

@@ -43,7 +43,7 @@ export const Space: FC<PropsWithChildren<SpaceProps>> = props => {
   const isVertical = direction === SPACE_DIRECTION.vertical;
   const [gapX, gapY] = normalizeSize(size);
   const shouldWrap = wrap && !isVertical;
-  const classNameValue = classes(void 0, joinCls(
+  const classNameValue = classes(undefined, joinCls(
     isVertical && classes(SPACE_CLASS.vertical),
     align && classes(`${SPACE_CLASS.align}-${align}`),
     shouldWrap && classes(SPACE_CLASS.wrap),

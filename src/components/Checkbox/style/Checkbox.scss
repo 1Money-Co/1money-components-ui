@@ -8,11 +8,14 @@ $component: 'checkbox';
   border-color: $border-color;
 }
 
+// The checkmark is a rotated L-shape (bottom + right borders of a rectangle).
+// Its width:height ratio is 5:8, scaled relative to the checkbox box size (scale-400).
+// The 5/14 and 8/14 fractions produce a visually balanced checkmark within the box.
 @mixin checkbox-checkmark-shape($color, $background-color: transparent) {
-  top: calc(#{theme.spacing(scale, 400)} / 2 - 1px);
-  inset-inline-start: calc(#{theme.spacing(scale, 400)} / 4 - 1px);
-  width: calc(5 * #{theme.spacing(scale, 400)} / 14);
-  height: calc(8 * #{theme.spacing(scale, 400)} / 14);
+  top: calc(#{theme.spacing(scale, 400)} / 2 - 1px); // vertically center: half box minus border offset
+  inset-inline-start: calc(#{theme.spacing(scale, 400)} / 4 - 1px); // horizontally center: quarter box minus border offset
+  width: calc(5 * #{theme.spacing(scale, 400)} / 14); // 5/14 of box — short arm of checkmark
+  height: calc(8 * #{theme.spacing(scale, 400)} / 14); // 8/14 of box — long arm of checkmark
   background-color: $background-color;
   border: 1px solid $color;
   border-top: 0;

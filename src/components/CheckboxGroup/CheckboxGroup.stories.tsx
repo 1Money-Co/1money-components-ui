@@ -46,7 +46,7 @@ type Story = StoryObj<typeof CheckboxGroup>;
 
 export const WithOptions: Story = {
   render: (args) => {
-    const [value, setValue] = useState<Array<string | number | boolean>>(['apple']);
+    const [value, setValue] = useState<Array<string | number>>(['apple']);
 
     return (
       <CheckboxGroup
@@ -72,7 +72,7 @@ export const Vertical: Story = {
 
 export const WithChildren: Story = {
   render: (args) => {
-    const [value, setValue] = useState<Array<string | number | boolean>>(['beta']);
+    const [value, setValue] = useState<Array<string | number>>(['beta']);
 
     return (
       <CheckboxGroup

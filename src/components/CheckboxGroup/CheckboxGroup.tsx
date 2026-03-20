@@ -1,9 +1,10 @@
-import { Children, cloneElement, isValidElement, memo } from 'react';
+import { memo, useMemo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import CheckboxBase from '../Checkbox/Checkbox';
-import type { CheckboxProps, CheckboxValueType } from '../Checkbox';
-import type { FC, ReactElement } from 'react';
+import { CheckboxGroupContext } from './context';
+import type { CheckboxValueType } from '../Checkbox';
+import type { FC } from 'react';
 import type { CheckboxGroupOption, CheckboxGroupProps } from './interface';
 
 const isOptionObject = (
@@ -74,14 +75,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = (props) => {
 
   const classes = classnames(prefixCls);
   const normalizedOptions = options?.map(normalizeOption);
-  const childElements = Children.toArray(children).filter((child) =>
-    isValidElement<CheckboxProps>(child),
-  ) as ReactElement<CheckboxProps>[];
-  const childOrder = childElements
-    .map((child) => child.props.value)
-    .filter((childValue): childValue is CheckboxValueType => childValue !== undefined);
   const optionOrder = normalizedOptions?.map((option) => option.value) ?? [];
-  const valueOrder = normalizedOptions ? optionOrder : childOrder;
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
 
   const handleValueChange = useEventCallback(
@@ -92,7 +86,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = (props) => {
         innerValue,
         optionValue,
         nextChecked,
-        valueOrder,
+        optionOrder,
       );
 
       setInnerValue(nextValue);
@@ -112,52 +106,38 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = (props) => {
       disabled={disabled || option.disabled}
       label={option.label}
       description={option.description}
-      direction={option.direction}
+      labelPlacement={option.labelPlacement}
       indeterminate={option.indeterminate}
       onChange={(nextChecked) => handleValueChange(option.value, nextChecked)}
     />
   ));
 
-  const renderedChildren = normalizedOptions
-    ? null
-    : Children.map(children, (child) => {
-        if (!isValidElement<CheckboxProps>(child)) {
-          return child;
-        }
-
-        const childValue = child.props.value;
-
-        if (childValue === undefined) {
-          return child;
-        }
-
-        const childOnChange = child.props.onChange;
-
-        return cloneElement(child, {
-          name: child.props.name ?? name,
-          checked: includesValue(innerValue, childValue),
-          disabled: disabled || child.props.disabled,
-          onChange: (nextChecked: boolean) => {
-            childOnChange?.(nextChecked);
-            handleValueChange(childValue, nextChecked);
-          },
-        });
-      });
+  const contextValue = useMemo(
+    () => ({
+      name,
+      disabled,
+      isChecked: (val: CheckboxValueType) => includesValue(innerValue, val),
+      onChange: handleValueChange,
+    }),
+    [name, disabled, innerValue, handleValueChange],
+  );
 
   return (
-    <div
-      ref={ref}
-      role="group"
-      title={title}
-      aria-label={ariaLabel}
-      aria-labelledby={ariaLabelledBy}
-      className={classes(
-        void 0,
-        joinCls(classes(orientation), disabled && classes('disabled'), className),
-      )}
-    >
-      {renderedOptions ?? renderedChildren}
-    </div>
+    <CheckboxGroupContext.Provider value={contextValue}>
+      <div
+        ref={ref}
+        role="group"
+        title={title}
+        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledBy}
+        className={classes(
+          undefined,
+          joinCls(classes(orientation), disabled && classes('disabled'), className),
+        )}
+      >
+        {renderedOptions ?? children}
+      </div>
+    </CheckboxGroupContext.Provider>
   );
 };
 

@@ -140,7 +140,7 @@ export const Notification: FC<NotificationProps> = props => {
       {...rest}
       ref={_ref}
       className={classes(
-        void 0,
+        undefined,
         joinCls(classes(status), className),
       )}
     >

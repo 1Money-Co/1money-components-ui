@@ -6,7 +6,7 @@ export interface CheckboxGroupOption {
   value: CheckboxValueType;
   disabled?: boolean;
   description?: ReactNode;
-  direction?: 'left' | 'right';
+  labelPlacement?: 'left' | 'right';
   indeterminate?: boolean;
   className?: string;
   id?: string;

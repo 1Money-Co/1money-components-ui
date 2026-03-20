@@ -40,7 +40,7 @@ export const Flex: FC<PropsWithChildren<FlexProps>> = props => {
     [FLEX_CSS_VARS.gap]: `${gapValue}px`
   } as CSSProperties;
 
-  const classNameValue = classes(void 0, joinCls(
+  const classNameValue = classes(undefined, joinCls(
     vertical && classes(FLEX_CLASS.vertical),
     wrapClass,
     align && classes(`${FLEX_CLASS.align}-${align}`),

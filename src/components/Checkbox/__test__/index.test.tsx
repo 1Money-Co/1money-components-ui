@@ -6,16 +6,21 @@ import userEvent from '@testing-library/user-event';
 import { Checkbox } from '../index';
 
 const originalConsoleError = console.error;
-console.error = (message, ...optionalParams) => {
-  const errorMessage = typeof message === 'string' ? message : String(message);
-  if (
-    errorMessage.includes('Could not parse CSS stylesheet') ||
-    errorMessage.includes('findDOMNode is deprecated and will be removed')
-  ) {
-    return;
-  }
-  originalConsoleError(message, ...optionalParams);
-};
+beforeAll(() => {
+  console.error = (message: unknown, ...optionalParams: unknown[]) => {
+    const errorMessage = typeof message === 'string' ? message : String(message);
+    if (
+      errorMessage.includes('Could not parse CSS stylesheet') ||
+      errorMessage.includes('findDOMNode is deprecated and will be removed')
+    ) {
+      return;
+    }
+    originalConsoleError(message, ...optionalParams);
+  };
+});
+afterAll(() => {
+  console.error = originalConsoleError;
+});
 
 jest.mock('lottie-web', () => ({
   loadAnimation: jest.fn(() => ({

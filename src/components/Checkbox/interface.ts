@@ -1,6 +1,6 @@
 import type { ReactNode, RefObject } from 'react';
 
-export type CheckboxValueType = string | number | boolean;
+export type CheckboxValueType = string | number;
 
 export interface CheckboxProps {
   ref?: RefObject<HTMLLabelElement | null>;
@@ -25,8 +25,8 @@ export interface CheckboxProps {
   label?: ReactNode;
   /** Description text displayed below the label */
   description?: ReactNode;
-  /** Position of the checkbox relative to the label */
-  direction?: 'left' | 'right';
+  /** Placement of the label relative to the checkbox ('left' places label before checkbox, 'right' places label after) */
+  labelPlacement?: 'left' | 'right';
   /** Callback when checked state changes */
   onChange?: (checked: boolean) => void;
 }

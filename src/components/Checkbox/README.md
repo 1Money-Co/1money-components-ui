@@ -31,7 +31,7 @@ import { Checkbox } from '@1money/components-ui/Checkbox';
 | `disabled` | `boolean` | `false` | Disables the checkbox |
 | `label` | `ReactNode` | — | Label text displayed next to the checkbox |
 | `description` | `ReactNode` | — | Description text displayed below the label |
-| `direction` | `'left' \| 'right'` | `'left'` | Position of the checkbox relative to the label |
+| `labelPlacement` | `'left' \| 'right'` | `'left'` | Placement of the label relative to the checkbox |
 | `onChange` | `(checked: boolean) => void` | — | Callback when checked state changes |
 | `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
 | `prefixCls` | `string` | `'checkbox'` | CSS class prefix |

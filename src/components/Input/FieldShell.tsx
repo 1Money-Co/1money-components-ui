@@ -34,7 +34,7 @@ export const FieldShell: FC<FieldShellProps> = ({
   return (
     <div
       className={classes(
-        void 0,
+        undefined,
         joinCls(
           classes(size),
           classes(status),
