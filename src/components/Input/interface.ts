@@ -6,10 +6,9 @@ import type {
   RefObject,
   TextareaHTMLAttributes,
 } from 'react';
+import type { InputSize, InputStatus, SearchTrigger } from './constants';
 
-export type InputSize = 'large' | 'small';
-export type InputStatus = 'default' | 'error' | 'warning' | 'success';
-export type SearchTrigger = 'enter' | 'button' | 'both';
+export type { InputSize, InputStatus, SearchTrigger };
 
 export interface InputBaseProps {
   className?: string;
@@ -34,12 +33,15 @@ export interface InputProps
   value?: string;
   defaultValue?: string;
   onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
+  onClear?: () => void;
 }
 
-export interface InputPasswordProps extends Omit<InputProps, 'type'> {
+export interface InputPasswordProps extends Omit<InputProps, 'type' | 'allowClear'> {
   visibilityToggle?: boolean;
-  visibleIcon?: ReactNode;
-  hiddenIcon?: ReactNode;
+  /** Icon displayed when password is visible (to hide it) */
+  showIcon?: ReactNode;
+  /** Icon displayed when password is hidden (to show it) */
+  hideIcon?: ReactNode;
 }
 
 export interface InputSearchProps extends InputProps {
@@ -51,12 +53,11 @@ export interface InputSearchProps extends InputProps {
 
 export interface InputTextAreaProps
   extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange' | 'prefix'>,
-    InputBaseProps {
+    Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> {
   ref?: RefObject<HTMLTextAreaElement | null>;
   value?: string;
   defaultValue?: string;
   rows?: number;
-  autoSize?: boolean | { minRows?: number; maxRows?: number };
   showCount?: boolean;
   maxLength?: number;
   onChange?: (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void;

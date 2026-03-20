@@ -1,10 +1,18 @@
-import { memo, useRef } from 'react';
+import { memo, useId } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
+import { Spinner } from '@/components/Spinner';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from './FieldShell';
-import type { FC, ChangeEvent, KeyboardEvent } from 'react';
+import { useSyncRef } from './useSyncRef';
+import type { FC, ChangeEvent, KeyboardEvent, ReactNode } from 'react';
 import type { InputSearchProps } from './interface';
+
+const renderSearchIcon = (loading: boolean, searchButton: ReactNode | boolean): ReactNode => {
+  if (loading) return <Spinner style={{ width: 16, height: 16 }} />;
+  if (typeof searchButton === 'boolean') return <Icons name="search" size={16} />;
+  return searchButton;
+};
 
 export const InputSearch: FC<InputSearchProps> = (props) => {
   const {
@@ -29,19 +37,15 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
     onSearch,
     onKeyDown,
     ref,
+    id: externalId,
     ...rest
   } = props;
 
+  const autoId = useId();
+  const inputId = externalId ?? autoId;
   const classes = classnames(prefixCls);
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [inputRef, syncRef] = useSyncRef<HTMLInputElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
-
-  const syncRef = useEventCallback((node: HTMLInputElement | null) => {
-    inputRef.current = node;
-    if (ref) {
-      (ref as { current: HTMLInputElement | null }).current = node;
-    }
-  });
 
   const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value;
@@ -72,17 +76,21 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
       description={description}
       feedback={feedback}
       required={required}
+      inputId={inputId}
     >
       <div className={classes('control', joinCls(disabled && classes('control-disabled')))}>
         {prefix && <span className={classes('prefix')}>{prefix}</span>}
         <input
           {...rest}
           ref={syncRef}
+          id={inputId}
           className={classes('field')}
           disabled={disabled}
           value={innerValue}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          aria-required={required || undefined}
+          aria-invalid={status === 'error' || undefined}
         />
         {searchButton && (
           <button
@@ -92,7 +100,7 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
             aria-label="search input"
             onClick={() => handleSearch()}
           >
-            {loading ? 'Loading' : typeof searchButton === 'boolean' ? <Icons name="search" size={16} /> : searchButton}
+            {renderSearchIcon(loading, searchButton)}
           </button>
         )}
         {suffix && <span className={classes('suffix')}>{suffix}</span>}

@@ -1,7 +1,8 @@
-import { memo, useRef } from 'react';
+import { memo, useId } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from './FieldShell';
+import { useSyncRef } from './useSyncRef';
 import type { FC, ChangeEvent } from 'react';
 import type { InputTextAreaProps } from './interface';
 
@@ -17,35 +18,25 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
     description,
     feedback,
     required,
-    prefix: _prefix,
-    suffix: _suffix,
-    allowClear: _allowClear,
     rows = 4,
-    autoSize: _autoSize,
     showCount = false,
     maxLength,
     value,
     defaultValue = '',
     onChange,
     ref,
+    id: externalId,
     ...rest
   } = props;
 
+  const autoId = useId();
+  const inputId = externalId ?? autoId;
   const classes = classnames(prefixCls);
-  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
+  const [, syncRef] = useSyncRef<HTMLTextAreaElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
 
-  const syncRef = useEventCallback((node: HTMLTextAreaElement | null) => {
-    textAreaRef.current = node;
-    if (ref) {
-      (ref as { current: HTMLTextAreaElement | null }).current = node;
-    }
-  });
-
   const handleChange = useEventCallback((event: ChangeEvent<HTMLTextAreaElement>) => {
-    const nextValue = maxLength
-      ? event.target.value.slice(0, maxLength)
-      : event.target.value;
+    const nextValue = event.target.value;
     setInnerValue(nextValue);
     onChange?.(nextValue, event);
   });
@@ -62,16 +53,21 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
       description={description}
       feedback={feedback}
       required={required}
+      inputId={inputId}
     >
       <div className={classes('textarea-wrapper', joinCls(disabled && classes('control-disabled')))}>
         <textarea
           {...rest}
           ref={syncRef}
+          id={inputId}
           className={classes('textarea')}
           disabled={disabled}
           rows={rows}
+          maxLength={maxLength}
           value={innerValue}
           onChange={handleChange}
+          aria-required={required || undefined}
+          aria-invalid={status === 'error' || undefined}
         />
         {showCount && (
           <div className={classes('count')}>

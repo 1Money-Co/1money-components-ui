@@ -11,11 +11,12 @@ exports[`Input renders default input with label and feedback 1`] = `
         <div
           class="om-react-ui-input-label-row"
         >
-          <span
+          <label
             class="om-react-ui-input-label"
+            for="«r0»"
           >
             Amount
-          </span>
+          </label>
         </div>
         <div
           class="om-react-ui-input-description"
@@ -30,6 +31,7 @@ exports[`Input renders default input with label and feedback 1`] = `
           >
             <input
               class="om-react-ui-input-field"
+              id="«r0»"
               placeholder="Value"
               value=""
             />
@@ -50,11 +52,12 @@ exports[`Input renders default input with label and feedback 1`] = `
       <div
         class="om-react-ui-input-label-row"
       >
-        <span
+        <label
           class="om-react-ui-input-label"
+          for="«r0»"
         >
           Amount
-        </span>
+        </label>
       </div>
       <div
         class="om-react-ui-input-description"
@@ -69,6 +72,7 @@ exports[`Input renders default input with label and feedback 1`] = `
         >
           <input
             class="om-react-ui-input-field"
+            id="«r0»"
             placeholder="Value"
             value=""
           />
@@ -158,6 +162,7 @@ exports[`Input renders with prefix and suffix 1`] = `
             </span>
             <input
               class="om-react-ui-input-field"
+              id="«r1»"
               value="100"
             />
             <span
@@ -193,6 +198,7 @@ exports[`Input renders with prefix and suffix 1`] = `
           </span>
           <input
             class="om-react-ui-input-field"
+            id="«r1»"
             value="100"
           />
           <span

@@ -68,15 +68,15 @@ describe('Input', () => {
   });
 
   it('clears the value when allowClear is enabled', () => {
-    const onChange = jest.fn();
+    const onClear = jest.fn();
     const { getByLabelText, getByRole } = render(
-      <Input defaultValue="999" allowClear onChange={onChange} />,
+      <Input defaultValue="999" allowClear onClear={onClear} />,
     );
 
     fireEvent.click(getByLabelText('clear input'));
 
     expect(getByRole('textbox')).toHaveValue('');
-    expect(onChange).toHaveBeenCalledWith('', expect.any(Object));
+    expect(onClear).toHaveBeenCalled();
   });
 
   it('toggles password visibility', () => {
@@ -122,6 +122,29 @@ describe('Input', () => {
     expect(getByText('5 / 10')).toBeInTheDocument();
   });
 
+  it('associates label with input via htmlFor', () => {
+    const { getByRole } = render(<Input label="Email" id="email-input" />);
+
+    const input = getByRole('textbox');
+    expect(input).toHaveAttribute('id', 'email-input');
+    expect(input.closest('.om-react-ui-input')?.querySelector('label')).toHaveAttribute('for', 'email-input');
+  });
+
+  it('sets aria-required when required', () => {
+    const { getByRole } = render(<Input required />);
+    expect(getByRole('textbox')).toHaveAttribute('aria-required', 'true');
+  });
+
+  it('sets aria-invalid when status is error', () => {
+    const { getByRole } = render(<Input status="error" />);
+    expect(getByRole('textbox')).toHaveAttribute('aria-invalid', 'true');
+  });
+
+  it('renders feedback with role=alert on error', () => {
+    const { getByRole } = render(<Input status="error" feedback="Required" />);
+    expect(getByRole('alert')).toHaveTextContent('Required');
+  });
+
   it('moves through OTP cells and calls onComplete', () => {
     const onComplete = jest.fn();
     const { getAllByRole } = render(
@@ -151,5 +174,29 @@ describe('Input', () => {
     expect(inputs[1]).toHaveValue('6');
     expect(inputs[2]).toHaveValue('7');
     expect(inputs[3]).toHaveValue('8');
+  });
+
+  it('rejects non-digit input in OTP cells', () => {
+    const { getAllByRole } = render(<Input.OTP length={4} />);
+
+    const inputs = getAllByRole('textbox');
+
+    fireEvent.change(inputs[0], { target: { value: 'a' } });
+
+    expect(inputs[0]).toHaveValue('');
+  });
+
+  it('strips non-digits from pasted OTP content', () => {
+    const { getAllByRole } = render(<Input.OTP length={4} />);
+
+    const inputs = getAllByRole('textbox');
+
+    fireEvent.paste(inputs[0], {
+      clipboardData: { getData: () => '1a2b' },
+    });
+
+    expect(inputs[0]).toHaveValue('1');
+    expect(inputs[1]).toHaveValue('2');
+    expect(inputs[2]).toHaveValue('');
   });
 });

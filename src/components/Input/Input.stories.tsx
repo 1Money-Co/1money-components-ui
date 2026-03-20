@@ -3,11 +3,9 @@ import { fn } from '@storybook/test';
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Input } from './index';
+import { INPUT_SIZES, INPUT_STATUSES } from './constants';
 
 import './style';
-
-const SIZES = ['large', 'small'] as const;
-const STATUSES = ['default', 'error', 'warning', 'success'] as const;
 
 const meta: Meta<typeof Input> = {
   title: 'Components/Input',
@@ -15,8 +13,8 @@ const meta: Meta<typeof Input> = {
   argTypes: {
     disabled: { control: 'boolean' },
     allowClear: { control: 'boolean' },
-    size: { control: 'radio', options: [...SIZES] },
-    status: { control: 'radio', options: [...STATUSES] },
+    size: { control: 'radio', options: [...INPUT_SIZES] },
+    status: { control: 'radio', options: [...INPUT_STATUSES] },
     label: { control: 'text' },
     description: { control: 'text' },
     feedback: { control: 'text' },
@@ -43,10 +41,10 @@ type Story = StoryObj<typeof Input>;
 export const AllVariants: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-      {SIZES.map((size) => (
+      {INPUT_SIZES.map((size) => (
         <div key={size} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <h3 style={{ margin: 0 }}>{size}</h3>
-          {STATUSES.map((status) => (
+          {INPUT_STATUSES.map((status) => (
             <Input
               {...args}
               key={`${size}-${status}`}

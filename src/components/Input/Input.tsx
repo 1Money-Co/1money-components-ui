@@ -1,8 +1,9 @@
-import { memo, useRef } from 'react';
+import { memo, useId } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from './FieldShell';
+import { useSyncRef } from './useSyncRef';
 import InputOTP from './OTP';
 import InputPassword from './Password';
 import InputSearch from './Search';
@@ -28,20 +29,17 @@ const InputBase: FC<InputProps> = (props) => {
     value,
     defaultValue = '',
     onChange,
+    onClear,
     ref,
+    id: externalId,
     ...rest
   } = props;
 
+  const autoId = useId();
+  const inputId = externalId ?? autoId;
   const classes = classnames(prefixCls);
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [inputRef, syncRef] = useSyncRef<HTMLInputElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
-
-  const syncRef = useEventCallback((node: HTMLInputElement | null) => {
-    inputRef.current = node;
-    if (ref) {
-      (ref as { current: HTMLInputElement | null }).current = node;
-    }
-  });
 
   const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value;
@@ -50,20 +48,9 @@ const InputBase: FC<InputProps> = (props) => {
   });
 
   const handleClear = useEventCallback(() => {
-    const nextValue = '';
-    setInnerValue(nextValue);
-
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-
-    onChange?.(
-      nextValue,
-      {
-        target: inputRef.current,
-        currentTarget: inputRef.current,
-      } as ChangeEvent<HTMLInputElement>,
-    );
+    setInnerValue('');
+    inputRef.current?.focus();
+    onClear?.();
   });
 
   const showClearAction = allowClear && !disabled && innerValue.length > 0;
@@ -80,16 +67,20 @@ const InputBase: FC<InputProps> = (props) => {
       description={description}
       feedback={feedback}
       required={required}
+      inputId={inputId}
     >
       <div className={classes('control', joinCls(disabled && classes('control-disabled')))}>
         {prefix && <span className={classes('prefix')}>{prefix}</span>}
         <input
           {...rest}
           ref={syncRef}
+          id={inputId}
           className={classes('field')}
           disabled={disabled}
           value={innerValue}
           onChange={handleChange}
+          aria-required={required || undefined}
+          aria-invalid={status === 'error' || undefined}
         />
         {showClearAction && (
           <button

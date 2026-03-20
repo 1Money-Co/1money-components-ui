@@ -1,8 +1,9 @@
-import { memo, useRef, useState } from 'react';
+import { memo, useId, useState } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from './FieldShell';
+import { useSyncRef } from './useSyncRef';
 import type { FC, ChangeEvent } from 'react';
 import type { InputPasswordProps } from './interface';
 
@@ -14,8 +15,8 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
     status = 'default',
     disabled = false,
     visibilityToggle = true,
-    visibleIcon = <Icons name="eyeClose" size={16} />,
-    hiddenIcon = <Icons name="eyeOn" size={16} />,
+    showIcon = <Icons name="eyeClose" size={16} />,
+    hideIcon = <Icons name="eyeOn" size={16} />,
     label,
     info,
     description,
@@ -27,20 +28,16 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
     defaultValue = '',
     onChange,
     ref,
+    id: externalId,
     ...rest
   } = props;
 
   const [visible, setVisible] = useState(false);
+  const autoId = useId();
+  const inputId = externalId ?? autoId;
   const classes = classnames(prefixCls);
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [, syncRef] = useSyncRef<HTMLInputElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
-
-  const syncRef = useEventCallback((node: HTMLInputElement | null) => {
-    inputRef.current = node;
-    if (ref) {
-      (ref as { current: HTMLInputElement | null }).current = node;
-    }
-  });
 
   const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value;
@@ -65,17 +62,21 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
       description={description}
       feedback={feedback}
       required={required}
+      inputId={inputId}
     >
       <div className={classes('control', joinCls(disabled && classes('control-disabled')))}>
         {prefix && <span className={classes('prefix')}>{prefix}</span>}
         <input
           {...rest}
           ref={syncRef}
+          id={inputId}
           className={classes('field')}
           disabled={disabled}
           type={visible ? 'text' : 'password'}
           value={innerValue}
           onChange={handleChange}
+          aria-required={required || undefined}
+          aria-invalid={status === 'error' || undefined}
         />
         {visibilityToggle && (
           <button
@@ -85,7 +86,7 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
             aria-label="toggle password visibility"
             onClick={handleToggle}
           >
-            {visible ? visibleIcon : hiddenIcon}
+            {visible ? showIcon : hideIcon}
           </button>
         )}
         {suffix && <span className={classes('suffix')}>{suffix}</span>}

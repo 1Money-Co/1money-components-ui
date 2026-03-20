@@ -1,10 +1,13 @@
-import { memo, useRef } from 'react';
+import { memo, useId, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
 import { FieldShell } from './FieldShell';
 import { OTP_DEFAULT_LENGTH } from './constants';
+import { useSyncRef } from './useSyncRef';
 import type { ClipboardEvent, FC, KeyboardEvent, ChangeEvent } from 'react';
 import type { InputOTPProps } from './interface';
+
+const DIGIT_PATTERN = /^\d$/;
 
 export const InputOTP: FC<InputOTPProps> = (props) => {
   const {
@@ -29,19 +32,13 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
     ref,
   } = props;
 
+  const autoId = useId();
   const classes = classnames(prefixCls);
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerRef, syncContainerRef] = useSyncRef<HTMLDivElement>(ref);
   const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
   const normalizedValue = innerValue.slice(0, length);
   const chars = Array.from({ length }, (_, index) => normalizedValue[index] ?? '');
-
-  const syncContainerRef = useEventCallback((node: HTMLDivElement | null) => {
-    containerRef.current = node;
-    if (ref) {
-      (ref as { current: HTMLDivElement | null }).current = node;
-    }
-  });
 
   const focusCell = useEventCallback((index: number) => {
     const target = inputRefs.current[index];
@@ -67,9 +64,12 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
   const handleInputChange = useEventCallback((index: number, event: ChangeEvent<HTMLInputElement>) => {
     if (disabled) return;
 
+    const char = event.target.value.slice(-1);
+    if (char && !DIGIT_PATTERN.test(char)) return;
+
     const nextChars = [...chars];
-    nextChars[index] = event.target.value.slice(-1);
-    commitValue(nextChars.join(''), nextChars[index] ? index + 1 : index);
+    nextChars[index] = char;
+    commitValue(nextChars.join(''), char ? index + 1 : index);
   });
 
   const handleInputKeyDown = useEventCallback((index: number, event: KeyboardEvent<HTMLInputElement>) => {
@@ -96,7 +96,10 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
 
     event.preventDefault();
 
-    const pasted = event.clipboardData.getData('text').slice(0, length - index);
+    const pasted = event.clipboardData
+      .getData('text')
+      .replace(/\D/g, '')
+      .slice(0, length - index);
     const nextChars = [...chars];
 
     pasted.split('').forEach((char, offset) => {
@@ -118,6 +121,7 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
       description={description}
       feedback={feedback}
       required={required}
+      inputId={autoId}
     >
       <div ref={syncContainerRef} className={classes('otp')}>
         {Array.from({ length }, (_, index) => (
@@ -129,6 +133,7 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
             className={classes('otp-cell')}
             disabled={disabled}
             inputMode="numeric"
+            pattern="[0-9]*"
             maxLength={1}
             aria-label={`OTP digit ${index + 1}`}
             autoFocus={autoFocus && index === 0}

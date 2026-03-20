@@ -17,7 +17,10 @@ $component: 'input';
   &-label {
     @include theme.typography(label, md);
 
+    display: inline;
+    padding: 0;
     color: theme.palette(text, 'default');
+    cursor: pointer;
   }
 
   &-required {
