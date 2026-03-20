@@ -20,8 +20,8 @@ A responsive 12-column layout system modeled after Ant Design's Row/Col, built w
 ## Basic Usage
 
 ```tsx
-import { Grid } from '@1money/react-ui';
-import { GRID_ALIGN, GRID_JUSTIFY } from '@1money/react-ui/Grid';
+import { Grid } from '@1money/components-ui';
+import { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';
 
 const GRID_GUTTER: [number, number] = [16, 8];
 const SPAN_HALF = 6;
@@ -67,7 +67,7 @@ const SPAN_MD = 4;
 const OFFSET_MD = 2;
 const SPAN_LARGE = 3;
 
-import { GRID_JUSTIFY } from '@1money/react-ui/Grid';
+import { GRID_JUSTIFY } from '@1money/components-ui/Grid';
 
 const GRID_JUSTIFY_RESPONSIVE = {
   sm: GRID_JUSTIFY.start,

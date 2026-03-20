@@ -13,8 +13,8 @@ A layout helper component modeled after Ant Design's Space. It wraps each child 
 ## Basic Usage
 
 ```tsx
-import { Space } from '@1money/react-ui';
-import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/react-ui/Space';
+import { Space } from '@1money/components-ui';
+import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';
 
 <Space size={SPACE_SIZE.middle} align={SPACE_ALIGN.center}>
   <span>Left</span>

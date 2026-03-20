@@ -33,7 +33,7 @@ Legacy icon support for backward compatibility.
 ## Basic Usage
 
 ```tsx
-import { Icons, IconWrapper, Logo } from '@1money/react-ui';
+import { Icons, IconWrapper, Logo } from '@1money/components-ui';
 
 // Basic icon
 <Icons name="arrow-right" />
@@ -192,10 +192,10 @@ If you're using deprecated icons, they're still available but consider migrating
 
 ```tsx
 // Old (still works)
-import { Deprecated } from '@1money/react-ui';
+import { Deprecated } from '@1money/components-ui';
 <Deprecated name="old-icon-name" />
 
 // New (recommended)
-import { Icons } from '@1money/react-ui';
+import { Icons } from '@1money/components-ui';
 <Icons name="new-icon-name" />
 ```

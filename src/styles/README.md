@@ -73,7 +73,7 @@ All flags live in `theme/_scales.scss` and default to `true`. Set to `false` to 
 | `$om-sys-enable-visual` | Visual utilities (`om-radius-*`, `om-shadow-*`) |
 
 ```scss
-@use '@1money/react-ui/styles/theme/scales' with (
+@use '@1money/components-ui/styles/theme/scales' with (
   $om-sys-enable-color: false,
 );
 ```
@@ -588,7 +588,7 @@ Semantic helpers are aliases only. Utility classes and CSS variable output remai
 Import the compiled CSS and use atomic classes in JSX:
 
 ```tsx
-import '@1money/react-ui/index.css';
+import '@1money/components-ui/index.css';
 
 function Page() {
   return (
@@ -624,7 +624,7 @@ Examples:
 ### Business SCSS — Direct Theme Consumption
 
 ```scss
-@use '@1money/react-ui/styles/api' as om;
+@use '@1money/components-ui/styles/api' as om;
 
 .hero {
   color: om.om-text(brand);

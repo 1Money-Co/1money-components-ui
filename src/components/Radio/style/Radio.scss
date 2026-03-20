@@ -1,0 +1,136 @@
+@use '@/styles/api' as *;
+
+$component: 'radio-beta';
+
+.#{$prefix}-#{$component} {
+  display: inline-flex;
+  gap: om-gap(300);
+  align-items: flex-start;
+  cursor: pointer;
+
+  // ── Radio box wrapper ──
+  &-box-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: om-line-height(body, lg);
+  }
+
+  // ── PrimeReact radio overrides ──
+  &-box {
+    .p-radiobutton-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: om-spacing(400);
+      height: om-spacing(400);
+      overflow: hidden;
+      background-color: om-bg('default');
+      border: 1px solid om-border('default-secondary');
+      border-radius: om-radius('full');
+      transition:
+        background-color 0.2s,
+        border-color 0.2s;
+
+      .p-radiobutton-icon {
+        width: om-spacing(200);
+        height: om-spacing(200);
+        background-color: om-icon('on-brand');
+        border-radius: om-radius('full');
+      }
+    }
+
+    &.p-radiobutton-checked .p-radiobutton-box,
+    &.p-highlight .p-radiobutton-box {
+      background-color: om-bg('brand');
+      border-color: om-bg('brand');
+    }
+
+    &.p-radiobutton-checked:not(.p-disabled) .p-radiobutton-box:hover,
+    &.p-highlight:not(.p-disabled) .p-radiobutton-box:hover {
+      background-color: om-bg('brand-hover');
+      border-color: om-bg('brand-hover');
+    }
+
+    &:not(.p-radiobutton-checked, .p-highlight, .p-disabled)
+      .p-radiobutton-box:hover {
+      border-color: om-border('default-tertiary');
+    }
+
+    // ── Disabled ──
+    &.p-disabled .p-radiobutton-box {
+      background-color: om-bg('disabled');
+      border-color: om-border('disabled');
+      cursor: not-allowed;
+
+      .p-radiobutton-icon {
+        background-color: om-icon('disabled');
+      }
+    }
+
+    &.p-radiobutton-checked.p-disabled .p-radiobutton-box,
+    &.p-highlight.p-disabled .p-radiobutton-box {
+      background-color: om-bg('disabled');
+      border-color: om-border('disabled');
+    }
+  }
+
+  // ── Content (label + description) ──
+  &-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &-label {
+    @include om-typography(body, lg, $strong: true);
+
+    color: om-text('default');
+  }
+
+  &-description {
+    @include om-typography(body, md, $strong: true);
+
+    color: om-text('default-tertiary');
+  }
+
+  // ── Disabled state (on root) ──
+  &:has(.p-disabled) {
+    cursor: not-allowed;
+
+    .#{$prefix}-#{$component}-label,
+    .#{$prefix}-#{$component}-description {
+      color: om-text('disabled');
+    }
+  }
+
+  // ── Direction: right ──
+  &-right {
+    .#{$prefix}-#{$component}-box-wrapper {
+      order: 1;
+    }
+
+    .#{$prefix}-#{$component}-content {
+      order: 0;
+    }
+  }
+}
+
+// ── RadioGroup ──
+$group-component: 'radio-group';
+
+.#{$prefix}-#{$group-component} {
+  display: flex;
+
+  // ── Layout variants ──
+  &-vertical {
+    flex-direction: column;
+    gap: om-gap(300);
+  }
+
+  &-horizontal {
+    flex-flow: row wrap;
+    gap: om-gap(600);
+  }
+}

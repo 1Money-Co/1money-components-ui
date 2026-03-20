@@ -15,7 +15,7 @@ A loading spinner component built on top of PrimeReact's ProgressSpinner with en
 ## Basic Usage
 
 ```tsx
-import { Spinner } from '@1money/react-ui';
+import { Spinner } from '@1money/components-ui';
 
 // Basic spinner
 <Spinner />

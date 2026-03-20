@@ -110,7 +110,7 @@ This phase catches what `1money-component-dev` may miss — the precise code sty
 
 ## Constraints
 
-- **Do NOT invoke** `figma-1money-codegen` — it targets `@1money/react-ui` (consumer library), not this library.
+- **Do NOT invoke** `figma-1money-codegen` — it targets consumer code (`@1money/components-ui` usage), not this library's internals.
 - **Do NOT invoke** `1money-front-code-review` — it targets consumer code patterns and would produce false positives.
 - **Do NOT duplicate** content from `1money-component-dev` — this skill orchestrates, it does not re-implement.
 - **Always read before writing** `src/index.ts` — match the actual barrel pattern, not template expectations.

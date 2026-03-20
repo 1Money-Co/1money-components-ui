@@ -5,9 +5,9 @@ A checkbox component with label and description support, built on PrimeReact Che
 ## Import
 
 ```tsx
-import { CheckboxBeta } from '@1money/react-ui';
+import { CheckboxBeta } from '@1money/components-ui';
 // or
-import { CheckboxBeta } from '@1money/react-ui/CheckboxBeta';
+import { CheckboxBeta } from '@1money/components-ui/CheckboxBeta';
 ```
 
 ## Usage
