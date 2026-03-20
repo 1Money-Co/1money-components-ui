@@ -21,6 +21,9 @@ import { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/component
 ## Basic Usage
 
 ```tsx
+import { Flex } from '@1money/components-ui';
+import { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY } from '@1money/components-ui/Flex';
+
 <Flex gap={FLEX_GAP.middle} align={FLEX_ALIGN.center} justify={FLEX_JUSTIFY.spaceBetween}>
   <div>Left</div>
   <div>Right</div>

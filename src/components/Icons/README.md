@@ -24,6 +24,7 @@ import type { IconName } from '@1money/components-ui';
 ```tsx
 // Basic icon (default 24px, color #131313)
 <Icons name="arrowRight" />
+import { Icons, IconWrapper, Logo } from '@1money/components-ui';
 
 // Custom size and color
 <Icons name="settings" size={32} color="#3D73F2" />
@@ -111,18 +112,12 @@ All icon names use **camelCase**. The `IconName` type provides full autocompleti
 
 `illusChecked`, `illusEmailError`, `illusLinkExpired`, `illus2FA`, `illusLocked`, `illusError`, `illusRegionNotSupported`, `illusIDCard`, `illusVerification`, `illusTransfer`, `illusSend`, `illusAccount`, `illusPending`
 
-### Deprecated Icons (legacy)
+```tsx
+// Old (still works)
+import { Deprecated } from '@1money/components-ui';
+<Deprecated name="old-icon-name" />
 
-`burger`, `return`, `close`, `arrow`, `circle`, `times`, `doubleCheck`, `checkCircle`, `timesCircle`, `content`, `locked`, `exclamation`, `arrowLink`, `union`, `eyeClose`, `eyeOn`
-
-### Currency Icons
-
-`usd`, `eur`, `gbp`, `jpy`, `cny`
-
-### Social Icons
-
-`google`, `apple`, `twitter`, `linkedIn`, `passkey`, `pause`
-
-### Figma Aliases
-
-`depositFiatCrypto`, `withdrawFiatCrypto`, `accountdLocked`, `personalSettings`, `security2`, `iconPix`, `noApiKeys`
+// New (recommended)
+import { Icons } from '@1money/components-ui';
+<Icons name="new-icon-name" />
+```

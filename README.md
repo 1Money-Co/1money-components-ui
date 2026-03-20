@@ -17,7 +17,7 @@ It combines reusable UI components with a 1Money SCSS design system, Storybook f
 Install the package and the required React dependencies:
 
 ```bash
-pnpm add @1money/components-ui react react-dom
+pnpm add @1money/components-ui react react-dom primereact primeicons
 ```
 
 Then import the library stylesheet once in your app entrypoint:

@@ -28,6 +28,9 @@ import { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';
 ## Basic Usage
 
 ```tsx
+import { Grid } from '@1money/components-ui';
+import { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';
+
 const GRID_GUTTER: [number, number] = [16, 8];
 const SPAN_HALF = 6;
 

@@ -1,6 +1,6 @@
 {
-  "name": "@1money/components-ui",
-  "version": "1.0.0",
+  "name": "@1money/component-ui",
+  "version": "0.0.1",
   "description": "React Components based on primereact for 1money front-end projects",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -140,9 +140,9 @@
       "require": "./lib/components/Radio/index.js"
     },
     "./RadioGroup": {
-      "types": "./es/components/RadioGroup/index.d.ts",
-      "import": "./es/components/RadioGroup/index.js",
-      "require": "./lib/components/RadioGroup/index.js"
+      "types": "./es/components/Radio/index.d.ts",
+      "import": "./es/components/Radio/index.js",
+      "require": "./lib/components/Radio/index.js"
     },
     "./Select": {
       "types": "./es/components/Select/index.d.ts",

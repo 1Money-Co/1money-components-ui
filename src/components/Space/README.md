@@ -22,6 +22,9 @@ import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/
 ## Basic Usage
 
 ```tsx
+import { Space } from '@1money/components-ui';
+import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';
+
 <Space size={SPACE_SIZE.middle} align={SPACE_ALIGN.center}>
   <span>Left</span>
   <span>Right</span>
