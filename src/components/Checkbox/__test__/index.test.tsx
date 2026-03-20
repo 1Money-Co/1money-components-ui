@@ -1,7 +1,8 @@
 import 'jsdom-global/register';
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 import { Checkbox } from '../index';
 
 const originalConsoleError = console.error;
@@ -26,34 +27,74 @@ jest.mock('lottie-web', () => ({
 
 describe('Checkbox', () => {
   it('renders correctly', () => {
-    const wrapper = render(<Checkbox label="Test" />);
-    expect(wrapper).toMatchSnapshot();
+    const { container } = render(<Checkbox label="Test" />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('renders checked state', () => {
-    const wrapper = render(<Checkbox label="Test" checked />);
-    expect(wrapper).toMatchSnapshot();
+  it('toggles uncontrolled state and emits the next checked value', async () => {
+    const user = userEvent.setup();
+    const handleChange = jest.fn();
+
+    render(<Checkbox label="Test" onChange={handleChange} />);
+
+    const input = screen.getByRole('checkbox', { name: 'Test' });
+
+    expect(input).not.toBeChecked();
+
+    await user.click(screen.getByText('Test'));
+
+    expect(input).toBeChecked();
+    expect(handleChange).toHaveBeenCalledWith(true);
+
+    await user.click(input);
+
+    expect(input).not.toBeChecked();
+    expect(handleChange).toHaveBeenLastCalledWith(false);
   });
 
-  it('renders indeterminate state', () => {
-    const wrapper = render(<Checkbox label="Test" indeterminate />);
-    expect(wrapper).toMatchSnapshot();
+  it('keeps the controlled checked state until the parent updates it', async () => {
+    const user = userEvent.setup();
+    const handleChange = jest.fn();
+
+    render(<Checkbox label="Test" checked={false} onChange={handleChange} />);
+
+    const input = screen.getByRole('checkbox', { name: 'Test' });
+
+    await user.click(input);
+
+    expect(handleChange).toHaveBeenCalledWith(true);
+    expect(input).not.toBeChecked();
   });
 
-  it('renders disabled state', () => {
-    const wrapper = render(<Checkbox label="Test" disabled />);
-    expect(wrapper).toMatchSnapshot();
+  it('syncs the indeterminate state to the native input element', () => {
+    render(<Checkbox label="Test" indeterminate />);
+
+    const input = screen.getByRole('checkbox', {
+      name: 'Test',
+    }) as HTMLInputElement;
+
+    expect(input.indeterminate).toBe(true);
   });
 
-  it('renders with description', () => {
-    const wrapper = render(
-      <Checkbox label="Label" description="Description" />,
-    );
-    expect(wrapper).toMatchSnapshot();
+  it('supports aria-label when no visible label is rendered', () => {
+    render(<Checkbox aria-label="Hidden label checkbox" />);
+
+    expect(
+      screen.getByRole('checkbox', { name: 'Hidden label checkbox' }),
+    ).toBeInTheDocument();
   });
 
-  it('renders direction right', () => {
-    const wrapper = render(<Checkbox label="Test" direction="right" />);
-    expect(wrapper).toMatchSnapshot();
+  it('prevents changes while disabled', async () => {
+    const user = userEvent.setup();
+    const handleChange = jest.fn();
+
+    render(<Checkbox label="Test" disabled onChange={handleChange} />);
+
+    const input = screen.getByRole('checkbox', { name: 'Test' });
+
+    await user.click(input);
+
+    expect(input).not.toBeChecked();
+    expect(handleChange).not.toHaveBeenCalled();
   });
 });

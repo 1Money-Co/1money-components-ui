@@ -13,6 +13,7 @@ const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
   argTypes: {
     checked: { control: 'boolean' },
+    defaultChecked: { control: 'boolean' },
     indeterminate: { control: 'boolean' },
     disabled: { control: 'boolean' },
     direction: { control: 'radio', options: [...DIRECTIONS] },
@@ -163,5 +164,6 @@ export const WithoutLabel: Story = {
     defaultChecked: true,
     label: undefined,
     description: undefined,
+    'aria-label': 'Checkbox without visible label',
   },
 };

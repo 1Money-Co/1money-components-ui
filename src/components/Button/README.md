@@ -1,6 +1,6 @@
 # Button
 
-A button component built on PrimeReact's Button with the 1Money design system tokens. Supports multiple color variants, three sizes, and optional leading/trailing icon slots.
+A button component with the 1Money design system tokens. Supports multiple color variants, three sizes, and optional leading/trailing icon slots.
 
 ## Import
 
@@ -47,4 +47,4 @@ import { Button } from '@1money/components-ui/Button';
 | `className` | `string` | `''` | Additional CSS classes |
 | `children` | `ReactNode` | — | Button content |
 
-This component also accepts all props from PrimeReact's `ButtonProps` (except `label`, `severity`, `size`).
+This component also accepts the standard button props used by the underlying implementation (except the props managed directly by this component such as `label`, `severity`, and `size`).

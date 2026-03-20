@@ -1,8 +1,10 @@
 export { Button } from './components/Button';
 export { Checkbox } from './components/Checkbox';
+export { CheckboxGroup } from './components/CheckboxGroup';
 export { Flex } from './components/Flex';
 export { Grid, Row, Col } from './components/Grid';
 export { Icons, IconWrapper, IconHover } from './components/Icons';
+export { Input } from './components/Input';
 export { Notification } from './components/Notification';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
@@ -10,10 +12,24 @@ export { Tag } from './components/Tag';
 export { Tooltip } from './components/Tooltip';
 
 export type { ButtonProps } from './components/Button';
-export type { CheckboxProps } from './components/Checkbox';
+export type {
+  CheckboxProps,
+  CheckboxValueType,
+  CheckboxGroupProps,
+  CheckboxGroupOption,
+} from './components/Checkbox';
 export type { FlexProps } from './components/Flex';
 export type { GridRowProps, GridColProps } from './components/Grid';
 export type { IconName, IconsProps, IconWrapperProps, IconHoverProps } from './components/Icons';
+export type {
+  InputProps,
+  InputPasswordProps,
+  InputSearchProps,
+  InputTextAreaProps,
+  InputOTPProps,
+  InputSize,
+  InputStatus,
+} from './components/Input';
 export type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './components/Notification';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';

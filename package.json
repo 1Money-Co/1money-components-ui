@@ -39,6 +39,11 @@
       "import": "./es/components/Checkbox/index.js",
       "require": "./lib/components/Checkbox/index.js"
     },
+    "./CheckboxGroup": {
+      "types": "./es/components/CheckboxGroup/index.d.ts",
+      "import": "./es/components/CheckboxGroup/index.js",
+      "require": "./lib/components/CheckboxGroup/index.js"
+    },
     "./Collapse": {
       "types": "./es/components/Collapse/index.d.ts",
       "import": "./es/components/Collapse/index.js",

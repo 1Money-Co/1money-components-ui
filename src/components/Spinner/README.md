@@ -1,6 +1,6 @@
 # Spinner
 
-A loading spinner component built on top of PrimeReact's ProgressSpinner. Used to indicate loading states and provide visual feedback to users.
+A loading spinner component used to indicate loading states and provide visual feedback to users.
 
 ## Import
 
@@ -37,7 +37,7 @@ import { Spinner } from '@1money/components-ui/Spinner';
 
 ### Inherited Props
 
-This component extends PrimeReact's `ProgressSpinnerProps` and accepts all its props:
+This component accepts these additional props:
 
 | Prop | Type | Description |
 |------|------|-------------|

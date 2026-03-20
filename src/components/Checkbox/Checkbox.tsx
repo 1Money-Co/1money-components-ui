@@ -1,49 +1,20 @@
-import { memo } from 'react';
-import {
-  Checkbox as PrimeCheckbox,
-  type CheckboxChangeEvent,
-} from 'primereact/checkbox';
+import { memo, useEffect, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import type { FC } from 'react';
+import type { ChangeEvent, FC } from 'react';
 import type { CheckboxProps } from './interface';
-
-const CheckIconSvg = (
-  <svg
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M21.5099 6.40005L10.12 19.7129L2.55029 12.2976L3.94985 10.8689L9.99122 16.787L19.9902 5.09985L21.5099 6.40005Z"
-    />
-  </svg>
-);
-
-const MinusIconSvg = (
-  <svg
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M21 13L3 13V11L21 11V13Z"
-    />
-  </svg>
-);
 
 export const Checkbox: FC<CheckboxProps> = (props) => {
   const {
     className = '',
     prefixCls = 'checkbox',
+    id,
+    name,
+    value,
+    required = false,
+    title,
+    'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledBy,
     checked,
     defaultChecked = false,
     indeterminate = false,
@@ -53,45 +24,66 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     direction = 'left',
     onChange,
     ref,
-    ...rest
   } = props;
 
   const [innerChecked, setInnerChecked] = useControlledState(
     defaultChecked,
     checked,
   );
-
   const classes = classnames(prefixCls);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const inferredAriaLabel = (
+    typeof label === 'string' || typeof label === 'number'
+      ? String(label)
+      : typeof description === 'string' || typeof description === 'number'
+        ? String(description)
+        : undefined
+  );
 
-  const handleChange = useEventCallback((e: CheckboxChangeEvent) => {
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.indeterminate = indeterminate;
+    }
+  }, [indeterminate]);
+
+  const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     if (disabled) return;
-    const nextChecked = !!e.checked;
+    const nextChecked = event.target.checked;
     setInnerChecked(nextChecked);
     onChange?.(nextChecked);
   });
 
-  const checkboxIcon = indeterminate ? MinusIconSvg : CheckIconSvg;
-
   const checkboxElement = (
-    <div className={classes('box-wrapper')}>
-      <PrimeCheckbox
-        {...rest}
+    <span className={classes('box-wrapper')}>
+      <input
+        ref={inputRef}
+        className={classes('input')}
+        type="checkbox"
+        id={id}
+        name={name}
+        value={value === undefined ? undefined : String(value)}
+        required={required}
+        title={title}
+        aria-label={ariaLabel ?? inferredAriaLabel}
+        aria-labelledby={ariaLabelledBy}
         disabled={disabled}
-        checked={indeterminate || innerChecked}
+        checked={innerChecked}
         onChange={handleChange}
-        icon={checkboxIcon}
+      />
+      <span
+        aria-hidden="true"
         className={classes('box')}
       />
-    </div>
+    </span>
   );
 
   const labelElement = (label || description) && (
-    <div className={classes('content')}>
+    <span className={classes('content')}>
       {label && <span className={classes('label')}>{label}</span>}
       {description && (
         <span className={classes('description')}>{description}</span>
       )}
-    </div>
+    </span>
   );
 
   return (
@@ -100,23 +92,16 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
       className={classes(
         void 0,
         joinCls(
+          innerChecked && classes('checked'),
           indeterminate && classes('indeterminate'),
+          disabled && classes('disabled'),
           direction === 'right' && classes('right'),
           className,
         ),
       )}
     >
-      {direction === 'left' ? (
-        <>
-          {checkboxElement}
-          {labelElement}
-        </>
-      ) : (
-        <>
-          {labelElement}
-          {checkboxElement}
-        </>
-      )}
+      {checkboxElement}
+      {labelElement}
     </label>
   );
 };

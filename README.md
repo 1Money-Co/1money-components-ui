@@ -2,22 +2,22 @@
 
 This repository contains the source for `@1money/components-ui`, a React component library used across 1Money front-end projects.
 
-It combines PrimeReact-based components with a 1Money SCSS design system, Storybook for local development, and dual CommonJS/ES module builds for distribution.
+It combines reusable UI components with a 1Money SCSS design system, Storybook for local development, and dual CommonJS/ES module builds for distribution.
 
 ## Features
 
 - React and TypeScript component library
-- PrimeReact-based building blocks styled for 1Money products
+- Reusable UI building blocks styled for 1Money products
 - SCSS design system in `src/styles/`
 - Storybook development server on port `6205`
 - Dual build output to `lib/` and `es/`
 
 ## Installation
 
-Install the package and its peer dependencies:
+Install the package and the required React dependencies:
 
 ```bash
-pnpm add @1money/components-ui react react-dom primereact primeicons
+pnpm add @1money/components-ui react react-dom
 ```
 
 Then import the library stylesheet once in your app entrypoint:
@@ -34,6 +34,7 @@ Named imports are available from the root package entry:
 import {
   Button,
   Checkbox,
+  CheckboxGroup,
   Grid,
   Notification,
   Icons,
@@ -51,6 +52,12 @@ export function Example() {
         </Grid.Col>
         <Grid.Col span={12} md={6}>
           <Checkbox label="Accept terms" />
+        </Grid.Col>
+        <Grid.Col span={12} md={6}>
+          <CheckboxGroup
+            options={['Email', 'SMS']}
+            defaultValue={['Email']}
+          />
         </Grid.Col>
       </Grid>
 
@@ -84,6 +91,7 @@ The current source tree includes these component modules:
 
 - `Button`
 - `Checkbox`
+- `CheckboxGroup`
 - `Flex`
 - `Grid`
 - `Icons`

@@ -1,6 +1,6 @@
 # Checkbox
 
-A checkbox component with label and description support, built on PrimeReact Checkbox with the 1Money design system tokens. Supports checked, unchecked, and indeterminate states with configurable label direction.
+A checkbox component with label and description support, built with a native `input[type='checkbox']` and the 1Money design system tokens. Supports checked, unchecked, and indeterminate states with configurable label direction.
 
 ## Import
 
@@ -36,5 +36,3 @@ import { Checkbox } from '@1money/components-ui/Checkbox';
 | `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
 | `prefixCls` | `string` | `'checkbox'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
-
-This component also accepts all props from PrimeReact's `CheckboxProps` (except `checked`, `onChange`, `icon`, `size`, `ref`).

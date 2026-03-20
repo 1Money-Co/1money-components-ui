@@ -3,81 +3,102 @@
 
 $component: 'checkbox';
 
+@mixin checkbox-box-state($background-color, $border-color) {
+  background-color: $background-color;
+  border-color: $border-color;
+}
+
+@mixin checkbox-checkmark-shape($color, $background-color: transparent) {
+  top: calc(#{theme.spacing(scale, 400)} / 2 - 1px);
+  inset-inline-start: calc(#{theme.spacing(scale, 400)} / 4 - 1px);
+  width: calc(5 * #{theme.spacing(scale, 400)} / 14);
+  height: calc(8 * #{theme.spacing(scale, 400)} / 14);
+  background-color: $background-color;
+  border: 1px solid $color;
+  border-top: 0;
+  border-inline-start: 0;
+}
+
+@mixin checkbox-checkmark-visible($color) {
+  @include checkbox-checkmark-shape($color);
+
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+}
+
+@mixin checkbox-minus-shape($color) {
+  top: 50%;
+  inset-inline-start: 17.5%;
+  width: 65%;
+  height: 7.5%;
+  background-color: $color;
+  border: 0;
+  border-radius: theme.shape(100);
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
 .#{theme.$prefix}-#{$component} {
   display: inline-flex;
   gap: theme.spacing(gap, 300);
   align-items: flex-start;
   cursor: pointer;
 
-  // ── Checkbox box wrapper ──
   &-box-wrapper {
+    position: relative;
     display: flex;
     flex-shrink: 0;
     align-items: center;
+    justify-content: center;
     height: theme-internal.om-line-height(body, lg);
   }
 
-  // ── PrimeReact checkbox overrides ──
+  &-input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    cursor: inherit;
+    opacity: 0;
+  }
+
   &-box {
-    .p-checkbox-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: theme.spacing(scale, 400);
-      height: theme.spacing(scale, 400);
-      overflow: hidden;
-      background-color: theme.palette(bg, 'default');
-      border: 1px solid theme.palette(border, 'default-secondary');
-      border-radius: theme.shape(100);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: theme.spacing(scale, 400);
+    height: theme.spacing(scale, 400);
+    overflow: hidden;
+    background-color: theme.palette(bg, 'default');
+    border: 1px solid theme.palette(border, 'default-secondary');
+    border-radius: theme.shape(100);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &::after {
+      position: absolute;
+      display: table;
+      box-sizing: border-box;
+
+      @include checkbox-checkmark-shape(theme.palette(icon, 'on-brand'));
+
+      transform: rotate(45deg) scale(0) translate(-50%, -50%);
+      transform-origin: center;
+      opacity: 0;
       transition:
-        background-color 0.2s,
-        border-color 0.2s;
-
-      // Icon SVG inside the checkbox
-      svg {
-        width: 14px;
-        height: 14px;
-        color: theme.palette(icon, 'on-brand');
-        fill: currentcolor;
-      }
-    }
-
-    &.p-checkbox-checked .p-checkbox-box,
-    &.p-highlight .p-checkbox-box {
-      background-color: theme.palette(bg, 'brand');
-      border-color: theme.palette(bg, 'brand');
-    }
-
-    &.p-checkbox-checked:not(.p-disabled) .p-checkbox-box:hover,
-    &.p-highlight:not(.p-disabled) .p-checkbox-box:hover {
-      background-color: theme.palette(bg, 'brand-hover');
-      border-color: theme.palette(bg, 'brand-hover');
-    }
-
-    &:not(.p-checkbox-checked, .p-highlight, .p-disabled)
-      .p-checkbox-box:hover {
-      border-color: theme.palette(border, 'default-tertiary');
-    }
-
-    // ── Disabled ──
-    &.p-disabled .p-checkbox-box {
-      background-color: theme.palette(bg, 'disabled');
-      border-color: theme.palette(border, 'disabled');
-      cursor: not-allowed;
-
-      svg {
-        color: theme.palette(icon, 'disabled');
-      }
-    }
-
-    &.p-checkbox-checked.p-disabled .p-checkbox-box,
-    &.p-highlight.p-disabled .p-checkbox-box {
-      background-color: theme.palette(bg, 'disabled');
-      border-color: theme.palette(border, 'disabled');
+        all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+      content: '';
     }
   }
 
-  // ── Content (label + description) ──
+  &-input:focus-visible + .#{theme.$prefix}-#{$component}-box {
+    border-color: theme.palette(border, 'brand');
+    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+  }
+
   &-content {
     display: flex;
     flex: 1 0 0;
@@ -97,17 +118,91 @@ $component: 'checkbox';
     color: theme.palette(text, 'default-tertiary');
   }
 
-  // ── Disabled state (on root) ──
-  &:has(.p-disabled) {
+  &:not(&-disabled):hover {
+    .#{theme.$prefix}-#{$component}-box {
+      border-color: theme.palette(border, 'default-tertiary');
+    }
+  }
+
+  &-checked {
+    .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'brand'),
+        theme.palette(bg, 'brand')
+      );
+
+      &::after {
+        @include checkbox-checkmark-visible(theme.palette(icon, 'on-brand'));
+
+        transition:
+          all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s,
+          opacity 0.1s;
+      }
+    }
+  }
+
+  &-checked:not(&-disabled):hover {
+    .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'brand-hover'),
+        theme.palette(bg, 'brand-hover')
+      );
+    }
+  }
+
+  &-indeterminate {
+    .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'brand'),
+        theme.palette(bg, 'brand')
+      );
+
+      &::after {
+        @include checkbox-minus-shape(theme.palette(icon, 'on-brand'));
+      }
+    }
+  }
+
+  &-indeterminate:not(&-disabled):hover {
+    .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'brand-hover'),
+        theme.palette(bg, 'brand-hover')
+      );
+
+      &::after {
+        background-color: theme.palette(icon, 'on-brand');
+      }
+    }
+  }
+
+  &-disabled {
     cursor: not-allowed;
+
+    .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'disabled'),
+        theme.palette(border, 'disabled')
+      );
+
+      &::after {
+        background-color: theme.palette(icon, 'disabled');
+        border-color: theme.palette(icon, 'disabled');
+      }
+    }
 
     .#{theme.$prefix}-#{$component}-label,
     .#{theme.$prefix}-#{$component}-description {
       color: theme.palette(text, 'disabled');
     }
+
+    &.#{theme.$prefix}-#{$component}-checked {
+      .#{theme.$prefix}-#{$component}-box::after {
+        @include checkbox-checkmark-visible(theme.palette(icon, 'disabled'));
+      }
+    }
   }
 
-  // ── Direction: right ──
   &-right {
     .#{theme.$prefix}-#{$component}-box-wrapper {
       order: 1;
