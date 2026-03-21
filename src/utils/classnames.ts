@@ -1,15 +1,14 @@
 import classNames from 'classnames';
 
-export const classnames = (_prefix_: string) => (_prefix?: string) => (
-  suffix?: string,
+export const classnames = (namespace: string) => (block?: string) => (
+  modifier?: string,
   className?: string
 ) => {
-  let prefix = _prefix_;
-  if (_prefix) prefix = _prefix_ + '-' + _prefix;
+  const base = block ? `${namespace}-${block}` : namespace;
   return classNames(
     {
-      [`${prefix}`]: !!prefix && !suffix,
-      [`${prefix}-${suffix}`]: !!prefix && !!suffix,
+      [base]: !!base && !modifier,
+      [`${base}-${modifier}`]: !!base && !!modifier,
     },
     className
   );

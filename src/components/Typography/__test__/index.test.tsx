@@ -1,11 +1,73 @@
 import 'jsdom-global/register';
 import * as React from 'react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import { clipboard } from '@/utils/clipboard';
 import { Typography } from '../index';
 
+jest.mock('@/utils/clipboard', () => ({
+  __esModule: true,
+  clipboard: jest.fn(),
+  default: jest.fn(),
+}));
+
+jest.mock('@/components/Tooltip', () => ({
+  __esModule: true,
+  Tooltip: ({ body }: { body?: React.ReactNode }) =>
+    body ? <div data-testid="typography-tooltip">{body}</div> : null,
+}));
+
 const originalConsoleError = console.error;
+const clipboardMock = clipboard as jest.MockedFunction<typeof clipboard>;
+const originalClientWidth = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'clientWidth');
+const originalScrollWidth = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'scrollWidth');
+const originalClientHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'clientHeight');
+const originalScrollHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'scrollHeight');
+
+const mockElementMetrics = ({
+  clientWidth = 120,
+  scrollWidth = 120,
+  clientHeight = 20,
+  scrollHeight = 20,
+}: {
+  clientWidth?: number;
+  scrollWidth?: number;
+  clientHeight?: number;
+  scrollHeight?: number;
+} = {}) => {
+  Object.defineProperty(HTMLElement.prototype, 'clientWidth', {
+    configurable: true,
+    get: () => clientWidth,
+  });
+  Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
+    configurable: true,
+    get: () => scrollWidth,
+  });
+  Object.defineProperty(HTMLElement.prototype, 'clientHeight', {
+    configurable: true,
+    get: () => clientHeight,
+  });
+  Object.defineProperty(HTMLElement.prototype, 'scrollHeight', {
+    configurable: true,
+    get: () => scrollHeight,
+  });
+};
+
+const restoreElementMetrics = () => {
+  if (originalClientWidth) {
+    Object.defineProperty(HTMLElement.prototype, 'clientWidth', originalClientWidth);
+  }
+  if (originalScrollWidth) {
+    Object.defineProperty(HTMLElement.prototype, 'scrollWidth', originalScrollWidth);
+  }
+  if (originalClientHeight) {
+    Object.defineProperty(HTMLElement.prototype, 'clientHeight', originalClientHeight);
+  }
+  if (originalScrollHeight) {
+    Object.defineProperty(HTMLElement.prototype, 'scrollHeight', originalScrollHeight);
+  }
+};
 
 beforeAll(() => {
   console.error = (message, ...optionalParams) => {
@@ -22,6 +84,12 @@ beforeAll(() => {
 
 afterAll(() => {
   console.error = originalConsoleError;
+});
+
+afterEach(() => {
+  clipboardMock.mockReset();
+  restoreElementMetrics();
+  jest.useRealTimers();
 });
 
 describe('Typography', () => {
@@ -82,5 +150,115 @@ describe('Typography', () => {
     await user.click(link);
 
     expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('applies single-line and multi-line ellipsis classes', () => {
+    const { rerender } = render(
+      <Typography.Body size="md" ellipsis>
+        Single line ellipsis
+      </Typography.Body>,
+    );
+
+    expect(screen.getByText('Single line ellipsis')).toHaveClass('om-react-ui-typography-ellipsis');
+
+    rerender(
+      <Typography.Body size="md" ellipsis={{ rows: 2 }}>
+        Multi line ellipsis
+      </Typography.Body>,
+    );
+
+    expect(screen.getByText('Multi line ellipsis')).toHaveClass(
+      'om-react-ui-typography-ellipsis',
+      'om-react-ui-typography-ellipsis-multiline',
+      'om-react-ui-typography-ellipsis-rows-2',
+    );
+  });
+
+  it('only renders the ellipsis tooltip when overflow is detected', () => {
+    mockElementMetrics();
+    const { unmount } = render(
+      <Typography.Body size="md" ellipsis={{ tooltip: true }}>
+        Compact content
+      </Typography.Body>,
+    );
+
+    expect(screen.getAllByText('Compact content')).toHaveLength(1);
+    unmount();
+
+    mockElementMetrics({ clientWidth: 80, scrollWidth: 160 });
+    render(
+      <Typography.Body size="md" ellipsis={{ tooltip: true }}>
+        Overflow content
+      </Typography.Body>,
+    );
+
+    expect(screen.getAllByText('Overflow content')).toHaveLength(2);
+  });
+
+  it('copies the full source text and resets the feedback state after the configured duration', async () => {
+    jest.useFakeTimers();
+    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+
+    render(
+      <Typography.Body size="md" copyable={{ duration: 10 }}>
+        Copiable body text
+      </Typography.Body>,
+    );
+
+    const copyButton = screen.getByRole('button', { name: 'Copy text' });
+
+    await user.click(copyButton);
+
+    expect(clipboardMock).toHaveBeenCalledWith('Copiable body text', expect.any(Function));
+
+    act(() => {
+      const callback = clipboardMock.mock.calls[0]?.[1];
+      callback?.(true);
+    });
+
+    expect(screen.getByRole('button', { name: 'Copied' })).toBeInTheDocument();
+
+    act(() => {
+      jest.advanceTimersByTime(10);
+    });
+
+    expect(screen.getByRole('button', { name: 'Copy text' })).toBeInTheDocument();
+  });
+
+  it('uses the configured copy text override', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Typography.Body size="md" copyable={{ text: 'override copy value' }}>
+        Visible body text
+      </Typography.Body>,
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Copy text' }));
+
+    expect(clipboardMock).toHaveBeenCalledWith('override copy value', expect.any(Function));
+  });
+
+  it('keeps disabled link behavior while exposing copyable support', async () => {
+    const onClick = jest.fn();
+    const user = userEvent.setup();
+
+    render(
+      <Typography.Link
+        size="md"
+        href="https://example.com"
+        disabled
+        onClick={onClick}
+        copyable
+      >
+        Disabled copyable link
+      </Typography.Link>,
+    );
+
+    await user.click(screen.getByText('Disabled copyable link'));
+    await user.click(screen.getByRole('button', { name: 'Copy text' }));
+
+    expect(onClick).not.toHaveBeenCalled();
+    expect(clipboardMock).toHaveBeenCalledWith('Disabled copyable link', expect.any(Function));
   });
 });

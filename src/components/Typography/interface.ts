@@ -4,6 +4,7 @@ import type {
   HTMLAttributes,
   ReactNode,
 } from 'react';
+import type { TooltipProps } from '@/components/Tooltip';
 
 export const TYPOGRAPHY_DISPLAY_SIZES = ['xl', 'lg', 'md', 'sm', 'xs'] as const;
 export const TYPOGRAPHY_HEADLINE_SIZES = ['lg', 'md', 'sm', 'xs'] as const;
@@ -69,6 +70,19 @@ export type TypographyColor = (typeof TYPOGRAPHY_COLORS)[number];
 
 type BaseHTMLProps = Omit<HTMLAttributes<HTMLElement>, 'children' | 'color'>;
 
+export interface TypographyEllipsisConfig {
+  rows?: number;
+  tooltip?: boolean | TooltipProps;
+}
+
+export interface TypographyCopyableConfig {
+  text?: string;
+  icon?: ReactNode | [ReactNode, ReactNode];
+  tooltips?: boolean | [ReactNode, ReactNode];
+  duration?: number;
+  onCopy?: (success: boolean, text: string) => void;
+}
+
 export interface TypographyCommonProps {
   children?: ReactNode;
   className?: string;
@@ -79,6 +93,8 @@ export interface TypographyCommonProps {
   underline?: boolean;
   delete?: boolean;
   disabled?: boolean;
+  ellipsis?: boolean | TypographyEllipsisConfig;
+  copyable?: boolean | TypographyCopyableConfig;
 }
 
 export interface TypographyStrongProps extends TypographyCommonProps {

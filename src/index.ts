@@ -37,9 +37,11 @@ export type { SpinnerProps } from './components/Spinner';
 export type { TagProps } from './components/Tag';
 export type {
   TypographyBodyProps,
+  TypographyCopyableConfig,
   TypographyBodySize,
   TypographyDisplayProps,
   TypographyDisplaySize,
+  TypographyEllipsisConfig,
   TypographyHeadlineProps,
   TypographyHeadlineSize,
   TypographyLabelProps,
