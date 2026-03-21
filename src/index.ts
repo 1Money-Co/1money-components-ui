@@ -9,6 +9,7 @@ export { Notification } from './components/Notification';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
 export { Tag } from './components/Tag';
+export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
 
 export type { ButtonProps } from './components/Button';
@@ -34,4 +35,18 @@ export type { NotificationProps, NotificationLinkConfig, NotificationStatus } fr
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { TagProps } from './components/Tag';
+export type {
+  TypographyBodyProps,
+  TypographyBodySize,
+  TypographyDisplayProps,
+  TypographyDisplaySize,
+  TypographyHeadlineProps,
+  TypographyHeadlineSize,
+  TypographyLabelProps,
+  TypographyLabelSize,
+  TypographyLinkProps,
+  TypographyLinkSize,
+  TypographyTitleProps,
+  TypographyTitleSize,
+} from './components/Typography';
 export type { TooltipProps, TooltipPlacement } from './components/Tooltip';

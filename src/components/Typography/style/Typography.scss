@@ -1,0 +1,185 @@
+@use 'sass:map';
+@use '@/styles/api' as theme;
+
+$component: 'typography';
+
+.#{theme.$prefix}-#{$component} {
+  margin: 0;
+  color: theme.palette(text, 'default');
+  text-decoration-color: currentcolor;
+
+  &-display-xl {
+    @include theme.typography(display, xl);
+  }
+
+  &-display-lg {
+    @include theme.typography(display, lg);
+  }
+
+  &-display-md {
+    @include theme.typography(display, md);
+  }
+
+  &-display-sm {
+    @include theme.typography(display, sm);
+  }
+
+  &-display-xs {
+    @include theme.typography(display, xs);
+  }
+
+  &-headline-lg {
+    @include theme.typography(headline, lg);
+  }
+
+  &-headline-md {
+    @include theme.typography(headline, md);
+  }
+
+  &-headline-sm {
+    @include theme.typography(headline, sm);
+  }
+
+  &-headline-xs {
+    @include theme.typography(headline, xs);
+  }
+
+  &-title-lg {
+    @include theme.typography(title, lg);
+  }
+
+  &-title-md {
+    @include theme.typography(title, md);
+  }
+
+  &-title-sm {
+    @include theme.typography(title, sm);
+  }
+
+  &-body-lg {
+    @include theme.typography(body, lg);
+  }
+
+  &-body-md {
+    @include theme.typography(body, md);
+  }
+
+  &-body-sm {
+    @include theme.typography(body, sm);
+  }
+
+  &-label-xl {
+    @include theme.typography(label, xl);
+  }
+
+  &-label-lg {
+    @include theme.typography(label, lg);
+  }
+
+  &-label-md {
+    @include theme.typography(label, md);
+  }
+
+  &-label-sm {
+    @include theme.typography(label, sm);
+  }
+
+  &-label-xs {
+    @include theme.typography(label, xs);
+  }
+
+  &-link-md {
+    @include theme.typography(link, md);
+
+    color: theme.palette(text, 'brand');
+  }
+
+  &-link-sm {
+    @include theme.typography(link, sm);
+
+    color: theme.palette(text, 'brand');
+  }
+
+  &-title-lg.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(title, lg, $strong: true);
+  }
+
+  &-title-md.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(title, md, $strong: true);
+  }
+
+  &-title-sm.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(title, sm, $strong: true);
+  }
+
+  &-body-lg.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(body, lg, $strong: true);
+  }
+
+  &-body-md.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(body, md, $strong: true);
+  }
+
+  &-body-sm.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(body, sm, $strong: true);
+  }
+
+  &-label-xl.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(label, xl, $strong: true);
+  }
+
+  &-label-lg.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(label, lg, $strong: true);
+  }
+
+  &-label-md.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(label, md, $strong: true);
+  }
+
+  &-label-sm.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(label, sm, $strong: true);
+  }
+
+  &-label-xs.#{theme.$prefix}-#{$component}-strong {
+    @include theme.typography(label, xs, $strong: true);
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+
+  &-underline {
+    text-decoration-line: underline;
+  }
+
+  &-delete {
+    text-decoration-line: line-through;
+  }
+
+  &-underline-delete {
+    text-decoration-line: underline line-through;
+  }
+
+  // Semantic color tokens — derived from the design system's text scale
+  @each $token in map.keys(map.get(theme.$om-theme-scales, 'text')) {
+    &-color-#{$token} {
+      color: theme.palette(text, $token);
+    }
+  }
+
+  &-disabled {
+    color: theme.palette(text, 'disabled');
+    cursor: not-allowed;
+  }
+
+  &-link-md:hover,
+  &-link-sm:hover {
+    color: theme.palette(text, 'brand');
+  }
+
+  &-link-md.#{theme.$prefix}-#{$component}-disabled,
+  &-link-sm.#{theme.$prefix}-#{$component}-disabled {
+    color: theme.palette(text, 'disabled');
+    pointer-events: none;
+  }
+}

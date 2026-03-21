@@ -1,10 +1,10 @@
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 
-$component: 'radio-beta';
+$component: 'radio';
 
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   display: inline-flex;
-  gap: om-gap(300);
+  gap: theme.spacing(gap, 300);
   align-items: flex-start;
   cursor: pointer;
 
@@ -13,7 +13,7 @@ $component: 'radio-beta';
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    height: om-line-height(body, lg);
+    height: theme.spacing(scale, 600);
   }
 
   // ── PrimeReact radio overrides ──
@@ -22,56 +22,56 @@ $component: 'radio-beta';
       display: flex;
       align-items: center;
       justify-content: center;
-      width: om-spacing(400);
-      height: om-spacing(400);
+      width: theme.spacing(scale, 400);
+      height: theme.spacing(scale, 400);
       overflow: hidden;
-      background-color: om-bg('default');
-      border: 1px solid om-border('default-secondary');
-      border-radius: om-radius('full');
+      background-color: theme.palette(bg, 'default');
+      border: 1px solid theme.palette(border, 'default-secondary');
+      border-radius: theme.shape('full');
       transition:
         background-color 0.2s,
         border-color 0.2s;
 
       .p-radiobutton-icon {
-        width: om-spacing(200);
-        height: om-spacing(200);
-        background-color: om-icon('on-brand');
-        border-radius: om-radius('full');
+        width: theme.spacing(scale, 200);
+        height: theme.spacing(scale, 200);
+        background-color: theme.palette(icon, 'on-brand');
+        border-radius: theme.shape('full');
       }
     }
 
     &.p-radiobutton-checked .p-radiobutton-box,
     &.p-highlight .p-radiobutton-box {
-      background-color: om-bg('brand');
-      border-color: om-bg('brand');
+      background-color: theme.palette(bg, 'brand');
+      border-color: theme.palette(bg, 'brand');
     }
 
     &.p-radiobutton-checked:not(.p-disabled) .p-radiobutton-box:hover,
     &.p-highlight:not(.p-disabled) .p-radiobutton-box:hover {
-      background-color: om-bg('brand-hover');
-      border-color: om-bg('brand-hover');
+      background-color: theme.palette(bg, 'brand-hover');
+      border-color: theme.palette(bg, 'brand-hover');
     }
 
     &:not(.p-radiobutton-checked, .p-highlight, .p-disabled)
       .p-radiobutton-box:hover {
-      border-color: om-border('default-tertiary');
+      border-color: theme.palette(border, 'default-tertiary');
     }
 
     // ── Disabled ──
     &.p-disabled .p-radiobutton-box {
-      background-color: om-bg('disabled');
-      border-color: om-border('disabled');
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
       cursor: not-allowed;
 
       .p-radiobutton-icon {
-        background-color: om-icon('disabled');
+        background-color: theme.palette(icon, 'disabled');
       }
     }
 
     &.p-radiobutton-checked.p-disabled .p-radiobutton-box,
     &.p-highlight.p-disabled .p-radiobutton-box {
-      background-color: om-bg('disabled');
-      border-color: om-border('disabled');
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
     }
   }
 
@@ -84,34 +84,34 @@ $component: 'radio-beta';
   }
 
   &-label {
-    @include om-typography(body, lg, $strong: true);
+    @include theme.typography(body, lg, $strong: true);
 
-    color: om-text('default');
+    color: theme.palette(text, 'default');
   }
 
   &-description {
-    @include om-typography(body, md, $strong: true);
+    @include theme.typography(body, md, $strong: true);
 
-    color: om-text('default-tertiary');
+    color: theme.palette(text, 'default-tertiary');
   }
 
   // ── Disabled state (on root) ──
   &:has(.p-disabled) {
     cursor: not-allowed;
 
-    .#{$prefix}-#{$component}-label,
-    .#{$prefix}-#{$component}-description {
-      color: om-text('disabled');
+    .#{theme.$prefix}-#{$component}-label,
+    .#{theme.$prefix}-#{$component}-description {
+      color: theme.palette(text, 'disabled');
     }
   }
 
   // ── Direction: right ──
   &-right {
-    .#{$prefix}-#{$component}-box-wrapper {
+    .#{theme.$prefix}-#{$component}-box-wrapper {
       order: 1;
     }
 
-    .#{$prefix}-#{$component}-content {
+    .#{theme.$prefix}-#{$component}-content {
       order: 0;
     }
   }
@@ -120,17 +120,17 @@ $component: 'radio-beta';
 // ── RadioGroup ──
 $group-component: 'radio-group';
 
-.#{$prefix}-#{$group-component} {
+.#{theme.$prefix}-#{$group-component} {
   display: flex;
 
   // ── Layout variants ──
   &-vertical {
     flex-direction: column;
-    gap: om-gap(300);
+    gap: theme.spacing(gap, 300);
   }
 
   &-horizontal {
     flex-flow: row wrap;
-    gap: om-gap(600);
+    gap: theme.spacing(gap, 600);
   }
 }
