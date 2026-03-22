@@ -23,7 +23,17 @@ const STORY_SECTION_STYLE = {
 };
 
 const TRUNCATED_CONTAINER_STYLE = {
-  maxWidth: 240,
+  display: 'grid',
+  gap: 8,
+  width: 240,
+};
+
+const TRUNCATED_FRAME_STYLE = {
+  width: '100%',
+  padding: 12,
+  borderRadius: 12,
+  background: 'rgba(15, 23, 42, 0.03)',
+  boxShadow: 'inset 0 0 0 1px rgba(15, 23, 42, 0.12)',
 };
 
 const LONG_TEXT =
@@ -199,9 +209,14 @@ export const SemanticTags: Story = {
 export const SingleLineEllipsis: Story = {
   render: () => (
     <div style={TRUNCATED_CONTAINER_STYLE}>
-      <Typography.Body size="md" ellipsis>
-        {LONG_TEXT}
-      </Typography.Body>
+      <Typography.Label size="xs" color="default-secondary">
+        Constrained to 240px width
+      </Typography.Label>
+      <div style={TRUNCATED_FRAME_STYLE}>
+        <Typography.Body size="md" ellipsis>
+          {LONG_TEXT}
+        </Typography.Body>
+      </div>
     </div>
   ),
 };
@@ -209,9 +224,14 @@ export const SingleLineEllipsis: Story = {
 export const MultiLineEllipsisWithTooltip: Story = {
   render: () => (
     <div style={TRUNCATED_CONTAINER_STYLE}>
-      <Typography.Body size="md" ellipsis={{ rows: 2, tooltip: true }}>
-        {LONG_TEXT}
-      </Typography.Body>
+      <Typography.Label size="xs" color="default-secondary">
+        Constrained to 240px width
+      </Typography.Label>
+      <div style={TRUNCATED_FRAME_STYLE}>
+        <Typography.Body size="md" ellipsis={{ rows: 2, tooltip: true }}>
+          {LONG_TEXT}
+        </Typography.Body>
+      </div>
     </div>
   ),
 };

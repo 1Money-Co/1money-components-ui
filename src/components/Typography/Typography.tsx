@@ -1,13 +1,14 @@
 import { useEventCallback, useSafeState } from '@1money/hooks';
-import { forwardRef, isValidElement, memo, useEffect, useMemo, useRef } from 'react';
+import { createElement, forwardRef, isValidElement, memo, useEffect, useMemo, useRef } from 'react';
 import { Icons } from '@/components/Icons';
 import { Tooltip } from '@/components/Tooltip';
 import { clipboard } from '@/utils/clipboard';
 import classnames, { joinCls } from '@/utils/classnames';
 import { uuid } from '@/utils/uuid';
 import type {
+  AnchorHTMLAttributes,
   CSSProperties,
-  ElementType,
+  HTMLAttributes,
   MouseEvent,
   ReactNode,
   Ref,
@@ -16,15 +17,20 @@ import type {
 import type { TooltipProps } from '@/components/Tooltip';
 import type {
   TypographyBodyProps,
+  TypographyBodyTag,
   TypographyCategory,
   TypographyCommonProps,
   TypographyCopyableConfig,
+  TypographyDisplayTag,
   TypographyDisplayProps,
   TypographyEllipsisConfig,
+  TypographyHeadlineTag,
   TypographyHeadlineProps,
+  TypographyLabelTag,
   TypographyLabelProps,
   TypographyLinkProps,
   TypographyStrongProps,
+  TypographyTitleTag,
   TypographyTitleProps,
 } from './interface';
 
@@ -33,21 +39,21 @@ const DEFAULT_COPY_ACTION_LABEL = 'Copy text';
 const DEFAULT_COPIED_LABEL = 'Copied';
 const DEFAULT_COPY_FAILED_LABEL = 'Copy failed';
 const DEFAULT_COPY_DURATION = 2000;
-const INLINE_WRAPPER_TAGS = new Set([
-  'a',
-  'b',
-  'code',
-  'em',
-  'i',
-  'label',
-  'small',
-  'span',
-  'strong',
-  'sub',
-  'sup',
-]);
+const DEFAULT_TYPOGRAPHY_TOOLTIP_PLACEMENT: TooltipProps['placement'] = 'top';
+const DEFAULT_TYPOGRAPHY_TOOLTIP_MIDDLEWARES: TooltipProps['middlewares'] = [];
+const BLOCK_WRAPPER_TAGS = new Set(['article', 'aside', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'section']);
+const BLOCK_LAYOUT = 'block';
+const INLINE_LAYOUT = 'inline';
 
 type TypographyCopyState = 'idle' | 'success' | 'error';
+type TypographyLayoutMode = typeof BLOCK_LAYOUT | typeof INLINE_LAYOUT;
+type TypographyTextTag =
+  | TypographyBodyTag
+  | TypographyDisplayTag
+  | TypographyHeadlineTag
+  | TypographyLabelTag
+  | TypographyTitleTag
+  | 'a';
 
 interface TypographyClassNameOptions {
   prefixCls: string;
@@ -63,7 +69,6 @@ interface TypographyClassNameOptions {
   ellipsis?: boolean;
   ellipsisInline?: boolean;
   multiline?: boolean;
-  rows?: number;
   copyable?: boolean;
 }
 
@@ -71,6 +76,7 @@ interface ResolvedTypographyEllipsisConfig {
   rows: number;
   tooltip: boolean | TooltipProps;
 }
+
 
 interface ResolvedTypographyCopyableConfig {
   text?: string;
@@ -81,7 +87,8 @@ interface ResolvedTypographyCopyableConfig {
 }
 
 interface TypographyEnhancementOptions {
-  component: ElementType;
+  componentTag: TypographyTextTag;
+  defaultLayoutMode: TypographyLayoutMode;
   prefixCls: string;
   id?: string;
   children?: ReactNode;
@@ -105,6 +112,29 @@ interface TypographyEnhancementResult {
   handleCopy: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
+interface TypographyTextNodeProps {
+  id?: string;
+  className: string;
+  style?: CSSProperties;
+  children?: ReactNode;
+}
+
+interface TypographyTextPresentationOptions {
+  prefixCls: string;
+  className?: string;
+  category: TypographyCategory;
+  size: string;
+  color?: string;
+  strong?: boolean;
+  italic?: boolean;
+  underline?: boolean;
+  isDeleted?: boolean;
+  disabled?: boolean;
+  style?: CSSProperties;
+  children?: ReactNode;
+  enhancement: TypographyEnhancementResult;
+}
+
 const getTypographyClassName = (options: TypographyClassNameOptions) => {
   const {
     prefixCls,
@@ -120,7 +150,6 @@ const getTypographyClassName = (options: TypographyClassNameOptions) => {
     ellipsis = false,
     ellipsisInline = false,
     multiline = false,
-    rows,
     copyable = false,
   } = options;
   const classes = classnames(prefixCls);
@@ -141,7 +170,6 @@ const getTypographyClassName = (options: TypographyClassNameOptions) => {
       ellipsis && ellipsisInline && classes('ellipsis-inline'),
       ellipsis && !ellipsisInline && classes('ellipsis-block'),
       multiline && classes('ellipsis-multiline'),
-      multiline && rows && classes(`ellipsis-rows-${rows}`),
       copyable && classes('copyable-content'),
       className,
     ),
@@ -284,8 +312,16 @@ function getCopyTooltipBody(
   return tooltips[0];
 }
 
-function getEnhancementWrapperTag(component: ElementType): 'span' | 'div' {
-  return typeof component === 'string' && INLINE_WRAPPER_TAGS.has(component) ? 'span' : 'div';
+function isInlineTypographyTag(componentTag: TypographyTextTag, defaultLayoutMode: TypographyLayoutMode) {
+  if (BLOCK_WRAPPER_TAGS.has(componentTag)) {
+    return false;
+  }
+
+  return defaultLayoutMode === INLINE_LAYOUT;
+}
+
+function getEnhancementWrapperTag(isInlineComponent: boolean): 'span' | 'div' {
+  return isInlineComponent ? 'span' : 'div';
 }
 
 function getEllipsisStyle(
@@ -302,10 +338,75 @@ function getEllipsisStyle(
   } as CSSProperties;
 }
 
+function buildTypographyTextNodeProps(
+  options: TypographyTextPresentationOptions,
+): TypographyTextNodeProps {
+  const {
+    prefixCls,
+    className,
+    category,
+    size,
+    color,
+    strong,
+    italic,
+    underline,
+    isDeleted,
+    disabled,
+    style,
+    children,
+    enhancement,
+  } = options;
+
+  return {
+    id: enhancement.textId,
+    style: getEllipsisStyle(style, enhancement.ellipsis),
+    className: getTypographyClassName({
+      prefixCls,
+      className,
+      category,
+      size,
+      color,
+      strong,
+      italic,
+      underline,
+      isDeleted,
+      disabled,
+      ellipsis: !!enhancement.ellipsis,
+      ellipsisInline: enhancement.isInlineComponent,
+      multiline: (enhancement.ellipsis?.rows ?? 1) > 1,
+      copyable: !!enhancement.copyable,
+    }),
+    children,
+  };
+}
+
+function renderTypographyTextTag(
+  tag: TypographyTextTag,
+  htmlProps: HTMLAttributes<HTMLElement>,
+  nodeProps: TypographyTextNodeProps,
+  ref: Ref<HTMLElement>,
+) {
+  return createElement(tag, { ...htmlProps, ...nodeProps, ref });
+}
+
+function renderTypographyAnchorTag(
+  anchorProps: AnchorHTMLAttributes<HTMLAnchorElement>,
+  nodeProps: TypographyTextNodeProps,
+  ref: Ref<HTMLAnchorElement>,
+) {
+  const { children, ...restNodeProps } = nodeProps;
+
+  return (
+    <a {...anchorProps} {...restNodeProps} ref={ref}>
+      {children}
+    </a>
+  );
+}
+
 function useTypographyEnhancements(
   options: TypographyEnhancementOptions,
 ): TypographyEnhancementResult {
-  const { component, prefixCls, id, children, ellipsis, copyable } = options;
+  const { componentTag, defaultLayoutMode, prefixCls, id, children, ellipsis, copyable } = options;
   const textNodeRef = useRef<HTMLElement | null>(null);
   const copyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const generatedTextIdRef = useRef<string | undefined>(undefined);
@@ -318,7 +419,7 @@ function useTypographyEnhancements(
   const ellipsisEnabled = resolvedEllipsis !== null;
   const ellipsisRows = resolvedEllipsis?.rows ?? 1;
   const ellipsisHasTooltip = !!resolvedEllipsis?.tooltip;
-  const isInlineComponent = typeof component === 'string' && INLINE_WRAPPER_TAGS.has(component);
+  const isInlineComponent = isInlineTypographyTag(componentTag, defaultLayoutMode);
   const textId = id ?? (ellipsisHasTooltip
     ? getStableId(generatedTextIdRef, prefixCls, 'ellipsis')
     : undefined);
@@ -424,12 +525,18 @@ function useTypographyEnhancements(
     if (tooltipConfig === true) {
       return {
         body: extractTextContent(children),
+        placement: DEFAULT_TYPOGRAPHY_TOOLTIP_PLACEMENT,
+        middlewares: DEFAULT_TYPOGRAPHY_TOOLTIP_MIDDLEWARES,
       };
     }
 
     return {
       ...tooltipConfig,
       body: (tooltipConfig as TooltipProps).body ?? extractTextContent(children),
+      placement:
+        (tooltipConfig as TooltipProps).placement ?? DEFAULT_TYPOGRAPHY_TOOLTIP_PLACEMENT,
+      middlewares:
+        (tooltipConfig as TooltipProps).middlewares ?? DEFAULT_TYPOGRAPHY_TOOLTIP_MIDDLEWARES,
     };
   }, [children, isOverflowed, ellipsisHasTooltip, ellipsis, textId]);
 
@@ -444,7 +551,7 @@ function useTypographyEnhancements(
     ellipsisTooltipProps,
     copyState,
     isInlineComponent,
-    wrapperTag: resolvedCopyable ? getEnhancementWrapperTag(component) : undefined,
+    wrapperTag: resolvedCopyable ? getEnhancementWrapperTag(isInlineComponent) : undefined,
     setTextNode,
     handleCopy,
   };
@@ -516,17 +623,18 @@ function renderWithEnhancements(
 
 interface VariantConfig<P> {
   category: TypographyCategory;
-  defaultTag: ElementType;
+  defaultTag: TypographyTextTag;
+  defaultLayoutMode: TypographyLayoutMode;
   displayName: string;
   supportsStrong?: boolean;
 }
 
 function createTypographyVariant<
-  P extends TypographyCommonProps & { size: string; id?: string; style?: CSSProperties }
+  P extends TypographyCommonProps & { size: string; id?: string; style?: CSSProperties; as?: TypographyTextTag },
 >(
   config: VariantConfig<P>,
 ) {
-  const { category, defaultTag, displayName, supportsStrong = false } = config;
+  const { category, defaultTag, defaultLayoutMode, displayName, supportsStrong = false } = config;
 
   const Base = forwardRef<HTMLElement, P>((props, ref) => {
     const {
@@ -550,9 +658,10 @@ function createTypographyVariant<
     const { strong: strongProp, ...htmlProps } = rest as Record<string, unknown> & { strong?: boolean };
     const strong = supportsStrong ? (strongProp ?? false) : false;
 
-    const Component = (as ?? defaultTag) as ElementType;
+    const Component = (as ?? defaultTag) as TypographyTextTag;
     const enhancement = useTypographyEnhancements({
-      component: Component,
+      componentTag: Component,
+      defaultLayoutMode,
       prefixCls,
       id,
       children,
@@ -565,32 +674,25 @@ function createTypographyVariant<
       assignRef(ref, node);
     };
 
-    const textElement = (
-      <Component
-        {...htmlProps}
-        id={enhancement.textId}
-        ref={handleTextRef as Ref<never>}
-        style={getEllipsisStyle(style, enhancement.ellipsis)}
-        className={getTypographyClassName({
-          prefixCls,
-          className,
-          category,
-          size,
-          color,
-          strong,
-          italic,
-          underline,
-          isDeleted,
-          disabled,
-          ellipsis: !!enhancement.ellipsis,
-          ellipsisInline: enhancement.isInlineComponent,
-          multiline: (enhancement.ellipsis?.rows ?? 1) > 1,
-          rows: enhancement.ellipsis?.rows,
-          copyable: !!enhancement.copyable,
-        })}
-      >
-        {children}
-      </Component>
+    const textElement = renderTypographyTextTag(
+      Component,
+      htmlProps as HTMLAttributes<HTMLElement>,
+      buildTypographyTextNodeProps({
+        prefixCls,
+        className,
+        category,
+        size,
+        color,
+        strong,
+        italic,
+        underline,
+        isDeleted,
+        disabled,
+        style,
+        children,
+        enhancement,
+      }),
+      handleTextRef as Ref<HTMLElement>,
     );
 
     return renderWithEnhancements(textElement, enhancement, prefixCls);
@@ -605,18 +707,21 @@ function createTypographyVariant<
 export const TypographyDisplay = createTypographyVariant<TypographyDisplayProps>({
   category: 'display',
   defaultTag: 'div',
+  defaultLayoutMode: BLOCK_LAYOUT,
   displayName: 'Typography.Display',
 });
 
 export const TypographyHeadline = createTypographyVariant<TypographyHeadlineProps>({
   category: 'headline',
   defaultTag: 'div',
+  defaultLayoutMode: BLOCK_LAYOUT,
   displayName: 'Typography.Headline',
 });
 
 export const TypographyTitle = createTypographyVariant<TypographyTitleProps>({
   category: 'title',
   defaultTag: 'div',
+  defaultLayoutMode: BLOCK_LAYOUT,
   displayName: 'Typography.Title',
   supportsStrong: true,
 });
@@ -624,6 +729,7 @@ export const TypographyTitle = createTypographyVariant<TypographyTitleProps>({
 export const TypographyBody = createTypographyVariant<TypographyBodyProps>({
   category: 'body',
   defaultTag: 'span',
+  defaultLayoutMode: INLINE_LAYOUT,
   displayName: 'Typography.Body',
   supportsStrong: true,
 });
@@ -631,6 +737,7 @@ export const TypographyBody = createTypographyVariant<TypographyBodyProps>({
 export const TypographyLabel = createTypographyVariant<TypographyLabelProps>({
   category: 'label',
   defaultTag: 'label',
+  defaultLayoutMode: INLINE_LAYOUT,
   displayName: 'Typography.Label',
   supportsStrong: true,
 });
@@ -640,7 +747,6 @@ const TypographyLinkBase = forwardRef<HTMLAnchorElement, TypographyLinkProps>((p
     children,
     className = '',
     prefixCls = TYPOGRAPHY_PREFIX,
-    as,
     id,
     size,
     color,
@@ -658,10 +764,10 @@ const TypographyLinkBase = forwardRef<HTMLAnchorElement, TypographyLinkProps>((p
     target,
     ...rest
   } = props;
-  const Component = (as ?? 'a') as ElementType;
   const resolvedRel = target === '_blank' && rel === undefined ? 'noreferrer' : rel;
   const enhancement = useTypographyEnhancements({
-    component: Component,
+    componentTag: 'a',
+    defaultLayoutMode: INLINE_LAYOUT,
     prefixCls,
     id,
     children,
@@ -684,37 +790,31 @@ const TypographyLinkBase = forwardRef<HTMLAnchorElement, TypographyLinkProps>((p
     assignRef(ref, node);
   };
 
-  const textElement = (
-    <Component
-      {...rest}
-      id={enhancement.textId}
-      ref={handleTextRef}
-      href={disabled ? undefined : href}
-      target={target}
-      rel={resolvedRel}
-      aria-disabled={disabled || undefined}
-      tabIndex={disabled ? -1 : tabIndex}
-      onClick={handleClick}
-      style={getEllipsisStyle(style, enhancement.ellipsis)}
-      className={getTypographyClassName({
-        prefixCls,
-        className,
-        category: 'link',
-        size,
-        color,
-        italic,
-        underline,
-        isDeleted,
-        disabled,
-        ellipsis: !!enhancement.ellipsis,
-        ellipsisInline: enhancement.isInlineComponent,
-        multiline: (enhancement.ellipsis?.rows ?? 1) > 1,
-        rows: enhancement.ellipsis?.rows,
-        copyable: !!enhancement.copyable,
-      })}
-    >
-      {children}
-    </Component>
+  const textElement = renderTypographyAnchorTag(
+    {
+      ...rest,
+      href: disabled ? undefined : href,
+      target,
+      rel: resolvedRel,
+      'aria-disabled': disabled || undefined,
+      tabIndex: disabled ? -1 : tabIndex,
+      onClick: handleClick,
+    },
+    buildTypographyTextNodeProps({
+      prefixCls,
+      className,
+      category: 'link',
+      size,
+      color,
+      italic,
+      underline,
+      isDeleted,
+      disabled,
+      style,
+      children,
+      enhancement,
+    }),
+    handleTextRef,
   );
 
   return renderWithEnhancements(textElement, enhancement, prefixCls);

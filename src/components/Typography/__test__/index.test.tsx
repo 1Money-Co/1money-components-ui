@@ -14,8 +14,24 @@ jest.mock('@/utils/clipboard', () => ({
 
 jest.mock('@/components/Tooltip', () => ({
   __esModule: true,
-  Tooltip: ({ body }: { body?: React.ReactNode }) =>
-    body ? <div data-testid="typography-tooltip">{body}</div> : null,
+  Tooltip: ({
+    body,
+    placement,
+    middlewares,
+  }: {
+    body?: React.ReactNode;
+    placement?: string;
+    middlewares?: unknown[];
+  }) =>
+    body ? (
+      <div
+        data-testid="typography-tooltip"
+        data-placement={placement}
+        data-middlewares={middlewares ? middlewares.length : undefined}
+      >
+        {body}
+      </div>
+    ) : null,
 }));
 
 const originalConsoleError = console.error;
@@ -170,7 +186,6 @@ describe('Typography', () => {
     expect(screen.getByText('Multi line ellipsis')).toHaveClass(
       'om-react-ui-typography-ellipsis',
       'om-react-ui-typography-ellipsis-multiline',
-      'om-react-ui-typography-ellipsis-rows-2',
     );
   });
 
@@ -193,6 +208,20 @@ describe('Typography', () => {
     );
 
     expect(screen.getAllByText('Overflow content')).toHaveLength(2);
+    expect(screen.getByTestId('typography-tooltip')).toHaveAttribute('data-placement', 'top');
+    expect(screen.getByTestId('typography-tooltip')).toHaveAttribute('data-middlewares', '0');
+  });
+
+  it('prefers ellipsis tooltip config over the default top placement', () => {
+    mockElementMetrics({ clientWidth: 80, scrollWidth: 160 });
+
+    render(
+      <Typography.Body size="md" ellipsis={{ tooltip: { placement: 'bottom' } }}>
+        Configured placement
+      </Typography.Body>,
+    );
+
+    expect(screen.getByTestId('typography-tooltip')).toHaveAttribute('data-placement', 'bottom');
   });
 
   it('copies the full source text and resets the feedback state after the configured duration', async () => {
@@ -237,6 +266,48 @@ describe('Typography', () => {
     await user.click(screen.getByRole('button', { name: 'Copy text' }));
 
     expect(clipboardMock).toHaveBeenCalledWith('override copy value', expect.any(Function));
+  });
+
+  it('shows copy failure feedback without mounting a tooltip when tooltips are disabled', async () => {
+    jest.useFakeTimers();
+    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+
+    render(
+      <Typography.Body size="md" copyable={{ tooltips: false, duration: 10 }}>
+        Copy failure example
+      </Typography.Body>,
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Copy text' }));
+
+    act(() => {
+      const callback = clipboardMock.mock.calls[0]?.[1];
+      callback?.(false);
+    });
+
+    expect(screen.getByRole('button', { name: 'Copy failed' })).toBeInTheDocument();
+    expect(screen.queryByTestId('typography-tooltip')).not.toBeInTheDocument();
+
+    act(() => {
+      jest.advanceTimersByTime(10);
+    });
+
+    expect(screen.getByRole('button', { name: 'Copy text' })).toBeInTheDocument();
+  });
+
+  it('uses a block wrapper when body text is rendered as a paragraph and copyable', () => {
+    render(
+      <Typography.Body size="md" as="p" copyable>
+        Paragraph copy
+      </Typography.Body>,
+    );
+
+    const copyButton = screen.getByRole('button', { name: 'Copy text' });
+    const paragraph = screen.getByText('Paragraph copy');
+
+    expect(paragraph.tagName).toBe('P');
+    expect(copyButton.parentElement?.tagName).toBe('DIV');
+    expect(copyButton.parentElement?.firstChild).toBe(paragraph);
   });
 
   it('keeps disabled link behavior while exposing copyable support', async () => {

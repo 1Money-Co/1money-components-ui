@@ -1,6 +1,5 @@
 import type {
   AnchorHTMLAttributes,
-  ElementType,
   HTMLAttributes,
   ReactNode,
 } from 'react';
@@ -21,6 +20,11 @@ export type TypographyLabelSize = (typeof TYPOGRAPHY_LABEL_SIZES)[number];
 export type TypographyLinkSize = (typeof TYPOGRAPHY_LINK_SIZES)[number];
 
 export type TypographyCategory = 'display' | 'headline' | 'title' | 'body' | 'label' | 'link';
+export type TypographyDisplayTag = 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type TypographyHeadlineTag = 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type TypographyTitleTag = 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type TypographyBodyTag = 'span' | 'p' | 'div';
+export type TypographyLabelTag = 'label' | 'span' | 'div';
 
 export const TYPOGRAPHY_COLORS = [
   // Base
@@ -87,7 +91,6 @@ export interface TypographyCommonProps {
   children?: ReactNode;
   className?: string;
   prefixCls?: string;
-  as?: ElementType;
   color?: TypographyColor;
   italic?: boolean;
   underline?: boolean;
@@ -103,26 +106,32 @@ export interface TypographyStrongProps extends TypographyCommonProps {
 
 export interface TypographyDisplayProps extends BaseHTMLProps, TypographyCommonProps {
   size: TypographyDisplaySize;
+  as?: TypographyDisplayTag;
 }
 
 export interface TypographyHeadlineProps extends BaseHTMLProps, TypographyCommonProps {
   size: TypographyHeadlineSize;
+  as?: TypographyHeadlineTag;
 }
 
 export interface TypographyTitleProps extends BaseHTMLProps, TypographyStrongProps {
   size: TypographyTitleSize;
+  as?: TypographyTitleTag;
 }
 
 export interface TypographyBodyProps extends BaseHTMLProps, TypographyStrongProps {
   size: TypographyBodySize;
+  as?: TypographyBodyTag;
 }
 
 export interface TypographyLabelProps extends BaseHTMLProps, TypographyStrongProps {
   size: TypographyLabelSize;
+  as?: TypographyLabelTag;
 }
 
 export interface TypographyLinkProps
   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children' | 'color'>,
     TypographyCommonProps {
   size: TypographyLinkSize;
+  as?: never;
 }

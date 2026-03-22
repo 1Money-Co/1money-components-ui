@@ -63,6 +63,7 @@ $link-sizes: (md, sm);
   }
 
   &-ellipsis {
+    min-width: 0;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -70,12 +71,16 @@ $link-sizes: (md, sm);
 
   &-ellipsis-inline {
     display: inline-block;
+    width: 100%;
+    max-width: 100%;
     white-space: nowrap;
     vertical-align: bottom;
   }
 
   &-ellipsis-block {
     display: block;
+    width: 100%;
+    max-width: 100%;
     white-space: nowrap;
   }
 

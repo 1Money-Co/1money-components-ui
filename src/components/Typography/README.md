@@ -59,7 +59,7 @@ import { Typography } from '@1money/components-ui/Typography';
 |------|------|---------|-------------|
 | `size` | category-specific union | — | Required size token for the selected semantic category |
 | `children` | `ReactNode` | — | Typography content |
-| `as` | `ElementType` | category-specific tag | Override the rendered semantic tag |
+| `as` | category-specific tag union | category-specific tag | Override the rendered semantic tag for `Display`, `Headline`, `Title`, `Body`, and `Label` |
 | `prefixCls` | `string` | `'typography'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
 | `italic` | `boolean` | `false` | Applies italic styling |
@@ -74,6 +74,15 @@ import { Typography } from '@1money/components-ui/Typography';
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `strong` | `boolean` | `false` | Uses the semantic strong weight defined in the typography tokens |
+
+Supported `as` values:
+
+- `Typography.Display`: `div | h1 | h2 | h3 | h4 | h5 | h6`
+- `Typography.Headline`: `div | h1 | h2 | h3 | h4 | h5 | h6`
+- `Typography.Title`: `div | h1 | h2 | h3 | h4 | h5 | h6`
+- `Typography.Body`: `span | p | div`
+- `Typography.Label`: `label | span | div`
+- `Typography.Link` does not expose `as`; it always renders as `a`
 
 ## Ellipsis
 
