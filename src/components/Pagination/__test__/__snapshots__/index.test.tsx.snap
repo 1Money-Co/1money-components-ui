@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination renders the default structure and matches the snapshot 1`] = `
+<nav
+  aria-label="Pagination"
+  class="om-react-ui-pagination"
+>
+  <ul
+    class="om-react-ui-pagination-list"
+  >
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-label="Previous page"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-control om-react-ui-pagination-button-disabled"
+        data-page="1"
+        disabled=""
+        type="button"
+      >
+        <span
+          class="om-react-ui-pagination-icon"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M7.41436 13L12.7073 18.2929L11.293 19.7071L3.58594 12L11.293 4.29291L12.7073 5.70712L7.41436 11L20.0002 11V13H7.41436Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </span>
+        <span>
+          Previous
+        </span>
+      </button>
+    </li>
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-current="page"
+        aria-label="Page 1, current page"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-page om-react-ui-pagination-button-current"
+        data-page="1"
+        type="button"
+      >
+        <span>
+          1
+        </span>
+      </button>
+    </li>
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-label="Go to page 2"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="2"
+        type="button"
+      >
+        <span>
+          2
+        </span>
+      </button>
+    </li>
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-label="Go to page 3"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="3"
+        type="button"
+      >
+        <span>
+          3
+        </span>
+      </button>
+    </li>
+    <li
+      aria-hidden="true"
+      class="om-react-ui-pagination-item om-react-ui-pagination-item-ellipsis"
+    >
+      <span
+        class="om-react-ui-pagination-ellipsis"
+      >
+        ...
+      </span>
+    </li>
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-label="Go to page 67"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="67"
+        type="button"
+      >
+        <span>
+          67
+        </span>
+      </button>
+    </li>
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-label="Go to page 68"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="68"
+        type="button"
+      >
+        <span>
+          68
+        </span>
+      </button>
+    </li>
+    <li
+      class="om-react-ui-pagination-item"
+    >
+      <button
+        aria-label="Next page"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-control"
+        data-page="2"
+        type="button"
+      >
+        <span>
+          Next
+        </span>
+        <span
+          class="om-react-ui-pagination-icon"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.7071 4.29291L20.4142 12L12.7071 19.7071L11.2929 18.2929L16.5858 13H4V11L16.5858 11L11.2929 5.70712L12.7071 4.29291Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;

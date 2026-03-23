@@ -1,0 +1,96 @@
+@use '@/styles/api' as theme;
+
+$component: 'pagination';
+$pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(scale, 500)});
+
+.#{theme.$prefix}-#{$component} {
+  display: inline-flex;
+  align-items: center;
+
+  &-list {
+    display: inline-flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-item {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  &-button,
+  &-ellipsis {
+    @include theme.typography(body, lg, $strong: true);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: $pagination-control-size;
+    padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
+    color: theme.palette(text, 'default');
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+    border-radius: theme.shape(200);
+  }
+
+  &-button {
+    gap: theme.spacing(gap, 200);
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'default-secondary-hover');
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px theme.palette(border, 'brand');
+    }
+  }
+
+  &-button-page {
+    min-width: $pagination-control-size;
+  }
+
+  &-button-current {
+    color: theme.palette(text, 'on-neutral');
+    background-color: theme.palette(bg, 'brand');
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'brand-hover');
+    }
+  }
+
+  &-button-disabled {
+    color: theme.palette(text, 'disabled');
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-ellipsis {
+    padding-right: theme.spacing(component-padding, 400);
+    padding-left: theme.spacing(component-padding, 400);
+    cursor: default;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+  }
+}

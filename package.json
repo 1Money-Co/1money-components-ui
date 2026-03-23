@@ -124,6 +124,11 @@
       "import": "./es/components/Notification/index.js",
       "require": "./lib/components/Notification/index.js"
     },
+    "./Pagination": {
+      "types": "./es/components/Pagination/index.d.ts",
+      "import": "./es/components/Pagination/index.js",
+      "require": "./lib/components/Pagination/index.js"
+    },
     "./Popup": {
       "types": "./es/components/Popup/index.d.ts",
       "import": "./es/components/Popup/index.js",
