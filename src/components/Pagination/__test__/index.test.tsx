@@ -160,6 +160,17 @@ describe('Pagination', () => {
     expect(screen.getByRole('button', { name: 'Go to page 3' })).toBeDisabled();
   });
 
+  it('renders nothing when total is zero', () => {
+    const { container } = render(
+      <Pagination
+        total={0}
+        pageSize={10}
+      />,
+    );
+
+    expect(container.firstChild).toBeNull();
+  });
+
   it('renders ellipsis as non-interactive content', () => {
     render(
       <Pagination

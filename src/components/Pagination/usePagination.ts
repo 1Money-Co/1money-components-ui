@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import type {
   PaginationControlItem,
@@ -35,12 +36,16 @@ const getTotalPages = (total: number, pageSize: number) => Math.max(DEFAULT_CURR
 const getVisiblePages = (current: number, totalPages: number) => {
   const pages = new Set<number>();
 
-  for (let page = DEFAULT_CURRENT; page <= Math.min(FIXED_EDGE_PAGE_COUNT, totalPages); page += 1) {
+  const startCount = current <= EDGE_CLUSTER_PAGE_COUNT ? EDGE_CLUSTER_PAGE_COUNT : FIXED_EDGE_PAGE_COUNT;
+  for (let page = DEFAULT_CURRENT; page <= Math.min(startCount, totalPages); page += 1) {
     pages.add(page);
   }
 
+  const endCount = current >= totalPages - EDGE_CLUSTER_PAGE_COUNT + DEFAULT_CURRENT
+    ? EDGE_CLUSTER_PAGE_COUNT
+    : FIXED_EDGE_PAGE_COUNT;
   for (
-    let page = Math.max(totalPages - FIXED_EDGE_PAGE_COUNT + DEFAULT_CURRENT, DEFAULT_CURRENT);
+    let page = Math.max(totalPages - endCount + DEFAULT_CURRENT, DEFAULT_CURRENT);
     page <= totalPages;
     page += 1
   ) {
@@ -49,18 +54,6 @@ const getVisiblePages = (current: number, totalPages: number) => {
 
   for (let page = current - 1; page <= current + 1; page += 1) {
     pages.add(page);
-  }
-
-  if (current <= EDGE_CLUSTER_PAGE_COUNT) {
-    for (let page = DEFAULT_CURRENT; page <= Math.min(EDGE_CLUSTER_PAGE_COUNT, totalPages); page += 1) {
-      pages.add(page);
-    }
-  }
-
-  if (current >= totalPages - EDGE_CLUSTER_PAGE_COUNT + DEFAULT_CURRENT) {
-    for (let page = Math.max(totalPages - EDGE_CLUSTER_PAGE_COUNT + DEFAULT_CURRENT, DEFAULT_CURRENT); page <= totalPages; page += 1) {
-      pages.add(page);
-    }
   }
 
   return [...pages].filter(page => page >= DEFAULT_CURRENT && page <= totalPages).sort((left, right) => left - right);
@@ -179,6 +172,11 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
     goTo(resolvedCurrent + 1);
   });
 
+  const items = useMemo(
+    () => buildPaginationItems(resolvedCurrent, totalPages, disabled),
+    [resolvedCurrent, totalPages, disabled],
+  );
+
   return {
     current: resolvedCurrent,
     pageSize: resolvedPageSize,
@@ -186,7 +184,7 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
     totalPages,
     canPrevious: resolvedCurrent > DEFAULT_CURRENT,
     canNext: resolvedCurrent < totalPages,
-    items: buildPaginationItems(resolvedCurrent, totalPages, disabled),
+    items,
     goTo,
     previous,
     next,

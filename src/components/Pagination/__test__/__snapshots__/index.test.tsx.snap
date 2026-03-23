@@ -14,6 +14,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       <button
         aria-label="Previous page"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-control om-react-ui-pagination-button-disabled"
+        data-page="1"
         disabled=""
         type="button"
       >
@@ -53,6 +54,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         aria-current="page"
         aria-label="Page 1, current page"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-page om-react-ui-pagination-button-current"
+        data-page="1"
         type="button"
       >
         <span>
@@ -66,6 +68,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       <button
         aria-label="Go to page 2"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="2"
         type="button"
       >
         <span>
@@ -79,6 +82,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       <button
         aria-label="Go to page 3"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="3"
         type="button"
       >
         <span>
@@ -102,6 +106,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       <button
         aria-label="Go to page 67"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="67"
         type="button"
       >
         <span>
@@ -115,6 +120,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       <button
         aria-label="Go to page 68"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        data-page="68"
         type="button"
       >
         <span>
@@ -128,6 +134,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       <button
         aria-label="Next page"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-control"
+        data-page="2"
         type="button"
       >
         <span>

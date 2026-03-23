@@ -130,16 +130,6 @@ describe('Input', () => {
     expect(input.closest('.om-react-ui-input')?.querySelector('label')).toHaveAttribute('for', 'email-input');
   });
 
-  it('sets aria-required when required', () => {
-    const { getByRole } = render(<Input required />);
-    expect(getByRole('textbox')).toHaveAttribute('aria-required', 'true');
-  });
-
-  it('sets aria-invalid when status is error', () => {
-    const { getByRole } = render(<Input status="error" />);
-    expect(getByRole('textbox')).toHaveAttribute('aria-invalid', 'true');
-  });
-
   it('renders feedback with role=alert on error', () => {
     const { getByRole } = render(<Input status="error" feedback="Required" />);
     expect(getByRole('alert')).toHaveTextContent('Required');

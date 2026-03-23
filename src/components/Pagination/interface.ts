@@ -1,10 +1,7 @@
 import type { HTMLAttributes } from 'react';
 
-export const PAGINATION_ITEM_TYPES = ['previous', 'page', 'ellipsis', 'next'] as const;
-export const PAGINATION_ELLIPSIS_POSITIONS = ['start', 'end'] as const;
-
-export type PaginationItemType = (typeof PAGINATION_ITEM_TYPES)[number];
-export type PaginationEllipsisPosition = (typeof PAGINATION_ELLIPSIS_POSITIONS)[number];
+export type PaginationItemType = 'previous' | 'page' | 'ellipsis' | 'next';
+export type PaginationEllipsisPosition = 'start' | 'end';
 
 export interface UsePaginationOptions {
   total: number;

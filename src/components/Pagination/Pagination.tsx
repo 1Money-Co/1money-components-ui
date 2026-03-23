@@ -1,14 +1,16 @@
-import { forwardRef, memo } from 'react';
+import React, { forwardRef, memo } from 'react';
+import { useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { usePagination } from './usePagination';
-import type { PaginationItem, PaginationProps } from './interface';
+import type { PaginationControlItem, PaginationPageItem, PaginationProps } from './interface';
 
 const ROOT_ARIA_LABEL = 'Pagination';
 const PREVIOUS_TEXT = 'Previous';
 const NEXT_TEXT = 'Next';
+const CONTROL_ICON_SIZE = 16;
 
-const getButtonAriaLabel = (item: PaginationItem) => {
+const getButtonAriaLabel = (item: PaginationPageItem | PaginationControlItem) => {
   if (item.type === 'page') {
     return item.current ? `Page ${item.page}, current page` : `Go to page ${item.page}`;
   }
@@ -31,7 +33,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
   } = props;
 
   const classes = classnames(prefixCls);
-  const { items, goTo } = usePagination({
+  const { items, goTo, total: resolvedTotal } = usePagination({
     total,
     pageSize,
     current,
@@ -40,12 +42,23 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
     onChange,
   });
 
+  const handleListClick = useEventCallback((e: React.MouseEvent<HTMLUListElement>) => {
+    const button = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-page]');
+
+    if (button?.dataset.page) {
+      goTo(Number(button.dataset.page));
+    }
+  });
+
+  if (resolvedTotal === 0) {
+    return null;
+  }
+
   return (
     <nav
       {...rest}
       ref={ref}
       aria-label={ariaLabel}
-      aria-disabled={disabled || undefined}
       className={classes(
         undefined,
         joinCls(
@@ -54,7 +67,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
         ),
       )}
     >
-      <ul className={classes('list')}>
+      <ul className={classes('list')} onClick={handleListClick}>
         {items.map(item => {
           if (item.type === 'ellipsis') {
             return (
@@ -89,13 +102,13 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                 disabled={item.disabled}
                 aria-label={getButtonAriaLabel(item)}
                 aria-current={item.type === 'page' && item.current ? 'page' : undefined}
-                onClick={() => goTo(item.page)}
+                data-page={item.page}
               >
                 {!isPage && isPrevious && (
                   <span className={classes('icon')}>
                     <Icons
                       name="arrowLeft"
-                      size={16}
+                      size={CONTROL_ICON_SIZE}
                       color="currentColor"
                     />
                   </span>
@@ -105,7 +118,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                   <span className={classes('icon')}>
                     <Icons
                       name="arrowRight"
-                      size={16}
+                      size={CONTROL_ICON_SIZE}
                       color="currentColor"
                     />
                   </span>
@@ -122,7 +135,5 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
 PaginationBase.displayName = 'Pagination';
 
 export const Pagination = memo(PaginationBase);
-
-Pagination.displayName = 'Pagination';
 
 export default Pagination;
