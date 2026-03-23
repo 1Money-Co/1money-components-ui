@@ -6,11 +6,13 @@ export { Grid, Row, Col } from './components/Grid';
 export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
 export { Notification } from './components/Notification';
+export { Pagination } from './components/Pagination';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
 export { Tag } from './components/Tag';
 export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
+export { usePagination } from './components/Pagination';
 
 export type { ButtonProps } from './components/Button';
 export type {
@@ -32,6 +34,15 @@ export type {
   InputStatus,
 } from './components/Input';
 export type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './components/Notification';
+export type {
+  PaginationProps,
+  PaginationItem,
+  PaginationPageItem,
+  PaginationControlItem,
+  PaginationEllipsisItem,
+  UsePaginationOptions,
+  UsePaginationResult,
+} from './components/Pagination';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { TagProps } from './components/Tag';
