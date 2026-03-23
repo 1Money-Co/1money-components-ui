@@ -1,3 +1,3 @@
 // Color entrypoint — only exposes semantic color scales.
-// Raw primitives are internal; legacy code should: @use '@/styles/legacy-color' as *;
+// Raw primitives are internal; use semantic accessors (om-bg, om-text, om-icon, om-border).
 @forward './semantic-color';

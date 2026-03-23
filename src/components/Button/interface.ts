@@ -1,11 +1,13 @@
-import type { ReactNode, RefObject } from 'react';
-import type { ButtonProps as PrimeButtonProps } from 'primereact/button';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export interface ButtonProps extends Omit<PrimeButtonProps, 'label' | 'severity' | 'size'> {
-  ref?: RefObject<HTMLButtonElement | null>;
+export interface ButtonProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color' | 'size'> {
+  children?: ReactNode;
   prefixCls?: string;
   color?: 'primary' | 'secondary' | 'grey' | 'black' | 'white' | 'danger' | 'warning';
   size?: 'large' | 'medium' | 'small';
+  loading?: boolean;
+  rounded?: boolean;
   iconStart?: ReactNode;
   iconEnd?: ReactNode;
 }

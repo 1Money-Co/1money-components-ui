@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup renders options correctly 1`] = `
+<div
+  class="om-react-ui-checkbox-group om-react-ui-checkbox-group-horizontal"
+  role="group"
+>
+  <label
+    class="om-react-ui-checkbox"
+  >
+    <span
+      class="om-react-ui-checkbox-box-wrapper"
+    >
+      <input
+        aria-label="Alpha"
+        class="om-react-ui-checkbox-input"
+        type="checkbox"
+        value="alpha"
+      />
+      <span
+        aria-hidden="true"
+        class="om-react-ui-checkbox-box"
+      />
+    </span>
+    <span
+      class="om-react-ui-checkbox-content"
+    >
+      <span
+        class="om-react-ui-checkbox-label"
+      >
+        Alpha
+      </span>
+    </span>
+  </label>
+  <label
+    class="om-react-ui-checkbox"
+  >
+    <span
+      class="om-react-ui-checkbox-box-wrapper"
+    >
+      <input
+        aria-label="Beta"
+        class="om-react-ui-checkbox-input"
+        type="checkbox"
+        value="beta"
+      />
+      <span
+        aria-hidden="true"
+        class="om-react-ui-checkbox-box"
+      />
+    </span>
+    <span
+      class="om-react-ui-checkbox-content"
+    >
+      <span
+        class="om-react-ui-checkbox-label"
+      >
+        Beta
+      </span>
+    </span>
+  </label>
+</div>
+`;

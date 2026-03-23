@@ -1,10 +1,10 @@
 // Utility entrypoint — emits root theme variables and responsive utility classes.
 @use './generator' as generator;
 @use '../tokens' as tokens;
-@use '../theme' as theme;
-@use '../system/breakpoints' as breakpoints;
-@include theme.om-emit-theme-vars;
-@include theme.om-emit-typography-vars;
+@use '../theme/functions' as theme-functions;
+@use '../theme/breakpoints' as breakpoints;
+@include theme-functions.om-emit-theme-vars;
+@include theme-functions.om-emit-typography-vars;
 @include generator.gen-classes;
 
 @each $bp-name, $bp-value in tokens.$om-breakpoints {

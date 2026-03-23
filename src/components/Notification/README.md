@@ -1,19 +1,19 @@
-# NotificationBeta
+# Notification
 
 A notification card component for displaying status messages with optional icon, title, body, link, and close button. Supports four status variants: info, success, warning, and error.
 
 ## Import
 
 ```tsx
-import { NotificationBeta } from '@1money/components-ui';
+import { Notification } from '@1money/components-ui';
 // or
-import { NotificationBeta } from '@1money/components-ui/NotificationBeta';
+import { Notification } from '@1money/components-ui/Notification';
 ```
 
 ## Usage
 
 ```tsx
-<NotificationBeta
+<Notification
   status="success"
   title="Account linked"
   body="Your bank account has been successfully connected."
@@ -24,7 +24,7 @@ import { NotificationBeta } from '@1money/components-ui/NotificationBeta';
 ### With Link
 
 ```tsx
-<NotificationBeta
+<Notification
   status="info"
   title="New feature"
   body="You can now link multiple accounts."
@@ -35,7 +35,7 @@ import { NotificationBeta } from '@1money/components-ui/NotificationBeta';
 ### With Href
 
 ```tsx
-<NotificationBeta
+<Notification
   status="info"
   title="Help center"
   body="Documentation has moved to a new location."
@@ -59,5 +59,8 @@ import { NotificationBeta } from '@1money/components-ui/NotificationBeta';
 | `showIcon` | `boolean` | `true` | Whether to show the status icon |
 | `closable` | `boolean` | `true` | Whether to show the close button |
 | `onClose` | `MouseEventHandler<HTMLButtonElement>` | — | Callback when close button is clicked |
-| `prefixCls` | `string` | `'notification-beta'` | CSS class prefix |
+| `ref` | `RefObject<HTMLDivElement \| null>` | — | Ref to the root div element |
+| `prefixCls` | `string` | `'notification'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
+
+This component also accepts all standard HTML div attributes (except `title`).

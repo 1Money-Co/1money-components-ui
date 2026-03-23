@@ -24,7 +24,7 @@ jest.mock('lottie-web', () => ({
   })),
 }));
 
-describe('TagBeta', () => {
+describe('Tag', () => {
   it('renders correctly', () => {
     const wrapper = render(<Tag label="Test" />);
     expect(wrapper).toMatchSnapshot();

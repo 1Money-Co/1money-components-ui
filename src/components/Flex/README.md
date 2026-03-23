@@ -9,6 +9,15 @@ A layout helper component modeled after Ant Design's Flex. Provides a consistent
 - Wrap control
 - Gap spacing using the 4px grid
 
+## Import
+
+```tsx
+import { Flex } from '@1money/components-ui';
+// or
+import { Flex } from '@1money/components-ui/Flex';
+import { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';
+```
+
 ## Basic Usage
 
 ```tsx
@@ -21,16 +30,18 @@ import { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY } from '@1money/components-ui/Flex';
 </Flex>
 ```
 
-## Component Props
+## Props
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| vertical | Stack items vertically | boolean | false |
-| wrap | Flex wrapping | boolean \| 'nowrap' \| 'wrap' \| 'wrap-reverse' | 'nowrap' |
-| align | Align items | 'start' \| 'end' \| 'center' \| 'baseline' \| 'stretch' | - |
-| justify | Justify content | 'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly' | - |
-| gap | Gap between items | 'small' \| 'middle' \| 'large' \| number | 0 |
-| prefixCls | Classname prefix | string | 'flex' |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `vertical` | `boolean` | `false` | Stack items vertically |
+| `wrap` | `boolean \| 'nowrap' \| 'wrap' \| 'wrap-reverse'` | — | Flex wrapping |
+| `align` | `'start' \| 'end' \| 'center' \| 'baseline' \| 'stretch'` | — | Align items |
+| `justify` | `'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly'` | — | Justify content |
+| `gap` | `'small' \| 'middle' \| 'large' \| number` | `0` | Gap between items |
+| `prefixCls` | `string` | `'flex'` | CSS class prefix |
+
+This component also accepts all standard HTML div attributes.
 
 ## Vertical Layout
 

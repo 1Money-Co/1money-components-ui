@@ -1,13 +1,15 @@
-@use '@/styles/api' as *;
-@use '@/styles/legacy-color' as *;
+@use '@/styles/api' as theme;
 
 $component: 'icons';
 
-.#{$prefix}-#{$component} {
+.#{theme.$prefix}-#{$component} {
   &-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: var(--icon-width);
+    height: var(--icon-height);
+    color: var(--icon-color);
     font-style: normal;
   }
 
@@ -59,24 +61,24 @@ $component: 'icons';
 
 
 
-.#{$prefix}-#{$component}-hover-wrapper {
+.#{theme.$prefix}-#{$component}-hover-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
-  background-color: $color-grey-light;
-  border-radius: 8px;
+  background-color: theme.palette(bg, default-secondary);
+  border-radius: theme.shape(200);
 
   &:hover {
-    background-color: $color-grey-deep;
+    background-color: theme.palette(bg, default-secondary-hover);
   }
 
   &-disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: theme.opacity(disabled);
 
     &:hover {
-      background-color: $color-grey-light;
+      background-color: theme.palette(bg, default-secondary);
     }
   }
 }

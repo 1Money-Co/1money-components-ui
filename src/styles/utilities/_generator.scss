@@ -2,15 +2,16 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:meta';
-@use '../theme' as theme;
+@use '../theme/functions' as theme-functions;
+@use '../theme/scales' as theme-scales;
 @use '../system/props' as props;
 
 $-flag-enabled: (
-  spacing: theme.$om-sys-enable-spacing,
-  layout: theme.$om-sys-enable-layout,
-  sizing: theme.$om-sys-enable-sizing,
-  color: theme.$om-sys-enable-color,
-  visual: theme.$om-sys-enable-visual,
+  spacing: theme-scales.$om-sys-enable-spacing,
+  layout: theme-scales.$om-sys-enable-layout,
+  sizing: theme-scales.$om-sys-enable-sizing,
+  color: theme-scales.$om-sys-enable-color,
+  visual: theme-scales.$om-sys-enable-visual,
 );
 
 @mixin gen-classes($bp: '') {
@@ -34,16 +35,16 @@ $-flag-enabled: (
 
           @each $val in $vals {
             $css-val: if(meta.type-of($aliases) == 'map' and map.has-key($aliases, $val), map.get($aliases, $val), $val);
-            .#{theme.$om-sys-prefix}-#{$pre}#{$name}-#{$val} { #{$css}: $css-val; }
+            .#{theme-scales.$om-sys-prefix}-#{$pre}#{$name}-#{$val} { #{$css}: $css-val; }
           }
         } @else {
           $scale-name: map.get($config, scale);
-          $scale: theme.om-scale-map($scale-name);
+          $scale: theme-functions.om-scale-map($scale-name);
 
           @each $key, $_ in $scale {
-            .#{theme.$om-sys-prefix}-#{$pre}#{$name}-#{$key} {
+            .#{theme-scales.$om-sys-prefix}-#{$pre}#{$name}-#{$key} {
               @each $css in $css-props {
-                #{$css}: theme.om-token($scale-name, $key);
+                #{$css}: theme-functions.om-token($scale-name, $key);
               }
             }
           }

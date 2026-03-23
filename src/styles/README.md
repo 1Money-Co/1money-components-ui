@@ -1,13 +1,14 @@
 # Style System
 
-A SCSS-based design system providing theme tokens, a system-prop compiler (`om-sx`), and atomic utility classes.
+A SCSS-based design system providing theme tokens, a public `theme` namespace, and atomic utility classes.
 
 ## Architecture
 
 ```text
 styles/
-├── _api.scss               # @forward tokens + theme, om-sx mixin (~10 lines)
+├── _api.scss               # Single public entrypoint
 ├── index.scss              # CSS bundle entrypoint — emits utilities + root CSS vars
+├── public/                 # Consumer-facing facade only
 ├── tokens/                 # Pure data — Sass maps + pure query functions
 │   ├── color/
 │   │   ├── _primitives.scss       # Raw color primitives (internal)
@@ -23,7 +24,7 @@ styles/
 │   │   ├── _primitives.scss       # Box-shadow scale
 │   │   └── _index.scss
 │   ├── opacity/
-│   │   ├── _primitives.scss       # Opacity tokens + om-opacity()
+│   │   ├── _primitives.scss       # Opacity tokens consumed via theme.opacity()
 │   │   └── _index.scss
 │   ├── sizing/
 │   │   ├── _primitives.scss       # Component height scale
@@ -36,29 +37,59 @@ styles/
 │   │   ├── _functions.scss        # Pure typography scale query helpers
 │   │   └── _index.scss
 │   └── _index.scss                # Re-exports all token subsystems
-├── _legacy-color.scss      # Deprecated legacy color variables (for unmigrated components)
-├── theme/                  # Transform — tokens → CSS var references
+├── theme/                  # Theme domain + token → CSS var transforms
 │   ├── _scales.scss               # $om-theme-scales aggregation + feature flags
 │   ├── _functions.scss            # Theme refs, typography var emission, themed accessors
-│   └── _index.scss                # 2 forwards: scales, functions
-├── system/                 # Component API — sx compiler, responsive, variant DSL
-│   ├── _breakpoints.scss          # om-up/down/between/only/respond
-│   ├── _variants.scss             # Variant DSL (schema, validate, apply, classes)
+│   ├── _breakpoints.scss          # Theme-owned breakpoint helpers
+│   └── _index.scss                # Internal theme barrel
+├── system/                 # sx engine + utility generator support
 │   ├── _props.scss                # Prop registry (2 kinds: enum, scale)
-│   ├── _mixin.scss                # om-sx mixin implementation
-│   └── _index.scss                # 3 forwards: breakpoints, variants, om-sx
+│   ├── _sx.scss                   # Internal system-prop compiler
+│   └── _index.scss                # Internal system barrel
+├── recipes/                # Library recipe helpers like variants
 ├── utilities/              # Output — atomic CSS class generator
 │   ├── _generator.scss            # 2 branches: enum, scale
 │   └── _index.scss                # Emits classes for all breakpoints
 ```
 
-### Dependency flow (strict one-way)
+### Dependency flow
 
 ```text
-tokens → theme → system → utilities
-           ↘
-         _api.scss
+tokens -> theme -> system -> utilities
+tokens -> theme -> recipes
+theme -> public
+system -> public
+_api.scss -> public
+components -> _api.scss
+components -> recipes (library-only)
+components -> theme/functions (rare library-only reader exception)
 ```
+
+### Import rules
+
+Public consumers:
+
+- `@use '@/styles/api' as theme;`
+
+Library-only exceptions:
+
+- `@use '@/styles/recipes/variants' as variants;`
+- `@use '@/styles/theme/functions' as theme-internal;` for rare reader access such as `om-line-height(...)`
+
+Forbidden in components:
+
+- `@use '@/styles/system/*'`
+- `@use '@/styles/tokens/*'`
+
+### What belongs where
+
+| Concern | Lives in |
+|--------|----------|
+| Palette, spacing, typography, breakpoints, shape, shadows, opacity, sizing | `theme/` |
+| `sx()` and prop registry | `system/` |
+| Variant schema helpers | `recipes/` |
+| Rare library-only readers like `om-line-height(...)` | `theme/functions` exception |
+| Consumer-facing namespace exported by `_api.scss` | `public/` |
 
 ## Feature Flags
 
@@ -84,7 +115,7 @@ All flags live in `theme/_scales.scss` and default to `true`. Set to `false` to 
 2. If `kind: scale` — specify which `scale` name from `$om-theme-scales` (e.g. `spacing`, `sizing`, `bg`, `radius`, `shadow`)
 3. If `kind: enum` — specify a `values` list of allowed enum values
 4. **Add aliases** (if any) to `$om-system-aliases` — they auto-inherit the canonical entry's config
-5. **Generator and `om-sx` pick it up automatically** — no changes needed in `_generator.scss` or `_mixin.scss`
+5. **Generator and `theme.sx()` pick it up automatically** — no changes needed in `_generator.scss` or `_mixin.scss`
 
 ### Prop Metadata Fields
 
@@ -160,9 +191,9 @@ $om-theme-css-var-scales: (spacing, radius, shadow, bg, text, icon, border, comp
 //                                                                                             ^^^ add
 ```
 
-### Step 3 (optional) — Add `om-sx` shorthand (`system/_props.scss`)
+### Step 3 (optional) — Add `theme.sx()` support (`system/_props.scss`)
 
-Only if you want `om-sx` and utility classes to support this scale:
+Only if you want `theme.sx()` and utility classes to support this scale:
 
 ```scss
 // In system/_props.scss — add to $om-scale-props:
@@ -255,15 +286,30 @@ Usage — no accessor function needed, use `om()` directly:
 
 ## Usage
 
-### Component Library SCSS
+### Public SCSS API
 
-Import the `api` entrypoint to get all helpers in a flat namespace:
+Import the public entrypoint and use the `theme` namespace everywhere:
 
 ```scss
-@use '@/styles/api' as *;
+@use '@/styles/api' as theme;
 ```
 
-#### `om-sx` — System-prop mixin
+The public contract is intentionally small:
+
+```text
+theme.$prefix
+theme.palette(domain, token, state?)
+theme.spacing(scale|gap|component-padding|section-padding, key)
+theme.shape(key)
+theme.shadows(key)
+theme.sizing(scale|component-height, key)
+theme.opacity(key)
+@include theme.typography(category, size, $strong: false)
+@include theme.up/down/between/only/respond(...)
+@include theme.sx(...)
+```
+
+#### `theme.sx()` — system-prop mixin
 
 Spacing and radius keys follow the Figma token names, so `100 = 4px`, `200 = 8px`, `400 = 16px`, `800 = 32px`, etc.
 
@@ -271,19 +317,19 @@ Declare multiple styled properties with responsive overrides in a single call:
 
 ```scss
 .card {
-  @include om-sx((
-    p: 600,              // padding: 24px
-    d: flex,             // display: flex
-    flex: column,        // flex-direction: column
-    gap: 400,            // gap: 16px
-    bg: default,         // background-color: var(--om-bg-default)
-    radius: 300,         // border-radius: var(--om-radius-300, 12px)
-    shadow: 100,          // box-shadow: var(--om-shadow-10000, ...)
-    md: (                // @media (max-width: 1023.98px)
+  @include theme.sx((
+    p: 600,
+    d: flex,
+    flex: column,
+    gap: 400,
+    bg: default,
+    radius: 300,
+    shadow: 100,
+    md: (
       p: 400,
       gap: 300,
     ),
-    sm: (                // @media (max-width: 767.98px)
+    sm: (
       p: 200,
       flex: column,
     ),
@@ -316,7 +362,7 @@ Nest a map under an `&`-prefixed key to generate pseudo-class selectors:
 
 ```scss
 .card {
-  @include om-sx((
+  @include theme.sx((
     bg: default,
     p: 400,
     '&:hover': (bg: default-hover),
@@ -329,20 +375,6 @@ Nest a map under an `&`-prefixed key to generate pseudo-class selectors:
 }
 ```
 
-Compiles to:
-
-```css
-.card { background-color: var(--om-bg-default); padding: var(--om-spacing-400, 16px); }
-.card:hover { background-color: var(--om-bg-default-hover); }
-.card:focus-visible { border-color: var(--om-border-brand); }
-@media (max-width: 1023.98px) {
-  .card { padding: var(--om-spacing-200, 8px); }
-  .card:hover { background-color: var(--om-bg-default-secondary); }
-}
-```
-
-Pseudo-classes inside breakpoints work automatically — the recursion handles it. Any `&`-prefixed string key is treated as a selector nesting trigger.
-
 ##### Responsive keys
 
 Nest a map under a breakpoint key to generate a `max-width` media query:
@@ -351,76 +383,40 @@ Nest a map under a breakpoint key to generate a `max-width` media query:
 - `md` → `max-width: 1023.98px`
 - `sm` → `max-width: 767.98px`
 
-#### Token functions
+#### Theme value accessors
 
-Use token functions for individual CSS properties:
+Use theme-domain functions for individual CSS values:
 
 ```scss
 .element {
-  padding: om-spacing(400);    // var(--om-spacing-400, 16px)
-  color: om-text(default);     // var(--om-text-default)
-  border-radius: om-radius(300); // var(--om-radius-300, 12px)
-  box-shadow: om-shadow(100);  // var(--om-shadow-10000, 0 4px 8px ...)
-  width: om-sizing(50);        // 50%
+  padding: theme.spacing(scale, 400);
+  gap: theme.spacing(gap, 200);
+  color: theme.palette(text, 'default');
+  background-color: theme.palette(bg, 'brand', 'hover');
+  border-color: theme.palette(border, 'default-secondary');
+  border-radius: theme.shape(300);
+  box-shadow: theme.shadows(100);
+  width: theme.sizing(scale, 50);
+  height: theme.sizing(component-height, md);
+  opacity: theme.opacity(disabled);
 }
 ```
 
-#### Typography functions
+#### Typography
 
-Access the Figma typography scale programmatically. The raw typography maps live in `tokens/typography`, while the CSS-variable accessors and mixins live in `theme`. Typography is not registered in `$om-theme-scales` because its values are multi-property maps, not single CSS values — no utility classes are generated.
-
-**CSS custom properties** are emitted under `:root` for every typography entry, enabling runtime theme overrides:
-
-```css
---om-body-md-font-size: 14px;
---om-body-md-line-height: 19.6px;
---om-body-md-font-weight: 400;
---om-body-md-strong-font-weight: 500;
---om-link-md-text-decoration: underline;
---om-link-md-text-decoration-skip-ink: none;
-```
-
-All accessor functions (`om-font-size`, `om-line-height`, etc.) and the `@include om-typography()` mixin emit `var()` references that resolve to these custom properties.
-
-**Functions** return individual values:
+Typography is exposed publicly only as a mixin. This keeps the public contract centered on semantic text recipes instead of fine-grained font property readers.
 
 ```scss
-.heading {
-  font-size: om-font-size(display, xl);     // var(--om-display-xl-font-size)
-  line-height: om-line-height(display, xl);  // var(--om-display-xl-line-height)
-  font-weight: om-font-weight(body, md);     // var(--om-body-md-font-weight)
-  font-family: om-font-family(headline, lg); // var(--om-headline-lg-font-family)
-  letter-spacing: om-letter-spacing(display, xl); // var(--om-display-xl-letter-spacing)
-}
-```
-
-**`om-typography()` function** returns the raw property map from the token layer:
-
-```scss
-@use 'sass:map';
-
-$body-md: om-typography(body, md);
-.element {
-  font-size: map.get($body-md, font-size);   // 14px
-}
-```
-
-**`@include om-typography()` mixin** emits all CSS properties at once:
-
-```scss
-.body-text {
-  @include om-typography(body, md);
-  // Emits: font-family, font-size, line-height, letter-spacing, font-weight
+.title {
+  @include theme.typography(title, sm);
 }
 
 .body-strong {
-  @include om-typography(body, md, $strong: true);
-  // Same as above but font-weight: 500 (medium) instead of 400 (regular)
+  @include theme.typography(body, md, $strong: true);
 }
 
 .link {
-  @include om-typography(link, md);
-  // Also emits: text-decoration: underline; text-decoration-skip-ink: none;
+  @include theme.typography(link, md);
 }
 ```
 
@@ -435,152 +431,61 @@ $body-md: om-typography(body, md);
 | `link` | `md`, `sm` | Inter | — |
 | `label` | `xl`, `lg`, `md`, `sm`, `xs` | Inter | 600–700 |
 
-#### Component heights
-
-Standardized heights for interactive elements via `om-component-height($key)`. Returns `var(--om-component-height-{key}, {fallback})`.
-
-```scss
-.button {
-  height: om-component-height(md); // var(--om-component-height-md, 40px)
-}
-```
-
-If you need the raw token value inside the token layer itself, use `om-component-height-token($key)`.
-
-| Key | Value | Use case |
-|-----|-------|----------|
-| `xs` | 24px | Badge, small chips |
-| `sm` | 32px | Small button, icon button |
-| `md` | 40px | Medium button, sidebar items |
-| `lg` | 44px | Small input/select |
-| `xl` | 48px | Cell, stepper step |
-| `2xl` | 52px | Default button |
-| `3xl` | 56px | Default input/select |
-
-#### Variant DSL
-
-Use the variant helpers when multiple component modifiers differ only by a token map. The DSL is built around three parts:
-
-1. A `variants` map keyed by string variant names
-2. A `schema` map from emitted CSS property/custom-property names to token keys inside each variant
-3. Two mixins: one for the default variant, one for generating all modifier classes
-
-```scss
-@use '@/styles/api' as *;
-
-$component: 'badge';
-$badge-variant-schema: om-variant-schema($component, text, bg);
-
-$badge-variants: (
-  'info': (
-    text: om-text('brand'),
-    bg: om-bg('brand-secondary'),
-  ),
-  'danger': (
-    text: om-text('danger'),
-    bg: om-bg('danger-secondary'),
-  ),
-);
-
-.#{$prefix}-badge {
-  @include om-variant-default($badge-variants, 'info', $badge-variant-schema);
-
-  color: var(--om-badge-text);
-  background-color: var(--om-badge-bg);
-
-  @include om-variant-classes($badge-variants, $badge-variant-schema, $default: 'info');
-}
-```
-
-`om-variant-schema($component, $keys...)` auto-generates the schema map using the system prefix, equivalent to manually writing `(--om-badge-text: text, --om-badge-bg: bg)`. This eliminates repetitive boilerplate and keeps CSS variable names consistent.
-
-Both `om-variant-default` and `om-variant-classes` validate at compile time that every variant contains all token keys required by the schema. A missing key triggers a Sass `@error` immediately.
-
-Available helpers:
-
-- `om-variant-schema($component, $keys...)` auto-generates a schema map from a component name and token key list
-- `om-variant($variants, $name)` returns a variant token map and errors on unknown names
-- `om-variant-value($tokens, $key)` returns a token value and errors on missing keys
-- `om-variant-extend($base, $overrides)` creates a new variant by merging overrides into a base variant
-- `om-variant-apply($schema, $tokens)` emits declarations for one variant payload
-- `om-variant-default($variants, $name, $schema)` validates all variants against the schema, then applies the default payload
-- `om-variant-classes($variants, $schema, $default: null, $selector-prefix: '&-')` validates and generates modifier classes; pass `$default` to skip the default variant (its values are already set by `om-variant-default`)
-
-Use quoted strings for variant names like `'white'`, `'black'`, or `'grey'` to avoid Sass treating them as color literals during selector interpolation.
-
-##### Extending a base variant
-
-Use `om-variant-extend` when variants share a common base to reduce duplication:
-
-```scss
-$base: (
-  text: om-text('default'),
-  bg: om-bg('default'),
-);
-
-$variants: (
-  'default': $base,
-  'active': om-variant-extend($base, (
-    bg: om-bg('brand'),
-  )),
-);
-```
-
-#### Opacity
-
-Standardized opacity values via `om-opacity($key)`:
-
-```scss
-.disabled {
-  opacity: om-opacity(disabled); // 0.5
-}
-```
-
-| Key | Value |
-|-----|-------|
-| `subtle` | 0.05 |
-| `light` | 0.1 |
-| `medium` | 0.2 |
-| `disabled-light` | 0.3 |
-| `overlay` | 0.4 |
-| `disabled` | 0.5 |
-| `disabled-heavy` | 0.6 |
-
-#### Semantic spacing helpers
-
-Use semantic helpers when you want code to reflect the Figma spacing groups directly. These helpers only accept the keys defined for that group and resolve back to primitive spacing vars.
-
-```scss
-.stack {
-  gap: om-gap(400); // var(--om-spacing-400, 16px)
-}
-
-.card {
-  padding: om-component-padding(600); // var(--om-spacing-600, 24px)
-}
-
-.page-section {
-  padding: om-section-padding(1600); // var(--om-spacing-1600, 64px)
-}
-```
-
-Semantic helpers are aliases only. Utility classes and CSS variable output remain based on the primitive `spacing` scale.
-
 #### Responsive mixins
 
 ```scss
 .sidebar {
   width: 280px;
 
-  @include om-down(md) { width: 200px; }    // max-width: 1023.98px
-  @include om-down(sm) { display: none; }    // max-width: 767.98px
-}
+  @include theme.down(md) {
+    width: 200px;
+  }
 
-// Also available:
-// om-up(bp)            → min-width
-// om-between(lo, hi)   → min-width and max-width
-// om-only(bp)          → exact range for one breakpoint
-// om-respond(bp)       → alias for om-down
+  @include theme.down(sm) {
+    display: none;
+  }
+}
+```
+
+Also available:
+
+- `@include theme.up(bp)`
+- `@include theme.between(lo, hi)`
+- `@include theme.only(bp)`
+- `@include theme.respond(bp)`
+
+### Internal-Only Library APIs
+
+`recipes/` is a real library-only layer. It is not part of the public SCSS contract and must never be used from external consumer code outside this library.
+
+Variants are library recipe helpers. They are not part of the public consumer API and should only be imported by library component styles:
+
+```scss
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
+
+$component: 'badge';
+$badge-schema: variants.om-variant-schema($component, text, bg);
+$badge-variants: (
+  'info': (
+    text: theme.palette(text, 'brand'),
+    bg: theme.palette(bg, 'brand-secondary'),
+  ),
+  'danger': (
+    text: theme.palette(text, 'danger'),
+    bg: theme.palette(bg, 'danger-secondary'),
+  ),
+);
+```
+
+For rare library-internal readers that are deliberately not public, components may use `theme/functions` directly as a controlled exception. Keep this narrow and only for value readers such as line-height access for alignment calculations:
+
+```scss
+@use '@/styles/theme/functions' as theme-internal;
+
+.checkbox-box-wrapper {
+  height: theme-internal.om-line-height(body, lg);
+}
 ```
 
 ### Business Code — Utility Classes
@@ -624,14 +529,14 @@ Examples:
 ### Business SCSS — Direct Theme Consumption
 
 ```scss
-@use '@1money/components-ui/styles/api' as om;
+@use '@1money/components-ui/styles/api' as theme;
 
 .hero {
-  color: om.om-text(brand);
-  padding: om.om-spacing(800);
+  color: theme.palette(text, 'brand');
+  padding: theme.spacing(scale, 800);
 
-  @include om.om-down(md) {
-    padding: om.om-spacing(400);
+  @include theme.down(md) {
+    padding: theme.spacing(scale, 400);
   }
 }
 ```
@@ -660,10 +565,10 @@ Override CSS variables to customize the theme:
 Figma references currently showcased in the design system:
 
 - Gap: `100`, `200`, `300`, `400`, `600`, `1600`
-- Component padding: `100`, `200`, `300`, `400`, `600`, `800`
+- Component padding: `050`, `100`, `200`, `300`, `400`, `600`, `800`
 - Section padding: `800`, `1600`, `2400`, `4000`
 
-The style system keeps the full monotonic 4px ladder between those anchors so utilities and `om-sx` stay predictable.
+The style system keeps the full monotonic 4px ladder between those anchors so utilities and `theme.sx()` stay predictable.
 
 | Key | Value |
 |-----|-------|
@@ -684,13 +589,13 @@ The style system keeps the full monotonic 4px ladder between those anchors so ut
 | `3200` | 128px |
 | `4000` | 160px |
 
-### Semantic spacing groups
+### Semantic spacing domains
 
-| Group | Allowed keys |
-|-------|--------------|
-| `om-gap(...)` | `100`, `200`, `300`, `400`, `600`, `1600` |
-| `om-component-padding(...)` | `100`, `200`, `300`, `400`, `600`, `800` |
-| `om-section-padding(...)` | `800`, `1600`, `2400`, `4000` |
+| Domain | Allowed keys |
+|--------|--------------|
+| `theme.spacing(gap, key)` | `050`, `100`, `200`, `300`, `400`, `600`, `1600` |
+| `theme.spacing(component-padding, key)` | `050`, `100`, `200`, `300`, `400`, `600`, `800` |
+| `theme.spacing(section-padding, key)` | `800`, `1600`, `2400`, `4000` |
 
 ### Radius
 
@@ -714,6 +619,10 @@ The style system keeps the full monotonic 4px ladder between those anchors so ut
 
 ### Sizing
 
+Use `theme.sizing(scale, key)` for percentage sizing and `theme.sizing(component-height, key)` for semantic control heights.
+
+**Scale sizing**
+
 | Key | Value |
 |-----|-------|
 | `25` | 25% |
@@ -724,9 +633,33 @@ The style system keeps the full monotonic 4px ladder between those anchors so ut
 | `100` | 100% |
 | `auto` | auto |
 
+**Component heights**
+
+| Key | Value | Use case |
+|-----|-------|----------|
+| `xs` | 24px | Badge, small chips |
+| `sm` | 32px | Small button, icon button |
+| `md` | 40px | Medium button, sidebar items |
+| `lg` | 44px | Small input/select |
+| `xl` | 48px | Cell, stepper step |
+| `2xl` | 52px | Default button |
+| `3xl` | 56px | Default input/select |
+
+### Opacity
+
+| Key | Value |
+|-----|-------|
+| `subtle` | 0.05 |
+| `light` | 0.1 |
+| `medium` | 0.2 |
+| `disabled-light` | 0.3 |
+| `overlay` | 0.4 |
+| `disabled` | 0.5 |
+| `disabled-heavy` | 0.6 |
+
 ### Semantic Color Token Reference
 
-Semantic color tokens (`om-bg()`, `om-text()`, `om-icon()`) follow a consistent naming convention across all color groups. Use these tables as a quick reference when building variant maps.
+Color access is unified under `theme.palette(domain, token, state?)`, where `domain` is one of `bg`, `text`, `icon`, or `border`.
 
 #### Suffix rules
 
@@ -742,27 +675,27 @@ Semantic color tokens (`om-bg()`, `om-text()`, `om-icon()`) follow a consistent 
 
 #### Common component variant patterns
 
-Extracted from ButtonBeta and NotificationBeta real-world usage.
+Extracted from `ButtonBeta` and `NotificationBeta` usage.
 
 **Button variants** (keys: `text`, `bg`, `hover-bg`, `disabled-text`, `disabled-bg`, `spinner-stroke`):
 
 | Variant | text | bg | hover-bg | disabled-text | disabled-bg | spinner-stroke |
 |---------|------|----|----------|---------------|-------------|----------------|
-| primary | `om-text('on-neutral')` | `om-bg('brand')` | `om-bg('brand-hover')` | `om-text('disabled-white')` | `om-bg('disabled-brand')` | `om-text('on-neutral')` |
-| secondary | `om-text('brand')` | `om-bg('brand-secondary')` | `om-bg('brand-secondary-hover')` | `om-text('brand-secondary')` | `om-bg('brand-tertiary')` | `om-text('brand')` |
-| grey | `om-text('default')` | `om-bg('default-secondary')` | `om-bg('default-secondary')` | `om-text('disabled')` | `om-bg('disabled')` | `om-text('default')` |
-| black | `om-text('on-neutral')` | `om-bg('neutral')` | `om-bg('neutral-hover')` | `om-text('disabled-white')` | `om-bg('disabled-black')` | `om-text('on-neutral')` |
-| danger | `om-text('danger')` | `om-bg('danger-secondary')` | `om-bg('danger-secondary-hover')` | `om-text('danger-tertiary')` | `om-bg('danger-tertiary')` | `om-text('danger')` |
-| warning | `om-text('default')` | `om-bg('warning')` | `om-bg('warning-hover')` | `om-text('disabled')` | `om-bg('warning-secondary')` | `om-text('default')` |
+| primary | `theme.palette(text, 'on-neutral')` | `theme.palette(bg, 'brand')` | `theme.palette(bg, 'brand-hover')` | `theme.palette(text, 'disabled-white')` | `theme.palette(bg, 'disabled-brand')` | `theme.palette(text, 'on-neutral')` |
+| secondary | `theme.palette(text, 'brand')` | `theme.palette(bg, 'brand-secondary')` | `theme.palette(bg, 'brand-secondary-hover')` | `theme.palette(text, 'brand-secondary')` | `theme.palette(bg, 'brand-tertiary')` | `theme.palette(text, 'brand')` |
+| grey | `theme.palette(text, 'default')` | `theme.palette(bg, 'default-secondary')` | `theme.palette(bg, 'default-secondary')` | `theme.palette(text, 'disabled')` | `theme.palette(bg, 'disabled')` | `theme.palette(text, 'default')` |
+| black | `theme.palette(text, 'on-neutral')` | `theme.palette(bg, 'neutral')` | `theme.palette(bg, 'neutral-hover')` | `theme.palette(text, 'disabled-white')` | `theme.palette(bg, 'disabled-black')` | `theme.palette(text, 'on-neutral')` |
+| danger | `theme.palette(text, 'danger')` | `theme.palette(bg, 'danger-secondary')` | `theme.palette(bg, 'danger-secondary-hover')` | `theme.palette(text, 'danger-tertiary')` | `theme.palette(bg, 'danger-tertiary')` | `theme.palette(text, 'danger')` |
+| warning | `theme.palette(text, 'default')` | `theme.palette(bg, 'warning')` | `theme.palette(bg, 'warning-hover')` | `theme.palette(text, 'disabled')` | `theme.palette(bg, 'warning-secondary')` | `theme.palette(text, 'default')` |
 
 **Notification/badge variants** (keys: `icon-color`, `icon-bg`):
 
 | Variant | icon-color | icon-bg |
 |---------|------------|---------|
-| info | `om-icon('brand')` | `om-bg('brand-tertiary-hover')` |
-| success | `om-icon('positive')` | `om-bg('positive-tertiary-hover')` |
-| warning | `om-icon('warning')` | `om-bg('warning-secondary-hover')` |
-| error | `om-icon('danger')` | `om-bg('danger-tertiary-hover')` |
+| info | `theme.palette(icon, 'brand')` | `theme.palette(bg, 'brand-tertiary-hover')` |
+| success | `theme.palette(icon, 'positive')` | `theme.palette(bg, 'positive-tertiary-hover')` |
+| warning | `theme.palette(icon, 'warning')` | `theme.palette(bg, 'warning-secondary-hover')` |
+| error | `theme.palette(icon, 'danger')` | `theme.palette(bg, 'danger-tertiary-hover')` |
 
 #### State pairing rules
 

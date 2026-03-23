@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip } from './index';
-import type { TooltipBetaPlacement } from './interface';
+import type { TooltipPlacement } from './interface';
 
 import './style';
 
-const PLACEMENTS: TooltipBetaPlacement[] = [
+const PLACEMENTS: TooltipPlacement[] = [
   'top',
   'top-start',
   'top-end',
@@ -45,8 +45,8 @@ type Story = StoryObj<typeof Tooltip>;
 export const Default: Story = {
   render: (args) => (
     <div style={{ padding: 80, textAlign: 'center' }}>
-      <button id="tooltip-beta-default">Hover me</button>
-      <Tooltip {...args} anchorSelect="#tooltip-beta-default" />
+      <button id="tooltip-default">Hover me</button>
+      <Tooltip {...args} anchorSelect="#tooltip-default" />
     </div>
   ),
   args: {
@@ -57,8 +57,8 @@ export const Default: Story = {
 export const WithTitle: Story = {
   render: (args) => (
     <div style={{ padding: 80, textAlign: 'center' }}>
-      <button id="tooltip-beta-title">Hover me</button>
-      <Tooltip {...args} anchorSelect="#tooltip-beta-title" />
+      <button id="tooltip-title">Hover me</button>
+      <Tooltip {...args} anchorSelect="#tooltip-title" />
     </div>
   ),
   args: {
@@ -70,8 +70,8 @@ export const WithTitle: Story = {
 export const NoArrow: Story = {
   render: (args) => (
     <div style={{ padding: 80, textAlign: 'center' }}>
-      <button id="tooltip-beta-no-arrow">Hover me</button>
-      <Tooltip {...args} anchorSelect="#tooltip-beta-no-arrow" />
+      <button id="tooltip-no-arrow">Hover me</button>
+      <Tooltip {...args} anchorSelect="#tooltip-no-arrow" />
     </div>
   ),
   args: {
@@ -83,10 +83,10 @@ export const NoArrow: Story = {
 export const ClickTrigger: Story = {
   render: (args) => (
     <div style={{ padding: 80, textAlign: 'center' }}>
-      <button id="tooltip-beta-click">Click me</button>
+      <button id="tooltip-click">Click me</button>
       <Tooltip
         {...args}
-        anchorSelect="#tooltip-beta-click"
+        anchorSelect="#tooltip-click"
         openEvents={{ click: true, mouseover: false, mouseenter: false, focus: false }}
         closeEvents={{ click: true, mouseleave: false, mouseout: false, blur: false }}
       />
@@ -103,14 +103,14 @@ export const Controlled: Story = {
     const [open, setOpen] = useState(false);
     return (
       <div style={{ padding: 80, textAlign: 'center' }}>
-        <button id="tooltip-beta-controlled">Anchor</button>
+        <button id="tooltip-controlled">Anchor</button>
         <div style={{ marginTop: 16, display: 'flex', gap: 8, justifyContent: 'center' }}>
           <button onClick={() => setOpen(true)}>Open</button>
           <button onClick={() => setOpen(false)}>Close</button>
           <button onClick={() => setOpen((v) => !v)}>Toggle</button>
         </div>
         <Tooltip
-          anchorSelect="#tooltip-beta-controlled"
+          anchorSelect="#tooltip-controlled"
           title="Controlled"
           body="This tooltip is controlled externally."
           open={open}
@@ -134,8 +134,8 @@ export const AllPlacements: Story = {
     >
       {PLACEMENTS.map((placement) => (
         <div key={placement}>
-          <button id={`tooltip-beta-${placement}`}>{placement}</button>
-          <Tooltip {...args} placement={placement} anchorSelect={`#tooltip-beta-${placement}`} />
+          <button id={`tooltip-${placement}`}>{placement}</button>
+          <Tooltip {...args} placement={placement} anchorSelect={`#tooltip-${placement}`} />
         </div>
       ))}
     </div>

@@ -6,22 +6,28 @@ import { Checkbox } from './index';
 
 import './style';
 
-const DIRECTIONS = ['left', 'right'] as const;
+const LABEL_PLACEMENTS = ['left', 'right'] as const;
+
+const columnStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 32 };
+const sectionHeaderStyle: React.CSSProperties = { marginBottom: 12 };
+const sectionBodyStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 16 };
+const rowStyle: React.CSSProperties = { display: 'flex', gap: 24 };
 
 const meta: Meta<typeof Checkbox> = {
   title: 'Components/Checkbox',
   component: Checkbox,
   argTypes: {
     checked: { control: 'boolean' },
+    defaultChecked: { control: 'boolean' },
     indeterminate: { control: 'boolean' },
     disabled: { control: 'boolean' },
-    direction: { control: 'radio', options: [...DIRECTIONS] },
+    labelPlacement: { control: 'radio', options: [...LABEL_PLACEMENTS] },
     label: { control: 'text' },
     description: { control: 'text' },
   },
   args: {
     disabled: false,
-    direction: 'left',
+    labelPlacement: 'left',
     label: 'Label',
     description: 'Description',
     onChange: fn(),
@@ -35,55 +41,49 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const AllVariants: Story = {
   render: (args) => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-      {DIRECTIONS.map((direction) => (
-        <div key={direction}>
-          <h3 style={{ marginBottom: 12 }}>Direction: {direction}</h3>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 16,
-            }}
-          >
+    <div style={columnStyle}>
+      {LABEL_PLACEMENTS.map((placement) => (
+        <div key={placement}>
+          <h3 style={sectionHeaderStyle}>Label Placement: {placement}</h3>
+          <div style={sectionBodyStyle}>
             {/* Default states */}
-            <div style={{ display: 'flex', gap: 24 }}>
+            <div style={rowStyle}>
               <Checkbox
                 {...args}
-                direction={direction}
+                labelPlacement={placement}
                 label="Unchecked"
               />
               <Checkbox
                 {...args}
-                direction={direction}
+                labelPlacement={placement}
                 defaultChecked
                 label="Checked"
               />
               <Checkbox
                 {...args}
-                direction={direction}
+                labelPlacement={placement}
                 indeterminate
                 label="Indeterminate"
               />
             </div>
             {/* Disabled states */}
-            <div style={{ display: 'flex', gap: 24 }}>
+            <div style={rowStyle}>
               <Checkbox
                 {...args}
-                direction={direction}
+                labelPlacement={placement}
                 disabled
                 label="Disabled"
               />
               <Checkbox
                 {...args}
-                direction={direction}
+                labelPlacement={placement}
                 checked
                 disabled
                 label="Disabled Checked"
               />
               <Checkbox
                 {...args}
-                direction={direction}
+                labelPlacement={placement}
                 indeterminate
                 disabled
                 label="Disabled Indeterminate"
@@ -141,10 +141,10 @@ export const DisabledChecked: Story = {
   },
 };
 
-export const DirectionRight: Story = {
+export const LabelPlacementRight: Story = {
   args: {
     defaultChecked: true,
-    direction: 'right',
+    labelPlacement: 'right',
     label: 'Label',
     description: 'Description',
   },
@@ -163,5 +163,6 @@ export const WithoutLabel: Story = {
     defaultChecked: true,
     label: undefined,
     description: undefined,
+    'aria-label': 'Checkbox without visible label',
   },
 };

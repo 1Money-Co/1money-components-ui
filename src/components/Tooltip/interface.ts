@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { ITooltip } from 'react-tooltip';
 
-export type TooltipBetaPlacement =
+export type TooltipPlacement =
   | 'top'
   | 'top-start'
   | 'top-end'
@@ -19,7 +19,7 @@ export interface TooltipProps
   extends Omit<ITooltip, 'place' | 'noArrow' | 'children' | 'isOpen' | 'setIsOpen'> {
   prefixCls?: string;
   /** Placement of the tooltip relative to the trigger element */
-  placement?: TooltipBetaPlacement;
+  placement?: TooltipPlacement;
   /** Bold title text displayed above the body */
   title?: ReactNode;
   /** Body text content */

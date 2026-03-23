@@ -1,0 +1,175 @@
+@use 'sass:map';
+@use '@/styles/api' as theme;
+
+$component: 'typography';
+$typography-categories: (
+  display: (xl, lg, md, sm, xs),
+  headline: (lg, md, sm, xs),
+  title: (lg, md, sm),
+  body: (lg, md, sm),
+  label: (xl, lg, md, sm, xs),
+);
+$strong-categories: (title, body, label);
+$link-sizes: (md, sm);
+
+.#{theme.$prefix}-#{$component} {
+  margin: 0;
+  color: theme.palette(text, 'default');
+  text-decoration-color: currentcolor;
+
+  // Category + size variants
+  @each $category, $sizes in $typography-categories {
+    @each $size in $sizes {
+      &-#{$category}-#{$size} {
+        @include theme.typography($category, $size);
+      }
+    }
+  }
+
+  // Link variants (includes brand color)
+  @each $size in $link-sizes {
+    &-link-#{$size} {
+      @include theme.typography(link, $size);
+
+      color: theme.palette(text, 'brand');
+    }
+  }
+
+  // Strong variants for title, body, and label
+  @each $category in $strong-categories {
+    $sizes: map.get($typography-categories, $category);
+
+    @each $size in $sizes {
+      &-#{$category}-#{$size}.#{theme.$prefix}-#{$component}-strong {
+        @include theme.typography($category, $size, $strong: true);
+      }
+    }
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+
+  &-underline {
+    text-decoration-line: underline;
+  }
+
+  &-delete {
+    text-decoration-line: line-through;
+  }
+
+  &-underline-delete {
+    text-decoration-line: underline line-through;
+  }
+
+  &-ellipsis {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-ellipsis-inline {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    vertical-align: bottom;
+  }
+
+  &-ellipsis-block {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  &-ellipsis-multiline {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--om-typography-ellipsis-rows, 2);
+  }
+
+  &-copyable-wrapper {
+    display: inline-flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  &-copyable-wrapper-inline {
+    display: inline-flex;
+    vertical-align: bottom;
+  }
+
+  &-copyable-wrapper-block {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &-copyable-content {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  &-copyable-action {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: theme.palette(icon, 'neutral-secondary');
+    background: none;
+    border: none;
+    border-radius: theme.shape(200);
+    outline: none;
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      color: theme.palette(icon, 'default');
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+    }
+  }
+
+  &-copyable-action-success {
+    color: theme.palette(icon, 'positive');
+  }
+
+  &-copyable-action-error {
+    color: theme.palette(icon, 'danger');
+  }
+
+  // Semantic color tokens — derived from the design system's text scale
+  @each $token in map.keys(map.get(theme.$om-theme-scales, 'text')) {
+    &-color-#{$token} {
+      color: theme.palette(text, $token);
+    }
+  }
+
+  &-disabled {
+    color: theme.palette(text, 'disabled');
+    cursor: not-allowed;
+  }
+
+  // Link hover and disabled states
+  @each $size in $link-sizes {
+    &-link-#{$size}:hover {
+      color: theme.palette(text, 'brand');
+    }
+
+    &-link-#{$size}.#{theme.$prefix}-#{$component}-disabled {
+      color: theme.palette(text, 'disabled');
+      pointer-events: none;
+    }
+  }
+}

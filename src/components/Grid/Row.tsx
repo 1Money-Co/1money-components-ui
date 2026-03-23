@@ -46,7 +46,7 @@ export const Row: FC<PropsWithChildren<GridRowProps>> = props => {
     ...justifyVars
   } as unknown) as CSSProperties;
 
-  const classNameValue = classes(void 0, joinCls(
+  const classNameValue = classes(undefined, joinCls(
     align && classes(`${GRID_CLASS.align}-${align}`),
     justifyValue && classes(`${GRID_CLASS.justify}-${justifyValue}`),
     wrap === false && classes(GRID_CLASS.noWrap),

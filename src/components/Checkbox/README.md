@@ -1,19 +1,19 @@
-# CheckboxBeta
+# Checkbox
 
-A checkbox component with label and description support, built on PrimeReact Checkbox with the 1Money design system tokens. Supports checked, unchecked, and indeterminate states with configurable label direction.
+A checkbox component with label and description support, built with a native `input[type='checkbox']` and the 1Money design system tokens. Supports checked, unchecked, and indeterminate states with configurable label direction.
 
 ## Import
 
 ```tsx
-import { CheckboxBeta } from '@1money/components-ui';
+import { Checkbox } from '@1money/components-ui';
 // or
-import { CheckboxBeta } from '@1money/components-ui/CheckboxBeta';
+import { Checkbox } from '@1money/components-ui/Checkbox';
 ```
 
 ## Usage
 
 ```tsx
-<CheckboxBeta
+<Checkbox
   checked={isChecked}
   label="Accept terms"
   description="You must accept the terms to continue"
@@ -31,7 +31,8 @@ import { CheckboxBeta } from '@1money/components-ui/CheckboxBeta';
 | `disabled` | `boolean` | `false` | Disables the checkbox |
 | `label` | `ReactNode` | — | Label text displayed next to the checkbox |
 | `description` | `ReactNode` | — | Description text displayed below the label |
-| `direction` | `'left' \| 'right'` | `'left'` | Position of the checkbox relative to the label |
+| `labelPlacement` | `'left' \| 'right'` | `'left'` | Placement of the label relative to the checkbox |
 | `onChange` | `(checked: boolean) => void` | — | Callback when checked state changes |
-| `prefixCls` | `string` | `'checkbox-beta'` | CSS class prefix |
+| `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
+| `prefixCls` | `string` | `'checkbox'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |

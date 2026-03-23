@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import type { FC, MouseEvent } from 'react';
+import type { FC } from 'react';
 import type { TagProps } from './interface';
 
 const ICON_SIZE_MAP = {
@@ -13,7 +13,7 @@ const ICON_SIZE_MAP = {
 export const Tag: FC<TagProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'tag-beta',
+    prefixCls = 'tag',
     color = 'neutral',
     size = 'large',
     label,
@@ -27,16 +27,12 @@ export const Tag: FC<TagProps> = (props) => {
   const classes = classnames(prefixCls);
   const iconSize = ICON_SIZE_MAP[size];
 
-  const handleRemove = (e: MouseEvent<HTMLSpanElement>) => {
-    onRemove?.(e);
-  };
-
   return (
     <span
       {...rest}
       ref={ref}
       className={classes(
-        void 0,
+        undefined,
         joinCls(classes(color), classes(size), className),
       )}
     >
@@ -49,7 +45,7 @@ export const Tag: FC<TagProps> = (props) => {
       {removable && (
         <span
           className={classes('remove')}
-          onClick={handleRemove}
+          onClick={onRemove}
           role="button"
           tabIndex={0}
           aria-label="Remove"

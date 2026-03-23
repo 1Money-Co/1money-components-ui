@@ -9,7 +9,7 @@ import type { TooltipProps } from './interface';
 export const Tooltip: FC<TooltipProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'tooltip-beta',
+    prefixCls = 'tooltip',
     placement = 'top',
     title,
     body,
@@ -37,7 +37,7 @@ export const Tooltip: FC<TooltipProps> = (props) => {
       isOpen={open !== undefined ? innerOpen : undefined}
       setIsOpen={handleSetIsOpen}
       role="tooltip"
-      className={classes(void 0, className)}
+      className={classes(undefined, className)}
       classNameArrow={classes('arrow')}
     >
       {title && <div className={classes('title')}>{title}</div>}

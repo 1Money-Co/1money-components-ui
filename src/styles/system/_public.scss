@@ -1,0 +1,5 @@
+@use './sx' as sx-engine;
+
+@mixin sx($config) {
+  @include sx-engine.om-sx($config);
+}

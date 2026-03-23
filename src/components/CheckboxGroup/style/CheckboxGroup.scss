@@ -1,0 +1,17 @@
+@use '@/styles/api' as theme;
+
+$component: 'checkbox-group';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  gap: theme.spacing(gap, 300);
+  align-items: flex-start;
+
+  &-horizontal {
+    flex-flow: row wrap;
+  }
+
+  &-vertical {
+    flex-direction: column;
+  }
+}

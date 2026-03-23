@@ -1,4 +1,4 @@
-import { useMemo, memo } from 'react';
+import { memo } from 'react';
 import {
   Logo,
   LogoWord,
@@ -387,7 +387,7 @@ export interface IllustrationsProps extends IconsProps, IllustrationsCustomProps
 }
 
 export const Icons: FC<(IconsProps & { name: IconName }) | StatusIconsProps | LogoWithWordsProps | LogoWithBetaProps | IllustrationsProps> = ({ name, ...rest }) => {
-  const Icon = useMemo(() => IconList[name], [name]);
+  const Icon = IconList[name];
   return Icon ? <Icon {...rest} /> : null;
 };
 

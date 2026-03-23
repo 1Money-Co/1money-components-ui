@@ -14,8 +14,16 @@ A responsive 12-column layout system modeled after Ant Design's Row/Col, built w
 
 - `sm`: max-width 767.98px
 - `md`: max-width 1023.98px
-- `lg`: max-width 1279.98px (`lg` is > 1024px and < 1280px)
-- `justify` responsive keys: `sm` / `md` / `lg` (desktop-first, max-width)
+- `lg`: max-width 1279.98px
+
+## Import
+
+```tsx
+import { Grid, Row, Col } from '@1money/components-ui';
+// or
+import { Grid, Row, Col } from '@1money/components-ui/Grid';
+import { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';
+```
 
 ## Basic Usage
 
@@ -36,26 +44,30 @@ const SPAN_HALF = 6;
 
 ### Grid / Row
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| gutter | Horizontal gutter (use array for [horizontal, vertical]) | number \| string \| [number \| string, number \| string] \| { sm?; md?; lg? } \| [{ sm?; md?; lg? }, { sm?; md?; lg? }] | 0 |
-| align | Vertical alignment | 'top' \| 'middle' \| 'bottom' \| 'stretch' | - |
-| justify | Horizontal alignment | 'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly' \| { sm?; md?; lg? } | - |
-| wrap | Toggle flex wrapping | boolean | true |
-| prefixCls | Classname prefix | string | 'grid-row' |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `gutter` | `number \| string \| [number \| string, number \| string] \| { sm?; md?; lg? } \| [{ sm?; md?; lg? }, { sm?; md?; lg? }]` | `0` | Horizontal gutter (use array for [horizontal, vertical]) |
+| `align` | `'top' \| 'middle' \| 'bottom' \| 'stretch'` | — | Vertical alignment |
+| `justify` | `'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly' \| { sm?; md?; lg? }` | — | Horizontal alignment |
+| `wrap` | `boolean` | `true` | Toggle flex wrapping |
+| `prefixCls` | `string` | `'grid-row'` | CSS class prefix |
+
+Also accepts all standard HTML div attributes.
 
 ### Col
 
-| Name | Description | Type | Default |
-| --- | --- | --- | --- |
-| span | Column span (1-12) | number | - |
-| offset | Column offset (1-12) | number | - |
-| order | Flex order | number | - |
-| push | Move column right by cells | number | - |
-| pull | Move column left by cells | number | - |
-| flex | Flex value (e.g. 1, 'auto', '100px') | number \| string | - |
-| sm/md/lg | Desktop-first size config (max-width) | number \| { span?; offset?; order?; flex? } | - |
-| prefixCls | Classname prefix | string | 'grid-col' |
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `span` | `number` | — | Column span (1-12) |
+| `offset` | `number` | — | Column offset (1-12) |
+| `order` | `number` | — | Flex order |
+| `push` | `number` | — | Move column right by cells |
+| `pull` | `number` | — | Move column left by cells |
+| `flex` | `number \| string` | — | Flex value (e.g. `1`, `'auto'`, `'100px'`) |
+| `sm/md/lg` | `number \| { span?; offset?; order?; pull?; push?; flex? }` | — | Desktop-first responsive size config (max-width) |
+| `prefixCls` | `string` | `'grid-col'` | CSS class prefix |
+
+Also accepts all standard HTML div attributes.
 
 ## Responsive Usage
 

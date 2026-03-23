@@ -28,7 +28,7 @@ const config: StorybookConfig = {
   managerHead: (head) => `
     ${head}
     <script>
-      var title = '@1money/react-ui';
+      var title = '@1money/components-ui';
       document.title = title;
       var observer = new MutationObserver(function(mutations) {
         if (document.title.match(/Storybook$/) && title !== document.title) {
