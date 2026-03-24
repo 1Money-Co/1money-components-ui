@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classnames, { joinCls } from '@/utils/classnames';
 import { FLEX_CLASS, FLEX_CSS_VARS, FLEX_GAP_DEFAULT, FLEX_GAP_MAP, FLEX_PREFIX, FLEX_WRAP } from './constants';
-import type { FC, PropsWithChildren, CSSProperties } from 'react';
+import type { CSSProperties, PropsWithChildren } from 'react';
 import type { FlexProps, FlexGap, FlexWrap } from './interface';
 
 const normalizeGap = (gap?: FlexGap) => {
@@ -16,7 +16,7 @@ const normalizeWrap = (wrap?: boolean | FlexWrap) => {
   return wrap;
 };
 
-export const Flex: FC<PropsWithChildren<FlexProps>> = props => {
+export const Flex = memo<PropsWithChildren<FlexProps>>(props => {
   const {
     children,
     vertical,
@@ -31,22 +31,21 @@ export const Flex: FC<PropsWithChildren<FlexProps>> = props => {
   } = props;
 
   const classes = classnames(prefixCls);
-  const gapValue = normalizeGap(gap);
   const wrapValue = normalizeWrap(wrap);
-  const wrapClass = wrapValue ? classes(`${FLEX_CLASS.wrap}-${wrapValue}`) : undefined;
 
-  const mergedStyle = {
+  const mergedStyle: CSSProperties = {
     ...style,
-    [FLEX_CSS_VARS.gap]: `${gapValue}px`
-  } as CSSProperties;
+    ...(gap !== undefined && { [FLEX_CSS_VARS.gap]: `${normalizeGap(gap)}px` })
+  };
 
-  const classNameValue = classes(undefined, joinCls(
+  const classNameValue = joinCls(
+    classes(),
     vertical && classes(FLEX_CLASS.vertical),
-    wrapClass,
+    wrapValue && classes(`${FLEX_CLASS.wrap}-${wrapValue}`),
     align && classes(`${FLEX_CLASS.align}-${align}`),
     justify && classes(`${FLEX_CLASS.justify}-${justify}`),
     className
-  ));
+  );
 
   return (
     <div
@@ -57,6 +56,8 @@ export const Flex: FC<PropsWithChildren<FlexProps>> = props => {
       {children}
     </div>
   );
-};
+});
 
-export default memo(Flex);
+Flex.displayName = 'Flex';
+
+export default Flex;

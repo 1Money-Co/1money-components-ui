@@ -1,11 +1,38 @@
 import { memo, useMemo } from 'react';
 import classnames, { joinCls } from '@/utils/classnames';
-import { GRID_BREAKPOINTS, GRID_CLASS, GRID_COL_PREFIX, GRID_CSS_VARS } from './constants';
+import { GRID_BREAKPOINTS, GRID_CLASS, GRID_COL_PREFIX, GRID_CSS_VARS, GRID_RESPONSIVE_CSS_VARS } from './constants';
 import { normalizeColSize, normalizeFlex } from './helper';
-import type { FC, PropsWithChildren, CSSProperties } from 'react';
+import type { CSSProperties, PropsWithChildren } from 'react';
 import type { GridBreakpoint, GridColProps, GridColSize } from './interface';
 
-export const Col: FC<PropsWithChildren<GridColProps>> = props => {
+type ClassBuilder = (modifier: string) => string;
+
+const buildResponsiveConfig = (
+  breakpoints: Record<GridBreakpoint, GridColSize | undefined>,
+  classes: ClassBuilder
+) => {
+  const classList: string[] = [];
+  const flexVars: Record<string, string> = {};
+
+  GRID_BREAKPOINTS.forEach(bp => {
+    const size = breakpoints[bp];
+    if (size == null) return;
+
+    const normalized = normalizeColSize(size);
+    const flexValue = normalizeFlex(normalized.flex);
+
+    if (normalized.span != null && !flexValue) classList.push(classes(`${bp}-${normalized.span}`));
+    if (normalized.offset != null) classList.push(classes(`${bp}-${GRID_CLASS.offset}-${normalized.offset}`));
+    if (normalized.order != null) classList.push(classes(`${bp}-${GRID_CLASS.order}-${normalized.order}`));
+    if (normalized.pull != null) classList.push(classes(`${bp}-${GRID_CLASS.pull}-${normalized.pull}`));
+    if (normalized.push != null) classList.push(classes(`${bp}-${GRID_CLASS.push}-${normalized.push}`));
+    if (flexValue) flexVars[GRID_RESPONSIVE_CSS_VARS[bp].colFlex] = flexValue;
+  });
+
+  return { classList, flexVars };
+};
+
+export const Col = memo<PropsWithChildren<GridColProps>>(props => {
   const {
     children,
     span,
@@ -25,64 +52,28 @@ export const Col: FC<PropsWithChildren<GridColProps>> = props => {
 
   const { classNameValue, flexValue, flexVars } = useMemo(() => {
     const classes = classnames(prefixCls);
-    const responsive = { sm, md, lg } as Record<GridBreakpoint, GridColSize | undefined>;
-    const classList: string[] = [];
-    const nextFlexVars: Record<string, string> = {};
+    const { classList, flexVars } = buildResponsiveConfig({ sm, md, lg }, classes);
+    const normalizedFlex = normalizeFlex(flex);
 
-    const addClass = (value: number | undefined | null, build: (value: number) => string) => {
-      if (value !== undefined && value !== null) {
-        classList.push(classes(build(value)));
-      }
-    };
-
-    const applyBreakpoint = (breakpoint: GridBreakpoint, size?: GridColSize) => {
-      if (size === undefined || size === null) return;
-
-      const normalized = normalizeColSize(size);
-      const hasFlex = normalized.flex !== undefined && normalized.flex !== null;
-
-      if (normalized.span !== undefined && normalized.span !== null && !hasFlex) {
-        addClass(normalized.span, value => `${breakpoint}-${value}`);
-      }
-      addClass(normalized.offset, value => `${breakpoint}-${GRID_CLASS.offset}-${value}`);
-      addClass(normalized.order, value => `${breakpoint}-${GRID_CLASS.order}-${value}`);
-      addClass(normalized.pull, value => `${breakpoint}-${GRID_CLASS.pull}-${value}`);
-      addClass(normalized.push, value => `${breakpoint}-${GRID_CLASS.push}-${value}`);
-      if (normalized.flex !== undefined && normalized.flex !== null) {
-        const responsiveFlexValue = normalizeFlex(normalized.flex);
-        if (responsiveFlexValue !== undefined) {
-          nextFlexVars[`${GRID_CSS_VARS.colFlexPrefix}${breakpoint}`] = responsiveFlexValue;
-        }
-      }
-    };
-
-    GRID_BREAKPOINTS.forEach((breakpoint) => {
-      applyBreakpoint(breakpoint, responsive[breakpoint]);
-    });
-
-    const normalizedFlexValue = normalizeFlex(flex);
-    const nextClassNameValue = classes(undefined, joinCls(
-      span !== null && span !== undefined && !normalizedFlexValue && classes(`${span}`),
-      offset !== null && offset !== undefined && classes(`${GRID_CLASS.offset}-${offset}`),
-      order !== null && order !== undefined && classes(`${GRID_CLASS.order}-${order}`),
-      push !== null && push !== undefined && classes(`${GRID_CLASS.push}-${push}`),
-      pull !== null && pull !== undefined && classes(`${GRID_CLASS.pull}-${pull}`),
+    const nextClassName = joinCls(
+      classes(),
+      span != null && !normalizedFlex && classes(`${span}`),
+      offset != null && classes(`${GRID_CLASS.offset}-${offset}`),
+      order != null && classes(`${GRID_CLASS.order}-${order}`),
+      push != null && classes(`${GRID_CLASS.push}-${push}`),
+      pull != null && classes(`${GRID_CLASS.pull}-${pull}`),
       ...classList,
       className
-    ));
+    );
 
-    return {
-      classNameValue: nextClassNameValue,
-      flexValue: normalizedFlexValue,
-      flexVars: nextFlexVars
-    };
+    return { classNameValue: nextClassName, flexValue: normalizedFlex, flexVars };
   }, [className, flex, lg, md, offset, order, prefixCls, pull, push, sm, span]);
 
-  const mergedStyle = useMemo(() => ({
+  const mergedStyle: CSSProperties = useMemo(() => ({
     ...style,
-    ...(flexValue ? { [GRID_CSS_VARS.colFlex]: flexValue } : {}),
+    ...(flexValue && { [GRID_CSS_VARS.colFlex]: flexValue }),
     ...flexVars
-  } as CSSProperties), [style, flexValue, flexVars]);
+  }), [style, flexValue, flexVars]);
 
   return (
     <div
@@ -93,6 +84,8 @@ export const Col: FC<PropsWithChildren<GridColProps>> = props => {
       {children}
     </div>
   );
-};
+});
 
-export default memo(Col);
+Col.displayName = 'Col';
+
+export default Col;
