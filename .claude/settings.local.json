@@ -8,7 +8,10 @@
       "WebFetch(domain:www.figma.com)",
       "Bash(pnpm lint:*)",
       "Bash(pnpm test:*)",
-      "Bash(npx jest:*)"
+      "Bash(npx jest:*)",
+      "Bash(node -e \"const r = require\\(''./node_modules/@types/react/index.d.ts''.replace\\(''.d.ts'',''''\\)\\); console.log\\(''ok''\\)\")",
+      "Bash(grep -m1 '\"\"@types/react\"\"' node_modules/@types/react/package.json)",
+      "Bash(npx tsc:*)"
     ]
   }
 }

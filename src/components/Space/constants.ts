@@ -26,8 +26,8 @@ export const SPACE_SIZE_LARGE = 24;
 export const SPACE_SIZE_DEFAULT = SPACE_SIZE_SMALL;
 
 export const SPACE_CSS_VARS = {
-  gapX: '--om-space-gap-x',
-  gapY: '--om-space-gap-y'
+  columnGap: '--om-space-column-gap',
+  rowGap: '--om-space-row-gap'
 } as const;
 
 export const SPACE_CLASS = {

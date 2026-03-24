@@ -1,13 +1,13 @@
 @use '@/styles/api' as theme;
 
 $component: 'space';
-$space-gap-x: '--om-space-gap-x';
-$space-gap-y: '--om-space-gap-y';
+$space-column-gap: '--om-space-column-gap';
+$space-row-gap: '--om-space-row-gap';
 $space-gap-fallback: 8px;
 
 .#{theme.$prefix}-#{$component} {
   display: inline-flex;
-  gap: var(#{$space-gap-y}, #{$space-gap-fallback}) var(#{$space-gap-x}, #{$space-gap-fallback});
+  gap: var(#{$space-row-gap}, #{$space-gap-fallback}) var(#{$space-column-gap}, #{$space-gap-fallback});
 
   &-vertical {
     flex-direction: column;

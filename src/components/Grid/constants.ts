@@ -25,11 +25,7 @@ export const GRID_DEFAULT_GUTTER: [number, number] = [0, 0];
 export const GRID_FLEX_AUTO = 'auto';
 
 export const GRID_BREAKPOINTS: GridBreakpoint[] = ['sm', 'md', 'lg'];
-export const GRID_JUSTIFY_BREAKPOINT = {
-  sm: 'sm',
-  md: 'md',
-  lg: 'lg'
-} as const;
+
 export const GRID_JUSTIFY_CSS: Record<GridJustify, string> = {
   start: 'flex-start',
   end: 'flex-end',
@@ -38,6 +34,7 @@ export const GRID_JUSTIFY_CSS: Record<GridJustify, string> = {
   'space-between': 'space-between',
   'space-evenly': 'space-evenly'
 };
+
 export const GRID_BREAKPOINT_MIN_WIDTH: Record<GridBreakpoint, number> = {
   sm: 768,
   md: 1024,
@@ -47,19 +44,22 @@ export const GRID_BREAKPOINT_MIN_WIDTH: Record<GridBreakpoint, number> = {
 export const GRID_CSS_VARS = {
   gutterX: '--om-grid-gutter-x',
   gutterY: '--om-grid-gutter-y',
-  gutterXSm: '--om-grid-gutter-x-sm',
-  gutterYSm: '--om-grid-gutter-y-sm',
-  gutterXMd: '--om-grid-gutter-x-md',
-  gutterYMd: '--om-grid-gutter-y-md',
-  gutterXLg: '--om-grid-gutter-x-lg',
-  gutterYLg: '--om-grid-gutter-y-lg',
   justify: '--om-grid-justify',
-  justifySm: '--om-grid-justify-sm',
-  justifyMd: '--om-grid-justify-md',
-  justifyLg: '--om-grid-justify-lg',
-  colFlex: '--om-grid-col-flex',
-  colFlexPrefix: '--om-grid-col-flex-'
+  colFlex: '--om-grid-col-flex'
 } as const;
+
+interface GridResponsiveCSSVars {
+  gutterX: string;
+  gutterY: string;
+  justify: string;
+  colFlex: string;
+}
+
+export const GRID_RESPONSIVE_CSS_VARS: Record<GridBreakpoint, GridResponsiveCSSVars> = {
+  sm: { gutterX: '--om-grid-gutter-x-sm', gutterY: '--om-grid-gutter-y-sm', justify: '--om-grid-justify-sm', colFlex: '--om-grid-col-flex-sm' },
+  md: { gutterX: '--om-grid-gutter-x-md', gutterY: '--om-grid-gutter-y-md', justify: '--om-grid-justify-md', colFlex: '--om-grid-col-flex-md' },
+  lg: { gutterX: '--om-grid-gutter-x-lg', gutterY: '--om-grid-gutter-y-lg', justify: '--om-grid-justify-lg', colFlex: '--om-grid-col-flex-lg' }
+};
 
 export const GRID_CLASS = {
   noWrap: 'no-wrap',

@@ -1,4 +1,4 @@
-import { memo, Fragment, Children } from 'react';
+import { memo, Fragment, Children, isValidElement } from 'react';
 import classnames, { joinCls } from '@/utils/classnames';
 import {
   SPACE_CLASS,
@@ -8,7 +8,7 @@ import {
   SPACE_SIZE_DEFAULT,
   SPACE_SIZE_MAP
 } from './constants';
-import type { FC, PropsWithChildren, CSSProperties } from 'react';
+import type { CSSProperties, PropsWithChildren } from 'react';
 import type { SpaceProps, SpaceSize } from './interface';
 
 const resolveSize = (value?: SpaceSize) => {
@@ -25,7 +25,7 @@ const normalizeSize = (size?: SpaceSize | [SpaceSize, SpaceSize]): [number, numb
   return [resolved, resolved];
 };
 
-export const Space: FC<PropsWithChildren<SpaceProps>> = props => {
+export const Space = memo<PropsWithChildren<SpaceProps>>(props => {
   const {
     children,
     align,
@@ -41,30 +41,39 @@ export const Space: FC<PropsWithChildren<SpaceProps>> = props => {
 
   const classes = classnames(prefixCls);
   const isVertical = direction === SPACE_DIRECTION.vertical;
-  const [gapX, gapY] = normalizeSize(size);
+  const hasSplit = split !== undefined && split !== null;
+  const [columnGap, rowGap] = normalizeSize(size);
+  const appliedColumnGap = hasSplit ? columnGap / 2 : columnGap;
+  const appliedRowGap = hasSplit ? rowGap / 2 : rowGap;
   const shouldWrap = wrap && !isVertical;
-  const classNameValue = classes(undefined, joinCls(
+
+  const classNameValue = joinCls(
+    classes(),
     isVertical && classes(SPACE_CLASS.vertical),
     align && classes(`${SPACE_CLASS.align}-${align}`),
     shouldWrap && classes(SPACE_CLASS.wrap),
     className
-  ));
+  );
 
-  const mergedStyle = {
+  const needsGapStyle = size !== undefined || hasSplit;
+  const mergedStyle: CSSProperties = {
     ...style,
-    [SPACE_CSS_VARS.gapX]: `${gapX}px`,
-    [SPACE_CSS_VARS.gapY]: `${gapY}px`
-  } as CSSProperties;
+    ...(needsGapStyle && {
+      [SPACE_CSS_VARS.columnGap]: `${appliedColumnGap}px`,
+      [SPACE_CSS_VARS.rowGap]: `${appliedRowGap}px`
+    })
+  };
 
   const childrenArray = Children.toArray(children);
 
   const content = childrenArray.map((child, index) => {
     const isLast = index === childrenArray.length - 1;
+    const key = isValidElement(child) ? child.key : index;
 
     return (
-      <Fragment key={`space-item-${index}`}>
+      <Fragment key={key}>
         <div className={classes(SPACE_CLASS.item)}>{child}</div>
-        {!isLast && split ? (
+        {!isLast && hasSplit ? (
           <span className={classes(SPACE_CLASS.split)}>{split}</span>
         ) : null}
       </Fragment>
@@ -80,6 +89,8 @@ export const Space: FC<PropsWithChildren<SpaceProps>> = props => {
       {content}
     </div>
   );
-};
+});
 
-export default memo(Space);
+Space.displayName = 'Space';
+
+export default Space;

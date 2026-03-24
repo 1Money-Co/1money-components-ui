@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Grid, Row, Col } from './index';
-import { GRID_COL_PREFIX, GRID_JUSTIFY_BREAKPOINT, GRID_ROW_PREFIX, GRID_ALIGN, GRID_JUSTIFY } from './constants';
+import { GRID_COL_PREFIX, GRID_ROW_PREFIX, GRID_ALIGN, GRID_JUSTIFY } from './constants';
 import {
   DEMO_BOX_STYLE,
   DEMO_CHART_BLOCK_STYLE,
@@ -48,9 +48,9 @@ const FLEX_TWO = 2;
 const WRAP_ENABLED = true;
 const WRAP_DISABLED = false;
 const JUSTIFY_RESPONSIVE = {
-  [GRID_JUSTIFY_BREAKPOINT.sm]: GRID_JUSTIFY.start,
-  [GRID_JUSTIFY_BREAKPOINT.md]: GRID_JUSTIFY.spaceBetween,
-  [GRID_JUSTIFY_BREAKPOINT.lg]: GRID_JUSTIFY.end
+  sm: GRID_JUSTIFY.start,
+  md: GRID_JUSTIFY.spaceBetween,
+  lg: GRID_JUSTIFY.end
 };
 
 const meta: Meta<typeof Grid> = {
