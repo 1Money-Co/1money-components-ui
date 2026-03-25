@@ -1,3 +1,4 @@
+export { Accordion } from './components/Accordion';
 export { Alert } from './components/Alert';
 export { Button } from './components/Button';
 export { Checkbox } from './components/Checkbox';
@@ -19,6 +20,7 @@ export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
 export { usePagination } from './components/Pagination';
 
+export type { AccordionProps, AccordionItem } from './components/Accordion';
 export type { AlertProps, AlertStatus, AlertLinkConfig } from './components/Alert';
 export type { ButtonProps } from './components/Button';
 export type {
