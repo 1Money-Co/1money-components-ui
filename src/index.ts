@@ -10,6 +10,7 @@ export { Notification } from './components/Notification';
 export { Pagination } from './components/Pagination';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
+export { Tabs } from './components/Tabs';
 export { Tag } from './components/Tag';
 export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
@@ -47,6 +48,7 @@ export type {
 } from './components/Pagination';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
+export type { TabsProps, TabItem } from './components/Tabs';
 export type { TagProps } from './components/Tag';
 export type {
   TypographyBodyProps,

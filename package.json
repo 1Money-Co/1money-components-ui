@@ -189,6 +189,11 @@
       "import": "./es/components/Tab/index.js",
       "require": "./lib/components/Tab/index.js"
     },
+    "./Tabs": {
+      "types": "./es/components/Tabs/index.d.ts",
+      "import": "./es/components/Tabs/index.js",
+      "require": "./lib/components/Tabs/index.js"
+    },
     "./Table": {
       "types": "./es/components/Table/index.d.ts",
       "import": "./es/components/Table/index.js",
