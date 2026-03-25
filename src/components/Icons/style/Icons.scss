@@ -71,6 +71,7 @@ $component: 'icons';
 
   &:hover {
     background-color: theme.palette(bg, default-secondary-hover);
+    cursor: pointer;
   }
 
   &-disabled {

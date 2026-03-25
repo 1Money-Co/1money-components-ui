@@ -1,3 +1,4 @@
+export { Alert } from './components/Alert';
 export { Button } from './components/Button';
 export { Checkbox } from './components/Checkbox';
 export { CheckboxGroup } from './components/CheckboxGroup';
@@ -14,6 +15,7 @@ export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
 export { usePagination } from './components/Pagination';
 
+export type { AlertProps, AlertStatus, AlertLinkConfig } from './components/Alert';
 export type { ButtonProps } from './components/Button';
 export type {
   CheckboxProps,

@@ -2,19 +2,19 @@ import { memo } from 'react';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Icons } from '@/components/Icons';
 import type { FC, ReactElement } from 'react';
-import type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './interface';
+import type { AlertProps, AlertLinkConfig, AlertStatus } from './interface';
 
-const CLOSE_NOTIFICATION_ARIA_LABEL = 'Close notification';
+const CLOSE_ALERT_ARIA_LABEL = 'Close alert';
 
-const STATUS_ICON_MAP: Record<NotificationStatus, ReactElement> = {
+const STATUS_ICON_MAP: Record<AlertStatus, ReactElement> = {
   info: <Icons name="notificationInfo" size={32} />,
   success: <Icons name="notificationSuccess" size={32} />,
   warning: <Icons name="notificationWarning" size={32} />,
   error: <Icons name="notificationError" size={32} />,
 };
 
-const NotificationLink: FC<{
-  link: NotificationLinkConfig;
+const AlertLink: FC<{
+  link: AlertLinkConfig;
   className: string;
 }> = ({ link, className }) => {
   const linkRel = link.target === '_blank' ? (link.rel ?? 'noreferrer') : link.rel;
@@ -44,16 +44,17 @@ const NotificationLink: FC<{
   );
 };
 
-export const Notification: FC<NotificationProps> = props => {
+export const Alert: FC<AlertProps> = props => {
   const {
     className = '',
-    prefixCls = 'notification',
+    prefixCls = 'alert',
     status = 'info',
     title,
     body,
     link,
     icon,
     showIcon = true,
+    action,
     closable = true,
     onClose,
     ref: _ref,
@@ -72,32 +73,29 @@ export const Notification: FC<NotificationProps> = props => {
         joinCls(classes(status), className),
       )}
     >
-      <div className={classes('content-wrapper')}>
-        {showIcon && (
-          <div className={classes('icon-wrapper')}>
-            <span className={classes('icon')}>
-              {iconElement}
-            </span>
-          </div>
-        )}
-        <div className={classes('content')}>
-          {title && <div className={classes('title')}>{title}</div>}
-          {body && <div className={classes('body')}>{body}</div>}
-          {link && <NotificationLink link={link} className={classes('link')} />}
-        </div>
+      {showIcon && (
+        <span className={classes('icon')}>
+          {iconElement}
+        </span>
+      )}
+      <div className={classes('content')}>
+        {title && <div className={classes('title')}>{title}</div>}
+        {body && <div className={classes('body')}>{body}</div>}
+        {link && <AlertLink link={link} className={classes('link')} />}
       </div>
+      {action && <div className={classes('action')}>{action}</div>}
       {closable && (
         <button
           type="button"
           className={classes('close')}
           onClick={onClose}
-          aria-label={CLOSE_NOTIFICATION_ARIA_LABEL}
+          aria-label={CLOSE_ALERT_ARIA_LABEL}
         >
-          <Icons name="cross" size={16} fill color="currentColor" />
+          <Icons name="cross" size={16} fill/>
         </button>
       )}
     </div>
   );
 };
 
-export default memo(Notification);
+export default memo(Alert);
