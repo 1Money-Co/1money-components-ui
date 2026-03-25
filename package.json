@@ -149,6 +149,11 @@
       "import": "./es/components/Radio/index.js",
       "require": "./lib/components/Radio/index.js"
     },
+    "./Segment": {
+      "types": "./es/components/Segment/index.d.ts",
+      "import": "./es/components/Segment/index.js",
+      "require": "./lib/components/Segment/index.js"
+    },
     "./Select": {
       "types": "./es/components/Select/index.d.ts",
       "import": "./es/components/Select/index.js",

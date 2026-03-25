@@ -8,6 +8,7 @@ export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
 export { Notification } from './components/Notification';
 export { Pagination } from './components/Pagination';
+export { Segment } from './components/Segment';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
 export { Tabs } from './components/Tabs';
@@ -46,6 +47,7 @@ export type {
   UsePaginationOptions,
   UsePaginationResult,
 } from './components/Pagination';
+export type { SegmentProps, SegmentItem } from './components/Segment';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { TabsProps, TabItem } from './components/Tabs';
