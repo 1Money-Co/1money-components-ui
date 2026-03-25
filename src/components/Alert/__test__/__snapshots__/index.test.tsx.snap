@@ -11,36 +11,63 @@ exports[`Alert renders all status variants 1`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.6667 14.6667"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#DDE6F4"
+              />
+              <g
+                clip-path="url(#notif-info-clip)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                  fill="#073387"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="notif-info-clip"
+                >
+                  <rect
+                    fill="white"
+                    height="16"
+                    transform="translate(8 8)"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             info alert
           </div>
@@ -50,18 +77,26 @@ exports[`Alert renders all status variants 1`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -73,36 +108,63 @@ exports[`Alert renders all status variants 1`] = `
       <span
         class="om-react-ui-alert-icon"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 14.6667 14.6667"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
         >
-          <path
-            clip-rule="evenodd"
-            d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            clip-rule="evenodd"
-            d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-            fill="currentColor"
-          />
-        </svg>
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="32"
+            stroke="none"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+              fill="#DDE6F4"
+            />
+            <g
+              clip-path="url(#notif-info-clip)"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                fill="#073387"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                fill="#073387"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                fill="#073387"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="notif-info-clip"
+              >
+                <rect
+                  fill="white"
+                  height="16"
+                  transform="translate(8 8)"
+                  width="16"
+                />
+              </clippath>
+            </defs>
+          </svg>
+        </i>
       </span>
       <div
         class="om-react-ui-alert-content"
       >
         <div
-          class="om-react-ui-alert-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           info alert
         </div>
@@ -112,18 +174,26 @@ exports[`Alert renders all status variants 1`] = `
         class="om-react-ui-alert-close"
         type="button"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
         >
-          <path
-            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+          <svg
+            class="om-react-ui-icons"
             fill="currentColor"
-          />
-        </svg>
+            height="16"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </button>
     </div>
   </div>,
@@ -192,36 +262,63 @@ exports[`Alert renders all status variants 2`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.6667 14.6667"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#DDE6F4"
+              />
+              <g
+                clip-path="url(#notif-info-clip)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                  fill="#073387"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="notif-info-clip"
+                >
+                  <rect
+                    fill="white"
+                    height="16"
+                    transform="translate(8 8)"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             info alert
           </div>
@@ -231,18 +328,26 @@ exports[`Alert renders all status variants 2`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -253,26 +358,38 @@ exports[`Alert renders all status variants 2`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 12.6398 9.74203"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M12.6398 0.866794L5.0465 9.74203L0 4.79852L0.93304 3.84605L4.96062 7.79143L11.6266 0L12.6398 0.866794Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#1F5800"
+                fill-opacity="0.1"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M22.3399 12.2667L14.7467 21.1419L9.7002 16.1984L10.6332 15.2459L14.6608 19.1913L21.3268 11.3999L22.3399 12.2667Z"
+                fill="#1F5800"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             success alert
           </div>
@@ -282,18 +399,26 @@ exports[`Alert renders all status variants 2`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -305,26 +430,38 @@ exports[`Alert renders all status variants 2`] = `
       <span
         class="om-react-ui-alert-icon"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 12.6398 9.74203"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.6398 0.866794L5.0465 9.74203L0 4.79852L0.93304 3.84605L4.96062 7.79143L11.6266 0L12.6398 0.866794Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="32"
+            stroke="none"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+              fill="#1F5800"
+              fill-opacity="0.1"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M22.3399 12.2667L14.7467 21.1419L9.7002 16.1984L10.6332 15.2459L14.6608 19.1913L21.3268 11.3999L22.3399 12.2667Z"
+              fill="#1F5800"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </span>
       <div
         class="om-react-ui-alert-content"
       >
         <div
-          class="om-react-ui-alert-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           success alert
         </div>
@@ -334,18 +471,26 @@ exports[`Alert renders all status variants 2`] = `
         class="om-react-ui-alert-close"
         type="button"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
         >
-          <path
-            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+          <svg
+            class="om-react-ui-icons"
             fill="currentColor"
-          />
-        </svg>
+            height="16"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </button>
     </div>
   </div>,
@@ -414,36 +559,63 @@ exports[`Alert renders all status variants 3`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.6667 14.6667"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#DDE6F4"
+              />
+              <g
+                clip-path="url(#notif-info-clip)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                  fill="#073387"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="notif-info-clip"
+                >
+                  <rect
+                    fill="white"
+                    height="16"
+                    transform="translate(8 8)"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             info alert
           </div>
@@ -453,18 +625,26 @@ exports[`Alert renders all status variants 3`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -475,26 +655,38 @@ exports[`Alert renders all status variants 3`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 12.6398 9.74203"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M12.6398 0.866794L5.0465 9.74203L0 4.79852L0.93304 3.84605L4.96062 7.79143L11.6266 0L12.6398 0.866794Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#1F5800"
+                fill-opacity="0.1"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M22.3399 12.2667L14.7467 21.1419L9.7002 16.1984L10.6332 15.2459L14.6608 19.1913L21.3268 11.3999L22.3399 12.2667Z"
+                fill="#1F5800"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             success alert
           </div>
@@ -504,18 +696,26 @@ exports[`Alert renders all status variants 3`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -526,36 +726,48 @@ exports[`Alert renders all status variants 3`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.3662 13.5963"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M6.51641 8.26297V3.92963H7.84975V8.26297H6.51641Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.18308 10.263C8.18308 10.8152 7.73537 11.263 7.18308 11.263C6.6308 11.263 6.18308 10.8152 6.18308 10.263C6.18308 9.71068 6.6308 9.26297 7.18308 9.26297C7.73537 9.26297 8.18308 9.71068 8.18308 10.263Z"
-              fill="currentColor"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M1.33334 10.1079L2.11698 12.263H12.2492L13.0328 10.1079L7.18308 1.33333L1.33334 10.1079ZM8.29248 0.593732C7.76472 -0.197912 6.60144 -0.19791 6.07368 0.593734L0.22394 9.36834C-0.0113234 9.72124 -0.0646605 10.165 0.0802817 10.5636L0.863926 12.7186C1.05553 13.2455 1.55631 13.5963 2.11698 13.5963H12.2492C12.8099 13.5963 13.3106 13.2455 13.5022 12.7186L14.2859 10.5636C14.4308 10.165 14.3775 9.72124 14.1422 9.36834L8.29248 0.593732Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#F4C600"
+                fill-opacity="0.2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M15.3333 17.3333V13H16.6667V17.3333H15.3333Z"
+                fill="#DB8600"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M17 19.3333C17 19.8856 16.5523 20.3333 16 20.3333C15.4477 20.3333 15 19.8856 15 19.3333C15 18.7811 15.4477 18.3333 16 18.3333C16.5523 18.3333 17 18.7811 17 19.3333Z"
+                fill="#DB8600"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M10.1503 19.1783L10.9339 21.3333H21.0661L21.8497 19.1783L16 10.4037L10.1503 19.1783ZM17.1094 9.66411C16.5816 8.87246 15.4184 8.87246 14.8906 9.66411L9.04086 18.4387C8.8056 18.7916 8.75226 19.2354 8.89721 19.634L9.68085 21.789C9.87246 22.3159 10.3732 22.6667 10.9339 22.6667H21.0661C21.6268 22.6667 22.1276 22.3159 22.3192 21.789L23.1028 19.634C23.2477 19.2354 23.1944 18.7916 22.9591 18.4387L17.1094 9.66411Z"
+                fill="#DB8600"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             warning alert
           </div>
@@ -565,18 +777,26 @@ exports[`Alert renders all status variants 3`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -588,36 +808,48 @@ exports[`Alert renders all status variants 3`] = `
       <span
         class="om-react-ui-alert-icon"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 14.3662 13.5963"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.51641 8.26297V3.92963H7.84975V8.26297H6.51641Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            d="M8.18308 10.263C8.18308 10.8152 7.73537 11.263 7.18308 11.263C6.6308 11.263 6.18308 10.8152 6.18308 10.263C6.18308 9.71068 6.6308 9.26297 7.18308 9.26297C7.73537 9.26297 8.18308 9.71068 8.18308 10.263Z"
-            fill="currentColor"
-          />
-          <path
-            clip-rule="evenodd"
-            d="M1.33334 10.1079L2.11698 12.263H12.2492L13.0328 10.1079L7.18308 1.33333L1.33334 10.1079ZM8.29248 0.593732C7.76472 -0.197912 6.60144 -0.19791 6.07368 0.593734L0.22394 9.36834C-0.0113234 9.72124 -0.0646605 10.165 0.0802817 10.5636L0.863926 12.7186C1.05553 13.2455 1.55631 13.5963 2.11698 13.5963H12.2492C12.8099 13.5963 13.3106 13.2455 13.5022 12.7186L14.2859 10.5636C14.4308 10.165 14.3775 9.72124 14.1422 9.36834L8.29248 0.593732Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="32"
+            stroke="none"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+              fill="#F4C600"
+              fill-opacity="0.2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M15.3333 17.3333V13H16.6667V17.3333H15.3333Z"
+              fill="#DB8600"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M17 19.3333C17 19.8856 16.5523 20.3333 16 20.3333C15.4477 20.3333 15 19.8856 15 19.3333C15 18.7811 15.4477 18.3333 16 18.3333C16.5523 18.3333 17 18.7811 17 19.3333Z"
+              fill="#DB8600"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M10.1503 19.1783L10.9339 21.3333H21.0661L21.8497 19.1783L16 10.4037L10.1503 19.1783ZM17.1094 9.66411C16.5816 8.87246 15.4184 8.87246 14.8906 9.66411L9.04086 18.4387C8.8056 18.7916 8.75226 19.2354 8.89721 19.634L9.68085 21.789C9.87246 22.3159 10.3732 22.6667 10.9339 22.6667H21.0661C21.6268 22.6667 22.1276 22.3159 22.3192 21.789L23.1028 19.634C23.2477 19.2354 23.1944 18.7916 22.9591 18.4387L17.1094 9.66411Z"
+              fill="#DB8600"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </span>
       <div
         class="om-react-ui-alert-content"
       >
         <div
-          class="om-react-ui-alert-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           warning alert
         </div>
@@ -627,18 +859,26 @@ exports[`Alert renders all status variants 3`] = `
         class="om-react-ui-alert-close"
         type="button"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
         >
-          <path
-            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+          <svg
+            class="om-react-ui-icons"
             fill="currentColor"
-          />
-        </svg>
+            height="16"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </button>
     </div>
   </div>,
@@ -707,36 +947,63 @@ exports[`Alert renders all status variants 4`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.6667 14.6667"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#DDE6F4"
+              />
+              <g
+                clip-path="url(#notif-info-clip)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                  fill="#073387"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="notif-info-clip"
+                >
+                  <rect
+                    fill="white"
+                    height="16"
+                    transform="translate(8 8)"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             info alert
           </div>
@@ -746,18 +1013,26 @@ exports[`Alert renders all status variants 4`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -768,26 +1043,38 @@ exports[`Alert renders all status variants 4`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 12.6398 9.74203"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M12.6398 0.866794L5.0465 9.74203L0 4.79852L0.93304 3.84605L4.96062 7.79143L11.6266 0L12.6398 0.866794Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#1F5800"
+                fill-opacity="0.1"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M22.3399 12.2667L14.7467 21.1419L9.7002 16.1984L10.6332 15.2459L14.6608 19.1913L21.3268 11.3999L22.3399 12.2667Z"
+                fill="#1F5800"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             success alert
           </div>
@@ -797,18 +1084,26 @@ exports[`Alert renders all status variants 4`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -819,36 +1114,48 @@ exports[`Alert renders all status variants 4`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.3662 13.5963"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M6.51641 8.26297V3.92963H7.84975V8.26297H6.51641Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.18308 10.263C8.18308 10.8152 7.73537 11.263 7.18308 11.263C6.6308 11.263 6.18308 10.8152 6.18308 10.263C6.18308 9.71068 6.6308 9.26297 7.18308 9.26297C7.73537 9.26297 8.18308 9.71068 8.18308 10.263Z"
-              fill="currentColor"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M1.33334 10.1079L2.11698 12.263H12.2492L13.0328 10.1079L7.18308 1.33333L1.33334 10.1079ZM8.29248 0.593732C7.76472 -0.197912 6.60144 -0.19791 6.07368 0.593734L0.22394 9.36834C-0.0113234 9.72124 -0.0646605 10.165 0.0802817 10.5636L0.863926 12.7186C1.05553 13.2455 1.55631 13.5963 2.11698 13.5963H12.2492C12.8099 13.5963 13.3106 13.2455 13.5022 12.7186L14.2859 10.5636C14.4308 10.165 14.3775 9.72124 14.1422 9.36834L8.29248 0.593732Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#F4C600"
+                fill-opacity="0.2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M15.3333 17.3333V13H16.6667V17.3333H15.3333Z"
+                fill="#DB8600"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M17 19.3333C17 19.8856 16.5523 20.3333 16 20.3333C15.4477 20.3333 15 19.8856 15 19.3333C15 18.7811 15.4477 18.3333 16 18.3333C16.5523 18.3333 17 18.7811 17 19.3333Z"
+                fill="#DB8600"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M10.1503 19.1783L10.9339 21.3333H21.0661L21.8497 19.1783L16 10.4037L10.1503 19.1783ZM17.1094 9.66411C16.5816 8.87246 15.4184 8.87246 14.8906 9.66411L9.04086 18.4387C8.8056 18.7916 8.75226 19.2354 8.89721 19.634L9.68085 21.789C9.87246 22.3159 10.3732 22.6667 10.9339 22.6667H21.0661C21.6268 22.6667 22.1276 22.3159 22.3192 21.789L23.1028 19.634C23.2477 19.2354 23.1944 18.7916 22.9591 18.4387L17.1094 9.66411Z"
+                fill="#DB8600"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             warning alert
           </div>
@@ -858,18 +1165,26 @@ exports[`Alert renders all status variants 4`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -880,26 +1195,38 @@ exports[`Alert renders all status variants 4`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 9.60955 9.60948"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M3.86196 4.8047L7.18037e-05 0.942809L0.942881 0L4.80477 3.86189L8.66667 2.78155e-07L9.60948 0.942809L5.74758 4.8047L9.60955 8.66667L8.66674 9.60948L4.80477 5.74751L0.942809 9.60948L0 8.66667L3.86196 4.8047Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#AE0000"
+                fill-opacity="0.1"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M15.0572 16L11.1953 12.1381L12.1381 11.1953L16 15.0572L19.8619 11.1953L20.8047 12.1381L16.9428 16L20.8048 19.862L19.862 20.8048L16 16.9428L12.138 20.8048L11.1952 19.862L15.0572 16Z"
+                fill="#AE0000"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             error alert
           </div>
@@ -909,18 +1236,26 @@ exports[`Alert renders all status variants 4`] = `
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -932,26 +1267,38 @@ exports[`Alert renders all status variants 4`] = `
       <span
         class="om-react-ui-alert-icon"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 9.60955 9.60948"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.86196 4.8047L7.18037e-05 0.942809L0.942881 0L4.80477 3.86189L8.66667 2.78155e-07L9.60948 0.942809L5.74758 4.8047L9.60955 8.66667L8.66674 9.60948L4.80477 5.74751L0.942809 9.60948L0 8.66667L3.86196 4.8047Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="32"
+            stroke="none"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+              fill="#AE0000"
+              fill-opacity="0.1"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M15.0572 16L11.1953 12.1381L12.1381 11.1953L16 15.0572L19.8619 11.1953L20.8047 12.1381L16.9428 16L20.8048 19.862L19.862 20.8048L16 16.9428L12.138 20.8048L11.1952 19.862L15.0572 16Z"
+              fill="#AE0000"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </span>
       <div
         class="om-react-ui-alert-content"
       >
         <div
-          class="om-react-ui-alert-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           error alert
         </div>
@@ -961,18 +1308,26 @@ exports[`Alert renders all status variants 4`] = `
         class="om-react-ui-alert-close"
         type="button"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
         >
-          <path
-            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+          <svg
+            class="om-react-ui-icons"
             fill="currentColor"
-          />
-        </svg>
+            height="16"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </button>
     </div>
   </div>,
@@ -1041,62 +1396,97 @@ exports[`Alert renders correctly 1`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.6667 14.6667"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#DDE6F4"
+              />
+              <g
+                clip-path="url(#notif-info-clip)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                  fill="#073387"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="notif-info-clip"
+                >
+                  <rect
+                    fill="white"
+                    height="16"
+                    transform="translate(8 8)"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             Test Title
           </div>
-          <div
-            class="om-react-ui-alert-body"
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary"
           >
             Test body text.
-          </div>
+          </span>
         </div>
         <button
           aria-label="Close alert"
           class="om-react-ui-alert-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -1108,62 +1498,97 @@ exports[`Alert renders correctly 1`] = `
       <span
         class="om-react-ui-alert-icon"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 14.6667 14.6667"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
         >
-          <path
-            clip-rule="evenodd"
-            d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            clip-rule="evenodd"
-            d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-            fill="currentColor"
-          />
-        </svg>
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="32"
+            stroke="none"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+              fill="#DDE6F4"
+            />
+            <g
+              clip-path="url(#notif-info-clip)"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                fill="#073387"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                fill="#073387"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                fill="#073387"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="notif-info-clip"
+              >
+                <rect
+                  fill="white"
+                  height="16"
+                  transform="translate(8 8)"
+                  width="16"
+                />
+              </clippath>
+            </defs>
+          </svg>
+        </i>
       </span>
       <div
         class="om-react-ui-alert-content"
       >
         <div
-          class="om-react-ui-alert-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           Test Title
         </div>
-        <div
-          class="om-react-ui-alert-body"
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary"
         >
           Test body text.
-        </div>
+        </span>
       </div>
       <button
         aria-label="Close alert"
         class="om-react-ui-alert-close"
         type="button"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
         >
-          <path
-            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+          <svg
+            class="om-react-ui-icons"
             fill="currentColor"
-          />
-        </svg>
+            height="16"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </button>
     </div>
   </div>,
@@ -1232,36 +1657,63 @@ exports[`Alert renders without close button when closable is false 1`] = `
         <span
           class="om-react-ui-alert-icon"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 14.6667 14.6667"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
           >
-            <path
-              clip-rule="evenodd"
-              d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-            <path
-              d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="32"
+              stroke="none"
+              viewBox="0 0 32 32"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                fill="#DDE6F4"
+              />
+              <g
+                clip-path="url(#notif-info-clip)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                  fill="#073387"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                  fill="#073387"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="notif-info-clip"
+                >
+                  <rect
+                    fill="white"
+                    height="16"
+                    transform="translate(8 8)"
+                    width="16"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
         </span>
         <div
           class="om-react-ui-alert-content"
         >
           <div
-            class="om-react-ui-alert-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             No close
           </div>
@@ -1276,36 +1728,63 @@ exports[`Alert renders without close button when closable is false 1`] = `
       <span
         class="om-react-ui-alert-icon"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 14.6667 14.6667"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
         >
-          <path
-            clip-rule="evenodd"
-            d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            clip-rule="evenodd"
-            d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-          <path
-            d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-            fill="currentColor"
-          />
-        </svg>
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="32"
+            stroke="none"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+              fill="#DDE6F4"
+            />
+            <g
+              clip-path="url(#notif-info-clip)"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                fill="#073387"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                fill="#073387"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                fill="#073387"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="notif-info-clip"
+              >
+                <rect
+                  fill="white"
+                  height="16"
+                  transform="translate(8 8)"
+                  width="16"
+                />
+              </clippath>
+            </defs>
+          </svg>
+        </i>
       </span>
       <div
         class="om-react-ui-alert-content"
       >
         <div
-          class="om-react-ui-alert-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           No close
         </div>

@@ -45,14 +45,14 @@ export const Empty: FC<EmptyProps> = (props) => {
       {(title || description) && (
         <div className={classes('content')}>
           {title && (
-            <TypographyTitle size="sm" strong color="default-tertiary">
-              {title}
-            </TypographyTitle>
+            typeof title === 'string'
+              ? <TypographyTitle size="sm" strong color="default-tertiary">{title}</TypographyTitle>
+              : title
           )}
           {description && (
-            <TypographyBody size="md" color="default-tertiary">
-              {description}
-            </TypographyBody>
+            typeof description === 'string'
+              ? <TypographyBody size="md" color="default-tertiary">{description}</TypographyBody>
+              : description
           )}
         </div>
       )}

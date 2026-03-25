@@ -1,8 +1,9 @@
 import { memo } from 'react';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Icons } from '@/components/Icons';
+import { TypographyTitle, TypographyBody, TypographyLink } from '@/components/Typography';
 import type { FC, ReactElement } from 'react';
-import type { AlertProps, AlertLinkConfig, AlertStatus } from './interface';
+import type { AlertProps, AlertStatus } from './interface';
 
 const CLOSE_ALERT_ARIA_LABEL = 'Close alert';
 
@@ -11,37 +12,6 @@ const STATUS_ICON_MAP: Record<AlertStatus, ReactElement> = {
   success: <Icons name="notificationSuccess" size={32} />,
   warning: <Icons name="notificationWarning" size={32} />,
   error: <Icons name="notificationError" size={32} />,
-};
-
-const AlertLink: FC<{
-  link: AlertLinkConfig;
-  className: string;
-}> = ({ link, className }) => {
-  const linkRel = link.target === '_blank' ? (link.rel ?? 'noreferrer') : link.rel;
-
-  if (link.href) {
-    return (
-      <a
-        className={className}
-        href={link.href}
-        target={link.target}
-        rel={linkRel}
-        onClick={link.onClick}
-      >
-        {link.label}
-      </a>
-    );
-  }
-
-  return (
-    <button
-      type="button"
-      className={className}
-      onClick={link.onClick}
-    >
-      {link.label}
-    </button>
-  );
 };
 
 export const Alert: FC<AlertProps> = props => {
@@ -79,9 +49,27 @@ export const Alert: FC<AlertProps> = props => {
         </span>
       )}
       <div className={classes('content')}>
-        {title && <div className={classes('title')}>{title}</div>}
-        {body && <div className={classes('body')}>{body}</div>}
-        {link && <AlertLink link={link} className={classes('link')} />}
+        {title && (
+          typeof title === 'string'
+            ? <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle>
+            : title
+        )}
+        {body && (
+          typeof body === 'string'
+            ? <TypographyBody size="md" color="default-secondary">{body}</TypographyBody>
+            : body
+        )}
+        {link && (
+          <TypographyLink
+            size="md"
+            href={link.href}
+            target={link.target}
+            rel={link.target === '_blank' ? (link.rel ?? 'noreferrer') : link.rel}
+            onClick={link.onClick}
+          >
+            {link.label}
+          </TypographyLink>
+        )}
       </div>
       {action && <div className={classes('action')}>{action}</div>}
       {closable && (

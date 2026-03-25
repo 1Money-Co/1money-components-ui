@@ -56,30 +56,8 @@ $alert-variants: (
     padding-top: theme.spacing(scale, 200);
   }
 
-  // ── Title ──
-  &-title {
-    @include theme.typography(title, sm, $strong: true);
-
-    color: theme.palette(text, 'default');
-  }
-
-  // ── Body ──
-  &-body {
-    @include theme.typography(body, md);
-
-    color: theme.palette(text, 'default-secondary');
-  }
-
-  // ── Link ──
-  &-link {
-    @include theme.typography(link, md);
-
-    padding: 0;
-    color: theme.palette(text, 'brand');
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+  // ── Title, Body & Link ──
+  // Typography styles handled by TypographyTitle, TypographyBody and TypographyLink components
 
   // ── Action slot ──
   &-action {
