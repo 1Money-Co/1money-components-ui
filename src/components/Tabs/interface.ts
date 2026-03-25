@@ -22,6 +22,8 @@ export interface TabsProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChang
   defaultActiveKey?: string;
   /** Tab items configuration */
   items: TabItem[];
+  /** Whether to animate the indicator transition (default: true) */
+  animated?: boolean;
   /** Callback when active tab changes */
   onChange?: (key: string) => void;
 }

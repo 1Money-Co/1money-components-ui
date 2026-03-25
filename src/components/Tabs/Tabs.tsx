@@ -16,6 +16,7 @@ export const Tabs: FC<TabsProps> = props => {
     activeKey,
     defaultActiveKey,
     items,
+    animated = true,
     onChange,
     ...rest
   } = props;
@@ -94,7 +95,10 @@ export const Tabs: FC<TabsProps> = props => {
         {indicatorStyle && (
           <span
             className={classes('indicator')}
-            style={indicatorStyle as CSSProperties}
+            style={{
+              ...indicatorStyle,
+              ...(!animated && { transition: 'none' }),
+            } as CSSProperties}
           />
         )}
       </div>

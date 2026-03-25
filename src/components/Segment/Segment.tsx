@@ -16,6 +16,7 @@ export const Segment: FC<SegmentProps> = props => {
     value,
     defaultValue,
     items,
+    animated = true,
     onChange,
     ...rest
   } = props;
@@ -68,7 +69,10 @@ export const Segment: FC<SegmentProps> = props => {
         {indicatorStyle && (
           <span
             className={classes('indicator')}
-            style={indicatorStyle as CSSProperties}
+            style={{
+              ...indicatorStyle,
+              ...(!animated && { transition: 'none' }),
+            } as CSSProperties}
           />
         )}
         {items.map(item => (

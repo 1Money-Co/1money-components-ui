@@ -61,6 +61,10 @@ export const FiveItems: Story = {
   ),
 };
 
+export const NoAnimation: Story = {
+  render: () => <Segment items={DEFAULT_ITEMS} animated={false} />,
+};
+
 export const AllVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>

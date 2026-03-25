@@ -18,6 +18,8 @@ export interface SegmentProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onCh
   defaultValue?: string;
   /** Segment options */
   items: SegmentItem[];
+  /** Whether to animate the indicator transition (default: true) */
+  animated?: boolean;
   /** Callback when selection changes */
   onChange?: (value: string) => void;
 }
