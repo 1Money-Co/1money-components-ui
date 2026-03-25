@@ -1,6 +1,7 @@
 export { Alert } from './components/Alert';
 export { Button } from './components/Button';
 export { Checkbox } from './components/Checkbox';
+export { Empty } from './components/Empty';
 export { CheckboxGroup } from './components/CheckboxGroup';
 export { Flex } from './components/Flex';
 export { Grid, Row, Col } from './components/Grid';
@@ -25,6 +26,7 @@ export type {
   CheckboxGroupProps,
   CheckboxGroupOption,
 } from './components/Checkbox';
+export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
 export type { GridRowProps, GridColProps } from './components/Grid';
 export type { IconName, IconsProps, IconWrapperProps, IconHoverProps } from './components/Icons';
