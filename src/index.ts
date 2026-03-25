@@ -12,6 +12,7 @@ export { Pagination } from './components/Pagination';
 export { Segment } from './components/Segment';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
+export { Switch } from './components/Switch';
 export { Tabs } from './components/Tabs';
 export { Tag } from './components/Tag';
 export { Typography } from './components/Typography';
@@ -52,6 +53,7 @@ export type {
 export type { SegmentProps, SegmentItem } from './components/Segment';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
+export type { SwitchProps } from './components/Switch';
 export type { TabsProps, TabItem } from './components/Tabs';
 export type { TagProps } from './components/Tag';
 export type {
