@@ -71,8 +71,8 @@ type Story = StoryObj<typeof Icons>;
 export const PrimaryIcons: Story = {
   args: {
     prefixCls: 'icons',
-    color: '#073387',
-    borderColor: '#03163A',
+    color: '#131313',
+    borderColor: '#131313',
     size: 24
   },
   parameters: {
@@ -653,7 +653,7 @@ export const Illustrations: Story = {
     size: 50,
     // @ts-expect-error
     illustrations: true,
-    gradientColor: ['#F4C600', 'white'],
+    gradientColor: ['#B9CCE4', 'white'],
   },
   render: function Render(args) {
     const handleCopy = (el: string) => {
@@ -698,7 +698,7 @@ export const Illustrations: Story = {
         <span>illusVerification</span>
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusTransfer' />")}>
-        <Icons {...args} name='illusTransfer' />
+        <Icons {...args} color='#F4C600' name='illusTransfer' />
         <span>illusTransfer</span>
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusSend' />")}>
@@ -752,7 +752,7 @@ export const IconHoverDemo: Story = {
   args: {
     prefixCls: 'icons',
     size: 24,
-    color: '#073387',
+    color: '#131313',
   },
   render: function Render(args) {
     return <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center' }}>
