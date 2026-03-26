@@ -1,0 +1,127 @@
+@use '@/styles/api' as theme;
+
+$component: 'switch';
+$track-width: 40px;
+$track-height: 24px;
+$thumb-size: 20px;
+$thumb-offset: 2px;
+$thumb-travel: $track-width - $thumb-size - $thumb-offset * 2;
+
+.#{theme.$prefix}-#{$component} {
+  display: inline-flex;
+  gap: theme.spacing(gap, 300);
+  align-items: flex-start;
+  cursor: pointer;
+
+  // ── Track wrapper (contains hidden input + visual track) ──
+  &-track-wrapper {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  // ── Hidden native input ──
+  &-input {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    cursor: inherit;
+    opacity: 0;
+  }
+
+  // ── Visual track ──
+  &-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: $track-width;
+    height: $track-height;
+    background-color: theme.palette(bg, 'neutral-secondary');
+    border-radius: theme.shape('full');
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  // ── Thumb ──
+  &-thumb {
+    position: absolute;
+    left: $thumb-offset;
+    width: $thumb-size;
+    height: $thumb-size;
+    background-color: theme.palette(bg, 'default');
+    border-radius: theme.shape('full');
+    box-shadow: theme.shadows(100);
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+  }
+
+  // ── Focus ring ──
+  &-input:focus-visible + .#{theme.$prefix}-#{$component}-track {
+    box-shadow: 0 0 0 2px theme.palette(border, 'brand');
+  }
+
+  // ── Label content ──
+  &-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  // Typography styles handled by TypographyBody component
+
+  // ── Hover ──
+  &:not(&-disabled):hover {
+    .#{theme.$prefix}-#{$component}-track {
+      background-color: theme.palette(bg, 'neutral-secondary-hover');
+    }
+  }
+
+  // ── Checked state ──
+  &-checked {
+    .#{theme.$prefix}-#{$component}-track {
+      background-color: theme.palette(bg, 'brand');
+    }
+
+    .#{theme.$prefix}-#{$component}-thumb {
+      transform: translateX($thumb-travel);
+    }
+  }
+
+  &-checked:not(&-disabled):hover {
+    .#{theme.$prefix}-#{$component}-track {
+      background-color: theme.palette(bg, 'brand-hover');
+    }
+  }
+
+  // ── Disabled state ──
+  &-disabled {
+    cursor: not-allowed;
+
+    .#{theme.$prefix}-#{$component}-track {
+      background-color: theme.palette(bg, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-thumb {
+      background-color: theme.palette(bg, 'default');
+      box-shadow: none;
+    }
+
+    .#{theme.$prefix}-#{$component}-content {
+      color: theme.palette(text, 'disabled');
+    }
+  }
+
+  // ── Right label placement (label after switch) ──
+  &-right {
+    .#{theme.$prefix}-#{$component}-track-wrapper {
+      order: 1;
+    }
+
+    .#{theme.$prefix}-#{$component}-content {
+      order: 0;
+    }
+  }
+}

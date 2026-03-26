@@ -26,25 +26,6 @@ import {
 } from './Illustrations';
 
 import {
-  BurgerIcon,
-  ReturnIcon,
-  CloseIcon,
-  ArrowIcon,
-  CircleIcon,
-  TimesIcon,
-  DoubleCheckIcon,
-  CheckCircleIcon,
-  TimesCircleIcon,
-  ContentIcon,
-  LockedIcon,
-  ExclamationIcon,
-  ArrowLinkIcon,
-  UnionIcon,
-  EyeCloseIcon,
-  EyeOnIcon,
-} from './Deprecated';
-
-import {
   /* Primary Icons */
   DepositIcon,
   WithdrawalIcon,
@@ -173,6 +154,10 @@ import {
   BrokenLinkIcon,
   PauseIcon,
   AutoConversionRulesIcon,
+  NotificationInfoIcon,
+  NotificationWarningIcon,
+  NotificationSuccessIcon,
+  NotificationErrorIcon,
 } from './SVGs';
 /* import types */
 import type { FC } from 'react';
@@ -202,24 +187,6 @@ const IconList = {
   logoBg: LogoBg,
   logoBeta: LogoBeta,
   logoWithBeta: LogoWithBeta,
-
-  /* Old Icons */
-  burger: BurgerIcon,
-  return: ReturnIcon,
-  close: CloseIcon,
-  arrow: ArrowIcon,
-  circle: CircleIcon,
-  times: TimesIcon,
-  doubleCheck: DoubleCheckIcon,
-  checkCircle: CheckCircleIcon,
-  timesCircle: TimesCircleIcon,
-  content: ContentIcon,
-  locked: LockedIcon,
-  exclamation: ExclamationIcon,
-  arrowLink: ArrowLinkIcon,
-  union: UnionIcon,
-  eyeClose: EyeCloseIcon,
-  eyeOn: EyeOnIcon,
 
   /* Primary Icons */
   deposit: DepositIcon,
@@ -356,6 +323,12 @@ const IconList = {
   linkedIn: LinkedInIcon,
   passkey: PasskeyIcon,
   pause: PauseIcon,
+
+  /* Notification Icons */
+  notificationInfo: NotificationInfoIcon,
+  notificationWarning: NotificationWarningIcon,
+  notificationSuccess: NotificationSuccessIcon,
+  notificationError: NotificationErrorIcon,
 
   /* Figma Aliases */
   depositFiatCrypto: DepositIcon,

@@ -1,6 +1,6 @@
 {
   "name": "@1money/component-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Components based on primereact for 1money front-end projects",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -149,6 +149,11 @@
       "import": "./es/components/Radio/index.js",
       "require": "./lib/components/Radio/index.js"
     },
+    "./Segment": {
+      "types": "./es/components/Segment/index.d.ts",
+      "import": "./es/components/Segment/index.js",
+      "require": "./lib/components/Segment/index.js"
+    },
     "./Select": {
       "types": "./es/components/Select/index.d.ts",
       "import": "./es/components/Select/index.js",
@@ -188,6 +193,11 @@
       "types": "./es/components/Tab/index.d.ts",
       "import": "./es/components/Tab/index.js",
       "require": "./lib/components/Tab/index.js"
+    },
+    "./Tabs": {
+      "types": "./es/components/Tabs/index.d.ts",
+      "import": "./es/components/Tabs/index.js",
+      "require": "./lib/components/Tabs/index.js"
     },
     "./Table": {
       "types": "./es/components/Table/index.d.ts",

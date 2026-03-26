@@ -17,30 +17,57 @@ exports[`Notification renders correctly 1`] = `
             <span
               class="om-react-ui-notification-icon"
             >
-              <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 14.6667 14.6667"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
+              <i
+                class="om-react-ui-icons-wrapper"
+                style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                />
-                <path
-                  d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  class="om-react-ui-icons"
+                  fill="none"
+                  height="32"
+                  stroke="none"
+                  viewBox="0 0 32 32"
+                  width="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                    fill="#DDE6F4"
+                  />
+                  <g
+                    clip-path="url(#notif-info-clip)"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                      fill="#073387"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                      fill="#073387"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                      fill="#073387"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="notif-info-clip"
+                    >
+                      <rect
+                        fill="white"
+                        height="16"
+                        transform="translate(8 8)"
+                        width="16"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </i>
             </span>
           </div>
           <div
@@ -63,18 +90,26 @@ exports[`Notification renders correctly 1`] = `
           class="om-react-ui-notification-close"
           type="button"
         >
-          <svg
-            fill="none"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
-            <path
-              d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+            <svg
+              class="om-react-ui-icons"
               fill="currentColor"
-            />
-          </svg>
+              height="16"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
         </button>
       </div>
     </div>
@@ -92,30 +127,57 @@ exports[`Notification renders correctly 1`] = `
           <span
             class="om-react-ui-notification-icon"
           >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 14.6667 14.6667"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
             >
-              <path
-                clip-rule="evenodd"
-                d="M7.33333 1.33333C10.647 1.33333 13.3333 4.01962 13.3333 7.33333C13.3333 10.647 10.647 13.3333 7.33333 13.3333C4.01962 13.3333 1.33333 10.647 1.33333 7.33333C1.33333 4.01962 4.01962 1.33333 7.33333 1.33333ZM7.33333 0C11.3834 0 14.6667 3.28325 14.6667 7.33333C14.6667 11.3834 11.3834 14.6667 7.33333 14.6667C3.28325 14.6667 0 11.3834 0 7.33333C0 3.28325 3.28325 0 7.33333 0Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M6.66667 6.66667V11H8V6.66667H6.66667Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-              <path
-                d="M8.33333 4.66667C8.33333 4.11438 7.88562 3.66667 7.33333 3.66667C6.78105 3.66667 6.33333 4.11438 6.33333 4.66667C6.33333 5.21895 6.78105 5.66667 7.33333 5.66667C7.88562 5.66667 8.33333 5.21895 8.33333 4.66667Z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                class="om-react-ui-icons"
+                fill="none"
+                height="32"
+                stroke="none"
+                viewBox="0 0 32 32"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                  fill="#DDE6F4"
+                />
+                <g
+                  clip-path="url(#notif-info-clip)"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z"
+                    fill="#073387"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z"
+                    fill="#073387"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z"
+                    fill="#073387"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="notif-info-clip"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      transform="translate(8 8)"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </i>
           </span>
         </div>
         <div
@@ -138,18 +200,26 @@ exports[`Notification renders correctly 1`] = `
         class="om-react-ui-notification-close"
         type="button"
       >
-        <svg
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
-          <path
-            d="M4.47 4.47a.75.75 0 0 1 1.06 0L8 6.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L9.06 8l2.47 2.47a.75.75 0 1 1-1.06 1.06L8 9.06l-2.47 2.47a.75.75 0 0 1-1.06-1.06L6.94 8 4.47 5.53a.75.75 0 0 1 0-1.06Z"
+          <svg
+            class="om-react-ui-icons"
             fill="currentColor"
-          />
-        </svg>
+            height="16"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
       </button>
     </div>
   </div>,

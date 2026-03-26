@@ -1,0 +1,139 @@
+@use '@/styles/api' as theme;
+
+$component: 'accordion';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 400);
+  width: 100%;
+
+  // ── Accordion Item ──
+  &-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &-disabled {
+      cursor: not-allowed;
+      opacity: theme.opacity('disabled');
+    }
+  }
+
+  // ── Header (clickable trigger) ──
+  &-header {
+    display: flex;
+    gap: theme.spacing(gap, 400);
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  // ── Title ──
+  &-title {
+    flex: 1 0 0;
+    color: theme.palette(text, 'default');
+  }
+
+  // ── Icon ──
+  &-icon {
+    flex-shrink: 0;
+    color: theme.palette(icon, 'default');
+  }
+
+  // ── Content ──
+  &-content {
+    width: 100%;
+    color: theme.palette(text, 'default');
+  }
+
+  // ══════════════════════════════════════
+  // Variant: Fill
+  // ══════════════════════════════════════
+  &-fill {
+    .#{theme.$prefix}-#{$component}-item {
+      padding: theme.spacing(component-padding, 600);
+      background-color: theme.palette(bg, 'default-secondary');
+    }
+
+    .#{theme.$prefix}-#{$component}-header {
+      &:hover:not(:disabled) {
+        .#{theme.$prefix}-#{$component}-icon {
+          color: theme.palette(icon, 'default-secondary');
+        }
+      }
+    }
+  }
+
+  // ══════════════════════════════════════
+  // Variant: Stroke
+  // ══════════════════════════════════════
+  &-stroke {
+    gap: theme.spacing(gap, '050');
+
+    .#{theme.$prefix}-#{$component}-item {
+      padding: theme.spacing(component-padding, 600) 0;
+      border-bottom: 1px solid theme.palette(border, 'neutral');
+    }
+
+    .#{theme.$prefix}-#{$component}-header {
+      &:hover:not(:disabled) {
+        .#{theme.$prefix}-#{$component}-icon {
+          color: theme.palette(icon, 'default-secondary');
+        }
+      }
+    }
+  }
+
+  // ══════════════════════════════════════
+  // Size: Large
+  // ══════════════════════════════════════
+  &-large {
+    .#{theme.$prefix}-#{$component}-title {
+      @include theme.typography(headline, sm);
+    }
+
+    .#{theme.$prefix}-#{$component}-content {
+      margin-top: theme.spacing(gap, 600);
+
+      @include theme.typography(body, lg);
+    }
+
+    &.#{theme.$prefix}-#{$component}-fill {
+      .#{theme.$prefix}-#{$component}-item {
+        border-radius: theme.shape(600);
+      }
+    }
+  }
+
+  // ══════════════════════════════════════
+  // Size: Small
+  // ══════════════════════════════════════
+  &-small {
+    .#{theme.$prefix}-#{$component}-title {
+      @include theme.typography(title, md, $strong: true);
+    }
+
+    .#{theme.$prefix}-#{$component}-content {
+      margin-top: theme.spacing(gap, 400);
+
+      @include theme.typography(body, md);
+    }
+
+    &.#{theme.$prefix}-#{$component}-fill {
+      .#{theme.$prefix}-#{$component}-item {
+        border-radius: theme.shape(400);
+      }
+    }
+  }
+}

@@ -2,30 +2,10 @@
 @use '@/styles/recipes/variants' as variants;
 
 $component: 'notification';
-$notification-variant-schema: variants.om-variant-schema($component, icon-color, icon-bg);
-$notification-info-variant: (
-  icon-color: theme.palette(icon, 'brand'),
-  icon-bg: theme.palette(bg, 'brand-tertiary-hover'),
-);
-$notification-variants: (
-  'info': $notification-info-variant,
-  'success': (
-    icon-color: theme.palette(icon, 'positive'),
-    icon-bg: theme.palette(bg, 'positive-tertiary-hover'),
-  ),
-  'warning': (
-    icon-color: theme.palette(icon, 'warning'),
-    icon-bg: theme.palette(bg, 'warning-secondary-hover'),
-  ),
-  'error': (
-    icon-color: theme.palette(icon, 'danger'),
-    icon-bg: theme.palette(bg, 'danger-tertiary-hover'),
-  ),
-);
+
+// No icon variants needed — notification icons have built-in colors
 
 .#{theme.$prefix}-#{$component} {
-  @include variants.om-variant-default($notification-variants, 'info', $notification-variant-schema);
-
   display: flex;
   gap: theme.spacing(gap, 200);
   align-items: flex-start;
@@ -50,22 +30,12 @@ $notification-variants: (
     align-items: center;
   }
 
-  // ── Icon circle ──
+  // ── Icon ──
   &-icon {
     display: inline-flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    width: theme.sizing(component-height, 'sm');
-    height: theme.sizing(component-height, 'sm');
-    color: var(--om-notification-icon-color);
-    background-color: var(--om-notification-icon-bg);
-    border-radius: theme.shape('full');
-
-    svg {
-      width: theme.spacing(scale, 400);
-      height: theme.spacing(scale, 400);
-    }
   }
 
   // ── Content area ──
@@ -121,16 +91,13 @@ $notification-variants: (
     border: none;
     cursor: pointer;
 
-    svg {
-      width: theme.spacing(scale, 400);
-      height: theme.spacing(scale, 400);
+    // Override IconWrapper inline --icon-color so SVG inherits from parent
+    .#{theme.$prefix}-icons-wrapper {
+      --icon-color: currentcolor;
     }
 
     &:hover {
       color: theme.palette(icon, 'neutral');
     }
   }
-
-  // ── Status variants — icon background + icon color ──
-  @include variants.om-variant-classes($notification-variants, $notification-variant-schema, $default: 'info');
 }

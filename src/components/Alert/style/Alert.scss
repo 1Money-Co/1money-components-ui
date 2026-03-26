@@ -1,0 +1,92 @@
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
+
+$component: 'alert';
+
+// ── Variant DSL ──
+$alert-variant-schema: variants.om-variant-schema(
+  $component, container-bg, container-border
+);
+$alert-variants: (
+  'info': (
+    container-bg: theme.palette(bg, 'default-secondary'),
+    container-border: transparent,
+  ),
+  'success': (
+    container-bg: theme.palette(bg, 'default'),
+    container-border: theme.palette(border, 'neutral-secondary'),
+  ),
+  'warning': (
+    container-bg: theme.palette(bg, 'warning-tertiary-hover'),
+    container-border: transparent,
+  ),
+  'error': (
+    container-bg: theme.palette(bg, 'danger-tertiary'),
+    container-border: transparent,
+  ),
+);
+
+.#{theme.$prefix}-#{$component} {
+  @include variants.om-variant-default($alert-variants, 'info', $alert-variant-schema);
+
+  display: flex;
+  gap: theme.spacing(gap, 300);
+  align-items: flex-start;
+  padding: theme.spacing(component-padding, 300);
+  background-color: var(--om-alert-container-bg);
+  border: 1px solid var(--om-alert-container-border);
+  border-radius: theme.shape(300);
+
+  // ── Icon ──
+  &-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // ── Content area ──
+  &-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    align-items: flex-start;
+    min-width: 0;
+    padding-top: theme.spacing(scale, 200);
+  }
+
+  // ── Title, Body & Link ──
+  // Typography styles handled by TypographyTitle, TypographyBody and TypographyLink components
+
+  // ── Action slot ──
+  &-action {
+    flex-shrink: 0;
+  }
+
+  // ── Close button ──
+  &-close {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    padding: 0;
+    color: theme.palette(icon, 'neutral-secondary');
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    // Override IconWrapper inline --icon-color so SVG inherits from parent
+    .#{theme.$prefix}-icons-wrapper {
+      --icon-color: currentcolor;
+    }
+
+    &:hover {
+      color: theme.palette(icon, 'neutral');
+    }
+  }
+
+  // ── Status variants ──
+  @include variants.om-variant-classes($alert-variants, $alert-variant-schema, $default: 'info');
+}

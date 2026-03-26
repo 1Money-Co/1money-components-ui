@@ -1,0 +1,1141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+      >
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 1
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 2
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 3
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+    >
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 1
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 2
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 3
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Accordion renders small size 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-small"
+      >
+        <div
+          class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+        >
+          <button
+            aria-expanded="true"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 1
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="20"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M21 13L3 13V11L21 11V13Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </button>
+          <div
+            class="om-react-ui-accordion-content"
+          >
+            Content 1
+          </div>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 2
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="20"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 3
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="20"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-small"
+    >
+      <div
+        class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+      >
+        <button
+          aria-expanded="true"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 1
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="20"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21 13L3 13V11L21 11V13Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </button>
+        <div
+          class="om-react-ui-accordion-content"
+        >
+          Content 1
+        </div>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 2
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="20"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 3
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="20"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Accordion renders stroke variant 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-accordion om-react-ui-accordion-stroke om-react-ui-accordion-large"
+      >
+        <div
+          class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+        >
+          <button
+            aria-expanded="true"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 1
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.0005 7.23077L19.0847 13.87L17.7144 15.3322L12.0007 9.9774L6.28651 15.3335L4.91602 13.8714L12.0005 7.23077Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </button>
+          <div
+            class="om-react-ui-accordion-content"
+          >
+            Content 1
+          </div>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 2
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 3
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-accordion om-react-ui-accordion-stroke om-react-ui-accordion-large"
+    >
+      <div
+        class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+      >
+        <button
+          aria-expanded="true"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 1
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.0005 7.23077L19.0847 13.87L17.7144 15.3322L12.0007 9.9774L6.28651 15.3335L4.91602 13.8714L12.0005 7.23077Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </button>
+        <div
+          class="om-react-ui-accordion-content"
+        >
+          Content 1
+        </div>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 2
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 3
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Accordion renders with active keys 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+      >
+        <div
+          class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+        >
+          <button
+            aria-expanded="true"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 1
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M21 13L3 13V11L21 11V13Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </button>
+          <div
+            class="om-react-ui-accordion-content"
+          >
+            Content 1
+          </div>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 2
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+        <div
+          class="om-react-ui-accordion-item"
+        >
+          <button
+            aria-expanded="false"
+            class="om-react-ui-accordion-header"
+            type="button"
+          >
+            <span
+              class="om-react-ui-accordion-title"
+            >
+              Item 3
+            </span>
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons om-react-ui-accordion-icon"
+                fill="none"
+                height="24"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L21 12M12 3L12 21"
+                  stroke-width="2"
+                />
+              </svg>
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+    >
+      <div
+        class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+      >
+        <button
+          aria-expanded="true"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 1
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21 13L3 13V11L21 11V13Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </button>
+        <div
+          class="om-react-ui-accordion-content"
+        >
+          Content 1
+        </div>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 2
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        class="om-react-ui-accordion-item"
+      >
+        <button
+          aria-expanded="false"
+          class="om-react-ui-accordion-header"
+          type="button"
+        >
+          <span
+            class="om-react-ui-accordion-title"
+          >
+            Item 3
+          </span>
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons om-react-ui-accordion-icon"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 12L21 12M12 3L12 21"
+                stroke-width="2"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

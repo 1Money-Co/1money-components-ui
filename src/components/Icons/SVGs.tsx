@@ -632,6 +632,38 @@ export const AutoConversionRulesIcon: FC<IconWrapperProps> = (props) => <IconWra
   <path d="M13.4824 10.5713H20.1963L9.76758 22V13.4287H3.05371L13.4824 2V10.5713Z"  strokeWidth="2" strokeLinejoin="round"/>
 </IconWrapper>;
 
+/* Notification Icons */
+export const NotificationInfoIcon: FC<IconWrapperProps> = (props) => <IconWrapper viewBox="0 0 32 32" {...props}>
+  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#DDE6F4"/>
+  <g clipPath="url(#notif-info-clip)">
+    <path fillRule="evenodd" clipRule="evenodd" d="M16 10C19.3137 10 22 12.6863 22 16C22 19.3137 19.3137 22 16 22C12.6863 22 9.99999 19.3137 9.99999 16C9.99999 12.6863 12.6863 10 16 10ZM16 8.66669C20.0501 8.66669 23.3333 11.9499 23.3333 16C23.3333 20.0501 20.0501 23.3334 16 23.3334C11.9499 23.3334 8.66666 20.0501 8.66666 16C8.66666 11.9499 11.9499 8.66669 16 8.66669Z" fill="#073387"/>
+    <path fillRule="evenodd" clipRule="evenodd" d="M15.3333 15.3334V19.6667H16.6667V15.3334H15.3333Z" fill="#073387"/>
+    <path d="M17 13.3334C17 12.7811 16.5523 12.3334 16 12.3334C15.4477 12.3334 15 12.7811 15 13.3334C15 13.8856 15.4477 14.3334 16 14.3334C16.5523 14.3334 17 13.8856 17 13.3334Z" fill="#073387"/>
+  </g>
+  <defs>
+    <clipPath id="notif-info-clip">
+      <rect width="16" height="16" fill="white" transform="translate(8 8)"/>
+    </clipPath>
+  </defs>
+</IconWrapper>;
+
+export const NotificationWarningIcon: FC<IconWrapperProps> = (props) => <IconWrapper viewBox="0 0 32 32" {...props}>
+  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#F4C600" fillOpacity="0.2"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M15.3333 17.3333V13H16.6667V17.3333H15.3333Z" fill="#DB8600"/>
+  <path d="M17 19.3333C17 19.8856 16.5523 20.3333 16 20.3333C15.4477 20.3333 15 19.8856 15 19.3333C15 18.7811 15.4477 18.3333 16 18.3333C16.5523 18.3333 17 18.7811 17 19.3333Z" fill="#DB8600"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M10.1503 19.1783L10.9339 21.3333H21.0661L21.8497 19.1783L16 10.4037L10.1503 19.1783ZM17.1094 9.66411C16.5816 8.87246 15.4184 8.87246 14.8906 9.66411L9.04086 18.4387C8.8056 18.7916 8.75226 19.2354 8.89721 19.634L9.68085 21.789C9.87246 22.3159 10.3732 22.6667 10.9339 22.6667H21.0661C21.6268 22.6667 22.1276 22.3159 22.3192 21.789L23.1028 19.634C23.2477 19.2354 23.1944 18.7916 22.9591 18.4387L17.1094 9.66411Z" fill="#DB8600"/>
+</IconWrapper>;
+
+export const NotificationSuccessIcon: FC<IconWrapperProps> = (props) => <IconWrapper viewBox="0 0 32 32" {...props}>
+  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#1F5800" fillOpacity="0.1"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M22.3399 12.2667L14.7467 21.1419L9.7002 16.1984L10.6332 15.2459L14.6608 19.1913L21.3268 11.3999L22.3399 12.2667Z" fill="#1F5800"/>
+</IconWrapper>;
+
+export const NotificationErrorIcon: FC<IconWrapperProps> = (props) => <IconWrapper viewBox="0 0 32 32" {...props}>
+  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#AE0000" fillOpacity="0.1"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M15.0572 16L11.1953 12.1381L12.1381 11.1953L16 15.0572L19.8619 11.1953L20.8047 12.1381L16.9428 16L20.8048 19.862L19.862 20.8048L16 16.9428L12.138 20.8048L11.1952 19.862L15.0572 16Z" fill="#AE0000"/>
+</IconWrapper>;
+
 export default {
   /* Primary Icons */
   DepositIcon,
@@ -750,6 +782,11 @@ export default {
   APIKeyIcon,
   BrokenLinkIcon,
   AutoConversionRulesIcon,
+  /* Notification Icons */
+  NotificationInfoIcon,
+  NotificationWarningIcon,
+  NotificationSuccessIcon,
+  NotificationErrorIcon,
   /* filled icons */
   GoogleIcon,
   AppleIcon,
