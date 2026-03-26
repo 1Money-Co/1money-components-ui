@@ -102,7 +102,7 @@ exports[`Tag renders removable 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -141,7 +141,7 @@ exports[`Tag renders removable 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="--icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -229,7 +229,7 @@ exports[`Tag renders with icon 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -264,7 +264,7 @@ exports[`Tag renders with icon 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="--icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
         >
           <svg
             class="om-react-ui-icons"

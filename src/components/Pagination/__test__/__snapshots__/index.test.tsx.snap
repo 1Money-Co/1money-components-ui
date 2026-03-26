@@ -23,7 +23,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -145,7 +145,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"

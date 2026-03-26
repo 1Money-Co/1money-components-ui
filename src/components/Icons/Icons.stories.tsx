@@ -56,7 +56,7 @@ type Story = StoryObj<typeof Icons>;
 export const PrimaryIcons: Story = {
   args: {
     prefixCls: 'icons',
-    color: '#073387',
+    color: 'red',
     borderColor: '#03163A',
     size: 24
   },
