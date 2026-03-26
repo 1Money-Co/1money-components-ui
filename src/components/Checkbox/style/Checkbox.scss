@@ -121,7 +121,9 @@ $component: 'checkbox';
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
+    justify-content: center;
     min-width: 0;
+    min-height: 1px;
   }
 
   &-label {
