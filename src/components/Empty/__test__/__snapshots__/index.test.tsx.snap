@@ -1,0 +1,539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Empty renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-empty om-react-ui-empty-stroke"
+      >
+        <div
+          class="om-react-ui-empty-icon"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6 4H16C16.5523 4 17 4.44772 17 5V9H19V5C19 3.34315 17.6569 2 16 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H12V20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM7 7H15V9H7V7ZM7 11H15V13H7V11ZM12 15H7V17H12V15ZM22.0831 17.1016L20.0038 17.1016H19.0057V22.1016H17.0057V17.1016L16.0038 17.1016H13.9219L15.2232 15.4765L17.2252 12.9765L18.0065 12.0008L18.7869 12.9772L20.7849 15.4772L22.0831 17.1016Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </div>
+        <div
+          class="om-react-ui-empty-content"
+        >
+          <div
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-tertiary om-react-ui-typography-strong"
+          >
+            No record found
+          </div>
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          >
+            Try adjusting your filters
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-empty om-react-ui-empty-stroke"
+    >
+      <div
+        class="om-react-ui-empty-icon"
+      >
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        >
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="24"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6 4H16C16.5523 4 17 4.44772 17 5V9H19V5C19 3.34315 17.6569 2 16 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H12V20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM7 7H15V9H7V7ZM7 11H15V13H7V11ZM12 15H7V17H12V15ZM22.0831 17.1016L20.0038 17.1016H19.0057V22.1016H17.0057V17.1016L16.0038 17.1016H13.9219L15.2232 15.4765L17.2252 12.9765L18.0065 12.0008L18.7869 12.9772L20.7849 15.4772L22.0831 17.1016Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </div>
+      <div
+        class="om-react-ui-empty-content"
+      >
+        <div
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-tertiary om-react-ui-typography-strong"
+        >
+          No record found
+        </div>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+        >
+          Try adjusting your filters
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Empty renders fill variant 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-empty om-react-ui-empty-fill"
+      >
+        <div
+          class="om-react-ui-empty-icon"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6 4H16C16.5523 4 17 4.44772 17 5V9H19V5C19 3.34315 17.6569 2 16 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H12V20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM7 7H15V9H7V7ZM7 11H15V13H7V11ZM12 15H7V17H12V15ZM22.0831 17.1016L20.0038 17.1016H19.0057V22.1016H17.0057V17.1016L16.0038 17.1016H13.9219L15.2232 15.4765L17.2252 12.9765L18.0065 12.0008L18.7869 12.9772L20.7849 15.4772L22.0831 17.1016Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </div>
+        <div
+          class="om-react-ui-empty-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          >
+            No data available
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-empty om-react-ui-empty-fill"
+    >
+      <div
+        class="om-react-ui-empty-icon"
+      >
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        >
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="24"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6 4H16C16.5523 4 17 4.44772 17 5V9H19V5C19 3.34315 17.6569 2 16 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H12V20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM7 7H15V9H7V7ZM7 11H15V13H7V11ZM12 15H7V17H12V15ZM22.0831 17.1016L20.0038 17.1016H19.0057V22.1016H17.0057V17.1016L16.0038 17.1016H13.9219L15.2232 15.4765L17.2252 12.9765L18.0065 12.0008L18.7869 12.9772L20.7849 15.4772L22.0831 17.1016Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </div>
+      <div
+        class="om-react-ui-empty-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+        >
+          No data available
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Empty renders with action 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-empty om-react-ui-empty-stroke"
+      >
+        <div
+          class="om-react-ui-empty-icon"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="24"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12.8207 1.27284C12.2988 1.03796 11.7012 1.03796 11.1793 1.27284L2.17927 5.32284C1.46157 5.6458 1 6.35966 1 7.14668V10.0001H4V17.0001C2.34315 17.0001 1 18.3432 1 20.0001V23.0001H23V20.0001C23 18.3432 21.6569 17.0001 20 17.0001V10.0001H23V7.14668C23 6.35966 22.5384 5.6458 21.8207 5.32284L12.8207 1.27284ZM18 10.0001H15.5V17.0001H18V10.0001ZM13.5 10.0001H10.5V17.0001H13.5V10.0001ZM8.5 10.0001H6V17.0001H8.5V10.0001ZM3 7.14668L12 3.09668L21 7.14668V8.00009H3V7.14668ZM3 20.0001C3 19.4478 3.44772 19.0001 4 19.0001H20C20.5523 19.0001 21 19.4478 21 20.0001V21.0001H3V20.0001Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </div>
+        <div
+          class="om-react-ui-empty-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          >
+            You don't have any bank accounts linked
+          </span>
+        </div>
+        <div
+          class="om-react-ui-empty-action"
+        >
+          <button>
+            Add new bank account
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-empty om-react-ui-empty-stroke"
+    >
+      <div
+        class="om-react-ui-empty-icon"
+      >
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        >
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="24"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.8207 1.27284C12.2988 1.03796 11.7012 1.03796 11.1793 1.27284L2.17927 5.32284C1.46157 5.6458 1 6.35966 1 7.14668V10.0001H4V17.0001C2.34315 17.0001 1 18.3432 1 20.0001V23.0001H23V20.0001C23 18.3432 21.6569 17.0001 20 17.0001V10.0001H23V7.14668C23 6.35966 22.5384 5.6458 21.8207 5.32284L12.8207 1.27284ZM18 10.0001H15.5V17.0001H18V10.0001ZM13.5 10.0001H10.5V17.0001H13.5V10.0001ZM8.5 10.0001H6V17.0001H8.5V10.0001ZM3 7.14668L12 3.09668L21 7.14668V8.00009H3V7.14668ZM3 20.0001C3 19.4478 3.44772 19.0001 4 19.0001H20C20.5523 19.0001 21 19.4478 21 20.0001V21.0001H3V20.0001Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </div>
+      <div
+        class="om-react-ui-empty-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+        >
+          You don't have any bank accounts linked
+        </span>
+      </div>
+      <div
+        class="om-react-ui-empty-action"
+      >
+        <button>
+          Add new bank account
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Empty renders with custom icon element 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-empty om-react-ui-empty-stroke"
+      >
+        <div
+          class="om-react-ui-empty-icon"
+        >
+          <svg
+            data-testid="custom-icon"
+          />
+        </div>
+        <div
+          class="om-react-ui-empty-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          >
+            Custom icon test
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-empty om-react-ui-empty-stroke"
+    >
+      <div
+        class="om-react-ui-empty-icon"
+      >
+        <svg
+          data-testid="custom-icon"
+        />
+      </div>
+      <div
+        class="om-react-ui-empty-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+        >
+          Custom icon test
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

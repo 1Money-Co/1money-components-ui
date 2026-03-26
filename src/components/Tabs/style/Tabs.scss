@@ -1,0 +1,100 @@
+@use '@/styles/api' as theme;
+
+$component: 'tabs';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  // ── Header (tab bar) ──
+  &-header {
+    position: relative;
+    display: flex;
+    gap: theme.spacing(scale, 0);
+    align-items: center;
+    overflow-x: auto;
+
+    // Hide scrollbar
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  // ── Individual tab ──
+  &-tab {
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    justify-content: center;
+    height: theme.sizing(component-height, '2xl');
+    padding: theme.spacing(scale, 100) theme.spacing(component-padding, 400);
+    color: theme.palette(text, 'default-tertiary');
+    background: none;
+    border: none;
+    border-bottom: 1px solid theme.palette(border, 'neutral');
+    border-radius: theme.shape(100) theme.shape(100) 0 0;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    @include theme.typography(title, md, $strong: true);
+
+    // ── Hover state ──
+    &:hover:not(.#{theme.$prefix}-#{$component}-tab-disabled):not(
+        .#{theme.$prefix}-#{$component}-tab-active
+      ) {
+      color: theme.palette(text, 'default');
+    }
+
+    // ── Active state ──
+    &-active {
+      color: theme.palette(text, 'default');
+    }
+
+    // ── Disabled state ──
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+    }
+  }
+
+  // ── Sliding indicator ──
+  &-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: theme.palette(border, 'default-tertiary');
+    transition:
+      transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+      width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  // ── Tab label ──
+  &-tab-label {
+    white-space: nowrap;
+  }
+
+  // ── Tab badge ──
+  &-tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: theme.spacing(scale, 100) theme.spacing(scale, 200);
+    color: theme.palette(text, 'default-tertiary');
+    background-color: theme.palette(bg, 'neutral-tertiary');
+    border-radius: theme.shape('full');
+
+    @include theme.typography(body, sm, $strong: true);
+  }
+
+  // ── Panel ──
+  &-panel {
+    padding: theme.spacing(scale, 400) 0;
+  }
+}

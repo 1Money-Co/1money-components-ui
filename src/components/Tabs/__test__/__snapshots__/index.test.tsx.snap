@@ -1,0 +1,472 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-tabs"
+      >
+        <div
+          class="om-react-ui-tabs-header"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 1
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="om-react-ui-tabs-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 2
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="om-react-ui-tabs-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 3
+            </span>
+          </button>
+          <span
+            class="om-react-ui-tabs-indicator"
+            style="width: 0px; transform: translateX(0px);"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-tabs"
+    >
+      <div
+        class="om-react-ui-tabs-header"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 1
+          </span>
+        </button>
+        <button
+          aria-selected="false"
+          class="om-react-ui-tabs-tab"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 2
+          </span>
+        </button>
+        <button
+          aria-selected="false"
+          class="om-react-ui-tabs-tab"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 3
+          </span>
+        </button>
+        <span
+          class="om-react-ui-tabs-indicator"
+          style="width: 0px; transform: translateX(0px);"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Tabs renders with badges 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-tabs"
+      >
+        <div
+          class="om-react-ui-tabs-header"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 1
+            </span>
+            <span
+              class="om-react-ui-tabs-tab-badge"
+            >
+              5
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="om-react-ui-tabs-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 2
+            </span>
+            <span
+              class="om-react-ui-tabs-tab-badge"
+            >
+              10
+            </span>
+          </button>
+          <span
+            class="om-react-ui-tabs-indicator"
+            style="width: 0px; transform: translateX(0px);"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-tabs"
+    >
+      <div
+        class="om-react-ui-tabs-header"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 1
+          </span>
+          <span
+            class="om-react-ui-tabs-tab-badge"
+          >
+            5
+          </span>
+        </button>
+        <button
+          aria-selected="false"
+          class="om-react-ui-tabs-tab"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 2
+          </span>
+          <span
+            class="om-react-ui-tabs-tab-badge"
+          >
+            10
+          </span>
+        </button>
+        <span
+          class="om-react-ui-tabs-indicator"
+          style="width: 0px; transform: translateX(0px);"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Tabs renders with disabled tab 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-tabs"
+      >
+        <div
+          class="om-react-ui-tabs-header"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 1
+            </span>
+          </button>
+          <button
+            aria-disabled="true"
+            aria-selected="false"
+            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-disabled"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="om-react-ui-tabs-tab-label"
+            >
+              Tab 2
+            </span>
+          </button>
+          <span
+            class="om-react-ui-tabs-indicator"
+            style="width: 0px; transform: translateX(0px);"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-tabs"
+    >
+      <div
+        class="om-react-ui-tabs-header"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 1
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-selected="false"
+          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-disabled"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="om-react-ui-tabs-tab-label"
+          >
+            Tab 2
+          </span>
+        </button>
+        <span
+          class="om-react-ui-tabs-indicator"
+          style="width: 0px; transform: translateX(0px);"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
