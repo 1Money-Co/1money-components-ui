@@ -3,7 +3,7 @@
 
 $component: 'button';
 $button-variant-schema: variants.om-variant-schema(
-  $component, text, bg, hover-bg, disabled-text, disabled-bg, spinner-stroke
+  $component, text, bg, hover-bg, disabled-text, disabled-bg
 );
 $button-primary-variant: (
   text: theme.palette(text, 'on-neutral'),
@@ -11,7 +11,6 @@ $button-primary-variant: (
   hover-bg: theme.palette(bg, 'brand-hover'),
   disabled-text: theme.palette(text, 'disabled-white'),
   disabled-bg: theme.palette(bg, 'disabled-brand'),
-  spinner-stroke: theme.palette(text, 'on-neutral'),
 );
 $button-variants: (
   'primary': $button-primary-variant,
@@ -21,7 +20,6 @@ $button-variants: (
     hover-bg: theme.palette(bg, 'brand-secondary-hover'),
     disabled-text: theme.palette(text, 'brand-secondary'),
     disabled-bg: theme.palette(bg, 'brand-tertiary'),
-    spinner-stroke: theme.palette(text, 'brand'),
   ),
   'grey': (
     text: theme.palette(text, 'default'),
@@ -29,7 +27,6 @@ $button-variants: (
     hover-bg: theme.palette(bg, 'default-secondary'),
     disabled-text: theme.palette(text, 'disabled'),
     disabled-bg: theme.palette(bg, 'disabled'),
-    spinner-stroke: theme.palette(text, 'default'),
   ),
   'black': (
     text: theme.palette(text, 'on-neutral'),
@@ -37,7 +34,6 @@ $button-variants: (
     hover-bg: theme.palette(bg, 'neutral-hover'),
     disabled-text: theme.palette(text, 'disabled-white'),
     disabled-bg: theme.palette(bg, 'disabled-black'),
-    spinner-stroke: theme.palette(text, 'on-neutral'),
   ),
   'white': (
     text: theme.palette(text, 'default'),
@@ -45,7 +41,6 @@ $button-variants: (
     hover-bg: theme.palette(bg, 'default-hover'),
     disabled-text: theme.palette(text, 'disabled'),
     disabled-bg: theme.palette(bg, 'disabled'),
-    spinner-stroke: theme.palette(text, 'default'),
   ),
   'danger': (
     text: theme.palette(text, 'danger'),
@@ -53,7 +48,6 @@ $button-variants: (
     hover-bg: theme.palette(bg, 'danger-secondary-hover'),
     disabled-text: theme.palette(text, 'danger-tertiary'),
     disabled-bg: theme.palette(bg, 'danger-tertiary'),
-    spinner-stroke: theme.palette(text, 'danger'),
   ),
   'warning': (
     text: theme.palette(text, 'default'),
@@ -61,12 +55,12 @@ $button-variants: (
     hover-bg: theme.palette(bg, 'warning-hover'),
     disabled-text: theme.palette(text, 'disabled'),
     disabled-bg: theme.palette(bg, 'warning-secondary'),
-    spinner-stroke: theme.palette(text, 'default'),
   ),
 );
 
 .#{theme.$prefix}-#{$component} {
   @include variants.om-variant-default($button-variants, 'primary', $button-variant-schema);
+  @include theme.typography(body, lg, $strong: true);
 
   display: inline-flex;
   gap: theme.spacing(gap, 200);
@@ -74,14 +68,13 @@ $button-variants: (
   justify-content: center;
   padding: theme.spacing(component-padding, 400);
   color: var(--om-button-text);
+  line-height: 1.25;
   background-color: var(--om-button-bg);
   border: none;
   border-radius: theme.shape(300);
   outline: none;
   box-shadow: none;
   cursor: pointer;
-
-  @include theme.typography(label, lg);
 
   &:disabled,
   &-disabled {
@@ -96,21 +89,60 @@ $button-variants: (
 
   // ── Sizes ──
   &-medium {
-    padding: theme.spacing(component-padding, 300);
-    border-radius: theme.shape(300);
+    @include theme.typography(body, md, $strong: true);
 
-    @include theme.typography(label, md);
+    padding: theme.spacing(component-padding, 300);
+    line-height: 1.14;
+    border-radius: theme.shape(300);
   }
 
   &-small {
-    padding: theme.spacing(component-padding, 200);
-    border-radius: theme.shape(200);
+    @include theme.typography(body, sm, $strong: true);
 
-    @include theme.typography(label, sm);
+    padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
+    line-height: 1.33;
+    border-radius: theme.shape(200);
   }
 
   &-rounded {
     border-radius: theme.shape('full');
+  }
+
+  // ── Text variant ──
+  &-text {
+    --om-button-text: #{theme.palette(text, 'brand')};
+    --om-button-bg: transparent;
+    --om-button-hover-bg: transparent;
+    --om-button-disabled-text: #{theme.palette(text, 'brand-secondary')};
+    --om-button-disabled-bg: transparent;
+
+    padding: 0;
+    border-radius: 0;
+
+    &:hover:not(:disabled) {
+      --om-button-text: #{theme.palette(text, 'on-brand-secondary')};
+
+      color: var(--om-button-text);
+    }
+  }
+
+  // Text variant: size-specific typography
+  &-text#{&}-large {
+    @include theme.typography(headline, xs);
+
+    line-height: 1.08;
+  }
+
+  &-text#{&}-medium {
+    @include theme.typography(body, lg, $strong: true);
+
+    line-height: 1.4;
+  }
+
+  &-text#{&}-small {
+    @include theme.typography(body, md, $strong: true);
+
+    line-height: 1.4;
   }
 
   // ── Icon slots ──
@@ -120,6 +152,12 @@ $button-variants: (
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
+    color: currentcolor;
+    line-height: 0;
+
+    > .#{theme.$prefix}-icons-wrapper {
+      color: currentcolor;
+    }
   }
 
   // ── Loading icon ──
@@ -138,8 +176,9 @@ $button-variants: (
       height: 14px;
     }
 
-    svg circle {
-      stroke: var(--om-button-spinner-stroke);
+    .p-progress-spinner-circle {
+      animation: p-progress-spinner-dash 1.5s ease-in-out infinite;
+      stroke: currentcolor;
     }
   }
 

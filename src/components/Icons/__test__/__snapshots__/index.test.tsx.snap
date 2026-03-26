@@ -7,7 +7,7 @@ exports[`Icons renders correctly 1`] = `
     <div>
       <i
         class="om-react-ui-icons-wrapper"
-        style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
           class="om-react-ui-icons"
@@ -34,7 +34,7 @@ exports[`Icons renders correctly 1`] = `
     <div>
       <i
         class="om-react-ui-icons-wrapper"
-        style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
           class="om-react-ui-icons"
@@ -51,7 +51,7 @@ exports[`Icons renders correctly 1`] = `
   "container": <div>
     <i
       class="om-react-ui-icons-wrapper"
-      style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+      style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
     >
       <svg
         class="om-react-ui-icons"
@@ -136,7 +136,7 @@ exports[`Icons renders correctly 2`] = `
     <div>
       <i
         class="om-react-ui-icons-wrapper"
-        style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
           class="om-react-ui-icons"
@@ -163,7 +163,7 @@ exports[`Icons renders correctly 2`] = `
     <div>
       <i
         class="om-react-ui-icons-wrapper"
-        style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
           class="om-react-ui-icons"
@@ -180,7 +180,7 @@ exports[`Icons renders correctly 2`] = `
   "container": <div>
     <i
       class="om-react-ui-icons-wrapper"
-      style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+      style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
     >
       <svg
         class="om-react-ui-icons"

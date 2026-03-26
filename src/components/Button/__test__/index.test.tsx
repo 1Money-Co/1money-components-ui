@@ -82,4 +82,74 @@ describe('Button', () => {
 
     expect(onClick).toHaveBeenCalledTimes(1);
   });
+
+  it('inherits label color and button-sized defaults for icons', () => {
+    const { container } = render(
+      <Button
+        size="small"
+        iconStart={<Icons name="add" />}
+        iconEnd={<Icons name="arrowRight" />}
+      >
+        Submit
+      </Button>
+    );
+
+    const iconWrappers = container.querySelectorAll('.om-react-ui-icons-wrapper');
+
+    expect(iconWrappers).toHaveLength(2);
+    iconWrappers.forEach(iconWrapper => {
+      expect(iconWrapper).toHaveAttribute(
+        'style',
+        expect.stringContaining('--icon-color: currentColor')
+      );
+      expect(iconWrapper).toHaveAttribute(
+        'style',
+        expect.stringContaining('--icon-width: 16px')
+      );
+      expect(iconWrapper).toHaveAttribute(
+        'style',
+        expect.stringContaining('--icon-height: 16px')
+      );
+    });
+  });
+
+  it('renders text variant with correct classes and no color class', () => {
+    render(
+      <Button variant="text" color="danger" size="medium" data-testid="text-btn">
+        Learn More
+      </Button>
+    );
+
+    const button = screen.getByTestId('text-btn');
+
+    expect(button.className).toContain('om-react-ui-button-text');
+    expect(button.className).toContain('om-react-ui-button-medium');
+    expect(button.className).not.toContain('om-react-ui-button-danger');
+    expect(button.className).not.toContain('om-react-ui-button-primary');
+  });
+
+  it('preserves explicit icon color and sizing props', () => {
+    const { container } = render(
+      <Button
+        iconStart={<Icons name="add" size={24} color="#ff0000" />}
+      >
+        Submit
+      </Button>
+    );
+
+    const iconWrapper = container.querySelector('.om-react-ui-icons-wrapper');
+
+    expect(iconWrapper).toHaveAttribute(
+      'style',
+      expect.stringContaining('--icon-color: #ff0000')
+    );
+    expect(iconWrapper).toHaveAttribute(
+      'style',
+      expect.stringContaining('--icon-width: 24px')
+    );
+    expect(iconWrapper).toHaveAttribute(
+      'style',
+      expect.stringContaining('--icon-height: 24px')
+    );
+  });
 });

@@ -97,6 +97,21 @@ $component: 'checkbox';
     }
   }
 
+  &-input:checked + .#{theme.$prefix}-#{$component}-box {
+    @include checkbox-box-state(
+      theme.palette(bg, 'brand'),
+      theme.palette(bg, 'brand')
+    );
+
+    &::after {
+      @include checkbox-checkmark-visible(theme.palette(icon, 'on-brand'));
+
+      transition:
+        all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s,
+        opacity 0.1s;
+    }
+  }
+
   &-input:focus-visible + .#{theme.$prefix}-#{$component}-box {
     border-color: theme.palette(border, 'brand');
     box-shadow: 0 0 0 1px theme.palette(border, 'brand');
@@ -106,7 +121,9 @@ $component: 'checkbox';
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
+    justify-content: center;
     min-width: 0;
+    min-height: 1px;
   }
 
   &-label {
@@ -125,27 +142,17 @@ $component: 'checkbox';
     .#{theme.$prefix}-#{$component}-box {
       border-color: theme.palette(border, 'default-tertiary');
     }
-  }
 
-  &-checked {
-    .#{theme.$prefix}-#{$component}-box {
+    .#{theme.$prefix}-#{$component}-input:checked
+      + .#{theme.$prefix}-#{$component}-box {
       @include checkbox-box-state(
-        theme.palette(bg, 'brand'),
-        theme.palette(bg, 'brand')
+        theme.palette(bg, 'brand-hover'),
+        theme.palette(bg, 'brand-hover')
       );
-
-      &::after {
-        @include checkbox-checkmark-visible(theme.palette(icon, 'on-brand'));
-
-        transition:
-          all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s,
-          opacity 0.1s;
-      }
     }
-  }
 
-  &-checked:not(&-disabled):hover {
-    .#{theme.$prefix}-#{$component}-box {
+    .#{theme.$prefix}-#{$component}-box-wrapper-indeterminate
+      .#{theme.$prefix}-#{$component}-box {
       @include checkbox-box-state(
         theme.palette(bg, 'brand-hover'),
         theme.palette(bg, 'brand-hover')
@@ -153,7 +160,7 @@ $component: 'checkbox';
     }
   }
 
-  &-indeterminate {
+  &-box-wrapper-indeterminate {
     .#{theme.$prefix}-#{$component}-box {
       @include checkbox-box-state(
         theme.palette(bg, 'brand'),
@@ -166,19 +173,6 @@ $component: 'checkbox';
     }
   }
 
-  &-indeterminate:not(&-disabled):hover {
-    .#{theme.$prefix}-#{$component}-box {
-      @include checkbox-box-state(
-        theme.palette(bg, 'brand-hover'),
-        theme.palette(bg, 'brand-hover')
-      );
-
-      &::after {
-        background-color: theme.palette(icon, 'on-brand');
-      }
-    }
-  }
-
   &-disabled {
     cursor: not-allowed;
 
@@ -187,22 +181,36 @@ $component: 'checkbox';
         theme.palette(bg, 'disabled'),
         theme.palette(border, 'disabled')
       );
+    }
+
+    .#{theme.$prefix}-#{$component}-input:checked
+      + .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'disabled'),
+        theme.palette(border, 'disabled')
+      );
+    }
+
+    .#{theme.$prefix}-#{$component}-input:checked
+      + .#{theme.$prefix}-#{$component}-box::after {
+      @include checkbox-checkmark-visible(theme.palette(icon, 'disabled'));
+    }
+
+    .#{theme.$prefix}-#{$component}-box-wrapper-indeterminate
+      .#{theme.$prefix}-#{$component}-box {
+      @include checkbox-box-state(
+        theme.palette(bg, 'disabled'),
+        theme.palette(border, 'disabled')
+      );
 
       &::after {
-        background-color: theme.palette(icon, 'disabled');
-        border-color: theme.palette(icon, 'disabled');
+        @include checkbox-minus-shape(theme.palette(icon, 'disabled'));
       }
     }
 
     .#{theme.$prefix}-#{$component}-label,
     .#{theme.$prefix}-#{$component}-description {
       color: theme.palette(text, 'disabled');
-    }
-
-    &.#{theme.$prefix}-#{$component}-checked {
-      .#{theme.$prefix}-#{$component}-box::after {
-        @include checkbox-checkmark-visible(theme.palette(icon, 'disabled'));
-      }
     }
   }
 
@@ -214,5 +222,21 @@ $component: 'checkbox';
     .#{theme.$prefix}-#{$component}-content {
       order: 0;
     }
+  }
+}
+
+$group-component: 'checkbox-group';
+
+.#{theme.$prefix}-#{$group-component} {
+  display: flex;
+  gap: theme.spacing(gap, 300);
+  align-items: flex-start;
+
+  &-horizontal {
+    flex-flow: row wrap;
+  }
+
+  &-vertical {
+    flex-direction: column;
   }
 }

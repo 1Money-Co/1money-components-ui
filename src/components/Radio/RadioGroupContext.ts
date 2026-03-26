@@ -1,10 +1,11 @@
 import { createContext, useContext } from 'react';
+import type { RadioChangeEvent, RadioValueType } from './interface';
 
 interface RadioGroupContextValue {
   /** Currently selected value in the group */
-  value: string | number | undefined;
+  value: RadioValueType | undefined;
   /** Handler called when a radio in the group is selected */
-  onChange: (value: string | number) => void;
+  onChange: (event: RadioChangeEvent) => void;
   /** Whether the entire group is disabled */
   disabled: boolean;
   /** HTML name attribute for native radio grouping */

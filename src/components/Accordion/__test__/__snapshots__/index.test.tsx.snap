@@ -23,7 +23,7 @@ exports[`Accordion renders correctly 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -57,7 +57,7 @@ exports[`Accordion renders correctly 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -91,7 +91,7 @@ exports[`Accordion renders correctly 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -132,7 +132,7 @@ exports[`Accordion renders correctly 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -166,7 +166,7 @@ exports[`Accordion renders correctly 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -200,7 +200,7 @@ exports[`Accordion renders correctly 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -298,7 +298,7 @@ exports[`Accordion renders small size 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -338,7 +338,7 @@ exports[`Accordion renders small size 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -372,7 +372,7 @@ exports[`Accordion renders small size 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -413,7 +413,7 @@ exports[`Accordion renders small size 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -453,7 +453,7 @@ exports[`Accordion renders small size 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -487,7 +487,7 @@ exports[`Accordion renders small size 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -585,7 +585,7 @@ exports[`Accordion renders stroke variant 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -625,7 +625,7 @@ exports[`Accordion renders stroke variant 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -660,7 +660,7 @@ exports[`Accordion renders stroke variant 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -702,7 +702,7 @@ exports[`Accordion renders stroke variant 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -742,7 +742,7 @@ exports[`Accordion renders stroke variant 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -777,7 +777,7 @@ exports[`Accordion renders stroke variant 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -876,7 +876,7 @@ exports[`Accordion renders with active keys 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -916,7 +916,7 @@ exports[`Accordion renders with active keys 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -950,7 +950,7 @@ exports[`Accordion renders with active keys 1`] = `
             </span>
             <i
               class="om-react-ui-icons-wrapper"
-              style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
                 class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -991,7 +991,7 @@ exports[`Accordion renders with active keys 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -1031,7 +1031,7 @@ exports[`Accordion renders with active keys 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
@@ -1065,7 +1065,7 @@ exports[`Accordion renders with active keys 1`] = `
           </span>
           <i
             class="om-react-ui-icons-wrapper"
-            style="--icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons om-react-ui-accordion-icon"
