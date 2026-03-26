@@ -124,6 +124,11 @@
       "import": "./es/components/Notification/index.js",
       "require": "./lib/components/Notification/index.js"
     },
+    "./Portal": {
+      "types": "./es/components/Portal/index.d.ts",
+      "import": "./es/components/Portal/index.js",
+      "require": "./lib/components/Portal/index.js"
+    },
     "./Pagination": {
       "types": "./es/components/Pagination/index.d.ts",
       "import": "./es/components/Pagination/index.js",

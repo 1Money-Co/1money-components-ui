@@ -17,7 +17,7 @@ import { Checkbox } from '@1money/components-ui/Checkbox';
   checked={isChecked}
   label="Accept terms"
   description="You must accept the terms to continue"
-  onChange={(checked) => setIsChecked(checked)}
+  onChange={(event) => setIsChecked(event.target.checked)}
 />
 ```
 
@@ -32,7 +32,47 @@ import { Checkbox } from '@1money/components-ui/Checkbox';
 | `label` | `ReactNode` | — | Label text displayed next to the checkbox |
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `labelPlacement` | `'left' \| 'right'` | `'left'` | Placement of the label relative to the checkbox |
-| `onChange` | `(checked: boolean) => void` | — | Callback when checked state changes |
+| `onChange` | `(event: CheckboxChangeEvent) => void` | — | Callback when checked state changes |
 | `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
 | `prefixCls` | `string` | `'checkbox'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
+
+## CheckboxGroup
+
+`CheckboxGroup` is exported from the same module as `Checkbox`, matching the `Radio` / `RadioGroup` structure.
+
+```tsx
+import { Checkbox, CheckboxGroup } from '@1money/components-ui';
+// or
+import { Checkbox, CheckboxGroup } from '@1money/components-ui/Checkbox';
+
+<CheckboxGroup
+  name="fruits"
+  options={[
+    { label: 'Apple', value: 'apple' },
+    { label: 'Pear', value: 'pear' },
+  ]}
+  value={selectedValues}
+  onChange={setSelectedValues}
+/>
+
+<Checkbox.Group defaultValue={['alpha']}>
+  <Checkbox value="alpha" label="Alpha" />
+  <Checkbox value="beta" label="Beta" />
+</Checkbox.Group>
+```
+
+Selected values are returned in declaration order, and `options` items can define their own `onChange` callback that receives the checkbox change event.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `options` | `Array<CheckboxValueType \| CheckboxGroupOption>` | — | Quick configuration for rendering grouped checkboxes |
+| `value` | `CheckboxValueType[]` | — | Controlled selected values |
+| `defaultValue` | `CheckboxValueType[]` | `[]` | Default selected values for uncontrolled usage |
+| `onChange` | `(checkedValue: CheckboxValueType[]) => void` | — | Callback when the selected values change |
+| `name` | `string` | — | Shared native name passed to all child inputs |
+| `disabled` | `boolean` | `false` | Disables the entire group |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Layout direction for the group |
+| `children` | `ReactNode` | — | Direct `Checkbox` children controlled by the group |
+| `className` | `string` | `''` | Additional CSS classes |
+| `prefixCls` | `string` | `'checkbox-group'` | CSS class prefix |

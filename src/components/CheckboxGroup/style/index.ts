@@ -1,1 +1,0 @@
-import './CheckboxGroup.scss';

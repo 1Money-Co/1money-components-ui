@@ -113,6 +113,21 @@ describe('Button', () => {
     });
   });
 
+  it('renders text variant with correct classes and no color class', () => {
+    render(
+      <Button variant="text" color="danger" size="medium" data-testid="text-btn">
+        Learn More
+      </Button>
+    );
+
+    const button = screen.getByTestId('text-btn');
+
+    expect(button.className).toContain('om-react-ui-button-text');
+    expect(button.className).toContain('om-react-ui-button-medium');
+    expect(button.className).not.toContain('om-react-ui-button-danger');
+    expect(button.className).not.toContain('om-react-ui-button-primary');
+  });
+
   it('preserves explicit icon color and sizing props', () => {
     const { container } = render(
       <Button

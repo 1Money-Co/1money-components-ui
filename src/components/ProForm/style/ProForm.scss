@@ -1,0 +1,76 @@
+@use '@/styles/api' as theme;
+
+$component: 'proform';
+
+// ─── ProForm Root ────────────────────────────────────────────
+.#{theme.$prefix}-#{$component} {
+  width: 100%;
+}
+
+// ─── Submitter ───────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-submitter {
+  display: flex;
+  gap: theme.spacing(gap, 200);
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: theme.spacing(gap, 300);
+}
+
+// ─── ProFormList ─────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-list {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+  width: 100%;
+}
+
+.#{theme.$prefix}-#{$component}-list-label {
+  @include theme.typography(label, md);
+
+  color: theme.palette(text, 'default');
+}
+
+.#{theme.$prefix}-#{$component}-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+}
+
+.#{theme.$prefix}-#{$component}-list-actions {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 100);
+}
+
+.#{theme.$prefix}-#{$component}-list-row-actions {
+  display: flex;
+  gap: theme.spacing(gap, 100);
+  align-items: center;
+}
+
+// ─── ModalForm ───────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-modal-form {
+  width: 100%;
+}
+
+// ─── QueryFilter ─────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-query-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.spacing(gap, 200);
+  align-items: flex-end;
+  width: 100%;
+}
+
+.#{theme.$prefix}-#{$component}-query-filter-actions {
+  display: flex;
+  gap: theme.spacing(gap, 200);
+  align-items: center;
+  margin-left: auto;
+}
+
+.#{theme.$prefix}-#{$component}-query-filter-split {
+  width: 1px;
+  height: 24px;
+  background-color: theme.palette(border, 'default-secondary');
+}

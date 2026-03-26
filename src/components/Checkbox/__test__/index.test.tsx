@@ -36,7 +36,7 @@ describe('Checkbox', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('toggles uncontrolled state and emits the next checked value', async () => {
+  it('toggles uncontrolled state and emits the next change event', async () => {
     const user = userEvent.setup();
     const handleChange = jest.fn();
 
@@ -49,12 +49,28 @@ describe('Checkbox', () => {
     await user.click(screen.getByText('Test'));
 
     expect(input).toBeChecked();
-    expect(handleChange).toHaveBeenCalledWith(true);
+    expect(handleChange).toHaveBeenCalledWith(
+      expect.objectContaining({
+        target: expect.objectContaining({
+          checked: true,
+          disabled: false,
+          type: 'checkbox',
+        }),
+      }),
+    );
 
     await user.click(input);
 
     expect(input).not.toBeChecked();
-    expect(handleChange).toHaveBeenLastCalledWith(false);
+    expect(handleChange).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        target: expect.objectContaining({
+          checked: false,
+          disabled: false,
+          type: 'checkbox',
+        }),
+      }),
+    );
   });
 
   it('keeps the controlled checked state until the parent updates it', async () => {
@@ -67,7 +83,14 @@ describe('Checkbox', () => {
 
     await user.click(input);
 
-    expect(handleChange).toHaveBeenCalledWith(true);
+    expect(handleChange).toHaveBeenCalledWith(
+      expect.objectContaining({
+        target: expect.objectContaining({
+          checked: true,
+          type: 'checkbox',
+        }),
+      }),
+    );
     expect(input).not.toBeChecked();
   });
 
@@ -101,5 +124,23 @@ describe('Checkbox', () => {
 
     expect(input).not.toBeChecked();
     expect(handleChange).not.toHaveBeenCalled();
+  });
+
+  it('keeps numeric values on the emitted event target', async () => {
+    const user = userEvent.setup();
+    const handleChange = jest.fn();
+
+    render(<Checkbox label="Test" value={7} onChange={handleChange} />);
+
+    await user.click(screen.getByRole('checkbox', { name: 'Test' }));
+
+    expect(handleChange).toHaveBeenCalledWith(
+      expect.objectContaining({
+        target: expect.objectContaining({
+          checked: true,
+          value: 7,
+        }),
+      }),
+    );
   });
 });

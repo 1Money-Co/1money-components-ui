@@ -1,0 +1,154 @@
+@use '@/styles/api' as theme;
+
+$component: 'drawer';
+$transition-duration: 300ms;
+
+// ---- Root ----
+.#{theme.$prefix}-#{$component}-root {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+// ---- Overlay / mask ----
+.#{theme.$prefix}-#{$component}-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: theme.palette(bg, 'scrim-dark');
+  opacity: 0;
+  transition: opacity $transition-duration ease;
+}
+
+// ---- Panel (the drawer itself) ----
+.#{theme.$prefix}-#{$component} {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: theme.palette(bg, 'default');
+  outline: none;
+  box-shadow: theme.shadows('200');
+  transition: transform $transition-duration ease-in-out;
+  pointer-events: auto;
+
+  // Placement anchors + closed-state transform.
+  // 100% refers to the element's own width/height, so the panel
+  // slides exactly off-screen regardless of the size prop.
+  &-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &-bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  &-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  &-right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  // ---- Header ----
+  &-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    padding: 0 theme.spacing(scale, 600);
+    border-bottom: 1px solid theme.palette(border, 'neutral');
+  }
+
+  // ---- Title ----
+  &-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    color: theme.palette(text, 'default');
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // ---- Close / control button ----
+  &-control {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: theme.palette(icon, 'default-tertiary');
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    .#{theme.$prefix}-icons-wrapper {
+      --icon-color: currentcolor;
+    }
+
+    &:hover {
+      color: theme.palette(icon, 'default');
+    }
+  }
+
+  // ---- Body ----
+  &-body {
+    flex: 1;
+    padding: theme.spacing(scale, 600);
+    overflow: auto;
+  }
+
+  // ---- Footer ----
+  &-footer {
+    flex-shrink: 0;
+    padding: theme.spacing(scale, 400) theme.spacing(scale, 600);
+    border-top: 1px solid theme.palette(border, 'neutral');
+  }
+}
+
+// ---- Open / Closed state driven by root modifier class ----
+.#{theme.$prefix}-#{$component}-root-open {
+  .#{theme.$prefix}-#{$component}-overlay {
+    opacity: 1;
+  }
+
+  .#{theme.$prefix}-#{$component} {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.#{theme.$prefix}-#{$component}-root-closed {
+  .#{theme.$prefix}-#{$component}-overlay {
+    opacity: 0;
+  }
+}
+
+// ---- Responsive: full-width on small screens ----
+@include theme.down(sm) {
+  .#{theme.$prefix}-#{$component} {
+    &-right,
+    &-left {
+      width: 100% !important;
+    }
+  }
+}

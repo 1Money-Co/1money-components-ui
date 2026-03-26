@@ -2,6 +2,7 @@ import React from 'react';
 import { fn } from '@storybook/test';
 
 import type { Meta, StoryObj } from '@storybook/react';
+import type { RadioChangeEvent } from './interface';
 import { Radio, RadioGroup } from './index';
 
 import './style';
@@ -108,8 +109,14 @@ export const WithDescription: Story = {
 export const GroupBasic: Story = {
   render: () => {
     const [value, setValue] = React.useState<string | number>('a');
+    const handleChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setValue(event.target.value);
+      }
+    };
+
     return (
-      <RadioGroup value={value} onChange={setValue}>
+      <RadioGroup value={value} onChange={handleChange}>
         <Radio value="a" label="Option A" />
         <Radio value="b" label="Option B" />
         <Radio value="c" label="Option C" />
@@ -121,10 +128,16 @@ export const GroupBasic: Story = {
 export const GroupWithOptions: Story = {
   render: () => {
     const [value, setValue] = React.useState<string | number>('email');
+    const handleChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setValue(event.target.value);
+      }
+    };
+
     return (
       <RadioGroup
         value={value}
-        onChange={setValue}
+        onChange={handleChange}
         options={[
           { value: 'email', label: 'Email', description: 'Receive via email' },
           { value: 'sms', label: 'SMS', description: 'Receive via text message' },
@@ -138,8 +151,14 @@ export const GroupWithOptions: Story = {
 export const GroupHorizontal: Story = {
   render: () => {
     const [value, setValue] = React.useState<string | number>('sm');
+    const handleChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setValue(event.target.value);
+      }
+    };
+
     return (
-      <RadioGroup value={value} onChange={setValue} layout="horizontal">
+      <RadioGroup value={value} onChange={handleChange} layout="horizontal">
         <Radio value="sm" label="Small" />
         <Radio value="md" label="Medium" />
         <Radio value="lg" label="Large" />
@@ -161,8 +180,14 @@ export const GroupDisabled: Story = {
 export const GroupDirectionRight: Story = {
   render: () => {
     const [value, setValue] = React.useState<string | number>('a');
+    const handleChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setValue(event.target.value);
+      }
+    };
+
     return (
-      <RadioGroup value={value} onChange={setValue} direction="right">
+      <RadioGroup value={value} onChange={handleChange} direction="right">
         <Radio value="a" label="Option A" description="Description A" />
         <Radio value="b" label="Option B" description="Description B" />
       </RadioGroup>

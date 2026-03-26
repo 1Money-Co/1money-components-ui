@@ -50,6 +50,7 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     children,
     className = '',
     prefixCls = 'button',
+    variant = 'contained',
     color = 'primary',
     size = 'medium',
     loading = false,
@@ -80,7 +81,7 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       className={classes(
         undefined,
         joinCls(
-          classes(color),
+          variant === 'text' ? classes('text') : classes(color),
           classes(size),
           rounded && classes('rounded'),
           isDisabled && classes('disabled'),

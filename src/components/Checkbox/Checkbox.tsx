@@ -1,14 +1,16 @@
-import { memo, useContext, useEffect, useRef } from 'react';
-import { useControlledState, useEventCallback } from '@1money/hooks';
+import { memo, useContext, useEffect } from 'react';
+import { useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { CheckboxGroupContext } from '../CheckboxGroup/context';
-import type { ChangeEvent, FC } from 'react';
-import type { CheckboxProps } from './interface';
+import BaseCheckbox from './BaseCheckbox';
+import { CheckboxGroupContext } from './CheckboxGroupContext';
+import type { FC } from 'react';
+import type { CheckboxChangeEvent, CheckboxProps } from './interface';
 
 export const Checkbox: FC<CheckboxProps> = (props) => {
   const {
     className = '',
     prefixCls = 'checkbox',
+    style,
     id,
     name: nameProp,
     value,
@@ -25,20 +27,19 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     labelPlacement = 'left',
     onChange,
     ref,
+    ...rest
   } = props;
 
   const groupContext = useContext(CheckboxGroupContext);
   const isInGroup = groupContext !== null && value !== undefined;
-  const name = nameProp ?? (isInGroup ? groupContext.name : undefined);
-  const checked = isInGroup ? groupContext.isChecked(value!) : checkedProp;
-  const disabled = isInGroup ? disabledProp || groupContext.disabled : disabledProp;
-
-  const [innerChecked, setInnerChecked] = useControlledState(
-    defaultChecked,
-    checked,
-  );
+  const name = isInGroup ? (nameProp ?? groupContext?.name) : nameProp;
+  const checked = isInGroup
+    ? groupContext?.value.includes(value as NonNullable<typeof value>)
+    : checkedProp;
+  const disabled = isInGroup
+    ? disabledProp || (groupContext?.disabled ?? false)
+    : disabledProp;
   const classes = classnames(prefixCls);
-  const inputRef = useRef<HTMLInputElement | null>(null);
   const inferredAriaLabel = (
     typeof label === 'string' || typeof label === 'number'
       ? String(label)
@@ -48,43 +49,49 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
   );
 
   useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.indeterminate = indeterminate;
+    if (!isInGroup || value === undefined) {
+      return undefined;
     }
-  }, [indeterminate]);
 
-  const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
-    if (disabled) return;
-    const nextChecked = event.target.checked;
-    setInnerChecked(nextChecked);
-    onChange?.(nextChecked);
-    if (isInGroup) {
-      groupContext.onChange(value!, nextChecked);
+    groupContext?.registerValue(value);
+
+    return () => {
+      groupContext?.cancelValue(value);
+    };
+  }, [groupContext, isInGroup, value]);
+
+  const handleChange = useEventCallback((event: CheckboxChangeEvent) => {
+    if (disabled) {
+      return;
+    }
+
+    onChange?.(event);
+
+    if (isInGroup && value !== undefined) {
+      groupContext?.toggleOption({
+        label,
+        value,
+      });
     }
   });
 
   const checkboxElement = (
-    <span className={classes('box-wrapper')}>
-      <input
-        ref={inputRef}
-        className={classes('input')}
-        type="checkbox"
-        id={id}
-        name={name}
-        value={value}
-        required={required}
-        title={title}
-        aria-label={ariaLabel ?? inferredAriaLabel}
-        aria-labelledby={ariaLabelledBy}
-        disabled={disabled}
-        checked={innerChecked}
-        onChange={handleChange}
-      />
-      <span
-        aria-hidden="true"
-        className={classes('box')}
-      />
-    </span>
+    <BaseCheckbox
+      {...rest}
+      aria-label={ariaLabel ?? inferredAriaLabel}
+      aria-labelledby={ariaLabelledBy}
+      checked={checked}
+      defaultChecked={isInGroup ? false : defaultChecked}
+      disabled={disabled}
+      id={id}
+      indeterminate={indeterminate}
+      name={name}
+      onChange={handleChange}
+      prefixCls={prefixCls}
+      required={required}
+      title={title}
+      value={value}
+    />
   );
 
   const labelElement = (label || description) && (
@@ -102,16 +109,24 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
       className={classes(
         undefined,
         joinCls(
-          innerChecked && classes('checked'),
-          indeterminate && classes('indeterminate'),
           disabled && classes('disabled'),
           labelPlacement === 'right' && classes('right'),
           className,
         ),
       )}
+      style={style}
     >
-      {checkboxElement}
-      {labelElement}
+      {labelPlacement === 'left' ? (
+        <>
+          {checkboxElement}
+          {labelElement}
+        </>
+      ) : (
+        <>
+          {labelElement}
+          {checkboxElement}
+        </>
+      )}
     </label>
   );
 };

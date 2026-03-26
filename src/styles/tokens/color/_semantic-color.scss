@@ -44,6 +44,8 @@ $om-bg-scale: (
   'danger-secondary-hover': rgba(p.$red-600, opacity.om-opacity('medium')),
   'danger-tertiary': rgba(p.$red-600, opacity.om-opacity('subtle')),
   'danger-tertiary-hover': rgba(p.$red-600, opacity.om-opacity('light')),
+  'scrim-dark': rgba(p.$black, opacity.om-opacity('medium')),
+  'scrim-light': rgba(p.$white, opacity.om-opacity('strong')),
 ) !default;
 
 // ── Text ──

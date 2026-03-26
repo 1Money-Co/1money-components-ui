@@ -1,15 +1,48 @@
-import type { ReactNode, RefObject } from 'react';
-import type { RadioButtonProps as PrimeRadioButtonProps } from 'primereact/radiobutton';
+import type {
+  CSSProperties,
+  InputHTMLAttributes,
+  ReactNode,
+  RefObject,
+} from 'react';
 
-export interface RadioProps
-  extends Omit<
-    PrimeRadioButtonProps,
-    'checked' | 'onChange' | 'ref'
-  > {
+export type RadioValueType = string | number;
+
+export interface RadioChangeTarget {
+  checked: boolean;
+  disabled: boolean;
+  id?: string;
+  name?: string;
+  type: 'radio';
+  value?: RadioValueType;
+}
+
+export interface RadioChangeEvent {
+  nativeEvent: Event;
+  preventDefault: () => void;
+  stopPropagation: () => void;
+  target: RadioChangeTarget;
+}
+
+type NativeRadioInputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  | 'children'
+  | 'checked'
+  | 'className'
+  | 'defaultChecked'
+  | 'onChange'
+  | 'size'
+  | 'style'
+  | 'type'
+  | 'value'
+>;
+
+export interface RadioProps extends NativeRadioInputProps {
   ref?: RefObject<HTMLLabelElement | null>;
+  className?: string;
   prefixCls?: string;
+  style?: CSSProperties;
   /** Value that identifies this radio within a RadioGroup */
-  value?: string | number;
+  value?: RadioValueType;
   /** Whether the radio is checked (controlled, standalone usage) */
   checked?: boolean;
   /** Default checked state (uncontrolled, standalone usage) */
@@ -20,19 +53,25 @@ export interface RadioProps
   description?: ReactNode;
   /** Position of the radio relative to the label */
   direction?: 'left' | 'right';
-  /** Callback when checked state changes (standalone usage) */
-  onChange?: (checked: boolean) => void;
+  /** Callback when checked state changes */
+  onChange?: (event: RadioChangeEvent) => void;
 }
 
 export interface RadioOptionItem {
   /** Value that identifies this option */
-  value: string | number;
+  value: RadioValueType;
+  /** HTML id attribute for the underlying radio input */
+  id?: string;
   /** Label text displayed next to the radio */
   label?: ReactNode;
   /** Description text displayed below the label */
   description?: ReactNode;
   /** Whether this specific option is disabled */
   disabled?: boolean;
+  /** Whether this specific option is required */
+  required?: boolean;
+  /** Title attribute for the underlying radio input */
+  title?: string;
 }
 
 export interface RadioGroupProps {
@@ -40,9 +79,11 @@ export interface RadioGroupProps {
   prefixCls?: string;
   className?: string;
   /** Currently selected value (controlled) */
-  value?: string | number;
+  value?: RadioValueType;
   /** Default selected value (uncontrolled) */
-  defaultValue?: string | number;
+  defaultValue?: RadioValueType;
+  /** HTML id attribute for the root radiogroup container */
+  id?: string;
   /** HTML name attribute for native radio grouping */
   name?: string;
   /** Disables all radios in the group */
@@ -53,10 +94,14 @@ export interface RadioGroupProps {
   direction?: 'left' | 'right';
   /** Gap between radio items — accepts spacing token key or CSS value */
   gap?: number | string;
+  /** Title attribute for the root radiogroup container */
+  title?: string;
+  'aria-label'?: string;
+  'aria-labelledby'?: string;
   /** Quick-render mode: array of radio options */
   options?: RadioOptionItem[];
   /** Custom Radio children (takes precedence over options) */
   children?: ReactNode;
   /** Callback when the selected value changes */
-  onChange?: (value: string | number) => void;
+  onChange?: (event: RadioChangeEvent) => void;
 }

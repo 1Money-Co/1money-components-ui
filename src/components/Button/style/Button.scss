@@ -99,13 +99,50 @@ $button-variants: (
   &-small {
     @include theme.typography(body, sm, $strong: true);
 
-    padding: theme.spacing(component-padding, 200);
+    padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
     line-height: 1.33;
     border-radius: theme.shape(200);
   }
 
   &-rounded {
     border-radius: theme.shape('full');
+  }
+
+  // ── Text variant ──
+  &-text {
+    --om-button-text: #{theme.palette(text, 'brand')};
+    --om-button-bg: transparent;
+    --om-button-hover-bg: transparent;
+    --om-button-disabled-text: #{theme.palette(text, 'brand-secondary')};
+    --om-button-disabled-bg: transparent;
+
+    padding: 0;
+    border-radius: 0;
+
+    &:hover:not(:disabled) {
+      --om-button-text: #{theme.palette(text, 'on-brand-secondary')};
+
+      color: var(--om-button-text);
+    }
+  }
+
+  // Text variant: size-specific typography
+  &-text#{&}-large {
+    @include theme.typography(headline, xs);
+
+    line-height: 1.08;
+  }
+
+  &-text#{&}-medium {
+    @include theme.typography(body, lg, $strong: true);
+
+    line-height: 1.4;
+  }
+
+  &-text#{&}-small {
+    @include theme.typography(body, md, $strong: true);
+
+    line-height: 1.4;
   }
 
   // ── Icon slots ──

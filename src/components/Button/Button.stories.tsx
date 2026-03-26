@@ -9,6 +9,7 @@ import './style';
 
 const COLORS = ['primary', 'secondary', 'grey', 'black', 'white', 'danger', 'warning'] as const;
 const SIZES = ['large', 'medium', 'small'] as const;
+const VARIANTS = ['contained', 'text'] as const;
 
 const columnStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 32 };
 const sectionHeaderStyle: React.CSSProperties = { marginBottom: 12 };
@@ -23,6 +24,7 @@ const meta: Meta<typeof Button> = {
     rounded: { control: 'boolean' },
     size: { control: 'radio', options: [...SIZES] },
     color: { control: 'radio', options: [...COLORS] },
+    variant: { control: 'radio', options: [...VARIANTS] },
   },
   args: {
     children: 'Button',
@@ -31,6 +33,7 @@ const meta: Meta<typeof Button> = {
     rounded: false,
     size: 'medium',
     color: 'primary',
+    variant: 'contained',
     onClick: fn(),
   },
   tags: ['autodocs'],
@@ -141,6 +144,47 @@ export const WithBothIcons: Story = {
   render: (args) => (
     <Button {...args} iconStart={<Icons name="add" />} iconEnd={<Icons name="arrowRight" />}>
       Both Icons
+    </Button>
+  ),
+};
+
+export const TextVariant: Story = {
+  render: (args) => (
+    <div style={columnStyle}>
+      {SIZES.map((size) => (
+        <div key={size}>
+          <h3 style={sectionHeaderStyle}>Text - {size}</h3>
+          <div style={rowStyle}>
+            <Button {...args} variant="text" size={size}>
+              Button
+            </Button>
+            <Button {...args} variant="text" size={size} disabled>
+              Disabled
+            </Button>
+            <Button {...args} variant="text" size={size} loading>
+              Loading
+            </Button>
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+  args: {
+    children: undefined,
+  },
+};
+
+export const TextDefault: Story = {
+  args: {
+    variant: 'text',
+    children: 'Text Button',
+  },
+};
+
+export const TextWithIcon: Story = {
+  render: (args) => (
+    <Button {...args} variant="text" iconEnd={<Icons name="arrowRight" />}>
+      Learn More
     </Button>
   ),
 };

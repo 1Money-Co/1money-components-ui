@@ -656,6 +656,7 @@ Use `theme.sizing(scale, key)` for percentage sizing and `theme.sizing(component
 | `overlay` | 0.4 |
 | `disabled` | 0.5 |
 | `disabled-heavy` | 0.6 |
+| `strong` | 0.8 |
 
 ### Semantic Color Token Reference
 
@@ -706,3 +707,12 @@ Use these patterns when choosing token names for interactive states:
 | `{group}` | `{group}-hover` | `disabled` or `disabled-{modifier}` |
 | `{group}-secondary` | `{group}-secondary-hover` | `{group}-tertiary` |
 | `{group}-tertiary` | `{group}-tertiary-hover` | `disabled` |
+
+#### Utility background tokens
+
+Use these for overlay and scrim surfaces that do not belong to the default/brand/status ladders:
+
+| Token | Value | Typical usage |
+|-------|-------|---------------|
+| `scrim-dark` | `rgba(0, 0, 0, 0.2)` | Dark modal/page scrim overlays |
+| `scrim-light` | `rgba(255, 255, 255, 0.8)` | Light frosted or inverse overlay surfaces |
