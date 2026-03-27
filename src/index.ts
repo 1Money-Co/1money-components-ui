@@ -26,12 +26,14 @@ export {
   ProFormCheckbox,
   ProFormCheckboxGroup,
   ProFormSwitch,
+  ProFormSelect,
   ModalForm,
   QueryFilter,
   useProFormContext,
 } from './components/ProForm';
 export { Pagination } from './components/Pagination';
 export { Radio, RadioGroup } from './components/Radio';
+export { Select } from './components/Select';
 export { Segment } from './components/Segment';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
@@ -102,6 +104,18 @@ export type {
   RadioProps,
   RadioValueType,
 } from './components/Radio';
+export type {
+  SelectMultipleValue,
+  SelectOption,
+  SelectOptionValue,
+  SelectProps,
+  SelectRenderOptionMeta,
+  SelectRenderValueMeta,
+  SelectSingleValue,
+  SelectSize,
+  SelectStatus,
+  SelectValue,
+} from './components/Select';
 export type { SegmentProps, SegmentItem } from './components/Segment';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';

@@ -17,7 +17,7 @@ const FormBase = forwardRef<FormInstance, FormProps>((props, ref) => {
     onReset,
     size = 'middle',
     layout = 'vertical',
-    labelAlign = 'right',
+    labelAlign = 'left',
     labelCol = {},
     wrapperCol = {},
     disabled = false,

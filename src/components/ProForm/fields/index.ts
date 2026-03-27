@@ -5,3 +5,4 @@ export { ProFormTextArea } from './ProFormTextArea';
 export { ProFormCheckbox } from './ProFormCheckbox';
 export { ProFormCheckboxGroup } from './ProFormCheckboxGroup';
 export { ProFormSwitch } from './ProFormSwitch';
+export { ProFormSelect } from './ProFormSelect';

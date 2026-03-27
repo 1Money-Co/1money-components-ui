@@ -284,6 +284,7 @@
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
+    "@floating-ui/react": "^0.27.19",
     "bignumber.js": "^9.3.0",
     "classnames": "~2.2.6",
     "lodash.debounce": "^4.0.8",
