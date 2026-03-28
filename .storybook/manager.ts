@@ -2,5 +2,9 @@ import { addons } from '@storybook/manager-api';
 import theme from './theme';
 
 addons.setConfig({
+  panelPosition: 'right',
+  sidebar: {
+    showRoots: true,
+  },
   theme,
 });

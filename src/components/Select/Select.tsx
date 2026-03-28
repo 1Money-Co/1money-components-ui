@@ -18,26 +18,35 @@ import { memo, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { joinCls, default as rootClassnames } from '@/utils/classnames';
-import type { FocusEvent, FC, KeyboardEvent as ReactKeyboardEvent, MouseEvent as ReactMouseEvent } from 'react';
+import type {
+  ChangeEvent,
+  FocusEvent,
+  FC,
+  KeyboardEvent as ReactKeyboardEvent,
+  MouseEvent as ReactMouseEvent,
+} from 'react';
 import type {
   SelectOption,
   SelectOptionValue,
   SelectProps,
   SelectRenderOptionMeta,
   SelectRenderValueMeta,
-  SelectSize,
   SelectValue,
 } from './interface';
 import SelectFieldShell from './SelectFieldShell';
 import SelectOptionContent from './SelectOptionContent';
+import SelectSearchControl from './SelectSearchControl';
 import SelectValueContent from './SelectValueContent';
 import {
   extractOptionText,
+  filterOptionGroups,
+  flattenOptionGroups,
   getMultipleValue,
   getOptionsByValues,
   getSelectedOptions,
   isOptionSelected,
   normalizeSize,
+  normalizeOptionGroups,
   removeMultipleValue,
   toggleMultipleValue,
 } from './utils';
@@ -62,6 +71,11 @@ export const Select: FC<SelectProps> = (props) => {
     variant = 'fill',
     disabled = false,
     multiple = false,
+    maxVisibleValues,
+    searchable = false,
+    searchPlaceholder = 'Search',
+    searchValue,
+    defaultSearchValue = '',
     label,
     info,
     description,
@@ -69,12 +83,15 @@ export const Select: FC<SelectProps> = (props) => {
     required = false,
     prefix,
     emptyContent = 'No options',
+    panelFooter,
     open,
     defaultOpen = false,
     listMaxHeight = DEFAULT_MAX_HEIGHT,
     onChange,
     onOpenChange,
+    onSearchChange,
     onBlur,
+    filterOption,
     renderOption,
     renderValue,
     ref,
@@ -92,25 +109,54 @@ export const Select: FC<SelectProps> = (props) => {
     value,
   );
   const [innerOpen, setInnerOpen] = useControlledState(defaultOpen, open);
+  const [innerSearchValue, setInnerSearchValue] = useControlledState(
+    defaultSearchValue,
+    searchValue,
+  );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const normalizedSize = normalizeSize(size);
+  const allOptionGroups = useMemo(
+    () => normalizeOptionGroups(options),
+    [options],
+  );
+  const allFlatOptions = useMemo(
+    () => flattenOptionGroups(allOptionGroups),
+    [allOptionGroups],
+  );
+  const visibleOptionGroups = useMemo(
+    () => (
+      searchable
+        ? filterOptionGroups(allOptionGroups, innerSearchValue, filterOption)
+        : allOptionGroups
+    ),
+    [allOptionGroups, filterOption, innerSearchValue, searchable],
+  );
+  const visibleFlatOptions = useMemo(
+    () => flattenOptionGroups(visibleOptionGroups),
+    [visibleOptionGroups],
+  );
   const selectedOptions = useMemo(
-    () => getSelectedOptions(options, innerValue, multiple),
-    [options, innerValue, multiple],
+    () => getSelectedOptions(allFlatOptions, innerValue, multiple),
+    [allFlatOptions, innerValue, multiple],
   );
   const selectedIndex = useMemo(() => {
     if (selectedOptions.length === 0) {
       return null;
     }
 
-    return options.findIndex((option) => option.value === selectedOptions[0].value);
-  }, [options, selectedOptions]);
+    const matchedIndex = visibleFlatOptions.findIndex(
+      (option) => option.value === selectedOptions[0].value,
+    );
+
+    return matchedIndex >= 0 ? matchedIndex : null;
+  }, [selectedOptions, visibleFlatOptions]);
   const hasSelection = selectedOptions.length > 0;
   const listRef = useRef<Array<HTMLButtonElement | null>>([]);
   const listContentRef = useRef<Array<string | null>>([]);
   const floatingRef = useRef<HTMLDivElement | null>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleTriggerRef = useEventCallback((node: HTMLButtonElement | null) => {
     triggerRef.current = node;
@@ -174,7 +220,7 @@ export const Select: FC<SelectProps> = (props) => {
     listRef: listContentRef,
     activeIndex,
     selectedIndex,
-    enabled: innerOpen,
+    enabled: innerOpen && !searchable,
     onMatch: setActiveIndex,
   });
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions([
@@ -186,8 +232,20 @@ export const Select: FC<SelectProps> = (props) => {
   ]);
 
   const firstEnabledIndex = useMemo(
-    () => options.findIndex((option) => !option.disabled),
-    [options],
+    () => visibleFlatOptions.findIndex((option) => !option.disabled),
+    [visibleFlatOptions],
+  );
+  const lastEnabledIndex = useMemo(
+    () => {
+      for (let index = visibleFlatOptions.length - 1; index >= 0; index -= 1) {
+        if (!visibleFlatOptions[index]?.disabled) {
+          return index;
+        }
+      }
+
+      return null;
+    },
+    [visibleFlatOptions],
   );
 
   useEffect(() => {
@@ -197,25 +255,40 @@ export const Select: FC<SelectProps> = (props) => {
     }
 
     setActiveIndex((prev) => {
-      if (prev !== null && options[prev] && !options[prev].disabled) {
+      if (prev !== null && visibleFlatOptions[prev] && !visibleFlatOptions[prev].disabled) {
         return prev;
       }
 
-      if (selectedIndex !== null && options[selectedIndex] && !options[selectedIndex].disabled) {
+      if (
+        selectedIndex !== null &&
+        visibleFlatOptions[selectedIndex] &&
+        !visibleFlatOptions[selectedIndex].disabled
+      ) {
         return selectedIndex;
       }
 
       return firstEnabledIndex >= 0 ? firstEnabledIndex : null;
     });
-  }, [firstEnabledIndex, innerOpen, options, selectedIndex]);
+  }, [firstEnabledIndex, innerOpen, selectedIndex, visibleFlatOptions]);
 
   useEffect(() => {
-    if (!innerOpen || activeIndex === null) {
+    if (!innerOpen || activeIndex === null || searchable) {
       return;
     }
 
     listRef.current[activeIndex]?.focus();
-  }, [activeIndex, innerOpen]);
+  }, [activeIndex, innerOpen, searchable]);
+
+  useEffect(() => {
+    listRef.current = listRef.current.slice(0, visibleFlatOptions.length);
+    listContentRef.current = listContentRef.current.slice(0, visibleFlatOptions.length);
+  }, [visibleFlatOptions.length]);
+
+  useEffect(() => {
+    if (innerOpen && searchable) {
+      searchInputRef.current?.focus();
+    }
+  }, [innerOpen, searchable]);
 
   const notifyBlurIfOutside = useEventCallback((relatedTarget: EventTarget | null, event?: FocusEvent<HTMLElement>) => {
     const nextTarget = relatedTarget as Node | null;
@@ -247,7 +320,7 @@ export const Select: FC<SelectProps> = (props) => {
 
     if (multiple) {
       const nextValue = toggleMultipleValue(innerValue, option.value);
-      const nextOptions = getOptionsByValues(options, nextValue);
+      const nextOptions = getOptionsByValues(allFlatOptions, nextValue);
       commitChange(nextValue, nextOptions);
       return;
     }
@@ -268,7 +341,7 @@ export const Select: FC<SelectProps> = (props) => {
     }
 
     const nextValue = removeMultipleValue(innerValue, optionValue);
-    const nextOptions = getOptionsByValues(options, nextValue);
+    const nextOptions = getOptionsByValues(allFlatOptions, nextValue);
     commitChange(nextValue, nextOptions);
   });
 
@@ -292,7 +365,7 @@ export const Select: FC<SelectProps> = (props) => {
   });
 
   const handleItemMouseEnter = useEventCallback((index: number) => {
-    if (!options[index]?.disabled) {
+    if (!visibleFlatOptions[index]?.disabled) {
       setActiveIndex(index);
     }
   });
@@ -302,15 +375,56 @@ export const Select: FC<SelectProps> = (props) => {
     event.stopPropagation();
   });
 
+  const handleTagRemoveClick = useEventCallback((event: ReactMouseEvent<HTMLSpanElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
+  const handleSearchBlur = useEventCallback((event: FocusEvent<HTMLInputElement>) => {
+    notifyBlurIfOutside(event.relatedTarget, event as FocusEvent<HTMLElement>);
+  });
+
+  const handleSearchChange = useEventCallback((nextValue: string, _event: ChangeEvent<HTMLInputElement>) => {
+    setInnerSearchValue(nextValue);
+    onSearchChange?.(nextValue);
+  });
+
+  const handleSearchKeyDown = useEventCallback((event: ReactKeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'ArrowDown' && firstEnabledIndex >= 0) {
+      event.preventDefault();
+      setActiveIndex(firstEnabledIndex);
+      listRef.current[firstEnabledIndex]?.focus();
+      return;
+    }
+
+    if (event.key === 'ArrowUp' && lastEnabledIndex !== null) {
+      event.preventDefault();
+      setActiveIndex(lastEnabledIndex);
+      listRef.current[lastEnabledIndex]?.focus();
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      handleOpenChange(false);
+      triggerRef.current?.focus();
+    }
+  });
+
   const renderValueMeta: SelectRenderValueMeta = {
     disabled,
     multiple,
+    maxVisibleValues,
     open: innerOpen,
     placeholder: !hasSelection,
     selectedOptions,
   };
   const valueLabelClass = hasSelection ? 'value' : 'placeholder';
-  const isMultipleValueFilled = multiple && hasSelection;
+  const isMultipleValueFilled = (
+    multiple &&
+    hasSelection &&
+    maxVisibleValues === undefined
+  );
   const triggerClassName = classes(
     'trigger',
     joinCls(
@@ -382,7 +496,9 @@ export const Select: FC<SelectProps> = (props) => {
               renderValue={renderValue}
               renderValueMeta={renderValueMeta}
               selectedOptions={selectedOptions}
+              maxVisibleValues={maxVisibleValues}
               onRemove={handleRemoveSelectedValue}
+              onRemoveClick={handleTagRemoveClick}
               onRemoveMouseDown={handleTagRemoveMouseDown}
             />
           </span>
@@ -406,58 +522,92 @@ export const Select: FC<SelectProps> = (props) => {
                 style: floatingStyles,
               })}
             >
-              {options.length === 0 ? (
-                <div className={classes('empty')}>{emptyContent}</div>
-              ) : (
-                options.map((option, index) => {
-                  const selected = isOptionSelected(innerValue, multiple, option.value);
-                  const active = activeIndex === index;
-                  const optionMeta: SelectRenderOptionMeta = {
-                    active,
-                    disabled: !!option.disabled,
-                    index,
-                    multiple,
-                    open: innerOpen,
-                    selected,
-                  };
+              {searchable && (
+                <SelectSearchControl
+                  ref={searchInputRef}
+                  classes={classes}
+                  placeholder={searchPlaceholder}
+                  value={innerSearchValue}
+                  onBlur={handleSearchBlur}
+                  onChange={handleSearchChange}
+                  onKeyDown={handleSearchKeyDown}
+                />
+              )}
+              <div className={classes('panel-body')}>
+                {visibleFlatOptions.length === 0 ? (
+                  <div className={classes('empty')}>{emptyContent}</div>
+                ) : (
+                  (() => {
+                    let flatIndex = 0;
 
-                  listContentRef.current[index] = extractOptionText(option);
+                    return visibleOptionGroups.map((group) => (
+                      <div key={group.key} className={classes('group')}>
+                        {group.label && (
+                          <div className={classes('group-label')}>{group.label}</div>
+                        )}
+                        {group.options.map((option) => {
+                          const optionFlatIndex = flatIndex;
+                          flatIndex += 1;
 
-                  return (
-                    <button
-                      key={option.value}
-                      {...getItemProps({
-                        ref(node: HTMLButtonElement | null) {
-                          listRef.current[index] = node;
-                        },
-                        type: 'button',
-                        role: 'option',
-                        className: classes(
-                          'option',
-                          joinCls(
-                            active && classes('option-active'),
-                            selected && classes('option-selected'),
-                            option.disabled && classes('option-disabled'),
-                          ),
-                        ),
-                        disabled: option.disabled,
-                        'aria-selected': selected,
-                        onClick: (event: ReactMouseEvent<HTMLButtonElement>) => {
-                          event.preventDefault();
-                          handleSelectOption(option);
-                        },
-                        onMouseEnter: () => handleItemMouseEnter(index),
-                        onBlur: handleOptionBlur,
-                      })}
-                    >
-                      {renderOption ? (
-                        renderOption(option, optionMeta)
-                      ) : (
-                        <SelectOptionContent classes={classes} option={option} selected={selected} />
-                      )}
-                    </button>
-                  );
-                })
+                          const selected = isOptionSelected(innerValue, multiple, option.value);
+                          const active = activeIndex === optionFlatIndex;
+                          const optionMeta: SelectRenderOptionMeta = {
+                            active,
+                            disabled: !!option.disabled,
+                            index: optionFlatIndex,
+                            multiple,
+                            open: innerOpen,
+                            selected,
+                          };
+
+                          listContentRef.current[optionFlatIndex] = extractOptionText(option);
+
+                          return (
+                            <button
+                              key={option.value}
+                              {...getItemProps({
+                                ref(node: HTMLButtonElement | null) {
+                                  listRef.current[optionFlatIndex] = node;
+                                },
+                                type: 'button',
+                                role: 'option',
+                                className: classes(
+                                  'option',
+                                  joinCls(
+                                    active && classes('option-active'),
+                                    selected && classes('option-selected'),
+                                    option.disabled && classes('option-disabled'),
+                                  ),
+                                ),
+                                disabled: option.disabled,
+                                'aria-selected': selected,
+                                onClick: (event: ReactMouseEvent<HTMLButtonElement>) => {
+                                  event.preventDefault();
+                                  handleSelectOption(option);
+                                },
+                                onMouseEnter: () => handleItemMouseEnter(optionFlatIndex),
+                                onBlur: handleOptionBlur,
+                              })}
+                            >
+                              {renderOption ? (
+                                renderOption(option, optionMeta)
+                              ) : (
+                                <SelectOptionContent
+                                  classes={classes}
+                                  option={option}
+                                  selected={selected}
+                                />
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    ));
+                  })()
+                )}
+              </div>
+              {panelFooter != null && (
+                <div className={classes('panel-footer')}>{panelFooter}</div>
               )}
             </div>
           </FloatingFocusManager>

@@ -117,21 +117,6 @@ export const Large: Story = {
   render: (args) => <ModalLauncher {...args} />,
 };
 
-export const WithCustomFooter: Story = {
-  args: {
-    size: 'large',
-    illustration: 'illus2FA',
-    footer: (cancelButton, okButton) => (
-      <>
-        {cancelButton}
-        <Button color="black">Secondary action</Button>
-        {okButton}
-      </>
-    ),
-  },
-  render: (args) => <ModalLauncher {...args} />,
-};
-
 export const WithMedia: Story = {
   args: {
     size: 'small',

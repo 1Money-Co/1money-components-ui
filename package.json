@@ -224,6 +224,11 @@
       "import": "./es/components/Tooltip/index.js",
       "require": "./lib/components/Tooltip/index.js"
     },
+    "./Trigger": {
+      "types": "./es/components/Trigger/index.d.ts",
+      "import": "./es/components/Trigger/index.js",
+      "require": "./lib/components/Trigger/index.js"
+    },
     "./Typography": {
       "types": "./es/components/Typography/index.d.ts",
       "import": "./es/components/Typography/index.js",

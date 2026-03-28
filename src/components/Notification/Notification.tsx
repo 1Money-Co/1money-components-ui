@@ -1,16 +1,17 @@
 import { memo } from 'react';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Icons } from '@/components/Icons';
-import type { FC, ReactElement } from 'react';
-import type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './interface';
+import type { IconName } from '@/components/Icons';
+import type { FC } from 'react';
+import type { NotificationLinkConfig, NotificationProps, NotificationStatus } from './interface';
 
 const CLOSE_NOTIFICATION_ARIA_LABEL = 'Close notification';
 
-const STATUS_ICON_MAP: Record<NotificationStatus, ReactElement> = {
-  info: <Icons name="notificationInfo" size={32} />,
-  success: <Icons name="notificationSuccess" size={32} />,
-  warning: <Icons name="notificationWarning" size={32} />,
-  error: <Icons name="notificationError" size={32} />,
+const STATUS_ICON_NAME: Record<NotificationStatus, IconName> = {
+  info: 'notificationInfo',
+  success: 'notificationSuccess',
+  warning: 'notificationWarning',
+  error: 'notificationError',
 };
 
 const NotificationLink: FC<{
@@ -44,7 +45,7 @@ const NotificationLink: FC<{
   );
 };
 
-export const Notification: FC<NotificationProps> = props => {
+const Notification: FC<NotificationProps> = props => {
   const {
     className = '',
     prefixCls = 'notification',
@@ -61,7 +62,7 @@ export const Notification: FC<NotificationProps> = props => {
   } = props;
 
   const classes = classnames(prefixCls);
-  const iconElement = icon ?? STATUS_ICON_MAP[status];
+  const iconElement = icon ?? <Icons name={STATUS_ICON_NAME[status]} size={32} />;
 
   return (
     <div
@@ -100,4 +101,7 @@ export const Notification: FC<NotificationProps> = props => {
   );
 };
 
-export default memo(Notification);
+const MemoizedNotification = memo(Notification);
+
+export { Notification, MemoizedNotification };
+export default MemoizedNotification;

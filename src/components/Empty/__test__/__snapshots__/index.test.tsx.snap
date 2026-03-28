@@ -13,7 +13,7 @@ exports[`Empty renders correctly 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -38,12 +38,12 @@ exports[`Empty renders correctly 1`] = `
           class="om-react-ui-empty-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-tertiary om-react-ui-typography-strong"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-neutral-secondary om-react-ui-typography-strong"
           >
             No record found
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
           >
             Try adjusting your filters
           </span>
@@ -60,7 +60,7 @@ exports[`Empty renders correctly 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -85,12 +85,12 @@ exports[`Empty renders correctly 1`] = `
         class="om-react-ui-empty-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-tertiary om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-neutral-secondary om-react-ui-typography-strong"
         >
           No record found
         </div>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
         >
           Try adjusting your filters
         </span>
@@ -164,7 +164,7 @@ exports[`Empty renders fill variant 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -189,7 +189,7 @@ exports[`Empty renders fill variant 1`] = `
           class="om-react-ui-empty-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
           >
             No data available
           </span>
@@ -206,7 +206,7 @@ exports[`Empty renders fill variant 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -231,7 +231,7 @@ exports[`Empty renders fill variant 1`] = `
         class="om-react-ui-empty-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
         >
           No data available
         </span>
@@ -305,7 +305,7 @@ exports[`Empty renders with action 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -330,7 +330,7 @@ exports[`Empty renders with action 1`] = `
           class="om-react-ui-empty-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
           >
             You don't have any bank accounts linked
           </span>
@@ -354,7 +354,7 @@ exports[`Empty renders with action 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -379,7 +379,7 @@ exports[`Empty renders with action 1`] = `
         class="om-react-ui-empty-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
         >
           You don't have any bank accounts linked
         </span>
@@ -466,7 +466,7 @@ exports[`Empty renders with custom icon element 1`] = `
           class="om-react-ui-empty-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
           >
             Custom icon test
           </span>
@@ -489,7 +489,7 @@ exports[`Empty renders with custom icon element 1`] = `
         class="om-react-ui-empty-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
         >
           Custom icon test
         </span>

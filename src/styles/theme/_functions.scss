@@ -1,5 +1,6 @@
 // Theme functions — generate CSS variable references, themed accessors, and typography vars.
 @use 'sass:list';
+@use 'sass:math';
 @use 'sass:map';
 @use 'sass:meta';
 @use './scales' as scales;
@@ -148,6 +149,35 @@
   $-entry: tokens.om-typography($category, $size);
 
   @return var(#{-om-typography-var-name($category, $size, line-height)});
+}
+
+@function -om-line-height-ratio($category, $size) {
+  $entry: tokens.om-typography($category, $size);
+  $line-height: map.get($entry, line-height);
+
+  @if meta.type-of($line-height) != 'number' {
+    @error 'Line-height for "#{$category}/#{$size}" must be a number.';
+  }
+
+  @if math.is-unitless($line-height) {
+    @return $line-height;
+  }
+
+  @if math.unit($line-height) == '%' {
+    @return math.div($line-height, 100%);
+  }
+
+  $font-size: map.get($entry, font-size);
+
+  @if meta.type-of($font-size) != 'number' or math.is-unitless($font-size) {
+    @error 'Font-size for "#{$category}/#{$size}" must be a sized number.';
+  }
+
+  @return math.div($line-height, $font-size);
+}
+
+@function om-line-height-px($category, $size) {
+  @return calc(#{om-font-size($category, $size)} * #{-om-line-height-ratio($category, $size)});
 }
 
 @function om-font-weight($category, $size) {

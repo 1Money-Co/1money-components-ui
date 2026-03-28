@@ -1,6 +1,6 @@
 # Grid
 
-A responsive 12-column layout system modeled after Ant Design's Row/Col, built with flexbox and consistent gutters.
+A responsive 12-column layout system, built with flexbox and consistent gutters.
 
 ## Features
 

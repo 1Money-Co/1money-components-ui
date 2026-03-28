@@ -21,6 +21,7 @@ export const Switch: FC<SwitchProps> = props => {
     labelPlacement = 'left',
     onChange,
     ref,
+    ...rest
   } = props;
 
   const [innerChecked, setInnerChecked] = useControlledState(
@@ -29,6 +30,8 @@ export const Switch: FC<SwitchProps> = props => {
   );
 
   const classes = classnames(prefixCls);
+  const labelColor = disabled ? 'disabled' : 'default';
+  const descriptionColor = disabled ? 'disabled' : 'default-tertiary';
 
   const inferredAriaLabel =
     typeof label === 'string' || typeof label === 'number'
@@ -47,14 +50,12 @@ export const Switch: FC<SwitchProps> = props => {
   const switchElement = (
     <span className={classes('track-wrapper')}>
       <input
+        {...rest}
         className={classes('input')}
         type="checkbox"
         role="switch"
         id={id}
         name={name}
-        aria-label={ariaLabel ?? inferredAriaLabel}
-        aria-labelledby={ariaLabelledBy}
-        aria-checked={innerChecked}
         disabled={disabled}
         checked={innerChecked}
         onChange={handleChange}
@@ -67,8 +68,8 @@ export const Switch: FC<SwitchProps> = props => {
 
   const labelElement = (label || description) && (
     <span className={classes('content')}>
-      {label && <TypographyBody size="lg" color="default">{label}</TypographyBody>}
-      {description && <TypographyBody size="md" color="default-secondary">{description}</TypographyBody>}
+      {label && <TypographyBody size="lg" color={labelColor}>{label}</TypographyBody>}
+      {description && <TypographyBody size="md" color={descriptionColor}>{description}</TypographyBody>}
     </span>
   );
 

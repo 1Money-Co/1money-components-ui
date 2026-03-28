@@ -1,0 +1,108 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction/Development" />
+
+<div className="doc-article">
+  <section className="doc-home-hero">
+    <div>
+      <p className="doc-home-kicker">Workflow</p>
+      <h1>Build components like a library, not like app pages.</h1>
+      <p className="doc-article-lead">
+        The repo is organized around reusable component modules, Storybook-driven validation, SCSS
+        design tokens, and dual library builds for CommonJS and ES module consumers.
+      </p>
+    </div>
+
+    <div className="doc-home-panel">
+      <div className="doc-home-info-card">
+        <span className="sb-docs-stat-label">Primary workspace</span>
+        <strong>`pnpm dev` starts Storybook on port 6205.</strong>
+      </div>
+      <div className="doc-home-info-card">
+        <span className="sb-docs-stat-label">Build output</span>
+        <strong>`lib/` for CommonJS and `es/` for ESM, generated through the omni-door pipeline.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Commands</p>
+      <h2>Day-to-day scripts</h2>
+      <p>These are the commands you will use most often while iterating on the component library.</p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>pnpm dev</code></td>
+          <td>Start Storybook locally.</td>
+        </tr>
+        <tr>
+          <td><code>pnpm test</code></td>
+          <td>Run the Jest suite.</td>
+        </tr>
+        <tr>
+          <td><code>pnpm lint</code></td>
+          <td>Run Prettier, ESLint, and Stylelint checks.</td>
+        </tr>
+        <tr>
+          <td><code>pnpm build</code></td>
+          <td>Generate CommonJS and ES module library output.</td>
+        </tr>
+        <tr>
+          <td><code>omni new ComponentName -f</code></td>
+          <td>Scaffold a new functional component module with stories and tests.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Checklist</p>
+      <h2>Expected contribution flow</h2>
+      <p>The docs site should stay aligned with the shipped package, so component work must stay deliberate.</p>
+    </div>
+
+    <div className="doc-home-card-grid">
+      <article className="doc-home-card">
+        <h3>1. Scaffold or extend the module</h3>
+        <p>Create the component folder, props interface, styles, and story coverage inside <code>src/components/ComponentName</code>.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>2. Wire Storybook early</h3>
+        <p>Use stories to validate base state, variants, disabled/loading states, and compositional edge cases before polishing implementation details.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>3. Keep exports and docs aligned</h3>
+        <p>Update <code>src/index.ts</code>, package exports, and the component README when a public API changes.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>4. Validate before release</h3>
+        <p>Run linting, tests, and build output generation so consumers get both correct typings and correct CSS.</p>
+      </article>
+    </div>
+  </section>
+
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Conventions</p>
+      <h2>What contributors should preserve</h2>
+      <p>The library only stays coherent when component APIs, styling boundaries, and docs are treated as one system.</p>
+    </div>
+
+    <ul>
+      <li>Prefer precise interfaces over <code>any</code> and keep public prop types exported.</li>
+      <li>Use the internal SCSS API rather than direct token or system imports inside components.</li>
+      <li>Keep spacing on the 4px grid and avoid hardcoded colors when tokens already exist.</li>
+      <li>Document meaningful public behavior in the component README so Storybook can surface it.</li>
+    </ul>
+  </section>
+</div>

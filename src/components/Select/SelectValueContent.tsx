@@ -14,17 +14,22 @@ interface SelectValueContentProps {
   classes: ClassNamesFn;
   hasSelection: boolean;
   multiple: boolean;
+  maxVisibleValues?: number;
   placeholder: ReactNode;
   renderValue?: SelectProps['renderValue'];
   renderValueMeta: SelectRenderValueMeta;
   selectedOptions: SelectOption[];
   onRemove: (optionValue: SelectOptionValue) => void;
+  onRemoveClick: (event: ReactMouseEvent<HTMLSpanElement>) => void;
   onRemoveMouseDown: (event: ReactMouseEvent<HTMLSpanElement>) => void;
 }
 
 const DefaultMultipleValueContent: FC<
-  Pick<SelectValueContentProps, 'classes' | 'selectedOptions' | 'onRemove' | 'onRemoveMouseDown'>
-> = ({ classes, selectedOptions, onRemove, onRemoveMouseDown }) => (
+  Pick<
+    SelectValueContentProps,
+    'classes' | 'selectedOptions' | 'onRemove' | 'onRemoveClick' | 'onRemoveMouseDown'
+  >
+> = ({ classes, selectedOptions, onRemove, onRemoveClick, onRemoveMouseDown }) => (
   <>
     {selectedOptions.map((option) => (
       <span key={option.value} className={classes('tag')}>
@@ -32,11 +37,11 @@ const DefaultMultipleValueContent: FC<
         <span
           className={classes('tag-remove')}
           aria-hidden="true"
-          onMouseDown={onRemoveMouseDown}
-          onClick={(event) => {
+          onMouseDown={(event) => {
             onRemoveMouseDown(event);
             onRemove(option.value);
           }}
+          onClick={onRemoveClick}
         >
           <Icons name="cross" size={12} color="currentColor" />
         </span>
@@ -45,15 +50,51 @@ const DefaultMultipleValueContent: FC<
   </>
 );
 
+const CollapsedMultipleValueContent: FC<
+  Pick<SelectValueContentProps, 'classes' | 'maxVisibleValues' | 'selectedOptions' | 'renderValueMeta'>
+> = ({ classes, maxVisibleValues, selectedOptions, renderValueMeta }) => {
+  const resolvedMaxVisibleValues = Math.max(0, Math.trunc(maxVisibleValues ?? 0));
+  const visibleLabels = selectedOptions
+    .slice(0, resolvedMaxVisibleValues)
+    .map((option) => getOptionTagLabel(option));
+  const hiddenCount = Math.max(0, selectedOptions.length - visibleLabels.length);
+
+  if (visibleLabels.length === 0 && hiddenCount === 0) {
+    return null;
+  }
+
+  return (
+    <span className={classes('collapsed-values')}>
+      {visibleLabels.length > 0 && (
+        <span className={classes('collapsed-values-list')}>
+          {visibleLabels.join(', ')}
+        </span>
+      )}
+      {hiddenCount > 0 && (
+        <span
+          className={classes(
+            'collapsed-values-extra',
+            renderValueMeta.disabled ? classes('collapsed-values-extra-disabled') : undefined,
+          )}
+        >
+          {`+ ${hiddenCount}...`}
+        </span>
+      )}
+    </span>
+  );
+};
+
 const SelectValueContentBase: FC<SelectValueContentProps> = ({
   classes,
   hasSelection,
   multiple,
+  maxVisibleValues,
   placeholder,
   renderValue,
   renderValueMeta,
   selectedOptions,
   onRemove,
+  onRemoveClick,
   onRemoveMouseDown,
 }) => {
   if (renderValue) {
@@ -71,11 +112,23 @@ const SelectValueContentBase: FC<SelectValueContentProps> = ({
     return getOptionTagLabel(selectedOptions[0]);
   }
 
+  if (maxVisibleValues !== undefined) {
+    return (
+      <CollapsedMultipleValueContent
+        classes={classes}
+        maxVisibleValues={maxVisibleValues}
+        selectedOptions={selectedOptions}
+        renderValueMeta={renderValueMeta}
+      />
+    );
+  }
+
   return (
     <DefaultMultipleValueContent
       classes={classes}
       selectedOptions={selectedOptions}
       onRemove={onRemove}
+      onRemoveClick={onRemoveClick}
       onRemoveMouseDown={onRemoveMouseDown}
     />
   );

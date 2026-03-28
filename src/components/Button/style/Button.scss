@@ -62,8 +62,10 @@ $button-variants: (
   @include variants.om-variant-default($button-variants, 'primary', $button-variant-schema);
   @include theme.typography(body, lg, $strong: true);
 
+  --om-button-gap: #{theme.spacing(gap, 200)};
+
   display: inline-flex;
-  gap: theme.spacing(gap, 200);
+  gap: var(--om-button-gap);
   align-items: center;
   justify-content: center;
   padding: theme.spacing(component-padding, 400);
@@ -115,6 +117,7 @@ $button-variants: (
     --om-button-hover-bg: transparent;
     --om-button-disabled-text: #{theme.palette(text, 'brand-secondary')};
     --om-button-disabled-bg: transparent;
+    --om-button-gap: #{theme.spacing(gap, 100)};
 
     padding: 0;
     border-radius: 0;

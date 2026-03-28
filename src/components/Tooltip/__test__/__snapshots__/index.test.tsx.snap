@@ -213,6 +213,107 @@ exports[`Tooltip renders in controlled open state 1`] = `
 }
 `;
 
+exports[`Tooltip renders in controlled open state with title 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip om-react-ui-tooltip-with-title react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+        id="test-controlled-title"
+        role="tooltip"
+      >
+        <div
+          class="om-react-ui-tooltip-title"
+        >
+          Title
+        </div>
+        <div
+          class="om-react-ui-tooltip-body"
+        >
+          Body text
+        </div>
+        <div
+          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip om-react-ui-tooltip-with-title react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+      id="test-controlled-title"
+      role="tooltip"
+    >
+      <div
+        class="om-react-ui-tooltip-title"
+      >
+        Title
+      </div>
+      <div
+        class="om-react-ui-tooltip-body"
+      >
+        Body text
+      </div>
+      <div
+        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Tooltip renders with bottom placement 1`] = `
 {
   "asFragment": [Function],

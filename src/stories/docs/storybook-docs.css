@@ -1,0 +1,401 @@
+.sb-docs-shell,
+.doc-home,
+.doc-article {
+  --sb-doc-accent: #1677ff;
+  --sb-doc-accent-soft: rgba(22, 119, 255, 12%);
+  --sb-doc-border: #e6ebf2;
+  --sb-doc-border-strong: #d7deea;
+  --sb-doc-text: #1f2329;
+  --sb-doc-text-secondary: #5b667a;
+  --sb-doc-surface: #fff;
+  --sb-doc-surface-muted: #f7f9fc;
+  --sb-doc-shadow: 0 18px 48px rgba(15, 23, 42, 8%);
+
+  color: var(--sb-doc-text);
+  font-family:
+    Aeonik,
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+.sb-docs-shell {
+  padding: 28px 24px 96px;
+}
+
+.sb-docs-layout {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.sb-docs-main,
+.doc-home,
+.doc-article {
+  min-width: 0;
+}
+
+.sb-docs-hero,
+.doc-home-hero,
+.doc-home-section,
+.doc-home-card,
+.sb-docs-section,
+.doc-home-chip,
+.doc-home-info-card {
+  background: var(--sb-doc-surface);
+  border: 1px solid var(--sb-doc-border);
+  border-radius: 24px;
+  box-shadow: var(--sb-doc-shadow);
+}
+
+.sb-docs-hero,
+.doc-home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 36px;
+  background:
+    radial-gradient(circle at top right, rgba(22, 119, 255, 14%), transparent 38%),
+    linear-gradient(180deg, #fff 0%, #fbfcff 100%);
+}
+
+.sb-docs-kicker,
+.doc-home-kicker,
+.sb-docs-section-kicker,
+.doc-home-card-kicker {
+  margin: 0 0 12px;
+  color: var(--sb-doc-accent);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sb-docs-title,
+.doc-home h1,
+.doc-article h1 {
+  margin: 0 0 16px;
+  color: #111827;
+  font-weight: 700;
+  font-size: clamp(34px, 4vw, 52px);
+  font-family:
+    Aeonik,
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.sb-docs-lead,
+.doc-home-lead,
+.doc-article-lead {
+  max-width: 760px;
+  margin: 0;
+  color: var(--sb-doc-text-secondary);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.sb-docs-description :where(p) {
+  max-width: 760px;
+  margin: 0;
+  color: var(--sb-doc-text-secondary);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.sb-docs-hero-panel {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.sb-docs-stat,
+.doc-home-panel,
+.doc-home-chip,
+.doc-home-info-card {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 82%);
+  border: 1px solid var(--sb-doc-border);
+  border-radius: 18px;
+}
+
+.sb-docs-stat-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--sb-doc-text-secondary);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sb-docs-stat strong,
+.doc-home-chip strong,
+.doc-home-info-card strong {
+  color: var(--sb-doc-text);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sb-docs-section,
+.doc-home-section {
+  margin-bottom: 24px;
+  padding: 28px;
+}
+
+.sb-docs-section-header,
+.doc-home-section-header {
+  margin-bottom: 20px;
+}
+
+.sb-docs-section-header h2,
+.doc-home-section h2,
+.doc-article h2 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.sb-docs-section-header p,
+.doc-home-section-header p,
+.doc-home-section > p,
+.doc-article > p {
+  margin: 0;
+  color: var(--sb-doc-text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sb-docs-markdown-grid,
+.doc-home-grid,
+.doc-home-card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.sb-docs-use-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sb-docs-use-list li {
+  position: relative;
+  padding: 16px 18px 16px 48px;
+  color: var(--sb-doc-text-secondary);
+  font-size: 15px;
+  line-height: 1.72;
+  background: var(--sb-doc-surface-muted);
+  border: 1px solid var(--sb-doc-border);
+  border-radius: 18px;
+}
+
+.sb-docs-use-list li::before {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #1677ff 0%, #69a8ff 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 0 6px rgba(22, 119, 255, 10%);
+  content: '';
+}
+
+.doc-home-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.doc-home-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+.doc-home-card,
+.sb-docs-markdown-card {
+  min-width: 0;
+  padding: 24px;
+  background: var(--sb-doc-surface-muted);
+  border: 1px solid var(--sb-doc-border);
+  border-radius: 20px;
+}
+
+.sb-docs-markdown-card h3,
+.doc-home-card h3,
+.doc-home-section h3,
+.doc-article h3 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.28;
+}
+
+.doc-home-card p,
+.doc-home-card li,
+.doc-home-section li,
+.doc-article li,
+.sb-docs-markdown-card p,
+.sb-docs-markdown-card li {
+  color: var(--sb-doc-text-secondary);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.doc-home-section :where(ul, ol),
+.doc-article :where(ul, ol),
+.sb-docs-markdown-card :where(ul, ol) {
+  padding-left: 20px;
+}
+
+.doc-home-section :where(pre, code),
+.doc-article :where(pre, code),
+.sb-docs-markdown-card :where(pre, code),
+.sb-docs-section :where(pre, code) {
+  font-family:
+    SFMono-Regular,
+    ui-monospace,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    monospace;
+}
+
+.doc-home-section :where(pre),
+.doc-article :where(pre),
+.sb-docs-markdown-card :where(pre),
+.sb-docs-section :where(pre) {
+  padding: 16px 18px;
+  overflow-x: auto;
+  color: #dbe7ff;
+  background: #0f172a;
+  border-radius: 16px;
+}
+
+.doc-home-section :where(code:not(pre code)),
+.doc-article :where(code:not(pre code)),
+.sb-docs-markdown-card :where(code:not(pre code)),
+.sb-docs-section :where(code:not(pre code)) {
+  padding: 0.18em 0.45em;
+  color: #1456b8;
+  background: rgba(22, 119, 255, 8%);
+  border-radius: 8px;
+}
+
+.doc-home-section :where(table),
+.doc-article :where(table),
+.sb-docs-markdown-card :where(table),
+.sb-docs-section :where(table) {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doc-home-section :where(th, td),
+.doc-article :where(th, td),
+.sb-docs-markdown-card :where(th, td),
+.sb-docs-section :where(th, td) {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--sb-doc-border);
+}
+
+.doc-home-section :where(th),
+.doc-article :where(th),
+.sb-docs-markdown-card :where(th),
+.sb-docs-section :where(th) {
+  color: #111827;
+  font-weight: 700;
+  font-size: 13px;
+  background: rgba(15, 23, 42, 3%);
+}
+
+.doc-home-section :where(td),
+.doc-article :where(td),
+.sb-docs-markdown-card :where(td),
+.sb-docs-section :where(td) {
+  color: var(--sb-doc-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.doc-home-panel {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.doc-home-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.doc-home-chip {
+  padding: 10px 14px;
+  background: var(--sb-doc-surface);
+  border-radius: 999px;
+}
+
+.doc-home-card-grid .doc-home-card,
+.doc-home-grid .doc-home-card {
+  margin: 0;
+}
+
+.doc-home-card p:last-child,
+.sb-docs-markdown-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 960px) {
+  .sb-docs-hero,
+  .doc-home-hero,
+  .doc-home-grid,
+  .doc-home-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (width <= 720px) {
+  .sb-docs-shell,
+  .doc-home,
+  .doc-article {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .sb-docs-hero,
+  .doc-home-hero,
+  .sb-docs-section,
+  .doc-home-section,
+  .doc-home-card,
+  .sb-docs-markdown-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .sb-docs-title,
+  .doc-home h1,
+  .doc-article h1 {
+    font-size: 34px;
+  }
+
+  .sb-docs-section-header h2,
+  .doc-home-section h2,
+  .doc-article h2 {
+    font-size: 26px;
+  }
+}

@@ -44,6 +44,12 @@ describe('Modal', () => {
     expect(screen.getByText('Body text')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Confirm' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
+
+    const closeButton = screen.getByRole('button', { name: 'Close modal' });
+    const closeIcon = closeButton.querySelector('svg');
+
+    expect(closeIcon).toHaveAttribute('width', '24');
+    expect(closeIcon).toHaveAttribute('height', '24');
   });
 
   it('calls onCancel when clicking the overlay if maskClosable is enabled', async () => {

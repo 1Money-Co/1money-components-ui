@@ -1,6 +1,6 @@
 # Space
 
-A layout helper component modeled after Ant Design's Space. It wraps each child and applies consistent spacing, optional alignment, wrapping, and split separators.
+A layout helper component. It wraps each child and applies consistent spacing, optional alignment, wrapping, and split separators.
 
 ## Features
 

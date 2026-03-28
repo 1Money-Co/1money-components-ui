@@ -1,0 +1,18 @@
+@use '@/styles/api' as theme;
+
+.om-trigger {
+  &-panel {
+    z-index: 1500;
+    padding: theme.spacing(component-padding, 200);
+    background-color: theme.palette(bg, 'default');
+    border: 1px solid theme.palette(border, 'neutral-tertiary');
+    border-radius: theme.shape(300);
+    box-shadow: theme.shadows(100);
+  }
+
+  &-arrow {
+    fill: theme.palette(bg, 'default');
+    stroke: theme.palette(border, 'neutral-tertiary');
+    stroke-width: 1px;
+  }
+}

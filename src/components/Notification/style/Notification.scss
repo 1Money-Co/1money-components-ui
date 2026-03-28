@@ -1,7 +1,7 @@
 @use '@/styles/api' as theme;
-@use '@/styles/recipes/variants' as variants;
 
 $component: 'notification';
+$notification-motion-duration: 240ms;
 
 // No icon variants needed — notification icons have built-in colors
 
@@ -51,7 +51,7 @@ $component: 'notification';
 
   // ── Title ──
   &-title {
-    @include theme.typography(title, sm);
+    @include theme.typography(title, sm, $strong: true);
 
     color: theme.palette(text, 'default-secondary');
   }
@@ -73,10 +73,6 @@ $component: 'notification';
     background: none;
     border: none;
     cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   // ── Close button ──
@@ -98,6 +94,107 @@ $component: 'notification';
 
     &:hover {
       color: theme.palette(icon, 'neutral');
+    }
+  }
+}
+
+.#{theme.$prefix}-#{$component}-viewport {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  pointer-events: none;
+}
+
+.#{theme.$prefix}-#{$component}-stack {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  --notification-motion-offset: calc(100% + #{theme.spacing(scale, 300)});
+
+  width: min(400px, calc(100vw - #{theme.spacing(component-padding, 400)} * 2));
+  max-width: calc(100vw - #{theme.spacing(component-padding, 400)} * 2);
+  pointer-events: none;
+
+  &-topLeft {
+    top: theme.spacing(component-padding, 400);
+    left: theme.spacing(component-padding, 400);
+
+    --notification-motion-offset: calc(-100% - #{theme.spacing(scale, 300)});
+  }
+
+  &-topRight {
+    top: theme.spacing(component-padding, 400);
+    right: theme.spacing(component-padding, 400);
+  }
+
+  &-bottomLeft {
+    bottom: theme.spacing(component-padding, 400);
+    left: theme.spacing(component-padding, 400);
+
+    --notification-motion-offset: calc(-100% - #{theme.spacing(scale, 300)});
+  }
+
+  &-bottomRight {
+    right: theme.spacing(component-padding, 400);
+    bottom: theme.spacing(component-padding, 400);
+  }
+}
+
+.#{theme.$prefix}-#{$component}-item {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows $notification-motion-duration ease,
+    margin-top $notification-motion-duration ease;
+  will-change: grid-template-rows, margin-top;
+
+  & + & {
+    margin-top: theme.spacing(gap, 300);
+  }
+
+  &-inner {
+    min-height: 0;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition:
+      transform $notification-motion-duration ease,
+      opacity $notification-motion-duration ease;
+    pointer-events: auto;
+    will-change: transform, opacity;
+  }
+
+  &-enter,
+  &-exit + & {
+    margin-top: 0;
+  }
+
+  &-active {
+    grid-template-rows: 1fr;
+  }
+
+  &-exit {
+    .#{theme.$prefix}-#{$component}-item-inner {
+      pointer-events: none;
+    }
+  }
+
+  &-exit-collapse {
+    grid-template-rows: 0fr;
+  }
+
+  &-enter,
+  &-exit {
+    .#{theme.$prefix}-#{$component}-item-inner {
+      transform: translate3d(var(--notification-motion-offset), 0, 0);
+      opacity: 0;
+    }
+  }
+
+  &-active {
+    .#{theme.$prefix}-#{$component}-item-inner {
+      transform: translate3d(0, 0, 0);
     }
   }
 }

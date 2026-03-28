@@ -25,6 +25,8 @@ const MODAL_CLOSE_TIMEOUT = 200;
 const DEFAULT_OK_TEXT = 'Confirm';
 const DEFAULT_CANCEL_TEXT = 'Cancel';
 const DEFAULT_ILLUSTRATION_SIZE = 74;
+const CLOSE_ICON_SIZE = 24;
+const BACK_ICON_SIZE = 24;
 
 type ModalActionKind = 'ok' | 'cancel';
 type ModalAction = (() => void | Promise<void>) | undefined;
@@ -347,7 +349,7 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     ? renderControlButton(
       prefixCls,
       'close',
-      closeIcon ?? <Icons name="cross" size={14} />,
+      closeIcon ?? <Icons name="cross" size={CLOSE_ICON_SIZE} />,
       handleCancel,
     )
     : null;
@@ -355,7 +357,7 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     ? renderControlButton(
       prefixCls,
       'back',
-      backIcon ?? <Icons name="arrowLeft" size={24} />,
+      backIcon ?? <Icons name="arrowLeft" size={BACK_ICON_SIZE} />,
       handleBack,
     )
     : null;

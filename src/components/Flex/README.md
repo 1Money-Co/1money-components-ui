@@ -1,6 +1,6 @@
 # Flex
 
-A layout helper component modeled after Ant Design's Flex. Provides a consistent API for flex direction, alignment, wrapping, and gap spacing.
+A layout helper component. Provides a consistent API for flex direction, alignment, wrapping, and gap spacing.
 
 ## Features
 

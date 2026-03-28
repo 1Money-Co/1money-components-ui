@@ -1,5 +1,6 @@
 import { Select } from '@/components/Select';
 import type { SelectOption, SelectProps } from '@/components/Select';
+import { flattenOptionGroups, normalizeOptionGroups } from '@/components/Select/utils';
 import { createProFormField } from './createProFormField';
 
 function toReadonlyText(value: unknown): string {
@@ -15,7 +16,7 @@ function toReadonlyText(value: unknown): string {
 }
 
 function renderReadonlyValue(value: unknown, props?: Partial<SelectProps>) {
-  const options = props?.options ?? [];
+  const options = flattenOptionGroups(normalizeOptionGroups(props?.options ?? []));
 
   if (Array.isArray(value)) {
     const labels = value

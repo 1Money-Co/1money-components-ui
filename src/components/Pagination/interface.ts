@@ -9,6 +9,14 @@ export interface UsePaginationOptions {
   current?: number;
   defaultCurrent?: number;
   disabled?: boolean;
+  /**
+   * Number of pages always displayed at both the start and end of the pagination.
+   */
+  boundaryCount?: number;
+  /**
+   * Maximum number of pages displayed in the current-page window.
+   */
+  middlePageCount?: number;
   onChange?: (page: number, pageSize: number) => void;
 }
 

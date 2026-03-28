@@ -46,6 +46,13 @@ describe('Switch', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders disabled state with description', () => {
+    const wrapper = render(
+      <Switch label="Disabled" description="Description" disabled />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders with description', () => {
     const wrapper = render(
       <Switch label="Label" description="Description" />,
