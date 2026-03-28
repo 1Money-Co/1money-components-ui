@@ -17,11 +17,10 @@ import {
   IllusLocked,
   IllusError,
   IllusRegionNotSupported,
-  IllusIDCard,
+  IllusID,
   IllusVerification,
-  IllusTransfer,
-  IllusSend,
-  IllusAccount,
+  IllusPasskey,
+  IllusAddAccount,
   IllusPending,
 } from './Illustrations';
 
@@ -166,19 +165,18 @@ import type { LogoWithWordsCustomProps, LogoWithBetaCustomProps } from './Logo';
 import type { IllustrationsCustomProps } from './Illustrations';
 
 const IconList = {
-  illusChecked:IllusChecked,
-  illusEmailError:IllusEmailError,
-  illusLinkExpired:IllusLinkExpired,
-  illus2FA:Illus2FA,
-  illusLocked:IllusLocked,
-  illusError:IllusError,
-  illusRegionNotSupported:IllusRegionNotSupported,
-  illusIDCard:IllusIDCard,
-  illusVerification:IllusVerification,
-  illusTransfer:IllusTransfer,
-  illusSend:IllusSend,
-  illusAccount:IllusAccount,
-  illusPending:IllusPending,
+  illusChecked: IllusChecked,
+  illusEmailError: IllusEmailError,
+  illusLinkExpired: IllusLinkExpired,
+  illus2FA: Illus2FA,
+  illusLocked: IllusLocked,
+  illusError: IllusError,
+  illusRegionNotSupported: IllusRegionNotSupported,
+  illusID: IllusID,
+  illusVerification: IllusVerification,
+  illusPasskey: IllusPasskey,
+  illusAddAccount: IllusAddAccount,
+  illusPending: IllusPending,
   /* Logo */
   logo: Logo,
   logoWord: LogoWord,
@@ -356,7 +354,7 @@ export interface LogoWithBetaProps extends IconsProps, LogoWithBetaCustomProps {
 }
 
 export interface IllustrationsProps extends IconsProps, IllustrationsCustomProps {
-  name: 'illusLocked' | 'illusChecked' | 'illusError' | 'illusEmailError' | 'illusLinkExpired' | 'illus2FA' | 'illusIDCard' | 'illusVerification' | 'illusRegionNotSupported';
+  name: 'illusLocked' | 'illusChecked' | 'illusError' | 'illusEmailError' | 'illusLinkExpired' | 'illus2FA' | 'illusID' | 'illusVerification' | 'illusRegionNotSupported' | 'illusPending' | 'illusPasskey' | 'illusAddAccount';
 }
 
 export const Icons: FC<(IconsProps & { name: IconName }) | StatusIconsProps | LogoWithWordsProps | LogoWithBetaProps | IllustrationsProps> = ({ name, ...rest }) => {

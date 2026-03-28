@@ -648,9 +648,9 @@ export const Logo: Story = {
 export const Illustrations: Story = {
   args: {
     prefixCls: 'icons',
-    color: '#B31010',
+    color: '#AE0000',
     borderColor: '#1D1D1F',
-    size: 50,
+    size: 74,
     // @ts-expect-error
     illustrations: true,
     gradientColor: ['#B9CCE4', 'white'],
@@ -671,7 +671,7 @@ export const Illustrations: Story = {
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusLinkExpired' />")}>
         <Icons {...args} name='illusLinkExpired' />
-        <span>Link Expired</span>
+        <span>illusLinkExpired</span>
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illus2FA' />")}>
         <Icons {...args} name='illus2FA' />
@@ -689,29 +689,25 @@ export const Illustrations: Story = {
         <Icons {...args} name='illusRegionNotSupported' />
         <span>illusRegionNotSupported</span>
       </CopyIconBox>
-      <CopyIconBox onClick={() => handleCopy("<Icons name='illusIDCard' />")}>
-        <Icons {...args} name='illusIDCard' />
-        <span>illusIDCard</span>
+      <CopyIconBox onClick={() => handleCopy("<Icons name='illusID' />")}>
+        <Icons {...args} name='illusID' />
+        <span>illusID</span>
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusVerification' />")}>
         <Icons {...args} name='illusVerification' />
         <span>illusVerification</span>
       </CopyIconBox>
-      <CopyIconBox onClick={() => handleCopy("<Icons name='illusTransfer' />")}>
-        <Icons {...args} color='#F4C600' name='illusTransfer' />
-        <span>illusTransfer</span>
-      </CopyIconBox>
-      <CopyIconBox onClick={() => handleCopy("<Icons name='illusSend' />")}>
-        <Icons {...args} name='illusSend' />
-        <span>illusSend</span>
-      </CopyIconBox>
-      <CopyIconBox onClick={() => handleCopy("<Icons name='illusAccount' />")}>
-        <Icons {...args} name='illusAccount' />
-        <span>illusAccount</span>
-      </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusPending' />")}>
         <Icons {...args} name='illusPending' />
         <span>illusPending</span>
+      </CopyIconBox>
+      <CopyIconBox onClick={() => handleCopy("<Icons name='illusPasskey' />")}>
+        <Icons {...args} name='illusPasskey' />
+        <span>illusPasskey</span>
+      </CopyIconBox>
+      <CopyIconBox onClick={() => handleCopy("<Icons name='illusAddAccount' />")}>
+        <Icons {...args} name='illusAddAccount' />
+        <span>illusAddAccount</span>
       </CopyIconBox>
     </div>;
   }
@@ -780,4 +776,3 @@ export const IconHoverDemo: Story = {
     </div>;
   }
 };
-

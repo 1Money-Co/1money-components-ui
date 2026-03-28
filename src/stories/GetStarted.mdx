@@ -1,31 +1,154 @@
-import { Meta } from "@storybook/blocks";
+import { Meta } from '@storybook/blocks';
 
-<Meta title="Get Started" />
+<Meta title="Introduction/Overview" />
 
-# @1money/components-ui
+<div className="doc-home">
+  <section className="doc-home-hero">
+    <div>
+      <p className="doc-home-kicker">@1money/components-ui</p>
+      <h1>Component docs that read like a product system, not a sandbox.</h1>
+      <p className="doc-home-lead">
+        1Money React UI packages product-ready React components, a SCSS token system, and a
+        Storybook workflow that doubles as the team’s implementation reference.
+      </p>
+    </div>
 
-## Quick start
-### Install
-```shell
-npm i -S @1money/components-ui
-# or
-yarn add @1money/components-ui
-# or
-pnpm i -S @1money/components-ui
-```
+    <div className="doc-home-panel">
+      <div className="doc-home-info-card">
+        <span className="sb-docs-stat-label">Best for</span>
+        <strong>Product teams building forms, workflows, overlays, and dense data surfaces.</strong>
+      </div>
+      <div className="doc-home-chip-list">
+        <div className="doc-home-chip"><strong>React + TypeScript</strong></div>
+        <div className="doc-home-chip"><strong>SCSS token system</strong></div>
+        <div className="doc-home-chip"><strong>PrimeReact foundation</strong></div>
+        <div className="doc-home-chip"><strong>Storybook 8 docs</strong></div>
+      </div>
+    </div>
+  </section>
 
-### Usage
-```js
-import UI from '@1money/components-ui';
-```
+  <div className="doc-home-grid">
+    <article className="doc-home-card">
+      <p className="doc-home-card-kicker">Install</p>
+      <h3>Use the package directly in app code.</h3>
+      <p>Import the CSS bundle once, then consume named exports or subpath entrypoints.</p>
+      <pre>
+        <code className="language-bash">{`pnpm add @1money/components-ui react react-dom primereact primeicons`}</code>
+      </pre>
+    </article>
 
-## Dev
-For debugging or maintenance, you can clone the whole git repository and run the project:
+    <article className="doc-home-card">
+      <p className="doc-home-card-kicker">Develop</p>
+      <h3>Storybook is the default local workspace.</h3>
+      <p>Run the docs locally, validate visual states, then lint, test, and build before release.</p>
+      <pre>
+        <code className="language-bash">{`pnpm install
+pnpm dev
+pnpm lint
+pnpm test`}</code>
+      </pre>
+    </article>
 
-```shell
-git clone --depth 1
+    <article className="doc-home-card">
+      <p className="doc-home-card-kicker">Read</p>
+      <h3>Use this site in three passes.</h3>
+      <p>Start with the overview pages, move into component examples, then use the API table and README-backed notes to implement with confidence.</p>
+    </article>
+  </div>
 
-pnpm i && pnpm dev
-```
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Quick start</p>
+      <h2>Minimal app setup</h2>
+      <p>Import the package stylesheet once at your application entrypoint and keep component imports explicit.</p>
+    </div>
 
-[More Detials](./DEV.md)
+    <pre>
+      <code className="language-tsx">{`import '@1money/components-ui/index.css';
+import {
+  Button,
+  Checkbox,
+  Grid,
+  Notification,
+  Tooltip,
+} from '@1money/components-ui';
+
+export function Example() {
+  return (
+    <Grid gutter={[16, 16]}>
+      <Grid.Col span={12} md={6}>
+        <Button color="primary">Continue</Button>
+      </Grid.Col>
+      <Grid.Col span={12} md={6}>
+        <Checkbox label="Accept terms" />
+      </Grid.Col>
+      <Grid.Col span={12}>
+        <Notification
+          status="success"
+          title="Saved"
+          body="Settings were updated."
+        />
+      </Grid.Col>
+      <Grid.Col span={12}>
+        <Tooltip anchorSelect="#help-trigger" body="More details" />
+      </Grid.Col>
+    </Grid>
+  );
+}`}</code>
+    </pre>
+  </section>
+
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Docs map</p>
+      <h2>What this Storybook covers</h2>
+      <p>The site is structured to mirror how consumers evaluate a UI library in practice.</p>
+    </div>
+
+    <div className="doc-home-card-grid">
+      <article className="doc-home-card">
+        <h3>Introduction</h3>
+        <p>Installation, development workflow, and the style system architecture behind the components.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>Component pages</h3>
+        <p>Every component page has a primary example, additional usage stories, API tables, and README-backed implementation notes when available.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>Source-aligned guidance</h3>
+        <p>README content is pulled into docs so npm usage notes and Storybook documentation stop drifting apart.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>Design system context</h3>
+        <p>Token scales, layering rules, and import boundaries are documented alongside the component catalog.</p>
+      </article>
+    </div>
+  </section>
+
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Component families</p>
+      <h2>Current component coverage</h2>
+      <p>The library already covers a broad set of product primitives and interaction shells.</p>
+    </div>
+
+    <div className="doc-home-card-grid">
+      <article className="doc-home-card">
+        <h3>Inputs and forms</h3>
+        <p>Input, Select, Checkbox, Radio, Switch, Form, ProForm, Pagination, Tabs, Segment.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>Actions and feedback</h3>
+        <p>Button, Alert, Notification, Tooltip, Trigger, Dropdown, Drawer, Modal.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>Layout and content</h3>
+        <p>Grid, Flex, Space, Step, Empty, Typography, Tag.</p>
+      </article>
+      <article className="doc-home-card">
+        <h3>Assets and utility surfaces</h3>
+        <p>Icons, Spinner, and supporting helpers that keep the product shell consistent.</p>
+      </article>
+    </div>
+  </section>
+</div>

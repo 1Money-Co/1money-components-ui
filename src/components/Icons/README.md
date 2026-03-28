@@ -110,7 +110,7 @@ All icon names use **camelCase**. The `IconName` type provides full autocompleti
 
 ### Illustrations
 
-`illusChecked`, `illusEmailError`, `illusLinkExpired`, `illus2FA`, `illusLocked`, `illusError`, `illusRegionNotSupported`, `illusIDCard`, `illusVerification`, `illusTransfer`, `illusSend`, `illusAccount`, `illusPending`
+`illusChecked`, `illusEmailError`, `illusLinkExpired`, `illus2FA`, `illusLocked`, `illusError`, `illusRegionNotSupported`, `illusID`, `illusVerification`, `illusPending`, `illusPasskey`, `illusAddAccount`
 
 ```tsx
 // Old (still works)

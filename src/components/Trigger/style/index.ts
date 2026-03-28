@@ -1,0 +1,1 @@
+import './Trigger.scss';

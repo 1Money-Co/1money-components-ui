@@ -74,7 +74,7 @@ Public consumers:
 Library-only exceptions:
 
 - `@use '@/styles/recipes/variants' as variants;`
-- `@use '@/styles/theme/functions' as theme-internal;` for rare reader access such as `om-line-height(...)`
+- `@use '@/styles/theme/functions' as theme-internal;` for rare reader access such as `om-line-height(...)` or `om-line-height-px(...)`
 
 Forbidden in components:
 
@@ -88,7 +88,7 @@ Forbidden in components:
 | Palette, spacing, typography, breakpoints, shape, shadows, opacity, sizing | `theme/` |
 | `sx()` and prop registry | `system/` |
 | Variant schema helpers | `recipes/` |
-| Rare library-only readers like `om-line-height(...)` | `theme/functions` exception |
+| Rare library-only readers like `om-line-height(...)` and `om-line-height-px(...)` | `theme/functions` exception |
 | Consumer-facing namespace exported by `_api.scss` | `public/` |
 
 ## Feature Flags
@@ -484,7 +484,7 @@ For rare library-internal readers that are deliberately not public, components m
 @use '@/styles/theme/functions' as theme-internal;
 
 .checkbox-box-wrapper {
-  height: theme-internal.om-line-height(body, lg);
+  height: theme-internal.om-line-height-px(body, lg);
 }
 ```
 
@@ -553,7 +553,7 @@ Override CSS variables to customize the theme:
 
   /* Typography overrides */
   --om-body-md-font-size: 16px;
-  --om-body-md-line-height: 24px;
+  --om-body-md-line-height: 140%;
   --om-headline-lg-font-family: 'Custom Font', sans-serif;
 }
 ```

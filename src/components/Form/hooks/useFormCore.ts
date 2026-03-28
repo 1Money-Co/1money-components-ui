@@ -62,7 +62,7 @@ export const useFormCore = (config: UseFormCoreConfig = {}): UseFormCoreReturn =
     onReset,
     size = 'middle',
     layout = 'vertical',
-    labelAlign = 'right',
+    labelAlign = 'left',
     labelCol = {},
     wrapperCol = {},
     disabled = false,

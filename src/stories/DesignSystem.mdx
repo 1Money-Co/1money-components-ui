@@ -1,0 +1,39 @@
+import { Markdown, Meta } from '@storybook/blocks';
+import styleSystemReadme from '../styles/README.md?raw';
+
+<Meta title="Introduction/Design System" />
+
+<div className="doc-article">
+  <section className="doc-home-hero">
+    <div>
+      <p className="doc-home-kicker">Foundations</p>
+      <h1>Tokens, theme, system, utilities.</h1>
+      <p className="doc-article-lead">
+        The 1Money style system is intentionally layered: tokens hold raw design data, the theme
+        layer turns them into CSS variables, the system layer powers `om-sx`, and utilities expose
+        atomic classes when teams need speed.
+      </p>
+    </div>
+
+    <div className="doc-home-panel">
+      <div className="doc-home-info-card">
+        <span className="sb-docs-stat-label">Import rule</span>
+        <strong>Components should use `@use '@/styles/api' as theme;` and avoid direct token or system imports.</strong>
+      </div>
+      <div className="doc-home-info-card">
+        <span className="sb-docs-stat-label">Design intent</span>
+        <strong>Keep Figma-aligned token scales reusable across product surfaces and published builds.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section className="doc-home-section">
+    <div className="doc-home-section-header">
+      <p className="sb-docs-section-kicker">Reference</p>
+      <h2>Style system guide</h2>
+      <p>The full architecture, import boundaries, feature flags, and token extension workflow are documented below.</p>
+    </div>
+
+    <Markdown>{styleSystemReadme}</Markdown>
+  </section>
+</div>

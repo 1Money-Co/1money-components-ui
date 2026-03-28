@@ -29,6 +29,8 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
               class="om-react-ui-icons"
               fill="none"
               height="16"
+              preserveAspectRatio="xMidYMid meet"
+              shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
               width="16"
@@ -104,20 +106,6 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       class="om-react-ui-pagination-item"
     >
       <button
-        aria-label="Go to page 67"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
-        data-page="67"
-        type="button"
-      >
-        <span>
-          67
-        </span>
-      </button>
-    </li>
-    <li
-      class="om-react-ui-pagination-item"
-    >
-      <button
         aria-label="Go to page 68"
         class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
         data-page="68"
@@ -151,6 +139,8 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
               class="om-react-ui-icons"
               fill="none"
               height="16"
+              preserveAspectRatio="xMidYMid meet"
+              shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
               width="16"

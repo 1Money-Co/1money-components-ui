@@ -46,7 +46,6 @@ describe('usePagination', () => {
       2,
       3,
       'ellipsis',
-      67,
       68,
       'next',
     ]);
@@ -59,6 +58,27 @@ describe('usePagination', () => {
       total: 680,
       pageSize: 10,
       current: 32,
+    }));
+
+    expect(getLabels(result.current.items)).toEqual([
+      'previous',
+      1,
+      'ellipsis',
+      31,
+      32,
+      33,
+      'ellipsis',
+      68,
+      'next',
+    ]);
+  });
+
+  it('supports configurable boundary sizes while keeping the default middle window', () => {
+    const { result } = renderHook(() => usePagination({
+      total: 680,
+      pageSize: 10,
+      current: 32,
+      boundaryCount: 2,
     }));
 
     expect(getLabels(result.current.items)).toEqual([

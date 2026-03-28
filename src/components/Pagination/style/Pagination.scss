@@ -36,14 +36,12 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
     background-color: transparent;
     border: none;
     border-radius: theme.shape(200);
+    font-variant-numeric: tabular-nums;
   }
 
   &-button {
     gap: theme.spacing(gap, 200);
     cursor: pointer;
-    transition:
-      background-color 0.2s ease,
-      color 0.2s ease;
 
     &:hover:not(:disabled) {
       background-color: theme.palette(bg, 'default-secondary-hover');
@@ -56,7 +54,10 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
   }
 
   &-button-page {
-    min-width: $pagination-control-size;
+    min-width: max(
+      #{$pagination-control-size},
+      calc(2ch + #{theme.spacing(component-padding, 300)} + #{theme.spacing(component-padding, 300)})
+    );
   }
 
   &-button-current {

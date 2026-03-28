@@ -53,7 +53,7 @@ $component: 'checkbox';
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    height: theme-internal.om-line-height(body, lg);
+    height: theme-internal.om-line-height-px(body, lg);
   }
 
   &-input {

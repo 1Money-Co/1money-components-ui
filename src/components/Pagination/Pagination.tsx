@@ -27,6 +27,8 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
     current,
     defaultCurrent = 1,
     disabled = false,
+    boundaryCount,
+    middlePageCount,
     onChange,
     'aria-label': ariaLabel = ROOT_ARIA_LABEL,
     ...rest
@@ -39,6 +41,8 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
     current,
     defaultCurrent,
     disabled,
+    boundaryCount,
+    middlePageCount,
     onChange,
   });
 

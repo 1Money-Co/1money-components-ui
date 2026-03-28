@@ -120,7 +120,7 @@ The style system follows a layered boundary model:
 - `recipes/` = library recipe helpers
 - `public/` = consumer-facing facade exported by `src/styles/_api.scss`
 
-Component SCSS should not import `system/*` or `tokens/*` directly. `theme/functions` is reserved for rare library-only reader access such as `om-line-height(...)`. The design token and utility system is documented in `src/styles/README.md`.
+Component SCSS should not import `system/*` or `tokens/*` directly. `theme/functions` is reserved for rare library-only reader access such as `om-line-height(...)` or `om-line-height-px(...)`. The design token and utility system is documented in `src/styles/README.md`.
 
 ## Development
 

@@ -9,8 +9,9 @@ export { Grid, Row, Col } from './components/Grid';
 export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
 export { Drawer } from './components/Drawer';
+export { Dropdown } from './components/Dropdown';
 export { Modal } from './components/Modal';
-export { Notification } from './components/Notification';
+export { notification } from './components/Notification';
 export {
   Portal,
 } from './components/Portal';
@@ -26,20 +27,24 @@ export {
   ProFormCheckbox,
   ProFormCheckboxGroup,
   ProFormSwitch,
+  ProFormSelect,
   ModalForm,
   QueryFilter,
   useProFormContext,
 } from './components/ProForm';
 export { Pagination } from './components/Pagination';
 export { Radio, RadioGroup } from './components/Radio';
+export { Select } from './components/Select';
 export { Segment } from './components/Segment';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
+export { Step } from './components/Step';
 export { Switch } from './components/Switch';
 export { Tabs } from './components/Tabs';
 export { Tag } from './components/Tag';
 export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
+export { Trigger } from './components/Trigger';
 export { usePagination } from './components/Pagination';
 
 export type { AccordionProps, AccordionItem } from './components/Accordion';
@@ -82,8 +87,22 @@ export type {
   InputStatus,
 } from './components/Input';
 export type { DrawerProps, DrawerPlacement } from './components/Drawer';
+export type {
+  DropdownProps,
+  DropdownContent,
+  DropdownContentContext,
+  DropdownTrigger,
+} from './components/Dropdown';
 export type { ModalProps, ModalSize, ModalFooterRender } from './components/Modal';
-export type { NotificationProps, NotificationLinkConfig, NotificationStatus } from './components/Notification';
+export type {
+  NotificationLinkConfig,
+  NotificationStatus,
+  NotificationPlacement,
+  NotificationKey,
+  NotificationOpenConfig,
+  NotificationStaticConfig,
+  NotificationStaticApi,
+} from './components/Notification';
 export type { PortalProps, PortalContainer } from './components/Portal';
 export type {
   PaginationProps,
@@ -101,9 +120,22 @@ export type {
   RadioProps,
   RadioValueType,
 } from './components/Radio';
+export type {
+  SelectMultipleValue,
+  SelectOption,
+  SelectOptionValue,
+  SelectProps,
+  SelectRenderOptionMeta,
+  SelectRenderValueMeta,
+  SelectSingleValue,
+  SelectSize,
+  SelectStatus,
+  SelectValue,
+} from './components/Select';
 export type { SegmentProps, SegmentItem } from './components/Segment';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
+export type { StepProps, StepItem, StepStatus, StepTagConfig } from './components/Step';
 export type { SwitchProps } from './components/Switch';
 export type { TabsProps, TabItem } from './components/Tabs';
 export type { TagProps } from './components/Tag';
@@ -124,6 +156,13 @@ export type {
   TypographyTitleSize,
 } from './components/Typography';
 export type { TooltipProps, TooltipPlacement } from './components/Tooltip';
+export type {
+  TriggerProps,
+  TriggerAction,
+  TriggerContent,
+  TriggerContentContext,
+  TriggerRole,
+} from './components/Trigger';
 export type {
   ProFormProps,
   ProFormFieldProps,

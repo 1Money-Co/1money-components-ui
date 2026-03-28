@@ -112,7 +112,7 @@ module.exports = [
       'node_modules/*',
       '.storybook/*',
       '**/__test__/*',
-      '**/stories/*',
+      '**/stories/**',
       '**/*.stories.*',
       '**/*.d.ts',
       'doczrc.js',

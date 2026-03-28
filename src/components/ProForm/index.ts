@@ -9,6 +9,7 @@ import {
   ProFormCheckbox,
   ProFormCheckboxGroup,
   ProFormSwitch,
+  ProFormSelect,
 } from './fields';
 import { ModalForm } from './layouts/ModalForm';
 import { QueryFilter } from './layouts/QueryFilter';
@@ -25,6 +26,7 @@ const ProForm = Object.assign(ProFormBase, {
   Checkbox: ProFormCheckbox,
   CheckboxGroup: ProFormCheckboxGroup,
   Switch: ProFormSwitch,
+  Select: ProFormSelect,
 });
 
 export { ProForm };
@@ -42,6 +44,7 @@ export {
   ProFormCheckbox,
   ProFormCheckboxGroup,
   ProFormSwitch,
+  ProFormSelect,
 } from './fields';
 export { ModalForm } from './layouts/ModalForm';
 export { QueryFilter } from './layouts/QueryFilter';

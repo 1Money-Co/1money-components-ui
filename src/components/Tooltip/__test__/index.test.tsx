@@ -50,6 +50,11 @@ describe('Tooltip', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('renders in controlled open state with title', () => {
+    const wrapper = render(<Tooltip id="test-controlled-title" title="Title" body="Body text" open />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders in controlled closed state', () => {
     const wrapper = render(
       <Tooltip id="test-controlled-closed" body="Controlled closed" open={false} />,

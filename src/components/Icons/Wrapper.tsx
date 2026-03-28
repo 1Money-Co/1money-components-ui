@@ -69,6 +69,8 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
       height={height ?? size}
       viewBox={viewBox}
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid meet"
+      shapeRendering="geometricPrecision"
       className={classes(undefined, className)}
       fill={fill ? 'currentColor' : 'none'}
       stroke={stroke ? 'currentColor' : 'none'}

@@ -24,7 +24,12 @@
       "Bash(env)",
       "mcp__figma-remote-mcp__get_design_context",
       "Bash(pnpm build:*)",
-      "Bash(pnpm:*)"
+      "Bash(pnpm:*)",
+      "Bash(find /Users/derrick/Desktop/1money/1money-components-ui/src/components -type d -name *[Ff]orm*)",
+      "Bash(open:*)",
+      "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/src/components/*/interface.ts)",
+      "Bash(npx eslint:*)",
+      "Bash(npx stylelint:*)"
     ]
   }
 }

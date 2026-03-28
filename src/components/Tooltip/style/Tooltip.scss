@@ -5,13 +5,17 @@ $cls: #{theme.$prefix}-#{$component};
 
 // ── Override react-tooltip defaults ──
 .#{$cls}[role='tooltip'] {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(scale, 0);
+  align-items: center;
   min-width: 48px;
   max-width: 400px;
   padding: theme.spacing(scale, 200) theme.spacing(scale, 300);
   color: theme.palette(text, 'on-neutral');
   background-color: theme.palette(bg, 'neutral');
   border-radius: theme.shape('200');
-  box-shadow: theme.shadows('100');
+  box-shadow: theme.shadows('200');
   opacity: 1;
 
   // ── Title ──
@@ -24,13 +28,24 @@ $cls: #{theme.$prefix}-#{$component};
     @include theme.typography(body, sm, $strong: true);
   }
 
-  // ── Title + Body gap ──
-  .#{$cls}-title + .#{$cls}-body {
-    margin-top: theme.spacing(scale, 100);
+  // ── Title variant layout ──
+  &.#{$cls}-with-title {
+    text-align: left;
+
+    .#{$cls}-title,
+    .#{$cls}-body {
+      min-width: 100%;
+    }
   }
 
   // ── Arrow ──
   .#{$cls}-arrow {
     background-color: theme.palette(bg, 'neutral');
+  }
+}
+
+@include theme.down(sm) {
+  .#{$cls}[role='tooltip'] {
+    max-width: 300px;
   }
 }

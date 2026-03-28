@@ -7,6 +7,7 @@ import type { IconName } from '@/components/Icons';
 import type { EmptyProps } from './interface';
 
 const ICON_SIZE = 24;
+const ICON_INHERIT_COLOR = 'currentColor';
 
 export const Empty: FC<EmptyProps> = (props) => {
   const {
@@ -27,7 +28,7 @@ export const Empty: FC<EmptyProps> = (props) => {
     if (!icon) return null;
     if (isValidElement(icon)) return icon;
     if (typeof icon === 'string') {
-      return <Icons name={icon as IconName} size={ICON_SIZE} />;
+      return <Icons name={icon as IconName} size={ICON_SIZE} color={ICON_INHERIT_COLOR} />;
     }
     return null;
   };
@@ -46,12 +47,12 @@ export const Empty: FC<EmptyProps> = (props) => {
         <div className={classes('content')}>
           {title && (
             typeof title === 'string'
-              ? <TypographyTitle size="sm" strong color="default-tertiary">{title}</TypographyTitle>
+              ? <TypographyTitle size="sm" strong color="neutral-secondary">{title}</TypographyTitle>
               : title
           )}
           {description && (
             typeof description === 'string'
-              ? <TypographyBody size="md" color="default-tertiary">{description}</TypographyBody>
+              ? <TypographyBody size="md" color="neutral-secondary">{description}</TypographyBody>
               : description
           )}
         </div>

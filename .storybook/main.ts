@@ -22,13 +22,19 @@ const config: StorybookConfig = {
     options: {}
   },
   docs: {
-    defaultName: 'Overview',
+    defaultName: 'Documentation',
   },
   staticDirs: ['../public'],
   managerHead: (head) => `
     ${head}
+    <style>
+      body {
+        font-family: Aeonik, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #f5f7fb;
+      }
+    </style>
     <script>
-      var title = '@1money/components-ui';
+      var title = '1Money React UI';
       document.title = title;
       var observer = new MutationObserver(function(mutations) {
         if (document.title.match(/Storybook$/) && title !== document.title) {

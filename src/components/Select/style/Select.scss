@@ -1,0 +1,510 @@
+@use '@/styles/api' as theme;
+
+$component: 'select';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+  width: 100%;
+
+  &-label-row {
+    display: inline-flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+  }
+
+  &-label-text,
+  &-label-disabled {
+    @include theme.typography(label, lg, $strong: true);
+  }
+
+  &-label-text {
+    color: theme.palette(text, 'default');
+  }
+
+  &-label-disabled {
+    color: theme.palette(text, 'disabled');
+  }
+
+  &-required {
+    color: theme.palette(text, 'danger');
+  }
+
+  &-info {
+    display: inline-flex;
+    align-items: center;
+    color: theme.palette(icon, 'default-tertiary');
+  }
+
+  &-description-text,
+  &-description-disabled {
+    @include theme.typography(body, md);
+  }
+
+  &-description-text {
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-description-disabled {
+    color: theme.palette(text, 'disabled');
+  }
+
+  &-trigger {
+    display: flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    width: 100%;
+    min-width: 120px;
+    color: inherit;
+    text-align: left;
+    border: 1px solid theme.palette(border, 'default');
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  &-trigger-large {
+    min-height: theme.sizing(component-height, '3xl');
+    padding: theme.spacing(component-padding, 300);
+    border-radius: theme.shape(300);
+  }
+
+  &-trigger-small {
+    min-height: theme.sizing(component-height, 'lg');
+    padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
+    border-radius: theme.shape(200);
+  }
+
+  &-trigger-fill {
+    background-color: theme.palette(bg, 'default-secondary');
+  }
+
+  &-trigger-stroke {
+    background-color: transparent;
+  }
+
+  &-trigger-frameless {
+    justify-content: flex-start;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  &-trigger:not(&-trigger-disabled):hover {
+    border-color: theme.palette(border, 'default-tertiary');
+  }
+
+  &-trigger-frameless:not(&-trigger-disabled):hover {
+    border-color: transparent;
+  }
+
+  &-trigger-open {
+    border-color: theme.palette(border, 'brand');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'brand');
+  }
+
+  &-trigger-error {
+    border-color: theme.palette(border, 'danger');
+  }
+
+  &-trigger-warning {
+    border-color: theme.palette(border, 'warning');
+  }
+
+  &-trigger-success {
+    border-color: theme.palette(border, 'positive');
+  }
+
+  &-trigger-disabled {
+    color: theme.palette(text, 'disabled');
+    background-color: theme.palette(bg, 'disabled');
+    border-color: theme.palette(border, 'disabled');
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &-trigger-error,
+  &-trigger-warning,
+  &-trigger-success,
+  &-trigger-frameless {
+    box-shadow: none;
+  }
+
+  &-trigger-disabled .#{theme.$prefix}-#{$component}-prefix,
+  &-trigger-disabled .#{theme.$prefix}-#{$component}-icon {
+    color: theme.palette(icon, 'disabled');
+  }
+
+  &-content {
+    display: flex;
+    flex: 1 1 auto;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    min-width: 0;
+  }
+
+  &-prefix {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    color: theme.palette(icon, 'default-tertiary');
+  }
+
+  &-value,
+  &-placeholder {
+    display: inline-flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-value-large {
+    @include theme.typography(body, lg, $strong: true);
+  }
+
+  &-value-small {
+    @include theme.typography(body, md, $strong: true);
+  }
+
+  &-placeholder-large {
+    @include theme.typography(body, lg);
+  }
+
+  &-placeholder-small {
+    @include theme.typography(body, md);
+  }
+
+  &-value {
+    color: theme.palette(text, 'default');
+  }
+
+  &-value-multiple {
+    display: flex;
+    flex-wrap: wrap;
+    gap: theme.spacing(gap, 200);
+    align-content: flex-start;
+    align-items: center;
+    max-height: 88px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: clip;
+  }
+
+  &-placeholder {
+    color: theme.palette(text, 'neutral-secondary');
+  }
+
+  &-value-disabled,
+  &-placeholder-disabled {
+    color: theme.palette(text, 'disabled');
+  }
+
+  &-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    color: theme.palette(icon, 'default');
+  }
+
+  &-trigger-multiple-filled {
+    padding-top: theme.spacing(gap, 200);
+    padding-bottom: theme.spacing(gap, 200);
+  }
+
+  &-tag {
+    @include theme.typography(body, sm, $strong: true);
+
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: theme.spacing(scale, 100) theme.spacing(component-padding, 200);
+    color: theme.palette(text, 'default-tertiary');
+    background-color: theme.palette(bg, 'neutral-tertiary');
+    border-radius: theme.shape('full');
+  }
+
+  &-tag-label {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-tag-remove {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    color: currentcolor;
+  }
+
+  &-collapsed-values {
+    display: inline-flex;
+    flex: 1 1 auto;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    min-width: 0;
+  }
+
+  &-collapsed-values-list {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-collapsed-values-extra {
+    flex-shrink: 0;
+    color: theme.palette(text, 'default-secondary');
+  }
+
+  &-collapsed-values-extra-disabled {
+    color: theme.palette(text, 'disabled');
+  }
+
+  &-feedback {
+    @include theme.typography(body, sm);
+
+    display: inline-flex;
+    gap: theme.spacing(gap, 100);
+    align-items: flex-start;
+    color: theme.palette(text, 'default-secondary');
+  }
+
+  &-feedback-error {
+    color: theme.palette(text, 'danger');
+  }
+
+  &-feedback-warning {
+    color: theme.palette(text, 'warning');
+  }
+
+  &-feedback-success {
+    color: theme.palette(text, 'positive');
+  }
+
+  &-feedback-disabled {
+    color: theme.palette(text, 'disabled');
+  }
+
+  &-feedback-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-top: 1px;
+  }
+
+  &-panel {
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    padding: theme.spacing(component-padding, 200);
+    overflow: hidden;
+    background-color: theme.palette(bg, 'default');
+    border: 1px solid theme.palette(border, 'neutral-tertiary');
+    border-radius: theme.shape(300);
+    box-shadow: theme.shadows(100);
+  }
+
+  &-search {
+    display: flex;
+    flex-shrink: 0;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    width: 100%;
+    min-height: theme.sizing(component-height, '3xl');
+    margin-bottom: theme.spacing(gap, 200);
+    padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+    background-color: theme.palette(bg, 'default');
+    border: 1px solid theme.palette(border, 'default');
+    border-radius: theme.shape(300);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  &-search:hover {
+    border-color: theme.palette(border, 'default-tertiary');
+  }
+
+  &-search:focus-within {
+    border-color: theme.palette(border, 'brand');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'brand');
+  }
+
+  &-search-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    color: theme.palette(icon, 'default');
+  }
+
+  &-search-input {
+    @include theme.typography(body, md);
+
+    flex: 1 1 auto;
+    min-width: 0;
+    color: theme.palette(text, 'default');
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &-search-input::placeholder {
+    color: theme.palette(text, 'neutral-secondary');
+  }
+
+  &-panel-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: theme.spacing(gap, '050');
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  &-panel-footer {
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: theme.spacing(gap, 300);
+    padding-bottom: theme.spacing(gap, 100);
+    border-top: 1px solid theme.palette(border, 'neutral-secondary');
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &-group + &-group {
+    padding-top: theme.spacing(gap, 200);
+  }
+
+  &-group-label {
+    @include theme.typography(label, lg, $strong: true);
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: theme.spacing(gap, 200);
+    padding-top: theme.spacing(gap, 200);
+    color: theme.palette(text, 'default');
+  }
+
+  &-option {
+    display: flex;
+    gap: theme.spacing(gap, 300);
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 200);
+    color: theme.palette(text, 'default');
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: theme.shape(200);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  &-option:focus,
+  &-option:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &-option:hover,
+  &-option-active,
+  &-option-selected {
+    background-color: theme.palette(bg, 'default-secondary');
+  }
+
+  &-option-disabled {
+    color: theme.palette(text, 'disabled');
+    background-color: transparent;
+    cursor: not-allowed;
+  }
+
+  &-option-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: theme.spacing(gap, '050');
+    min-width: 0;
+  }
+
+  &-option-label {
+    @include theme.typography(body, md, $strong: true);
+
+    min-width: 0;
+    overflow: hidden;
+    color: currentcolor;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-option-description {
+    @include theme.typography(body, sm);
+
+    min-width: 0;
+    overflow: hidden;
+    color: theme.palette(text, 'default-tertiary');
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-option-check {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    color: theme.palette(icon, 'brand');
+  }
+
+  &-empty {
+    @include theme.typography(body, md);
+
+    padding: theme.spacing(component-padding, 200);
+    color: theme.palette(text, 'default-tertiary');
+    text-align: center;
+  }
+
+  &-frameless {
+    width: auto;
+  }
+
+  &-frameless .#{theme.$prefix}-#{$component}-value-large,
+  &-frameless .#{theme.$prefix}-#{$component}-placeholder-large {
+    @include theme.typography(body, lg);
+
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-frameless .#{theme.$prefix}-#{$component}-value-small,
+  &-frameless .#{theme.$prefix}-#{$component}-placeholder-small {
+    @include theme.typography(body, md);
+
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-frameless.#{theme.$prefix}-#{$component}-disabled {
+    color: theme.palette(text, 'disabled');
+  }
+}

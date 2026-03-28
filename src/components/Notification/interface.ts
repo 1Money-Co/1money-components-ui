@@ -13,6 +13,15 @@ import type {
 export const NOTIFICATION_STATUSES = ['info', 'success', 'warning', 'error'] as const;
 export type NotificationStatus = (typeof NOTIFICATION_STATUSES)[number];
 
+export const NOTIFICATION_PLACEMENTS = [
+  'topLeft',
+  'topRight',
+  'bottomLeft',
+  'bottomRight',
+] as const;
+export type NotificationPlacement = (typeof NOTIFICATION_PLACEMENTS)[number];
+export type NotificationKey = string | number;
+
 export interface NotificationLinkConfig {
   /** Display text for the link */
   label: string;
@@ -55,4 +64,40 @@ export interface NotificationProps extends Omit<HTMLAttributes<HTMLDivElement>, 
 
   /** Callback fired when the close button is clicked */
   onClose?: MouseEventHandler<HTMLButtonElement>;
+}
+
+export interface NotificationOpenConfig
+  extends Omit<NotificationProps, 'prefixCls' | 'ref' | 'onClose'> {
+  /** Unique key used to update or destroy a notification */
+  key?: NotificationKey;
+
+  /** Screen placement for the notification container */
+  placement?: NotificationPlacement;
+
+  /** Auto-close timeout in seconds. Use 0 to disable auto-close. */
+  duration?: number;
+
+  /** Callback fired after the notification is removed */
+  onClose?: () => void;
+}
+
+export interface NotificationStaticConfig {
+  /** Default screen placement for new notifications */
+  placement?: NotificationPlacement;
+
+  /** Default auto-close timeout in seconds */
+  duration?: number;
+
+  /** Maximum number of notifications per placement */
+  maxCount?: number;
+}
+
+export interface NotificationStaticApi {
+  open: (config: NotificationOpenConfig) => NotificationKey;
+  info: (config: Omit<NotificationOpenConfig, 'status'>) => NotificationKey;
+  success: (config: Omit<NotificationOpenConfig, 'status'>) => NotificationKey;
+  warning: (config: Omit<NotificationOpenConfig, 'status'>) => NotificationKey;
+  error: (config: Omit<NotificationOpenConfig, 'status'>) => NotificationKey;
+  destroy: (key?: NotificationKey) => void;
+  config: (config: NotificationStaticConfig) => void;
 }

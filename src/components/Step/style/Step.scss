@@ -1,0 +1,91 @@
+@use '@/styles/api' as theme;
+
+$component: 'step';
+
+.#{theme.$prefix}-#{$component} {
+  --om-step-status-success-bg: #{theme.palette(bg, 'positive-tertiary-hover')};
+  --om-step-status-success-fg: #{theme.palette(icon, 'positive')};
+  --om-step-status-error-bg: #{theme.palette(bg, 'danger-tertiary-hover')};
+  --om-step-status-error-fg: #{theme.palette(icon, 'danger')};
+
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+  width: 100%;
+
+  &-item {
+    display: flex;
+    gap: theme.spacing(gap, 300);
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+  }
+
+  &-indicator-column {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    align-self: stretch;
+    width: 24px;
+  }
+
+  &-indicator {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  &-indicator-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: theme.palette(text, 'on-neutral');
+    background-color: theme.palette(bg, 'brand');
+    border-radius: theme.shape('full');
+
+    @include theme.typography(body, md);
+  }
+
+  &-indicator-icon {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &-connector {
+    flex: 1 0 0;
+    width: 1px;
+    min-height: 1px;
+    background-color: theme.palette(border, 'brand');
+  }
+
+  &-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: theme.spacing(gap, 200);
+    min-width: 0;
+  }
+
+  &-content-continuation {
+    padding-bottom: theme.spacing(scale, 400);
+  }
+
+  &-copy {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    min-width: 0;
+  }
+
+  &-tag {
+    display: flex;
+    align-items: center;
+  }
+}
