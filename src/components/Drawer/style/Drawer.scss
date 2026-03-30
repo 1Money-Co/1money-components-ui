@@ -16,7 +16,7 @@ $transition-duration: 300ms;
   inset: 0;
   background-color: theme.palette(bg, 'scrim-dark');
   opacity: 0;
-  transition: opacity $transition-duration ease;
+  transition: opacity $transition-duration ease-in-out;
 }
 
 // ---- Panel (the drawer itself) ----
@@ -68,22 +68,28 @@ $transition-duration: 300ms;
   &-header {
     display: flex;
     flex-shrink: 0;
-    align-items: center;
+    gap: theme.spacing(gap, 300);
+    align-items: flex-start;
     justify-content: space-between;
-    min-height: 64px;
-    padding: 0 theme.spacing(scale, 600);
-    border-bottom: 1px solid theme.palette(border, 'neutral');
+    padding: theme.spacing(scale, 600) theme.spacing(scale, 400) theme.spacing(scale, 400);
+  }
+
+  &-header-main {
+    display: flex;
+    flex: 1;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    min-width: 0;
   }
 
   // ---- Title ----
   &-title {
+    @include theme.typography(title, lg, $strong: true);
+
     flex: 1;
     min-width: 0;
     overflow: hidden;
     color: theme.palette(text, 'default');
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -94,8 +100,8 @@ $transition-duration: 300ms;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: theme.spacing(scale, 500);
+    height: theme.spacing(scale, 500);
     padding: 0;
     color: theme.palette(icon, 'default-tertiary');
     background: transparent;
@@ -114,14 +120,18 @@ $transition-duration: 300ms;
   // ---- Body ----
   &-body {
     flex: 1;
-    padding: theme.spacing(scale, 600);
+    min-height: 0;
+    padding: theme.spacing(scale, 400);
     overflow: auto;
   }
 
   // ---- Footer ----
   &-footer {
     flex-shrink: 0;
-    padding: theme.spacing(scale, 400) theme.spacing(scale, 600);
+    padding:
+      theme.spacing(scale, 400)
+      theme.spacing(scale, 400)
+      theme.spacing(scale, 600);
     border-top: 1px solid theme.palette(border, 'neutral');
   }
 }
@@ -138,6 +148,8 @@ $transition-duration: 300ms;
 }
 
 .#{theme.$prefix}-#{$component}-root-closed {
+  pointer-events: none;
+
   .#{theme.$prefix}-#{$component}-overlay {
     opacity: 0;
   }

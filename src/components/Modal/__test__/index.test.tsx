@@ -3,7 +3,21 @@ import * as React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import {
+  MODAL_CONTROL_ICON_SIZE,
+  MODAL_CONTROL_LABELS,
+  MODAL_CONTROL_TYPE,
+  MODAL_DEFAULT_CANCEL_TEXT,
+  MODAL_DEFAULT_OK_TEXT,
+  MODAL_DEFAULT_PREFIX,
+  MODAL_NAMESPACE,
+  MODAL_SIZE,
+  MODAL_SLOT,
+} from '../constants';
 import { Modal } from '../index';
+
+const getModalClassSelector = (slot: string, modifier?: string) =>
+  `.${MODAL_NAMESPACE}-${MODAL_DEFAULT_PREFIX}-${slot}${modifier ? `-${modifier}` : ''}`;
 
 const originalConsoleError = console.error;
 
@@ -42,14 +56,20 @@ describe('Modal', () => {
     expect(dialog).toBeInTheDocument();
     expect(screen.getByText('Text Heading')).toBeInTheDocument();
     expect(screen.getByText('Body text')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Confirm' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: MODAL_DEFAULT_OK_TEXT }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: MODAL_DEFAULT_CANCEL_TEXT }),
+    ).toBeInTheDocument();
 
-    const closeButton = screen.getByRole('button', { name: 'Close modal' });
+    const closeButton = screen.getByRole('button', {
+      name: MODAL_CONTROL_LABELS[MODAL_CONTROL_TYPE.close],
+    });
     const closeIcon = closeButton.querySelector('svg');
 
-    expect(closeIcon).toHaveAttribute('width', '24');
-    expect(closeIcon).toHaveAttribute('height', '24');
+    expect(closeIcon).toHaveAttribute('width', String(MODAL_CONTROL_ICON_SIZE));
+    expect(closeIcon).toHaveAttribute('height', String(MODAL_CONTROL_ICON_SIZE));
   });
 
   it('calls onCancel when clicking the overlay if maskClosable is enabled', async () => {
@@ -66,7 +86,7 @@ describe('Modal', () => {
       />
     );
 
-    const overlay = document.querySelector('.om-react-ui-modal-overlay');
+    const overlay = document.querySelector(getModalClassSelector(MODAL_SLOT.overlay));
 
     expect(overlay).not.toBeNull();
 
@@ -90,7 +110,7 @@ describe('Modal', () => {
       />
     );
 
-    const overlay = document.querySelector('.om-react-ui-modal-overlay');
+    const overlay = document.querySelector(getModalClassSelector(MODAL_SLOT.overlay));
 
     expect(overlay).not.toBeNull();
 
@@ -106,7 +126,7 @@ describe('Modal', () => {
     render(
       <Modal
         open
-        size="large"
+        size={MODAL_SIZE.large}
         showBackIcon
         title="Text Heading"
         description="Body text"
@@ -116,11 +136,15 @@ describe('Modal', () => {
       />
     );
 
-    const footer = document.querySelector('.om-react-ui-modal-footer-large');
+    const footer = document.querySelector(
+      getModalClassSelector(MODAL_SLOT.footer, MODAL_SIZE.large),
+    );
 
     expect(footer).toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: 'Go back' }));
+    await user.click(screen.getByRole('button', {
+      name: MODAL_CONTROL_LABELS[MODAL_CONTROL_TYPE.back],
+    }));
 
     expect(onBack).toHaveBeenCalledTimes(1);
   });

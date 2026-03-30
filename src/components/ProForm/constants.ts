@@ -1,4 +1,4 @@
-export const CSS_PREFIX = 'om-react-ui-proform';
+export const CSS_PREFIX = 'proform';
 
 export const WIDTH_SIZE_MAP: Record<string, number> = {
   sm: 160,

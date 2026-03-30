@@ -91,6 +91,209 @@ $component: 'radio';
     color: theme.palette(text, 'default-tertiary');
   }
 
+  &-tag {
+    display: inline-flex;
+    margin-top: theme.spacing(gap, 100);
+  }
+
+  &-cell {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  &-cell-input {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    margin: 0;
+    cursor: inherit;
+    opacity: 0;
+  }
+
+  &-cell-panel {
+    --om-radio-cell-icon: #{theme.palette(icon, 'default')};
+    --om-radio-cell-indicator-icon: #{theme.palette(icon, 'on-brand')};
+
+    position: relative;
+    display: flex;
+    gap: theme.spacing(gap, 300);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    background-color: theme.palette(bg, 'default-secondary');
+    border: 1px solid theme.palette(border, 'default');
+    border-radius: theme.shape(300);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  &-cell-indicator,
+  &-cell-icon,
+  &-cell-radio {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-cell-indicator {
+    width: theme.spacing(scale, 800);
+    height: theme.spacing(scale, 800);
+    color: var(--om-radio-cell-icon);
+    background-color: theme.palette(bg, 'neutral-tertiary');
+    border-radius: theme.shape('full');
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  &-cell-indicator-compact {
+    width: theme.spacing(scale, 600);
+    height: theme.spacing(scale, 600);
+  }
+
+  &-cell-icon {
+    color: var(--om-radio-cell-icon);
+  }
+
+  &-cell-radio {
+    width: theme.spacing(scale, 400);
+    height: theme.spacing(scale, 400);
+    background-color: theme.palette(bg, 'default');
+    border: 1px solid theme.palette(border, 'default-secondary');
+    border-radius: theme.shape('full');
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  &-cell-radio-dot {
+    width: theme.spacing(scale, 100);
+    height: theme.spacing(scale, 100);
+    background-color: theme.palette(icon, 'on-brand');
+    border-radius: theme.shape('full');
+    transform: scale(0);
+    opacity: 0;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  &-cell .#{theme.$prefix}-#{$component}-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &-cell .#{theme.$prefix}-#{$component}-label {
+    @include theme.typography(body, lg, $strong: true);
+  }
+
+  &-cell .#{theme.$prefix}-#{$component}-description {
+    @include theme.typography(body, md);
+  }
+
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-large {
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      padding: theme.spacing(scale, 400);
+    }
+  }
+
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-medium,
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-small {
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      padding: theme.spacing(scale, 300) theme.spacing(scale, 400);
+    }
+  }
+
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-medium,
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-small {
+    .#{theme.$prefix}-#{$component}-label {
+      @include theme.typography(body, lg);
+    }
+  }
+
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-small {
+    .#{theme.$prefix}-#{$component}-content {
+      justify-content: center;
+    }
+  }
+
+  &-cell-vertical {
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .#{theme.$prefix}-#{$component}-content {
+      align-items: center;
+      text-align: center;
+    }
+
+    .#{theme.$prefix}-#{$component}-label,
+    .#{theme.$prefix}-#{$component}-description {
+      text-align: center;
+    }
+  }
+
+  &-cell-vertical.#{theme.$prefix}-#{$component}-cell-large {
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      padding: theme.spacing(scale, 600) theme.spacing(scale, 400);
+    }
+  }
+
+  &-cell-vertical.#{theme.$prefix}-#{$component}-cell-medium,
+  &-cell-vertical.#{theme.$prefix}-#{$component}-cell-small {
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      padding: theme.spacing(scale, 400);
+    }
+
+    .#{theme.$prefix}-#{$component}-label {
+      @include theme.typography(body, lg);
+    }
+  }
+
+  &-cell-input:checked + .#{theme.$prefix}-#{$component}-cell-panel {
+    border-color: theme.palette(border, 'brand');
+  }
+
+  &-cell-input:checked
+    + .#{theme.$prefix}-#{$component}-cell-panel
+    .#{theme.$prefix}-#{$component}-cell-indicator {
+    background-color: theme.palette(bg, 'brand');
+  }
+
+  &-cell-input:checked
+    + .#{theme.$prefix}-#{$component}-cell-panel
+    .#{theme.$prefix}-#{$component}-cell-radio {
+    background-color: theme.palette(bg, 'brand');
+    border-color: theme.palette(border, 'brand');
+  }
+
+  &-cell-input:checked
+    + .#{theme.$prefix}-#{$component}-cell-panel
+    .#{theme.$prefix}-#{$component}-cell-radio-dot {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &-cell-vertical
+    .#{theme.$prefix}-#{$component}-cell-input:checked
+    + .#{theme.$prefix}-#{$component}-cell-panel {
+    border-width: 2px;
+  }
+
+  &-cell-input:focus-visible + .#{theme.$prefix}-#{$component}-cell-panel {
+    border-color: theme.palette(border, 'brand');
+    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+  }
+
   &:not(&-disabled):hover {
     .#{theme.$prefix}-#{$component}-box {
       border-color: theme.palette(border, 'default-tertiary');
@@ -100,6 +303,15 @@ $component: 'radio';
       + .#{theme.$prefix}-#{$component}-box {
       background-color: theme.palette(bg, 'brand-hover');
       border-color: theme.palette(bg, 'brand-hover');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      border-color: theme.palette(border, 'default-tertiary');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-input:checked
+      + .#{theme.$prefix}-#{$component}-cell-panel {
+      border-color: theme.palette(border, 'brand');
     }
   }
 
@@ -125,6 +337,33 @@ $component: 'radio';
     .#{theme.$prefix}-#{$component}-label,
     .#{theme.$prefix}-#{$component}-description {
       color: theme.palette(text, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-panel {
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-indicator {
+      color: theme.palette(icon, 'on-disabled');
+      background-color: theme.palette(bg, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-icon {
+      color: theme.palette(icon, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-radio {
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-radio-dot {
+      background-color: theme.palette(icon, 'on-disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-tag {
+      opacity: theme.opacity('disabled-heavy');
     }
   }
 
@@ -152,5 +391,23 @@ $group-component: 'radio-group';
   &-horizontal {
     flex-flow: row wrap;
     gap: theme.spacing(gap, 600);
+  }
+
+  &-cell.#{theme.$prefix}-#{$group-component}-vertical {
+    gap: theme.spacing(gap, 300);
+
+    > .#{theme.$prefix}-#{$component} {
+      width: 100%;
+    }
+  }
+
+  &-cell.#{theme.$prefix}-#{$group-component}-horizontal {
+    gap: theme.spacing(gap, 300);
+    align-items: stretch;
+
+    > .#{theme.$prefix}-#{$component} {
+      flex: 1 1 0;
+      min-width: 0;
+    }
   }
 }

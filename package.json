@@ -134,6 +134,11 @@
       "import": "./es/components/Pagination/index.js",
       "require": "./lib/components/Pagination/index.js"
     },
+    "./Popconfirm": {
+      "types": "./es/components/Popconfirm/index.d.ts",
+      "import": "./es/components/Popconfirm/index.js",
+      "require": "./lib/components/Popconfirm/index.js"
+    },
     "./Popup": {
       "types": "./es/components/Popup/index.d.ts",
       "import": "./es/components/Popup/index.js",

@@ -29,7 +29,8 @@
       "Bash(open:*)",
       "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/src/components/*/interface.ts)",
       "Bash(npx eslint:*)",
-      "Bash(npx stylelint:*)"
+      "Bash(npx stylelint:*)",
+      "Bash(grep -r \"useBodyScrollLock\\\\|useEscapeClose\\\\|useDialogFocus\\\\|usePresence\" /Users/derrick/Desktop/1money/1money-components-ui/src/components/ --include=*.tsx --include=*.ts)"
     ]
   }
 }

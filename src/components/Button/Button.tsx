@@ -2,23 +2,77 @@ import { cloneElement, forwardRef, isValidElement, memo } from 'react';
 import Spinner from '@/components/Spinner';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { ReactElement, ReactNode } from 'react';
+import {
+  BUTTON_COMPONENT_NAME,
+  BUTTON_DEFAULT_COLOR,
+  BUTTON_DEFAULT_HTML_TYPE,
+  BUTTON_DEFAULT_PREFIX,
+  BUTTON_DEFAULT_SIZE,
+  BUTTON_DEFAULT_VARIANT,
+  BUTTON_ICON_INHERIT_COLOR,
+  BUTTON_ICON_SIZE_BY_SIZE,
+  BUTTON_MODIFIER,
+  BUTTON_SLOT,
+  BUTTON_SPINNER_STROKE_WIDTH,
+  BUTTON_VARIANT,
+} from './constants';
+import type { ButtonSize, ButtonVariant } from './constants';
 import type { ButtonProps } from './interface';
 
-const SPINNER_STROKE_WIDTH = '5';
-const BUTTON_ICON_SIZES = {
-  large: 20,
-  medium: 20,
-  small: 16,
-} as const;
-const ICON_INHERIT_COLOR = 'currentColor';
-
-type ButtonSize = NonNullable<ButtonProps['size']>;
 type ButtonIconElementProps = {
   color?: string;
   size?: number | `${number}`;
   width?: number | `${number}`;
   height?: number | `${number}`;
 };
+
+const getToneClassName = (
+  classes: ReturnType<typeof classnames>,
+  variant: ButtonVariant,
+  color: NonNullable<ButtonProps['color']>,
+) => (
+  variant === BUTTON_VARIANT.text
+    ? classes(BUTTON_MODIFIER.text)
+    : classes(color)
+);
+
+const getLoadingIconClassName = (
+  classes: ReturnType<typeof classnames>,
+  size: ButtonSize,
+) => joinCls(
+  classes(BUTTON_SLOT.loadingIcon),
+  classes(`${BUTTON_SLOT.loadingIcon}-${size}`),
+);
+
+const getButtonClassName = ({
+  classes,
+  variant,
+  color,
+  size,
+  rounded,
+  disabled,
+  loading,
+  className,
+}: {
+  classes: ReturnType<typeof classnames>;
+  variant: ButtonVariant;
+  color: NonNullable<ButtonProps['color']>;
+  size: ButtonSize;
+  rounded: boolean;
+  disabled: boolean;
+  loading: boolean;
+  className?: string;
+}) => classes(
+  undefined,
+  joinCls(
+    getToneClassName(classes, variant, color),
+    classes(size),
+    rounded && classes(BUTTON_MODIFIER.rounded),
+    disabled && classes(BUTTON_MODIFIER.disabled),
+    loading && classes(BUTTON_MODIFIER.loading),
+    className,
+  ),
+);
 
 const normalizeAdornment = (adornment: ReactNode, size: ButtonSize) => {
   if (!isValidElement(adornment)) {
@@ -29,7 +83,7 @@ const normalizeAdornment = (adornment: ReactNode, size: ButtonSize) => {
   const nextProps: ButtonIconElementProps = {};
 
   if (adornmentProps.color == null) {
-    nextProps.color = ICON_INHERIT_COLOR;
+    nextProps.color = BUTTON_ICON_INHERIT_COLOR;
   }
 
   if (
@@ -37,7 +91,7 @@ const normalizeAdornment = (adornment: ReactNode, size: ButtonSize) => {
     adornmentProps.width == null &&
     adornmentProps.height == null
   ) {
-    nextProps.size = BUTTON_ICON_SIZES[size];
+    nextProps.size = BUTTON_ICON_SIZE_BY_SIZE[size];
   }
 
   return Object.keys(nextProps).length > 0
@@ -49,16 +103,16 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
     children,
     className = '',
-    prefixCls = 'button',
-    variant = 'contained',
-    color = 'primary',
-    size = 'medium',
+    prefixCls = BUTTON_DEFAULT_PREFIX,
+    variant = BUTTON_DEFAULT_VARIANT,
+    color = BUTTON_DEFAULT_COLOR,
+    size = BUTTON_DEFAULT_SIZE,
     loading = false,
     rounded = false,
     iconStart,
     iconEnd,
     disabled = false,
-    type = 'button',
+    type = BUTTON_DEFAULT_HTML_TYPE,
     ...rest
   } = props;
   const classes = classnames(prefixCls);
@@ -67,8 +121,8 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const normalizedIconEnd = normalizeAdornment(iconEnd, size);
   const startAdornment = loading ? (
     <Spinner
-      strokeWidth={SPINNER_STROKE_WIDTH}
-      className={joinCls(classes('loading-icon'), classes(`loading-icon-${size}`))}
+      strokeWidth={BUTTON_SPINNER_STROKE_WIDTH}
+      className={getLoadingIconClassName(classes, size)}
     />
   ) : normalizedIconStart;
 
@@ -78,29 +132,28 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       ref={ref}
       type={type}
       disabled={isDisabled}
-      className={classes(
-        undefined,
-        joinCls(
-          variant === 'text' ? classes('text') : classes(color),
-          classes(size),
-          rounded && classes('rounded'),
-          isDisabled && classes('disabled'),
-          loading && classes('loading'),
-          className,
-        ),
-      )}
+      className={getButtonClassName({
+        classes,
+        variant,
+        color,
+        size,
+        rounded,
+        disabled: isDisabled,
+        loading,
+        className,
+      })}
     >
-      {startAdornment && <span className={classes('icon-start')}>{startAdornment}</span>}
+      {startAdornment && <span className={classes(BUTTON_SLOT.iconStart)}>{startAdornment}</span>}
       {children}
-      {normalizedIconEnd && <span className={classes('icon-end')}>{normalizedIconEnd}</span>}
+      {normalizedIconEnd && <span className={classes(BUTTON_SLOT.iconEnd)}>{normalizedIconEnd}</span>}
     </button>
   );
 });
 
-ButtonBase.displayName = 'Button';
+ButtonBase.displayName = BUTTON_COMPONENT_NAME;
 
 export const Button = memo(ButtonBase);
 
-Button.displayName = 'Button';
+Button.displayName = BUTTON_COMPONENT_NAME;
 
 export default Button;

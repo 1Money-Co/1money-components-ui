@@ -1,5 +1,13 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import {
+  STEP_CUSTOM_COPY,
+  STEP_ITEM_KEYS,
+  STEP_RECOMMENDED_TAG_COLOR,
+  STEP_SAMPLE_COPY,
+  STEP_STATUS,
+  STEP_STORY_WRAPPER_WIDTH,
+} from './constants';
 import { Step } from './index';
 
 import './style';
@@ -8,7 +16,7 @@ import '../Tag/style';
 import '../Typography/style';
 
 const wrapperStyle: React.CSSProperties = {
-  width: 251,
+  width: STEP_STORY_WRAPPER_WIDTH,
 };
 
 const meta: Meta<typeof Step> = {
@@ -17,25 +25,25 @@ const meta: Meta<typeof Step> = {
   args: {
     items: [
       {
-        key: 'verify-business',
-        title: 'Text Heading',
-        description: 'Body text',
-        status: 'completed',
-        tag: 'Tag',
+        key: STEP_ITEM_KEYS.verifyBusiness,
+        title: STEP_SAMPLE_COPY.title,
+        description: STEP_SAMPLE_COPY.description,
+        status: STEP_STATUS.completed,
+        tag: STEP_SAMPLE_COPY.tag,
       },
       {
-        key: 'verify-owners',
-        title: 'Text Heading',
-        description: 'Body text',
-        status: 'completed',
-        tag: 'Tag',
+        key: STEP_ITEM_KEYS.verifyOwners,
+        title: STEP_SAMPLE_COPY.title,
+        description: STEP_SAMPLE_COPY.description,
+        status: STEP_STATUS.completed,
+        tag: STEP_SAMPLE_COPY.tag,
       },
       {
-        key: 'review-submission',
-        title: 'Text Heading',
-        description: 'Body text',
-        status: 'default',
-        tag: 'Tag',
+        key: STEP_ITEM_KEYS.reviewSubmission,
+        title: STEP_SAMPLE_COPY.title,
+        description: STEP_SAMPLE_COPY.description,
+        status: STEP_STATUS.default,
+        tag: STEP_SAMPLE_COPY.tag,
       },
     ],
   },
@@ -61,25 +69,25 @@ export const MixedStatus: Story = {
         {...args}
         items={[
           {
-            key: 'start',
-            title: 'Text Heading',
-            description: 'Body text',
-            status: 'default',
-            tag: 'Tag',
+            key: STEP_ITEM_KEYS.start,
+            title: STEP_SAMPLE_COPY.title,
+            description: STEP_SAMPLE_COPY.description,
+            status: STEP_STATUS.default,
+            tag: STEP_SAMPLE_COPY.tag,
           },
           {
-            key: 'complete',
-            title: 'Text Heading',
-            description: 'Body text',
-            status: 'completed',
-            tag: 'Tag',
+            key: STEP_ITEM_KEYS.complete,
+            title: STEP_SAMPLE_COPY.title,
+            description: STEP_SAMPLE_COPY.description,
+            status: STEP_STATUS.completed,
+            tag: STEP_SAMPLE_COPY.tag,
           },
           {
-            key: 'error',
-            title: 'Text Heading',
-            description: 'Body text',
-            status: 'error',
-            tag: 'Tag',
+            key: STEP_ITEM_KEYS.error,
+            title: STEP_SAMPLE_COPY.title,
+            description: STEP_SAMPLE_COPY.description,
+            status: STEP_STATUS.error,
+            tag: STEP_SAMPLE_COPY.tag,
           },
         ]}
       />
@@ -93,31 +101,31 @@ export const CustomContent: Story = {
       <Step
         items={[
           {
-            key: 'details',
-            title: 'Settlement review',
-            description: 'Upload ownership documents',
-            status: 'completed',
+            key: STEP_ITEM_KEYS.details,
+            title: STEP_CUSTOM_COPY.settlementReview,
+            description: STEP_CUSTOM_COPY.uploadOwnershipDocuments,
+            status: STEP_STATUS.completed,
             tag: {
-              label: 'Approved',
+              label: STEP_CUSTOM_COPY.approved,
             },
           },
           {
-            key: 'verification',
-            title: 'Beneficial owner check',
-            description: 'Waiting for passkey confirmation',
-            status: 'default',
+            key: STEP_ITEM_KEYS.verification,
+            title: STEP_CUSTOM_COPY.beneficialOwnerCheck,
+            description: STEP_CUSTOM_COPY.waitingForPasskeyConfirmation,
+            status: STEP_STATUS.default,
             tag: {
-              label: 'Pending',
-              color: 'recommended',
+              label: STEP_CUSTOM_COPY.pending,
+              color: STEP_RECOMMENDED_TAG_COLOR,
             },
           },
           {
-            key: 'finalize',
-            title: 'Final confirmation',
-            description: 'A signer rejected the agreement',
-            status: 'error',
+            key: STEP_ITEM_KEYS.finalize,
+            title: STEP_CUSTOM_COPY.finalConfirmation,
+            description: STEP_CUSTOM_COPY.signerRejectedAgreement,
+            status: STEP_STATUS.error,
             tag: {
-              label: 'Rejected',
+              label: STEP_CUSTOM_COPY.rejected,
             },
           },
         ]}

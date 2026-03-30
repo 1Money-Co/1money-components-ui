@@ -1,7 +1,8 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import type { TagProps } from '@/components/Tag';
+import type { StepStatus } from './constants';
 
-export type StepStatus = 'default' | 'completed' | 'error';
+export type { StepStatus } from './constants';
 
 export interface StepTagConfig {
   label: string;

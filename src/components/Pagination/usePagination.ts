@@ -1,5 +1,16 @@
 import { useMemo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
+import {
+  PAGINATION_DEFAULT_BOUNDARY_COUNT,
+  PAGINATION_DEFAULT_CURRENT,
+  PAGINATION_DEFAULT_MIDDLE_PAGE_COUNT,
+  PAGINATION_DEFAULT_PAGE_SIZE,
+  PAGINATION_DEFAULT_TOTAL,
+  PAGINATION_ELLIPSIS_POSITION,
+  PAGINATION_GAP_FILL_THRESHOLD,
+  PAGINATION_ITEM_TYPE,
+  PAGINATION_KEY_PREFIX,
+} from './constants';
 import type {
   PaginationControlItem,
   PaginationEllipsisItem,
@@ -9,33 +20,28 @@ import type {
   UsePaginationResult,
 } from './interface';
 
-const DEFAULT_CURRENT = 1;
-const DEFAULT_PAGE_SIZE = 10;
-const DEFAULT_TOTAL = 0;
-const DEFAULT_BOUNDARY_COUNT = 1;
-const DEFAULT_MIDDLE_PAGE_COUNT = 3;
-
 const toInteger = (value: number | undefined, fallback: number) => {
   const parsed = Number(value);
-
-  if (!Number.isFinite(parsed)) {
-    return fallback;
-  }
-
-  return Math.trunc(parsed);
+  return Number.isFinite(parsed) ? Math.trunc(parsed) : fallback;
 };
 
-const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
+const clamp = (value: number, min: number, max: number) =>
+  Math.min(Math.max(value, min), max);
 
-const normalizeTotal = (total: number) => Math.max(DEFAULT_TOTAL, toInteger(total, DEFAULT_TOTAL));
+const normalizeTotal = (total: number) =>
+  Math.max(PAGINATION_DEFAULT_TOTAL, toInteger(total, PAGINATION_DEFAULT_TOTAL));
 
-const normalizePageSize = (pageSize?: number) => Math.max(DEFAULT_CURRENT, toInteger(pageSize, DEFAULT_PAGE_SIZE));
+const normalizePageSize = (pageSize?: number) =>
+  Math.max(PAGINATION_DEFAULT_CURRENT, toInteger(pageSize, PAGINATION_DEFAULT_PAGE_SIZE));
 
-const normalizeBoundaryCount = (boundaryCount?: number) => Math.max(DEFAULT_TOTAL, toInteger(boundaryCount, DEFAULT_BOUNDARY_COUNT));
+const normalizeBoundaryCount = (boundaryCount?: number) =>
+  Math.max(PAGINATION_DEFAULT_TOTAL, toInteger(boundaryCount, PAGINATION_DEFAULT_BOUNDARY_COUNT));
 
-const normalizeMiddlePageCount = (middlePageCount?: number) => Math.max(DEFAULT_CURRENT, toInteger(middlePageCount, DEFAULT_MIDDLE_PAGE_COUNT));
+const normalizeMiddlePageCount = (middlePageCount?: number) =>
+  Math.max(PAGINATION_DEFAULT_CURRENT, toInteger(middlePageCount, PAGINATION_DEFAULT_MIDDLE_PAGE_COUNT));
 
-const getTotalPages = (total: number, pageSize: number) => Math.max(DEFAULT_CURRENT, Math.ceil(total / pageSize));
+const getTotalPages = (total: number, pageSize: number) =>
+  Math.max(PAGINATION_DEFAULT_CURRENT, Math.ceil(total / pageSize));
 
 const getVisiblePages = (
   current: number,
@@ -44,20 +50,26 @@ const getVisiblePages = (
   middlePageCount: number,
 ) => {
   const pages = new Set<number>();
-  const maxWindowStart = Math.max(DEFAULT_CURRENT, totalPages - middlePageCount + DEFAULT_CURRENT);
+  const maxWindowStart = Math.max(
+    PAGINATION_DEFAULT_CURRENT,
+    totalPages - middlePageCount + PAGINATION_DEFAULT_CURRENT,
+  );
   const windowStart = clamp(
-    current - Math.floor((middlePageCount - DEFAULT_CURRENT) / 2),
-    DEFAULT_CURRENT,
+    current - Math.floor((middlePageCount - PAGINATION_DEFAULT_CURRENT) / 2),
+    PAGINATION_DEFAULT_CURRENT,
     maxWindowStart,
   );
-  const windowEnd = Math.min(windowStart + middlePageCount - DEFAULT_CURRENT, totalPages);
+  const windowEnd = Math.min(
+    windowStart + middlePageCount - PAGINATION_DEFAULT_CURRENT,
+    totalPages,
+  );
 
-  for (let page = DEFAULT_CURRENT; page <= Math.min(boundaryCount, totalPages); page += 1) {
+  for (let page = PAGINATION_DEFAULT_CURRENT; page <= Math.min(boundaryCount, totalPages); page += 1) {
     pages.add(page);
   }
 
   for (
-    let page = Math.max(totalPages - boundaryCount + DEFAULT_CURRENT, DEFAULT_CURRENT);
+    let page = Math.max(totalPages - boundaryCount + PAGINATION_DEFAULT_CURRENT, PAGINATION_DEFAULT_CURRENT);
     page <= totalPages;
     page += 1
   ) {
@@ -68,7 +80,9 @@ const getVisiblePages = (
     pages.add(page);
   }
 
-  return [...pages].filter(page => page >= DEFAULT_CURRENT && page <= totalPages).sort((left, right) => left - right);
+  return [...pages]
+    .filter(page => page >= PAGINATION_DEFAULT_CURRENT && page <= totalPages)
+    .sort((left, right) => left - right);
 };
 
 const createPageItem = (
@@ -76,8 +90,8 @@ const createPageItem = (
   current: number,
   disabled: boolean,
 ): PaginationPageItem => ({
-  key: `page-${page}`,
-  type: 'page',
+  key: `${PAGINATION_KEY_PREFIX.page}-${page}`,
+  type: PAGINATION_ITEM_TYPE.page,
   page,
   current: page === current,
   disabled,
@@ -97,8 +111,8 @@ const createControlItem = (
 const createEllipsisItem = (
   position: 'start' | 'end',
 ): PaginationEllipsisItem => ({
-  key: `ellipsis-${position}`,
-  type: 'ellipsis',
+  key: `${PAGINATION_KEY_PREFIX.ellipsis}-${position}`,
+  type: PAGINATION_ITEM_TYPE.ellipsis,
   position,
   disabled: true,
 });
@@ -119,11 +133,15 @@ const buildPageItems = (
     if (previousPage > 0) {
       const gap = page - previousPage;
 
-      if (gap === 2) {
+      if (gap === PAGINATION_GAP_FILL_THRESHOLD) {
         items.push(createPageItem(previousPage + 1, current, disabled));
-      } else if (gap > 2) {
+      } else if (gap > PAGINATION_GAP_FILL_THRESHOLD) {
         ellipsisCount += 1;
-        items.push(createEllipsisItem(ellipsisCount === 1 ? 'start' : 'end'));
+        items.push(createEllipsisItem(
+          ellipsisCount === 1
+            ? PAGINATION_ELLIPSIS_POSITION.start
+            : PAGINATION_ELLIPSIS_POSITION.end,
+        ));
       }
     }
 
@@ -141,13 +159,21 @@ const buildPaginationItems = (
   boundaryCount: number,
   middlePageCount: number,
 ) => {
-  const canPrevious = current > DEFAULT_CURRENT;
+  const canPrevious = current > PAGINATION_DEFAULT_CURRENT;
   const canNext = current < totalPages;
 
   return [
-    createControlItem('previous', clamp(current - 1, DEFAULT_CURRENT, totalPages), disabled || !canPrevious),
+    createControlItem(
+      PAGINATION_ITEM_TYPE.previous,
+      clamp(current - 1, PAGINATION_DEFAULT_CURRENT, totalPages),
+      disabled || !canPrevious,
+    ),
     ...buildPageItems(current, totalPages, disabled, boundaryCount, middlePageCount),
-    createControlItem('next', clamp(current + 1, DEFAULT_CURRENT, totalPages), disabled || !canNext),
+    createControlItem(
+      PAGINATION_ITEM_TYPE.next,
+      clamp(current + 1, PAGINATION_DEFAULT_CURRENT, totalPages),
+      disabled || !canNext,
+    ),
   ];
 };
 
@@ -156,7 +182,7 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
     total,
     pageSize,
     current,
-    defaultCurrent = DEFAULT_CURRENT,
+    defaultCurrent = PAGINATION_DEFAULT_CURRENT,
     disabled = false,
     boundaryCount,
     middlePageCount,
@@ -170,19 +196,23 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
   const totalPages = getTotalPages(resolvedTotal, resolvedPageSize);
   const controlledCurrent = current === undefined
     ? undefined
-    : clamp(toInteger(current, DEFAULT_CURRENT), DEFAULT_CURRENT, totalPages);
+    : clamp(toInteger(current, PAGINATION_DEFAULT_CURRENT), PAGINATION_DEFAULT_CURRENT, totalPages);
   const [innerCurrent, setInnerCurrent] = useControlledState(
-    clamp(toInteger(defaultCurrent, DEFAULT_CURRENT), DEFAULT_CURRENT, totalPages),
+    clamp(toInteger(defaultCurrent, PAGINATION_DEFAULT_CURRENT), PAGINATION_DEFAULT_CURRENT, totalPages),
     controlledCurrent,
   );
-  const resolvedCurrent = clamp(toInteger(innerCurrent, DEFAULT_CURRENT), DEFAULT_CURRENT, totalPages);
+  const resolvedCurrent = clamp(
+    toInteger(innerCurrent, PAGINATION_DEFAULT_CURRENT),
+    PAGINATION_DEFAULT_CURRENT,
+    totalPages,
+  );
 
   const goTo = useEventCallback((page: number) => {
     if (disabled) {
       return;
     }
 
-    const nextPage = clamp(toInteger(page, resolvedCurrent), DEFAULT_CURRENT, totalPages);
+    const nextPage = clamp(toInteger(page, resolvedCurrent), PAGINATION_DEFAULT_CURRENT, totalPages);
 
     if (nextPage === resolvedCurrent) {
       return;
@@ -216,7 +246,7 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
     pageSize: resolvedPageSize,
     total: resolvedTotal,
     totalPages,
-    canPrevious: resolvedCurrent > DEFAULT_CURRENT,
+    canPrevious: resolvedCurrent > PAGINATION_DEFAULT_CURRENT,
     canNext: resolvedCurrent < totalPages,
     items,
     goTo,

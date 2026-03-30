@@ -3,6 +3,7 @@ import { fn } from '@storybook/test';
 import { Button } from '@/components/Button';
 import { Icons } from '@/components/Icons';
 import { TypographyBody } from '@/components/Typography';
+import { MODAL_SIZE, MODAL_SIZES } from './constants';
 import { Modal } from './index';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -10,8 +11,6 @@ import './style';
 import '../Button/style';
 import '../Icons/style';
 import '../Typography/style';
-
-const MODAL_SIZES = ['small', 'large'] as const;
 
 const MediaPlaceholder = () => (
   <div
@@ -100,7 +99,7 @@ const ModalLauncher = (args: React.ComponentProps<typeof Modal>) => {
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: MODAL_SIZE.small,
     illustration: 'illus2FA',
     okText: 'Button',
     cancelText: 'Button',
@@ -110,7 +109,7 @@ export const Small: Story = {
 
 export const Large: Story = {
   args: {
-    size: 'large',
+    size: MODAL_SIZE.large,
     showBackIcon: true,
     illustration: 'illus2FA',
   },
@@ -119,7 +118,7 @@ export const Large: Story = {
 
 export const WithMedia: Story = {
   args: {
-    size: 'small',
+    size: MODAL_SIZE.small,
     title: 'Text Heading',
     description: 'Body text',
     showCloseIcon: false,
@@ -132,7 +131,7 @@ export const WithMedia: Story = {
 
 export const CustomContent: Story = {
   args: {
-    size: 'small',
+    size: MODAL_SIZE.small,
     title: 'Security check required',
     illustration: <Icons name="illusLocked" size={74} />,
     description: undefined,

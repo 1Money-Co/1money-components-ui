@@ -33,6 +33,8 @@ export {
   useProFormContext,
 } from './components/ProForm';
 export { Pagination } from './components/Pagination';
+export { Popconfirm } from './components/Popconfirm';
+export { Progress } from './components/Progress';
 export { Radio, RadioGroup } from './components/Radio';
 export { Select } from './components/Select';
 export { Segment } from './components/Segment';
@@ -113,6 +115,19 @@ export type {
   UsePaginationOptions,
   UsePaginationResult,
 } from './components/Pagination';
+export type {
+  ProgressProps,
+  ProgressState,
+  ProgressColor,
+  ProgressPlacement,
+  ProgressFormatContext,
+} from './components/Progress';
+export type {
+  PopconfirmProps,
+  PopconfirmPlacement,
+  PopconfirmTrigger,
+  PopconfirmActionContext,
+} from './components/Popconfirm';
 export type {
   RadioChangeEvent,
   RadioGroupProps,

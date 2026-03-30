@@ -1,0 +1,122 @@
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
+
+$component: 'progress';
+$progress-variant-schema: variants.om-variant-schema(
+  $component,
+  rail-bg
+);
+$progress-variants: (
+  'gray': (
+    rail-bg: theme.palette(bg, 'default-tertiary'),
+  ),
+  'white': (
+    rail-bg: theme.palette(bg, 'default'),
+  ),
+);
+
+.#{theme.$prefix}-#{$component} {
+  @include variants.om-variant-default($progress-variants, 'gray', $progress-variant-schema);
+
+  --om-progress-track-color: #{theme.palette(bg, 'brand')};
+  --om-progress-info-color: #{theme.palette(text, 'default')};
+  --om-progress-feedback-color: #{theme.palette(text, 'danger')};
+  --om-progress-feedback-icon-color: #{theme.palette(icon, 'danger')};
+
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 300);
+  width: theme.sizing(scale, 100);
+
+  &-info {
+    @include theme.typography(display, sm);
+
+    width: theme.sizing(scale, 100);
+    color: var(--om-progress-info-color);
+  }
+
+  &-bar,
+  &-rail {
+    width: theme.sizing(scale, 100);
+  }
+
+  &-rail {
+    height: theme.spacing(scale, 100);
+    overflow: hidden;
+    background-color: var(--om-progress-rail-bg);
+    border-radius: theme.shape('full');
+  }
+
+  &-track {
+    height: theme.sizing(scale, 100);
+    background-color: var(--om-progress-track-color);
+    border-radius: inherit;
+    transition: width 160ms ease;
+  }
+
+  &-feedback {
+    display: flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    width: theme.sizing(scale, 100);
+    color: var(--om-progress-feedback-color);
+  }
+
+  &-feedback-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    color: var(--om-progress-feedback-icon-color);
+
+    .#{theme.$prefix}-icons-wrapper {
+      --icon-color: currentcolor;
+    }
+  }
+
+  &-feedback-text {
+    @include theme.typography(body, sm);
+  }
+
+  &-placement-left {
+    .#{theme.$prefix}-#{$component}-info {
+      text-align: left;
+    }
+
+    .#{theme.$prefix}-#{$component}-feedback {
+      justify-content: flex-start;
+    }
+  }
+
+  &-placement-right {
+    .#{theme.$prefix}-#{$component}-info {
+      text-align: right;
+    }
+
+    .#{theme.$prefix}-#{$component}-feedback {
+      justify-content: flex-end;
+    }
+  }
+
+  &-state-default {
+    --om-progress-track-color: #{theme.palette(bg, 'brand')};
+    --om-progress-info-color: #{theme.palette(text, 'default')};
+  }
+
+  &-state-success {
+    --om-progress-track-color: #{theme.palette(bg, 'positive')};
+    --om-progress-info-color: #{theme.palette(text, 'default')};
+  }
+
+  &-state-error {
+    --om-progress-track-color: #{theme.palette(bg, 'danger')};
+    --om-progress-info-color: #{theme.palette(text, 'danger')};
+  }
+
+  &-state-not-started {
+    --om-progress-track-color: #{theme.palette(bg, 'brand')};
+    --om-progress-info-color: #{theme.palette(text, 'default')};
+  }
+
+  @include variants.om-variant-classes($progress-variants, $progress-variant-schema, $default: 'gray');
+}

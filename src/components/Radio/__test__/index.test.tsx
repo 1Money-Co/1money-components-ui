@@ -89,6 +89,24 @@ describe('Radio', () => {
 
     expect(radio).toBeChecked();
   });
+
+  it('renders the cell variant with icon and tag content', () => {
+    render(
+      <Radio
+        variant="cell"
+        size="large"
+        orientation="vertical"
+        icon="language"
+        tag="Tag"
+        label="Global account"
+        description="International settlement"
+      />
+    );
+
+    expect(screen.getByText('Global account')).toBeInTheDocument();
+    expect(screen.getByText('International settlement')).toBeInTheDocument();
+    expect(screen.getByText('Tag')).toBeInTheDocument();
+  });
 });
 
 describe('RadioGroup', () => {
@@ -202,5 +220,50 @@ describe('RadioGroup', () => {
     expect(handleChange).not.toHaveBeenCalled();
     expect(optionA).toBeChecked();
     expect(optionB).not.toBeChecked();
+  });
+
+  it('supports cell options mode and preserves selection updates', () => {
+    const handleChange = jest.fn();
+
+    render(
+      <RadioGroup
+        defaultValue="swift"
+        variant="cell"
+        size="large"
+        orientation="horizontal"
+        layout="horizontal"
+        onChange={handleChange}
+        options={[
+          {
+            value: 'swift',
+            label: 'SWIFT',
+            description: 'Receive via bank rails',
+          },
+          {
+            value: 'global',
+            label: 'Global account',
+            description: 'International settlement',
+            icon: 'language',
+          },
+        ]}
+      />
+    );
+
+    const swift = screen.getByRole('radio', { name: 'SWIFT' });
+    const global = screen.getByRole('radio', { name: 'Global account' });
+
+    expect(swift).toBeChecked();
+    expect(global).not.toBeChecked();
+
+    fireEvent.click(screen.getByText('International settlement'));
+
+    expect(handleChange).toHaveBeenCalledTimes(1);
+    expect(handleChange.mock.calls[0][0]).toMatchObject({
+      target: {
+        value: 'global',
+      },
+    });
+    expect(global).toBeChecked();
+    expect(swift).not.toBeChecked();
   });
 });

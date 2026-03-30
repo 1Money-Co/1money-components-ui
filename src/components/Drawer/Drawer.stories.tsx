@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { fn } from '@storybook/test';
 import { Button } from '@/components/Button';
+import { DRAWER_PLACEMENTS } from './constants';
 import { Drawer } from './index';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { DrawerPlacement } from './interface';
@@ -9,7 +10,7 @@ import './style';
 import '../Button/style';
 import '../Icons/style';
 
-const PLACEMENTS = ['right', 'left', 'top', 'bottom'] as const;
+const FOOTER_ACTIONS_STYLE: React.CSSProperties = { display: 'flex', gap: 12, width: '100%' };
 
 const meta: Meta<typeof Drawer> = {
   title: 'Components/Drawer',
@@ -17,7 +18,7 @@ const meta: Meta<typeof Drawer> = {
   argTypes: {
     placement: {
       control: 'radio',
-      options: PLACEMENTS,
+      options: DRAWER_PLACEMENTS,
     },
     width: { control: 'number' },
     height: { control: 'number' },
@@ -28,10 +29,10 @@ const meta: Meta<typeof Drawer> = {
     closeIcon: { control: false },
   },
   args: {
-    title: 'Drawer Title',
+    title: 'Title',
     placement: 'right',
-    width: 373,
-    height: 373,
+    width: 360,
+    height: 360,
     maskClosable: true,
     showCloseIcon: true,
     onClose: fn(),
@@ -63,7 +64,6 @@ const DrawerLauncher = (args: React.ComponentProps<typeof Drawer>) => {
 
 export const Basic: Story = {
   args: {
-    title: 'Basic Drawer',
     children: (
       <>
         <p>Some contents...</p>
@@ -96,7 +96,7 @@ export const Placement: Story = {
           placement={placement}
           title={`${placement} drawer`}
           onClose={() => setOpen(false)}
-          width={373}
+          width={360}
           height={300}
         >
           <p>Drawer slides in from the {placement}.</p>
@@ -108,12 +108,34 @@ export const Placement: Story = {
 
 export const WithFooter: Story = {
   args: {
-    title: 'Form Drawer',
     children: <p>Fill in the form content here...</p>,
     footer: (
-      <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
-        <Button color="grey">Cancel</Button>
-        <Button color="primary">Save</Button>
+      <div style={FOOTER_ACTIONS_STYLE}>
+        <Button color="secondary" size="medium" style={{ flex: 1 }}>
+          Cancel
+        </Button>
+        <Button color="primary" size="medium" style={{ flex: 1 }}>
+          Confirm
+        </Button>
+      </div>
+    ),
+  },
+  render: (args) => <DrawerLauncher {...args} />,
+};
+
+export const WithBackControl: Story = {
+  args: {
+    showBackIcon: true,
+    children: <p>Use the back control to return to the previous step.</p>,
+    onBack: fn(),
+    footer: (
+      <div style={FOOTER_ACTIONS_STYLE}>
+        <Button color="secondary" size="medium" style={{ flex: 1 }}>
+          Cancel
+        </Button>
+        <Button color="primary" size="medium" style={{ flex: 1 }}>
+          Confirm
+        </Button>
       </div>
     ),
   },
@@ -133,7 +155,11 @@ export const MaskNotClosable: Story = {
   args: {
     title: 'Mask Not Closable',
     maskClosable: false,
-    children: <p>Clicking the mask will not close this drawer. Use the close icon or Escape key.</p>,
+    children: (
+      <>
+        <p>Clicking the mask will not close this drawer. Use the close icon or Escape key.</p>
+      </>
+    ),
   },
   render: (args) => <DrawerLauncher {...args} />,
 };

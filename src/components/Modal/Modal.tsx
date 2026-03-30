@@ -18,23 +18,37 @@ import { fillRef } from '@/utils/ref';
 import type { ReactNode, RefObject } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import type { IconName } from '@/components/Icons';
+import {
+  MODAL_ACTION_KIND,
+  MODAL_BUTTON_HTML_TYPE,
+  MODAL_BUTTON_SIZE,
+  MODAL_CLOSE_TIMEOUT,
+  MODAL_CONTROL_ICON_SIZE,
+  MODAL_CONTROL_LABELS,
+  MODAL_CONTROL_TYPE,
+  MODAL_DEFAULT_BUTTON_COLORS,
+  MODAL_DEFAULT_CANCEL_TEXT,
+  MODAL_DEFAULT_ICONS,
+  MODAL_DEFAULT_ILLUSTRATION_SIZE,
+  MODAL_DEFAULT_OK_TEXT,
+  MODAL_DEFAULT_PREFIX,
+  MODAL_ESCAPE_KEY,
+  MODAL_KEYDOWN_EVENT,
+  MODAL_MODIFIER,
+  MODAL_NAMESPACE,
+  MODAL_OVERFLOW_HIDDEN,
+  MODAL_OVERFLOW_RESET,
+  MODAL_SIZE,
+  MODAL_SLOT,
+} from './constants';
+import type { ModalActionKind, ModalControlType } from './constants';
 import type { ModalButtonClickHandler, ModalProps, ModalSize } from './interface';
-
-const NAMESPACE = 'om-react-ui';
-const MODAL_CLOSE_TIMEOUT = 200;
-const DEFAULT_OK_TEXT = 'Confirm';
-const DEFAULT_CANCEL_TEXT = 'Cancel';
-const DEFAULT_ILLUSTRATION_SIZE = 74;
-const CLOSE_ICON_SIZE = 24;
-const BACK_ICON_SIZE = 24;
-
-type ModalActionKind = 'ok' | 'cancel';
 type ModalAction = (() => void | Promise<void>) | undefined;
 
 let scrollLockCount = 0;
 
 const getClassName = (prefixCls: string, slot?: string, modifier?: string) => {
-  const baseClassName = `${NAMESPACE}-${prefixCls}${slot ? `-${slot}` : ''}`;
+  const baseClassName = `${MODAL_NAMESPACE}-${prefixCls}${slot ? `-${slot}` : ''}`;
   return modifier ? `${baseClassName}-${modifier}` : baseClassName;
 };
 
@@ -45,7 +59,7 @@ const setBodyOverflow = (value: string) => {
 
 const lockBodyScroll = () => {
   scrollLockCount += 1;
-  setBodyOverflow('hidden');
+  setBodyOverflow(MODAL_OVERFLOW_HIDDEN);
 };
 
 const unlockBodyScroll = () => {
@@ -54,7 +68,7 @@ const unlockBodyScroll = () => {
   if (scrollLockCount === 0) {
     requestAnimationFrame(() => {
       if (scrollLockCount === 0) {
-        setBodyOverflow('');
+        setBodyOverflow(MODAL_OVERFLOW_RESET);
       }
     });
   }
@@ -145,15 +159,15 @@ const useEscapeClose = (enabled: boolean, onClose: ModalAction) => {
     if (!enabled || typeof document === 'undefined') return undefined;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Escape') return;
+      if (event.key !== MODAL_ESCAPE_KEY) return;
       event.preventDefault();
       void onClose?.();
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener(MODAL_KEYDOWN_EVENT, handleKeyDown);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener(MODAL_KEYDOWN_EVENT, handleKeyDown);
     };
   }, [enabled, onClose]);
 };
@@ -175,7 +189,7 @@ const renderIllustrationNode = (illustration?: ReactNode | IconName) => {
   if (!illustration) return null;
 
   if (typeof illustration === 'string') {
-    return <Icons name={illustration as IconName} size={DEFAULT_ILLUSTRATION_SIZE} />;
+    return <Icons name={illustration as IconName} size={MODAL_DEFAULT_ILLUSTRATION_SIZE} />;
   }
 
   return isValidElement(illustration) ? illustration : null;
@@ -198,17 +212,17 @@ const createActionHandler = (
 
 const renderControlButton = (
   prefixCls: string,
-  type: 'back' | 'close',
+  type: ModalControlType,
   iconNode: ReactNode,
   onClick?: ModalAction,
 ) => (
   <button
-    type="button"
+    type={MODAL_BUTTON_HTML_TYPE}
     className={classNames(
-      getClassName(prefixCls, 'control'),
-      getClassName(prefixCls, 'control', type),
+      getClassName(prefixCls, MODAL_SLOT.control),
+      getClassName(prefixCls, MODAL_SLOT.control, type),
     )}
-    aria-label={type === 'close' ? 'Close modal' : 'Go back'}
+    aria-label={MODAL_CONTROL_LABELS[type]}
     onClick={toVoidHandler(onClick)}
   >
     {iconNode}
@@ -230,17 +244,15 @@ const renderActionButton = ({
 }) => {
   if (text == null || !action) return null;
 
-  const isCancel = kind === 'cancel';
-
   return (
     <Button
       {...buttonProps}
-      type="button"
-      size="large"
-      color={buttonProps?.color ?? (isCancel ? 'grey' : 'primary')}
+      type={MODAL_BUTTON_HTML_TYPE}
+      size={MODAL_BUTTON_SIZE}
+      color={buttonProps?.color ?? MODAL_DEFAULT_BUTTON_COLORS[kind]}
       className={classNames(
-        getClassName(prefixCls, 'action-button'),
-        getClassName(prefixCls, 'action-button', kind),
+        getClassName(prefixCls, MODAL_SLOT.actionButton),
+        getClassName(prefixCls, MODAL_SLOT.actionButton, kind),
         buttonProps?.className,
       )}
       style={buttonProps?.style}
@@ -267,7 +279,7 @@ const resolveFooterNode = ({
   if (footer !== undefined) return footer;
   if (!cancelButton && !okButton) return null;
 
-  return size === 'large'
+  return size === MODAL_SIZE.large
     ? (
       <>
         {cancelButton}
@@ -286,9 +298,9 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   const {
     className,
     style,
-    prefixCls = 'modal',
+    prefixCls = MODAL_DEFAULT_PREFIX,
     open = false,
-    size = 'small',
+    size = MODAL_SIZE.small,
     maskClosable = true,
     showCloseIcon = true,
     showBackIcon = false,
@@ -304,8 +316,8 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     onOk,
     onCancel,
     onBack,
-    okText = DEFAULT_OK_TEXT,
-    cancelText = DEFAULT_CANCEL_TEXT,
+    okText = MODAL_DEFAULT_OK_TEXT,
+    cancelText = MODAL_DEFAULT_CANCEL_TEXT,
     rootStyle,
     wrapperStyle,
     bodyStyle,
@@ -348,16 +360,26 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   const closeControlNode = showCloseIcon
     ? renderControlButton(
       prefixCls,
-      'close',
-      closeIcon ?? <Icons name="cross" size={CLOSE_ICON_SIZE} />,
+      MODAL_CONTROL_TYPE.close,
+      closeIcon ?? (
+        <Icons
+          name={MODAL_DEFAULT_ICONS[MODAL_CONTROL_TYPE.close]}
+          size={MODAL_CONTROL_ICON_SIZE}
+        />
+      ),
       handleCancel,
     )
     : null;
   const backControlNode = showBackIcon
     ? renderControlButton(
       prefixCls,
-      'back',
-      backIcon ?? <Icons name="arrowLeft" size={BACK_ICON_SIZE} />,
+      MODAL_CONTROL_TYPE.back,
+      backIcon ?? (
+        <Icons
+          name={MODAL_DEFAULT_ICONS[MODAL_CONTROL_TYPE.back]}
+          size={MODAL_CONTROL_ICON_SIZE}
+        />
+      ),
       handleBack,
     )
     : null;
@@ -379,14 +401,14 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   ));
   const cancelButton = renderActionButton({
     prefixCls,
-    kind: 'cancel',
+    kind: MODAL_ACTION_KIND.cancel,
     text: cancelText,
     action: onCancel,
     buttonProps: cancelButtonProps,
   });
   const okButton = renderActionButton({
     prefixCls,
-    kind: 'ok',
+    kind: MODAL_ACTION_KIND.ok,
     text: okText,
     action: onOk,
     buttonProps: okButtonProps,
@@ -405,18 +427,22 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
       <div
         style={rootStyle}
         className={classNames(
-          getClassName(prefixCls, 'root'),
-          getClassName(prefixCls, 'root', open ? 'open' : 'closed'),
+          getClassName(prefixCls, MODAL_SLOT.root),
+          getClassName(
+            prefixCls,
+            MODAL_SLOT.root,
+            open ? MODAL_MODIFIER.open : MODAL_MODIFIER.closed,
+          ),
         )}
       >
         <div
           aria-hidden="true"
-          className={getClassName(prefixCls, 'overlay')}
+          className={getClassName(prefixCls, MODAL_SLOT.overlay)}
           onClick={handleOverlayClick}
         />
         <div
           style={wrapperStyle}
-          className={getClassName(prefixCls, 'wrapper')}
+          className={getClassName(prefixCls, MODAL_SLOT.wrapper)}
         >
           <div
             {...rest}
@@ -430,44 +456,44 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
             className={classNames(
               getClassName(prefixCls),
               getClassName(prefixCls, undefined, size),
-              fullWidth && getClassName(prefixCls, undefined, 'full-width'),
-              hasMedia && getClassName(prefixCls, undefined, 'with-media'),
+              fullWidth && getClassName(prefixCls, undefined, MODAL_MODIFIER.fullWidth),
+              hasMedia && getClassName(prefixCls, undefined, MODAL_MODIFIER.withMedia),
               className,
             )}
           >
             {closeControlNode}
-            {hasMedia && <div className={getClassName(prefixCls, 'media')}>{media}</div>}
-            <div className={getClassName(prefixCls, 'inner')}>
+            {hasMedia && <div className={getClassName(prefixCls, MODAL_SLOT.media)}>{media}</div>}
+            <div className={getClassName(prefixCls, MODAL_SLOT.inner)}>
               {backControlNode && (
                 <div
                   style={headerStyle}
-                  className={getClassName(prefixCls, 'header')}
+                  className={getClassName(prefixCls, MODAL_SLOT.header)}
                 >
                   {backControlNode}
                 </div>
               )}
               <div
                 style={bodyStyle}
-                className={getClassName(prefixCls, 'body')}
+                className={getClassName(prefixCls, MODAL_SLOT.body)}
               >
                 {(illustrationNode || titleNode || descriptionNode) && (
-                  <div className={getClassName(prefixCls, 'summary')}>
+                  <div className={getClassName(prefixCls, MODAL_SLOT.summary)}>
                     {illustrationNode && (
-                      <div className={getClassName(prefixCls, 'illustration')}>
+                      <div className={getClassName(prefixCls, MODAL_SLOT.illustration)}>
                         {illustrationNode}
                       </div>
                     )}
                     {(titleNode || descriptionNode) && (
-                      <div className={getClassName(prefixCls, 'copy')}>
+                      <div className={getClassName(prefixCls, MODAL_SLOT.copy)}>
                         {titleNode && (
-                          <div id={titleId} className={getClassName(prefixCls, 'title')}>
+                          <div id={titleId} className={getClassName(prefixCls, MODAL_SLOT.title)}>
                             {titleNode}
                           </div>
                         )}
                         {descriptionNode && (
                           <div
                             id={descriptionId}
-                            className={getClassName(prefixCls, 'description')}
+                            className={getClassName(prefixCls, MODAL_SLOT.description)}
                           >
                             {descriptionNode}
                           </div>
@@ -479,7 +505,7 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
                 {childrenNode && (
                   <div
                     style={contentStyle}
-                    className={getClassName(prefixCls, 'content')}
+                    className={getClassName(prefixCls, MODAL_SLOT.content)}
                   >
                     {childrenNode}
                   </div>
@@ -489,8 +515,8 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
                 <div
                   style={footerStyle}
                   className={classNames(
-                    getClassName(prefixCls, 'footer'),
-                    getClassName(prefixCls, 'footer', size),
+                    getClassName(prefixCls, MODAL_SLOT.footer),
+                    getClassName(prefixCls, MODAL_SLOT.footer, size),
                   )}
                 >
                   {footerNode}

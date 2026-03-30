@@ -6,8 +6,9 @@ import type {
 } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import type { IconName } from '@/components/Icons';
+import type { ModalSize } from './constants';
 
-export type ModalSize = 'small' | 'large';
+export type { ModalSize } from './constants';
 export type ModalFooterRender = (
   cancelButton: ReactNode,
   okButton: ReactNode,
