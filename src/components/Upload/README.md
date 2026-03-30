@@ -24,7 +24,7 @@ import { Upload, UploadFileBar } from '@1money/components-ui/Upload';
 
 ```tsx
 <UploadFileBar fileName="document.pdf" />
-<UploadFileBar fileName="failed.pdf" status={1} message="Upload failed" onClickRemove={() => {}} />
+<UploadFileBar fileName="failed.pdf" status={1} message="Upload failed" onRemove={() => {}} />
 ```
 
 ## Upload Props
@@ -44,5 +44,5 @@ All other props are forwarded to PrimeReact's `FileUpload` component.
 | `fileName` | `string` | — | Name of the uploaded file |
 | `status` | `0 \| 1` | `0` | File status (0 = success, 1 = error) |
 | `message` | `string` | — | Error/helper message |
-| `onClickRemove` | `() => void` | — | Remove button callback |
+| `onRemove` | `() => void` | — | Remove button callback |
 | `prefixCls` | `string` | `'upload-file-bar'` | CSS class prefix |

@@ -18,13 +18,13 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
     fileName,
     status = FILE_STATUS_SUCCESS,
     message,
-    onClickRemove,
+    onRemove,
     ref,
   } = props;
   const classes = classnames(prefixCls);
 
   const handleRemove = useEventCallback(() => {
-    onClickRemove?.();
+    onRemove?.();
   });
 
   return (

@@ -14,7 +14,7 @@ const meta: Meta<typeof Upload> = {
     disabled: { control: 'boolean' },
     label: { control: 'text' },
     description: { control: 'text' },
-    feedback: { control: 'text' },
+    errorMsg: { control: 'text' },
     buttonLabel: { control: 'text' },
     accept: { control: 'text' },
     multiple: { control: 'boolean' },
@@ -45,20 +45,42 @@ export const WithLabel: Story = {
 export const WithFileBar: Story = {
   render: () => (
     <Upload label="Upload Document">
-      <UploadFileBar fileName="report-2026.pdf" onClickRemove={fn()} />
+      <UploadFileBar fileName="report-2026.pdf" onRemove={fn()} />
     </Upload>
   ),
 };
 
 export const WithError: Story = {
   render: () => (
-    <Upload label="Upload Document" feedback="File size exceeds the limit.">
+    <Upload label="Upload Document" errorMsg="Feedback">
       <UploadFileBar
         fileName="large-file.pdf"
         status={1}
         message="Upload failed"
-        onClickRemove={fn()}
+        onRemove={fn()}
       />
+    </Upload>
+  ),
+};
+
+export const MultipleFiles: Story = {
+  render: () => (
+    <Upload
+      label="Label"
+      description="Description"
+      errorMsg="Feedback"
+      className=''
+    >
+       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
+        <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
+        <UploadFileBar
+          fileName="File name.PDF"
+          status={1}
+          message="Upload failed"
+          onRemove={fn()}
+        />
+      </div>
     </Upload>
   ),
 };
@@ -103,17 +125,17 @@ export const AllVariants: Story = {
       </div>
       <div style={{ width: 400 }}>
         <h3 style={{ marginBottom: 12 }}>File Bar States</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <UploadFileBar fileName="report.pdf" onClickRemove={fn()} />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <UploadFileBar fileName="report.pdf" onRemove={fn()} />
           <UploadFileBar
             fileName="very-long-file-name-that-should-truncate.pdf"
-            onClickRemove={fn()}
+            onRemove={fn()}
           />
           <UploadFileBar
             fileName="failed.pdf"
             status={1}
             message="System error"
-            onClickRemove={fn()}
+            onRemove={fn()}
           />
         </div>
       </div>

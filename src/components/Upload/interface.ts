@@ -12,7 +12,7 @@ export interface UploadProps {
   /** Description text below the label */
   description?: ReactNode;
   /** Feedback/error message displayed below the file list */
-  feedback?: ReactNode;
+  errorMsg?: ReactNode;
   /** Whether the upload is disabled */
   disabled?: boolean;
   /** Accept file types (e.g. '.pdf,.png,image/*') */
@@ -37,7 +37,7 @@ export interface UploadFileBarProps {
   /** CSS class prefix */
   prefixCls?: string;
   /** Callback when remove icon is clicked */
-  onClickRemove?: () => void;
+  onRemove?: () => void;
   /** Ref to the wrapper element */
   ref?: RefObject<HTMLDivElement | null>;
 }
