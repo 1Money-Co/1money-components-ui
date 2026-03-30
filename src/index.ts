@@ -51,6 +51,7 @@ export { Tag } from './components/Tag';
 export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
 export { Trigger } from './components/Trigger';
+export { Upload, UploadFileBar } from './components/Upload';
 export { usePagination } from './components/Pagination';
 
 export type { AccordionProps, AccordionItem } from './components/Accordion';
@@ -186,6 +187,10 @@ export type {
   TriggerContentContext,
   TriggerRole,
 } from './components/Trigger';
+export type {
+  UploadProps,
+  UploadFileBarProps,
+} from './components/Upload';
 export type {
   ProFormProps,
   ProFormFieldProps,

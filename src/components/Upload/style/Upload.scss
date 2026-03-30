@@ -1,0 +1,39 @@
+@use '@/styles/api' as theme;
+
+$component: 'upload';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(scale, 200);
+  align-items: flex-start;
+
+  &-input {
+    display: none;
+  }
+
+  &-label {
+    color: theme.palette(text, 'default');
+  }
+
+  &-description {
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-slot {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &-feedback {
+    display: flex;
+    gap: theme.spacing(scale, 100);
+    align-items: flex-start;
+    color: theme.palette(text, 'danger');
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+  }
+}
