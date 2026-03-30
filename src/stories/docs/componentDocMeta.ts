@@ -115,6 +115,13 @@ export const COMPONENT_DOC_META: Record<string, ComponentDocMeta> = {
       'Use it when page index, page size, and navigation affordances should stay explicit and reusable.',
     ],
   },
+  Popconfirm: {
+    whenToUse: [
+      'Use it when a destructive or irreversible action needs a lightweight confirmation without opening a full modal.',
+      'Use it for inline delete, archive, revoke, and remove flows that should stay anchored to the initiating control.',
+      'Use it when the interaction should feel contextual, fast, and visually tied to the trigger element.',
+    ],
+  },
   ProForm: {
     whenToUse: [
       'Use it when you need higher-level, product-ready form composition rather than assembling every field manually.',

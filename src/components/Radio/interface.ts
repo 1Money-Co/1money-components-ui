@@ -4,8 +4,12 @@ import type {
   ReactNode,
   RefObject,
 } from 'react';
+import type { IconName } from '@/components/Icons';
 
 export type RadioValueType = string | number;
+export type RadioVariant = 'default' | 'cell';
+export type RadioSize = 'large' | 'medium' | 'small';
+export type RadioOrientation = 'horizontal' | 'vertical';
 
 export interface RadioChangeTarget {
   checked: boolean;
@@ -51,6 +55,16 @@ export interface RadioProps extends NativeRadioInputProps {
   label?: ReactNode;
   /** Description text displayed below the label */
   description?: ReactNode;
+  /** Visual variant of the radio */
+  variant?: RadioVariant;
+  /** Visual size used by the cell variant */
+  size?: RadioSize;
+  /** Layout used by the cell variant */
+  orientation?: RadioOrientation;
+  /** Optional icon rendered by the cell variant */
+  icon?: IconName;
+  /** Optional tag label rendered by the cell variant */
+  tag?: string;
   /** Position of the radio relative to the label */
   direction?: 'left' | 'right';
   /** Callback when checked state changes */
@@ -66,6 +80,16 @@ export interface RadioOptionItem {
   label?: ReactNode;
   /** Description text displayed below the label */
   description?: ReactNode;
+  /** Visual variant of the radio */
+  variant?: RadioVariant;
+  /** Visual size used by the cell variant */
+  size?: RadioSize;
+  /** Layout used by the cell variant */
+  orientation?: RadioOrientation;
+  /** Optional icon rendered by the cell variant */
+  icon?: IconName;
+  /** Optional tag label rendered by the cell variant */
+  tag?: string;
   /** Whether this specific option is disabled */
   disabled?: boolean;
   /** Whether this specific option is required */
@@ -90,6 +114,12 @@ export interface RadioGroupProps {
   disabled?: boolean;
   /** Layout direction of the group */
   layout?: 'vertical' | 'horizontal';
+  /** Visual variant inherited by child radios */
+  variant?: RadioVariant;
+  /** Visual size inherited by child radios */
+  size?: RadioSize;
+  /** Cell layout inherited by child radios */
+  orientation?: RadioOrientation;
   /** Position of radio relative to label (inherited by children) */
   direction?: 'left' | 'right';
   /** Gap between radio items — accepts spacing token key or CSS value */

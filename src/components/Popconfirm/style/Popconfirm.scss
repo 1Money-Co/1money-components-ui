@@ -1,0 +1,264 @@
+@use '@/styles/api' as theme;
+
+$component: 'popconfirm';
+$cls: #{theme.$prefix}-#{$component};
+$arrow-width: 36px;
+$arrow-height: 10px;
+$arrow-inner-width: 34px;
+$arrow-inner-height: 9px;
+$arrow-overlap: 2px;
+$arrow-inset: theme.spacing(scale, 500);
+$arrow-shape: polygon(0 0, 100% 0, 100% 22%, 62% 22%, 50% 100%, 38% 22%, 0 22%);
+
+.#{$cls}-overlay {
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(#{theme.shadows(200)});
+}
+
+.#{$cls} {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 100);
+  width: 300px;
+  max-width: min(400px, calc(100vw - #{theme.spacing(component-padding, 400)} * 2));
+  padding: theme.spacing(component-padding, 400);
+  background-color: theme.palette(bg, 'default');
+  border: 1px solid theme.palette(border, 'neutral');
+  border-radius: theme.shape(200);
+  isolation: isolate;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    width: $arrow-width;
+    height: $arrow-height;
+    background-color: theme.palette(bg, 'default');
+    opacity: 0;
+    content: '';
+    clip-path: $arrow-shape;
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    width: $arrow-inner-width;
+    height: $arrow-inner-height;
+    background-color: theme.palette(bg, 'default');
+    opacity: 0;
+    content: '';
+    clip-path: $arrow-shape;
+    pointer-events: none;
+  }
+
+  &-no-arrow {
+    &::before {
+      display: none;
+    }
+  }
+
+  &-header {
+    display: flex;
+    gap: theme.spacing(gap, 200);
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+
+  &-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    align-items: flex-start;
+    min-width: 0;
+  }
+
+  &-title {
+    @include theme.typography(title, md, $strong: true);
+
+    width: 100%;
+    color: theme.palette(text, 'default');
+  }
+
+  &-body {
+    @include theme.typography(body, md);
+
+    width: 100%;
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-actions {
+    display: flex;
+    gap: theme.spacing(gap, 300);
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: theme.spacing(component-padding, 300);
+  }
+}
+
+.#{$cls}-overlay[data-side='top'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  bottom: calc(-#{$arrow-height} + #{$arrow-overlap});
+  left: 50%;
+  background-color: theme.palette(border, 'neutral');
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='top'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  bottom: calc(-#{$arrow-inner-height} + #{$arrow-overlap});
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='top'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  left: $arrow-inset;
+  transform: none;
+}
+
+.#{$cls}-overlay[data-side='top'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  left: calc(#{$arrow-inset} + 1px);
+  transform: none;
+}
+
+.#{$cls}-overlay[data-side='top'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  right: $arrow-inset;
+  left: auto;
+  transform: none;
+}
+
+.#{$cls}-overlay[data-side='top'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  right: calc(#{$arrow-inset} + 1px);
+  left: auto;
+  transform: none;
+}
+
+.#{$cls}-overlay[data-side='bottom'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  top: calc(-#{$arrow-height} + #{$arrow-overlap});
+  left: 50%;
+  background-color: theme.palette(border, 'neutral');
+  transform: translateX(-50%) rotate(180deg);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='bottom'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  top: calc(-#{$arrow-inner-height} + #{$arrow-overlap});
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='bottom'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  left: $arrow-inset;
+  transform: rotate(180deg);
+}
+
+.#{$cls}-overlay[data-side='bottom'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  left: calc(#{$arrow-inset} + 1px);
+  transform: rotate(180deg);
+}
+
+.#{$cls}-overlay[data-side='bottom'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  right: $arrow-inset;
+  left: auto;
+  transform: rotate(180deg);
+}
+
+.#{$cls}-overlay[data-side='bottom'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  right: calc(#{$arrow-inset} + 1px);
+  left: auto;
+  transform: rotate(180deg);
+}
+
+.#{$cls}-overlay[data-side='left'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  top: 50%;
+  right: calc(-#{$arrow-height} + #{$arrow-overlap});
+  background-color: theme.palette(border, 'neutral');
+  transform: translateY(-50%) rotate(-90deg);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='left'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  top: 50%;
+  right: calc(-#{$arrow-inner-height} + #{$arrow-overlap});
+  transform: translateY(-50%) rotate(-90deg);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='left'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  top: $arrow-inset;
+  transform: rotate(-90deg);
+}
+
+.#{$cls}-overlay[data-side='left'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  top: calc(#{$arrow-inset} + 1px);
+  transform: rotate(-90deg);
+}
+
+.#{$cls}-overlay[data-side='right'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  top: 50%;
+  left: calc(-#{$arrow-height} + #{$arrow-overlap});
+  background-color: theme.palette(border, 'neutral');
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='right'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  top: 50%;
+  left: calc(-#{$arrow-inner-height} + #{$arrow-overlap});
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 1;
+}
+
+.#{$cls}-overlay[data-side='left'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::before,
+.#{$cls}-overlay[data-side='right'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  top: auto;
+  bottom: $arrow-inset;
+}
+
+.#{$cls}-overlay[data-side='left'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::after,
+.#{$cls}-overlay[data-side='right'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  top: auto;
+  bottom: calc(#{$arrow-inset} + 1px);
+}
+
+.#{$cls}-overlay[data-side='left'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::before,
+.#{$cls}-overlay[data-side='left'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  transform: rotate(-90deg);
+}
+
+.#{$cls}-overlay[data-side='right'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::before {
+  top: $arrow-inset;
+  transform: rotate(90deg);
+}
+
+.#{$cls}-overlay[data-side='right'][data-align='start'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  top: calc(#{$arrow-inset} + 1px);
+  transform: rotate(90deg);
+}
+
+.#{$cls}-overlay[data-side='right'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::before,
+.#{$cls}-overlay[data-side='right'][data-align='end'] .#{$cls}:not(.#{$cls}-no-arrow)::after {
+  transform: rotate(90deg);
+}
+
+@include theme.down(sm) {
+  .#{$cls} {
+    width: min(300px, calc(100vw - #{theme.spacing(component-padding, 400)} * 2));
+  }
+}

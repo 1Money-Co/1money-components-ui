@@ -23,6 +23,9 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
     name,
     disabled = false,
     layout = 'vertical',
+    variant = 'default',
+    size = 'large',
+    orientation = 'horizontal',
     direction = 'left',
     gap,
     options,
@@ -58,9 +61,12 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
       onChange: handleChange,
       disabled,
       name,
+      variant,
+      size,
+      orientation,
       direction,
     }),
-    [innerValue, handleChange, disabled, name, direction],
+    [innerValue, handleChange, disabled, name, variant, size, orientation, direction],
   );
 
   const content =
@@ -72,6 +78,11 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
         value={opt.value}
         label={opt.label}
         description={opt.description}
+        variant={opt.variant}
+        size={opt.size}
+        orientation={opt.orientation}
+        icon={opt.icon}
+        tag={opt.tag}
         disabled={opt.disabled}
         required={opt.required}
         title={opt.title}
@@ -90,7 +101,7 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
         aria-labelledby={ariaLabelledBy}
         className={classes(
           void 0,
-          joinCls(classes(layout), className),
+          joinCls(classes(layout), variant === 'cell' && classes('cell'), className),
         )}
         role="radiogroup"
         style={gapStyle}

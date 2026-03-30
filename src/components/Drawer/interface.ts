@@ -1,6 +1,7 @@
 import type { CSSProperties, HTMLAttributes, ReactNode } from 'react';
+import { DRAWER_PLACEMENTS } from './constants';
 
-export type DrawerPlacement = 'top' | 'right' | 'bottom' | 'left';
+export type DrawerPlacement = (typeof DRAWER_PLACEMENTS)[number];
 
 export interface DrawerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title'> {
@@ -20,13 +21,13 @@ export interface DrawerProps
 
   /**
    * Width of the drawer when placement is 'left' or 'right'
-   * @defaultValue 373
+   * @defaultValue 360
    */
   width?: string | number;
 
   /**
    * Height of the drawer when placement is 'top' or 'bottom'
-   * @defaultValue 373
+   * @defaultValue 360
    */
   height?: string | number;
 
@@ -53,9 +54,20 @@ export interface DrawerProps
   showCloseIcon?: boolean;
 
   /**
+   * Whether to show the back icon in the header
+   * @defaultValue false
+   */
+  showBackIcon?: boolean;
+
+  /**
    * Custom close icon element
    */
   closeIcon?: ReactNode;
+
+  /**
+   * Custom back icon element
+   */
+  backIcon?: ReactNode;
 
   /**
    * Main content of the drawer
@@ -66,6 +78,11 @@ export interface DrawerProps
    * Callback function triggered when the drawer is closed
    */
   onClose?: () => void;
+
+  /**
+   * Callback function triggered when the back icon is clicked
+   */
+  onBack?: () => void;
 
   /** Custom styles for the root container */
   rootStyle?: CSSProperties;

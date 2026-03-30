@@ -42,6 +42,15 @@ function composeRefs<T>(
   };
 }
 
+function getPlacementMeta(placement: TriggerProps['placement']) {
+  const [side, align] = (placement ?? 'bottom-start').split('-');
+
+  return {
+    side,
+    align,
+  };
+}
+
 const Trigger: FC<TriggerProps> = ({
   content,
   trigger = 'click',
@@ -79,7 +88,7 @@ const Trigger: FC<TriggerProps> = ({
     }
   });
 
-  const { refs, floatingStyles, context } = useFloating({
+  const { refs, floatingStyles, context, placement: resolvedPlacement } = useFloating({
     open: innerOpen,
     onOpenChange: handleOpenChange,
     placement,
@@ -122,12 +131,16 @@ const Trigger: FC<TriggerProps> = ({
   const referenceProps = getReferenceProps({
     ref: composeRefs(refs.setReference, ref),
   });
+  const placementMeta = getPlacementMeta(resolvedPlacement);
 
   const panel = (
     <div
       ref={refs.setFloating}
       style={{ ...floatingStyles, ...overlayStyle }}
       className={joinCls(`${PREFIX}-panel`, overlayClassName)}
+      data-placement={resolvedPlacement}
+      data-side={placementMeta.side}
+      data-align={placementMeta.align}
       {...getFloatingProps()}
     >
       {showArrow && (

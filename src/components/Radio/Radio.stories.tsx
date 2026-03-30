@@ -8,6 +8,10 @@ import { Radio, RadioGroup } from './index';
 import './style';
 
 const DIRECTIONS = ['left', 'right'] as const;
+const VARIANTS = ['default', 'cell'] as const;
+const SIZES = ['large', 'medium', 'small'] as const;
+const ORIENTATIONS = ['horizontal', 'vertical'] as const;
+const ICONS = ['swift', 'language', 'usd'] as const;
 
 const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
@@ -15,15 +19,24 @@ const meta: Meta<typeof Radio> = {
   argTypes: {
     disabled: { control: 'boolean' },
     checked: { control: 'boolean' },
+    variant: { control: 'radio', options: [...VARIANTS] },
+    size: { control: 'radio', options: [...SIZES] },
+    orientation: { control: 'radio', options: [...ORIENTATIONS] },
     direction: { control: 'radio', options: [...DIRECTIONS] },
     label: { control: 'text' },
     description: { control: 'text' },
+    tag: { control: 'text' },
+    icon: { control: 'radio', options: [...ICONS] },
   },
   args: {
     disabled: false,
     checked: false,
+    variant: 'default',
+    size: 'large',
+    orientation: 'horizontal',
     direction: 'left',
     label: 'Radio label',
+    icon: 'swift',
     onChange: fn(),
   },
   tags: ['autodocs'],
@@ -72,6 +85,39 @@ export const AllVariants: Story = {
             label="With description"
             description="Helper text"
             direction="right"
+          />
+        </div>
+      </div>
+      <div>
+        <h3 style={{ marginBottom: 12 }}>Cell</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <Radio
+            checked
+            variant="cell"
+            size="large"
+            orientation="horizontal"
+            label="Wire transfer"
+            description="Receive via SWIFT"
+            style={{ width: 320 }}
+          />
+          <Radio
+            variant="cell"
+            size="medium"
+            orientation="horizontal"
+            icon="usd"
+            label="USD1"
+            style={{ width: 180 }}
+          />
+          <Radio
+            checked
+            variant="cell"
+            size="large"
+            orientation="vertical"
+            icon="language"
+            tag="Popular"
+            label="Global account"
+            description="Use for international settlement"
+            style={{ width: 220 }}
           />
         </div>
       </div>
@@ -191,6 +237,253 @@ export const GroupDirectionRight: Story = {
         <Radio value="a" label="Option A" description="Description A" />
         <Radio value="b" label="Option B" description="Description B" />
       </RadioGroup>
+    );
+  },
+};
+
+export const CellStates: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <Radio
+        checked
+        variant="cell"
+        size="large"
+        orientation="horizontal"
+        label="Checked"
+        description="Primary selection"
+        style={{ width: 300 }}
+      />
+      <Radio
+        checked
+        variant="cell"
+        size="medium"
+        orientation="horizontal"
+        label="Medium"
+        style={{ width: 180 }}
+      />
+      <Radio
+        checked
+        variant="cell"
+        size="small"
+        orientation="horizontal"
+        label="Small"
+        style={{ width: 180 }}
+      />
+      <Radio
+        checked
+        disabled
+        variant="cell"
+        size="large"
+        orientation="horizontal"
+        label="Disabled checked"
+        description="Disabled state"
+        style={{ width: 300 }}
+      />
+    </div>
+  ),
+};
+
+export const CellVertical: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      <Radio
+        checked
+        variant="cell"
+        size="large"
+        orientation="vertical"
+        icon="language"
+        tag="Tag"
+        label="Global account"
+        description="International transfers"
+        style={{ width: 200 }}
+      />
+      <Radio
+        checked
+        variant="cell"
+        size="medium"
+        orientation="vertical"
+        icon="usd"
+        label="USD1"
+        style={{ width: 200 }}
+      />
+      <Radio
+        checked
+        variant="cell"
+        size="small"
+        orientation="vertical"
+        icon="usd"
+        label="USD1"
+        style={{ width: 200 }}
+      />
+    </div>
+  ),
+};
+
+export const CellSizeMatrix: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      <div>
+        <h3 style={{ marginBottom: 12 }}>Horizontal</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <Radio
+            checked
+            variant="cell"
+            size="large"
+            orientation="horizontal"
+            label="Large"
+            description="Description"
+            style={{ width: 300 }}
+          />
+          <Radio
+            checked
+            variant="cell"
+            size="medium"
+            orientation="horizontal"
+            label="Medium"
+            style={{ width: 180 }}
+          />
+          <Radio
+            checked
+            variant="cell"
+            size="small"
+            orientation="horizontal"
+            label="Small"
+            style={{ width: 180 }}
+          />
+        </div>
+      </div>
+      <div>
+        <h3 style={{ marginBottom: 12 }}>Vertical</h3>
+        <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+          <Radio
+            checked
+            variant="cell"
+            size="large"
+            orientation="vertical"
+            icon="language"
+            tag="Tag"
+            label="Large"
+            description="Description"
+            style={{ width: 200 }}
+          />
+          <Radio
+            checked
+            variant="cell"
+            size="medium"
+            orientation="vertical"
+            icon="usd"
+            label="Medium"
+            style={{ width: 200 }}
+          />
+          <Radio
+            checked
+            variant="cell"
+            size="small"
+            orientation="vertical"
+            icon="usd"
+            label="Small"
+            style={{ width: 200 }}
+          />
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+export const GroupCellOptions: Story = {
+  render: () => {
+    const [value, setValue] = React.useState<string | number>('swift');
+
+    const handleChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setValue(event.target.value);
+      }
+    };
+
+    return (
+      <RadioGroup
+        value={value}
+        variant="cell"
+        size="large"
+        orientation="horizontal"
+        layout="horizontal"
+        onChange={handleChange}
+        options={[
+          {
+            value: 'swift',
+            label: 'SWIFT',
+            description: 'Receive via bank rails',
+          },
+          {
+            value: 'global',
+            label: 'Global account',
+            description: 'International settlement',
+            icon: 'language',
+          },
+        ]}
+      />
+    );
+  },
+};
+
+export const GroupCellSequences: Story = {
+  render: () => {
+    const [verticalValue, setVerticalValue] = React.useState<string | number>('checked');
+    const [horizontalValue, setHorizontalValue] = React.useState<string | number>('checked');
+
+    const options = [
+      {
+        value: 'checked',
+        label: 'Label',
+        description: 'Description',
+      },
+      {
+        value: 'unchecked',
+        label: 'Label',
+        description: 'Description',
+        icon: 'swift',
+      },
+    ];
+
+    const handleVerticalChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setVerticalValue(event.target.value);
+      }
+    };
+
+    const handleHorizontalChange = (event: RadioChangeEvent) => {
+      if (event.target.value !== undefined) {
+        setHorizontalValue(event.target.value);
+      }
+    };
+
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+        <div style={{ width: 300 }}>
+          <h3 style={{ marginBottom: 12 }}>Sequence Vertical</h3>
+          <RadioGroup
+            value={verticalValue}
+            variant="cell"
+            size="large"
+            orientation="horizontal"
+            layout="vertical"
+            onChange={handleVerticalChange}
+            options={options}
+          />
+        </div>
+        <div style={{ width: 612 }}>
+          <h3 style={{ marginBottom: 12 }}>Sequence Horizontal</h3>
+          <RadioGroup
+            value={horizontalValue}
+            variant="cell"
+            size="large"
+            orientation="horizontal"
+            layout="horizontal"
+            onChange={handleHorizontalChange}
+            options={options}
+          />
+        </div>
+      </div>
     );
   },
 };

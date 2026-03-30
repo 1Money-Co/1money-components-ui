@@ -3,34 +3,41 @@ import { useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { usePagination } from './usePagination';
+import {
+  PAGINATION_COMPONENT_NAME,
+  PAGINATION_CONTROL_ICON,
+  PAGINATION_CONTROL_ICON_COLOR,
+  PAGINATION_CONTROL_ICON_SIZE,
+  PAGINATION_CONTROL_TEXT,
+  PAGINATION_DEFAULT_CURRENT,
+  PAGINATION_DEFAULT_PREFIX,
+  PAGINATION_ELLIPSIS_TEXT,
+  PAGINATION_ITEM_TYPE,
+  PAGINATION_SLOT,
+} from './constants';
 import type { PaginationControlItem, PaginationPageItem, PaginationProps } from './interface';
 
-const ROOT_ARIA_LABEL = 'Pagination';
-const PREVIOUS_TEXT = 'Previous';
-const NEXT_TEXT = 'Next';
-const CONTROL_ICON_SIZE = 16;
-
 const getButtonAriaLabel = (item: PaginationPageItem | PaginationControlItem) => {
-  if (item.type === 'page') {
+  if (item.type === PAGINATION_ITEM_TYPE.page) {
     return item.current ? `Page ${item.page}, current page` : `Go to page ${item.page}`;
   }
 
-  return item.type === 'previous' ? 'Previous page' : 'Next page';
+  return item.type === PAGINATION_ITEM_TYPE.previous ? 'Previous page' : 'Next page';
 };
 
 const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => {
   const {
     className = '',
-    prefixCls = 'pagination',
+    prefixCls = PAGINATION_DEFAULT_PREFIX,
     total,
     pageSize,
     current,
-    defaultCurrent = 1,
+    defaultCurrent = PAGINATION_DEFAULT_CURRENT,
     disabled = false,
     boundaryCount,
     middlePageCount,
     onChange,
-    'aria-label': ariaLabel = ROOT_ARIA_LABEL,
+    'aria-label': ariaLabel = PAGINATION_COMPONENT_NAME,
     ...rest
   } = props;
 
@@ -66,64 +73,69 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
       className={classes(
         undefined,
         joinCls(
-          disabled && classes('disabled'),
+          disabled && classes(PAGINATION_SLOT.disabled),
           className,
         ),
       )}
     >
-      <ul className={classes('list')} onClick={handleListClick}>
+      <ul className={classes(PAGINATION_SLOT.list)} onClick={handleListClick}>
         {items.map(item => {
-          if (item.type === 'ellipsis') {
+          if (item.type === PAGINATION_ITEM_TYPE.ellipsis) {
             return (
               <li
                 key={item.key}
-                className={classes('item', classes('item-ellipsis'))}
+                className={classes(PAGINATION_SLOT.item, classes(PAGINATION_SLOT.itemEllipsis))}
                 aria-hidden="true"
               >
-                <span className={classes('ellipsis')}>...</span>
+                <span className={classes(PAGINATION_SLOT.ellipsis)}>
+                  {PAGINATION_ELLIPSIS_TEXT}
+                </span>
               </li>
             );
           }
 
-          const isPage = item.type === 'page';
-          const isPrevious = item.type === 'previous';
+          const isPage = item.type === PAGINATION_ITEM_TYPE.page;
+          const isControl = !isPage;
+          const isPrevious = item.type === PAGINATION_ITEM_TYPE.previous;
+          const iconName = isControl
+            ? PAGINATION_CONTROL_ICON[item.type as keyof typeof PAGINATION_CONTROL_ICON]
+            : undefined;
 
           return (
-            <li
-              key={item.key}
-              className={classes('item')}
-            >
+            <li key={item.key} className={classes(PAGINATION_SLOT.item)}>
               <button
                 type="button"
                 className={classes(
-                  'button',
+                  PAGINATION_SLOT.button,
                   joinCls(
-                    isPage ? classes('button-page') : classes('button-control'),
-                    isPage && item.current && classes('button-current'),
-                    item.disabled && classes('button-disabled'),
+                    isPage ? classes(PAGINATION_SLOT.buttonPage) : classes(PAGINATION_SLOT.buttonControl),
+                    isPage && item.current && classes(PAGINATION_SLOT.buttonCurrent),
+                    item.disabled && classes(PAGINATION_SLOT.buttonDisabled),
                   ),
                 )}
                 disabled={item.disabled}
                 aria-label={getButtonAriaLabel(item)}
-                aria-current={item.type === 'page' && item.current ? 'page' : undefined}
+                aria-current={isPage && item.current ? 'page' : undefined}
                 data-page={item.page}
               >
-                {!isPage && isPrevious && (
-                  <span className={classes('icon')}>
+                {isControl && isPrevious && (
+                  <span className={classes(PAGINATION_SLOT.icon)}>
                     <Icons
-                      name="arrowLeft"
-                      size={CONTROL_ICON_SIZE}
-                      color="currentColor"
+                      name={iconName!}
+                      size={PAGINATION_CONTROL_ICON_SIZE}
+                      color={PAGINATION_CONTROL_ICON_COLOR}
                     />
                   </span>
                 )}
-                <span>{isPage ? item.page : isPrevious ? PREVIOUS_TEXT : NEXT_TEXT}</span>
-                {!isPage && !isPrevious && (
-                  <span className={classes('icon')}>
+                <span>
+                  {isPage ? item.page : PAGINATION_CONTROL_TEXT[item.type as keyof typeof PAGINATION_CONTROL_TEXT]}
+                </span>
+                {isControl && !isPrevious && (
+                  <span className={classes(PAGINATION_SLOT.icon)}>
                     <Icons
-                      name="arrowRight"
-                      size={CONTROL_ICON_SIZE}
-                      color="currentColor"
+                      name={iconName!}
+                      size={PAGINATION_CONTROL_ICON_SIZE}
+                      color={PAGINATION_CONTROL_ICON_COLOR}
                     />
                   </span>
                 )}
@@ -136,7 +148,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
   );
 });
 
-PaginationBase.displayName = 'Pagination';
+PaginationBase.displayName = PAGINATION_COMPONENT_NAME;
 
 export const Pagination = memo(PaginationBase);
 

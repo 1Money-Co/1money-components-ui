@@ -20,6 +20,11 @@ import { Radio, RadioGroup } from '@1money/components-ui/Radio';
 | `disabled` | `boolean` | `false` | Disables the radio |
 | `label` | `ReactNode` | — | Label text displayed next to the radio |
 | `description` | `ReactNode` | — | Description text displayed below the label |
+| `variant` | `'default' \| 'cell'` | `'default'` | Visual variant |
+| `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Visual size for the `cell` variant |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Content layout for the `cell` variant |
+| `icon` | `IconName` | — | Optional icon for the `cell` variant |
+| `tag` | `string` | — | Optional tag label for the `cell` variant |
 | `direction` | `'left' \| 'right'` | `'left'` | Position of the radio relative to the label |
 | `onChange` | `(event: RadioChangeEvent) => void` | — | Callback when checked state changes |
 | `prefixCls` | `string` | `'radio'` | CSS class prefix |
@@ -39,6 +44,9 @@ All additional native radio input props are spread onto the underlying `input[ty
 | `name` | `string` | — | HTML name attribute shared by radios in the group |
 | `disabled` | `boolean` | `false` | Disables all radios in the group |
 | `layout` | `'vertical' \| 'horizontal'` | `'vertical'` | Layout direction of the group |
+| `variant` | `'default' \| 'cell'` | `'default'` | Visual variant inherited by child radios |
+| `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Visual size inherited by child radios |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Cell layout inherited by child radios |
 | `direction` | `'left' \| 'right'` | `'left'` | Position of radio relative to label, inherited by children |
 | `gap` | `number \| string` | — | Gap between radio items |
 | `title` | `string` | — | Title attribute for the root radiogroup container |
@@ -59,6 +67,11 @@ All additional native radio input props are spread onto the underlying `input[ty
 | `id` | `string` | — | HTML id attribute for the underlying radio input |
 | `label` | `ReactNode` | — | Label text displayed next to the radio |
 | `description` | `ReactNode` | — | Description text displayed below the label |
+| `variant` | `'default' \| 'cell'` | — | Per-option visual variant override |
+| `size` | `'large' \| 'medium' \| 'small'` | — | Per-option size override |
+| `orientation` | `'horizontal' \| 'vertical'` | — | Per-option cell layout override |
+| `icon` | `IconName` | — | Optional icon for the `cell` variant |
+| `tag` | `string` | — | Optional tag label for the `cell` variant |
 | `disabled` | `boolean` | — | Whether this specific option is disabled |
 | `required` | `boolean` | — | Whether this specific option is required |
 | `title` | `string` | — | Title attribute for the underlying radio input |
@@ -141,6 +154,39 @@ const [selected, setSelected] = useState<string | number>('email');
   <Radio value="md" label="Medium" />
   <Radio value="lg" label="Large" />
 </RadioGroup>
+```
+
+## Cell Variant
+
+```tsx
+<Radio
+  checked
+  variant="cell"
+  size="large"
+  orientation="vertical"
+  icon="language"
+  tag="Popular"
+  label="Global account"
+  description="International settlement"
+/>
+
+<RadioGroup
+  value={selected}
+  variant="cell"
+  size="large"
+  orientation="horizontal"
+  layout="horizontal"
+  onChange={handleChange}
+  options={[
+    { value: 'swift', label: 'SWIFT', description: 'Receive via bank rails' },
+    {
+      value: 'global',
+      label: 'Global account',
+      description: 'International settlement',
+      icon: 'language',
+    },
+  ]}
+/>
 ```
 
 ## Controlled and Uncontrolled

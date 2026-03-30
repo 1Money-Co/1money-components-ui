@@ -5,7 +5,18 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { Icons } from '@/components/Icons';
+import {
+  BUTTON_COLOR,
+  BUTTON_DEFAULT_HTML_TYPE,
+  BUTTON_DEFAULT_PREFIX,
+  BUTTON_ICON_INHERIT_COLOR,
+  BUTTON_SIZE,
+  BUTTON_VARIANT,
+} from '../constants';
 import { Button } from '../index';
+
+const getButtonClassName = (slotOrModifier?: string) =>
+  `om-react-ui-${BUTTON_DEFAULT_PREFIX}${slotOrModifier ? `-${slotOrModifier}` : ''}`;
 
 const originalConsoleError = console.error;
 
@@ -32,8 +43,8 @@ describe('Button', () => {
     const { container } = render(
       <Button
         ref={ref}
-        color="secondary"
-        size="small"
+        color={BUTTON_COLOR.secondary}
+        size={BUTTON_SIZE.small}
         rounded
         loading
         name="save"
@@ -48,7 +59,7 @@ describe('Button', () => {
     const button = screen.getByTestId('button');
 
     expect(button.tagName).toBe('BUTTON');
-    expect(button).toHaveAttribute('type', 'button');
+    expect(button).toHaveAttribute('type', BUTTON_DEFAULT_HTML_TYPE);
     expect(button).toHaveAttribute('name', 'save');
     expect(button).toHaveAttribute('value', 'draft');
     expect(button).toBeDisabled();
@@ -86,7 +97,7 @@ describe('Button', () => {
   it('inherits label color and button-sized defaults for icons', () => {
     const { container } = render(
       <Button
-        size="small"
+        size={BUTTON_SIZE.small}
         iconStart={<Icons name="add" />}
         iconEnd={<Icons name="arrowRight" />}
       >
@@ -100,7 +111,7 @@ describe('Button', () => {
     iconWrappers.forEach(iconWrapper => {
       expect(iconWrapper).toHaveAttribute(
         'style',
-        expect.stringContaining('--icon-color: currentColor')
+        expect.stringContaining(`--icon-color: ${BUTTON_ICON_INHERIT_COLOR}`)
       );
       expect(iconWrapper).toHaveAttribute(
         'style',
@@ -115,17 +126,22 @@ describe('Button', () => {
 
   it('renders text variant with correct classes and no color class', () => {
     render(
-      <Button variant="text" color="danger" size="medium" data-testid="text-btn">
+      <Button
+        variant={BUTTON_VARIANT.text}
+        color={BUTTON_COLOR.danger}
+        size={BUTTON_SIZE.medium}
+        data-testid="text-btn"
+      >
         Learn More
       </Button>
     );
 
     const button = screen.getByTestId('text-btn');
 
-    expect(button.className).toContain('om-react-ui-button-text');
-    expect(button.className).toContain('om-react-ui-button-medium');
-    expect(button.className).not.toContain('om-react-ui-button-danger');
-    expect(button.className).not.toContain('om-react-ui-button-primary');
+    expect(button.className).toContain(getButtonClassName(BUTTON_VARIANT.text));
+    expect(button.className).toContain(getButtonClassName(BUTTON_SIZE.medium));
+    expect(button.className).not.toContain(getButtonClassName(BUTTON_COLOR.danger));
+    expect(button.className).not.toContain(getButtonClassName(BUTTON_COLOR.primary));
   });
 
   it('preserves explicit icon color and sizing props', () => {

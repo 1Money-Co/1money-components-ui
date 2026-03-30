@@ -1,5 +1,11 @@
 import { createContext, useContext } from 'react';
-import type { RadioChangeEvent, RadioValueType } from './interface';
+import type {
+  RadioChangeEvent,
+  RadioOrientation,
+  RadioSize,
+  RadioValueType,
+  RadioVariant,
+} from './interface';
 
 interface RadioGroupContextValue {
   /** Currently selected value in the group */
@@ -10,6 +16,12 @@ interface RadioGroupContextValue {
   disabled: boolean;
   /** HTML name attribute for native radio grouping */
   name?: string;
+  /** Visual variant inherited by children */
+  variant: RadioVariant;
+  /** Visual size inherited by children */
+  size: RadioSize;
+  /** Cell orientation inherited by children */
+  orientation: RadioOrientation;
   /** Position of radio relative to label, inherited by children */
   direction: 'left' | 'right';
 }

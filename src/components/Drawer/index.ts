@@ -1,7 +1,3 @@
-import Drawer from './Drawer';
-
-export { Drawer } from './Drawer';
-
-export default Drawer;
+export { Drawer, Drawer as default } from './Drawer';
 
 export * from './interface';

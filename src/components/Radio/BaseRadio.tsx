@@ -1,18 +1,42 @@
 import { memo } from 'react';
-import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
 import type { ChangeEvent, FC } from 'react';
-import type { RadioChangeEvent, RadioProps } from './interface';
+import type {
+  RadioChangeEvent,
+  RadioProps,
+  RadioValueType,
+} from './interface';
 
 type BaseRadioProps = Omit<
   RadioProps,
-  'className' | 'description' | 'direction' | 'label' | 'ref' | 'style'
->;
+  | 'className'
+  | 'description'
+  | 'direction'
+  | 'icon'
+  | 'label'
+  | 'onChange'
+  | 'orientation'
+  | 'ref'
+  | 'size'
+  | 'style'
+  | 'tag'
+  | 'variant'
+> & {
+  checked?: boolean;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+};
 
-const createRadioChangeEvent = (
+interface RadioEventProps {
+  disabled?: boolean;
+  id?: string;
+  name?: string;
+  value?: RadioValueType;
+}
+
+export const createRadioChangeEvent = (
   event: ChangeEvent<HTMLInputElement>,
   nextChecked: boolean,
-  props: BaseRadioProps,
+  props: RadioEventProps,
 ): RadioChangeEvent => ({
   nativeEvent: event.nativeEvent,
   preventDefault: () => {
@@ -35,7 +59,6 @@ export const BaseRadio: FC<BaseRadioProps> = (props) => {
   const {
     prefixCls = 'radio',
     checked,
-    defaultChecked = false,
     disabled = false,
     onChange,
     value,
@@ -43,32 +66,15 @@ export const BaseRadio: FC<BaseRadioProps> = (props) => {
   } = props;
 
   const classes = classnames(prefixCls);
-  const isControlled = checked !== undefined;
-  const [innerChecked, setInnerChecked] = useControlledState(
-    defaultChecked,
-    checked,
-  );
-
-  const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
-    if (disabled) return;
-
-    const nextChecked = event.target.checked;
-
-    if (!isControlled) {
-      setInnerChecked(nextChecked);
-    }
-
-    onChange?.(createRadioChangeEvent(event, nextChecked, props));
-  });
 
   return (
     <span className={classes('box-wrapper')}>
       <input
         {...rest}
-        checked={!!innerChecked}
+        checked={!!checked}
         className={classes('input')}
         disabled={disabled}
-        onChange={handleChange}
+        onChange={onChange as ((event: ChangeEvent<HTMLInputElement>) => void) | undefined}
         type="radio"
         value={value}
       />
