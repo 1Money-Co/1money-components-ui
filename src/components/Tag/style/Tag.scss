@@ -46,21 +46,15 @@ $tag-variants: (
   border-radius: theme.shape('full');
   cursor: default;
 
-  @include theme.typography(body, sm, $strong: true);
-
   // ── Size: medium ──
   &-medium {
     padding: theme.spacing(component-padding, '050') theme.spacing(component-padding, 200);
-
-    @include theme.typography(body, sm, $strong: true);
   }
 
   // ── Size: small ──
   &-small {
     gap: theme.spacing(gap, '050');
     padding: 0 theme.spacing(scale, 100);
-
-    @include theme.typography(label, xs);
   }
 
   // ── Icon ──

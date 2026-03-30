@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes } from 'react';
+import type { TypographyBodySize, TypographyHeadlineSize } from '@/components/Typography';
 
 export const BUTTON_COMPONENT_NAME = 'Button';
 export const BUTTON_DEFAULT_PREFIX = 'button';
@@ -75,3 +76,20 @@ export const BUTTON_ICON_SIZE_BY_SIZE: Record<ButtonSize, number> = {
 export type ButtonVariant = (typeof BUTTON_VARIANTS)[number];
 export type ButtonColor = (typeof BUTTON_COLORS)[number];
 export type ButtonSize = (typeof BUTTON_SIZES)[number];
+
+// ── Typography ──
+export const BUTTON_TYPOGRAPHY_MAP: Record<
+  ButtonVariant,
+  Record<ButtonSize, { variant: 'body'; size: TypographyBodySize; strong: true } | { variant: 'headline'; size: TypographyHeadlineSize; strong?: never }>
+> = {
+  [BUTTON_VARIANT.contained]: {
+    [BUTTON_SIZE.large]: { variant: 'body', size: 'lg', strong: true },
+    [BUTTON_SIZE.medium]: { variant: 'body', size: 'md', strong: true },
+    [BUTTON_SIZE.small]: { variant: 'body', size: 'sm', strong: true },
+  },
+  [BUTTON_VARIANT.text]: {
+    [BUTTON_SIZE.large]: { variant: 'headline', size: 'xs' },
+    [BUTTON_SIZE.medium]: { variant: 'body', size: 'lg', strong: true },
+    [BUTTON_SIZE.small]: { variant: 'body', size: 'md', strong: true },
+  },
+};

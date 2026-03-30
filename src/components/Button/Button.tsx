@@ -1,5 +1,6 @@
 import { cloneElement, forwardRef, isValidElement, memo } from 'react';
 import Spinner from '@/components/Spinner';
+import { TypographyBody, TypographyHeadline } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { ReactElement, ReactNode } from 'react';
 import {
@@ -14,6 +15,7 @@ import {
   BUTTON_MODIFIER,
   BUTTON_SLOT,
   BUTTON_SPINNER_STROKE_WIDTH,
+  BUTTON_TYPOGRAPHY_MAP,
   BUTTON_VARIANT,
 } from './constants';
 import type { ButtonSize, ButtonVariant } from './constants';
@@ -144,7 +146,13 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       })}
     >
       {startAdornment && <span className={classes(BUTTON_SLOT.iconStart)}>{startAdornment}</span>}
-      {children}
+      {children != null && (() => {
+        const typo = BUTTON_TYPOGRAPHY_MAP[variant][size];
+        if (typo.variant === 'headline') {
+          return <TypographyHeadline size={typo.size}>{children}</TypographyHeadline>;
+        }
+        return <TypographyBody size={typo.size} strong={typo.strong}>{children}</TypographyBody>;
+      })()}
       {normalizedIconEnd && <span className={classes(BUTTON_SLOT.iconEnd)}>{normalizedIconEnd}</span>}
     </button>
   );

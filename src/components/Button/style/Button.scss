@@ -60,7 +60,6 @@ $button-variants: (
 
 .#{theme.$prefix}-#{$component} {
   @include variants.om-variant-default($button-variants, 'primary', $button-variant-schema);
-  @include theme.typography(body, lg, $strong: true);
 
   --om-button-gap: #{theme.spacing(gap, 200)};
 
@@ -91,16 +90,12 @@ $button-variants: (
 
   // ── Sizes ──
   &-medium {
-    @include theme.typography(body, md, $strong: true);
-
     padding: theme.spacing(component-padding, 300);
     line-height: 1.14;
     border-radius: theme.shape(300);
   }
 
   &-small {
-    @include theme.typography(body, sm, $strong: true);
-
     padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
     line-height: 1.33;
     border-radius: theme.shape(200);
@@ -129,22 +124,16 @@ $button-variants: (
     }
   }
 
-  // Text variant: size-specific typography
+  // Text variant: size-specific line-height
   &-text#{&}-large {
-    @include theme.typography(headline, xs);
-
     line-height: 1.08;
   }
 
   &-text#{&}-medium {
-    @include theme.typography(body, lg, $strong: true);
-
     line-height: 1.4;
   }
 
   &-text#{&}-small {
-    @include theme.typography(body, md, $strong: true);
-
     line-height: 1.4;
   }
 

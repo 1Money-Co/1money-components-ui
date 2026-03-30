@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { default as classnames } from '@/utils/classnames';
+import { RADIO_INPUT_TYPE, RADIO_PREFIX_CLS } from './constants';
 import type { ChangeEvent, FC } from 'react';
 import type {
   RadioChangeEvent,
@@ -50,14 +51,14 @@ export const createRadioChangeEvent = (
     disabled: !!props.disabled,
     id: props.id,
     name: props.name,
-    type: 'radio',
+    type: RADIO_INPUT_TYPE,
     value: props.value,
   },
 });
 
 export const BaseRadio: FC<BaseRadioProps> = (props) => {
   const {
-    prefixCls = 'radio',
+    prefixCls = RADIO_PREFIX_CLS,
     checked,
     disabled = false,
     onChange,
@@ -75,7 +76,7 @@ export const BaseRadio: FC<BaseRadioProps> = (props) => {
         className={classes('input')}
         disabled={disabled}
         onChange={onChange as ((event: ChangeEvent<HTMLInputElement>) => void) | undefined}
-        type="radio"
+        type={RADIO_INPUT_TYPE}
         value={value}
       />
       <span

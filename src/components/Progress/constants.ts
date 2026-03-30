@@ -1,4 +1,5 @@
 import type { IconName } from '@/components/Icons';
+import type { TypographyBodySize, TypographyDisplaySize } from '@/components/Typography';
 
 export const PROGRESS_DEFAULT_PREFIX = 'progress';
 export const PROGRESS_MIN = 0;
@@ -46,6 +47,10 @@ export const clampPercent = (percent: number): number => {
   if (percent >= PROGRESS_MAX) return PROGRESS_MAX;
   return percent;
 };
+
+// ── Typography ──
+export const PROGRESS_INFO_SIZE: TypographyDisplaySize = 'sm';
+export const PROGRESS_FEEDBACK_TEXT_SIZE: TypographyBodySize = 'sm';
 
 export const resolveProgressState = (
   percent: number,

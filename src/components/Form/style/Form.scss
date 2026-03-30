@@ -55,11 +55,8 @@ $component: 'form';
 }
 
 .#{theme.$prefix}-#{$component}-item-label {
-  @include theme.typography(label, md);
-
   display: inline;
   padding: 0;
-  color: theme.palette(text, 'default');
 
   &-required {
     &::before {
@@ -95,15 +92,9 @@ $component: 'form';
 
 // ─── Error & Help Messages ───────────────────────────────────
 .#{theme.$prefix}-#{$component}-item-error {
-  @include theme.typography(body, sm);
-
   margin-top: theme.spacing(gap, '050');
-  color: theme.palette(text, 'danger');
 }
 
 .#{theme.$prefix}-#{$component}-item-help {
-  @include theme.typography(body, sm);
-
   margin-top: theme.spacing(gap, '050');
-  color: theme.palette(text, 'default-tertiary');
 }

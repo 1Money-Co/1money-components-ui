@@ -1,3 +1,5 @@
+import type { TypographyBodySize, TypographyColor, TypographyLabelSize } from '@/components/Typography';
+
 export const FORM_SIZES = ['large', 'middle', 'small'] as const;
 export const FORM_LAYOUTS = ['horizontal', 'vertical', 'inline'] as const;
 export const LABEL_ALIGNS = ['left', 'right'] as const;
@@ -18,6 +20,14 @@ export const FORM_ITEM_SPACING: Record<FormSize, string> = {
 
 export const LABEL_COL_DEFAULT = { span: 6 } as const;
 export const WRAPPER_COL_DEFAULT = { span: 18 } as const;
+
+// ── Typography ──
+export const FORM_LABEL_SIZE: TypographyLabelSize = 'md';
+export const FORM_LABEL_COLOR: TypographyColor = 'default';
+export const FORM_ERROR_SIZE: TypographyBodySize = 'sm';
+export const FORM_ERROR_COLOR: TypographyColor = 'danger';
+export const FORM_HELP_SIZE: TypographyBodySize = 'sm';
+export const FORM_HELP_COLOR: TypographyColor = 'default-tertiary';
 
 export const FORM_COMPONENT_NAMES = [
   'Input',

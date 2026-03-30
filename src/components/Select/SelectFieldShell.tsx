@@ -1,9 +1,19 @@
 import { memo } from 'react';
 import { Icons } from '@/components/Icons';
+import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { joinCls } from '@/utils/classnames';
 import type { ClassNamesFn } from '@/utils/classnames';
 import type { FC, ReactNode } from 'react';
 import type { SelectSize, SelectStatus, SelectVariant } from './interface';
+import {
+  SELECT_LABEL_SIZE,
+  SELECT_LABEL_COLOR_DEFAULT,
+  SELECT_LABEL_COLOR_DISABLED,
+  SELECT_DESCRIPTION_SIZE,
+  SELECT_DESCRIPTION_COLOR_DEFAULT,
+  SELECT_DESCRIPTION_COLOR_DISABLED,
+  SELECT_FEEDBACK_SIZE,
+} from './constants';
 
 interface SelectFieldShellProps {
   children: ReactNode;
@@ -40,8 +50,8 @@ const SelectFieldShellBase: FC<SelectFieldShellProps> = ({
   descriptionId,
   feedbackId,
 }) => {
-  const labelTextClass = disabled ? classes('label-disabled') : classes('label-text');
-  const descriptionTextClass = disabled ? classes('description-disabled') : classes('description-text');
+  const labelColor = disabled ? SELECT_LABEL_COLOR_DISABLED : SELECT_LABEL_COLOR_DEFAULT;
+  const descriptionColor = disabled ? SELECT_DESCRIPTION_COLOR_DISABLED : SELECT_DESCRIPTION_COLOR_DEFAULT;
   const feedbackClass = classes(
     'feedback',
     joinCls(
@@ -66,19 +76,19 @@ const SelectFieldShellBase: FC<SelectFieldShellProps> = ({
       {(label || info) && (
         <div className={classes('label-row')}>
           {label && (
-            <span id={labelId} className={labelTextClass}>
+            <TypographyLabel id={labelId} className={classes('label-text')} size={SELECT_LABEL_SIZE} strong color={labelColor}>
               {label}
               {required && <span className={classes('required')}>*</span>}
-            </span>
+            </TypographyLabel>
           )}
           {info && <span className={classes('info')}>{info}</span>}
         </div>
       )}
 
       {description && (
-        <div id={descriptionId} className={descriptionTextClass}>
+        <TypographyBody id={descriptionId} className={classes('description-text')} as="div" size={SELECT_DESCRIPTION_SIZE} color={descriptionColor}>
           {description}
-        </div>
+        </TypographyBody>
       )}
 
       {children}
@@ -94,7 +104,7 @@ const SelectFieldShellBase: FC<SelectFieldShellProps> = ({
               <Icons name="error" size={16} color="currentColor" />
             </span>
           )}
-          <span>{feedback}</span>
+          <TypographyBody size={SELECT_FEEDBACK_SIZE}>{feedback}</TypographyBody>
         </div>
       )}
     </div>

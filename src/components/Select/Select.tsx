@@ -17,6 +17,7 @@ import {
 import { memo, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
+import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { joinCls, default as rootClassnames } from '@/utils/classnames';
 import type {
   ChangeEvent,
@@ -37,6 +38,11 @@ import SelectFieldShell from './SelectFieldShell';
 import SelectOptionContent from './SelectOptionContent';
 import SelectSearchControl from './SelectSearchControl';
 import SelectValueContent from './SelectValueContent';
+import {
+  SELECT_EMPTY_COLOR,
+  SELECT_EMPTY_SIZE,
+  SELECT_GROUP_LABEL_SIZE,
+} from './constants';
 import {
   extractOptionText,
   filterOptionGroups,
@@ -535,7 +541,9 @@ export const Select: FC<SelectProps> = (props) => {
               )}
               <div className={classes('panel-body')}>
                 {visibleFlatOptions.length === 0 ? (
-                  <div className={classes('empty')}>{emptyContent}</div>
+                  <div className={classes('empty')}>
+                    <TypographyBody size={SELECT_EMPTY_SIZE} color={SELECT_EMPTY_COLOR}>{emptyContent}</TypographyBody>
+                  </div>
                 ) : (
                   (() => {
                     let flatIndex = 0;
@@ -543,7 +551,9 @@ export const Select: FC<SelectProps> = (props) => {
                     return visibleOptionGroups.map((group) => (
                       <div key={group.key} className={classes('group')}>
                         {group.label && (
-                          <div className={classes('group-label')}>{group.label}</div>
+                          <div className={classes('group-label')}>
+                            <TypographyLabel size={SELECT_GROUP_LABEL_SIZE} strong>{group.label}</TypographyLabel>
+                          </div>
                         )}
                         {group.options.map((option) => {
                           const optionFlatIndex = flatIndex;

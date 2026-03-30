@@ -44,7 +44,9 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
             </svg>
           </i>
         </span>
-        <span>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+        >
           Previous
         </span>
       </button>
@@ -59,7 +61,9 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         data-page="1"
         type="button"
       >
-        <span>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+        >
           1
         </span>
       </button>
@@ -73,7 +77,9 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         data-page="2"
         type="button"
       >
-        <span>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+        >
           2
         </span>
       </button>
@@ -87,7 +93,9 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         data-page="3"
         type="button"
       >
-        <span>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+        >
           3
         </span>
       </button>
@@ -97,7 +105,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       class="om-react-ui-pagination-item om-react-ui-pagination-item-ellipsis"
     >
       <span
-        class="om-react-ui-pagination-ellipsis"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong om-react-ui-pagination-ellipsis"
       >
         ...
       </span>
@@ -111,7 +119,9 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         data-page="68"
         type="button"
       >
-        <span>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+        >
           68
         </span>
       </button>
@@ -125,7 +135,9 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         data-page="2"
         type="button"
       >
-        <span>
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+        >
           Next
         </span>
         <span

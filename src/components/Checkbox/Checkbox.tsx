@@ -1,8 +1,17 @@
 import { memo, useContext, useEffect } from 'react';
 import { useEventCallback } from '@1money/hooks';
+import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import BaseCheckbox from './BaseCheckbox';
 import { CheckboxGroupContext } from './CheckboxGroupContext';
+import {
+  CHECKBOX_DESCRIPTION_COLOR_DEFAULT,
+  CHECKBOX_DESCRIPTION_COLOR_DISABLED,
+  CHECKBOX_DESCRIPTION_SIZE,
+  CHECKBOX_LABEL_COLOR_DEFAULT,
+  CHECKBOX_LABEL_COLOR_DISABLED,
+  CHECKBOX_LABEL_SIZE,
+} from './constants';
 import type { FC } from 'react';
 import type { CheckboxChangeEvent, CheckboxProps } from './interface';
 
@@ -94,11 +103,14 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     />
   );
 
+  const labelColor = disabled ? CHECKBOX_LABEL_COLOR_DISABLED : CHECKBOX_LABEL_COLOR_DEFAULT;
+  const descriptionColor = disabled ? CHECKBOX_DESCRIPTION_COLOR_DISABLED : CHECKBOX_DESCRIPTION_COLOR_DEFAULT;
+
   const labelElement = (label || description) && (
     <span className={classes('content')}>
-      {label && <span className={classes('label')}>{label}</span>}
+      {label && <TypographyBody className={classes('label')} size={CHECKBOX_LABEL_SIZE} strong color={labelColor}>{label}</TypographyBody>}
       {description && (
-        <span className={classes('description')}>{description}</span>
+        <TypographyBody className={classes('description')} size={CHECKBOX_DESCRIPTION_SIZE} strong color={descriptionColor}>{description}</TypographyBody>
       )}
     </span>
   );

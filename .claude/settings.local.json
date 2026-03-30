@@ -30,7 +30,9 @@
       "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/src/components/*/interface.ts)",
       "Bash(npx eslint:*)",
       "Bash(npx stylelint:*)",
-      "Bash(grep -r \"useBodyScrollLock\\\\|useEscapeClose\\\\|useDialogFocus\\\\|usePresence\" /Users/derrick/Desktop/1money/1money-components-ui/src/components/ --include=*.tsx --include=*.ts)"
+      "Bash(grep -r \"useBodyScrollLock\\\\|useEscapeClose\\\\|useDialogFocus\\\\|usePresence\" /Users/derrick/Desktop/1money/1money-components-ui/src/components/ --include=*.tsx --include=*.ts)",
+      "Bash(git stash:*)",
+      "Bash(find /Users/derrick/Desktop/1money/1money-components-ui/src/components -name \"*.tsx\" -type f -exec grep -l \"TypographyTitle\\\\|TypographyBody\\\\|TypographyLabel\" {})"
     ]
   }
 }

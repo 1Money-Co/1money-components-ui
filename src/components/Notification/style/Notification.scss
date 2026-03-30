@@ -51,16 +51,12 @@ $notification-motion-duration: 240ms;
 
   // ── Title ──
   &-title {
-    @include theme.typography(title, sm, $strong: true);
-
-    color: theme.palette(text, 'default-secondary');
+    display: block;
   }
 
   // ── Body ──
   &-body {
-    @include theme.typography(body, md);
-
-    color: theme.palette(text, 'default-secondary');
+    display: block;
   }
 
   // ── Link ──

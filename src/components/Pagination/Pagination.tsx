@@ -1,6 +1,7 @@
 import React, { forwardRef, memo } from 'react';
 import { useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
+import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { usePagination } from './usePagination';
 import {
@@ -14,6 +15,7 @@ import {
   PAGINATION_ELLIPSIS_TEXT,
   PAGINATION_ITEM_TYPE,
   PAGINATION_SLOT,
+  PAGINATION_TEXT_SIZE,
 } from './constants';
 import type { PaginationControlItem, PaginationPageItem, PaginationProps } from './interface';
 
@@ -87,9 +89,9 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                 className={classes(PAGINATION_SLOT.item, classes(PAGINATION_SLOT.itemEllipsis))}
                 aria-hidden="true"
               >
-                <span className={classes(PAGINATION_SLOT.ellipsis)}>
+                <TypographyBody className={classes(PAGINATION_SLOT.ellipsis)} size={PAGINATION_TEXT_SIZE} strong>
                   {PAGINATION_ELLIPSIS_TEXT}
-                </span>
+                </TypographyBody>
               </li>
             );
           }
@@ -127,9 +129,9 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                     />
                   </span>
                 )}
-                <span>
+                <TypographyBody size={PAGINATION_TEXT_SIZE} strong>
                   {isPage ? item.page : PAGINATION_CONTROL_TEXT[item.type as keyof typeof PAGINATION_CONTROL_TEXT]}
-                </span>
+                </TypographyBody>
                 {isControl && !isPrevious && (
                   <span className={classes(PAGINATION_SLOT.icon)}>
                     <Icons

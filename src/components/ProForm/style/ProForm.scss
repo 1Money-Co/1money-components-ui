@@ -24,9 +24,7 @@ $component: 'proform';
 }
 
 .#{theme.$prefix}-#{$component}-list-label {
-  @include theme.typography(label, md);
-
-  color: theme.palette(text, 'default');
+  display: block;
 }
 
 .#{theme.$prefix}-#{$component}-list-content {
