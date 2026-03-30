@@ -30,7 +30,27 @@
       "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/src/components/*/interface.ts)",
       "Bash(npx eslint:*)",
       "Bash(npx stylelint:*)",
-      "Bash(grep -r \"useBodyScrollLock\\\\|useEscapeClose\\\\|useDialogFocus\\\\|usePresence\" /Users/derrick/Desktop/1money/1money-components-ui/src/components/ --include=*.tsx --include=*.ts)"
+      "Bash(grep -r \"useBodyScrollLock\\\\|useEscapeClose\\\\|useDialogFocus\\\\|usePresence\" /Users/derrick/Desktop/1money/1money-components-ui/src/components/ --include=*.tsx --include=*.ts)",
+      "Bash(npx sass:*)",
+      "Bash(lsof -i :6206 -P -n -sTCP:LISTEN)",
+      "mcp__chrome-devtools__list_console_messages",
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__plugin_figma_figma__get_metadata",
+      "mcp__plugin_figma_figma__search_design_system",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)",
+      "Bash(git worktree:*)",
+      "Bash(git branch:*)",
+      "Skill(commit-commands:commit)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "mcp__figma-dev-mode-mcp-server__get_screenshot",
+      "mcp__figma-dev-mode-mcp-server__get_design_context",
+      "mcp__figma-dev-mode-mcp-server__get_metadata"
     ]
   }
 }

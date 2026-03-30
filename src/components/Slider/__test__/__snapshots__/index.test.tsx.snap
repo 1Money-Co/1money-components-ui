@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-slider"
+      >
+        <div
+          class="om-react-ui-slider-label-row"
+        >
+          <span
+            class="om-react-ui-slider-label"
+          >
+            Price
+          </span>
+          <span
+            class="om-react-ui-slider-output"
+          >
+            $0-100
+          </span>
+        </div>
+        <div
+          class="om-react-ui-slider-track-wrapper"
+        >
+          <input
+            aria-label="Price"
+            class="om-react-ui-slider-input"
+            max="100"
+            min="0"
+            step="1"
+            type="range"
+            value="0"
+          />
+          <div
+            class="om-react-ui-slider-track"
+          >
+            <div
+              class="om-react-ui-slider-fill"
+              style="width: 0%;"
+            />
+          </div>
+          <div
+            class="om-react-ui-slider-knob"
+            style="left: 0%;"
+          />
+        </div>
+        <span
+          class="om-react-ui-slider-description"
+        >
+          Set your price
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-slider"
+    >
+      <div
+        class="om-react-ui-slider-label-row"
+      >
+        <span
+          class="om-react-ui-slider-label"
+        >
+          Price
+        </span>
+        <span
+          class="om-react-ui-slider-output"
+        >
+          $0-100
+        </span>
+      </div>
+      <div
+        class="om-react-ui-slider-track-wrapper"
+      >
+        <input
+          aria-label="Price"
+          class="om-react-ui-slider-input"
+          max="100"
+          min="0"
+          step="1"
+          type="range"
+          value="0"
+        />
+        <div
+          class="om-react-ui-slider-track"
+        >
+          <div
+            class="om-react-ui-slider-fill"
+            style="width: 0%;"
+          />
+        </div>
+        <div
+          class="om-react-ui-slider-knob"
+          style="left: 0%;"
+        />
+      </div>
+      <span
+        class="om-react-ui-slider-description"
+      >
+        Set your price
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Slider renders disabled state 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-slider om-react-ui-slider-disabled"
+      >
+        <div
+          class="om-react-ui-slider-label-row"
+        >
+          <span
+            class="om-react-ui-slider-label"
+          >
+            Price
+          </span>
+          <span
+            class="om-react-ui-slider-output"
+          >
+            $0-100
+          </span>
+        </div>
+        <div
+          class="om-react-ui-slider-track-wrapper"
+        >
+          <input
+            aria-label="Price"
+            class="om-react-ui-slider-input"
+            disabled=""
+            max="100"
+            min="0"
+            step="1"
+            type="range"
+            value="0"
+          />
+          <div
+            class="om-react-ui-slider-track"
+          >
+            <div
+              class="om-react-ui-slider-fill"
+              style="width: 0%;"
+            />
+          </div>
+          <div
+            class="om-react-ui-slider-knob"
+            style="left: 0%;"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-slider om-react-ui-slider-disabled"
+    >
+      <div
+        class="om-react-ui-slider-label-row"
+      >
+        <span
+          class="om-react-ui-slider-label"
+        >
+          Price
+        </span>
+        <span
+          class="om-react-ui-slider-output"
+        >
+          $0-100
+        </span>
+      </div>
+      <div
+        class="om-react-ui-slider-track-wrapper"
+      >
+        <input
+          aria-label="Price"
+          class="om-react-ui-slider-input"
+          disabled=""
+          max="100"
+          min="0"
+          step="1"
+          type="range"
+          value="0"
+        />
+        <div
+          class="om-react-ui-slider-track"
+        >
+          <div
+            class="om-react-ui-slider-fill"
+            style="width: 0%;"
+          />
+        </div>
+        <div
+          class="om-react-ui-slider-knob"
+          style="left: 0%;"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Slider renders with a value 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-slider"
+      >
+        <div
+          class="om-react-ui-slider-label-row"
+        >
+          <span
+            class="om-react-ui-slider-label"
+          >
+            Price
+          </span>
+          <span
+            class="om-react-ui-slider-output"
+          >
+            $40
+          </span>
+        </div>
+        <div
+          class="om-react-ui-slider-track-wrapper"
+        >
+          <input
+            aria-label="Price"
+            class="om-react-ui-slider-input"
+            max="100"
+            min="0"
+            step="1"
+            type="range"
+            value="40"
+          />
+          <div
+            class="om-react-ui-slider-track"
+          >
+            <div
+              class="om-react-ui-slider-fill"
+              style="width: 40%;"
+            />
+          </div>
+          <div
+            class="om-react-ui-slider-knob"
+            style="left: 40%;"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-slider"
+    >
+      <div
+        class="om-react-ui-slider-label-row"
+      >
+        <span
+          class="om-react-ui-slider-label"
+        >
+          Price
+        </span>
+        <span
+          class="om-react-ui-slider-output"
+        >
+          $40
+        </span>
+      </div>
+      <div
+        class="om-react-ui-slider-track-wrapper"
+      >
+        <input
+          aria-label="Price"
+          class="om-react-ui-slider-input"
+          max="100"
+          min="0"
+          step="1"
+          type="range"
+          value="40"
+        />
+        <div
+          class="om-react-ui-slider-track"
+        >
+          <div
+            class="om-react-ui-slider-fill"
+            style="width: 40%;"
+          />
+        </div>
+        <div
+          class="om-react-ui-slider-knob"
+          style="left: 40%;"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

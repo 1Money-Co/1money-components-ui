@@ -29,7 +29,7 @@ const preview: Preview = {
       options: {
         canvas: {
           name: 'Canvas',
-          value: '#f5f7fb',
+          value: '#F0F0F0',
         },
         white: {
           name: 'White',
