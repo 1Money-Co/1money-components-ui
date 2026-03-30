@@ -8,6 +8,9 @@ import type { UploadFileBarProps } from './interface';
 const FILE_STATUS_SUCCESS = 0;
 const FILE_STATUS_ERROR = 1;
 
+const STATUS_ICON_COLOR_SUCCESS = '#1F580033';
+const STATUS_ICON_COLOR_ERROR = '#AE00001A';
+
 export const UploadFileBar: FC<UploadFileBarProps> = props => {
   const {
     className,
@@ -46,6 +49,7 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
           wrapperCls={classes('icon-status')}
           name={status === FILE_STATUS_SUCCESS ? 'statusSuccess' : 'statusFail'}
           size={20}
+          color={status === FILE_STATUS_SUCCESS ? STATUS_ICON_COLOR_SUCCESS : STATUS_ICON_COLOR_ERROR}
         />
         {message && (
           <span className={classes('message')}>
