@@ -1,6 +1,7 @@
 export { Accordion } from './components/Accordion';
 export { Alert } from './components/Alert';
 export { Button } from './components/Button';
+export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
@@ -53,6 +54,7 @@ export { usePagination } from './components/Pagination';
 export type { AccordionProps, AccordionItem } from './components/Accordion';
 export type { AlertProps, AlertStatus, AlertLinkConfig } from './components/Alert';
 export type { ButtonProps } from './components/Button';
+export type { CarouselProps } from './components/Carousel';
 export type {
   CheckboxChangeEvent,
   CheckboxProps,
