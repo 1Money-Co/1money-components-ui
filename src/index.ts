@@ -38,6 +38,7 @@ export { Progress } from './components/Progress';
 export { Radio, RadioGroup } from './components/Radio';
 export { Select } from './components/Select';
 export { Segment } from './components/Segment';
+export { Slider } from './components/Slider';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
 export { Step } from './components/Step';
@@ -148,6 +149,7 @@ export type {
   SelectValue,
 } from './components/Select';
 export type { SegmentProps, SegmentItem } from './components/Segment';
+export type { SliderProps } from './components/Slider';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { StepProps, StepItem, StepStatus, StepTagConfig } from './components/Step';

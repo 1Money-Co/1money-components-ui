@@ -1,0 +1,171 @@
+@use '@/styles/api' as theme;
+
+$component: 'slider';
+$track-height: 8px;
+$filled-track-height: 6px;
+$knob-size: 12px;
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 300);
+  width: 100%;
+  min-width: 120px;
+
+  // ── Label row ──
+  &-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-label {
+    flex: 1 0 0;
+    color: theme.palette(text, 'default');
+
+    @include theme.typography(body, lg);
+  }
+
+  &-output {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    color: theme.palette(text, 'default');
+    white-space: nowrap;
+    text-align: right;
+
+    @include theme.typography(body, md);
+  }
+
+  // ── Track area ──
+  &-track-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: $knob-size;
+    cursor: pointer;
+  }
+
+  // ── Hidden native input ──
+  &-input {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: inherit;
+    opacity: 0;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::-webkit-slider-thumb {
+      width: $knob-size;
+      height: $knob-size;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+
+    &::-moz-range-thumb {
+      width: $knob-size;
+      height: $knob-size;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  // ── Visual track ──
+  &-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: $track-height;
+    overflow: hidden;
+    background-color: theme.palette(bg, 'default-tertiary');
+    border-radius: theme.shape('full');
+    pointer-events: none;
+  }
+
+  // ── Filled portion of track ──
+  &-fill {
+    height: $filled-track-height;
+    background-color: theme.palette(bg, 'neutral');
+    border-radius: theme.shape('full');
+    pointer-events: none;
+  }
+
+  // ── Knob ──
+  &-knob {
+    position: absolute;
+    z-index: 1;
+    width: $knob-size;
+    height: $knob-size;
+    background-color: theme.palette(bg, 'neutral');
+    border-radius: theme.shape('full');
+    transform: translateX(-50%);
+    transition: box-shadow 0.15s ease;
+    pointer-events: none;
+  }
+
+  // ── Focus ring ──
+  &-input:focus-visible ~ .#{theme.$prefix}-#{$component}-knob {
+    box-shadow: 0 0 0 2px theme.palette(border, 'brand');
+  }
+
+  // ── Hover ──
+  &:not(&-disabled) &-track-wrapper:hover {
+    .#{theme.$prefix}-#{$component}-knob {
+      box-shadow: theme.shadows(100);
+    }
+  }
+
+  // ── Description ──
+  &-description {
+    width: 100%;
+    color: theme.palette(text, 'default-tertiary');
+
+    @include theme.typography(body, lg);
+  }
+
+  // ── Disabled state ──
+  &-disabled {
+    cursor: not-allowed;
+
+    .#{theme.$prefix}-#{$component}-track-wrapper {
+      cursor: not-allowed;
+    }
+
+    .#{theme.$prefix}-#{$component}-input {
+      cursor: not-allowed;
+    }
+
+    .#{theme.$prefix}-#{$component}-label {
+      color: theme.palette(text, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-output {
+      color: theme.palette(text, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-track {
+      background-color: theme.palette(bg, 'default-tertiary');
+    }
+
+    .#{theme.$prefix}-#{$component}-fill {
+      background-color: transparent;
+    }
+
+    .#{theme.$prefix}-#{$component}-knob {
+      background-color: theme.palette(bg, 'disabled');
+      border: 0.75px solid theme.palette(border, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-description {
+      color: theme.palette(text, 'disabled');
+    }
+  }
+}
