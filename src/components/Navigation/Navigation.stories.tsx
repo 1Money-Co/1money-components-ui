@@ -177,7 +177,7 @@ export const Collapsed: Story = {
   args: {
     collapsed: true,
     collapsible: true,
-    header: <Icons name="logoWithWords" size={24} />,
+    header: <Icons name="logo" size={32} />,
     items: [
       { key: 'dashboard', label: 'Dashboard', icon: <Icons name="dashboard" size={16} color="inherit" />, active: true },
       { key: 'transaction-history', label: 'Transaction History', icon: <Icons name="transferHistory" size={16} color="inherit" /> },
@@ -199,36 +199,5 @@ export const Collapsed: Story = {
         </div>
       </div>
     ),
-  },
-};
-
-export const WithDisabledItems: Story = {
-  args: {
-    header: <Icons name="logoWithWords" width={132} height={24} />,
-    items: [
-      { key: 'dashboard', label: 'Dashboard', icon: <Icons name="dashboard" size={16} color="inherit" />, active: true },
-      { key: 'transaction-history', label: 'Transaction History', icon: <Icons name="transferHistory" size={16} color="inherit" />, disabled: true },
-      { key: 'auto-conversion-rules', label: 'Auto-Conversion Rules', icon: <Icons name="autoConversionRules" size={16} color="inherit" />, disabled: true },
-      {
-        key: 'external-accounts',
-        label: 'My External Accounts',
-        icon: <Icons name="addressBook" size={16} color="inherit" />,
-        disabled: true,
-        children: [
-          { key: 'bank-accounts', label: 'Bank Accounts', icon: <Icons name="wire" size={16} color="inherit" />, disabled: true },
-          { key: 'digital-wallets', label: 'Digital Wallets', icon: <Icons name="wallet" size={16} color="inherit" />, disabled: true },
-        ],
-      },
-      {
-        key: 'global-payouts',
-        label: 'Global Payouts',
-        icon: <Icons name="money" size={16} color="inherit" />,
-        disabled: true,
-        children: [
-          { key: 'recipients', label: 'Recipients', icon: <Icons name="parties" size={16} color="inherit" />, disabled: true },
-          { key: 'payouts', label: 'Payouts', icon: <Icons name="sendCrypto" size={16} color="inherit" />, disabled: true },
-        ],
-      },
-    ],
   },
 };

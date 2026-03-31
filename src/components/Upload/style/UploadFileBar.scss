@@ -15,7 +15,7 @@ $component: 'upload-file-bar';
     gap: theme.spacing(gap, 200);
     align-items: center;
     justify-content: space-between;
-    min-width: 0;
+    min-width: 120px;
     height: theme.sizing(component-height, 'lg');
     padding: theme.spacing(scale, 300) theme.spacing(scale, 400);
     overflow: hidden;
@@ -29,9 +29,7 @@ $component: 'upload-file-bar';
     flex: 1;
     min-width: 0;
     overflow: hidden;
-
-    @include theme.typography(body, md, $strong: true);
-
+    color: inherit !important;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -42,18 +40,17 @@ $component: 'upload-file-bar';
     }
 
     .#{theme.$prefix}-#{$component}-icon-file {
-      color: theme.palette(icon, 'brand');
+      color: theme.palette(icon, 'brand') !important;
     }
   }
 
   &-failure {
     .#{theme.$prefix}-#{$component}-inner {
       color: theme.palette(text, 'danger');
-      border-color: theme.palette(border, 'danger');
     }
 
     .#{theme.$prefix}-#{$component}-icon-file {
-      color: theme.palette(icon, 'danger');
+      color: theme.palette(icon, 'danger') !important;
     }
   }
 
@@ -90,6 +87,8 @@ $component: 'upload-file-bar';
     align-items: center;
     color: theme.palette(text, 'danger');
 
-    @include theme.typography(body, sm);
+    > * {
+      color: inherit !important;
+    }
   }
 }

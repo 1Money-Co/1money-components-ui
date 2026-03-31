@@ -113,32 +113,3 @@ export const WithDisabled: Story = {
     ),
   },
 };
-
-export const AllVariants: Story = {
-  render: args => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>
-      {VARIANTS.map(variant => (
-        <div key={variant}>
-          {SIZES.map(size => (
-            <div key={`${variant}-${size}`} style={{ marginBottom: 32 }}>
-              <h3 style={{ marginBottom: 12 }}>
-                {variant} / {size}
-              </h3>
-              <Accordion
-                {...args}
-                variant={variant}
-                size={size}
-                items={SAMPLE_ITEMS.slice(0, 3)}
-                defaultActiveKeys={['1']}
-              />
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  ),
-  args: {
-    items: undefined as any,
-  },
-  tags: ['!autodocs', 'dev'],
-};

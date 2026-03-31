@@ -49,6 +49,7 @@ export { Step } from './components/Step';
 export { Switch } from './components/Switch';
 export { Tabs } from './components/Tabs';
 export { Tag } from './components/Tag';
+export { Tour } from './components/Tour';
 export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
 export { Trigger } from './components/Trigger';
@@ -67,7 +68,7 @@ export type {
   CheckboxGroupProps,
   CheckboxGroupOption,
 } from './components/Checkbox';
-export type { CoachMarkProps, CoachMarkPlacement } from './components/CoachMark';
+export type { CoachMarkProps, CoachMarkPlacement, CoachMarkStep, CoachMarkLabels } from './components/CoachMark';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
 export type {
@@ -181,6 +182,7 @@ export type {
   TypographyTitleProps,
   TypographyTitleSize,
 } from './components/Typography';
+export type { TourProps, TourStep } from './components/Tour';
 export type { TooltipProps, TooltipPlacement } from './components/Tooltip';
 export type {
   TriggerProps,

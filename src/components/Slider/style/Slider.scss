@@ -23,8 +23,6 @@ $knob-size: 12px;
   &-label {
     flex: 1 0 0;
     color: theme.palette(text, 'default');
-
-    @include theme.typography(body, lg);
   }
 
   &-output {
@@ -34,8 +32,6 @@ $knob-size: 12px;
     color: theme.palette(text, 'default');
     white-space: nowrap;
     text-align: right;
-
-    @include theme.typography(body, md);
   }
 
   // ── Track area ──
@@ -111,6 +107,18 @@ $knob-size: 12px;
     pointer-events: none;
   }
 
+  // ── Knob end (disabled state endpoint indicator) ──
+  &-knob-end {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: $knob-size;
+    height: $knob-size;
+    background-color: theme.palette(bg, 'neutral');
+    border-radius: theme.shape('full');
+    pointer-events: none;
+  }
+
   // ── Focus ring ──
   &-input:focus-visible ~ .#{theme.$prefix}-#{$component}-knob {
     box-shadow: 0 0 0 2px theme.palette(border, 'brand');
@@ -127,8 +135,6 @@ $knob-size: 12px;
   &-description {
     width: 100%;
     color: theme.palette(text, 'default-tertiary');
-
-    @include theme.typography(body, lg);
   }
 
   // ── Disabled state ──
@@ -161,7 +167,12 @@ $knob-size: 12px;
 
     .#{theme.$prefix}-#{$component}-knob {
       background-color: theme.palette(bg, 'disabled');
-      border: 0.75px solid theme.palette(border, 'disabled');
+      border: 0.75px solid theme.palette(border, 'default');
+    }
+
+    .#{theme.$prefix}-#{$component}-knob-end {
+      background-color: theme.palette(bg, 'disabled');
+      border: 0.75px solid theme.palette(border, 'default');
     }
 
     .#{theme.$prefix}-#{$component}-description {

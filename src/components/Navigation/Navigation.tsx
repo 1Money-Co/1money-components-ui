@@ -246,8 +246,8 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
               {suffix && <span className={classes('item-suffix')}>{suffix}</span>}
             </div>
             {hasChildren && (
-              <span className={classes('item-arrow')}>
-                <Icons name={open ? 'chevronUp' : 'chevronDown'} size={CHEVRON_SIZE} />
+              <span className={classes('item-arrow', joinCls(open && classes('item-arrow-open')))}>
+                <Icons name="chevronDown" size={CHEVRON_SIZE} />
               </span>
             )}
           </button>
@@ -256,8 +256,9 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
         return link && !hasChildren ? wrapWithLink(itemContent, link) : itemContent;
       })()}
 
-      {hasChildren && open && (
-        <div className={classes('submenu')}>
+      {hasChildren && (
+        <div className={classes('submenu', joinCls(open && classes('submenu-open')))}>
+          <div className={classes('submenu-inner')}>
           {visibleChildren?.map((child, index) => {
             const childContent = (
               <button
@@ -291,6 +292,7 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
 
             return child.link ? wrapWithLink(childContent, child.link) : childContent;
           })}
+          </div>
         </div>
       )}
     </div>

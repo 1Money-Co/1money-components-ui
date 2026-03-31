@@ -51,7 +51,7 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = props => {
       )}
     >
       {label && (
-        <Typography.Label size="lg" strong className={classes('label')}>
+        <Typography.Label size="lg" className={classes('label')}>
           {label}
         </Typography.Label>
       )}

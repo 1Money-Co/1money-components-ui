@@ -3,19 +3,33 @@ import type { ReactNode, RefObject } from 'react';
 export const COACH_MARK_PLACEMENTS = ['top', 'bottom', 'left', 'right'] as const;
 export type CoachMarkPlacement = (typeof COACH_MARK_PLACEMENTS)[number];
 
-export interface CoachMarkProps {
-  ref?: RefObject<HTMLDivElement | null>;
-  className?: string;
-  /** CSS class prefix for customization */
-  prefixCls?: string;
+export interface CoachMarkStep {
   /** Icon or illustration displayed above the heading */
   icon?: ReactNode;
   /** Heading text */
   heading?: ReactNode;
   /** Body text */
   body?: ReactNode;
-  /** Total number of steps */
-  steps: number;
+}
+
+export interface CoachMarkLabels {
+  /** Custom label for the back button */
+  back?: string;
+  /** Custom label for the next button */
+  next?: string;
+  /** Custom label for the finish button */
+  finish?: string;
+  /** Custom aria-label for the dismiss button */
+  dismiss?: string;
+}
+
+export interface CoachMarkProps {
+  ref?: RefObject<HTMLDivElement | null>;
+  className?: string;
+  /** CSS class prefix for customization */
+  prefixCls?: string;
+  /** Array of step configurations */
+  steps: CoachMarkStep[];
   /** Current active step index (controlled) */
   activeStep?: number;
   /** Default active step index (uncontrolled) */
@@ -30,10 +44,8 @@ export interface CoachMarkProps {
   dismissible?: boolean;
   /** Placement of the beak arrow relative to target element */
   placement?: CoachMarkPlacement;
-  /** Custom label for the back button */
-  backLabel?: string;
-  /** Custom label for the next button */
-  nextLabel?: string;
-  /** Custom label for the finish button */
-  finishLabel?: string;
+  /** Offset of the arrow from center (CSS value, e.g. '20px', '-10px') */
+  arrowOffset?: string;
+  /** Custom button and dismiss labels */
+  labels?: CoachMarkLabels;
 }

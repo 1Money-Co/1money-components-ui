@@ -6,10 +6,12 @@ $btn-width: 80px;
 $dismiss-size: 24px;
 $arrow-width: 36px;
 $arrow-height: 9px;
-$arrow-offset: $arrow-height - 1px;
+$arrow-side-offset: calc(-1 * ($arrow-width + $arrow-height) / 2);
 $card-width: 450px;
 
 .#{theme.$prefix}-#{$component} {
+  --coach-mark-arrow-offset: 50%;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -17,7 +19,7 @@ $card-width: 450px;
   max-width: 100%;
   padding: theme.spacing(scale, 1000) theme.spacing(scale, 1000) theme.spacing(scale, 800);
   background-color: theme.palette(bg, 'default');
-  border: 1px solid theme.palette(border, 'default');
+  border: 1px solid theme.palette(border, 'neutral');
   border-radius: theme.shape(600);
   box-shadow: theme.shadows(200);
 
@@ -83,6 +85,16 @@ $card-width: 450px;
     &-back {
       color: theme.palette(text, 'brand');
       background-color: theme.palette(bg, 'brand-secondary');
+
+      &:hover {
+        background-color: theme.palette(bg, 'brand-secondary-hover');
+      }
+
+      &:disabled {
+        color: theme.palette(text, 'brand-secondary');
+        background-color: theme.palette(bg, 'brand-tertiary');
+        cursor: default;
+      }
     }
 
     &-next {
@@ -90,11 +102,6 @@ $card-width: 450px;
       background-color: theme.palette(bg, 'brand');
     }
 
-    &-disabled {
-      color: theme.palette(text, 'brand-tertiary');
-      background-color: theme.palette(bg, 'brand-tertiary');
-      cursor: default;
-    }
   }
 
   // ── Dismiss ──
@@ -108,10 +115,15 @@ $card-width: 450px;
     width: $dismiss-size;
     height: $dismiss-size;
     padding: 0;
-    color: theme.palette(icon, 'neutral');
+    color: theme.palette(icon, 'default-tertiary');
     background: none;
     border: none;
+    border-radius: theme.shape(200);
     cursor: pointer;
+
+    &:hover {
+      color: theme.palette(icon, 'default-secondary');
+    }
   }
 
   // ── Arrow (SVG) ──
@@ -129,7 +141,7 @@ $card-width: 450px;
 
   &-arrow-stroke {
     fill: none;
-    stroke: theme.palette(border, 'default');
+    stroke: theme.palette(border, 'neutral');
     stroke-width: 1;
     stroke-linecap: round;
   }
@@ -137,28 +149,28 @@ $card-width: 450px;
   // Top placement: arrow at bottom, pointing down
   &-top &-arrow {
     bottom: -$arrow-height;
-    left: 50%;
+    left: var(--coach-mark-arrow-offset);
     transform: translateX(-50%) rotate(180deg);
   }
 
   // Bottom placement: arrow at top, pointing up
   &-bottom &-arrow {
     top: -$arrow-height;
-    left: 50%;
+    left: var(--coach-mark-arrow-offset);
     transform: translateX(-50%);
   }
 
   // Right placement: arrow at left, pointing left
   &-right &-arrow {
-    top: 50%;
-    left: calc(-1 * ($arrow-width + $arrow-height) / 2);
+    top: var(--coach-mark-arrow-offset);
+    left: $arrow-side-offset;
     transform: translateY(-50%) rotate(-90deg);
   }
 
   // Left placement: arrow at right, pointing right
   &-left &-arrow {
-    top: 50%;
-    right: calc(-1 * ($arrow-width + $arrow-height) / 2);
+    top: var(--coach-mark-arrow-offset);
+    right: $arrow-side-offset;
     transform: translateY(-50%) rotate(90deg);
   }
 }

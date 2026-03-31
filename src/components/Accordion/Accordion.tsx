@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
+import { Typography } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { AccordionItem, AccordionProps } from './interface';
@@ -85,7 +86,15 @@ export const Accordion: FC<AccordionProps> = props => {
               disabled={isDisabled}
               onClick={() => handleToggle(item)}
             >
-              <span className={classes('title')}>{item.title}</span>
+              {size === 'large' ? (
+                <Typography.Headline size="sm" className={classes('title')}>
+                  {item.title}
+                </Typography.Headline>
+              ) : (
+                <Typography.Title size="md" strong className={classes('title')}>
+                  {item.title}
+                </Typography.Title>
+              )}
               <Icons
                 name={iconName}
                 size={iconSize}
@@ -93,9 +102,13 @@ export const Accordion: FC<AccordionProps> = props => {
               />
             </button>
             {isActive && (
-              <div className={classes('content')}>
+              <Typography.Body
+                size={size === 'large' ? 'lg' : 'md'}
+                as="div"
+                className={classes('content')}
+              >
                 {item.children}
-              </div>
+              </Typography.Body>
             )}
           </div>
         );

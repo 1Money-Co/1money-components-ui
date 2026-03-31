@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Icons } from '@/components/Icons';
+import { Typography } from '@/components/Typography';
 import type { FC } from 'react';
 import type { UploadFileBarProps } from './interface';
 
@@ -44,7 +45,7 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
           name="document"
           size={20}
         />
-        <span className={classes('name')}>{fileName}</span>
+        <Typography.Body size="md" strong className={classes('name')}>{fileName}</Typography.Body>
         <Icons
           wrapperCls={classes('icon-status')}
           name={status === FILE_STATUS_SUCCESS ? 'statusSuccess' : 'statusFail'}
@@ -52,12 +53,12 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
           color={status === FILE_STATUS_SUCCESS ? STATUS_ICON_COLOR_SUCCESS : STATUS_ICON_COLOR_ERROR}
         />
         {message && (
-          <span className={classes('message')}>
+          <div className={classes('message')}>
             {status === FILE_STATUS_ERROR && (
               <Icons name="error" size={16} />
             )}
-            {message}
-          </span>
+            <Typography.Body size="sm">{message}</Typography.Body>
+          </div>
         )}
       </div>
       <Icons

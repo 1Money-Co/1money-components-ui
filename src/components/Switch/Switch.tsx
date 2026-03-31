@@ -31,7 +31,7 @@ export const Switch: FC<SwitchProps> = props => {
 
   const classes = classnames(prefixCls);
   const labelColor = disabled ? 'disabled' : 'default';
-  const descriptionColor = disabled ? 'disabled' : 'default-tertiary';
+  const descriptionColor = disabled ? 'disabled' : 'default-secondary';
 
   const inferredAriaLabel =
     typeof label === 'string' || typeof label === 'number'
@@ -56,6 +56,8 @@ export const Switch: FC<SwitchProps> = props => {
         role="switch"
         id={id}
         name={name}
+        aria-label={ariaLabel ?? inferredAriaLabel}
+        aria-labelledby={ariaLabelledBy}
         disabled={disabled}
         checked={innerChecked}
         onChange={handleChange}
@@ -86,8 +88,8 @@ export const Switch: FC<SwitchProps> = props => {
         ),
       )}
     >
-      {switchElement}
       {labelElement}
+      {switchElement}
     </label>
   );
 };

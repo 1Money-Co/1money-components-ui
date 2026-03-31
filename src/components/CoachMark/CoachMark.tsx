@@ -4,20 +4,20 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 import { Icons } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import { Carousel } from '@/components/Carousel';
-import type { FC } from 'react';
+import type { CSSProperties, FC } from 'react';
 import type { CoachMarkProps } from './interface';
 
-const DEFAULT_BACK_LABEL = 'Back';
-const DEFAULT_NEXT_LABEL = 'Next';
-const DEFAULT_FINISH_LABEL = 'Finish';
+const DEFAULT_LABELS = {
+  back: 'Back',
+  next: 'Next',
+  finish: 'Finish',
+  dismiss: 'Dismiss',
+};
 
-export const CoachMark: FC<CoachMarkProps> = props => {
+const CoachMarkInner: FC<CoachMarkProps> = props => {
   const {
     className = '',
     prefixCls = 'coach-mark',
-    icon,
-    heading,
-    body,
     steps,
     activeStep,
     defaultActiveStep = 0,
@@ -26,11 +26,12 @@ export const CoachMark: FC<CoachMarkProps> = props => {
     onDismiss,
     dismissible = true,
     placement = 'top',
-    backLabel = DEFAULT_BACK_LABEL,
-    nextLabel = DEFAULT_NEXT_LABEL,
-    finishLabel = DEFAULT_FINISH_LABEL,
+    arrowOffset,
+    labels: labelsProp,
     ref,
   } = props;
+
+  const labels = { ...DEFAULT_LABELS, ...labelsProp };
 
   const [currentStep, setCurrentStep] = useControlledState(
     defaultActiveStep,
@@ -38,8 +39,11 @@ export const CoachMark: FC<CoachMarkProps> = props => {
   );
 
   const classes = classnames(prefixCls);
+  const totalSteps = steps.length;
   const isFirst = currentStep === 0;
-  const isLast = currentStep === steps - 1;
+  const isLast = currentStep === totalSteps - 1;
+  const isSingleStep = totalSteps === 1;
+  const { icon, heading, body } = steps[currentStep] ?? {};
 
   const handleBack = useEventCallback(() => {
     if (isFirst) return;
@@ -63,16 +67,24 @@ export const CoachMark: FC<CoachMarkProps> = props => {
     onChange?.(index);
   });
 
+  const arrowStyle: CSSProperties | undefined = arrowOffset
+    ? { ['--coach-mark-arrow-offset' as string]: arrowOffset }
+    : undefined;
+
   return (
     <div
       ref={ref}
+      role="dialog"
+      aria-label={typeof heading === 'string' ? heading : undefined}
       className={joinCls(classes(undefined, className), classes(placement))}
+      style={arrowStyle}
     >
       <svg
         className={classes('arrow')}
         viewBox="0 0 36 9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         <path
           d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
@@ -83,6 +95,7 @@ export const CoachMark: FC<CoachMarkProps> = props => {
           className={classes('arrow-stroke')}
         />
       </svg>
+
       <div className={classes('content')}>
         {icon && <div className={classes('icon')}>{icon}</div>}
 
@@ -103,22 +116,21 @@ export const CoachMark: FC<CoachMarkProps> = props => {
       </div>
 
       <div className={classes('footer')}>
-        <button
-          type="button"
-          className={joinCls(
-            classes('btn'),
-            classes('btn-back'),
-            isFirst && classes('btn-disabled'),
-          )}
-          disabled={isFirst}
-          onClick={handleBack}
-        >
-          {backLabel}
-        </button>
+        {!isSingleStep && (
+          <button
+            type="button"
+            className={joinCls(classes('btn'), classes('btn-back'))}
+            aria-label={labels.back}
+            disabled={isFirst}
+            onClick={handleBack}
+          >
+            {labels.back}
+          </button>
+        )}
 
-        {steps > 1 && (
+        {totalSteps > 1 && (
           <Carousel
-            count={steps}
+            count={totalSteps}
             activeIndex={currentStep}
             onChange={handleDotChange}
           />
@@ -127,9 +139,10 @@ export const CoachMark: FC<CoachMarkProps> = props => {
         <button
           type="button"
           className={joinCls(classes('btn'), classes('btn-next'))}
+          aria-label={isLast ? labels.finish : labels.next}
           onClick={handleNext}
         >
-          {isLast ? finishLabel : nextLabel}
+          {isLast ? labels.finish : labels.next}
         </button>
       </div>
 
@@ -137,14 +150,15 @@ export const CoachMark: FC<CoachMarkProps> = props => {
         <button
           type="button"
           className={classes('dismiss')}
-          aria-label="Dismiss"
+          aria-label={labels.dismiss}
           onClick={onDismiss}
         >
-          <Icons name="cross" size={14} />
+          <Icons name="cross" size={24} color="currentColor" />
         </button>
       )}
     </div>
   );
 };
 
-export default memo(CoachMark);
+export const CoachMark = memo(CoachMarkInner);
+export default CoachMark;

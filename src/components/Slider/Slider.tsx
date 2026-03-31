@@ -1,5 +1,6 @@
 import { memo, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
+import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { ChangeEvent, FC } from 'react';
 import type { SliderProps } from './interface';
@@ -76,8 +77,8 @@ export const Slider: FC<SliderProps> = props => {
     >
       {showLabel && label && (
         <div className={classes('label-row')}>
-          <span className={classes('label')}>{label}</span>
-          <span className={classes('output')}>{displayValue}</span>
+          <TypographyBody size="lg" className={classes('label')}>{label}</TypographyBody>
+          <TypographyBody size="md" className={classes('output')}>{displayValue}</TypographyBody>
         </div>
       )}
 
@@ -108,10 +109,13 @@ export const Slider: FC<SliderProps> = props => {
           className={classes('knob')}
           style={{ left: `${percentage}%` }}
         />
+        {disabled && (
+          <div className={classes('knob-end')} />
+        )}
       </div>
 
       {showDescription && description && (
-        <span className={classes('description')}>{description}</span>
+        <TypographyBody size="lg" className={classes('description')}>{description}</TypographyBody>
       )}
     </div>
   );
