@@ -1,8 +1,10 @@
 import { memo, useId } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
+import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from './FieldShell';
 import { useSyncRef } from './useSyncRef';
+import { INPUT_COUNT_COLOR, INPUT_COUNT_SIZE } from './constants';
 import type { FC, ChangeEvent } from 'react';
 import type { InputTextAreaProps } from './interface';
 
@@ -68,9 +70,9 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
           onChange={handleChange}
         />
         {showCount && (
-          <div className={classes('count')}>
+          <TypographyBody as="div" className={classes('count')} size={INPUT_COUNT_SIZE} color={INPUT_COUNT_COLOR}>
             {maxLength ? `${innerValue.length} / ${maxLength}` : `${innerValue.length}`}
-          </div>
+          </TypographyBody>
         )}
       </div>
     </FieldShell>

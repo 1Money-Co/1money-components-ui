@@ -2,25 +2,36 @@ import { memo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import {
+  SWITCH_PREFIX_CLS,
+  SWITCH_DEFAULT_LABEL_PLACEMENT,
+  SWITCH_LABEL_PLACEMENT_RIGHT,
+  SWITCH_LABEL_COLOR_DEFAULT,
+  SWITCH_LABEL_COLOR_DISABLED,
+  SWITCH_DESCRIPTION_COLOR_DEFAULT,
+  SWITCH_DESCRIPTION_COLOR_DISABLED,
+  SWITCH_LABEL_SIZE,
+  SWITCH_DESCRIPTION_SIZE,
+} from './constants';
 import type { ChangeEvent, FC } from 'react';
 import type { SwitchProps } from './interface';
 
 export const Switch: FC<SwitchProps> = props => {
   const {
     className = '',
-    prefixCls = 'switch',
+    prefixCls = SWITCH_PREFIX_CLS,
     id,
     name,
-    'aria-label': ariaLabel,
-    'aria-labelledby': ariaLabelledBy,
     checked,
     defaultChecked = false,
     disabled = false,
     label,
     description,
-    labelPlacement = 'left',
+    labelPlacement = SWITCH_DEFAULT_LABEL_PLACEMENT,
     onChange,
     ref,
+    'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledBy,
     ...rest
   } = props;
 
@@ -30,8 +41,8 @@ export const Switch: FC<SwitchProps> = props => {
   );
 
   const classes = classnames(prefixCls);
-  const labelColor = disabled ? 'disabled' : 'default';
-  const descriptionColor = disabled ? 'disabled' : 'default-secondary';
+  const labelColor = disabled ? SWITCH_LABEL_COLOR_DISABLED : SWITCH_LABEL_COLOR_DEFAULT;
+  const descriptionColor = disabled ? SWITCH_DESCRIPTION_COLOR_DISABLED : SWITCH_DESCRIPTION_COLOR_DEFAULT;
 
   const inferredAriaLabel =
     typeof label === 'string' || typeof label === 'number'
@@ -70,8 +81,8 @@ export const Switch: FC<SwitchProps> = props => {
 
   const labelElement = (label || description) && (
     <span className={classes('content')}>
-      {label && <TypographyBody size="lg" color={labelColor}>{label}</TypographyBody>}
-      {description && <TypographyBody size="md" color={descriptionColor}>{description}</TypographyBody>}
+      {label && <TypographyBody size={SWITCH_LABEL_SIZE} color={labelColor}>{label}</TypographyBody>}
+      {description && <TypographyBody size={SWITCH_DESCRIPTION_SIZE} color={descriptionColor}>{description}</TypographyBody>}
     </span>
   );
 
@@ -83,7 +94,7 @@ export const Switch: FC<SwitchProps> = props => {
         joinCls(
           innerChecked && classes('checked'),
           disabled && classes('disabled'),
-          labelPlacement === 'right' && classes('right'),
+          labelPlacement === SWITCH_LABEL_PLACEMENT_RIGHT && classes(SWITCH_LABEL_PLACEMENT_RIGHT),
           className,
         ),
       )}

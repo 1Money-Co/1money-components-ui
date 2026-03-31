@@ -14,7 +14,7 @@ import {
   useInteractions,
   useRole,
 } from '@floating-ui/react';
-import React, { cloneElement, useRef } from 'react';
+import React, { cloneElement, useCallback, useMemo, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
@@ -28,27 +28,12 @@ function normalizeTrigger(
   return Array.isArray(trigger) ? trigger : [trigger];
 }
 
-function composeRefs<T>(
-  ...refs: Array<React.Ref<T> | ((node: T | null) => void) | null | undefined>
-) {
-  return (node: T | null) => {
-    refs.forEach((ref) => {
-      if (typeof ref === 'function') {
-        ref(node);
-      } else if (ref && typeof ref === 'object' && 'current' in ref) {
-        (ref as React.MutableRefObject<T | null>).current = node;
-      }
-    });
-  };
-}
-
-function getPlacementMeta(placement: TriggerProps['placement']) {
-  const [side, align] = (placement ?? 'bottom-start').split('-');
-
-  return {
-    side,
-    align,
-  };
+function setRef<T>(ref: React.Ref<T> | null | undefined, node: T | null) {
+  if (typeof ref === 'function') {
+    ref(node);
+  } else if (ref && typeof ref === 'object' && 'current' in ref) {
+    ref.current = node;
+  }
 }
 
 const Trigger: FC<TriggerProps> = ({
@@ -73,7 +58,7 @@ const Trigger: FC<TriggerProps> = ({
   ref,
 }) => {
   const arrowRef = useRef<SVGSVGElement>(null);
-  const triggers = normalizeTrigger(trigger);
+  const triggers = useMemo(() => normalizeTrigger(trigger), [trigger]);
 
   const [innerOpen, setInnerOpen] = useControlledState(defaultOpen, open);
 
@@ -88,17 +73,22 @@ const Trigger: FC<TriggerProps> = ({
     }
   });
 
-  const { refs, floatingStyles, context, placement: resolvedPlacement } = useFloating({
-    open: innerOpen,
-    onOpenChange: handleOpenChange,
-    placement,
-    whileElementsMounted: autoUpdate,
-    middleware: [
+  const middleware = useMemo(
+    () => [
       floatingOffset(offset),
       flip({ padding: 8 }),
       shift({ padding: 8 }),
       ...(showArrow ? [arrow({ element: arrowRef })] : []),
     ],
+    [offset, showArrow],
+  );
+
+  const { refs, floatingStyles, context, placement: resolvedPlacement } = useFloating({
+    open: innerOpen,
+    onOpenChange: handleOpenChange,
+    placement,
+    whileElementsMounted: autoUpdate,
+    middleware,
   });
 
   const clickInteraction = useClick(context, {
@@ -128,10 +118,22 @@ const Trigger: FC<TriggerProps> = ({
     roleInteraction,
   ]);
 
-  const referenceProps = getReferenceProps({
-    ref: composeRefs(refs.setReference, ref),
-  });
-  const placementMeta = getPlacementMeta(resolvedPlacement);
+  const composedRef = useCallback(
+    (node: HTMLElement | null) => {
+      refs.setReference(node);
+      setRef(ref, node);
+    },
+    [refs.setReference, ref],
+  );
+
+  const referenceProps = getReferenceProps({ ref: composedRef });
+
+  const placementMeta = useMemo(() => {
+    const [side, align] = (resolvedPlacement ?? 'bottom-start').split('-');
+    return { side, align };
+  }, [resolvedPlacement]);
+
+  const closePanel = useCallback(() => handleOpenChange(false), [handleOpenChange]);
 
   const panel = (
     <div
@@ -151,7 +153,7 @@ const Trigger: FC<TriggerProps> = ({
         />
       )}
       {typeof content === 'function'
-        ? content({ close: () => handleOpenChange(false), open: innerOpen })
+        ? content({ close: closePanel, open: innerOpen })
         : content}
     </div>
   );

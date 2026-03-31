@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Icons } from '@/components/Icons';
+import { TypographyBody, TypographyDisplay } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, ReactNode } from 'react';
 import type { ProgressProps } from './interface';
@@ -9,6 +10,8 @@ import {
   PROGRESS_DEFAULT_PREFIX,
   PROGRESS_DEFAULT_SHOW_INFO,
   PROGRESS_FEEDBACK_ICON,
+  PROGRESS_FEEDBACK_TEXT_SIZE,
+  PROGRESS_INFO_SIZE,
   clampPercent,
   resolveProgressState,
 } from './constants';
@@ -66,9 +69,9 @@ export const Progress: FC<ProgressProps> = props => {
       aria-valuetext={ariaValueText}
     >
       {showInfo && (
-        <div className={classes('info')} data-testid="progress-info">
+        <TypographyDisplay className={classes('info')} as="div" size={PROGRESS_INFO_SIZE} data-testid="progress-info">
           {resolvedInfo}
-        </div>
+        </TypographyDisplay>
       )}
 
       <div className={classes('bar')}>
@@ -87,7 +90,7 @@ export const Progress: FC<ProgressProps> = props => {
             <Icons name={PROGRESS_FEEDBACK_ICON} size={16} />
           </span>
           {typeof feedback === 'string' || typeof feedback === 'number'
-            ? <span className={classes('feedback-text')}>{feedback}</span>
+            ? <TypographyBody className={classes('feedback-text')} size={PROGRESS_FEEDBACK_TEXT_SIZE}>{feedback}</TypographyBody>
             : feedback}
         </div>
       )}

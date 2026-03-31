@@ -1,8 +1,14 @@
 import { memo } from 'react';
 import { Icons } from '@/components/Icons';
+import { TypographyBody } from '@/components/Typography';
 import type { ClassNamesFn } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { SelectOption } from './interface';
+import {
+  SELECT_OPTION_LABEL_SIZE,
+  SELECT_OPTION_DESCRIPTION_SIZE,
+  SELECT_OPTION_DESCRIPTION_COLOR,
+} from './constants';
 
 interface SelectOptionContentProps {
   classes: ClassNamesFn;
@@ -17,9 +23,9 @@ const SelectOptionContentBase: FC<SelectOptionContentProps> = ({
 }) => (
   <>
     <span className={classes('option-content')}>
-      <span className={classes('option-label')}>{option.label}</span>
+      <TypographyBody className={classes('option-label')} size={SELECT_OPTION_LABEL_SIZE} strong>{option.label}</TypographyBody>
       {option.description && (
-        <span className={classes('option-description')}>{option.description}</span>
+        <TypographyBody className={classes('option-description')} size={SELECT_OPTION_DESCRIPTION_SIZE} color={SELECT_OPTION_DESCRIPTION_COLOR}>{option.description}</TypographyBody>
       )}
     </span>
     <span className={classes('option-check')}>

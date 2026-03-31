@@ -29,8 +29,6 @@ $progress-variants: (
   width: theme.sizing(scale, 100);
 
   &-info {
-    @include theme.typography(display, sm);
-
     width: theme.sizing(scale, 100);
     color: var(--om-progress-info-color);
   }
@@ -75,7 +73,7 @@ $progress-variants: (
   }
 
   &-feedback-text {
-    @include theme.typography(body, sm);
+    color: inherit;
   }
 
   &-placement-left {

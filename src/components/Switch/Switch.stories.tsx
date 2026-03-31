@@ -3,10 +3,9 @@ import { fn } from '@storybook/test';
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Switch } from './index';
+import { SWITCH_LABEL_PLACEMENTS, SWITCH_DEFAULT_LABEL_PLACEMENT } from './constants';
 
 import './style';
-
-const LABEL_PLACEMENTS = ['left', 'right'] as const;
 
 const meta: Meta<typeof Switch> = {
   title: 'Components/Switch',
@@ -14,11 +13,11 @@ const meta: Meta<typeof Switch> = {
   argTypes: {
     checked: { control: 'boolean' },
     disabled: { control: 'boolean' },
-    labelPlacement: { control: 'radio', options: [...LABEL_PLACEMENTS] },
+    labelPlacement: { control: 'radio', options: [...SWITCH_LABEL_PLACEMENTS] },
   },
   args: {
     disabled: false,
-    labelPlacement: 'left',
+    labelPlacement: SWITCH_DEFAULT_LABEL_PLACEMENT,
     onChange: fn(),
   },
   parameters: {

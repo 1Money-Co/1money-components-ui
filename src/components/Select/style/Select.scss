@@ -14,17 +14,8 @@ $component: 'select';
     align-items: center;
   }
 
-  &-label-text,
-  &-label-disabled {
-    @include theme.typography(label, lg, $strong: true);
-  }
-
   &-label-text {
-    color: theme.palette(text, 'default');
-  }
-
-  &-label-disabled {
-    color: theme.palette(text, 'disabled');
+    display: inline;
   }
 
   &-required {
@@ -37,17 +28,8 @@ $component: 'select';
     color: theme.palette(icon, 'default-tertiary');
   }
 
-  &-description-text,
-  &-description-disabled {
-    @include theme.typography(body, md);
-  }
-
   &-description-text {
-    color: theme.palette(text, 'default-tertiary');
-  }
-
-  &-description-disabled {
-    color: theme.palette(text, 'disabled');
+    display: block;
   }
 
   &-trigger {
@@ -275,8 +257,6 @@ $component: 'select';
   }
 
   &-feedback {
-    @include theme.typography(body, sm);
-
     display: inline-flex;
     gap: theme.spacing(gap, 100);
     align-items: flex-start;
@@ -395,8 +375,6 @@ $component: 'select';
   }
 
   &-group-label {
-    @include theme.typography(label, lg, $strong: true);
-
     display: flex;
     align-items: center;
     width: 100%;
@@ -448,8 +426,6 @@ $component: 'select';
   }
 
   &-option-label {
-    @include theme.typography(body, md, $strong: true);
-
     min-width: 0;
     overflow: hidden;
     color: currentcolor;
@@ -458,11 +434,8 @@ $component: 'select';
   }
 
   &-option-description {
-    @include theme.typography(body, sm);
-
     min-width: 0;
     overflow: hidden;
-    color: theme.palette(text, 'default-tertiary');
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -479,10 +452,7 @@ $component: 'select';
   }
 
   &-empty {
-    @include theme.typography(body, md);
-
     padding: theme.spacing(component-padding, 200);
-    color: theme.palette(text, 'default-tertiary');
     text-align: center;
   }
 

@@ -105,13 +105,21 @@ exports[`Popconfirm renders correctly 1`] = `
           class="om-react-ui-button om-react-ui-button-secondary om-react-ui-button-small"
           type="button"
         >
-          Cancel
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+          >
+            Cancel
+          </span>
         </button>
         <button
           class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-small"
           type="button"
         >
-          Confirm
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+          >
+            Confirm
+          </span>
         </button>
       </div>
     </div>

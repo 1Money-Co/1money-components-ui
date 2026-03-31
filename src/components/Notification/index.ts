@@ -6,6 +6,8 @@ export {
   NOTIFICATION_PLACEMENTS,
 } from './interface';
 
+export * from './constants';
+
 export type {
   NotificationLinkConfig,
   NotificationStatus,

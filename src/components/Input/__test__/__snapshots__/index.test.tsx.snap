@@ -15,11 +15,15 @@ exports[`Input renders default input with label and feedback 1`] = `
             class="om-react-ui-input-label"
             for="«r0»"
           >
-            Amount
+            <span
+              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-md om-react-ui-typography-color-default"
+            >
+              Amount
+            </span>
           </label>
         </div>
         <div
-          class="om-react-ui-input-description"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-color-default-tertiary om-react-ui-input-description"
         >
           0.00 USDT available
         </div>
@@ -40,7 +44,7 @@ exports[`Input renders default input with label and feedback 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-input-feedback"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-input-feedback"
           role="status"
         >
           Feedback
@@ -59,11 +63,15 @@ exports[`Input renders default input with label and feedback 1`] = `
           class="om-react-ui-input-label"
           for="«r0»"
         >
-          Amount
+          <span
+            class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-md om-react-ui-typography-color-default"
+          >
+            Amount
+          </span>
         </label>
       </div>
       <div
-        class="om-react-ui-input-description"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-color-default-tertiary om-react-ui-input-description"
       >
         0.00 USDT available
       </div>
@@ -84,7 +92,7 @@ exports[`Input renders default input with label and feedback 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-input-feedback"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-input-feedback"
         role="status"
       >
         Feedback

@@ -1,21 +1,24 @@
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { Icons } from '@/components/Icons';
+import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import type { FC } from 'react';
+import type { FC, KeyboardEvent, MouseEvent } from 'react';
 import type { TagProps } from './interface';
-
-const ICON_SIZE_MAP = {
-  large: 12,
-  medium: 12,
-  small: 10,
-} as const;
+import {
+  TAG_PREFIX_CLS,
+  TAG_DEFAULT_COLOR,
+  TAG_DEFAULT_SIZE,
+  TAG_REMOVE_ICON,
+  TAG_ICON_SIZE_MAP,
+  TAG_LABEL_TYPOGRAPHY_MAP,
+} from './constants';
 
 export const Tag: FC<TagProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'tag',
-    color = 'neutral',
-    size = 'large',
+    prefixCls = TAG_PREFIX_CLS,
+    color = TAG_DEFAULT_COLOR,
+    size = TAG_DEFAULT_SIZE,
     label,
     icon,
     removable = false,
@@ -25,7 +28,17 @@ export const Tag: FC<TagProps> = (props) => {
   } = props;
 
   const classes = classnames(prefixCls);
-  const iconSize = ICON_SIZE_MAP[size];
+  const iconSize = TAG_ICON_SIZE_MAP[size];
+
+  const handleRemoveKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLSpanElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onRemove?.(e as unknown as MouseEvent<HTMLSpanElement>);
+      }
+    },
+    [onRemove],
+  );
 
   return (
     <span
@@ -41,16 +54,31 @@ export const Tag: FC<TagProps> = (props) => {
           <Icons name={icon} size={iconSize} />
         </span>
       )}
-      {label && <span className={classes('label')}>{label}</span>}
+      {label != null && label !== '' && (() => {
+        const typo = TAG_LABEL_TYPOGRAPHY_MAP[size];
+        if (typo.variant === 'body') {
+          return (
+            <TypographyBody className={classes('label')} size={typo.size} strong={typo.strong}>
+              {label}
+            </TypographyBody>
+          );
+        }
+        return (
+          <TypographyLabel className={classes('label')} size={typo.size}>
+            {label}
+          </TypographyLabel>
+        );
+      })()}
       {removable && (
         <span
           className={classes('remove')}
           onClick={onRemove}
+          onKeyDown={handleRemoveKeyDown}
           role="button"
           tabIndex={0}
           aria-label="Remove"
         >
-          <Icons name="cross" size={iconSize} />
+          <Icons name={TAG_REMOVE_ICON} size={iconSize} />
         </span>
       )}
     </span>

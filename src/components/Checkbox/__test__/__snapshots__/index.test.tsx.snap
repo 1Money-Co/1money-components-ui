@@ -21,7 +21,7 @@ exports[`Checkbox renders correctly 1`] = `
     class="om-react-ui-checkbox-content"
   >
     <span
-      class="om-react-ui-checkbox-label"
+      class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-checkbox-label"
     >
       Test
     </span>

@@ -4,33 +4,35 @@ import { Icons } from '@/components/Icons';
 import { Tag } from '@/components/Tag';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import BaseRadio, { createRadioChangeEvent } from './BaseRadio';
+import {
+  RADIO_CELL_CHECK_ICON,
+  RADIO_CELL_ICON_COLOR,
+  RADIO_CELL_ICON_SIZE_MAP,
+  RADIO_CELL_INDICATOR_ICON_COLOR,
+  RADIO_DEFAULT_DIRECTION,
+  RADIO_DEFAULT_ORIENTATION,
+  RADIO_DEFAULT_SIZE,
+  RADIO_DEFAULT_VARIANT,
+  RADIO_DIRECTION_LEFT,
+  RADIO_DIRECTION_RIGHT,
+  RADIO_INPUT_TYPE,
+  RADIO_ORIENTATION_HORIZONTAL,
+  RADIO_ORIENTATION_VERTICAL,
+  RADIO_PREFIX_CLS,
+  RADIO_SIZE_MEDIUM,
+  RADIO_SIZE_SMALL,
+  RADIO_TAG_SIZE,
+  RADIO_VARIANT_CELL,
+} from './constants';
 import { useRadioGroupContext } from './RadioGroupContext';
 import type { ChangeEvent, FC } from 'react';
 import type { IconName } from '@/components/Icons';
-import type {
-  RadioChangeEvent,
-  RadioOrientation,
-  RadioProps,
-  RadioSize,
-} from './interface';
-
-const CELL_ICON_SIZE_MAP: Record<RadioOrientation, Record<RadioSize, number>> = {
-  horizontal: {
-    large: 16,
-    medium: 16,
-    small: 12,
-  },
-  vertical: {
-    large: 24,
-    medium: 20,
-    small: 16,
-  },
-};
+import type { RadioChangeEvent, RadioProps } from './interface';
 
 export const Radio: FC<RadioProps> = (props) => {
   const {
     className = '',
-    prefixCls = 'radio',
+    prefixCls = RADIO_PREFIX_CLS,
     style,
     id,
     name: nameProp,
@@ -58,10 +60,10 @@ export const Radio: FC<RadioProps> = (props) => {
   const groupContext = useRadioGroupContext();
   const isSelectableInGroup = groupContext !== null && value !== undefined;
   const isDisabled = disabled || (isSelectableInGroup ? (groupContext?.disabled ?? false) : false);
-  const variant = variantProp ?? groupContext?.variant ?? 'default';
-  const size = sizeProp ?? groupContext?.size ?? 'large';
-  const orientation = orientationProp ?? groupContext?.orientation ?? 'horizontal';
-  const direction = directionProp ?? groupContext?.direction ?? 'left';
+  const variant = variantProp ?? groupContext?.variant ?? RADIO_DEFAULT_VARIANT;
+  const size = sizeProp ?? groupContext?.size ?? RADIO_DEFAULT_SIZE;
+  const orientation = orientationProp ?? groupContext?.orientation ?? RADIO_DEFAULT_ORIENTATION;
+  const direction = directionProp ?? groupContext?.direction ?? RADIO_DEFAULT_DIRECTION;
   const name = isSelectableInGroup ? (nameProp ?? groupContext?.name) : nameProp;
   const inferredAriaLabel = (
     typeof label === 'string' || typeof label === 'number'
@@ -75,10 +77,10 @@ export const Radio: FC<RadioProps> = (props) => {
   const [innerChecked, setInnerChecked] = useControlledState(defaultChecked, checked);
   const isControlled = checked !== undefined;
   const isChecked = isSelectableInGroup ? groupContext?.value === value : !!innerChecked;
-  const iconSize = CELL_ICON_SIZE_MAP[orientation][size];
+  const iconSize = RADIO_CELL_ICON_SIZE_MAP[orientation][size];
   const useIndicatorBadge = (
-    (orientation === 'horizontal' && size !== 'small')
-    || (orientation === 'vertical' && size === 'medium' && isChecked)
+    (orientation === RADIO_ORIENTATION_HORIZONTAL && size !== RADIO_SIZE_SMALL)
+    || (orientation === RADIO_ORIENTATION_VERTICAL && size === RADIO_SIZE_MEDIUM && isChecked)
   );
 
   const emitChange = useEventCallback((event: RadioChangeEvent) => {
@@ -129,21 +131,21 @@ export const Radio: FC<RadioProps> = (props) => {
       )}
       {tag && (
         <span className={classes('tag')}>
-          <Tag label={tag} size="small" />
+          <Tag label={tag} size={RADIO_TAG_SIZE} />
         </span>
       )}
     </span>
   );
 
   const cellVisualIcon: IconName | undefined = (
-    orientation === 'horizontal'
-      ? (isChecked ? 'check' : icon)
+    orientation === RADIO_ORIENTATION_HORIZONTAL
+      ? (isChecked ? RADIO_CELL_CHECK_ICON : icon)
       : icon
   );
 
   const cellIndicator = (
     <>
-      {orientation === 'horizontal' && size === 'small' ? (
+      {orientation === RADIO_ORIENTATION_HORIZONTAL && size === RADIO_SIZE_SMALL ? (
         <span className={classes('cell-radio')}>
           <span className={classes('cell-radio-dot')} />
         </span>
@@ -152,15 +154,15 @@ export const Radio: FC<RadioProps> = (props) => {
           <span className={classes(
             'cell-indicator',
             joinCls(
-              orientation === 'vertical' && size === 'medium' && classes('cell-indicator-compact'),
+              orientation === RADIO_ORIENTATION_VERTICAL && size === RADIO_SIZE_MEDIUM && classes('cell-indicator-compact'),
             ),
           )}>
             <Icons
               name={cellVisualIcon}
               size={iconSize}
               color={isChecked
-                ? 'var(--om-radio-cell-indicator-icon)'
-                : 'var(--om-radio-cell-icon)'}
+                ? RADIO_CELL_INDICATOR_ICON_COLOR
+                : RADIO_CELL_ICON_COLOR}
             />
           </span>
         ) : (
@@ -169,7 +171,7 @@ export const Radio: FC<RadioProps> = (props) => {
               <Icons
                 name={cellVisualIcon}
                 size={iconSize}
-                color="var(--om-radio-cell-icon)"
+                color={RADIO_CELL_ICON_COLOR}
               />
             </span>
           )
@@ -178,7 +180,7 @@ export const Radio: FC<RadioProps> = (props) => {
     </>
   );
 
-  if (variant === 'cell') {
+  if (variant === RADIO_VARIANT_CELL) {
     return (
       <label
         ref={ref}
@@ -206,7 +208,7 @@ export const Radio: FC<RadioProps> = (props) => {
           onChange={handleInputChange}
           required={required}
           title={title}
-          type="radio"
+          type={RADIO_INPUT_TYPE}
           value={value}
         />
         <span className={classes('cell-panel')}>
@@ -224,13 +226,13 @@ export const Radio: FC<RadioProps> = (props) => {
         void 0,
         joinCls(
           isDisabled && classes('disabled'),
-          direction === 'right' && classes('right'),
+          direction === RADIO_DIRECTION_RIGHT && classes('right'),
           className,
         ),
       )}
       style={style}
     >
-      {direction === 'left' ? (
+      {direction === RADIO_DIRECTION_LEFT ? (
         <>
           {radioElement}
           {labelElement}

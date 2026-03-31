@@ -76,12 +76,12 @@ exports[`Notification renders correctly 1`] = `
             class="om-react-ui-notification-content"
           >
             <div
-              class="om-react-ui-notification-title"
+              class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-secondary om-react-ui-typography-strong om-react-ui-notification-title"
             >
               Test title
             </div>
             <div
-              class="om-react-ui-notification-body"
+              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary om-react-ui-notification-body"
             >
               Test body
             </div>
@@ -190,12 +190,12 @@ exports[`Notification renders correctly 1`] = `
           class="om-react-ui-notification-content"
         >
           <div
-            class="om-react-ui-notification-title"
+            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-secondary om-react-ui-typography-strong om-react-ui-notification-title"
           >
             Test title
           </div>
           <div
-            class="om-react-ui-notification-body"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary om-react-ui-notification-body"
           >
             Test body
           </div>
