@@ -1,6 +1,6 @@
 # Carousel
 
-A carousel/slider component for cycling through a series of content panels. Features diamond-shaped indicator dots with animated state transitions.
+A diamond-shaped dot indicator for step navigation. Used as a sub-component inside Coach Mark, onboarding flows, and similar multi-step UIs.
 
 ## Import
 
@@ -13,24 +13,22 @@ import { Carousel } from '@1money/components-ui/Carousel';
 ## Usage
 
 ```tsx
-<Carousel autoPlay loop onChange={(index) => console.log(index)}>
-  <div>Slide 1</div>
-  <div>Slide 2</div>
-  <div>Slide 3</div>
-</Carousel>
+<Carousel count={4} defaultActiveIndex={0} onChange={(index) => console.log(index)} />
 ```
 
 ## Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `children` | `ReactNode` | — | Slide content |
-| `activeIndex` | `number` | — | Current active slide (controlled) |
-| `defaultActiveIndex` | `number` | `0` | Default active slide (uncontrolled) |
-| `autoPlay` | `boolean` | `false` | Enable auto-play |
-| `autoPlayInterval` | `number` | `3000` | Auto-play interval in ms |
-| `loop` | `boolean` | `false` | Loop back to start after last slide |
-| `showIndicators` | `boolean` | `true` | Show indicator dots |
-| `onChange` | `(index: number) => void` | — | Callback when active slide changes |
+| `count` | `number` | — | Total number of indicator dots (required) |
+| `activeIndex` | `number` | — | Current active dot index (controlled) |
+| `defaultActiveIndex` | `number` | `0` | Default active dot index (uncontrolled) |
+| `onChange` | `(index: number) => void` | — | Callback when active dot changes |
 | `prefixCls` | `string` | `'carousel'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
+
+## Dot States
+
+- **Default**: 8px diamond shape, neutral color
+- **Hover**: 8px diamond shape, darker neutral color
+- **Active**: 12px diamond shape, brand color

@@ -26,33 +26,17 @@ jest.mock('lottie-web', () => ({
 
 describe('Carousel', () => {
   it('renders correctly', () => {
-    const wrapper = render(
-      <Carousel>
-        <div>Slide 1</div>
-        <div>Slide 2</div>
-        <div>Slide 3</div>
-      </Carousel>
-    );
+    const wrapper = render(<Carousel count={4} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders with active index', () => {
-    const wrapper = render(
-      <Carousel activeIndex={1}>
-        <div>Slide 1</div>
-        <div>Slide 2</div>
-      </Carousel>
-    );
+    const wrapper = render(<Carousel count={3} activeIndex={1} />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders without indicators', () => {
-    const wrapper = render(
-      <Carousel showIndicators={false}>
-        <div>Slide 1</div>
-        <div>Slide 2</div>
-      </Carousel>
-    );
-    expect(wrapper).toMatchSnapshot();
+  it('renders with zero count', () => {
+    const { container } = render(<Carousel count={0} />);
+    expect(container.firstChild).toBeNull();
   });
 });

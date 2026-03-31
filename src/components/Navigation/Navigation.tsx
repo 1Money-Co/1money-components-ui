@@ -193,7 +193,7 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
                         {renderIcon(child.icon)}
                       </span>
                     )}
-                    <Typography.Title size="sm" as="span" className={classes('item-label')}>
+                    <Typography.Title size="sm" as="div" className={classes('item-label')}>
                       {child.label}
                     </Typography.Title>
                     {child.suffix && <span className={classes('item-suffix')}>{child.suffix}</span>}
@@ -240,7 +240,7 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
                   {renderIcon(icon)}
                 </span>
               )}
-              <Typography.Title size="sm" as="span" className={classes('item-label')}>
+              <Typography.Title size="sm" as="div" className={classes('item-label')}>
                 {label}
               </Typography.Title>
               {suffix && <span className={classes('item-suffix')}>{suffix}</span>}
@@ -281,7 +281,7 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
                       {renderIcon(child.icon)}
                     </span>
                   )}
-                  <Typography.Title size="sm" as="span" className={classes('item-label')}>
+                  <Typography.Title size="sm" as="div" className={classes('item-label')}>
                     {child.label}
                   </Typography.Title>
                   {child.suffix && <span className={classes('item-suffix')}>{child.suffix}</span>}

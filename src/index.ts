@@ -4,6 +4,7 @@ export { Button } from './components/Button';
 export { Calendar } from './components/Calendar';
 export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
+export { CoachMark } from './components/CoachMark';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
 export { Form, FormItem, useForm, useFormContext, useFormCore } from './components/Form';
@@ -66,6 +67,7 @@ export type {
   CheckboxGroupProps,
   CheckboxGroupOption,
 } from './components/Checkbox';
+export type { CoachMarkProps, CoachMarkPlacement } from './components/CoachMark';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
 export type {

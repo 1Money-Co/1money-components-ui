@@ -50,7 +50,8 @@
       "Bash(git commit:*)",
       "mcp__figma-dev-mode-mcp-server__get_screenshot",
       "mcp__figma-dev-mode-mcp-server__get_design_context",
-      "mcp__figma-dev-mode-mcp-server__get_metadata"
+      "mcp__figma-dev-mode-mcp-server__get_metadata",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6205)"
     ]
   }
 }

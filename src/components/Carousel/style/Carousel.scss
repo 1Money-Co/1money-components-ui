@@ -17,30 +17,9 @@ $star-clip: polygon(
 );
 
 .#{theme.$prefix}-#{$component} {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-
-  // ── Slides container ──
-  &-slides {
-    display: flex;
-    transition: transform 0.3s ease;
-    will-change: transform;
-  }
-
-  &-slide {
-    flex-shrink: 0;
-    width: 100%;
-  }
-
-  // ── Indicators ──
-  &-indicators {
-    display: flex;
-    gap: theme.spacing(gap, 100);
-    align-items: center;
-    justify-content: center;
-    margin-top: theme.spacing(scale, 300);
-  }
+  display: flex;
+  gap: theme.spacing(gap, 100);
+  align-items: center;
 
   // ── Individual dot ──
   &-dot {
