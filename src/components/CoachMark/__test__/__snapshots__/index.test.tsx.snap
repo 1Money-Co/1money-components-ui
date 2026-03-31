@@ -6,9 +6,12 @@ exports[`CoachMark renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
+        aria-label="Welcome"
         class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        role="dialog"
       >
         <svg
+          aria-hidden="true"
           class="om-react-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
@@ -45,7 +48,8 @@ exports[`CoachMark renders correctly 1`] = `
           class="om-react-ui-coach-mark-footer"
         >
           <button
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back om-react-ui-coach-mark-btn-disabled"
+            aria-label="Back"
+            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
             disabled=""
             type="button"
           >
@@ -71,6 +75,7 @@ exports[`CoachMark renders correctly 1`] = `
             />
           </div>
           <button
+            aria-label="Next"
             class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
             type="button"
           >
@@ -84,17 +89,17 @@ exports[`CoachMark renders correctly 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons"
               fill="none"
-              height="14"
+              height="24"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="14"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -110,9 +115,12 @@ exports[`CoachMark renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
+      aria-label="Welcome"
       class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      role="dialog"
     >
       <svg
+        aria-hidden="true"
         class="om-react-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
@@ -149,7 +157,8 @@ exports[`CoachMark renders correctly 1`] = `
         class="om-react-ui-coach-mark-footer"
       >
         <button
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back om-react-ui-coach-mark-btn-disabled"
+          aria-label="Back"
+          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
           disabled=""
           type="button"
         >
@@ -175,6 +184,7 @@ exports[`CoachMark renders correctly 1`] = `
           />
         </div>
         <button
+          aria-label="Next"
           class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
           type="button"
         >
@@ -188,17 +198,17 @@ exports[`CoachMark renders correctly 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
             class="om-react-ui-icons"
             fill="none"
-            height="14"
+            height="24"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="14"
+            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -271,9 +281,12 @@ exports[`CoachMark renders last step with finish button 1`] = `
   "baseElement": <body>
     <div>
       <div
+        aria-label="Done"
         class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        role="dialog"
       >
         <svg
+          aria-hidden="true"
           class="om-react-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
@@ -310,6 +323,7 @@ exports[`CoachMark renders last step with finish button 1`] = `
           class="om-react-ui-coach-mark-footer"
         >
           <button
+            aria-label="Back"
             class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
             type="button"
           >
@@ -335,6 +349,7 @@ exports[`CoachMark renders last step with finish button 1`] = `
             />
           </div>
           <button
+            aria-label="Finish"
             class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
             type="button"
           >
@@ -348,17 +363,17 @@ exports[`CoachMark renders last step with finish button 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons"
               fill="none"
-              height="14"
+              height="24"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="14"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -374,9 +389,12 @@ exports[`CoachMark renders last step with finish button 1`] = `
   </body>,
   "container": <div>
     <div
+      aria-label="Done"
       class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      role="dialog"
     >
       <svg
+        aria-hidden="true"
         class="om-react-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
@@ -413,6 +431,7 @@ exports[`CoachMark renders last step with finish button 1`] = `
         class="om-react-ui-coach-mark-footer"
       >
         <button
+          aria-label="Back"
           class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
           type="button"
         >
@@ -438,6 +457,7 @@ exports[`CoachMark renders last step with finish button 1`] = `
           />
         </div>
         <button
+          aria-label="Finish"
           class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
           type="button"
         >
@@ -451,17 +471,17 @@ exports[`CoachMark renders last step with finish button 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
             class="om-react-ui-icons"
             fill="none"
-            height="14"
+            height="24"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="14"
+            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -534,9 +554,12 @@ exports[`CoachMark renders with icon 1`] = `
   "baseElement": <body>
     <div>
       <div
+        aria-label="Title"
         class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        role="dialog"
       >
         <svg
+          aria-hidden="true"
           class="om-react-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
@@ -580,7 +603,8 @@ exports[`CoachMark renders with icon 1`] = `
           class="om-react-ui-coach-mark-footer"
         >
           <button
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back om-react-ui-coach-mark-btn-disabled"
+            aria-label="Back"
+            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
             disabled=""
             type="button"
           >
@@ -604,13 +628,9 @@ exports[`CoachMark renders with icon 1`] = `
               class="om-react-ui-carousel-dot"
               type="button"
             />
-            <button
-              aria-label="Go to step 4"
-              class="om-react-ui-carousel-dot"
-              type="button"
-            />
           </div>
           <button
+            aria-label="Next"
             class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
             type="button"
           >
@@ -624,17 +644,17 @@ exports[`CoachMark renders with icon 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
               class="om-react-ui-icons"
               fill="none"
-              height="14"
+              height="24"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="14"
+              width="24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -650,9 +670,12 @@ exports[`CoachMark renders with icon 1`] = `
   </body>,
   "container": <div>
     <div
+      aria-label="Title"
       class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      role="dialog"
     >
       <svg
+        aria-hidden="true"
         class="om-react-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
@@ -696,7 +719,8 @@ exports[`CoachMark renders with icon 1`] = `
         class="om-react-ui-coach-mark-footer"
       >
         <button
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back om-react-ui-coach-mark-btn-disabled"
+          aria-label="Back"
+          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
           disabled=""
           type="button"
         >
@@ -720,13 +744,9 @@ exports[`CoachMark renders with icon 1`] = `
             class="om-react-ui-carousel-dot"
             type="button"
           />
-          <button
-            aria-label="Go to step 4"
-            class="om-react-ui-carousel-dot"
-            type="button"
-          />
         </div>
         <button
+          aria-label="Next"
           class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
           type="button"
         >
@@ -740,17 +760,17 @@ exports[`CoachMark renders with icon 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
             class="om-react-ui-icons"
             fill="none"
-            height="14"
+            height="24"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="14"
+            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -823,9 +843,12 @@ exports[`CoachMark renders without dismiss button 1`] = `
   "baseElement": <body>
     <div>
       <div
+        aria-label="Welcome"
         class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        role="dialog"
       >
         <svg
+          aria-hidden="true"
           class="om-react-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
@@ -849,15 +872,21 @@ exports[`CoachMark renders without dismiss button 1`] = `
             <div
               class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
             >
-              Title
+              Welcome
             </div>
+            <span
+              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+            >
+              This is the first step
+            </span>
           </div>
         </div>
         <div
           class="om-react-ui-coach-mark-footer"
         >
           <button
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back om-react-ui-coach-mark-btn-disabled"
+            aria-label="Back"
+            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
             disabled=""
             type="button"
           >
@@ -878,6 +907,7 @@ exports[`CoachMark renders without dismiss button 1`] = `
             />
           </div>
           <button
+            aria-label="Next"
             class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
             type="button"
           >
@@ -889,9 +919,12 @@ exports[`CoachMark renders without dismiss button 1`] = `
   </body>,
   "container": <div>
     <div
+      aria-label="Welcome"
       class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      role="dialog"
     >
       <svg
+        aria-hidden="true"
         class="om-react-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
@@ -915,15 +948,21 @@ exports[`CoachMark renders without dismiss button 1`] = `
           <div
             class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
           >
-            Title
+            Welcome
           </div>
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+          >
+            This is the first step
+          </span>
         </div>
       </div>
       <div
         class="om-react-ui-coach-mark-footer"
       >
         <button
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back om-react-ui-coach-mark-btn-disabled"
+          aria-label="Back"
+          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
           disabled=""
           type="button"
         >
@@ -944,6 +983,7 @@ exports[`CoachMark renders without dismiss button 1`] = `
           />
         </div>
         <button
+          aria-label="Next"
           class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
           type="button"
         >

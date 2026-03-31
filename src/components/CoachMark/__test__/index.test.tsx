@@ -24,14 +24,16 @@ jest.mock('lottie-web', () => ({
   })),
 }));
 
+const STEPS = [
+  { heading: 'Welcome', body: 'This is the first step' },
+  { heading: 'Second', body: 'This is the second step' },
+  { heading: 'Done', body: 'All set' },
+];
+
 describe('CoachMark', () => {
   it('renders correctly', () => {
     const wrapper = render(
-      <CoachMark
-        heading="Welcome"
-        body="This is the first step"
-        steps={3}
-      />
+      <CoachMark steps={STEPS} />
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -39,10 +41,10 @@ describe('CoachMark', () => {
   it('renders with icon', () => {
     const wrapper = render(
       <CoachMark
-        heading="Title"
-        body="Description"
-        steps={4}
-        icon={<span>Icon</span>}
+        steps={[
+          { heading: 'Title', body: 'Description', icon: <span>Icon</span> },
+          ...STEPS.slice(1),
+        ]}
       />
     );
     expect(wrapper).toMatchSnapshot();
@@ -50,12 +52,7 @@ describe('CoachMark', () => {
 
   it('renders last step with finish button', () => {
     const wrapper = render(
-      <CoachMark
-        heading="Done"
-        body="All set"
-        steps={3}
-        activeStep={2}
-      />
+      <CoachMark steps={STEPS} activeStep={2} />
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -63,8 +60,7 @@ describe('CoachMark', () => {
   it('renders without dismiss button', () => {
     const wrapper = render(
       <CoachMark
-        heading="Title"
-        steps={2}
+        steps={STEPS.slice(0, 2)}
         dismissible={false}
       />
     );
