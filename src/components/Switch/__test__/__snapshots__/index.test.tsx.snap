@@ -533,7 +533,7 @@ exports[`Switch renders with description 1`] = `
             Label
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
           >
             Description
           </span>
@@ -572,7 +572,7 @@ exports[`Switch renders with description 1`] = `
           Label
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
         >
           Description
         </span>

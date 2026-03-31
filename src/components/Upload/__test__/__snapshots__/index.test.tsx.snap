@@ -52,7 +52,11 @@ exports[`Upload renders correctly 1`] = `
               </svg>
             </i>
           </span>
-          Upload file
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+          >
+            Upload file
+          </span>
         </button>
       </div>
     </div>
@@ -105,7 +109,11 @@ exports[`Upload renders correctly 1`] = `
             </svg>
           </i>
         </span>
-        Upload file
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+        >
+          Upload file
+        </span>
       </button>
     </div>
   </div>,
@@ -225,7 +233,11 @@ exports[`Upload renders with label and description 1`] = `
               </svg>
             </i>
           </span>
-          Upload file
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+          >
+            Upload file
+          </span>
         </button>
       </div>
     </div>
@@ -288,7 +300,11 @@ exports[`Upload renders with label and description 1`] = `
             </svg>
           </i>
         </span>
-        Upload file
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+        >
+          Upload file
+        </span>
       </button>
     </div>
   </div>,
