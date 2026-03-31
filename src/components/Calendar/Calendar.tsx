@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import isEqual from 'lodash.isequal';
 import { Calendar as PrimeCalendar } from 'primereact/calendar';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import Icons from '@/components/Icons';
@@ -71,8 +70,6 @@ export const Calendar: FC<CalendarProps> = props => {
   const [date, setDate] = useControlledState<CalendarProps['value']>(
     defaultValue ?? null,
     value,
-    undefined,
-    isEqual,
   );
 
   const handleChange = useEventCallback((e: Parameters<NonNullable<CalendarProps['onChange']>>[0]) => {
