@@ -32,11 +32,16 @@ const getToneClassName = (
   classes: ReturnType<typeof classnames>,
   variant: ButtonVariant,
   color: NonNullable<ButtonProps['color']>,
-) => (
-  variant === BUTTON_VARIANT.text
-    ? classes(BUTTON_MODIFIER.text)
-    : classes(color)
-);
+) => {
+  if (variant !== BUTTON_VARIANT.text) {
+    return classes(color);
+  }
+
+  return joinCls(
+    classes(BUTTON_MODIFIER.text),
+    color !== BUTTON_DEFAULT_COLOR && classes(`${BUTTON_MODIFIER.text}-${color}`),
+  );
+};
 
 const getLoadingIconClassName = (
   classes: ReturnType<typeof classnames>,

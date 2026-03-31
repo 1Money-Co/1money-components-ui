@@ -1,0 +1,66 @@
+@use '@/styles/api' as theme;
+
+$component: 'table';
+
+.#{theme.$prefix}-#{$component} {
+  width: 100%;
+
+  &-small {
+    --table-row-height: 56px;
+    --table-header-height: 40px;
+  }
+
+  &-large {
+    --table-row-height: 66px;
+    --table-header-height: 48px;
+  }
+
+  &-fill {
+    .table-expanded-row {
+      background: theme.palette(bg, 'default-secondary');
+    }
+  }
+
+  &-stroke {
+    .#{theme.$prefix}-#{$component}-cell,
+    .#{theme.$prefix}-#{$component}-thead > tr > th {
+      border-bottom: 1px solid theme.palette(border, 'default');
+    }
+  }
+
+  .table-header-cell {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .table-cell-content {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .table-cell-content__text {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .table-filter-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 180px;
+  }
+
+  .table-filter-dropdown__actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .table-expanded-row {
+    padding: theme.spacing(component-padding, 300);
+    border-radius: theme.shape(200);
+  }
+}

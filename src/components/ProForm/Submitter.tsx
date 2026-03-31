@@ -6,7 +6,7 @@ import { Button } from '@/components/Button';
 import { CSS_PREFIX, DEFAULT_TEXT } from './constants';
 import type { SubmitterProps, ProFormFormInstance } from './interface';
 
-interface SubmitterInternalProps extends SubmitterProps {
+export interface SubmitterInternalProps extends SubmitterProps {
   form?: ProFormFormInstance;
   loading?: boolean;
 }

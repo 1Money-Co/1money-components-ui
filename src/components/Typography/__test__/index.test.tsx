@@ -1,4 +1,6 @@
 import 'jsdom-global/register';
+import fs from 'fs';
+import path from 'path';
 import * as React from 'react';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -40,6 +42,8 @@ const originalClientWidth = Object.getOwnPropertyDescriptor(HTMLElement.prototyp
 const originalScrollWidth = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'scrollWidth');
 const originalClientHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'clientHeight');
 const originalScrollHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'scrollHeight');
+const readTypographyStylesSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../style/Typography.scss'), 'utf8');
 
 const mockElementMetrics = ({
   clientWidth = 120,
@@ -109,6 +113,12 @@ afterEach(() => {
 });
 
 describe('Typography', () => {
+  it('inherits text color by default', () => {
+    const stylesSource = readTypographyStylesSource();
+
+    expect(stylesSource).toContain('color: inherit;');
+  });
+
   it('renders semantic variants with expected default tags', () => {
     const { container } = render(
       <div>

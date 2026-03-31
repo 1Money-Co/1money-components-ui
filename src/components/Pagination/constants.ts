@@ -1,4 +1,4 @@
-import type { TypographyBodySize } from '@/components/Typography';
+import type { TypographyBodySize, TypographyColor } from '@/components/Typography';
 import type { PaginationItemType } from './interface';
 
 export const PAGINATION_COMPONENT_NAME = 'Pagination';
@@ -36,9 +36,15 @@ export const PAGINATION_CONTROL_TEXT = {
 } as const;
 
 export const PAGINATION_CONTROL_ICON = {
-  [PAGINATION_ITEM_TYPE.previous]: 'arrowLeft',
-  [PAGINATION_ITEM_TYPE.next]: 'arrowRight',
+  [PAGINATION_ITEM_TYPE.previous]: 'chevronLeft',
+  [PAGINATION_ITEM_TYPE.next]: 'chevronRight',
 } as const;
+
+export const PAGINATION_TEXT_COLOR = {
+  default: 'default',
+  current: 'on-neutral',
+  disabled: 'disabled',
+} as const satisfies Record<'current' | 'default' | 'disabled', TypographyColor>;
 
 // --- BEM modifiers ---
 export const PAGINATION_SLOT = {

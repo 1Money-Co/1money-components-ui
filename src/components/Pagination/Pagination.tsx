@@ -15,6 +15,7 @@ import {
   PAGINATION_ELLIPSIS_TEXT,
   PAGINATION_ITEM_TYPE,
   PAGINATION_SLOT,
+  PAGINATION_TEXT_COLOR,
   PAGINATION_TEXT_SIZE,
 } from './constants';
 import type { PaginationControlItem, PaginationPageItem, PaginationProps } from './interface';
@@ -25,6 +26,18 @@ const getButtonAriaLabel = (item: PaginationPageItem | PaginationControlItem) =>
   }
 
   return item.type === PAGINATION_ITEM_TYPE.previous ? 'Previous page' : 'Next page';
+};
+
+const getItemTextColor = (item: PaginationPageItem | PaginationControlItem) => {
+  if (item.disabled) {
+    return PAGINATION_TEXT_COLOR.disabled;
+  }
+
+  if (item.type === PAGINATION_ITEM_TYPE.page && item.current) {
+    return PAGINATION_TEXT_COLOR.current;
+  }
+
+  return PAGINATION_TEXT_COLOR.default;
 };
 
 const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => {
@@ -89,7 +102,12 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                 className={classes(PAGINATION_SLOT.item, classes(PAGINATION_SLOT.itemEllipsis))}
                 aria-hidden="true"
               >
-                <TypographyBody className={classes(PAGINATION_SLOT.ellipsis)} size={PAGINATION_TEXT_SIZE} strong>
+                <TypographyBody
+                  className={classes(PAGINATION_SLOT.ellipsis)}
+                  size={PAGINATION_TEXT_SIZE}
+                  strong
+                  color={PAGINATION_TEXT_COLOR.default}
+                >
                   {PAGINATION_ELLIPSIS_TEXT}
                 </TypographyBody>
               </li>
@@ -129,7 +147,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                     />
                   </span>
                 )}
-                <TypographyBody size={PAGINATION_TEXT_SIZE} strong>
+                <TypographyBody size={PAGINATION_TEXT_SIZE} strong color={getItemTextColor(item)}>
                   {isPage ? item.page : PAGINATION_CONTROL_TEXT[item.type as keyof typeof PAGINATION_CONTROL_TEXT]}
                 </TypographyBody>
                 {isControl && !isPrevious && (

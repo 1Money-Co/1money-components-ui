@@ -121,6 +121,7 @@ module.exports = [
       '*.config.js',
       '*.conf.js',
       'setupTests.js',
+      'src/components/Table/internal/kernel/**',
     ]
   }
 ];

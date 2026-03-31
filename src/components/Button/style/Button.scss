@@ -23,8 +23,8 @@ $button-variants: (
   ),
   'grey': (
     text: theme.palette(text, 'default'),
-    bg: theme.palette(bg, 'default-secondary'),
-    hover-bg: theme.palette(bg, 'default-secondary'),
+    bg: theme.palette(bg, 'neutral-tertiary'),
+    hover-bg: theme.palette(bg, 'neutral-tertiary-hover'),
     disabled-text: theme.palette(text, 'disabled'),
     disabled-bg: theme.palette(bg, 'disabled'),
   ),
@@ -46,7 +46,7 @@ $button-variants: (
     text: theme.palette(text, 'danger'),
     bg: theme.palette(bg, 'danger-secondary'),
     hover-bg: theme.palette(bg, 'danger-secondary-hover'),
-    disabled-text: theme.palette(text, 'danger-tertiary'),
+    disabled-text: theme.palette(text, 'danger-secondary'),
     disabled-bg: theme.palette(bg, 'danger-tertiary'),
   ),
   'warning': (
@@ -54,7 +54,7 @@ $button-variants: (
     bg: theme.palette(bg, 'warning'),
     hover-bg: theme.palette(bg, 'warning-hover'),
     disabled-text: theme.palette(text, 'disabled'),
-    disabled-bg: theme.palette(bg, 'warning-secondary'),
+    disabled-bg: theme.palette(bg, 'warning-secondary-hover'),
   ),
 );
 
@@ -108,6 +108,7 @@ $button-variants: (
   // ── Text variant ──
   &-text {
     --om-button-text: #{theme.palette(text, 'brand')};
+    --om-button-hover-text: #{theme.palette(text, 'on-brand-secondary')};
     --om-button-bg: transparent;
     --om-button-hover-bg: transparent;
     --om-button-disabled-text: #{theme.palette(text, 'brand-secondary')};
@@ -118,10 +119,16 @@ $button-variants: (
     border-radius: 0;
 
     &:hover:not(:disabled) {
-      --om-button-text: #{theme.palette(text, 'on-brand-secondary')};
+      --om-button-text: var(--om-button-hover-text);
 
       color: var(--om-button-text);
     }
+  }
+
+  &-text-danger {
+    --om-button-text: #{theme.palette(text, 'danger')};
+    --om-button-hover-text: #{theme.palette(text, 'on-danger-secondary')};
+    --om-button-disabled-text: #{theme.palette(text, 'danger-secondary')};
   }
 
   // Text variant: size-specific line-height
