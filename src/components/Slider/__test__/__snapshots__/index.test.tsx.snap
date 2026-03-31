@@ -12,12 +12,12 @@ exports[`Slider renders correctly 1`] = `
           class="om-react-ui-slider-label-row"
         >
           <span
-            class="om-react-ui-slider-label"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
           >
             Price
           </span>
           <span
-            class="om-react-ui-slider-output"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
           >
             $0-100
           </span>
@@ -48,7 +48,7 @@ exports[`Slider renders correctly 1`] = `
           />
         </div>
         <span
-          class="om-react-ui-slider-description"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-description"
         >
           Set your price
         </span>
@@ -63,12 +63,12 @@ exports[`Slider renders correctly 1`] = `
         class="om-react-ui-slider-label-row"
       >
         <span
-          class="om-react-ui-slider-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
         >
           Price
         </span>
         <span
-          class="om-react-ui-slider-output"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
         >
           $0-100
         </span>
@@ -99,7 +99,7 @@ exports[`Slider renders correctly 1`] = `
         />
       </div>
       <span
-        class="om-react-ui-slider-description"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-description"
       >
         Set your price
       </span>
@@ -171,12 +171,12 @@ exports[`Slider renders disabled state 1`] = `
           class="om-react-ui-slider-label-row"
         >
           <span
-            class="om-react-ui-slider-label"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
           >
             Price
           </span>
           <span
-            class="om-react-ui-slider-output"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
           >
             $0-100
           </span>
@@ -206,6 +206,9 @@ exports[`Slider renders disabled state 1`] = `
             class="om-react-ui-slider-knob"
             style="left: 0%;"
           />
+          <div
+            class="om-react-ui-slider-knob-end"
+          />
         </div>
       </div>
     </div>
@@ -218,12 +221,12 @@ exports[`Slider renders disabled state 1`] = `
         class="om-react-ui-slider-label-row"
       >
         <span
-          class="om-react-ui-slider-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
         >
           Price
         </span>
         <span
-          class="om-react-ui-slider-output"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
         >
           $0-100
         </span>
@@ -252,6 +255,9 @@ exports[`Slider renders disabled state 1`] = `
         <div
           class="om-react-ui-slider-knob"
           style="left: 0%;"
+        />
+        <div
+          class="om-react-ui-slider-knob-end"
         />
       </div>
     </div>
@@ -322,12 +328,12 @@ exports[`Slider renders with a value 1`] = `
           class="om-react-ui-slider-label-row"
         >
           <span
-            class="om-react-ui-slider-label"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
           >
             Price
           </span>
           <span
-            class="om-react-ui-slider-output"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
           >
             $40
           </span>
@@ -368,12 +374,12 @@ exports[`Slider renders with a value 1`] = `
         class="om-react-ui-slider-label-row"
       >
         <span
-          class="om-react-ui-slider-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
         >
           Price
         </span>
         <span
-          class="om-react-ui-slider-output"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
         >
           $40
         </span>
