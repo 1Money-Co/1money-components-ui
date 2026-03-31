@@ -5,3 +5,4 @@ export { Progress } from './Progress';
 export default Progress;
 
 export * from './interface';
+export * from './constants';

@@ -1,3 +1,4 @@
+import type { TypographyBodySize } from '@/components/Typography';
 import type { PaginationItemType } from './interface';
 
 export const PAGINATION_COMPONENT_NAME = 'Pagination';
@@ -53,6 +54,9 @@ export const PAGINATION_SLOT = {
   icon: 'icon',
   disabled: 'disabled',
 } as const;
+
+// --- Typography ---
+export const PAGINATION_TEXT_SIZE: TypographyBodySize = 'lg';
 
 // --- Gap thresholds used when inserting ellipsis ---
 export const PAGINATION_GAP_FILL_THRESHOLD = 2;

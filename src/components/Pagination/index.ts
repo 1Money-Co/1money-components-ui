@@ -6,3 +6,4 @@ export { usePagination } from './usePagination';
 export default Pagination;
 
 export * from './interface';
+export * from './constants';

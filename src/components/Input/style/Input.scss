@@ -15,33 +15,13 @@ $component: 'input';
   }
 
   &-label {
-    @include theme.typography(label, md);
-
     display: inline;
     padding: 0;
-    color: theme.palette(text, 'default');
     cursor: pointer;
   }
 
   &-required {
     color: theme.palette(text, 'danger');
-  }
-
-  &-info {
-    @include theme.typography(body, sm);
-
-    color: theme.palette(text, 'default-tertiary');
-  }
-
-  &-description,
-  &-feedback,
-  &-count {
-    @include theme.typography(body, sm);
-  }
-
-  &-description,
-  &-count {
-    color: theme.palette(text, 'default-tertiary');
   }
 
   &-feedback {

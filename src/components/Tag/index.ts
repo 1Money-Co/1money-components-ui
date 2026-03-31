@@ -5,3 +5,4 @@ export { Tag } from './Tag';
 export default Tag;
 
 export * from './interface';
+export * from './constants';

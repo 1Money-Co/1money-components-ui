@@ -1,8 +1,19 @@
 import React, { memo, useEffect } from 'react';
 import { useEventCallback } from '@1money/hooks';
+import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { useFormContext } from './context';
-import { FORM_COMPONENT_NAMES, LABEL_COL_DEFAULT, WRAPPER_COL_DEFAULT } from './constants';
+import {
+  FORM_COMPONENT_NAMES,
+  FORM_ERROR_COLOR,
+  FORM_ERROR_SIZE,
+  FORM_HELP_COLOR,
+  FORM_HELP_SIZE,
+  FORM_LABEL_COLOR,
+  FORM_LABEL_SIZE,
+  LABEL_COL_DEFAULT,
+  WRAPPER_COL_DEFAULT,
+} from './constants';
 import type { FC } from 'react';
 import type { ColProps, FormItemProps } from './interface';
 
@@ -199,7 +210,10 @@ const FormItemBase: FC<FormItemProps> = (props) => {
           )}
           style={getColStyle(finalLabelCol, layout)}
         >
-          <label
+          <TypographyLabel
+            as="label"
+            size={FORM_LABEL_SIZE}
+            color={FORM_LABEL_COLOR}
             className={classes(
               'label',
               joinCls(
@@ -209,7 +223,7 @@ const FormItemBase: FC<FormItemProps> = (props) => {
             )}
           >
             {label}
-          </label>
+          </TypographyLabel>
         </div>
       )}
 
@@ -222,9 +236,9 @@ const FormItemBase: FC<FormItemProps> = (props) => {
       >
         {renderChildren()}
 
-        {fieldError && <div className={classes('error')}>{fieldError}</div>}
+        {fieldError && <TypographyBody as="div" className={classes('error')} size={FORM_ERROR_SIZE} color={FORM_ERROR_COLOR}>{fieldError}</TypographyBody>}
 
-        {!fieldError && help && <div className={classes('help')}>{help}</div>}
+        {!fieldError && help && <TypographyBody as="div" className={classes('help')} size={FORM_HELP_SIZE} color={FORM_HELP_COLOR}>{help}</TypographyBody>}
       </div>
     </div>
   );

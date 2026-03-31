@@ -1,3 +1,5 @@
+import type { TypographyColor, TypographyLabelSize } from '@/components/Typography';
+
 export const CSS_PREFIX = 'proform';
 
 export const WIDTH_SIZE_MAP: Record<string, number> = {
@@ -8,6 +10,10 @@ export const WIDTH_SIZE_MAP: Record<string, number> = {
 };
 
 export const DEFAULT_COL_SPAN = 24;
+
+// ── Typography ──
+export const PROFORM_LIST_LABEL_SIZE: TypographyLabelSize = 'md';
+export const PROFORM_LIST_LABEL_COLOR: TypographyColor = 'default';
 
 export const DEFAULT_TEXT = {
   submit: 'Submit',

@@ -127,15 +127,11 @@ $component: 'checkbox';
   }
 
   &-label {
-    @include theme.typography(body, lg, $strong: true);
-
-    color: theme.palette(text, 'default');
+    display: inline;
   }
 
   &-description {
-    @include theme.typography(body, md, $strong: true);
-
-    color: theme.palette(text, 'default-tertiary');
+    display: inline;
   }
 
   &:not(&-disabled):hover {
@@ -208,10 +204,6 @@ $component: 'checkbox';
       }
     }
 
-    .#{theme.$prefix}-#{$component}-label,
-    .#{theme.$prefix}-#{$component}-description {
-      color: theme.palette(text, 'disabled');
-    }
   }
 
   &-right {

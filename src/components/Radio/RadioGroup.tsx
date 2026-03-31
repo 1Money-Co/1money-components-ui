@@ -1,6 +1,15 @@
 import { memo, useMemo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import {
+  RADIO_DEFAULT_DIRECTION,
+  RADIO_DEFAULT_LAYOUT,
+  RADIO_DEFAULT_ORIENTATION,
+  RADIO_DEFAULT_SIZE,
+  RADIO_DEFAULT_VARIANT,
+  RADIO_GROUP_PREFIX_CLS,
+  RADIO_VARIANT_CELL,
+} from './constants';
 import { RadioGroupProvider } from './RadioGroupContext';
 import { Radio } from './Radio';
 import type { FC } from 'react';
@@ -10,23 +19,21 @@ import type {
   RadioValueType,
 } from './interface';
 
-const GROUP_PREFIX = 'radio-group';
-
 export const RadioGroup: FC<RadioGroupProps> = (props) => {
   const {
     ref,
     className = '',
-    prefixCls = GROUP_PREFIX,
+    prefixCls = RADIO_GROUP_PREFIX_CLS,
     id,
     value,
     defaultValue,
     name,
     disabled = false,
-    layout = 'vertical',
-    variant = 'default',
-    size = 'large',
-    orientation = 'horizontal',
-    direction = 'left',
+    layout = RADIO_DEFAULT_LAYOUT,
+    variant = RADIO_DEFAULT_VARIANT,
+    size = RADIO_DEFAULT_SIZE,
+    orientation = RADIO_DEFAULT_ORIENTATION,
+    direction = RADIO_DEFAULT_DIRECTION,
     gap,
     options,
     children,
@@ -101,7 +108,7 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
         aria-labelledby={ariaLabelledBy}
         className={classes(
           void 0,
-          joinCls(classes(layout), variant === 'cell' && classes('cell'), className),
+          joinCls(classes(layout), variant === RADIO_VARIANT_CELL && classes('cell'), className),
         )}
         role="radiogroup"
         style={gapStyle}

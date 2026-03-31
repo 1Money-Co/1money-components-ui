@@ -39,6 +39,10 @@ exports[`Button renders a native button and forwards refs 1`] = `
       </svg>
     </div>
   </span>
-  Save
+  <span
+    class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+  >
+    Save
+  </span>
 </button>
 `;

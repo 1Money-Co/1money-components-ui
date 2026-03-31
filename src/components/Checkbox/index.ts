@@ -16,3 +16,4 @@ export { CheckboxGroup } from './CheckboxGroup';
 export default Checkbox;
 
 export * from './interface';
+export * from './constants';

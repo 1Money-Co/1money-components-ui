@@ -9,7 +9,7 @@ exports[`Tag renders correctly 1`] = `
         class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-tag-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
         >
           Test
         </span>
@@ -21,7 +21,7 @@ exports[`Tag renders correctly 1`] = `
       class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-tag-label"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
       >
         Test
       </span>
@@ -90,7 +90,7 @@ exports[`Tag renders removable 1`] = `
         class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-tag-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
         >
           Test
         </span>
@@ -131,7 +131,7 @@ exports[`Tag renders removable 1`] = `
       class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-tag-label"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
       >
         Test
       </span>
@@ -254,7 +254,7 @@ exports[`Tag renders with icon 1`] = `
           </i>
         </span>
         <span
-          class="om-react-ui-tag-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
         >
           Test
         </span>
@@ -291,7 +291,7 @@ exports[`Tag renders with icon 1`] = `
         </i>
       </span>
       <span
-        class="om-react-ui-tag-label"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
       >
         Test
       </span>

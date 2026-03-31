@@ -15,7 +15,7 @@ exports[`Progress renders correctly 1`] = `
         role="progressbar"
       >
         <div
-          class="om-react-ui-progress-info"
+          class="om-react-ui-typography om-react-ui-typography-display om-react-ui-typography-display-sm om-react-ui-progress-info"
           data-testid="progress-info"
         >
           25%
@@ -47,7 +47,7 @@ exports[`Progress renders correctly 1`] = `
       role="progressbar"
     >
       <div
-        class="om-react-ui-progress-info"
+        class="om-react-ui-typography om-react-ui-typography-display om-react-ui-typography-display-sm om-react-ui-progress-info"
         data-testid="progress-info"
       >
         25%

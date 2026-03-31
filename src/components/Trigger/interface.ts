@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react';
+import type { CSSProperties, ReactElement, ReactNode, Ref } from 'react';
 import type { Placement } from '@floating-ui/react';
 
 export type TriggerAction = 'click' | 'hover' | 'focus';
@@ -52,5 +52,5 @@ export interface TriggerProps {
   /** Accessibility role for the floating panel */
   role?: TriggerRole;
   /** External ref forwarded to the trigger element */
-  ref?: RefObject<HTMLElement | null>;
+  ref?: Ref<HTMLElement | null>;
 }

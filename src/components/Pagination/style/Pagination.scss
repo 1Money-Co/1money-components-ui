@@ -24,8 +24,6 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
 
   &-button,
   &-ellipsis {
-    @include theme.typography(body, lg, $strong: true);
-
     display: inline-flex;
     align-items: center;
     justify-content: center;

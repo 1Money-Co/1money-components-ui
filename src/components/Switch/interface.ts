@@ -1,4 +1,5 @@
 import type { ReactNode, RefObject } from 'react';
+import type { SWITCH_LABEL_PLACEMENTS } from './constants';
 
 export interface SwitchProps {
   ref?: RefObject<HTMLLabelElement | null>;
@@ -20,7 +21,7 @@ export interface SwitchProps {
   /** Description text displayed below the label */
   description?: ReactNode;
   /** Placement of the label relative to the switch */
-  labelPlacement?: 'left' | 'right';
+  labelPlacement?: (typeof SWITCH_LABEL_PLACEMENTS)[number];
   /** Callback when checked state changes */
   onChange?: (checked: boolean) => void;
 }

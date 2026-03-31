@@ -4,13 +4,19 @@ import { fn } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { RadioChangeEvent } from './interface';
 import { Radio, RadioGroup } from './index';
+import {
+  RADIO_DEFAULT_DIRECTION,
+  RADIO_DEFAULT_ORIENTATION,
+  RADIO_DEFAULT_SIZE,
+  RADIO_DEFAULT_VARIANT,
+  RADIO_DIRECTIONS,
+  RADIO_ORIENTATIONS,
+  RADIO_SIZES,
+  RADIO_VARIANTS,
+} from './constants';
 
 import './style';
 
-const DIRECTIONS = ['left', 'right'] as const;
-const VARIANTS = ['default', 'cell'] as const;
-const SIZES = ['large', 'medium', 'small'] as const;
-const ORIENTATIONS = ['horizontal', 'vertical'] as const;
 const ICONS = ['swift', 'language', 'usd'] as const;
 
 const meta: Meta<typeof Radio> = {
@@ -19,10 +25,10 @@ const meta: Meta<typeof Radio> = {
   argTypes: {
     disabled: { control: 'boolean' },
     checked: { control: 'boolean' },
-    variant: { control: 'radio', options: [...VARIANTS] },
-    size: { control: 'radio', options: [...SIZES] },
-    orientation: { control: 'radio', options: [...ORIENTATIONS] },
-    direction: { control: 'radio', options: [...DIRECTIONS] },
+    variant: { control: 'radio', options: [...RADIO_VARIANTS] },
+    size: { control: 'radio', options: [...RADIO_SIZES] },
+    orientation: { control: 'radio', options: [...RADIO_ORIENTATIONS] },
+    direction: { control: 'radio', options: [...RADIO_DIRECTIONS] },
     label: { control: 'text' },
     description: { control: 'text' },
     tag: { control: 'text' },
@@ -31,10 +37,10 @@ const meta: Meta<typeof Radio> = {
   args: {
     disabled: false,
     checked: false,
-    variant: 'default',
-    size: 'large',
-    orientation: 'horizontal',
-    direction: 'left',
+    variant: RADIO_DEFAULT_VARIANT,
+    size: RADIO_DEFAULT_SIZE,
+    orientation: RADIO_DEFAULT_ORIENTATION,
+    direction: RADIO_DEFAULT_DIRECTION,
     label: 'Radio label',
     icon: 'swift',
     onChange: fn(),

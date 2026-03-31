@@ -51,7 +51,7 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
           </i>
         </button>
         <div
-          class="om-react-ui-drawer-title"
+          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-drawer-title"
         >
           Title
         </div>
@@ -103,14 +103,22 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
           style="flex: 1;"
           type="button"
         >
-          Cancel
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong"
+          >
+            Cancel
+          </span>
         </button>
         <button
           class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-medium"
           style="flex: 1;"
           type="button"
         >
-          Confirm
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong"
+          >
+            Confirm
+          </span>
         </button>
       </div>
     </div>

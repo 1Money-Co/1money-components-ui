@@ -2,6 +2,7 @@ import { useEventCallback } from '@1money/hooks';
 import { forwardRef, memo, useEffect, useRef, useState } from 'react';
 import { Icons } from '@/components/Icons';
 import { Portal } from '@/components/Portal';
+import { TypographyTitle } from '@/components/Typography';
 import classnames, { joinCls } from '@/utils/classnames';
 import { useComposeRef } from '@/utils/ref';
 import type { CSSProperties, ReactNode, RefObject } from 'react';
@@ -12,6 +13,8 @@ import {
   DEFAULT_PLACEMENT,
   DEFAULT_WIDTH,
   DRAWER_PHASES,
+  DRAWER_TITLE_COLOR,
+  DRAWER_TITLE_SIZE,
 } from './constants';
 import type { DrawerProps } from './interface';
 
@@ -284,7 +287,7 @@ const DrawerBase = forwardRef<HTMLDivElement, DrawerProps>((props, ref) => {
                   icon: backIcon ?? <Icons name="arrowLeft" size={CONTROL_ICON_SIZE} />,
                   onClick: handleBack,
                 })}
-                {title != null && <div className={classes('title')}>{title}</div>}
+                {title != null && <TypographyTitle className={classes('title')} size={DRAWER_TITLE_SIZE} strong color={DRAWER_TITLE_COLOR}>{title}</TypographyTitle>}
               </div>
               {showCloseIcon && renderControlButton({
                 classes,
