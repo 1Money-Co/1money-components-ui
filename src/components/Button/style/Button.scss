@@ -125,12 +125,6 @@ $button-variants: (
     }
   }
 
-  &-text-danger {
-    --om-button-text: #{theme.palette(text, 'danger')};
-    --om-button-hover-text: #{theme.palette(text, 'on-danger-secondary')};
-    --om-button-disabled-text: #{theme.palette(text, 'danger-secondary')};
-  }
-
   // Text variant: size-specific line-height
   &-text#{&}-large {
     line-height: 1.08;

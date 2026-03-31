@@ -105,7 +105,11 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       class="om-react-ui-pagination-item om-react-ui-pagination-item-ellipsis"
     >
       <span
+<<<<<<< HEAD
         class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-pagination-ellipsis"
+=======
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong om-react-ui-pagination-ellipsis"
+>>>>>>> main
       >
         ...
       </span>
