@@ -10,6 +10,7 @@ $component: 'navigation';
   height: 100%;
   padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
   background-color: theme.palette(bg, 'default');
+  border-right: 1px solid theme.palette(border, 'neutral');
   transition: width 150ms ease-in-out;
 
   // ── Header ──
@@ -106,11 +107,17 @@ $component: 'navigation';
       flex-shrink: 0;
     }
 
+    &-link {
+      display: flex;
+      color: inherit;
+      text-decoration: none;
+    }
+
     &-arrow {
       display: inline-flex;
       flex-shrink: 0;
       align-items: center;
-      color: theme.palette(icon, 'default-tertiary');
+      color: theme.palette(icon, 'default-secondary');
       transition: transform 200ms ease-in-out;
 
       &-open {
@@ -224,6 +231,7 @@ $component: 'navigation';
 
   // ── Collapsed Submenu (popover) ──
   &-collapsed-submenu-panel.om-trigger-panel {
+    margin-top: -12px;
     padding: 0;
     background-color: transparent;
     border: none;
@@ -263,6 +271,7 @@ $component: 'navigation';
 
     &-active {
       color: theme.palette(text, 'default');
+      background-color: theme.palette(bg, 'neutral-tertiary');
 
       .#{theme.$prefix}-#{$component}-item-icon {
         color: theme.palette(icon, 'default');
@@ -333,6 +342,7 @@ $component: 'navigation';
     width: 100%;
     padding: theme.spacing(scale, 200);
     color: theme.palette(text, 'default-secondary');
+    font-size: inherit;
     background-color: transparent;
     border: none;
     border-radius: theme.shape(300);
@@ -356,9 +366,8 @@ $component: 'navigation';
 
     &-label {
       width: 100%;
-      overflow: hidden;
       text-align: center;
-      text-overflow: ellipsis;
+      overflow-wrap: break-word;
     }
 
     // ── Active state ──
@@ -402,16 +411,23 @@ $component: 'navigation';
     }
 
     .#{theme.$prefix}-#{$component}-selector {
-      display: none;
+      flex-direction: column;
+      gap: theme.spacing(gap, 100);
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      padding: theme.spacing(scale, 200);
     }
 
     .#{theme.$prefix}-#{$component}-nav {
       align-items: center;
+      width: 100%;
     }
 
     .#{theme.$prefix}-#{$component}-menu {
       gap: theme.spacing(gap, 200);
       align-items: center;
+      width: 100%;
     }
 
     .#{theme.$prefix}-#{$component}-settings {

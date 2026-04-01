@@ -4,6 +4,7 @@ import { useControlledState, useEventCallback, useMemoizedFn, useLatest } from '
 import { Icons } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import { Trigger } from '@/components/Trigger';
+import NavigationLogo from './NavigationLogo';
 import type { FC, MouseEvent, ReactElement, ReactNode } from 'react';
 import type { NavigationProps, NavigationItem, NavigationHandlers } from './interface';
 import type { IconName } from '@/components/Icons';
@@ -24,6 +25,7 @@ export const Navigation = forwardRef<NavigationHandlers, NavigationProps>((props
     defaultCollapsed = false,
     collapsible = false,
     onCollapse,
+    onLogoClick,
     header,
     selector,
     children,
@@ -54,7 +56,11 @@ export const Navigation = forwardRef<NavigationHandlers, NavigationProps>((props
       className={classes(void 0, joinCls(collapsed && classes('collapsed'), className))}
       {...rest}
     >
-      {header && <div className={classes('header')}>{header}</div>}
+      <div className={classes('header')}>
+        {header !== undefined ? header : (
+          <NavigationLogo collapsed={collapsed} onClick={onLogoClick} />
+        )}
+      </div>
 
       {selector && <div className={classes('selector')}>{selector}</div>}
 
@@ -81,7 +87,7 @@ export const Navigation = forwardRef<NavigationHandlers, NavigationProps>((props
         )}
       </div>
 
-      {children && <div className={classes('footer')}>{children}</div>}
+      {children && <div className={classes('settings')}>{children}</div>}
     </nav>
   );
 });
@@ -163,8 +169,8 @@ const NavigationMenuItem: FC<NavigationMenuItemProps> = ({ item, prefixCls, coll
       return (
         <Trigger
           trigger="click"
-          placement="right"
-          offset={4}
+          placement="right-start"
+          offset={10}
           overlayClassName={classes('collapsed-submenu-panel')}
           content={({ close }) => (
             <div className={classes('collapsed-submenu')}>

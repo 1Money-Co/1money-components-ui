@@ -2,7 +2,7 @@ import 'jsdom-global/register';
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Navigation } from '../index';
+import { Navigation, Nav } from '../index';
 
 const originalConsoleError = console.error;
 console.error = (message, ...optionalParams) => {
@@ -59,6 +59,82 @@ describe('Navigation', () => {
     ];
     const wrapper = render(
       <Navigation items={items} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+const MOCK_NAV_ITEMS = [
+  {
+    key: 'group1',
+    label: 'GROUP ONE',
+    icon: 'home' as const,
+    children: [
+      { key: 'item1', label: 'Item 1' },
+      {
+        key: 'item2',
+        label: 'Item 2',
+        defaultOpen: true,
+        children: [
+          { key: 'sub1', label: 'Sub Item 1' },
+          { key: 'sub2', label: 'Sub Item 2' },
+        ],
+      },
+    ],
+  },
+];
+
+describe('Nav', () => {
+  it('renders correctly', () => {
+    const wrapper = render(
+      <Nav items={MOCK_NAV_ITEMS} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders with active item', () => {
+    const items = [
+      {
+        key: 'group',
+        label: 'GROUP',
+        children: [
+          { key: 'item1', label: 'Item 1', active: true },
+          { key: 'item2', label: 'Item 2' },
+        ],
+      },
+    ];
+    const wrapper = render(
+      <Nav items={items} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders deep nesting', () => {
+    const items = [
+      {
+        key: 'group',
+        label: 'GROUP',
+        children: [
+          {
+            key: 'l1',
+            label: 'Level 1',
+            defaultOpen: true,
+            children: [
+              {
+                key: 'l2',
+                label: 'Level 2',
+                defaultOpen: true,
+                children: [
+                  { key: 'l3', label: 'Level 3' },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ];
+    const wrapper = render(
+      <Nav items={items} />
     );
     expect(wrapper).toMatchSnapshot();
   });
