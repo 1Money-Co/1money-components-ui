@@ -1,0 +1,176 @@
+@use '@/styles/api' as theme;
+
+$component: 'coach-mark';
+$icon-size: 56px;
+$btn-width: 80px;
+$dismiss-size: 24px;
+$arrow-width: 36px;
+$arrow-height: 9px;
+$arrow-side-offset: calc(-1 * ($arrow-width + $arrow-height) / 2);
+$card-width: 450px;
+
+.#{theme.$prefix}-#{$component} {
+  --coach-mark-arrow-offset: 50%;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: $card-width;
+  max-width: 100%;
+  padding: theme.spacing(scale, 1000) theme.spacing(scale, 1000) theme.spacing(scale, 800);
+  background-color: theme.palette(bg, 'default');
+  border: 1px solid theme.palette(border, 'neutral');
+  border-radius: theme.shape(600);
+  box-shadow: theme.shadows(200);
+
+  // ── Content ──
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 600);
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $icon-size;
+    height: $icon-size;
+    color: theme.palette(icon, 'on-brand');
+    background: radial-gradient(
+      circle at bottom left,
+      theme.palette(bg, 'brand') 0%,
+      theme.palette(bg, 'brand-secondary') 50%,
+      theme.palette(bg, 'default-secondary') 100%
+    );
+    border-radius: theme.shape(full);
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 200);
+    width: 100%;
+  }
+
+  // ── Footer ──
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: theme.spacing(scale, 600);
+    padding-top: theme.spacing(scale, 600);
+    border-top: 1px solid theme.palette(border, 'neutral-secondary');
+  }
+
+  // ── Buttons ──
+  &-btn {
+    display: flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    justify-content: center;
+    width: $btn-width;
+    padding: theme.spacing(component-padding, 300);
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    @include theme.typography(body, md, true);
+
+    &-back {
+      color: theme.palette(text, 'brand');
+      background-color: theme.palette(bg, 'brand-secondary');
+
+      &:hover {
+        background-color: theme.palette(bg, 'brand-secondary-hover');
+      }
+
+      &:disabled {
+        color: theme.palette(text, 'brand-secondary');
+        background-color: theme.palette(bg, 'brand-tertiary');
+        cursor: default;
+      }
+    }
+
+    &-next {
+      color: theme.palette(text, 'on-neutral');
+      background-color: theme.palette(bg, 'brand');
+    }
+
+  }
+
+  // ── Dismiss ──
+  &-dismiss {
+    position: absolute;
+    top: theme.spacing(scale, 400);
+    right: theme.spacing(scale, 400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $dismiss-size;
+    height: $dismiss-size;
+    padding: 0;
+    color: theme.palette(icon, 'default-tertiary');
+    background: none;
+    border: none;
+    border-radius: theme.shape(200);
+    cursor: pointer;
+
+    &:hover {
+      color: theme.palette(icon, 'default-secondary');
+    }
+  }
+
+  // ── Arrow (SVG) ──
+  &-arrow {
+    position: absolute;
+    width: $arrow-width;
+    height: $arrow-height;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  &-arrow-fill {
+    fill: theme.palette(bg, 'default');
+  }
+
+  &-arrow-stroke {
+    fill: none;
+    stroke: theme.palette(border, 'neutral');
+    stroke-width: 1;
+    stroke-linecap: round;
+  }
+
+  // Top placement: arrow at bottom, pointing down
+  &-top &-arrow {
+    bottom: -$arrow-height;
+    left: var(--coach-mark-arrow-offset);
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  // Bottom placement: arrow at top, pointing up
+  &-bottom &-arrow {
+    top: -$arrow-height;
+    left: var(--coach-mark-arrow-offset);
+    transform: translateX(-50%);
+  }
+
+  // Right placement: arrow at left, pointing left
+  &-right &-arrow {
+    top: var(--coach-mark-arrow-offset);
+    left: $arrow-side-offset;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+  // Left placement: arrow at right, pointing right
+  &-left &-arrow {
+    top: var(--coach-mark-arrow-offset);
+    right: $arrow-side-offset;
+    transform: translateY(-50%) rotate(90deg);
+  }
+}

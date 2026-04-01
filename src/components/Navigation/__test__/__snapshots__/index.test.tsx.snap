@@ -1,0 +1,812 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="om-react-ui-navigation"
+      >
+        <div
+          class="om-react-ui-navigation-nav"
+        >
+          <div
+            class="om-react-ui-navigation-menu"
+          >
+            <div
+              class="om-react-ui-navigation-item-wrapper"
+            >
+              <button
+                class="om-react-ui-navigation-item"
+                type="button"
+              >
+                <div
+                  class="om-react-ui-navigation-item-content"
+                >
+                  <span
+                    class="om-react-ui-navigation-item-icon"
+                  >
+                    <i
+                      class="om-react-ui-icons-wrapper"
+                      style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                    >
+                      <svg
+                        class="om-react-ui-icons"
+                        fill="none"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        shape-rendering="geometricPrecision"
+                        stroke="none"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M20 20V9.96128L12 3.56128L4 9.96128V20H20ZM2.75061 8.39954C2.27618 8.77909 2 9.35371 2 9.96128V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9.96128C22 9.35371 21.7238 8.77909 21.2494 8.39954L13.2494 1.99954C12.519 1.41519 11.481 1.41519 10.7506 1.99954L2.75061 8.39954Z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M12.4761 10.3736L11.9999 9.32609L11.5236 10.3736C10.9954 11.5355 10.0642 12.4667 8.90229 12.995L7.85474 13.4712L8.90229 13.9475C10.0642 14.4757 10.9954 15.4069 11.5236 16.5688L11.9999 17.6164L12.4761 16.5688C13.0044 15.4069 13.9356 14.4757 15.0975 13.9475L16.145 13.4712L15.0975 12.995C13.9356 12.4667 13.0044 11.5355 12.4761 10.3736Z"
+                        />
+                      </svg>
+                    </i>
+                  </span>
+                  <div
+                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                  >
+                    Home
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div
+              class="om-react-ui-navigation-item-wrapper"
+            >
+              <button
+                class="om-react-ui-navigation-item"
+                type="button"
+              >
+                <div
+                  class="om-react-ui-navigation-item-content"
+                >
+                  <span
+                    class="om-react-ui-navigation-item-icon"
+                  >
+                    <i
+                      class="om-react-ui-icons-wrapper"
+                      style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                    >
+                      <svg
+                        class="om-react-ui-icons"
+                        fill="none"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        shape-rendering="geometricPrecision"
+                        stroke="none"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M9.18026 1H10.0001H14.0001H14.8199L14.9806 1.80388L15.4673 4.23728C16.0687 4.50623 16.6327 4.8428 17.1499 5.23715L19.5206 4.49755L20.3032 4.25341L20.6961 4.97293L22.6131 8.48365L23.006 9.20318L22.3775 9.72955L20.4735 11.3241C20.4911 11.5473 20.5001 11.7727 20.5001 12C20.5001 12.2274 20.4911 12.4528 20.4735 12.676L22.3774 14.2704L23.0059 14.7968L22.613 15.5163L20.696 19.0271L20.3031 19.7466L19.5205 19.5024L17.1498 18.7629C16.6327 19.1572 16.0686 19.4938 15.4673 19.7627L14.9806 22.1961L14.8199 23H14.0001H10.0001H9.18026L9.01948 22.1961L8.5328 19.7627C7.93148 19.4938 7.36744 19.1572 6.85028 18.7629L4.47962 19.5024L3.69701 19.7466L3.30413 19.0271L1.38714 15.5163L0.994255 14.7968L1.62276 14.2704L3.5266 12.676C3.50901 12.4528 3.50006 12.2274 3.50006 12C3.50006 11.7727 3.50901 11.5473 3.52659 11.3241L1.62264 9.72955L0.994141 9.20318L1.38703 8.48365L3.30401 4.97293L3.6969 4.25341L4.4795 4.49755L6.85025 5.23715C7.36742 4.8428 7.93147 4.50623 8.5328 4.23728L9.01948 1.80388L9.18026 1ZM10.8199 3L10.3887 5.15607L10.2789 5.7049L9.75368 5.89834C9.00278 6.17489 8.31621 6.58661 7.72375 7.10464L7.30222 7.47321L6.7677 7.30646L4.66649 6.65095L3.53528 8.72262L5.22195 10.1352L5.65042 10.494L5.56929 11.047C5.52373 11.3575 5.50006 11.6757 5.50006 12C5.50006 12.3243 5.52374 12.6425 5.5693 12.9531L5.65044 13.506L5.22196 13.8649L3.53539 15.2774L4.6666 17.349L6.76772 16.6936L7.30225 16.5268L7.72377 16.8954C8.31623 17.4134 9.00279 17.8251 9.75368 18.1017L10.2789 18.2951L10.3887 18.8439L10.8199 21H13.1803L13.6115 18.8439L13.7212 18.2951L14.2465 18.1017C14.9973 17.8251 15.6839 17.4134 16.2764 16.8954L16.6979 16.5268L17.2324 16.6936L19.3335 17.349L20.4647 15.2774L18.7782 13.8649L18.3497 13.506L18.4308 12.9531C18.4764 12.6425 18.5001 12.3243 18.5001 12C18.5001 11.6757 18.4764 11.3575 18.4308 11.047L18.3497 10.4941L18.7782 10.1352L20.4649 8.72262L19.3336 6.65095L17.2324 7.30646L16.6979 7.47322L16.2764 7.10465C15.6839 6.58661 14.9973 6.1749 14.2465 5.89834L13.7212 5.70491L13.6115 5.15608L13.1803 3H10.8199ZM12.0001 10C10.8955 10 10.0001 10.8954 10.0001 12C10.0001 13.1046 10.8955 14 12.0001 14C13.1046 14 14.0001 13.1046 14.0001 12C14.0001 10.8954 13.1046 10 12.0001 10ZM8.00006 12C8.00006 9.79086 9.79092 8 12.0001 8C14.2092 8 16.0001 9.79086 16.0001 12C16.0001 14.2091 14.2092 16 12.0001 16C9.79092 16 8.00006 14.2091 8.00006 12Z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </i>
+                  </span>
+                  <div
+                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                  >
+                    Settings
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="om-react-ui-navigation"
+    >
+      <div
+        class="om-react-ui-navigation-nav"
+      >
+        <div
+          class="om-react-ui-navigation-menu"
+        >
+          <div
+            class="om-react-ui-navigation-item-wrapper"
+          >
+            <button
+              class="om-react-ui-navigation-item"
+              type="button"
+            >
+              <div
+                class="om-react-ui-navigation-item-content"
+              >
+                <span
+                  class="om-react-ui-navigation-item-icon"
+                >
+                  <i
+                    class="om-react-ui-icons-wrapper"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                  >
+                    <svg
+                      class="om-react-ui-icons"
+                      fill="none"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      shape-rendering="geometricPrecision"
+                      stroke="none"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M20 20V9.96128L12 3.56128L4 9.96128V20H20ZM2.75061 8.39954C2.27618 8.77909 2 9.35371 2 9.96128V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9.96128C22 9.35371 21.7238 8.77909 21.2494 8.39954L13.2494 1.99954C12.519 1.41519 11.481 1.41519 10.7506 1.99954L2.75061 8.39954Z"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M12.4761 10.3736L11.9999 9.32609L11.5236 10.3736C10.9954 11.5355 10.0642 12.4667 8.90229 12.995L7.85474 13.4712L8.90229 13.9475C10.0642 14.4757 10.9954 15.4069 11.5236 16.5688L11.9999 17.6164L12.4761 16.5688C13.0044 15.4069 13.9356 14.4757 15.0975 13.9475L16.145 13.4712L15.0975 12.995C13.9356 12.4667 13.0044 11.5355 12.4761 10.3736Z"
+                      />
+                    </svg>
+                  </i>
+                </span>
+                <div
+                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                >
+                  Home
+                </div>
+              </div>
+            </button>
+          </div>
+          <div
+            class="om-react-ui-navigation-item-wrapper"
+          >
+            <button
+              class="om-react-ui-navigation-item"
+              type="button"
+            >
+              <div
+                class="om-react-ui-navigation-item-content"
+              >
+                <span
+                  class="om-react-ui-navigation-item-icon"
+                >
+                  <i
+                    class="om-react-ui-icons-wrapper"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                  >
+                    <svg
+                      class="om-react-ui-icons"
+                      fill="none"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      shape-rendering="geometricPrecision"
+                      stroke="none"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M9.18026 1H10.0001H14.0001H14.8199L14.9806 1.80388L15.4673 4.23728C16.0687 4.50623 16.6327 4.8428 17.1499 5.23715L19.5206 4.49755L20.3032 4.25341L20.6961 4.97293L22.6131 8.48365L23.006 9.20318L22.3775 9.72955L20.4735 11.3241C20.4911 11.5473 20.5001 11.7727 20.5001 12C20.5001 12.2274 20.4911 12.4528 20.4735 12.676L22.3774 14.2704L23.0059 14.7968L22.613 15.5163L20.696 19.0271L20.3031 19.7466L19.5205 19.5024L17.1498 18.7629C16.6327 19.1572 16.0686 19.4938 15.4673 19.7627L14.9806 22.1961L14.8199 23H14.0001H10.0001H9.18026L9.01948 22.1961L8.5328 19.7627C7.93148 19.4938 7.36744 19.1572 6.85028 18.7629L4.47962 19.5024L3.69701 19.7466L3.30413 19.0271L1.38714 15.5163L0.994255 14.7968L1.62276 14.2704L3.5266 12.676C3.50901 12.4528 3.50006 12.2274 3.50006 12C3.50006 11.7727 3.50901 11.5473 3.52659 11.3241L1.62264 9.72955L0.994141 9.20318L1.38703 8.48365L3.30401 4.97293L3.6969 4.25341L4.4795 4.49755L6.85025 5.23715C7.36742 4.8428 7.93147 4.50623 8.5328 4.23728L9.01948 1.80388L9.18026 1ZM10.8199 3L10.3887 5.15607L10.2789 5.7049L9.75368 5.89834C9.00278 6.17489 8.31621 6.58661 7.72375 7.10464L7.30222 7.47321L6.7677 7.30646L4.66649 6.65095L3.53528 8.72262L5.22195 10.1352L5.65042 10.494L5.56929 11.047C5.52373 11.3575 5.50006 11.6757 5.50006 12C5.50006 12.3243 5.52374 12.6425 5.5693 12.9531L5.65044 13.506L5.22196 13.8649L3.53539 15.2774L4.6666 17.349L6.76772 16.6936L7.30225 16.5268L7.72377 16.8954C8.31623 17.4134 9.00279 17.8251 9.75368 18.1017L10.2789 18.2951L10.3887 18.8439L10.8199 21H13.1803L13.6115 18.8439L13.7212 18.2951L14.2465 18.1017C14.9973 17.8251 15.6839 17.4134 16.2764 16.8954L16.6979 16.5268L17.2324 16.6936L19.3335 17.349L20.4647 15.2774L18.7782 13.8649L18.3497 13.506L18.4308 12.9531C18.4764 12.6425 18.5001 12.3243 18.5001 12C18.5001 11.6757 18.4764 11.3575 18.4308 11.047L18.3497 10.4941L18.7782 10.1352L20.4649 8.72262L19.3336 6.65095L17.2324 7.30646L16.6979 7.47322L16.2764 7.10465C15.6839 6.58661 14.9973 6.1749 14.2465 5.89834L13.7212 5.70491L13.6115 5.15608L13.1803 3H10.8199ZM12.0001 10C10.8955 10 10.0001 10.8954 10.0001 12C10.0001 13.1046 10.8955 14 12.0001 14C13.1046 14 14.0001 13.1046 14.0001 12C14.0001 10.8954 13.1046 10 12.0001 10ZM8.00006 12C8.00006 9.79086 9.79092 8 12.0001 8C14.2092 8 16.0001 9.79086 16.0001 12C16.0001 14.2091 14.2092 16 12.0001 16C9.79092 16 8.00006 14.2091 8.00006 12Z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </i>
+                </span>
+                <div
+                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                >
+                  Settings
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Navigation renders with collapsed state 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="om-react-ui-navigation om-react-ui-navigation-collapsed"
+      >
+        <div
+          class="om-react-ui-navigation-nav"
+        >
+          <div
+            class="om-react-ui-navigation-menu"
+          >
+            <button
+              class="om-react-ui-navigation-collapsed-item"
+              type="button"
+            >
+              <span
+                class="om-react-ui-navigation-collapsed-item-icon"
+              >
+                <i
+                  class="om-react-ui-icons-wrapper"
+                  style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                >
+                  <svg
+                    class="om-react-ui-icons"
+                    fill="none"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    shape-rendering="geometricPrecision"
+                    stroke="none"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M20 20V9.96128L12 3.56128L4 9.96128V20H20ZM2.75061 8.39954C2.27618 8.77909 2 9.35371 2 9.96128V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9.96128C22 9.35371 21.7238 8.77909 21.2494 8.39954L13.2494 1.99954C12.519 1.41519 11.481 1.41519 10.7506 1.99954L2.75061 8.39954Z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M12.4761 10.3736L11.9999 9.32609L11.5236 10.3736C10.9954 11.5355 10.0642 12.4667 8.90229 12.995L7.85474 13.4712L8.90229 13.9475C10.0642 14.4757 10.9954 15.4069 11.5236 16.5688L11.9999 17.6164L12.4761 16.5688C13.0044 15.4069 13.9356 14.4757 15.0975 13.9475L16.145 13.4712L15.0975 12.995C13.9356 12.4667 13.0044 11.5355 12.4761 10.3736Z"
+                    />
+                  </svg>
+                </i>
+              </span>
+              <span
+                class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+              >
+                Home
+              </span>
+            </button>
+            <button
+              class="om-react-ui-navigation-collapsed-item"
+              type="button"
+            >
+              <span
+                class="om-react-ui-navigation-collapsed-item-icon"
+              >
+                <i
+                  class="om-react-ui-icons-wrapper"
+                  style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                >
+                  <svg
+                    class="om-react-ui-icons"
+                    fill="none"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    shape-rendering="geometricPrecision"
+                    stroke="none"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.18026 1H10.0001H14.0001H14.8199L14.9806 1.80388L15.4673 4.23728C16.0687 4.50623 16.6327 4.8428 17.1499 5.23715L19.5206 4.49755L20.3032 4.25341L20.6961 4.97293L22.6131 8.48365L23.006 9.20318L22.3775 9.72955L20.4735 11.3241C20.4911 11.5473 20.5001 11.7727 20.5001 12C20.5001 12.2274 20.4911 12.4528 20.4735 12.676L22.3774 14.2704L23.0059 14.7968L22.613 15.5163L20.696 19.0271L20.3031 19.7466L19.5205 19.5024L17.1498 18.7629C16.6327 19.1572 16.0686 19.4938 15.4673 19.7627L14.9806 22.1961L14.8199 23H14.0001H10.0001H9.18026L9.01948 22.1961L8.5328 19.7627C7.93148 19.4938 7.36744 19.1572 6.85028 18.7629L4.47962 19.5024L3.69701 19.7466L3.30413 19.0271L1.38714 15.5163L0.994255 14.7968L1.62276 14.2704L3.5266 12.676C3.50901 12.4528 3.50006 12.2274 3.50006 12C3.50006 11.7727 3.50901 11.5473 3.52659 11.3241L1.62264 9.72955L0.994141 9.20318L1.38703 8.48365L3.30401 4.97293L3.6969 4.25341L4.4795 4.49755L6.85025 5.23715C7.36742 4.8428 7.93147 4.50623 8.5328 4.23728L9.01948 1.80388L9.18026 1ZM10.8199 3L10.3887 5.15607L10.2789 5.7049L9.75368 5.89834C9.00278 6.17489 8.31621 6.58661 7.72375 7.10464L7.30222 7.47321L6.7677 7.30646L4.66649 6.65095L3.53528 8.72262L5.22195 10.1352L5.65042 10.494L5.56929 11.047C5.52373 11.3575 5.50006 11.6757 5.50006 12C5.50006 12.3243 5.52374 12.6425 5.5693 12.9531L5.65044 13.506L5.22196 13.8649L3.53539 15.2774L4.6666 17.349L6.76772 16.6936L7.30225 16.5268L7.72377 16.8954C8.31623 17.4134 9.00279 17.8251 9.75368 18.1017L10.2789 18.2951L10.3887 18.8439L10.8199 21H13.1803L13.6115 18.8439L13.7212 18.2951L14.2465 18.1017C14.9973 17.8251 15.6839 17.4134 16.2764 16.8954L16.6979 16.5268L17.2324 16.6936L19.3335 17.349L20.4647 15.2774L18.7782 13.8649L18.3497 13.506L18.4308 12.9531C18.4764 12.6425 18.5001 12.3243 18.5001 12C18.5001 11.6757 18.4764 11.3575 18.4308 11.047L18.3497 10.4941L18.7782 10.1352L20.4649 8.72262L19.3336 6.65095L17.2324 7.30646L16.6979 7.47322L16.2764 7.10465C15.6839 6.58661 14.9973 6.1749 14.2465 5.89834L13.7212 5.70491L13.6115 5.15608L13.1803 3H10.8199ZM12.0001 10C10.8955 10 10.0001 10.8954 10.0001 12C10.0001 13.1046 10.8955 14 12.0001 14C13.1046 14 14.0001 13.1046 14.0001 12C14.0001 10.8954 13.1046 10 12.0001 10ZM8.00006 12C8.00006 9.79086 9.79092 8 12.0001 8C14.2092 8 16.0001 9.79086 16.0001 12C16.0001 14.2091 14.2092 16 12.0001 16C9.79092 16 8.00006 14.2091 8.00006 12Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </i>
+              </span>
+              <span
+                class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+              >
+                Settings
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="om-react-ui-navigation om-react-ui-navigation-collapsed"
+    >
+      <div
+        class="om-react-ui-navigation-nav"
+      >
+        <div
+          class="om-react-ui-navigation-menu"
+        >
+          <button
+            class="om-react-ui-navigation-collapsed-item"
+            type="button"
+          >
+            <span
+              class="om-react-ui-navigation-collapsed-item-icon"
+            >
+              <i
+                class="om-react-ui-icons-wrapper"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+              >
+                <svg
+                  class="om-react-ui-icons"
+                  fill="none"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  shape-rendering="geometricPrecision"
+                  stroke="none"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M20 20V9.96128L12 3.56128L4 9.96128V20H20ZM2.75061 8.39954C2.27618 8.77909 2 9.35371 2 9.96128V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9.96128C22 9.35371 21.7238 8.77909 21.2494 8.39954L13.2494 1.99954C12.519 1.41519 11.481 1.41519 10.7506 1.99954L2.75061 8.39954Z"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    d="M12.4761 10.3736L11.9999 9.32609L11.5236 10.3736C10.9954 11.5355 10.0642 12.4667 8.90229 12.995L7.85474 13.4712L8.90229 13.9475C10.0642 14.4757 10.9954 15.4069 11.5236 16.5688L11.9999 17.6164L12.4761 16.5688C13.0044 15.4069 13.9356 14.4757 15.0975 13.9475L16.145 13.4712L15.0975 12.995C13.9356 12.4667 13.0044 11.5355 12.4761 10.3736Z"
+                  />
+                </svg>
+              </i>
+            </span>
+            <span
+              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+            >
+              Home
+            </span>
+          </button>
+          <button
+            class="om-react-ui-navigation-collapsed-item"
+            type="button"
+          >
+            <span
+              class="om-react-ui-navigation-collapsed-item-icon"
+            >
+              <i
+                class="om-react-ui-icons-wrapper"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+              >
+                <svg
+                  class="om-react-ui-icons"
+                  fill="none"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  shape-rendering="geometricPrecision"
+                  stroke="none"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.18026 1H10.0001H14.0001H14.8199L14.9806 1.80388L15.4673 4.23728C16.0687 4.50623 16.6327 4.8428 17.1499 5.23715L19.5206 4.49755L20.3032 4.25341L20.6961 4.97293L22.6131 8.48365L23.006 9.20318L22.3775 9.72955L20.4735 11.3241C20.4911 11.5473 20.5001 11.7727 20.5001 12C20.5001 12.2274 20.4911 12.4528 20.4735 12.676L22.3774 14.2704L23.0059 14.7968L22.613 15.5163L20.696 19.0271L20.3031 19.7466L19.5205 19.5024L17.1498 18.7629C16.6327 19.1572 16.0686 19.4938 15.4673 19.7627L14.9806 22.1961L14.8199 23H14.0001H10.0001H9.18026L9.01948 22.1961L8.5328 19.7627C7.93148 19.4938 7.36744 19.1572 6.85028 18.7629L4.47962 19.5024L3.69701 19.7466L3.30413 19.0271L1.38714 15.5163L0.994255 14.7968L1.62276 14.2704L3.5266 12.676C3.50901 12.4528 3.50006 12.2274 3.50006 12C3.50006 11.7727 3.50901 11.5473 3.52659 11.3241L1.62264 9.72955L0.994141 9.20318L1.38703 8.48365L3.30401 4.97293L3.6969 4.25341L4.4795 4.49755L6.85025 5.23715C7.36742 4.8428 7.93147 4.50623 8.5328 4.23728L9.01948 1.80388L9.18026 1ZM10.8199 3L10.3887 5.15607L10.2789 5.7049L9.75368 5.89834C9.00278 6.17489 8.31621 6.58661 7.72375 7.10464L7.30222 7.47321L6.7677 7.30646L4.66649 6.65095L3.53528 8.72262L5.22195 10.1352L5.65042 10.494L5.56929 11.047C5.52373 11.3575 5.50006 11.6757 5.50006 12C5.50006 12.3243 5.52374 12.6425 5.5693 12.9531L5.65044 13.506L5.22196 13.8649L3.53539 15.2774L4.6666 17.349L6.76772 16.6936L7.30225 16.5268L7.72377 16.8954C8.31623 17.4134 9.00279 17.8251 9.75368 18.1017L10.2789 18.2951L10.3887 18.8439L10.8199 21H13.1803L13.6115 18.8439L13.7212 18.2951L14.2465 18.1017C14.9973 17.8251 15.6839 17.4134 16.2764 16.8954L16.6979 16.5268L17.2324 16.6936L19.3335 17.349L20.4647 15.2774L18.7782 13.8649L18.3497 13.506L18.4308 12.9531C18.4764 12.6425 18.5001 12.3243 18.5001 12C18.5001 11.6757 18.4764 11.3575 18.4308 11.047L18.3497 10.4941L18.7782 10.1352L20.4649 8.72262L19.3336 6.65095L17.2324 7.30646L16.6979 7.47322L16.2764 7.10465C15.6839 6.58661 14.9973 6.1749 14.2465 5.89834L13.7212 5.70491L13.6115 5.15608L13.1803 3H10.8199ZM12.0001 10C10.8955 10 10.0001 10.8954 10.0001 12C10.0001 13.1046 10.8955 14 12.0001 14C13.1046 14 14.0001 13.1046 14.0001 12C14.0001 10.8954 13.1046 10 12.0001 10ZM8.00006 12C8.00006 9.79086 9.79092 8 12.0001 8C14.2092 8 16.0001 9.79086 16.0001 12C16.0001 14.2091 14.2092 16 12.0001 16C9.79092 16 8.00006 14.2091 8.00006 12Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </i>
+            </span>
+            <span
+              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+            >
+              Settings
+            </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Navigation renders with sub-menu items 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="om-react-ui-navigation"
+      >
+        <div
+          class="om-react-ui-navigation-nav"
+        >
+          <div
+            class="om-react-ui-navigation-menu"
+          >
+            <div
+              class="om-react-ui-navigation-item-wrapper"
+            >
+              <button
+                class="om-react-ui-navigation-item om-react-ui-navigation-item-expandable"
+                type="button"
+              >
+                <div
+                  class="om-react-ui-navigation-item-content"
+                >
+                  <span
+                    class="om-react-ui-navigation-item-icon"
+                  >
+                    <i
+                      class="om-react-ui-icons-wrapper"
+                      style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                    >
+                      <svg
+                        class="om-react-ui-icons"
+                        fill="none"
+                        height="16"
+                        preserveAspectRatio="xMidYMid meet"
+                        shape-rendering="geometricPrecision"
+                        stroke="none"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M20 20V9.96128L12 3.56128L4 9.96128V20H20ZM2.75061 8.39954C2.27618 8.77909 2 9.35371 2 9.96128V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9.96128C22 9.35371 21.7238 8.77909 21.2494 8.39954L13.2494 1.99954C12.519 1.41519 11.481 1.41519 10.7506 1.99954L2.75061 8.39954Z"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          d="M12.4761 10.3736L11.9999 9.32609L11.5236 10.3736C10.9954 11.5355 10.0642 12.4667 8.90229 12.995L7.85474 13.4712L8.90229 13.9475C10.0642 14.4757 10.9954 15.4069 11.5236 16.5688L11.9999 17.6164L12.4761 16.5688C13.0044 15.4069 13.9356 14.4757 15.0975 13.9475L16.145 13.4712L15.0975 12.995C13.9356 12.4667 13.0044 11.5355 12.4761 10.3736Z"
+                        />
+                      </svg>
+                    </i>
+                  </span>
+                  <div
+                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                  >
+                    Menu
+                  </div>
+                </div>
+                <span
+                  class="om-react-ui-navigation-item-arrow om-react-ui-navigation-item-arrow-open"
+                >
+                  <i
+                    class="om-react-ui-icons-wrapper"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                  >
+                    <svg
+                      class="om-react-ui-icons"
+                      fill="none"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      shape-rendering="geometricPrecision"
+                      stroke="none"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </i>
+                </span>
+              </button>
+              <div
+                class="om-react-ui-navigation-submenu om-react-ui-navigation-submenu-open"
+              >
+                <div
+                  class="om-react-ui-navigation-submenu-inner"
+                >
+                  <button
+                    class="om-react-ui-navigation-submenu-item"
+                    type="button"
+                  >
+                    <div
+                      class="om-react-ui-navigation-item-content"
+                    >
+                      <div
+                        class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                      >
+                        Sub Item 1
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    class="om-react-ui-navigation-submenu-item"
+                    type="button"
+                  >
+                    <div
+                      class="om-react-ui-navigation-item-content"
+                    >
+                      <div
+                        class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                      >
+                        Sub Item 2
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="om-react-ui-navigation"
+    >
+      <div
+        class="om-react-ui-navigation-nav"
+      >
+        <div
+          class="om-react-ui-navigation-menu"
+        >
+          <div
+            class="om-react-ui-navigation-item-wrapper"
+          >
+            <button
+              class="om-react-ui-navigation-item om-react-ui-navigation-item-expandable"
+              type="button"
+            >
+              <div
+                class="om-react-ui-navigation-item-content"
+              >
+                <span
+                  class="om-react-ui-navigation-item-icon"
+                >
+                  <i
+                    class="om-react-ui-icons-wrapper"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                  >
+                    <svg
+                      class="om-react-ui-icons"
+                      fill="none"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      shape-rendering="geometricPrecision"
+                      stroke="none"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M20 20V9.96128L12 3.56128L4 9.96128V20H20ZM2.75061 8.39954C2.27618 8.77909 2 9.35371 2 9.96128V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V9.96128C22 9.35371 21.7238 8.77909 21.2494 8.39954L13.2494 1.99954C12.519 1.41519 11.481 1.41519 10.7506 1.99954L2.75061 8.39954Z"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M12.4761 10.3736L11.9999 9.32609L11.5236 10.3736C10.9954 11.5355 10.0642 12.4667 8.90229 12.995L7.85474 13.4712L8.90229 13.9475C10.0642 14.4757 10.9954 15.4069 11.5236 16.5688L11.9999 17.6164L12.4761 16.5688C13.0044 15.4069 13.9356 14.4757 15.0975 13.9475L16.145 13.4712L15.0975 12.995C13.9356 12.4667 13.0044 11.5355 12.4761 10.3736Z"
+                      />
+                    </svg>
+                  </i>
+                </span>
+                <div
+                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                >
+                  Menu
+                </div>
+              </div>
+              <span
+                class="om-react-ui-navigation-item-arrow om-react-ui-navigation-item-arrow-open"
+              >
+                <i
+                  class="om-react-ui-icons-wrapper"
+                  style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+                >
+                  <svg
+                    class="om-react-ui-icons"
+                    fill="none"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    shape-rendering="geometricPrecision"
+                    stroke="none"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </i>
+              </span>
+            </button>
+            <div
+              class="om-react-ui-navigation-submenu om-react-ui-navigation-submenu-open"
+            >
+              <div
+                class="om-react-ui-navigation-submenu-inner"
+              >
+                <button
+                  class="om-react-ui-navigation-submenu-item"
+                  type="button"
+                >
+                  <div
+                    class="om-react-ui-navigation-item-content"
+                  >
+                    <div
+                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                    >
+                      Sub Item 1
+                    </div>
+                  </div>
+                </button>
+                <button
+                  class="om-react-ui-navigation-submenu-item"
+                  type="button"
+                >
+                  <div
+                    class="om-react-ui-navigation-item-content"
+                  >
+                    <div
+                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                    >
+                      Sub Item 2
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

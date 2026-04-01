@@ -4,6 +4,7 @@ export default create({
   base: 'light',
   appBg: '#f5f7fb',
   appContentBg: '#ffffff',
+  appPreviewBg: '#ffffff',
   appBorderColor: '#e6ebf2',
   appBorderRadius: 16,
   barBg: '#ffffff',

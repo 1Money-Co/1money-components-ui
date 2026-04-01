@@ -167,6 +167,7 @@ $component: 'checkbox';
         @include checkbox-minus-shape(theme.palette(icon, 'on-brand'));
       }
     }
+
   }
 
   &-disabled {

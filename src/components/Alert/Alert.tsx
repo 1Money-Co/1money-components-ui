@@ -24,7 +24,6 @@ export const Alert: FC<AlertProps> = props => {
     link,
     icon,
     showIcon = true,
-    action,
     closable = true,
     onClose,
     ref: _ref,
@@ -71,7 +70,6 @@ export const Alert: FC<AlertProps> = props => {
           </TypographyLink>
         )}
       </div>
-      {action && <div className={classes('action')}>{action}</div>}
       {closable && (
         <button
           type="button"

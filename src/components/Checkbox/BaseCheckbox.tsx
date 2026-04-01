@@ -56,7 +56,6 @@ export const BaseCheckbox: FC<BaseCheckboxProps> = (props) => {
     defaultChecked,
     checked,
   );
-
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.indeterminate = indeterminate;

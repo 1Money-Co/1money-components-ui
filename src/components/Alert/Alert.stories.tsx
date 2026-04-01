@@ -45,37 +45,6 @@ export const AllVariants: Story = {
   tags: ['!autodocs', 'dev'],
 };
 
-export const Info: Story = {
-  args: {
-    status: 'info',
-  },
-};
-
-export const Success: Story = {
-  args: {
-    status: 'success',
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    status: 'warning',
-  },
-};
-
-export const Error: Story = {
-  args: {
-    status: 'error',
-  },
-};
-
-export const WithAction: Story = {
-  args: {
-    status: 'info',
-    action: <button type="button" style={{ fontSize: 12, padding: '8px 12px', borderRadius: 8, border: 'none', cursor: 'pointer' }}>Button</button>,
-  },
-};
-
 export const TitleOnly: Story = {
   args: {
     title: 'Alert with title only',
@@ -84,8 +53,10 @@ export const TitleOnly: Story = {
   },
 };
 
-export const NoCLose: Story = {
+export const BodyOnly: Story = {
   args: {
-    closable: false,
+    title: undefined,
+    body: 'Alert with body only.',
+    link: undefined,
   },
 };
