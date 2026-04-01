@@ -5,6 +5,7 @@ export { Calendar } from './components/Calendar';
 export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
 export { CoachMark } from './components/CoachMark';
+export { Copy } from './components/Copy';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
 export { Form, FormItem, useForm, useFormContext, useFormCore } from './components/Form';
@@ -14,7 +15,7 @@ export { Input } from './components/Input';
 export { Drawer } from './components/Drawer';
 export { Dropdown } from './components/Dropdown';
 export { Modal } from './components/Modal';
-export { Navigation } from './components/Navigation';
+export { Navigation, Nav } from './components/Navigation';
 export { notification } from './components/Notification';
 export {
   Portal,
@@ -69,6 +70,7 @@ export type {
   CheckboxGroupOption,
 } from './components/Checkbox';
 export type { CoachMarkProps, CoachMarkPlacement, CoachMarkStep, CoachMarkLabels } from './components/CoachMark';
+export type { CopyProps } from './components/Copy';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
 export type {
@@ -106,7 +108,7 @@ export type {
   DropdownTrigger,
 } from './components/Dropdown';
 export type { ModalProps, ModalSize, ModalFooterRender } from './components/Modal';
-export type { NavigationProps, NavigationItem, NavigationHandlers } from './components/Navigation';
+export type { NavigationProps, NavigationItem, NavigationHandlers, NavProps, NavItem } from './components/Navigation';
 export type {
   NotificationLinkConfig,
   NotificationStatus,

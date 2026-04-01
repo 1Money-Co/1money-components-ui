@@ -122,7 +122,6 @@ const DashboardTemplate = () => {
       items={items}
       collapsible
       onCollapse={setCollapsed}
-      header={collapsed ? <Icons name="logo" size={32} /> : <Icons name="logoWithWords" width={132} height={24} />}
       selector={
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1 }}>
           <Icons name="flagUnitedStates" size={20} />
@@ -177,7 +176,6 @@ export const Collapsed: Story = {
   args: {
     collapsed: true,
     collapsible: true,
-    header: <Icons name="logo" size={32} />,
     items: [
       { key: 'dashboard', label: 'Dashboard', icon: <Icons name="dashboard" size={16} color="inherit" />, active: true },
       { key: 'transaction-history', label: 'Transaction History', icon: <Icons name="transferHistory" size={16} color="inherit" /> },
