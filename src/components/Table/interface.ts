@@ -5,12 +5,6 @@ export type TableVariant = 'fill' | 'stroke';
 export type TableAlign = 'left' | 'center' | 'right';
 export type TableSortOrder = 'ascend' | 'descend' | null;
 
-export interface TableFilterOption {
-  text: ReactNode;
-  value: Key | boolean;
-  children?: TableFilterOption[];
-}
-
 export interface TablePaginationConfig {
   current?: number;
   defaultCurrent?: number;
@@ -52,10 +46,6 @@ export interface TableColumn<T> {
   sorter?: boolean | ((a: T, b: T) => number);
   sortOrder?: TableSortOrder;
   defaultSortOrder?: Exclude<TableSortOrder, null>;
-  filters?: TableFilterOption[];
-  filterMode?: 'menu' | 'tree';
-  filterSearch?: boolean;
-  onFilter?: (filterValue: Key | boolean, record: T) => boolean;
   className?: string;
   headerClassName?: string;
   cellClassName?: string | ((value: unknown, record: T, index: number) => string);

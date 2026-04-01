@@ -102,10 +102,6 @@ const VirtualTableBase = forwardRef<TableRef, VirtualTableProps<any>>((props, re
                 ? 'descend'
                 : null,
         }))}
-        onFilterApply={values => pipeline.setFilters(currentFilters => ({
-          ...currentFilters,
-          [String(column.key)]: values,
-        }))}
       />
     ),
     render: (value: unknown, record: any, index: number) => (

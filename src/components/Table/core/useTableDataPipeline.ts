@@ -4,7 +4,6 @@ import type { Key } from 'react';
 import type { TableColumn, TablePaginationConfig, TableSortOrder } from '../interface';
 
 export interface TablePipelineState {
-  filters: Record<string, Array<Key | boolean>>;
   sorter: { columnKey?: Key; order?: TableSortOrder };
   pagination: false | Required<Pick<TablePaginationConfig, 'current' | 'pageSize'>>;
 }
@@ -23,13 +22,8 @@ export interface UseTableDataPipelineInput<T> {
 export interface UseTableDataPipelineResult<T> {
   currentDataSource: T[];
   total: number;
-  filters: Record<string, Array<Key | boolean>>;
   sorter: TableSorterState;
   pagination: false | { current: number; pageSize: number };
-  setFilters: (
-    updater: Record<string, Array<Key | boolean>>
-    | ((current: Record<string, Array<Key | boolean>>) => Record<string, Array<Key | boolean>>)
-  ) => void;
   setSorter: (
     updater: { columnKey?: Key; order?: TableSortOrder }
     | ((current: { columnKey?: Key; order?: TableSortOrder }) => { columnKey?: Key; order?: TableSortOrder })
@@ -48,21 +42,10 @@ export interface TableSorterState {
 export const applyTablePipeline = <T,>({
   columns,
   dataSource,
-  filters,
   sorter,
   pagination,
 }: ApplyTablePipelineInput<T>) => {
-  const filtered = dataSource.filter(record => columns.every(column => {
-    if (!column.key || !column.onFilter) return true;
-
-    const selected = filters[String(column.key)];
-
-    if (!selected?.length) return true;
-
-    return selected.some(value => column.onFilter?.(value, record));
-  }));
-
-  const sorted = [...filtered];
+  const sorted = [...dataSource];
   const sortColumn = columns.find(column => column.key === sorter.columnKey);
 
   if (sortColumn?.sorter && typeof sortColumn.sorter === 'function' && sorter.order) {
@@ -114,7 +97,6 @@ export const useTableDataPipeline = <T,>({
   dataSource,
   pagination,
 }: UseTableDataPipelineInput<T>): UseTableDataPipelineResult<T> => {
-  const [filters, setFilters] = useControlledState<Record<string, Array<Key | boolean>>>({}, undefined);
   const [sorter, setSorter] = useControlledState<TableSorterState>(
     getInitialSorter(columns),
     getControlledSorter(columns),
@@ -136,11 +118,10 @@ export const useTableDataPipeline = <T,>({
     () => applyTablePipeline({
       columns,
       dataSource,
-      filters,
       sorter,
       pagination: mergedPagination,
     }),
-    [columns, dataSource, filters, sorter, mergedPagination],
+    [columns, dataSource, sorter, mergedPagination],
   );
 
   const setPagination = (
@@ -160,10 +141,8 @@ export const useTableDataPipeline = <T,>({
 
   return {
     ...result,
-    filters,
     sorter,
     pagination: mergedPagination,
-    setFilters,
     setSorter,
     setPagination,
   };

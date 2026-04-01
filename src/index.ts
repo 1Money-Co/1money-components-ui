@@ -163,7 +163,6 @@ export type {
   TablePaginationConfig,
   TableRowSelection,
   TableExpandableConfig,
-  TableFilterOption,
   TableRef,
 } from './components/Table';
 export type { TabsProps, TabItem } from './components/Tabs';

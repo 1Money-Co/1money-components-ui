@@ -101,10 +101,6 @@ const TableBase = forwardRef<TableRef, TableProps<any>>((props, ref) => {
                 ? 'descend'
                 : null,
         }))}
-        onFilterApply={values => pipeline.setFilters(currentFilters => ({
-          ...currentFilters,
-          [String(column.key)]: values,
-        }))}
       />
     ),
     render: (value: unknown, record: any, index: number) => (
