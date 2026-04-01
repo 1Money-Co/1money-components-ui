@@ -42,11 +42,6 @@ const columns: TableColumn<Row>[] = [
     dataIndex: 'status',
     title: 'Status',
     width: 100,
-    filters: [
-      { text: 'ok', value: 'ok' },
-      { text: 'hold', value: 'hold' },
-    ],
-    onFilter: (value, record) => record.status === value,
     render: (value) => (
       <span style={{ color: value === 'ok' ? '#52c41a' : '#faad14' }}>
         {value === 'ok' ? 'OK' : 'Hold'}
@@ -94,12 +89,6 @@ export const WithPagination: Story = {
 };
 
 export const Sortable: Story = {
-  args: {
-    pagination: false,
-  },
-};
-
-export const Filterable: Story = {
   args: {
     pagination: false,
   },
@@ -285,7 +274,7 @@ export const CustomEmptyState: Story = {
     empty: (
       <div style={{ padding: 40, textAlign: 'center', color: '#999' }}>
         <div style={{ fontSize: 32, marginBottom: 8 }}>:/</div>
-        <div>No wallets found. Try adjusting your filters.</div>
+        <div>No wallets found. Try adjusting your table settings.</div>
       </div>
     ),
   },

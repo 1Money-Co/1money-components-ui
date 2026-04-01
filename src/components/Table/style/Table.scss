@@ -46,19 +46,6 @@ $component: 'table';
     gap: 0;
   }
 
-  .table-filter-dropdown {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-width: 180px;
-  }
-
-  .table-filter-dropdown__actions {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-end;
-  }
-
   .table-expanded-row {
     padding: theme.spacing(component-padding, 300);
     border-radius: theme.shape(200);
