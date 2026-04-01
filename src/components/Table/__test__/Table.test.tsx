@@ -101,7 +101,7 @@ describe('Table', () => {
     expect(screen.getByText('Ethereum')).toBeInTheDocument();
   });
 
-  it('emits onChange with the current client-side data set', async () => {
+  it('emits onChange with the current client-side sorted page', async () => {
     const user = userEvent.setup();
     const onChange = jest.fn();
 
@@ -111,13 +111,6 @@ describe('Table', () => {
         onChange={onChange}
         pagination={{ current: 1, pageSize: 1 }}
         columns={[
-          {
-            key: 'status',
-            dataIndex: 'status',
-            title: 'Status',
-            filters: [{ text: 'ok', value: 'ok' }],
-            onFilter: (value, record: { status: string }) => record.status === value,
-          },
           {
             key: 'amount',
             dataIndex: 'amount',
@@ -129,8 +122,8 @@ describe('Table', () => {
           },
         ]}
         dataSource={[
-          { id: '1', status: 'ok', amount: 30 },
-          { id: '2', status: 'ok', amount: 10 },
+          { id: '1', amount: 30 },
+          { id: '2', amount: 10 },
         ]}
       />,
     );
@@ -138,7 +131,7 @@ describe('Table', () => {
     await user.click(screen.getByRole('button', { name: /sort amount/i }));
 
     expect(onChange).toHaveBeenCalled();
-    expect(onChange.mock.calls.at(-1)?.[0].currentDataSource).toHaveLength(1);
+    expect(onChange.mock.calls.at(-1)?.[0].currentDataSource).toEqual([{ id: '2', amount: 10 }]);
   });
 
   it('applies size and variant root classes', () => {

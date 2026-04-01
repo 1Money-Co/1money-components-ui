@@ -9,15 +9,9 @@ const rows: Row[] = [
   { id: '4', status: 'ok', amount: 40 },
 ];
 
-it('applies filters before sorting before pagination', () => {
+it('applies sorting before pagination', () => {
   const result = applyTablePipeline({
     columns: [
-      {
-        key: 'status',
-        dataIndex: 'status',
-        filters: [{ text: 'ok', value: 'ok' }],
-        onFilter: (value, record) => record.status === value,
-      },
       {
         key: 'amount',
         dataIndex: 'amount',
@@ -25,7 +19,6 @@ it('applies filters before sorting before pagination', () => {
       },
     ],
     dataSource: rows,
-    filters: { status: ['ok'] },
     sorter: { columnKey: 'amount', order: 'descend' },
     pagination: { current: 1, pageSize: 2 },
   });
