@@ -243,6 +243,16 @@
       "types": "./es/components/Upload/index.d.ts",
       "import": "./es/components/Upload/index.js",
       "require": "./lib/components/Upload/index.js"
+    },
+    "./ResizeObserver": {
+      "types": "./es/components/ResizeObserver/index.d.ts",
+      "import": "./es/components/ResizeObserver/index.js",
+      "require": "./lib/components/ResizeObserver/index.js"
+    },
+    "./VirtualList": {
+      "types": "./es/components/VirtualList/index.d.ts",
+      "import": "./es/components/VirtualList/index.js",
+      "require": "./lib/components/VirtualList/index.js"
     }
   },
   "scripts": {
@@ -297,10 +307,10 @@
     "@floating-ui/react": "^0.27.19",
     "bignumber.js": "^9.3.0",
     "classnames": "~2.2.6",
+    "clsx": "^2.1.1",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
     "lottie-web": "^5.12.2",
-    "react-hook-form": "^7.54.0",
     "react-number-format": "^5.4.4",
     "react-pro-sidebar": "^1.1.0",
     "react-tooltip": "^5.28.1"

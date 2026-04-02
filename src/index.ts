@@ -48,6 +48,9 @@ export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
 export { Step } from './components/Step';
 export { Switch } from './components/Switch';
+export { Table, VirtualTable } from './components/Table';
+export { VirtualList } from './components/VirtualList';
+export { ResizeObserver, useResizeObserver } from './components/ResizeObserver';
 export { Tabs } from './components/Tabs';
 export { Tag } from './components/Tag';
 export { Tour } from './components/Tour';
@@ -166,8 +169,28 @@ export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { StepProps, StepItem, StepStatus, StepTagConfig } from './components/Step';
 export type { SwitchProps } from './components/Switch';
+export type {
+  TableProps,
+  VirtualTableProps,
+  TableColumn,
+  TableChangeMeta,
+  TablePaginationConfig,
+  TableRowSelection,
+  TableExpandableConfig,
+  TableRef,
+} from './components/Table';
 export type { TabsProps, TabItem } from './components/Tabs';
 export type { TagProps } from './components/Tag';
+export type {
+  ListRef as VirtualListRef,
+  ListProps as VirtualListProps,
+  ScrollInfo as VirtualListScrollInfo,
+} from './components/VirtualList';
+export type {
+  ResizeObserverProps,
+  SizeInfo as ResizeObserverSizeInfo,
+  OnResize as ResizeObserverOnResize,
+} from './components/ResizeObserver';
 export type {
   TypographyBodyProps,
   TypographyCopyableConfig,

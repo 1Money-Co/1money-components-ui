@@ -42,7 +42,7 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
     cursor: pointer;
 
     &:hover:not(:disabled) {
-      background-color: theme.palette(bg, 'default-secondary-hover');
+      background-color: theme.palette(bg, 'default-hover');
     }
 
     &:focus-visible {

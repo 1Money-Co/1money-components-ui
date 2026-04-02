@@ -6,6 +6,8 @@ import '@testing-library/jest-dom';
 import { Pagination, usePagination } from '../index';
 
 const originalConsoleError = console.error;
+const PAGINATION_CHEVRON_LEFT_PATH = 'M6.94922 11.9155L13.5884 4.83128L15.0506 6.20165L9.69584 11.9154L15.052 17.6295L13.5899 19L6.94922 11.9155Z';
+const PAGINATION_CHEVRON_RIGHT_PATH = 'M9.4621 19L8 17.6295L13.3561 11.9154L8.00133 6.20165L9.46356 4.83128L16.1028 11.9155L9.4621 19Z';
 
 beforeAll(() => {
   console.error = (message, ...optionalParams) => {
@@ -202,5 +204,39 @@ describe('Pagination', () => {
 
     expect(screen.getAllByText('...')).toHaveLength(2);
     expect(screen.queryByRole('button', { name: '...' })).not.toBeInTheDocument();
+  });
+
+  it('uses chevron icons for pagination controls', () => {
+    render(
+      <Pagination
+        total={680}
+        pageSize={10}
+        defaultCurrent={1}
+      />,
+    );
+
+    expect(
+      screen.getByRole('button', { name: 'Previous page' }).querySelector('path')?.getAttribute('d'),
+    ).toBe(PAGINATION_CHEVRON_LEFT_PATH);
+    expect(
+      screen.getByRole('button', { name: 'Next page' }).querySelector('path')?.getAttribute('d'),
+    ).toBe(PAGINATION_CHEVRON_RIGHT_PATH);
+  });
+
+  it('applies explicit typography colors for current and disabled items', () => {
+    render(
+      <Pagination
+        total={680}
+        pageSize={10}
+        defaultCurrent={1}
+      />,
+    );
+
+    expect(
+      screen.getByRole('button', { name: 'Page 1, current page' }).querySelector('.om-react-ui-typography'),
+    ).toHaveClass('om-react-ui-typography-color-on-neutral');
+    expect(
+      screen.getByRole('button', { name: 'Previous page' }).querySelector('.om-react-ui-typography'),
+    ).toHaveClass('om-react-ui-typography-color-disabled');
   });
 });

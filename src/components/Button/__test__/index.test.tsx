@@ -1,4 +1,6 @@
 import 'jsdom-global/register';
+import fs from 'fs';
+import path from 'path';
 import * as React from 'react';
 import { createRef } from 'react';
 import { render, screen } from '@testing-library/react';
@@ -17,6 +19,9 @@ import { Button } from '../index';
 
 const getButtonClassName = (slotOrModifier?: string) =>
   `om-react-ui-${BUTTON_DEFAULT_PREFIX}${slotOrModifier ? `-${slotOrModifier}` : ''}`;
+
+const readButtonStylesSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../style/Button.scss'), 'utf8');
 
 const originalConsoleError = console.error;
 
@@ -124,7 +129,15 @@ describe('Button', () => {
     });
   });
 
-  it('renders text variant with correct classes and no color class', () => {
+  it('keeps typography content color inherited from the button', () => {
+    const stylesSource = readButtonStylesSource();
+
+    expect(stylesSource).not.toContain(
+      "> .#{theme.$prefix}-typography {\n    color: inherit;\n  }"
+    );
+  });
+
+  it('renders text variant with a dedicated color modifier', () => {
     render(
       <Button
         variant={BUTTON_VARIANT.text}
@@ -140,8 +153,27 @@ describe('Button', () => {
 
     expect(button.className).toContain(getButtonClassName(BUTTON_VARIANT.text));
     expect(button.className).toContain(getButtonClassName(BUTTON_SIZE.medium));
+    expect(button.className).toContain(
+      getButtonClassName(`${BUTTON_VARIANT.text}-${BUTTON_COLOR.danger}`)
+    );
     expect(button.className).not.toContain(getButtonClassName(BUTTON_COLOR.danger));
-    expect(button.className).not.toContain(getButtonClassName(BUTTON_COLOR.primary));
+  });
+
+  it('maps button color tokens to the Figma button spec', () => {
+    const stylesSource = readButtonStylesSource();
+
+    expect(stylesSource).toContain(
+      "'grey': (\n    text: theme.palette(text, 'default'),\n    bg: theme.palette(bg, 'neutral-tertiary'),\n    hover-bg: theme.palette(bg, 'neutral-tertiary-hover'),\n    disabled-text: theme.palette(text, 'disabled'),\n    disabled-bg: theme.palette(bg, 'disabled'),"
+    );
+    expect(stylesSource).toContain(
+      "'danger': (\n    text: theme.palette(text, 'danger'),\n    bg: theme.palette(bg, 'danger-secondary'),\n    hover-bg: theme.palette(bg, 'danger-secondary-hover'),\n    disabled-text: theme.palette(text, 'danger-secondary'),\n    disabled-bg: theme.palette(bg, 'danger-tertiary'),"
+    );
+    expect(stylesSource).toContain(
+      "'warning': (\n    text: theme.palette(text, 'default'),\n    bg: theme.palette(bg, 'warning'),\n    hover-bg: theme.palette(bg, 'warning-hover'),\n    disabled-text: theme.palette(text, 'disabled'),\n    disabled-bg: theme.palette(bg, 'warning-secondary-hover'),"
+    );
+    expect(stylesSource).toContain(
+      "&-text-danger {\n    --om-button-text: #{theme.palette(text, 'danger')};\n    --om-button-hover-text: #{theme.palette(text, 'on-danger-secondary')};\n    --om-button-disabled-text: #{theme.palette(text, 'danger-secondary')};"
+    );
   });
 
   it('preserves explicit icon color and sizing props', () => {

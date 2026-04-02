@@ -38,14 +38,14 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
             >
               <path
                 clip-rule="evenodd"
-                d="M7.41436 13L12.7073 18.2929L11.293 19.7071L3.58594 12L11.293 4.29291L12.7073 5.70712L7.41436 11L20.0002 11V13H7.41436Z"
+                d="M6.94922 11.9155L13.5884 4.83128L15.0506 6.20165L9.69584 11.9154L15.052 17.6295L13.5899 19L6.94922 11.9155Z"
                 fill-rule="evenodd"
               />
             </svg>
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled om-react-ui-typography-strong"
         >
           Previous
         </span>
@@ -62,7 +62,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-on-neutral om-react-ui-typography-strong"
         >
           1
         </span>
@@ -78,7 +78,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           2
         </span>
@@ -94,7 +94,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           3
         </span>
@@ -105,7 +105,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
       class="om-react-ui-pagination-item om-react-ui-pagination-item-ellipsis"
     >
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong om-react-ui-pagination-ellipsis"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-pagination-ellipsis"
       >
         ...
       </span>
@@ -120,7 +120,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           68
         </span>
@@ -136,7 +136,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           Next
         </span>
@@ -160,7 +160,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
             >
               <path
                 clip-rule="evenodd"
-                d="M12.7071 4.29291L20.4142 12L12.7071 19.7071L11.2929 18.2929L16.5858 13H4V11L16.5858 11L11.2929 5.70712L12.7071 4.29291Z"
+                d="M9.4621 19L8 17.6295L13.3561 11.9154L8.00133 6.20165L9.46356 4.83128L16.1028 11.9155L9.4621 19Z"
                 fill-rule="evenodd"
               />
             </svg>

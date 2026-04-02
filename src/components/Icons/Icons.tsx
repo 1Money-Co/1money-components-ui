@@ -76,6 +76,7 @@ import {
   ChevronUpIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  SortIcon,
   CollapseIcon,
   ExtendIcon,
   SpinnerIcon,
@@ -163,6 +164,7 @@ import type { FC } from 'react';
 import type { IconsProps, IconWrapperProps } from './interface';
 import type { LogoWithWordsCustomProps, LogoWithBetaCustomProps } from './Logo';
 import type { IllustrationsCustomProps } from './Illustrations';
+import type { SortIconStatus } from './SVGs';
 
 const IconList = {
   illusChecked: IllusChecked,
@@ -239,6 +241,7 @@ const IconList = {
   chevronUp: ChevronUpIcon,
   chevronLeft: ChevronLeftIcon,
   chevronRight: ChevronRightIcon,
+  sort: SortIcon,
   collapse: CollapseIcon,
   extend: ExtendIcon,
   spinner: SpinnerIcon,
@@ -357,7 +360,22 @@ export interface IllustrationsProps extends IconsProps, IllustrationsCustomProps
   name: 'illusLocked' | 'illusChecked' | 'illusError' | 'illusEmailError' | 'illusLinkExpired' | 'illus2FA' | 'illusID' | 'illusVerification' | 'illusRegionNotSupported' | 'illusPending' | 'illusPasskey' | 'illusAddAccount';
 }
 
-export const Icons: FC<(IconsProps & { name: IconName }) | StatusIconsProps | LogoWithWordsProps | LogoWithBetaProps | IllustrationsProps> = ({ name, ...rest }) => {
+export interface SortIconsProps extends IconsProps {
+  name: 'sort';
+  status?: SortIconStatus;
+  inactiveColor?: string;
+}
+
+export type { SortIconStatus } from './SVGs';
+
+export const Icons: FC<
+  (IconsProps & { name: IconName })
+  | StatusIconsProps
+  | LogoWithWordsProps
+  | LogoWithBetaProps
+  | IllustrationsProps
+  | SortIconsProps
+> = ({ name, ...rest }) => {
   const Icon = IconList[name];
   return Icon ? <Icon {...rest} /> : null;
 };

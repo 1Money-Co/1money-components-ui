@@ -1,0 +1,9 @@
+import '@/components/Button/style';
+import '@/components/Checkbox/style';
+import '@/components/Dropdown/style';
+import '@/components/Empty/style';
+import '@/components/Icons/style';
+import '@/components/Pagination/style';
+import '@/components/Radio/style';
+import '@/components/Typography/style';
+import './Table.scss';

@@ -41,4 +41,23 @@ describe('Icons', () => {
 
     expect(container.querySelectorAll('svg')).toHaveLength(5);
   });
+
+  it('renders sort icon variants', () => {
+    const { container } = render(
+      <>
+        <Icons name='sort' />
+        <Icons name='sort' status='ascend' />
+        <Icons name='sort' status='descend' />
+      </>
+    );
+
+    expect(container.querySelectorAll('svg')).toHaveLength(3);
+    expect(Array.from(container.querySelectorAll('path')).map(path => path.getAttribute('fill'))).toEqual([
+      '#9FA3A3',
+      '#131313',
+      '#9FA3A3',
+      '#9FA3A3',
+      '#131313',
+    ]);
+  });
 });

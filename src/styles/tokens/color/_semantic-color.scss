@@ -70,8 +70,8 @@ $om-text-scale: (
   'neutral-secondary': p.$grey-500,
   'neutral-tertiary': p.$grey-400,
   'on-neutral': p.$white,
-  'on-neutral-secondary': p.$grey-800,
-  'on-neutral-tertiary': p.$grey-700,
+  'on-neutral-secondary': p.$grey-300,
+  'on-neutral-tertiary': p.$grey-200,
   // Positive
   'positive': p.$green-700,
   'positive-secondary': rgba(p.$green-700, opacity.om-opacity('medium')),
