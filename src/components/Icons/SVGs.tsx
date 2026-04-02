@@ -3,6 +3,22 @@ import IconWrapper from './Wrapper';
 import type { FC } from 'react';
 import type { IconWrapperProps } from './interface';
 
+const SORT_ICON_VIEWBOX = '0 0 14.1738 19.0029';
+const SORT_ICON_DEFAULT_PATH = 'M7.08984 16.2559L12.8037 10.9014L14.1738 12.3633L7.08984 19.0029L0.00488281 12.3623L1.375 10.9004L7.08984 16.2559ZM14.1689 6.63965L12.7979 8.10156L7.08496 2.74707L1.37012 8.10254L0 6.64062L7.08496 0L14.1689 6.63965Z';
+const SORT_ICON_ARROW_PATH = 'M0 1.4621L1.3705 0L7.08464 5.35613L12.7984 0.00133538L14.1687 1.46356L7.08452 8.10276L0 1.4621Z';
+const SORT_ICON_ARROW_HEIGHT = 8.10276;
+const SORT_ICON_BOTTOM_OFFSET = 10.9004;
+const SORT_ICON_INACTIVE_COLOR = '#9FA3A3';
+const SORT_ICON_ACTIVE_COLOR = '#131313';
+
+const SORT_ICON_STATUSES = ['default', 'ascend', 'descend'] as const;
+
+export type SortIconStatus = (typeof SORT_ICON_STATUSES)[number];
+
+export interface SortIconProps extends IconWrapperProps {
+  inactiveColor?: string;
+  status?: SortIconStatus;
+}
 
 /* Primary Icons */
 export const DepositIcon: FC<IconWrapperProps> = (props) => <IconWrapper {...props}>
@@ -194,6 +210,39 @@ export const ChevronRightIcon: FC<IconWrapperProps> = (props) => <IconWrapper {.
 export const ChevronLeftIcon: FC<IconWrapperProps> = (props) => <IconWrapper {...props}>
   <path fillRule='evenodd' clipRule='evenodd' d='M6.94922 11.9155L13.5884 4.83128L15.0506 6.20165L9.69584 11.9154L15.052 17.6295L13.5899 19L6.94922 11.9155Z' />
 </IconWrapper>;
+export const SortIcon: FC<SortIconProps> = ({
+  color = SORT_ICON_ACTIVE_COLOR,
+  inactiveColor = SORT_ICON_INACTIVE_COLOR,
+  status = 'default',
+  ...props
+}) => {
+  if (status === 'default') {
+    return (
+      <IconWrapper viewBox={SORT_ICON_VIEWBOX} color={color} {...props}>
+        <path d={SORT_ICON_DEFAULT_PATH} fill={inactiveColor} />
+      </IconWrapper>
+    );
+  }
+
+  return (
+    <IconWrapper viewBox={SORT_ICON_VIEWBOX} color={color} {...props}>
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d={SORT_ICON_ARROW_PATH}
+        fill={status === 'ascend' ? color : inactiveColor}
+        transform={`translate(0 ${SORT_ICON_ARROW_HEIGHT}) scale(1 -1)`}
+      />
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d={SORT_ICON_ARROW_PATH}
+        fill={status === 'descend' ? color : inactiveColor}
+        transform={`translate(0 ${SORT_ICON_BOTTOM_OFFSET})`}
+      />
+    </IconWrapper>
+  );
+};
 export const CollapseIcon: FC<IconWrapperProps> = (props) => <IconWrapper {...props} >
   <g clipPath='url(#clip0_23_5192)'>
     <path d='M11.3368 3.99992L3.83884 11.9991L11.3351 19.9978' strokeWidth='2' />

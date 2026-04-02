@@ -44,6 +44,8 @@ const originalClientHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototy
 const originalScrollHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'scrollHeight');
 const readTypographyStylesSource = () =>
   fs.readFileSync(path.resolve(__dirname, '../style/Typography.scss'), 'utf8');
+const readSemanticColorSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../../../styles/tokens/color/_semantic-color.scss'), 'utf8');
 
 const mockElementMetrics = ({
   clientWidth = 120,
@@ -113,6 +115,13 @@ afterEach(() => {
 });
 
 describe('Typography', () => {
+  it('maps neutral on-colors to the Figma semantic token values', () => {
+    const semanticColorSource = readSemanticColorSource();
+
+    expect(semanticColorSource).toContain("'on-neutral-secondary': p.$grey-300");
+    expect(semanticColorSource).toContain("'on-neutral-tertiary': p.$grey-200");
+  });
+
   it('inherits text color by default', () => {
     const stylesSource = readTypographyStylesSource();
 

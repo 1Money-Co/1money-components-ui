@@ -60,6 +60,14 @@ describe('Switch', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('uses the default tertiary typography color for description text', () => {
+    const { getByText } = render(
+      <Switch label="Label" description="Description" />,
+    );
+
+    expect(getByText('Description')).toHaveClass('om-react-ui-typography-color-default-tertiary');
+  });
+
   it('renders with right label placement', () => {
     const wrapper = render(
       <Switch label="Right" labelPlacement="right" />,

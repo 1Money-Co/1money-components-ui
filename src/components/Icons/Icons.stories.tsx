@@ -284,6 +284,18 @@ export const PrimaryIcons: Story = {
         <Icons {...args} name='chevronRight' />
         <span>Chevron Right</span>
       </CopyIconBox>
+      <CopyIconBox onClick={() => handleCopy("<Icons name='sort' />")}>
+        <Icons {...args} name='sort' />
+        <span>Sort Default</span>
+      </CopyIconBox>
+      <CopyIconBox onClick={() => handleCopy("<Icons name='sort' status='ascend' />")}>
+        <Icons {...args} name='sort' status='ascend' />
+        <span>Sort Ascend</span>
+      </CopyIconBox>
+      <CopyIconBox onClick={() => handleCopy("<Icons name='sort' status='descend' />")}>
+        <Icons {...args} name='sort' status='descend' />
+        <span>Sort Descend</span>
+      </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='collapse' />")}>
         <Icons {...args} name='collapse' />
         <span>Collapse</span>

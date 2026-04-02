@@ -301,10 +301,6 @@
   "license": "MIT",
   "dependencies": {
     "@1money/hooks": "0.1.0",
-    "@rc-component/context": "^2.0.1",
-    "@rc-component/resize-observer": "^1.0.0",
-    "@rc-component/util": "^1.1.0",
-    "@rc-component/virtual-list": "^1.0.1",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
@@ -315,7 +311,6 @@
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
     "lottie-web": "^5.12.2",
-    "react-hook-form": "^7.54.0",
     "react-number-format": "^5.4.4",
     "react-pro-sidebar": "^1.1.0",
     "react-tooltip": "^5.28.1"

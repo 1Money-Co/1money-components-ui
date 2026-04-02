@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { getDOM } from '@rc-component/util/lib/Dom/findDOMNode';
+import { getDOM } from '@/components/ResizeObserver/utils/reactUtil';
 
 // Copy from `rc-component/util/Dom/css.js`
 export function getOffset(node: HTMLElement | Window) {

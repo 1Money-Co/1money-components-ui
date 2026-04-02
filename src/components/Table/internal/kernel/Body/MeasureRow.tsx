@@ -1,8 +1,8 @@
 // @ts-nocheck
 import * as React from 'react';
-import ResizeObserver from '@rc-component/resize-observer';
+import ResizeObserver from '@/components/ResizeObserver';
 import MeasureCell from './MeasureCell';
-import isVisible from '@rc-component/util/lib/Dom/isVisible';
+import isVisible from '../utils/dom/isVisible';
 import { useContext } from '../selector-context';
 import TableContext from '../context/TableContext';
 import type { ColumnType } from '../interface';

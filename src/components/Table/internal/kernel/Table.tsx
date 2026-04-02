@@ -27,12 +27,12 @@
 // @ts-nocheck
 import type { CompareProps } from './selector-context';
 import { clsx } from 'clsx';
-import ResizeObserver from '@rc-component/resize-observer';
-import { getTargetScrollBarSize } from '@rc-component/util/lib/getScrollBarSize';
-import useEvent from '@rc-component/util/lib/hooks/useEvent';
-import pickAttrs from '@rc-component/util/lib/pickAttrs';
-import getValue from '@rc-component/util/lib/utils/get';
-import warning from '@rc-component/util/lib/warning';
+import ResizeObserver from '@/components/ResizeObserver';
+import { getTargetScrollBarSize } from './utils/getScrollBarSize';
+import { useEventCallback as useEvent } from '@1money/hooks';
+import pickAttrs from './utils/pickAttrs';
+import getValue from './utils/get';
+import warning from './utils/warning';
 import * as React from 'react';
 import Body from './Body';
 import ColGroup from './ColGroup';
@@ -74,9 +74,9 @@ import StickyScrollBar from './stickyScrollBar';
 import Column from './sugar/Column';
 import ColumnGroup from './sugar/ColumnGroup';
 import { getColumnsKey, validateValue, validNumberValue } from './utils/valueUtil';
-import { getDOM } from '@rc-component/util/lib/Dom/findDOMNode';
-import isEqual from '@rc-component/util/lib/isEqual';
-import useLayoutEffect from '@rc-component/util/lib/hooks/useLayoutEffect';
+import { getDOM } from '@/components/ResizeObserver/utils/reactUtil';
+import isEqual from './selector-context/isEqual';
+import { useLayoutEffect } from '@1money/hooks';
 
 export const DEFAULT_PREFIX = 'rc-table';
 

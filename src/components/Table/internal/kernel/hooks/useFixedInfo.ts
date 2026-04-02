@@ -1,6 +1,6 @@
 // @ts-nocheck
-import useMemo from '@rc-component/util/lib/hooks/useMemo';
-import isEqual from '@rc-component/util/lib/isEqual';
+import useMemo from '../utils/useMemo';
+import isEqual from '../selector-context/isEqual';
 import type { ColumnType, StickyOffsets } from '../interface';
 import { getCellFixedInfo } from '../utils/fixUtil';
 import * as React from 'react';

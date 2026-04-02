@@ -3,7 +3,6 @@ import raf from '../utils/raf';
 import type { GetKey } from '../interface';
 import type CacheMap from '../utils/CacheMap';
 import { useLayoutEffect } from '@1money/hooks';
-import { warning } from '@rc-component/util';
 
 const MAX_TIMES = 10;
 
@@ -142,9 +141,8 @@ export default function useScrollTo<T>(
         });
       }
     } else if (syncState?.times === MAX_TIMES) {
-      warning(
-        false,
-        'Seems `scrollTo` with `VirtualList` reach the max limitation. Please fire issue for us. Thanks.',
+      console.warn(
+        '[VirtualList] `scrollTo` reached the max iteration limit.',
       );
     }
   }, [syncState, containerRef.current]);

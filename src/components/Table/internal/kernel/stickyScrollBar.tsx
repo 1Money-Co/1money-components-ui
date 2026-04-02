@@ -1,13 +1,13 @@
 // @ts-nocheck
 import { useContext } from './selector-context';
 import { clsx } from 'clsx';
-import getScrollBarSize from '@rc-component/util/lib/getScrollBarSize';
+import getScrollBarSize from './utils/getScrollBarSize';
 import * as React from 'react';
 import TableContext from './context/TableContext';
 import { useLayoutState } from './hooks/useFrame';
-import raf from '@rc-component/util/lib/raf';
+import raf from '@/components/VirtualList/utils/raf';
 import { getOffset } from './utils/offsetUtil';
-import { getDOM } from '@rc-component/util/lib/Dom/findDOMNode';
+import { getDOM } from '@/components/ResizeObserver/utils/reactUtil';
 
 const MOUSEUP_EVENT: keyof WindowEventMap = 'mouseup';
 const MOUSEMOVE_EVENT: keyof WindowEventMap = 'mousemove';

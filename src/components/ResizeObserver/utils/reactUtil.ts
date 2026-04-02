@@ -42,28 +42,44 @@ export function getDOM(node: any): HTMLElement | SVGElement | null {
   return null;
 }
 
+function isReactElement(node: any): boolean {
+  return React.isValidElement(node) && !isFragment(node);
+}
+
+function isFragment(node: any): boolean {
+  return React.isValidElement(node) && (node as React.ReactElement<any>).type === React.Fragment;
+}
+
 /**
  * Check if a React element supports ref forwarding.
- * In React 19+, all elements support refs.
+ * In React 19+, all non-fragment elements support refs.
  */
 export function supportRef(node: any): boolean {
   if (!node) return false;
 
-  // React 19+ - all elements support refs
+  // React 19+ no need `forwardRef` anymore. So just pass if is a React element (not fragment).
   const reactVersion = parseInt(React.version.split('.')[0], 10);
-  if (reactVersion >= 19) return React.isValidElement(node);
-
-  if (!React.isValidElement(node)) return false;
-
-  const type = (node as any).type;
+  if (isReactElement(node) && reactVersion >= 19) return true;
 
   // unwrap memo
+  const type = (node as any).type;
   const realType = type?.$$typeof === Symbol.for('react.memo') ? type.type : type;
 
-  // Function components without forwardRef don't support refs
-  if (typeof realType === 'function' && !realType.prototype?.isReactComponent) {
-    // Check if it's a forwardRef
-    if (type?.$$typeof === Symbol.for('react.forward_ref')) return true;
+  // Function component without forwardRef
+  if (
+    typeof realType === 'function' &&
+    !realType.prototype?.render &&
+    realType.$$typeof !== Symbol.for('react.forward_ref')
+  ) {
+    return false;
+  }
+
+  // Class component without forwardRef
+  if (
+    typeof node === 'function' &&
+    !node.prototype?.render &&
+    node.$$typeof !== Symbol.for('react.forward_ref')
+  ) {
     return false;
   }
 
@@ -72,9 +88,10 @@ export function supportRef(node: any): boolean {
 
 /**
  * Get ref from React element, handling React 19 property changes.
+ * Excludes fragments.
  */
 export function getNodeRef(node: React.ReactElement): React.Ref<any> | null {
-  if (!React.isValidElement(node)) return null;
+  if (!isReactElement(node)) return null;
 
   // React 19+ moves ref into props
   if (Object.prototype.propertyIsEnumerable.call((node as any).props, 'ref')) {

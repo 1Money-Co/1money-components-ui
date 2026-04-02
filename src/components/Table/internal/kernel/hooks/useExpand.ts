@@ -1,5 +1,5 @@
 // @ts-nocheck
-import warning from '@rc-component/util/lib/warning';
+import warning from '../utils/warning';
 import * as React from 'react';
 import { INTERNAL_HOOKS } from '../constant';
 import type {

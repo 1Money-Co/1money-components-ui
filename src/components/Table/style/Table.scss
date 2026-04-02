@@ -1,13 +1,198 @@
 @use '@/styles/api' as theme;
 
-$component: 'table';
+$component: 'om-react-ui-table';
 
-.#{theme.$prefix}-#{$component} {
+// ========================= Base kernel layout =========================
+.#{$component} {
+  position: relative;
+  box-sizing: border-box;
+
+  // ========================= Wrapper (border, radius) =========================
   width: 100%;
+  overflow: clip;
+  font-variant: tabular-nums;
+  background: theme.palette(bg, 'default');
+  border: 1px solid theme.palette(border, 'default');
+  border-radius: theme.shape(300);
 
+  // Inner table element
+  table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  // Header
+  &-thead > tr > th,
+  &-thead > tr > td {
+    position: relative;
+    padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+    text-align: start;
+    overflow-wrap: break-word;
+    background: theme.palette(bg, 'default-secondary');
+    border-bottom: 1px solid theme.palette(border, 'default');
+
+    @include theme.typography(label, md);
+  }
+
+  // Body cells
+  &-tbody > tr > td {
+    position: relative;
+    padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+    overflow-wrap: break-word;
+    border-bottom: 1px solid theme.palette(border, 'default');
+
+    @include theme.typography(body, md);
+  }
+
+  // Body row
+  &-tbody > tr {
+    &:last-child > td {
+      border-bottom: 0;
+    }
+
+    &:hover > td {
+      background: theme.palette(bg, 'default-hover');
+    }
+  }
+
+  // ========================= Content wrapper =========================
+  &-content {
+    overflow: auto;
+  }
+
+  &-body {
+    overflow: auto;
+  }
+
+  // ========================= Header holder =========================
+  &-header {
+    overflow: hidden;
+  }
+
+  // ========================= Sticky header =========================
+  &-sticky-holder {
+    position: sticky;
+    z-index: 3;
+    background: theme.palette(bg, 'default');
+  }
+
+  // ========================= Fixed header (scroll.y) =========================
+  &-fixed-header > &-header {
+    overflow: hidden;
+  }
+
+  &-fixed-header > &-body {
+    overflow: auto scroll;
+  }
+
+  // ========================= Fixed columns =========================
+  &-cell-fix-start,
+  &-cell-fix-end {
+    position: sticky !important;
+    z-index: 2;
+    background: theme.palette(bg, 'default');
+  }
+
+  &-tbody > tr:hover &-cell-fix-start,
+  &-tbody > tr:hover &-cell-fix-end {
+    background: theme.palette(bg, 'default-hover');
+  }
+
+  // Header fixed cells need header background
+  &-thead &-cell-fix-start,
+  &-thead &-cell-fix-end {
+    background: theme.palette(bg, 'default-secondary');
+  }
+
+  // ========================= Scroll shadow =========================
+  &-cell-fix-start-shadow::after,
+  &-cell-fix-end-shadow::after {
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    width: 30px;
+    transition: box-shadow 0.3s;
+    content: '';
+    pointer-events: none;
+  }
+
+  &-cell-fix-start-shadow::after {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &-cell-fix-start-shadow-show::after {
+    box-shadow: inset 10px 0 8px -8px rgb(0 0 0 / 8%);
+  }
+
+  &-cell-fix-end-shadow::after {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &-cell-fix-end-shadow-show::after {
+    box-shadow: inset -10px 0 8px -8px rgb(0 0 0 / 8%);
+  }
+
+  // ========================= Expanded row =========================
+  &-expanded-row &-cell {
+    padding: theme.spacing(component-padding, 300);
+    background: theme.palette(bg, 'default-secondary');
+  }
+
+  // ========================= Empty =========================
+  &-placeholder {
+    text-align: center;
+  }
+
+  // ========================= Virtual table body =========================
+  &-tbody-virtual {
+    .#{$component}-row {
+      display: flex;
+
+      &:hover .#{$component}-cell {
+        background: theme.palette(bg, 'default-hover');
+      }
+    }
+
+    .#{$component}-cell {
+      padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+      overflow-wrap: break-word;
+      border-bottom: 1px solid theme.palette(border, 'default');
+
+      @include theme.typography(body, md);
+    }
+  }
+
+  &-container,
+  &-content,
+  &-body,
+  &-header {
+    background: inherit;
+  }
+
+  // ========================= Pagination =========================
+  &-pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: theme.spacing(scale, 600);
+  }
+
+  // ========================= Sizes =========================
   &-small {
     --table-row-height: 56px;
     --table-header-height: 40px;
+
+    .#{$component}-thead > tr > th,
+    .#{$component}-thead > tr > td {
+      padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
+    }
+
+    .#{$component}-tbody > tr > td {
+      padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
+    }
   }
 
   &-large {
@@ -15,39 +200,131 @@ $component: 'table';
     --table-header-height: 48px;
   }
 
+  // ========================= Variants =========================
   &-fill {
-    .table-expanded-row {
-      background: theme.palette(bg, 'default-secondary');
+    border: 0;
+    border-radius: 0;
+
+    .#{$component}-thead > tr > th,
+    .#{$component}-thead > tr > td {
+      background: transparent;
     }
   }
 
   &-stroke {
-    .#{theme.$prefix}-#{$component}-cell,
-    .#{theme.$prefix}-#{$component}-thead > tr > th {
+    .#{$component}-cell,
+    .#{$component}-thead > tr > th {
       border-bottom: 1px solid theme.palette(border, 'default');
     }
   }
 
-  .table-header-cell {
+  // ========================= Header cell =========================
+  .#{$component}-header-cell {
     display: inline-flex;
     gap: 4px;
     align-items: center;
   }
 
-  .table-cell-content {
+  .#{$component}-header-cell__title {
+    color: theme.palette(text, 'default');
+    white-space: nowrap;
+  }
+
+  .#{$component}-header-cell--large {
+    .#{$component}-header-cell__title {
+      @include theme.typography(title, lg);
+    }
+  }
+
+  .#{$component}-header-cell--small {
+    .#{$component}-header-cell__title {
+      @include theme.typography(title, sm, $strong: true);
+    }
+  }
+
+  // ========================= Sort trigger =========================
+  .#{$component}-sort-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: theme.palette(icon, 'default');
+    line-height: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid theme.palette(border, 'default');
+      outline-offset: 2px;
+    }
+  }
+
+  .#{$component}-sort-trigger--large {
+    width: 16px;
+    height: 16px;
+  }
+
+  .#{$component}-sort-trigger--small {
+    width: 12px;
+    height: 12px;
+  }
+
+  // ========================= Expand trigger =========================
+  .#{$component}-expand-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: theme.spacing(scale, 400);
+    height: theme.spacing(scale, 400);
+    padding: 0;
+    color: theme.palette(icon, 'default');
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:focus-visible {
+      outline: 2px solid theme.palette(border, 'default');
+      outline-offset: 2px;
+    }
+  }
+
+  .#{$component}-expand-trigger:hover {
+    color: theme.palette(icon, 'default-secondary');
+  }
+
+  .#{$component}-expand-trigger[aria-expanded='true'] {
+    color: theme.palette(icon, 'default');
+
+    &:hover {
+      color: theme.palette(icon, 'default-secondary');
+    }
+  }
+
+  .#{$component}-expand-trigger__icon {
+    transition: transform 0.2s ease;
+  }
+
+  // ========================= Cell content =========================
+  .#{$component}-cell-content {
     display: inline-flex;
     gap: 8px;
     align-items: center;
   }
 
-  .table-cell-content__text {
+  .#{$component}-cell-content__text {
     display: inline-flex;
     flex-direction: column;
     gap: 0;
   }
 
-  .table-expanded-row {
-    padding: theme.spacing(component-padding, 300);
-    border-radius: theme.shape(200);
+  // ========================= Expanded row content =========================
+  .#{$component}-expanded-row {
+    background: theme.palette(bg, 'default');
+  }
+
+  .#{$component}-expanded-row__content {
+    padding: theme.spacing(component-padding, 200) 0 theme.spacing(component-padding, 200);
   }
 }

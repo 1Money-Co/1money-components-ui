@@ -3,7 +3,7 @@ import { useContext } from '../selector-context';
 import type { TableContextProps } from '../context/TableContext';
 import TableContext from '../context/TableContext';
 import { getColumnsKey } from '../utils/valueUtil';
-import { useEvent } from '@rc-component/util';
+import { useEventCallback as useEvent } from '@1money/hooks';
 import { clsx } from 'clsx';
 
 export default function useRowInfo<RecordType>(

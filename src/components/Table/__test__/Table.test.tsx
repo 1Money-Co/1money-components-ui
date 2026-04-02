@@ -79,6 +79,91 @@ describe('Table', () => {
     expect(screen.getByRole('button', { name: /sort name/i })).toBeInTheDocument();
   });
 
+  it('uses the small header sort treatment for small tables', () => {
+    render(
+      <Table
+        rowKey="id"
+        size="small"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name', sorter: true }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+      />,
+    );
+
+    const title = screen.getByText('Name');
+    const headerCell = title.closest('.om-react-ui-table-header-cell');
+    const sortButton = screen.getByRole('button', { name: /sort name/i });
+    const sortIcon = sortButton.querySelector('svg');
+
+    expect(headerCell).toHaveClass('om-react-ui-table-header-cell--small');
+    expect(sortButton).toHaveClass('om-react-ui-table-sort-trigger--small');
+    expect(sortIcon).toHaveAttribute('width', '12');
+    expect(sortIcon).toHaveAttribute('height', '12');
+  });
+
+  it('updates sort trigger icon state across sorting cycles', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name', sorter: true }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+      />,
+    );
+
+    const sortButton = screen.getByRole('button', { name: /sort name/i });
+    const getPathFills = () => Array.from(sortButton.querySelectorAll('path')).map(path => path.getAttribute('fill'));
+
+    expect(getPathFills()).toEqual(['#9FA3A3']);
+
+    await user.click(sortButton);
+    expect(getPathFills()).toEqual(['#131313', '#9FA3A3']);
+
+    await user.click(sortButton);
+    expect(getPathFills()).toEqual(['#9FA3A3', '#131313']);
+
+    await user.click(sortButton);
+    expect(getPathFills()).toEqual(['#9FA3A3']);
+  });
+
+  it('includes the base wrapper class so shared table styles can apply', () => {
+    const { container } = render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+      />,
+    );
+
+    expect(container.querySelector('.om-react-ui-table')).toBeTruthy();
+  });
+
+  it('renders the expand affordance as a plain icon trigger', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+        expandable={{ expandedRowRender: record => <div>Extra {record.name}</div> }}
+      />,
+    );
+
+    const expandButton = screen.getByRole('button', { name: /expand row/i });
+    const expandIcon = expandButton.querySelector('i');
+
+    expect(expandButton).toHaveClass('om-react-ui-table-expand-trigger');
+    expect(expandButton).toHaveAttribute('aria-expanded', 'false');
+    expect(expandButton).not.toHaveAttribute('class', expect.stringContaining('--'));
+    expect(expandIcon).not.toHaveStyle('transform: rotate(180deg)');
+
+    await user.click(expandButton);
+
+    expect(expandButton).toHaveAttribute('aria-expanded', 'true');
+    expect(expandIcon).toHaveStyle('transform: rotate(180deg)');
+  });
+
   it('renders primary and secondary cell content in the default cell renderer', () => {
     render(
       <Table

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import * as React from 'react';
-import canUseDom from '@rc-component/util/lib/Dom/canUseDom';
+import canUseDom from '../utils/dom/canUseDom';
 import type { TableSticky } from '../interface';
 
 // fix ssr render

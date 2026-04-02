@@ -1,7 +1,8 @@
 // @ts-nocheck
 import type { CompareProps } from '../selector-context';
 import { clsx } from 'clsx';
-import { useEvent, warning } from '@rc-component/util';
+import { useEventCallback as useEvent } from '@1money/hooks';
+import warning from '../utils/warning';
 import * as React from 'react';
 import { INTERNAL_HOOKS } from '../constant';
 import { makeImmutable } from '../context/TableContext';
@@ -9,7 +10,7 @@ import type { CustomizeScrollBody, GetComponent, Reference } from '../interface'
 import Table, { DEFAULT_PREFIX, type TableProps } from '../Table';
 import Grid from './BodyGrid';
 import { StaticContext } from './context';
-import getValue from '@rc-component/util/lib/utils/get';
+import getValue from '../utils/get';
 
 const renderBody: CustomizeScrollBody<any> = (rawData, props) => {
   const { ref, onScroll } = props;
@@ -61,8 +62,8 @@ const VirtualTable = <RecordType,>(
     (path, defaultComponent) => getValue(components, path) || defaultComponent,
   );
 
-  // Memo this
-  const onInternalScroll = useEvent(onScroll);
+  // Memo this — guard against undefined to avoid useEventCallback wrapping undefined
+  const onInternalScroll = useEvent(onScroll || (() => {}));
 
   // ========================= Context ==========================
   const context = React.useMemo(

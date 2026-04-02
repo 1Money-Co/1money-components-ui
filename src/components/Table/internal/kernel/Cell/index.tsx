@@ -15,7 +15,7 @@ import type {
 } from '../interface';
 import useCellRender from './useCellRender';
 import useHoverState from './useHoverState';
-import { useEvent } from '@rc-component/util';
+import { useEventCallback as useEvent } from '@1money/hooks';
 
 export interface CellProps<RecordType extends DefaultRecordType> {
   prefixCls?: string;

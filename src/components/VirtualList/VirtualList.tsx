@@ -1,8 +1,7 @@
 import { clsx } from 'clsx';
 import ResizeObserver from '../ResizeObserver';
 import type { ResizeObserverProps } from '../ResizeObserver';
-import { useEvent } from '@rc-component/util';
-import { useLayoutEffect } from '@1money/hooks';
+import { useLayoutEffect, useEventCallback } from '@1money/hooks';
 import * as React from 'react';
 import { useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
@@ -359,7 +358,7 @@ export function RawList<T>(props: ListProps<T>, ref: React.Ref<ListRef>) {
 
   const lastVirtualScrollInfoRef = useRef(getVirtualScrollInfo());
 
-  const triggerScroll = useEvent((params?: { x?: number; y?: number }) => {
+  const triggerScroll = useEventCallback((params?: { x?: number; y?: number }) => {
     if (onVirtualScroll) {
       const nextInfo = { ...getVirtualScrollInfo(), ...params };
 
@@ -409,7 +408,7 @@ export function RawList<T>(props: ListProps<T>, ref: React.Ref<ListRef>) {
     return tmpOffsetLeft;
   };
 
-  const onWheelDelta: Parameters<typeof useFrameWheel>[6] = useEvent((offsetXY, fromHorizontal) => {
+  const onWheelDelta: Parameters<typeof useFrameWheel>[6] = useEventCallback((offsetXY, fromHorizontal) => {
     if (fromHorizontal) {
       flushSync(() => {
         setOffsetLeft((left) => {

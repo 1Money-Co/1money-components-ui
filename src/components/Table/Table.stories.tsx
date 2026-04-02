@@ -169,34 +169,63 @@ export const TreeData: Story = {
 };
 
 export const FixedColumns: Story = {
-  args: {
-    pagination: false,
-    scroll: { x: 800 },
-    columns: [
-      { key: 'wallet', dataIndex: 'wallet', title: 'Wallet', fixed: 'left' as const, width: 200 },
-      { key: 'network', dataIndex: 'network', title: 'Network', width: 150 },
-      { key: 'status', dataIndex: 'status', title: 'Status', width: 150 },
-      {
-        key: 'amount',
-        dataIndex: 'amount',
-        title: 'Amount',
-        width: 150,
-        align: 'right' as const,
-        fixed: 'right' as const,
-        render: (value: unknown) => `$${(value as number).toLocaleString()}`,
-      },
-    ],
-  },
+  render: (args) => (
+    <div style={{ width: 600 }}>
+      <Table
+        {...args}
+        pagination={false}
+        scroll={{ x: 900 }}
+        columns={[
+          { key: 'wallet', dataIndex: 'wallet', title: 'Wallet', fixed: 'left' as const, width: 180 },
+          { key: 'network', dataIndex: 'network', title: 'Network', width: 180 },
+          {
+            key: 'status', dataIndex: 'status', title: 'Status', width: 180,
+            render: (value: unknown) => (
+              <span style={{ color: value === 'ok' ? '#52c41a' : '#faad14' }}>
+                {value === 'ok' ? 'OK' : 'Hold'}
+              </span>
+            ),
+          },
+          { key: 'network2', dataIndex: 'network', title: 'Network (dup)', width: 180 },
+          {
+            key: 'amount', dataIndex: 'amount', title: 'Amount', width: 180,
+            align: 'right' as const, fixed: 'right' as const,
+            render: (value: unknown) => `$${(value as number).toLocaleString()}`,
+          },
+        ]}
+      />
+    </div>
+  ),
 };
 
 export const StickyHeader: Story = {
-  args: {
-    sticky: true,
-    scroll: { x: 960 },
-    columns: [
-      { key: 'wallet', dataIndex: 'wallet', title: 'Wallet', fixed: 'left' as const, width: 220 },
-      ...columns.slice(1),
-    ],
+  render: (args) => {
+    const manyRows: Row[] = Array.from({ length: 40 }, (_, i) => ({
+      id: String(i),
+      wallet: `Wallet ${i + 1}`,
+      network: ['Ethereum', 'Solana', 'Polygon', 'Arbitrum'][i % 4],
+      status: i % 5 === 0 ? 'hold' : 'ok',
+      amount: Math.floor(Math.random() * 5000) + 100,
+    }));
+
+    return (
+      <Table
+        {...args}
+        dataSource={manyRows}
+        scroll={{ x: 600, y: 300 }}
+        sticky
+        pagination={false}
+        columns={[
+          { key: 'wallet', dataIndex: 'wallet', title: 'Wallet', width: 200, fixed: 'left' as const },
+          { key: 'network', dataIndex: 'network', title: 'Network', width: 150 },
+          { key: 'status', dataIndex: 'status', title: 'Status', width: 120 },
+          {
+            key: 'amount', dataIndex: 'amount', title: 'Amount', width: 130, align: 'right' as const,
+            render: (value: unknown) => `$${(value as number).toLocaleString()}`,
+          },
+        ]}
+      />
+    );
   },
 };
 
@@ -280,6 +309,21 @@ export const CustomEmptyState: Story = {
   },
 };
 
+export const Variants: Story = {
+  render: (args) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      <div>
+        <h3 style={{ marginBottom: 8 }}>Stroke (bordered)</h3>
+        <Table {...args} dataSource={rows.slice(0, 4)} pagination={false} variant="stroke" />
+      </div>
+      <div>
+        <h3 style={{ marginBottom: 8 }}>Fill (borderless, default)</h3>
+        <Table {...args} dataSource={rows.slice(0, 4)} pagination={false} variant="fill" />
+      </div>
+    </div>
+  ),
+};
+
 export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
@@ -297,6 +341,30 @@ export const Sizes: Story = {
 
 export const VirtualScrolling: Story = {
   render: () => {
+    const virtualColumns: TableColumn<Row>[] = [
+      { key: 'wallet', dataIndex: 'wallet', title: 'Wallet', width: 200 },
+      { key: 'network', dataIndex: 'network', title: 'Network', width: 150 },
+      {
+        key: 'status',
+        dataIndex: 'status',
+        title: 'Status',
+        width: 120,
+        render: (value) => (
+          <span style={{ color: value === 'ok' ? '#52c41a' : '#faad14' }}>
+            {value === 'ok' ? 'OK' : 'Hold'}
+          </span>
+        ),
+      },
+      {
+        key: 'amount',
+        dataIndex: 'amount',
+        title: 'Amount',
+        width: 130,
+        align: 'right',
+        render: (value) => `$${(value as number).toLocaleString()}`,
+      },
+    ];
+
     const largeData: Row[] = Array.from({ length: 10000 }, (_, i) => ({
       id: String(i),
       wallet: `Wallet ${i + 1}`,
@@ -305,16 +373,17 @@ export const VirtualScrolling: Story = {
       amount: Math.floor(Math.random() * 5000) + 100,
     }));
 
+    // scroll.x must equal total column widths (200+150+120+130=600)
     return (
       <div>
         <div style={{ marginBottom: 12, color: '#666', fontSize: 13 }}>
           10,000 rows with virtual scrolling
         </div>
         <VirtualTable
-          columns={columns}
+          columns={virtualColumns}
           dataSource={largeData}
           rowKey="id"
-          scroll={{ x: 800, y: 400 }}
+          scroll={{ x: 600, y: 400 }}
           pagination={false}
         />
       </div>

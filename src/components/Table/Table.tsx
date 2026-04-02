@@ -3,6 +3,7 @@ import classnames, { joinCls } from '@/utils/classnames';
 import { Pagination } from '@/components/Pagination';
 import { InternalRcTable } from './internal';
 import {
+  TABLE_BLOCK,
   TABLE_DEFAULT_PREFIX,
   TABLE_DEFAULT_SIZE,
   TABLE_DEFAULT_VARIANT,
@@ -39,8 +40,7 @@ const TableBase = forwardRef<TableRef, TableProps<any>>((props, ref) => {
     ...rest
   } = props;
 
-  const cls = classnames(prefixCls);
-  const kernelPrefixCls = cls();
+  const cls = classnames(TABLE_BLOCK);
   const getRowKey = (record: any, index: number) => (
     typeof rowKey === 'function' ? rowKey(record) : record[rowKey ?? 'key'] ?? index
   );
@@ -92,6 +92,8 @@ const TableBase = forwardRef<TableRef, TableProps<any>>((props, ref) => {
     ) : (
       <HeaderCell
         column={column}
+        size={size}
+        sortOrder={pipeline.sorter.columnKey === column.key ? pipeline.sorter.order ?? null : null}
         onSortClick={() => pipeline.setSorter(currentSorter => ({
           columnKey: column.key,
           order:
@@ -123,8 +125,8 @@ const TableBase = forwardRef<TableRef, TableProps<any>>((props, ref) => {
       <InternalRcTable
         {...(rest as object)}
         ref={ref as any}
-        prefixCls={kernelPrefixCls}
-        className={joinCls(cls(size), cls(variant), className)}
+        prefixCls={prefixCls}
+        className={joinCls(cls(), cls(size), cls(variant), className)}
         columns={renderedColumns as any}
         data={pipeline.currentDataSource}
         rowKey={rowKey as any}
@@ -145,16 +147,18 @@ const TableBase = forwardRef<TableRef, TableProps<any>>((props, ref) => {
         } as any) : undefined}
       />
       {pagination !== false ? (
-        <Pagination
-          total={pipeline.total}
-          pageSize={resolvedPagination.pageSize}
-          current={resolvedPagination.current}
-          onChange={(nextPage, nextPageSize) => pipeline.setPagination(currentPagination => ({
-            ...currentPagination,
-            current: nextPage,
-            pageSize: nextPageSize,
-          }))}
-        />
+        <div className={`${prefixCls}-pagination`}>
+          <Pagination
+            total={pipeline.total}
+            pageSize={resolvedPagination.pageSize}
+            current={resolvedPagination.current}
+            onChange={(nextPage, nextPageSize) => pipeline.setPagination(currentPagination => ({
+              ...currentPagination,
+              current: nextPage,
+              pageSize: nextPageSize,
+            }))}
+          />
+        </div>
       ) : null}
     </>
   );

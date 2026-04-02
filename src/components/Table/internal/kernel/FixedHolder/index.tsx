@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useContext } from '../selector-context';
 import { clsx } from 'clsx';
-import { fillRef } from '@rc-component/util/lib/ref';
+import { fillRef } from '@/utils/ref';
 import * as React from 'react';
 import { useMemo } from 'react';
 import ColGroup from '../ColGroup';
