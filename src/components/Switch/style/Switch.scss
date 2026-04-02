@@ -10,7 +10,7 @@ $thumb-travel: $track-width - $thumb-size - $thumb-offset * 2;
 .#{theme.$prefix}-#{$component} {
   display: inline-flex;
   gap: theme.spacing(gap, 300);
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
 
   // ── Track wrapper (contains hidden input + visual track) ──
@@ -117,11 +117,7 @@ $thumb-travel: $track-width - $thumb-size - $thumb-offset * 2;
   // ── Right label placement (label after switch) ──
   &-right {
     .#{theme.$prefix}-#{$component}-track-wrapper {
-      order: 1;
-    }
-
-    .#{theme.$prefix}-#{$component}-content {
-      order: 0;
+      order: -1;
     }
   }
 }

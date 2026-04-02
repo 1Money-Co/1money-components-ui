@@ -1,0 +1,174 @@
+@use '@/styles/api' as theme;
+
+$component: 'nav';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100%;
+  padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
+  background-color: theme.palette(bg, 'default');
+  border-right: 1px solid theme.palette(border, 'neutral');
+
+  // ── Content ──
+  &-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  // ── Divider ──
+  &-divider {
+    height: 1px;
+    background-color: theme.palette(border, 'neutral');
+  }
+
+  // ── Group ──
+  &-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-group-header {
+    display: flex;
+    align-items: center;
+    min-height: theme.sizing(component-height, 'md');
+    padding: theme.spacing(scale, 200) theme.spacing(scale, 400);
+    color: theme.palette(text, 'default-secondary');
+    border-radius: theme.shape(300);
+  }
+
+  &-group-header-content {
+    display: flex;
+    flex: 1;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    min-width: 0;
+  }
+
+  &-group-header-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    color: theme.palette(icon, 'default-secondary');
+  }
+
+  &-group-header-label {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-group-header .#{theme.$prefix}-typography {
+    color: inherit;
+  }
+
+  // ── Item ──
+  &-item-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-item {
+    display: flex;
+    gap: theme.spacing(scale, 600);
+    align-items: center;
+    width: 100%;
+    min-height: theme.sizing(component-height, 'md');
+    padding: theme.spacing(scale, 200) theme.spacing(scale, 400);
+    padding-left: calc(#{theme.spacing(scale, 400)} + var(--om-nav-indent, 0) * #{theme.spacing(scale, 600)});
+    color: theme.palette(text, 'default-secondary');
+    background-color: transparent;
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    .#{theme.$prefix}-typography {
+      color: inherit;
+    }
+
+    // L2 hover: text turns brand blue
+    &[data-depth='1']:hover:not(:disabled) {
+      color: theme.palette(text, 'brand');
+    }
+
+    // L3+ hover: text darkens to default
+    &:not([data-depth='1']):hover:not(:disabled) {
+      color: theme.palette(text, 'default');
+    }
+
+    &-content {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      min-width: 0;
+    }
+
+    &-label {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: left;
+      text-overflow: ellipsis;
+    }
+
+    &-suffix {
+      flex-shrink: 0;
+    }
+
+    &-arrow {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      color: theme.palette(icon, 'default-secondary');
+      transition: transform 200ms ease-in-out;
+
+      &-open {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &-link {
+      display: flex;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    // ── Active (selected) state ──
+    &-active {
+      color: theme.palette(text, 'brand');
+    }
+
+    // ── Disabled state ──
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+
+      &:hover {
+        color: theme.palette(text, 'disabled');
+      }
+    }
+  }
+
+  // ── Submenu (expandable children) ──
+  &-submenu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 200ms ease-in-out;
+
+    &-open {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &-submenu-inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}

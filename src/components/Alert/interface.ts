@@ -50,9 +50,6 @@ export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   /** Whether to show the status icon. Defaults to true. */
   showIcon?: boolean;
 
-  /** Optional action element (e.g., a button) displayed before the close button */
-  action?: ReactNode;
-
   /** Whether to show the close button. Defaults to true. */
   closable?: boolean;
 

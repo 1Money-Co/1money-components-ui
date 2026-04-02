@@ -30,6 +30,8 @@ export const Switch: FC<SwitchProps> = props => {
     labelPlacement = SWITCH_DEFAULT_LABEL_PLACEMENT,
     onChange,
     ref,
+    'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledBy,
     ...rest
   } = props;
 
@@ -41,6 +43,13 @@ export const Switch: FC<SwitchProps> = props => {
   const classes = classnames(prefixCls);
   const labelColor = disabled ? SWITCH_LABEL_COLOR_DISABLED : SWITCH_LABEL_COLOR_DEFAULT;
   const descriptionColor = disabled ? SWITCH_DESCRIPTION_COLOR_DISABLED : SWITCH_DESCRIPTION_COLOR_DEFAULT;
+
+  const inferredAriaLabel =
+    typeof label === 'string' || typeof label === 'number'
+      ? String(label)
+      : typeof description === 'string' || typeof description === 'number'
+        ? String(description)
+        : undefined;
 
   const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
     if (disabled) return;
@@ -58,6 +67,8 @@ export const Switch: FC<SwitchProps> = props => {
         role="switch"
         id={id}
         name={name}
+        aria-label={ariaLabel ?? inferredAriaLabel}
+        aria-labelledby={ariaLabelledBy}
         disabled={disabled}
         checked={innerChecked}
         onChange={handleChange}
@@ -88,8 +99,8 @@ export const Switch: FC<SwitchProps> = props => {
         ),
       )}
     >
-      {switchElement}
       {labelElement}
+      {switchElement}
     </label>
   );
 };

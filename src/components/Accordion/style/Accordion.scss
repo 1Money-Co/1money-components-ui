@@ -79,7 +79,7 @@ $component: 'accordion';
   // Variant: Stroke
   // ══════════════════════════════════════
   &-stroke {
-    gap: theme.spacing(gap, '050');
+    gap: 0;
 
     .#{theme.$prefix}-#{$component}-item {
       padding: theme.spacing(component-padding, 600) 0;
@@ -99,14 +99,8 @@ $component: 'accordion';
   // Size: Large
   // ══════════════════════════════════════
   &-large {
-    .#{theme.$prefix}-#{$component}-title {
-      @include theme.typography(headline, sm);
-    }
-
     .#{theme.$prefix}-#{$component}-content {
       margin-top: theme.spacing(gap, 600);
-
-      @include theme.typography(body, lg);
     }
 
     &.#{theme.$prefix}-#{$component}-fill {
@@ -120,14 +114,8 @@ $component: 'accordion';
   // Size: Small
   // ══════════════════════════════════════
   &-small {
-    .#{theme.$prefix}-#{$component}-title {
-      @include theme.typography(title, md, $strong: true);
-    }
-
     .#{theme.$prefix}-#{$component}-content {
       margin-top: theme.spacing(gap, 400);
-
-      @include theme.typography(body, md);
     }
 
     &.#{theme.$prefix}-#{$component}-fill {

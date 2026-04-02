@@ -193,6 +193,11 @@ metadata:
 
 - **Do NOT invoke** the `1money-components-ui` or `figma-1money-codegen` skills during this workflow. This skill is self-contained and already includes all necessary Figma extraction steps and component implementation patterns.
 
+### Typography Rules
+
+- **Use Typography component**: When rendering text, prefer `src/components/Typography` over raw HTML elements (`<span>`, `<p>`, `<h1>`–`<h6>`, etc.). Import as `import { Typography } from '@/components/Typography';`.
+- **Consistency**: The Typography component ensures consistent font family, sizes, weights, and line heights across all components via the design system.
+
 ### Icon Rules
 
 - **Reuse first**: Always check existing `Icons` component (`src/components/Icons/SVGs.tsx`) before creating inline SVGs or importing external icon libraries.

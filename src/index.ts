@@ -1,7 +1,11 @@
 export { Accordion } from './components/Accordion';
 export { Alert } from './components/Alert';
 export { Button } from './components/Button';
+export { Calendar } from './components/Calendar';
+export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
+export { CoachMark } from './components/CoachMark';
+export { Copy } from './components/Copy';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
 export { Form, FormItem, useForm, useFormContext, useFormCore } from './components/Form';
@@ -11,6 +15,7 @@ export { Input } from './components/Input';
 export { Drawer } from './components/Drawer';
 export { Dropdown } from './components/Dropdown';
 export { Modal } from './components/Modal';
+export { Navigation, Nav } from './components/Navigation';
 export { notification } from './components/Notification';
 export {
   Portal,
@@ -38,6 +43,7 @@ export { Progress } from './components/Progress';
 export { Radio, RadioGroup } from './components/Radio';
 export { Select } from './components/Select';
 export { Segment } from './components/Segment';
+export { Slider } from './components/Slider';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
 export { Step } from './components/Step';
@@ -47,14 +53,18 @@ export { VirtualList } from './components/VirtualList';
 export { ResizeObserver, useResizeObserver } from './components/ResizeObserver';
 export { Tabs } from './components/Tabs';
 export { Tag } from './components/Tag';
+export { Tour } from './components/Tour';
 export { Typography } from './components/Typography';
 export { Tooltip } from './components/Tooltip';
 export { Trigger } from './components/Trigger';
+export { Upload, UploadFileBar } from './components/Upload';
 export { usePagination } from './components/Pagination';
 
 export type { AccordionProps, AccordionItem } from './components/Accordion';
 export type { AlertProps, AlertStatus, AlertLinkConfig } from './components/Alert';
 export type { ButtonProps } from './components/Button';
+export type { CalendarProps } from './components/Calendar';
+export type { CarouselProps } from './components/Carousel';
 export type {
   CheckboxChangeEvent,
   CheckboxProps,
@@ -62,6 +72,8 @@ export type {
   CheckboxGroupProps,
   CheckboxGroupOption,
 } from './components/Checkbox';
+export type { CoachMarkProps, CoachMarkPlacement, CoachMarkStep, CoachMarkLabels } from './components/CoachMark';
+export type { CopyProps } from './components/Copy';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
 export type {
@@ -99,6 +111,7 @@ export type {
   DropdownTrigger,
 } from './components/Dropdown';
 export type { ModalProps, ModalSize, ModalFooterRender } from './components/Modal';
+export type { NavigationProps, NavigationItem, NavigationHandlers, NavProps, NavItem } from './components/Navigation';
 export type {
   NotificationLinkConfig,
   NotificationStatus,
@@ -151,6 +164,7 @@ export type {
   SelectValue,
 } from './components/Select';
 export type { SegmentProps, SegmentItem } from './components/Segment';
+export type { SliderProps } from './components/Slider';
 export type { SpaceProps } from './components/Space';
 export type { SpinnerProps } from './components/Spinner';
 export type { StepProps, StepItem, StepStatus, StepTagConfig } from './components/Step';
@@ -193,6 +207,7 @@ export type {
   TypographyTitleProps,
   TypographyTitleSize,
 } from './components/Typography';
+export type { TourProps, TourStep } from './components/Tour';
 export type { TooltipProps, TooltipPlacement } from './components/Tooltip';
 export type {
   TriggerProps,
@@ -201,6 +216,10 @@ export type {
   TriggerContentContext,
   TriggerRole,
 } from './components/Trigger';
+export type {
+  UploadProps,
+  UploadFileBarProps,
+} from './components/Upload';
 export type {
   ProFormProps,
   ProFormFieldProps,

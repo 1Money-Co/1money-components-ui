@@ -1,0 +1,443 @@
+@use '@/styles/api' as theme;
+
+$component: 'navigation';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(scale, 600);
+  width: 280px;
+  height: 100%;
+  padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
+  background-color: theme.palette(bg, 'default');
+  border-right: 1px solid theme.palette(border, 'neutral');
+  transition: width 150ms ease-in-out;
+
+  // ── Header ──
+  &-header {
+    display: flex;
+    align-items: center;
+    padding: 0 theme.spacing(scale, 200);
+  }
+
+  // ── Selector (company dropdown) ──
+  &-selector {
+    display: flex;
+    gap: theme.spacing(scale, 600);
+    align-items: center;
+    height: 40px;
+    padding: theme.spacing(scale, 200) theme.spacing(scale, 300);
+    background-color: theme.palette(bg, 'default-secondary');
+    border-radius: theme.shape(300);
+    cursor: pointer;
+  }
+
+  // ── Nav (flex-1 scrollable area) ──
+  &-nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: theme.spacing(scale, 600);
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  // ── Menu ──
+  &-menu {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    min-height: 0;
+  }
+
+  // ── Item wrapper ──
+  &-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+  }
+
+  // ── Item (Level 1) ──
+  &-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: theme.spacing(scale, 200) theme.spacing(scale, 400);
+    color: theme.palette(text, 'default-secondary');
+    background-color: transparent;
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    &-content {
+      display: flex;
+      flex: 1;
+      gap: theme.spacing(gap, 200);
+      align-items: center;
+      min-width: 0;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'default-hover');
+    }
+
+    &-icon {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      color: theme.palette(icon, 'default-secondary');
+    }
+
+    &-label {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: left;
+      text-overflow: ellipsis;
+    }
+
+    // Override Typography base color so items inherit from the button
+    .#{theme.$prefix}-typography {
+      color: inherit;
+    }
+
+    &-suffix {
+      flex-shrink: 0;
+    }
+
+    &-link {
+      display: flex;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &-arrow {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      color: theme.palette(icon, 'default-secondary');
+      transition: transform 200ms ease-in-out;
+
+      &-open {
+        transform: rotate(-180deg);
+      }
+    }
+
+    // ── Expandable (has children) ──
+    &-expandable {
+      .#{theme.$prefix}-#{$component}-item-content {
+        flex: 1;
+      }
+    }
+
+    // ── Active state ──
+    &-active {
+      color: theme.palette(text, 'default');
+      background-color: theme.palette(bg, 'brand-tertiary');
+
+      .#{theme.$prefix}-#{$component}-item-icon {
+        color: theme.palette(icon, 'default');
+      }
+
+      &:hover:not(:disabled) {
+        background-color: theme.palette(bg, 'brand-tertiary-hover');
+      }
+    }
+
+    // ── Disabled state ──
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+
+      .#{theme.$prefix}-#{$component}-item-icon {
+        color: theme.palette(icon, 'disabled');
+      }
+
+      .#{theme.$prefix}-#{$component}-item-arrow {
+        color: theme.palette(icon, 'disabled');
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // ── Submenu (Level 2) ──
+  &-submenu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 200ms ease-in-out;
+
+    &-open {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &-submenu-inner {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    overflow: hidden;
+  }
+
+  &-submenu-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: theme.spacing(scale, 200) theme.spacing(scale, 400) theme.spacing(scale, 200) theme.spacing(scale, 1000);
+    color: theme.palette(text, 'default-secondary');
+    background-color: transparent;
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    .#{theme.$prefix}-typography {
+      color: inherit;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'default-hover');
+    }
+
+    &-active {
+      color: theme.palette(text, 'default');
+      background-color: theme.palette(bg, 'brand-tertiary');
+
+      .#{theme.$prefix}-#{$component}-item-icon {
+        color: theme.palette(icon, 'default');
+      }
+
+      &:hover:not(:disabled) {
+        background-color: theme.palette(bg, 'brand-tertiary-hover');
+      }
+    }
+
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+
+      .#{theme.$prefix}-#{$component}-item-icon {
+        color: theme.palette(icon, 'disabled');
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // ── Collapsed Submenu (popover) ──
+  &-collapsed-submenu-panel.om-trigger-panel {
+    margin-top: -12px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &-collapsed-submenu {
+    display: flex;
+    flex-direction: column;
+    min-width: 196px;
+    padding: 0;
+    background-color: theme.palette(bg, 'default-secondary');
+    border-radius: theme.shape(300);
+    box-shadow: 0 10px 22px 0 rgba(0, 0, 0, 10%);
+  }
+
+  &-collapsed-submenu-item {
+    display: flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    width: 100%;
+    padding: theme.spacing(scale, 300) theme.spacing(scale, 300);
+    color: theme.palette(text, 'default-secondary');
+    background-color: transparent;
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    .#{theme.$prefix}-typography {
+      color: inherit;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'default-hover');
+    }
+
+    &-active {
+      color: theme.palette(text, 'default');
+      background-color: theme.palette(bg, 'neutral-tertiary');
+
+      .#{theme.$prefix}-#{$component}-item-icon {
+        color: theme.palette(icon, 'default');
+      }
+    }
+
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+
+      .#{theme.$prefix}-#{$component}-item-icon {
+        color: theme.palette(icon, 'disabled');
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &-collapsed-submenu-divider {
+    height: 1px;
+    margin: 0 theme.spacing(scale, 300);
+    background-color: theme.palette(border, 'neutral');
+  }
+
+  // ── Settings section ──
+  &-settings {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    overflow: clip;
+  }
+
+  // ── Divider line ──
+  &-divider {
+    height: 1px;
+    margin: 0 theme.spacing(scale, 300);
+    background-color: theme.palette(border, 'neutral');
+  }
+
+  // ── Collapse toggle ──
+  &-collapse-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: theme.spacing(scale, 200);
+    color: theme.palette(icon, 'default-secondary');
+    background-color: theme.palette(bg, 'default-secondary');
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    &:hover {
+      background-color: theme.palette(bg, 'default-secondary-hover');
+    }
+  }
+
+  // ── Collapsed Menu Item ──
+  &-collapsed-item {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: theme.spacing(scale, 200);
+    color: theme.palette(text, 'default-secondary');
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    border-radius: theme.shape(300);
+    cursor: pointer;
+
+    .#{theme.$prefix}-typography {
+      color: inherit;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'neutral-tertiary');
+    }
+
+    &-icon {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      color: theme.palette(icon, 'default-secondary');
+    }
+
+    &-label {
+      width: 100%;
+      text-align: center;
+      overflow-wrap: break-word;
+    }
+
+    // ── Active state ──
+    &-active {
+      color: theme.palette(text, 'default');
+      background-color: theme.palette(bg, 'brand-tertiary');
+
+      .#{theme.$prefix}-#{$component}-collapsed-item-icon {
+        color: theme.palette(icon, 'default');
+      }
+
+      &:hover:not(:disabled) {
+        background-color: theme.palette(bg, 'brand-tertiary-hover');
+      }
+    }
+
+    // ── Disabled state ──
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+
+      .#{theme.$prefix}-#{$component}-collapsed-item-icon {
+        color: theme.palette(icon, 'disabled');
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // ── Collapsed state ──
+  &-collapsed {
+    align-items: center;
+    width: 84px;
+    padding: theme.spacing(scale, 1000) theme.spacing(scale, 100) theme.spacing(scale, 600);
+
+    .#{theme.$prefix}-#{$component}-header {
+      justify-content: center;
+      padding: 0;
+    }
+
+    .#{theme.$prefix}-#{$component}-selector {
+      flex-direction: column;
+      gap: theme.spacing(gap, 100);
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      padding: theme.spacing(scale, 200);
+    }
+
+    .#{theme.$prefix}-#{$component}-nav {
+      align-items: center;
+      width: 100%;
+    }
+
+    .#{theme.$prefix}-#{$component}-menu {
+      gap: theme.spacing(gap, 200);
+      align-items: center;
+      width: 100%;
+    }
+
+    .#{theme.$prefix}-#{$component}-settings {
+      gap: theme.spacing(gap, 200);
+      align-items: center;
+      width: 100%;
+    }
+
+    .#{theme.$prefix}-#{$component}-divider {
+      margin: 0 theme.spacing(scale, 100);
+    }
+  }
+}

@@ -9,9 +9,19 @@ exports[`Switch renders checked state 1`] = `
         class="om-react-ui-switch om-react-ui-switch-checked"
       >
         <span
+          class="om-react-ui-switch-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
+          >
+            Checked
+          </span>
+        </span>
+        <span
           class="om-react-ui-switch-track-wrapper"
         >
           <input
+            aria-label="Checked"
             checked=""
             class="om-react-ui-switch-input"
             role="switch"
@@ -26,15 +36,6 @@ exports[`Switch renders checked state 1`] = `
             />
           </span>
         </span>
-        <span
-          class="om-react-ui-switch-content"
-        >
-          <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
-          >
-            Checked
-          </span>
-        </span>
       </label>
     </div>
   </body>,
@@ -43,9 +44,19 @@ exports[`Switch renders checked state 1`] = `
       class="om-react-ui-switch om-react-ui-switch-checked"
     >
       <span
+        class="om-react-ui-switch-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
+        >
+          Checked
+        </span>
+      </span>
+      <span
         class="om-react-ui-switch-track-wrapper"
       >
         <input
+          aria-label="Checked"
           checked=""
           class="om-react-ui-switch-input"
           role="switch"
@@ -58,15 +69,6 @@ exports[`Switch renders checked state 1`] = `
           <span
             class="om-react-ui-switch-thumb"
           />
-        </span>
-      </span>
-      <span
-        class="om-react-ui-switch-content"
-      >
-        <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
-        >
-          Checked
         </span>
       </span>
     </label>
@@ -134,9 +136,19 @@ exports[`Switch renders correctly 1`] = `
         class="om-react-ui-switch"
       >
         <span
+          class="om-react-ui-switch-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
+          >
+            Test Label
+          </span>
+        </span>
+        <span
           class="om-react-ui-switch-track-wrapper"
         >
           <input
+            aria-label="Test Label"
             class="om-react-ui-switch-input"
             role="switch"
             type="checkbox"
@@ -150,15 +162,6 @@ exports[`Switch renders correctly 1`] = `
             />
           </span>
         </span>
-        <span
-          class="om-react-ui-switch-content"
-        >
-          <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
-          >
-            Test Label
-          </span>
-        </span>
       </label>
     </div>
   </body>,
@@ -167,9 +170,19 @@ exports[`Switch renders correctly 1`] = `
       class="om-react-ui-switch"
     >
       <span
+        class="om-react-ui-switch-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
+        >
+          Test Label
+        </span>
+      </span>
+      <span
         class="om-react-ui-switch-track-wrapper"
       >
         <input
+          aria-label="Test Label"
           class="om-react-ui-switch-input"
           role="switch"
           type="checkbox"
@@ -181,15 +194,6 @@ exports[`Switch renders correctly 1`] = `
           <span
             class="om-react-ui-switch-thumb"
           />
-        </span>
-      </span>
-      <span
-        class="om-react-ui-switch-content"
-      >
-        <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
-        >
-          Test Label
         </span>
       </span>
     </label>
@@ -257,9 +261,19 @@ exports[`Switch renders disabled state 1`] = `
         class="om-react-ui-switch om-react-ui-switch-disabled"
       >
         <span
+          class="om-react-ui-switch-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled"
+          >
+            Disabled
+          </span>
+        </span>
+        <span
           class="om-react-ui-switch-track-wrapper"
         >
           <input
+            aria-label="Disabled"
             class="om-react-ui-switch-input"
             disabled=""
             role="switch"
@@ -274,15 +288,6 @@ exports[`Switch renders disabled state 1`] = `
             />
           </span>
         </span>
-        <span
-          class="om-react-ui-switch-content"
-        >
-          <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled"
-          >
-            Disabled
-          </span>
-        </span>
       </label>
     </div>
   </body>,
@@ -291,9 +296,19 @@ exports[`Switch renders disabled state 1`] = `
       class="om-react-ui-switch om-react-ui-switch-disabled"
     >
       <span
+        class="om-react-ui-switch-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled"
+        >
+          Disabled
+        </span>
+      </span>
+      <span
         class="om-react-ui-switch-track-wrapper"
       >
         <input
+          aria-label="Disabled"
           class="om-react-ui-switch-input"
           disabled=""
           role="switch"
@@ -306,15 +321,6 @@ exports[`Switch renders disabled state 1`] = `
           <span
             class="om-react-ui-switch-thumb"
           />
-        </span>
-      </span>
-      <span
-        class="om-react-ui-switch-content"
-      >
-        <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled"
-        >
-          Disabled
         </span>
       </span>
     </label>
@@ -382,9 +388,24 @@ exports[`Switch renders disabled state with description 1`] = `
         class="om-react-ui-switch om-react-ui-switch-disabled"
       >
         <span
+          class="om-react-ui-switch-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled"
+          >
+            Disabled
+          </span>
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled"
+          >
+            Description
+          </span>
+        </span>
+        <span
           class="om-react-ui-switch-track-wrapper"
         >
           <input
+            aria-label="Disabled"
             class="om-react-ui-switch-input"
             disabled=""
             role="switch"
@@ -399,20 +420,6 @@ exports[`Switch renders disabled state with description 1`] = `
             />
           </span>
         </span>
-        <span
-          class="om-react-ui-switch-content"
-        >
-          <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled"
-          >
-            Disabled
-          </span>
-          <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled"
-          >
-            Description
-          </span>
-        </span>
       </label>
     </div>
   </body>,
@@ -420,24 +427,6 @@ exports[`Switch renders disabled state with description 1`] = `
     <label
       class="om-react-ui-switch om-react-ui-switch-disabled"
     >
-      <span
-        class="om-react-ui-switch-track-wrapper"
-      >
-        <input
-          class="om-react-ui-switch-input"
-          disabled=""
-          role="switch"
-          type="checkbox"
-        />
-        <span
-          aria-hidden="true"
-          class="om-react-ui-switch-track"
-        >
-          <span
-            class="om-react-ui-switch-thumb"
-          />
-        </span>
-      </span>
       <span
         class="om-react-ui-switch-content"
       >
@@ -450,6 +439,25 @@ exports[`Switch renders disabled state with description 1`] = `
           class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled"
         >
           Description
+        </span>
+      </span>
+      <span
+        class="om-react-ui-switch-track-wrapper"
+      >
+        <input
+          aria-label="Disabled"
+          class="om-react-ui-switch-input"
+          disabled=""
+          role="switch"
+          type="checkbox"
+        />
+        <span
+          aria-hidden="true"
+          class="om-react-ui-switch-track"
+        >
+          <span
+            class="om-react-ui-switch-thumb"
+          />
         </span>
       </span>
     </label>
@@ -517,23 +525,6 @@ exports[`Switch renders with description 1`] = `
         class="om-react-ui-switch"
       >
         <span
-          class="om-react-ui-switch-track-wrapper"
-        >
-          <input
-            class="om-react-ui-switch-input"
-            role="switch"
-            type="checkbox"
-          />
-          <span
-            aria-hidden="true"
-            class="om-react-ui-switch-track"
-          >
-            <span
-              class="om-react-ui-switch-thumb"
-            />
-          </span>
-        </span>
-        <span
           class="om-react-ui-switch-content"
         >
           <span
@@ -547,6 +538,24 @@ exports[`Switch renders with description 1`] = `
             Description
           </span>
         </span>
+        <span
+          class="om-react-ui-switch-track-wrapper"
+        >
+          <input
+            aria-label="Label"
+            class="om-react-ui-switch-input"
+            role="switch"
+            type="checkbox"
+          />
+          <span
+            aria-hidden="true"
+            class="om-react-ui-switch-track"
+          >
+            <span
+              class="om-react-ui-switch-thumb"
+            />
+          </span>
+        </span>
       </label>
     </div>
   </body>,
@@ -554,23 +563,6 @@ exports[`Switch renders with description 1`] = `
     <label
       class="om-react-ui-switch"
     >
-      <span
-        class="om-react-ui-switch-track-wrapper"
-      >
-        <input
-          class="om-react-ui-switch-input"
-          role="switch"
-          type="checkbox"
-        />
-        <span
-          aria-hidden="true"
-          class="om-react-ui-switch-track"
-        >
-          <span
-            class="om-react-ui-switch-thumb"
-          />
-        </span>
-      </span>
       <span
         class="om-react-ui-switch-content"
       >
@@ -583,6 +575,24 @@ exports[`Switch renders with description 1`] = `
           class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
         >
           Description
+        </span>
+      </span>
+      <span
+        class="om-react-ui-switch-track-wrapper"
+      >
+        <input
+          aria-label="Label"
+          class="om-react-ui-switch-input"
+          role="switch"
+          type="checkbox"
+        />
+        <span
+          aria-hidden="true"
+          class="om-react-ui-switch-track"
+        >
+          <span
+            class="om-react-ui-switch-thumb"
+          />
         </span>
       </span>
     </label>
@@ -650,9 +660,19 @@ exports[`Switch renders with right label placement 1`] = `
         class="om-react-ui-switch om-react-ui-switch-right"
       >
         <span
+          class="om-react-ui-switch-content"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
+          >
+            Right
+          </span>
+        </span>
+        <span
           class="om-react-ui-switch-track-wrapper"
         >
           <input
+            aria-label="Right"
             class="om-react-ui-switch-input"
             role="switch"
             type="checkbox"
@@ -666,15 +686,6 @@ exports[`Switch renders with right label placement 1`] = `
             />
           </span>
         </span>
-        <span
-          class="om-react-ui-switch-content"
-        >
-          <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
-          >
-            Right
-          </span>
-        </span>
       </label>
     </div>
   </body>,
@@ -683,9 +694,19 @@ exports[`Switch renders with right label placement 1`] = `
       class="om-react-ui-switch om-react-ui-switch-right"
     >
       <span
+        class="om-react-ui-switch-content"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
+        >
+          Right
+        </span>
+      </span>
+      <span
         class="om-react-ui-switch-track-wrapper"
       >
         <input
+          aria-label="Right"
           class="om-react-ui-switch-input"
           role="switch"
           type="checkbox"
@@ -697,15 +718,6 @@ exports[`Switch renders with right label placement 1`] = `
           <span
             class="om-react-ui-switch-thumb"
           />
-        </span>
-      </span>
-      <span
-        class="om-react-ui-switch-content"
-      >
-        <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default"
-        >
-          Right
         </span>
       </span>
     </label>
