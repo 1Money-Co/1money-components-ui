@@ -1,6 +1,8 @@
-import { forwardRef, memo, useEffect } from 'react';
+import { forwardRef, memo, useMemo, type Key, type ReactElement, type Ref } from 'react';
 import classnames, { joinCls } from '@/utils/classnames';
+import { useMemoizedFn } from '@1money/hooks';
 import { Pagination } from '@/components/Pagination';
+import { Spinner } from '@/components/Spinner';
 import { InternalRcVirtualTable } from './internal';
 import {
   TABLE_BLOCK,
@@ -11,15 +13,16 @@ import {
 import { useTableDataPipeline } from './core/useTableDataPipeline';
 import { useTableSelection } from './core/useTableSelection';
 import { useTableExpand } from './core/useTableExpand';
-import { SelectionControl } from './features/SelectionColumn';
-import { ExpandTrigger } from './features/ExpandTrigger';
-import { HeaderCell } from './renderers/HeaderCell';
-import { BodyCell } from './renderers/BodyCell';
+import { useTableColumns } from './core/useTableColumns';
 import { ExpandedRowContainer } from './renderers/ExpandedRowContainer';
 import { TableEmptyState } from './renderers/EmptyState';
-import type { TableColumn, TableRef, VirtualTableProps } from './interface';
+import type { TableRef, VirtualTableProps } from './interface';
+import type { ColumnsType as InternalColumnsType, ExpandableConfig, Reference } from './internal/kernel/interface';
 
-const VirtualTableBase = forwardRef<TableRef, VirtualTableProps<any>>((props, ref) => {
+const VirtualTableInner = <T extends Record<string, unknown> = Record<string, unknown>>(
+  props: VirtualTableProps<T>,
+  ref: Ref<TableRef>,
+) => {
   const {
     className = '',
     prefixCls = TABLE_DEFAULT_PREFIX,
@@ -42,14 +45,12 @@ const VirtualTableBase = forwardRef<TableRef, VirtualTableProps<any>>((props, re
   } = props;
 
   const cls = classnames(TABLE_BLOCK);
-  const getRowKey = (record: any, index: number) => (
-    typeof rowKey === 'function' ? rowKey(record) : record[rowKey ?? 'key'] ?? index
+  const getRowKey = useMemoizedFn(
+    (record: T, index: number): Key =>
+      typeof rowKey === 'function' ? rowKey(record) : (record[rowKey ?? 'key'] as Key) ?? index,
   );
-  const pipeline = useTableDataPipeline({
-    columns,
-    dataSource,
-    pagination,
-  });
+
+  const pipeline = useTableDataPipeline({ columns, dataSource, pagination, onChange });
   const selection = useTableSelection({
     rowSelection,
     currentDataSource: pipeline.currentDataSource,
@@ -57,100 +58,73 @@ const VirtualTableBase = forwardRef<TableRef, VirtualTableProps<any>>((props, re
   });
   const expand = useTableExpand({ expandable });
 
-  const mergedColumns: TableColumn<any>[] = [
-    ...(expandable
-      ? [{
-          key: '__expand__',
-          width: 48,
-          render: (_: unknown, record: any, index: number) => (
-            <ExpandTrigger
-              expanded={expand.mergedExpandedRowKeys.includes(getRowKey(record, index))}
-              onToggle={() => expand.triggerExpand(getRowKey(record, index), record)}
-            />
-          ),
-        }]
-      : []),
-    ...(rowSelection
-      ? [{
-          key: '__selection__',
-          width: rowSelection.columnWidth ?? 48,
-          render: (_: unknown, record: any, index: number) => (
-            <SelectionControl
-              type={rowSelection.type ?? 'checkbox'}
-              checked={selection.mergedSelectedRowKeys.includes(getRowKey(record, index))}
-              onChange={() => selection.triggerSelection(getRowKey(record, index))}
-            />
-          ),
-        }]
-      : []),
-    ...columns,
-  ];
+  const renderedColumns = useTableColumns({
+    columns,
+    size,
+    expandable,
+    mergedExpandedRowKeys: expand.mergedExpandedRowKeys,
+    triggerExpand: expand.triggerExpand,
+    rowSelection,
+    mergedSelectedRowKeys: selection.mergedSelectedRowKeys,
+    checkboxPropsMap: selection.checkboxPropsMap,
+    isAllSelected: selection.isAllSelected,
+    isIndeterminate: selection.isIndeterminate,
+    triggerSelection: selection.triggerSelection,
+    triggerSelectAll: selection.triggerSelectAll,
+    sorter: pipeline.sorter,
+    setSorter: pipeline.setSorter,
+    getRowKey,
+  });
 
-  const renderedColumns = mergedColumns.map(column => ({
-    ...column,
-    title: column.renderHeader ? (
-      column.renderHeader({ column })
-    ) : (
-      <HeaderCell
-        column={column}
-        size={size}
-        sortOrder={pipeline.sorter.columnKey === column.key ? pipeline.sorter.order ?? null : null}
-        onSortClick={() => pipeline.setSorter(currentSorter => ({
-          columnKey: column.key,
-          order:
-            currentSorter.columnKey !== column.key || currentSorter.order === null
-              ? 'ascend'
-              : currentSorter.order === 'ascend'
-                ? 'descend'
-                : null,
-        }))}
-      />
-    ),
-    render: (value: unknown, record: any, index: number) => (
-      <BodyCell column={column} value={value} record={record} index={index} />
-    ),
-  }));
   const resolvedPagination = pipeline.pagination === false
     ? { current: 1, pageSize: 10 }
     : pipeline.pagination;
 
+  const mergedExpandable = useMemo(
+    () =>
+      expandable
+        ? ({
+            ...expandable,
+            expandedRowKeys: expand.mergedExpandedRowKeys,
+            expandedRowRender: expandable.expandedRowRender
+              ? (record: T, index: number, indent: number, expanded: boolean) => (
+                  <ExpandedRowContainer>
+                    {expandable.expandedRowRender?.(record, index, indent, expanded)}
+                  </ExpandedRowContainer>
+                )
+              : undefined,
+            showExpandColumn: false,
+          } as ExpandableConfig<T>)
+        : undefined,
+    [expandable, expand.mergedExpandedRowKeys],
+  );
+
   void bordered;
-  void loading;
 
   if (typeof scroll.x !== 'number' || typeof scroll.y !== 'number') {
     console.error('VirtualTable requires numeric scroll.x and scroll.y');
   }
 
-  useEffect(() => {
-    onChange?.({ currentDataSource: pipeline.currentDataSource });
-  }, [onChange, pipeline.currentDataSource]);
-
   return (
-    <>
+    <div className={joinCls(`${prefixCls}-wrapper`, loading && `${prefixCls}-wrapper--loading`)}>
+      {loading && (
+        <div className={`${prefixCls}-loading-overlay`}>
+          <Spinner />
+        </div>
+      )}
       <InternalRcVirtualTable
         {...(rest as object)}
-        ref={ref as any}
+        ref={ref as Ref<Reference>}
         prefixCls={prefixCls}
         className={joinCls(cls(), cls(size), cls(variant), className)}
         scroll={scroll}
-        columns={renderedColumns as any}
+        columns={renderedColumns as unknown as InternalColumnsType<T>}
         data={pipeline.currentDataSource}
-        rowKey={rowKey as any}
-        emptyText={<TableEmptyState empty={empty} />}
+        rowKey={rowKey as string | ((record: T) => Key)}
+        emptyText={loading && !dataSource.length ? <span /> : <TableEmptyState empty={empty} />}
         childrenColumnName={childrenColumnName}
         indentSize={indentSize}
-        expandable={expandable ? ({
-          ...expandable,
-          expandedRowKeys: expand.mergedExpandedRowKeys,
-          expandedRowRender: expandable.expandedRowRender
-            ? (record: any, index: number, indent: number, expanded: boolean) => (
-              <ExpandedRowContainer>
-                {expandable.expandedRowRender?.(record, index, indent, expanded)}
-              </ExpandedRowContainer>
-            )
-            : undefined,
-          showExpandColumn: false,
-        } as any) : undefined}
+        expandable={mergedExpandable}
       />
       {pagination !== false ? (
         <div className={`${prefixCls}-pagination`}>
@@ -158,20 +132,28 @@ const VirtualTableBase = forwardRef<TableRef, VirtualTableProps<any>>((props, re
             total={pipeline.total}
             pageSize={resolvedPagination.pageSize}
             current={resolvedPagination.current}
-            onChange={(nextPage, nextPageSize) => pipeline.setPagination(currentPagination => ({
-              ...currentPagination,
-              current: nextPage,
-              pageSize: nextPageSize,
-            }))}
+            onChange={(nextPage, nextPageSize) =>
+              pipeline.setPagination((currentPagination) => ({
+                ...currentPagination,
+                current: nextPage,
+                pageSize: nextPageSize,
+              }))
+            }
           />
         </div>
       ) : null}
-    </>
+    </div>
   );
-});
+};
+
+type ForwardGenericVirtualTable = (<T extends Record<string, unknown> = Record<string, unknown>>(
+  props: VirtualTableProps<T> & { ref?: Ref<TableRef> },
+) => ReactElement | null) & { displayName?: string };
+
+const VirtualTableBase = forwardRef(VirtualTableInner) as ForwardGenericVirtualTable;
 
 VirtualTableBase.displayName = 'VirtualTable';
 
-export const VirtualTable = memo(VirtualTableBase);
+export const VirtualTable = memo(VirtualTableBase) as ForwardGenericVirtualTable;
 
 export default VirtualTable;

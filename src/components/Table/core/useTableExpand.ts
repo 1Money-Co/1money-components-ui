@@ -1,5 +1,5 @@
 import type { Key } from 'react';
-import { useControlledState } from '@1money/hooks';
+import { useControlledState, useMemoizedFn } from '@1money/hooks';
 import type { TableExpandableConfig } from '../interface';
 
 export const useTableExpand = <T,>({
@@ -12,7 +12,7 @@ export const useTableExpand = <T,>({
     expandable?.expandedRowKeys,
   );
 
-  const triggerExpand = (recordKey: Key, record: T) => {
+  const triggerExpand = useMemoizedFn((recordKey: Key, record: T) => {
     const expanded = mergedExpandedRowKeys.includes(recordKey);
     const nextKeys = expanded
       ? mergedExpandedRowKeys.filter(key => key !== recordKey)
@@ -21,7 +21,7 @@ export const useTableExpand = <T,>({
     setMergedExpandedRowKeys(nextKeys);
     expandable?.onExpand?.(!expanded, record);
     expandable?.onExpandedRowsChange?.(nextKeys);
-  };
+  });
 
   return {
     mergedExpandedRowKeys,

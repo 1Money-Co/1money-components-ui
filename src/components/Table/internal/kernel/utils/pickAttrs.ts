@@ -47,14 +47,14 @@ export default function pickAttrs(
     mergedConfig = { ...ariaOnly };
   }
 
-  const attrs: Record<string, any> = {};
+  const attrs: Record<string, unknown> = {};
   Object.keys(props).forEach((key) => {
     if (
       (mergedConfig.aria && (key === 'role' || match(key, ariaPrefix))) ||
       (mergedConfig.data && match(key, dataPrefix)) ||
       (mergedConfig.attr && propList.includes(key))
     ) {
-      attrs[key] = (props as any)[key];
+      attrs[key] = (props as Record<string, unknown>)[key];
     }
   });
   return attrs;

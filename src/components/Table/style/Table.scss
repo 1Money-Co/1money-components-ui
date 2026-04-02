@@ -40,6 +40,7 @@ $component: 'om-react-ui-table';
   &-tbody > tr > td {
     position: relative;
     padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+    vertical-align: middle;
     overflow-wrap: break-word;
     border-bottom: 1px solid theme.palette(border, 'default');
 
@@ -91,7 +92,7 @@ $component: 'om-react-ui-table';
   &-cell-fix-start,
   &-cell-fix-end {
     position: sticky !important;
-    z-index: 2;
+    z-index: calc(2 + var(--z-offset, 0));
     background: theme.palette(bg, 'default');
   }
 
@@ -208,6 +209,12 @@ $component: 'om-react-ui-table';
     .#{$component}-thead > tr > th,
     .#{$component}-thead > tr > td {
       background: transparent;
+    }
+
+    // Fixed cells must retain opaque background to cover scrolling content
+    .#{$component}-thead .#{$component}-cell-fix-start,
+    .#{$component}-thead .#{$component}-cell-fix-end {
+      background: theme.palette(bg, 'default');
     }
   }
 
@@ -327,4 +334,26 @@ $component: 'om-react-ui-table';
   .#{$component}-expanded-row__content {
     padding: theme.spacing(component-padding, 200) 0 theme.spacing(component-padding, 200);
   }
+}
+
+// ========================= Loading wrapper =========================
+.#{$component}-wrapper {
+  position: relative;
+}
+
+.#{$component}-wrapper--loading {
+  > .#{$component} {
+    opacity: 0.6;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+.#{$component}-loading-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

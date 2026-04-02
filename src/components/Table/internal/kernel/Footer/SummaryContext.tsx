@@ -6,7 +6,7 @@ type FlattenColumns<RecordType> = readonly (ColumnType<RecordType> & { scrollbar
 const SummaryContext = React.createContext<{
   stickyOffsets?: StickyOffsets;
   scrollColumnIndex?: number | null;
-  flattenColumns?: FlattenColumns<any>;
+  flattenColumns?: FlattenColumns<unknown>;
 }>({});
 
 export default SummaryContext;

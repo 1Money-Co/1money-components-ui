@@ -24,7 +24,7 @@ describe('VirtualTable', () => {
     render(
       <VirtualTable
         rowKey="id"
-        scroll={{ x: 800 as number, y: '240px' as any }}
+        scroll={{ x: 800, y: '240px' as unknown as number }}
         columns={[{ key: 'name', dataIndex: 'name', title: 'Name', width: 200 }]}
         dataSource={[{ id: '1', name: 'Alice' }]}
       />,
@@ -35,7 +35,7 @@ describe('VirtualTable', () => {
   });
 
   it('exposes scrollTo through the forwarded ref', () => {
-    const ref = createRef<any>();
+    const ref = createRef<{ scrollTo?: (config: unknown) => void }>();
 
     render(
       <VirtualTable
@@ -48,5 +48,19 @@ describe('VirtualTable', () => {
     );
 
     expect(typeof ref.current?.scrollTo).toBe('function');
+  });
+
+  it('renders spinner overlay when loading is true', () => {
+    const { container } = render(
+      <VirtualTable
+        rowKey="id"
+        loading
+        scroll={{ x: 800, y: 240 }}
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name', width: 200 }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+      />,
+    );
+
+    expect(container.querySelector('.om-react-ui-table-loading-overlay')).toBeTruthy();
   });
 });

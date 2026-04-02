@@ -84,7 +84,7 @@ export type Direction = 'ltr' | 'rtl';
 // SpecialString will be removed in antd@6
 export type SpecialString<T> = T | (string & NonNullable<unknown>);
 
-export type DataIndex<T = any> =
+export type DataIndex<T = unknown> =
   | DeepNamePath<T>
   | SpecialString<T>
   | number
@@ -152,7 +152,7 @@ export interface StickyOffsets {
 export type GetComponentProps<DataType> = (
   data: DataType,
   index?: number,
-) => React.HTMLAttributes<any> & React.TdHTMLAttributes<any>;
+) => React.HTMLAttributes<HTMLElement> & React.TdHTMLAttributes<HTMLElement>;
 
 type Component<P> =
   | React.ComponentType<P>

@@ -27,6 +27,12 @@ export interface TableCellContentValue {
   trailing?: ReactNode;
 }
 
+export interface TableColumnSorterConfig<T> {
+  compare: (a: T, b: T) => number;
+  /** Priority number for multi-column sort. Columns with higher values are compared first. */
+  multiple: number;
+}
+
 export interface TableColumn<T> {
   key?: Key;
   dataIndex?: keyof T | string | string[];
@@ -43,7 +49,7 @@ export interface TableColumn<T> {
     meta: TableCellRenderMeta<T>
   ) => ReactNode | TableCellContentValue;
   renderHeader?: (meta: TableHeaderRenderMeta<T>) => ReactNode;
-  sorter?: boolean | ((a: T, b: T) => number);
+  sorter?: boolean | ((a: T, b: T) => number) | TableColumnSorterConfig<T>;
   sortOrder?: TableSortOrder;
   defaultSortOrder?: Exclude<TableSortOrder, null>;
   className?: string;
@@ -60,9 +66,9 @@ export interface TableRowSelection<T> {
   selectedRowKeys?: Key[];
   defaultSelectedRowKeys?: Key[];
   onChange?: (selectedRowKeys: Key[], selectedRows: T[]) => void;
+  getCheckboxProps?: (record: T) => Partial<{ disabled: boolean }>;
   fixed?: boolean;
   columnWidth?: number | string;
-  preserveSelectedRowKeys?: boolean;
 }
 
 export interface TableExpandableConfig<T> {
@@ -71,6 +77,7 @@ export interface TableExpandableConfig<T> {
   expandedRowRender?: (record: T, index: number, indent: number, expanded: boolean) => ReactNode;
   rowExpandable?: (record: T) => boolean;
   expandRowByClick?: boolean;
+  showExpandColumn?: boolean;
   onExpand?: (expanded: boolean, record: T) => void;
   onExpandedRowsChange?: (expandedKeys: Key[]) => void;
 }

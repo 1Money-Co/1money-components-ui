@@ -60,9 +60,9 @@ const StickyScrollBar: React.ForwardRefRenderFunction<unknown, StickyScrollBarPr
     event.preventDefault();
   };
 
-  const onMouseMove = (event: any) => {
+  const onMouseMove = (event: MouseEvent) => {
     // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/buttons
-    const { buttons } = event || (window?.event as any);
+    const { buttons } = event || (window?.event as MouseEvent | undefined);
     if (!isActive || buttons === 0) {
       // If out body mouse up, we can set isActive false when mouse move
       if (isActive) {

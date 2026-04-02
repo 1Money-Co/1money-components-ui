@@ -43,7 +43,7 @@ export function findAllChildrenKeys<RecordType>(
     (list || []).forEach((item, index) => {
       keys.push(getRowKey(item, index));
 
-      dig((item as any)[childrenColumnName]);
+      dig((item as Record<string, unknown>)[childrenColumnName] as readonly RecordType[]);
     });
   }
 

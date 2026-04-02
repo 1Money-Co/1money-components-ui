@@ -16,7 +16,7 @@ const ColGroup = <RecordType,>(props: ColGroupProps<RecordType>) => {
 
   const { tableLayout } = useContext(TableContext, ['tableLayout']);
 
-  const cols: React.ReactElement<any>[] = [];
+  const cols: React.ReactElement[] = [];
   const len = columCount || columns.length;
 
   // Only insert col with width & additional props

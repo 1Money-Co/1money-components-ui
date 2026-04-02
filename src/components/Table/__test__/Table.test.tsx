@@ -45,7 +45,7 @@ describe('Table', () => {
       />,
     );
 
-    await user.click(screen.getByRole('checkbox'));
+    await user.click(screen.getByRole('checkbox', { name: 'Select row' }));
 
     expect(onChange).toHaveBeenCalledWith(['1'], [{ id: '1', name: 'Alice' }]);
   });
@@ -64,6 +64,24 @@ describe('Table', () => {
 
     await user.click(screen.getByRole('button', { name: /expand row/i }));
 
+    expect(screen.getByText('Extra Alice')).toBeInTheDocument();
+  });
+
+  it('supports hiding the default expand column for inline custom triggers', () => {
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+        expandable={{
+          showExpandColumn: false,
+          expandedRowKeys: ['1'],
+          expandedRowRender: (record: { id: string; name: string }) => <div>Extra {record.name}</div>,
+        }}
+      />,
+    );
+
+    expect(screen.queryByRole('button', { name: /expand row/i })).not.toBeInTheDocument();
     expect(screen.getByText('Extra Alice')).toBeInTheDocument();
   });
 
@@ -232,5 +250,333 @@ describe('Table', () => {
 
     expect(container.querySelector('.om-react-ui-table-small')).toBeTruthy();
     expect(container.querySelector('.om-react-ui-table-stroke')).toBeTruthy();
+  });
+
+  // ========================= Loading =========================
+
+  it('renders spinner overlay when loading is true', () => {
+    const { container } = render(
+      <Table
+        rowKey="id"
+        loading
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+      />,
+    );
+
+    expect(container.querySelector('.om-react-ui-table-wrapper--loading')).toBeTruthy();
+    expect(container.querySelector('.om-react-ui-table-loading-overlay')).toBeTruthy();
+  });
+
+  it('hides empty state when loading with empty data', () => {
+    render(
+      <Table
+        rowKey="id"
+        loading
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[]}
+      />,
+    );
+
+    expect(screen.queryByText('No data')).not.toBeInTheDocument();
+  });
+
+  it('does not show spinner when loading is false', () => {
+    const { container } = render(
+      <Table
+        rowKey="id"
+        loading={false}
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[]}
+      />,
+    );
+
+    expect(container.querySelector('.om-react-ui-table-loading-overlay')).toBeFalsy();
+  });
+
+  // ========================= Pagination =========================
+
+  it('shows only pageSize rows when pagination is configured', () => {
+    render(
+      <Table
+        rowKey="id"
+        pagination={{ pageSize: 1 }}
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+        ]}
+      />,
+    );
+
+    expect(screen.getByText('Alice')).toBeInTheDocument();
+    expect(screen.queryByText('Bob')).not.toBeInTheDocument();
+  });
+
+  it('shows all rows when pagination is false', () => {
+    render(
+      <Table
+        rowKey="id"
+        pagination={false}
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+        ]}
+      />,
+    );
+
+    expect(screen.getByText('Alice')).toBeInTheDocument();
+    expect(screen.getByText('Bob')).toBeInTheDocument();
+  });
+
+  // ========================= Selection Enhancements =========================
+
+  it('renders header checkbox for select-all when type is checkbox', () => {
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+        rowSelection={{ type: 'checkbox' }}
+      />,
+    );
+
+    expect(screen.getByRole('checkbox', { name: 'Select all rows' })).toBeInTheDocument();
+  });
+
+  it('does not render header checkbox for radio selection', () => {
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+        rowSelection={{ type: 'radio' }}
+      />,
+    );
+
+    expect(screen.queryByRole('checkbox', { name: 'Select all rows' })).not.toBeInTheDocument();
+  });
+
+  it('select-all checkbox selects all non-disabled rows', async () => {
+    const user = userEvent.setup();
+    const onChange = jest.fn();
+
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+          { id: '3', name: 'Carol' },
+        ]}
+        rowSelection={{
+          type: 'checkbox',
+          onChange,
+          getCheckboxProps: (record: { id: string }) =>
+            record.id === '2' ? { disabled: true } : {},
+        }}
+      />,
+    );
+
+    await user.click(screen.getByRole('checkbox', { name: 'Select all rows' }));
+
+    // Bob (id: 2) is disabled, so only Alice and Carol should be selected
+    expect(onChange).toHaveBeenCalledWith(
+      ['1', '3'],
+      expect.arrayContaining([
+        expect.objectContaining({ id: '1' }),
+        expect.objectContaining({ id: '3' }),
+      ]),
+    );
+  });
+
+  it('getCheckboxProps disables individual checkboxes', () => {
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+        ]}
+        rowSelection={{
+          type: 'checkbox',
+          getCheckboxProps: (record: { id: string }) =>
+            record.id === '2' ? { disabled: true } : {},
+        }}
+      />,
+    );
+
+    const rowCheckboxes = screen.getAllByRole('checkbox', { name: 'Select row' });
+    expect(rowCheckboxes[0]).not.toBeDisabled();
+    expect(rowCheckboxes[1]).toBeDisabled();
+  });
+
+  // ========================= Multi-Column Sort =========================
+
+  it('supports multi-column sort with { compare, multiple } format', async () => {
+    const user = userEvent.setup();
+    const onChange = jest.fn();
+
+    render(
+      <Table
+        rowKey="id"
+        onChange={onChange}
+        pagination={false}
+        columns={[
+          {
+            key: 'status',
+            dataIndex: 'status',
+            title: 'Status',
+            sorter: {
+              compare: (a: { status: string }, b: { status: string }) =>
+                a.status.localeCompare(b.status),
+              multiple: 2,
+            },
+          },
+          {
+            key: 'amount',
+            dataIndex: 'amount',
+            title: 'Amount',
+            sorter: {
+              compare: (a: { amount: number }, b: { amount: number }) =>
+                a.amount - b.amount,
+              multiple: 1,
+            },
+          },
+        ]}
+        dataSource={[
+          { id: '1', status: 'active', amount: 30 },
+          { id: '2', status: 'active', amount: 10 },
+          { id: '3', status: 'pending', amount: 20 },
+        ]}
+      />,
+    );
+
+    // Sort by status (ascending)
+    await user.click(screen.getByRole('button', { name: /sort status/i }));
+
+    expect(onChange).toHaveBeenCalled();
+    const lastCall = onChange.mock.calls.at(-1)?.[0].currentDataSource;
+    // active rows should come before pending
+    expect(lastCall[0].status).toBe('active');
+    expect(lastCall[lastCall.length - 1].status).toBe('pending');
+  });
+
+  // ========================= onChange Regression =========================
+
+  it('does NOT fire onChange on initial mount', () => {
+    const onChange = jest.fn();
+
+    render(
+      <Table
+        rowKey="id"
+        onChange={onChange}
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[{ id: '1', name: 'Alice' }]}
+      />,
+    );
+
+    expect(onChange).not.toHaveBeenCalled();
+  });
+
+  // ========================= Select-all Toggle Cycle =========================
+
+  it('select-all then deselect-all preserves disabled row state', async () => {
+    const user = userEvent.setup();
+    const onChange = jest.fn();
+
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+          { id: '3', name: 'Carol' },
+        ]}
+        rowSelection={{
+          type: 'checkbox',
+          onChange,
+          selectedRowKeys: [],
+          getCheckboxProps: (record: { id: string }) =>
+            record.id === '2' ? { disabled: true } : {},
+        }}
+      />,
+    );
+
+    const selectAll = screen.getByRole('checkbox', { name: 'Select all rows' });
+
+    // Select all
+    await user.click(selectAll);
+    expect(onChange).toHaveBeenLastCalledWith(
+      ['1', '3'],
+      expect.anything(),
+    );
+  });
+
+  // ========================= Indeterminate State =========================
+
+  it('shows indeterminate header checkbox when some rows are selected', () => {
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+        ]}
+        rowSelection={{
+          type: 'checkbox',
+          selectedRowKeys: ['1'],
+        }}
+      />,
+    );
+
+    const selectAll = screen.getByRole('checkbox', { name: 'Select all rows' });
+    // When indeterminate, the checkbox input should not be fully checked
+    expect(selectAll).not.toBeChecked();
+  });
+
+  // ========================= Empty DataSource =========================
+
+  it('shows empty state when dataSource is empty and not loading', () => {
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[]}
+      />,
+    );
+
+    expect(screen.getByText('No data')).toBeInTheDocument();
+  });
+
+  // ========================= Radio Selection =========================
+
+  it('radio selection replaces previous selection on click', async () => {
+    const user = userEvent.setup();
+    const onChange = jest.fn();
+
+    render(
+      <Table
+        rowKey="id"
+        columns={[{ key: 'name', dataIndex: 'name', title: 'Name' }]}
+        dataSource={[
+          { id: '1', name: 'Alice' },
+          { id: '2', name: 'Bob' },
+        ]}
+        rowSelection={{ type: 'radio', onChange }}
+      />,
+    );
+
+    const radios = screen.getAllByRole('radio');
+    await user.click(radios[0]);
+    expect(onChange).toHaveBeenLastCalledWith(['1'], expect.anything());
+
+    await user.click(radios[1]);
+    expect(onChange).toHaveBeenLastCalledWith(['2'], expect.anything());
   });
 });

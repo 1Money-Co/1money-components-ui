@@ -57,7 +57,7 @@ export default function useExpand<RecordType>(
     if (
       (props.expandable &&
         props.internalHooks === INTERNAL_HOOKS &&
-        (props.expandable as any).__PARENT_RENDER_ICON__) ||
+        (props.expandable as ExpandableConfig<RecordType> & { __PARENT_RENDER_ICON__?: boolean }).__PARENT_RENDER_ICON__) ||
       mergedData.some(
         record => record && typeof record === 'object' && record[mergedChildrenColumnName],
       )

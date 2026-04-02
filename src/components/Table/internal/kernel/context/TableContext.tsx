@@ -23,7 +23,7 @@ export { makeImmutable, responseImmutable, useImmutableMark };
 
 export type ScrollInfoType = [scrollLeft: number, scrollRange: number];
 
-export interface TableContextProps<RecordType = any> {
+export interface TableContextProps<RecordType = unknown> {
   // Scroll
   scrollX: number | string | true;
   classNames?: TableProps['classNames'];
