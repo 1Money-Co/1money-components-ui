@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { supportRef } from '@/components/ResizeObserver/utils/reactUtil';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type CompareProps<T extends React.ComponentType<any>> = (
   prevProps: Readonly<React.ComponentProps<T>>,
   nextProps: Readonly<React.ComponentProps<T>>,
@@ -22,12 +23,14 @@ export default function createImmutable() {
   /**
    * Wrapped Component will be marked as Immutable.
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function makeImmutable<T extends React.ComponentType<any>>(
     Component: T,
     shouldTriggerRender?: CompareProps<T>,
   ): T {
     const refAble = supportRef(Component);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const ImmutableComponent: React.ForwardRefRenderFunction<any, any> = (props, ref) => {
       const refProps = refAble ? { ref } : {};
       const renderTimesRef = React.useRef(0);
@@ -52,7 +55,8 @@ export default function createImmutable() {
       );
     };
 
-    ImmutableComponent.displayName = `ImmutableRoot(${(Component as any).displayName || (Component as any).name})`;
+    const componentWithMeta = Component as unknown as { displayName?: string; name?: string };
+    ImmutableComponent.displayName = `ImmutableRoot(${componentWithMeta.displayName || componentWithMeta.name})`;
 
     return refAble
       ? (React.forwardRef(ImmutableComponent) as unknown as T)
@@ -63,21 +67,25 @@ export default function createImmutable() {
    * Wrapped Component with `React.memo`.
    * But will rerender when parent with `makeImmutable` rerender.
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function responseImmutable<T extends React.ComponentType<any>>(
     Component: T,
     propsAreEqual?: CompareProps<T>,
   ): T {
     const refAble = supportRef(Component);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const ImmutableComponent: React.ForwardRefRenderFunction<any, any> = (props, ref) => {
       const refProps = refAble ? { ref } : {};
       useImmutableMark();
       return <Component {...props} {...refProps} />;
     };
 
-    ImmutableComponent.displayName = `ImmutableResponse(${(Component as any).displayName || (Component as any).name})`;
+    const componentWithMeta = Component as unknown as { displayName?: string; name?: string };
+    ImmutableComponent.displayName = `ImmutableResponse(${componentWithMeta.displayName || componentWithMeta.name})`;
 
     const Wrapped = refAble ? React.forwardRef(ImmutableComponent) : ImmutableComponent;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return React.memo(Wrapped as React.FC<any>, propsAreEqual as any) as unknown as T;
   }
 

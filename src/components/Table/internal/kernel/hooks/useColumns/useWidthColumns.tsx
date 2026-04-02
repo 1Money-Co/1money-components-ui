@@ -1,6 +1,8 @@
 // @ts-nocheck
 import * as React from 'react';
-import type { ColumnsType } from '../../interface';
+import type { ColumnsType, ColumnType } from '../../interface';
+
+type ColumnWithWidth = ColumnType<unknown> & { width?: number | string };
 
 function parseColWidth(totalWidth: number, width: string | number = '') {
   if (typeof width === 'number') {
@@ -17,18 +19,18 @@ function parseColWidth(totalWidth: number, width: string | number = '') {
  * Fill all column with width
  */
 export default function useWidthColumns(
-  flattenColumns: ColumnsType<any>,
+  flattenColumns: ColumnsType<unknown>,
   scrollWidth: number,
   clientWidth: number,
 ) {
-  return React.useMemo<[columns: ColumnsType<any>, realScrollWidth: number]>(() => {
+  return React.useMemo<[columns: ColumnsType<unknown>, realScrollWidth: number]>(() => {
     // Fill width if needed
     if (scrollWidth && scrollWidth > 0) {
       let totalWidth = 0;
       let missWidthCount = 0;
 
       // collect not given width column
-      flattenColumns.forEach((col: any) => {
+      flattenColumns.forEach((col: ColumnWithWidth) => {
         const colWidth = parseColWidth(scrollWidth, col.width);
 
         if (colWidth) {
@@ -46,12 +48,13 @@ export default function useWidthColumns(
 
       let realTotal = 0;
 
-      const filledColumns = flattenColumns.map((col: any) => {
-        const clone = {
+      const filledColumns = flattenColumns.map((col: ColumnWithWidth) => {
+        const clone: ColumnWithWidth & { width: number } = {
           ...col,
+          width: 0,
         };
 
-        const colWidth = parseColWidth(scrollWidth, clone.width);
+        const colWidth = parseColWidth(scrollWidth, col.width);
 
         if (colWidth) {
           clone.width = colWidth;
@@ -76,8 +79,8 @@ export default function useWidthColumns(
 
         restWidth = maxFitWidth;
 
-        filledColumns.forEach((col: any, index) => {
-          const colWidth = Math.floor(col.width * scale);
+        filledColumns.forEach((col, index) => {
+          const colWidth = Math.floor((col.width as number) * scale);
 
           col.width = index === filledColumns.length - 1 ? restWidth : colWidth;
 

@@ -63,17 +63,17 @@ const getTitleFromCellRenderChildren = ({
   ellipsis,
   rowType,
   children,
-}: Pick<CellProps<any>, 'ellipsis' | 'rowType' | 'children'>) => {
+}: Pick<CellProps<DefaultRecordType>, 'ellipsis' | 'rowType' | 'children'>) => {
   let title: string;
   const ellipsisConfig: CellEllipsisType = ellipsis === true ? { showTitle: true } : ellipsis;
   if (ellipsisConfig && (ellipsisConfig.showTitle || rowType === 'header')) {
     if (typeof children === 'string' || typeof children === 'number') {
       title = children.toString();
     } else if (
-      React.isValidElement<any>(children) &&
-      typeof (children.props as any)?.children === 'string'
+      React.isValidElement(children) &&
+      typeof (children.props as Record<string, unknown>)?.children === 'string'
     ) {
-      title = (children.props as any)?.children;
+      title = (children.props as Record<string, unknown>)?.children as string;
     }
   }
   return title;

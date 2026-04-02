@@ -26,7 +26,7 @@ export interface RowProps<RecordType> {
   styles: TableProps['styles']['header'];
 }
 
-const HeaderRow = <RecordType extends any>(props: RowProps<RecordType>) => {
+const HeaderRow = <RecordType,>(props: RowProps<RecordType>) => {
   const {
     cells,
     stickyOffsets,

@@ -79,23 +79,23 @@ export function useContext<ContextProps, PropName extends keyof ContextProps>(
 
 export function useContext<ContextProps, SelectorValue>(
   holder: SelectorContext<ContextProps>,
-  selector?: Selector<ContextProps, any> | (keyof ContextProps)[] | keyof ContextProps,
+  selector?: Selector<ContextProps, SelectorValue> | (keyof ContextProps)[] | keyof ContextProps,
 ) {
   const eventSelector = useEventCallback<[ContextProps], SelectorValue>(
     typeof selector === 'function'
       ? selector
       : (ctx) => {
           if (selector === undefined) {
-            return ctx as any;
+            return ctx as unknown as SelectorValue;
           }
 
           if (!Array.isArray(selector)) {
-            return ctx[selector] as any;
+            return ctx[selector] as unknown as SelectorValue;
           }
 
           const obj = {} as SelectorValue;
           selector.forEach((key) => {
-            (obj as any)[key] = ctx[key];
+            (obj as Record<keyof ContextProps, unknown>)[key] = ctx[key];
           });
           return obj;
         },

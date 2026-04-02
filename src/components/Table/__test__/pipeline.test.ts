@@ -25,3 +25,61 @@ it('applies sorting before pagination', () => {
 
   expect(result.currentDataSource.map(row => row.id)).toEqual(['4', '1']);
 });
+
+it('supports multi-column sort with { compare, multiple } format', () => {
+  const result = applyTablePipeline({
+    columns: [
+      {
+        key: 'status',
+        dataIndex: 'status',
+        sorter: {
+          compare: (a, b) => a.status.localeCompare(b.status),
+          multiple: 2,
+        },
+      },
+      {
+        key: 'amount',
+        dataIndex: 'amount',
+        sorter: {
+          compare: (a, b) => a.amount - b.amount,
+          multiple: 1,
+        },
+      },
+    ],
+    dataSource: rows,
+    sorter: { columnKey: 'status', order: 'ascend' },
+    pagination: false,
+  });
+
+  // 'hold' < 'ok' alphabetically, so hold first
+  expect(result.currentDataSource[0].status).toBe('hold');
+});
+
+it('returns unsorted data when no sorter is active', () => {
+  const result = applyTablePipeline({
+    columns: [
+      {
+        key: 'amount',
+        dataIndex: 'amount',
+        sorter: (a, b) => a.amount - b.amount,
+      },
+    ],
+    dataSource: rows,
+    sorter: {},
+    pagination: false,
+  });
+
+  expect(result.currentDataSource.map(row => row.id)).toEqual(['1', '2', '3', '4']);
+});
+
+it('returns all rows when pagination is false', () => {
+  const result = applyTablePipeline({
+    columns: [],
+    dataSource: rows,
+    sorter: {},
+    pagination: false,
+  });
+
+  expect(result.currentDataSource).toHaveLength(4);
+  expect(result.total).toBe(4);
+});

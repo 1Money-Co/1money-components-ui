@@ -1,4 +1,4 @@
-import type { TableCellContentValue } from '../interface';
+import type { TableCellContentValue, TableColumn } from '../interface';
 import { CellContent } from './CellContent';
 
 const isCellContentValue = (value: unknown): value is TableCellContentValue => {
@@ -11,9 +11,9 @@ export const BodyCell = ({
   record,
   index,
 }: {
-  column: any;
+  column: TableColumn<Record<string, unknown>>;
   value: unknown;
-  record: any;
+  record: Record<string, unknown>;
   index: number;
 }) => {
   const rendered = column.render

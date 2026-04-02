@@ -36,7 +36,7 @@ export default function useRowInfo<RecordType>(
   record: RecordType;
   rowSupportExpand: boolean;
   expandable: boolean;
-  rowProps: React.HTMLAttributes<any> & React.TdHTMLAttributes<any>;
+  rowProps: React.HTMLAttributes<HTMLElement> & React.TdHTMLAttributes<HTMLElement>;
 } {
   const context: TableContextProps = useContext(TableContext, [
     'prefixCls',

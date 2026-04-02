@@ -8,13 +8,13 @@ import { INTERNAL_HOOKS } from '../constant';
 import { makeImmutable } from '../context/TableContext';
 import type { CustomizeScrollBody, GetComponent, Reference } from '../interface';
 import Table, { DEFAULT_PREFIX, type TableProps } from '../Table';
-import Grid from './BodyGrid';
+import Grid, { type GridRef } from './BodyGrid';
 import { StaticContext } from './context';
 import getValue from '../utils/get';
 
-const renderBody: CustomizeScrollBody<any> = (rawData, props) => {
+const renderBody: CustomizeScrollBody<unknown> = (rawData, props) => {
   const { ref, onScroll } = props;
-  return <Grid ref={ref as any} data={rawData as any} onScroll={onScroll} />;
+  return <Grid ref={ref as React.Ref<GridRef>} data={rawData as unknown[]} onScroll={onScroll} />;
 };
 
 export interface VirtualTableProps<RecordType> extends Omit<TableProps<RecordType>, 'scroll'> {
@@ -94,7 +94,7 @@ const VirtualTable = <RecordType,>(
 
 export type ForwardGenericVirtualTable = (<RecordType>(
   props: TableProps<RecordType> & React.RefAttributes<Reference>,
-) => React.ReactElement<any>) & { displayName?: string };
+) => React.ReactElement) & { displayName?: string };
 
 const RefVirtualTable = React.forwardRef(VirtualTable) as ForwardGenericVirtualTable;
 

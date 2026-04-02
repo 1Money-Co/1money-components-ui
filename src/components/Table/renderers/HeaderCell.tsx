@@ -1,6 +1,6 @@
 import { SortTrigger } from '../features/SortTrigger';
 import { TABLE_DEFAULT_PREFIX } from '../constants';
-import type { TableSize, TableSortOrder } from '../interface';
+import type { TableColumn, TableSize, TableSortOrder } from '../interface';
 
 export const HeaderCell = ({
   column,
@@ -8,7 +8,7 @@ export const HeaderCell = ({
   sortOrder,
   onSortClick,
 }: {
-  column: any;
+  column: TableColumn<Record<string, unknown>>;
   size: TableSize;
   sortOrder?: TableSortOrder;
   onSortClick: () => void;

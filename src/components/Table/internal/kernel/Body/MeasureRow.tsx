@@ -11,7 +11,7 @@ export interface MeasureRowProps {
   prefixCls: string;
   onColumnResize: (key: React.Key, width: number) => void;
   columnsKey: React.Key[];
-  columns: readonly ColumnType<any>[];
+  columns: readonly ColumnType<unknown>[];
 }
 
 const MeasureRow: React.FC<MeasureRowProps> = ({
@@ -38,7 +38,7 @@ const MeasureRow: React.FC<MeasureRowProps> = ({
         {columnsKey.map(columnKey => {
           const column = columns.find(col => col.key === columnKey);
           const rawTitle = column?.title;
-          const titleForMeasure = React.isValidElement<React.RefAttributes<any>>(rawTitle)
+          const titleForMeasure = React.isValidElement<React.RefAttributes<unknown>>(rawTitle)
             ? React.cloneElement(rawTitle, { ref: null })
             : rawTitle;
           return (

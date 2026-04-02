@@ -44,7 +44,7 @@ export interface FixedHeaderProps<RecordType> extends HeaderProps<RecordType> {
   colGroup?: React.ReactNode;
 }
 
-const FixedHolder = React.forwardRef<HTMLDivElement, FixedHeaderProps<any>>((props, ref) => {
+const FixedHolder = React.forwardRef<HTMLDivElement, FixedHeaderProps<unknown>>((props, ref) => {
   if (process.env.NODE_ENV !== 'production') {
     devRenderTimes(props);
   }

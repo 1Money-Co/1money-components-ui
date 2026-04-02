@@ -96,7 +96,7 @@ export interface HeaderProps<RecordType> {
   onHeaderRow: GetComponentProps<readonly ColumnType<RecordType>[]>;
 }
 
-const Header = <RecordType extends any>(props: HeaderProps<RecordType>) => {
+const Header = <RecordType,>(props: HeaderProps<RecordType>) => {
   if (process.env.NODE_ENV !== 'production') {
     devRenderTimes(props);
   }

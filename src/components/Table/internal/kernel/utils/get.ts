@@ -1,15 +1,15 @@
 export default function get(
-  entity: any,
+  entity: unknown,
   path: (string | number | symbol)[] | readonly (string | number | symbol)[],
-) {
-  let current = entity;
+): unknown {
+  let current: unknown = entity;
 
   for (let i = 0; i < path.length; i += 1) {
     if (current === null || current === undefined) {
       return undefined;
     }
 
-    current = current[path[i]];
+    current = (current as Record<string | number | symbol, unknown>)[path[i]];
   }
 
   return current;

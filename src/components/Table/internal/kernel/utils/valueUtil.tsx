@@ -10,12 +10,12 @@ function toArray<T>(arr: T | readonly T[]): T[] {
   return (Array.isArray(arr) ? arr : [arr]) as T[];
 }
 
-export interface GetColumnKeyColumn<T = any> {
+export interface GetColumnKeyColumn<T = unknown> {
   key?: Key;
   dataIndex?: DataIndex<T>;
 }
 
-export function getColumnsKey<T = any>(columns: readonly GetColumnKeyColumn<T>[]) {
+export function getColumnsKey<T = unknown>(columns: readonly GetColumnKeyColumn<T>[]) {
   const columnKeys: React.Key[] = [];
   const keys: Record<PropertyKey, boolean> = {};
 
@@ -38,6 +38,6 @@ export function validateValue<T>(val: T) {
   return val !== null && val !== undefined;
 }
 
-export function validNumberValue(value: any) {
+export function validNumberValue(value: unknown) {
   return typeof value === 'number' && !Number.isNaN(value);
 }

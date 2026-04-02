@@ -8,7 +8,7 @@ import type { ColumnType, OnCustomizeScroll, ScrollConfig } from '../interface';
 import BodyLine from './BodyLine';
 import { GridContext, StaticContext } from './context';
 
-export interface GridProps<RecordType = any> {
+export interface GridProps<RecordType = unknown> {
   data: RecordType[];
   onScroll: OnCustomizeScroll;
 }
@@ -118,7 +118,7 @@ const Grid = React.forwardRef<GridRef, GridProps>((props, ref) => {
   });
 
   // ======================= Col/Row Span =======================
-  const getRowSpan = (column: ColumnType<any>, index: number): number => {
+  const getRowSpan = (column: ColumnType<unknown>, index: number): number => {
     const record = flattenData[index]?.record;
     const { onCell } = column;
 
@@ -129,7 +129,7 @@ const Grid = React.forwardRef<GridRef, GridProps>((props, ref) => {
     return 1;
   };
 
-  const extraRender: ListProps<any>['extraRender'] = info => {
+  const extraRender: ListProps<FlattenData<unknown>>['extraRender'] = info => {
     const { start, end, getSize, offsetY } = info;
 
     // Do nothing if no data
@@ -186,7 +186,7 @@ const Grid = React.forwardRef<GridRef, GridProps>((props, ref) => {
     }
 
     // Patch extra line on the page
-    const nodes = spanLines.map<React.ReactElement<any>>(index => {
+    const nodes = spanLines.map<React.ReactElement>(index => {
       const item = flattenData[index];
 
       const rowKey = getRowKey(item.record, index);
@@ -252,7 +252,7 @@ const Grid = React.forwardRef<GridRef, GridProps>((props, ref) => {
 
   return (
     <GridContext.Provider value={gridContext}>
-      <VirtualList<FlattenData<any>>
+      <VirtualList<FlattenData<unknown>>
         fullHeight={false}
         ref={listRef}
         prefixCls={`${tblPrefixCls}-virtual`}

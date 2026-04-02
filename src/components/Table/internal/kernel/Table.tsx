@@ -89,7 +89,7 @@ const EMPTY_SCROLL_TARGET = {};
 export type SemanticName = 'section' | 'title' | 'footer' | 'content';
 export type ComponentsSemantic = 'wrapper' | 'cell' | 'row';
 
-export interface TableProps<RecordType = any>
+export interface TableProps<RecordType = DefaultRecordType>
   extends Omit<LegacyExpandableProps<RecordType>, 'showExpandColumn'> {
   prefixCls?: string;
   className?: string;
@@ -371,9 +371,9 @@ const Table = <RecordType extends DefaultRecordType>(
               }
             }
           }
-        } else if ((scrollBodyRef.current as any)?.scrollTo) {
+        } else if ((scrollBodyRef.current as unknown as { scrollTo?: (config: ScrollConfig) => void })?.scrollTo) {
           // Pass to proxy
-          (scrollBodyRef.current as any).scrollTo(config);
+          (scrollBodyRef.current as unknown as { scrollTo: (config: ScrollConfig) => void }).scrollTo(config);
         }
       },
     };
@@ -982,9 +982,9 @@ const Table = <RecordType extends DefaultRecordType>(
   return <TableContext.Provider value={TableContextValue}>{fullTable}</TableContext.Provider>;
 };
 
-export type ForwardGenericTable = (<RecordType extends DefaultRecordType = any>(
+export type ForwardGenericTable = (<RecordType extends DefaultRecordType = DefaultRecordType>(
   props: TableProps<RecordType> & React.RefAttributes<Reference>,
-) => React.ReactElement<any>) & { displayName?: string };
+) => React.ReactElement) & { displayName?: string };
 
 const RefTable = React.forwardRef(Table) as ForwardGenericTable;
 

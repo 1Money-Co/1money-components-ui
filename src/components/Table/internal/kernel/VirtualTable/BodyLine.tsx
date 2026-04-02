@@ -10,7 +10,7 @@ import VirtualCell from './VirtualCell';
 import { StaticContext } from './context';
 import { computedExpandedClassName } from '../utils/expandUtil';
 
-export interface BodyLineProps<RecordType = any> {
+export interface BodyLineProps<RecordType = unknown> {
   data: FlattenData<RecordType>;
   index: number;
   className?: string;
@@ -40,7 +40,7 @@ const BodyLine = React.forwardRef<HTMLDivElement, BodyLineProps>((props, ref) =>
   // ========================== Expand ==========================
   const { rowSupportExpand, expanded, rowProps, expandedRowRender, expandedRowClassName } = rowInfo;
 
-  let expandRowNode: React.ReactElement<any>;
+  let expandRowNode: React.ReactElement;
   if (rowSupportExpand && expanded) {
     const expandContent = expandedRowRender(record, index, indent + 1, expanded);
 
@@ -50,7 +50,7 @@ const BodyLine = React.forwardRef<HTMLDivElement, BodyLineProps>((props, ref) =>
     if (fixColumn) {
       additionalProps = {
         style: {
-          ['--virtual-width' as any]: `${componentWidth}px`,
+          ['--virtual-width' as string]: `${componentWidth}px`,
         },
       };
     }
