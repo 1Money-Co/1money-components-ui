@@ -54,7 +54,19 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6205)",
       "Bash(git status:*)",
       "mcp__figma-remote-mcp__get_metadata",
-      "mcp__figma-remote-mcp__get_screenshot"
+      "mcp__figma-remote-mcp__get_screenshot",
+      "Bash(test:*)",
+      "mcp__figma-dev-mode-mcp-server__get_metadata",
+      "mcp__figma-dev-mode-mcp-server__get_design_context",
+      "mcp__figma-dev-mode-mcp-server__get_screenshot",
+      "Bash(npx tsc:*)",
+      "Bash(npx eslint:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__evaluate_script",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__wait_for",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_screenshot"
     ]
   }
 }

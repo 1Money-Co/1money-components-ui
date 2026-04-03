@@ -3,6 +3,7 @@ export { Alert } from './components/Alert';
 export { Button } from './components/Button';
 export { Calendar } from './components/Calendar';
 export { Carousel } from './components/Carousel';
+export { CellSelector, CellSelectorGroup } from './components/CellSelector';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
 export { CoachMark } from './components/CoachMark';
 export { Copy } from './components/Copy';
@@ -65,6 +66,7 @@ export type { AlertProps, AlertStatus, AlertLinkConfig } from './components/Aler
 export type { ButtonProps } from './components/Button';
 export type { CalendarProps } from './components/Calendar';
 export type { CarouselProps } from './components/Carousel';
+export type { CellSelectorProps, CellSelectorGroupProps } from './components/CellSelector';
 export type {
   CheckboxChangeEvent,
   CheckboxProps,

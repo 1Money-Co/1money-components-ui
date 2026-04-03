@@ -1,0 +1,183 @@
+@use '@/styles/api' as theme;
+
+$component: 'cell-selector';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  gap: theme.spacing(gap, 300);
+  align-items: center;
+  padding: theme.spacing(component-padding, 400);
+  border: 1px solid theme.palette(border, 'default');
+  border-radius: theme.shape(300);
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+
+  // ── Icon circle ──
+  &-icon-circle {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: theme.spacing(scale, 800);
+    height: theme.spacing(scale, 800);
+    color: theme.palette(icon, 'default-secondary');
+    background-color: theme.palette(bg, 'neutral-tertiary');
+    border-radius: theme.shape('full');
+  }
+
+  // ── Radio wrapper (small size only) ──
+  &-radio-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-radio-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .p-radiobutton-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: theme.spacing(scale, 400);
+      height: theme.spacing(scale, 400);
+      overflow: hidden;
+      background-color: theme.palette(bg, 'default');
+      border: 1px solid theme.palette(border, 'default-secondary');
+      border-radius: theme.shape('full');
+      transition:
+        background-color 0.2s,
+        border-color 0.2s;
+
+      .p-radiobutton-icon {
+        width: theme.spacing(scale, 200);
+        height: theme.spacing(scale, 200);
+        background-color: theme.palette(icon, 'on-brand');
+        border-radius: theme.shape('full');
+      }
+    }
+
+    &.p-radiobutton-checked .p-radiobutton-box,
+    &.p-highlight .p-radiobutton-box {
+      background-color: theme.palette(bg, 'brand');
+      border-color: theme.palette(bg, 'brand');
+    }
+
+    &.p-disabled .p-radiobutton-box {
+      background-color: theme.palette(bg, 'disabled');
+      border-color: theme.palette(border, 'disabled');
+      cursor: not-allowed;
+
+      .p-radiobutton-icon {
+        background-color: theme.palette(icon, 'disabled');
+      }
+    }
+  }
+
+  // ── Content ──
+  &-content {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &-label {
+    @include theme.typography(body, lg, $strong: true);
+
+    color: theme.palette(text, 'default');
+  }
+
+  &-description {
+    @include theme.typography(body, md);
+
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  // ── Checked state ──
+  &-checked {
+    background-color: theme.palette(bg, 'default-secondary');
+    border-color: theme.palette(border, 'brand');
+
+    .#{theme.$prefix}-#{$component}-icon-circle {
+      color: theme.palette(icon, 'on-brand');
+      background-color: theme.palette(bg, 'brand');
+    }
+  }
+
+  // ── Disabled state ──
+  &-disabled {
+    cursor: not-allowed;
+    opacity: theme.opacity('disabled');
+    pointer-events: none;
+  }
+
+  // ── Size: medium ──
+  &-medium {
+    padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+
+    .#{theme.$prefix}-#{$component}-icon-circle {
+      width: theme.spacing(scale, 600);
+      height: theme.spacing(scale, 600);
+    }
+
+    .#{theme.$prefix}-#{$component}-label {
+      @include theme.typography(body, lg);
+    }
+  }
+
+  // ── Size: small ──
+  &-small {
+    padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+  }
+
+  // ── Direction: vertical ──
+  &-vertical {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: theme.spacing(component-padding, 600) theme.spacing(component-padding, 400);
+
+    .#{theme.$prefix}-#{$component}-icon-circle {
+      width: theme.spacing(scale, 1000);
+      height: theme.spacing(scale, 1000);
+      color: inherit;
+      background-color: transparent;
+    }
+
+    &.#{theme.$prefix}-#{$component}-checked {
+      .#{theme.$prefix}-#{$component}-icon-circle {
+        color: theme.palette(icon, 'on-brand');
+        background-color: theme.palette(bg, 'brand');
+      }
+    }
+
+    .#{theme.$prefix}-#{$component}-content {
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// ── CellSelectorGroup ──
+$group-component: 'cell-selector-group';
+
+.#{theme.$prefix}-#{$group-component} {
+  display: flex;
+
+  &-vertical {
+    flex-direction: column;
+    gap: theme.spacing(gap, 600);
+  }
+
+  &-horizontal {
+    flex-flow: row wrap;
+    gap: theme.spacing(gap, 600);
+  }
+}

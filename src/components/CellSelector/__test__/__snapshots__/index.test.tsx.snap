@@ -1,0 +1,847 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CellSelector renders checked state 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-checked="true"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal om-react-ui-cell-selector-checked"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-icon-circle"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(255, 255, 255); font-style: normal; --icon-color: #FFFFFF; --icon-width: 16px; --icon-height: 16px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              shape-rendering="geometricPrecision"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21.5099 6.40005L10.12 19.7129L2.55029 12.2976L3.94985 10.8689L9.99122 16.787L19.9902 5.09985L21.5099 6.40005Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </span>
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Checked
+          </span>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-checked="true"
+      aria-disabled="false"
+      class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal om-react-ui-cell-selector-checked"
+      role="radio"
+      tabindex="0"
+    >
+      <span
+        class="om-react-ui-cell-selector-icon-circle"
+      >
+        <i
+          class="om-react-ui-icons-wrapper"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(255, 255, 255); font-style: normal; --icon-color: #FFFFFF; --icon-width: 16px; --icon-height: 16px;"
+        >
+          <svg
+            class="om-react-ui-icons"
+            fill="none"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            shape-rendering="geometricPrecision"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M21.5099 6.40005L10.12 19.7129L2.55029 12.2976L3.94985 10.8689L9.99122 16.787L19.9902 5.09985L21.5099 6.40005Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+      </span>
+      <span
+        class="om-react-ui-cell-selector-content"
+      >
+        <span
+          class="om-react-ui-cell-selector-label"
+        >
+          Checked
+        </span>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CellSelector renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-icon-circle"
+        />
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Test Label
+          </span>
+          <span
+            class="om-react-ui-cell-selector-description"
+          >
+            Test Description
+          </span>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-checked="false"
+      aria-disabled="false"
+      class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal"
+      role="radio"
+      tabindex="0"
+    >
+      <span
+        class="om-react-ui-cell-selector-icon-circle"
+      />
+      <span
+        class="om-react-ui-cell-selector-content"
+      >
+        <span
+          class="om-react-ui-cell-selector-label"
+        >
+          Test Label
+        </span>
+        <span
+          class="om-react-ui-cell-selector-description"
+        >
+          Test Description
+        </span>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CellSelector renders medium size 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-medium om-react-ui-cell-selector-horizontal"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-icon-circle"
+        />
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Medium
+          </span>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-checked="false"
+      aria-disabled="false"
+      class="om-react-ui-cell-selector om-react-ui-cell-selector-medium om-react-ui-cell-selector-horizontal"
+      role="radio"
+      tabindex="0"
+    >
+      <span
+        class="om-react-ui-cell-selector-icon-circle"
+      />
+      <span
+        class="om-react-ui-cell-selector-content"
+      >
+        <span
+          class="om-react-ui-cell-selector-label"
+        >
+          Medium
+        </span>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CellSelector renders small size 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-small om-react-ui-cell-selector-horizontal"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-radio-wrapper"
+        >
+          <div
+            class="om-react-ui-cell-selector-radio-box p-radiobutton p-component"
+            data-p-checked="false"
+            data-pc-name="radiobutton"
+            data-pc-section="root"
+          >
+            <input
+              class="p-radiobutton-input"
+              data-pc-section="input"
+              tabindex="-1"
+              type="radio"
+            />
+            <div
+              class="p-radiobutton-box"
+              data-pc-section="box"
+            >
+              <div
+                class="p-radiobutton-icon"
+                data-pc-section="icon"
+              />
+            </div>
+          </div>
+        </span>
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Small
+          </span>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-checked="false"
+      aria-disabled="false"
+      class="om-react-ui-cell-selector om-react-ui-cell-selector-small om-react-ui-cell-selector-horizontal"
+      role="radio"
+      tabindex="0"
+    >
+      <span
+        class="om-react-ui-cell-selector-radio-wrapper"
+      >
+        <div
+          class="om-react-ui-cell-selector-radio-box p-radiobutton p-component"
+          data-p-checked="false"
+          data-pc-name="radiobutton"
+          data-pc-section="root"
+        >
+          <input
+            class="p-radiobutton-input"
+            data-pc-section="input"
+            tabindex="-1"
+            type="radio"
+          />
+          <div
+            class="p-radiobutton-box"
+            data-pc-section="box"
+          >
+            <div
+              class="p-radiobutton-icon"
+              data-pc-section="icon"
+            />
+          </div>
+        </div>
+      </span>
+      <span
+        class="om-react-ui-cell-selector-content"
+      >
+        <span
+          class="om-react-ui-cell-selector-label"
+        >
+          Small
+        </span>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CellSelector renders vertical direction 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-vertical"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-icon-circle"
+        />
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Vertical
+          </span>
+          <span
+            class="om-react-ui-cell-selector-description"
+          >
+            Desc
+          </span>
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-checked="false"
+      aria-disabled="false"
+      class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-vertical"
+      role="radio"
+      tabindex="0"
+    >
+      <span
+        class="om-react-ui-cell-selector-icon-circle"
+      />
+      <span
+        class="om-react-ui-cell-selector-content"
+      >
+        <span
+          class="om-react-ui-cell-selector-label"
+        >
+          Vertical
+        </span>
+        <span
+          class="om-react-ui-cell-selector-description"
+        >
+          Desc
+        </span>
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CellSelectorGroup renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-cell-selector-group om-react-ui-cell-selector-group-vertical"
+        role="radiogroup"
+      >
+        <div
+          aria-checked="true"
+          aria-disabled="false"
+          class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal om-react-ui-cell-selector-checked"
+          role="radio"
+          tabindex="0"
+        >
+          <span
+            class="om-react-ui-cell-selector-icon-circle"
+          >
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(255, 255, 255); font-style: normal; --icon-color: #FFFFFF; --icon-width: 16px; --icon-height: 16px;"
+            >
+              <svg
+                class="om-react-ui-icons"
+                fill="none"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                shape-rendering="geometricPrecision"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M21.5099 6.40005L10.12 19.7129L2.55029 12.2976L3.94985 10.8689L9.99122 16.787L19.9902 5.09985L21.5099 6.40005Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </span>
+          <span
+            class="om-react-ui-cell-selector-content"
+          >
+            <span
+              class="om-react-ui-cell-selector-label"
+            >
+              Option A
+            </span>
+            <span
+              class="om-react-ui-cell-selector-description"
+            >
+              Desc A
+            </span>
+          </span>
+        </div>
+        <div
+          aria-checked="false"
+          aria-disabled="false"
+          class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal"
+          role="radio"
+          tabindex="0"
+        >
+          <span
+            class="om-react-ui-cell-selector-icon-circle"
+          />
+          <span
+            class="om-react-ui-cell-selector-content"
+          >
+            <span
+              class="om-react-ui-cell-selector-label"
+            >
+              Option B
+            </span>
+            <span
+              class="om-react-ui-cell-selector-description"
+            >
+              Desc B
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-cell-selector-group om-react-ui-cell-selector-group-vertical"
+      role="radiogroup"
+    >
+      <div
+        aria-checked="true"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal om-react-ui-cell-selector-checked"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-icon-circle"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(255, 255, 255); font-style: normal; --icon-color: #FFFFFF; --icon-width: 16px; --icon-height: 16px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              shape-rendering="geometricPrecision"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21.5099 6.40005L10.12 19.7129L2.55029 12.2976L3.94985 10.8689L9.99122 16.787L19.9902 5.09985L21.5099 6.40005Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </i>
+        </span>
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Option A
+          </span>
+          <span
+            class="om-react-ui-cell-selector-description"
+          >
+            Desc A
+          </span>
+        </span>
+      </div>
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="om-react-ui-cell-selector om-react-ui-cell-selector-large om-react-ui-cell-selector-horizontal"
+        role="radio"
+        tabindex="0"
+      >
+        <span
+          class="om-react-ui-cell-selector-icon-circle"
+        />
+        <span
+          class="om-react-ui-cell-selector-content"
+        >
+          <span
+            class="om-react-ui-cell-selector-label"
+          >
+            Option B
+          </span>
+          <span
+            class="om-react-ui-cell-selector-description"
+          >
+            Desc B
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -19,6 +19,16 @@
       "import": "./es/components/Cell/index.js",
       "require": "./lib/components/Cell/index.js"
     },
+    "./CellSelector": {
+      "types": "./es/components/CellSelector/index.d.ts",
+      "import": "./es/components/CellSelector/index.js",
+      "require": "./lib/components/CellSelector/index.js"
+    },
+    "./CellSelectorGroup": {
+      "types": "./es/components/CellSelector/index.d.ts",
+      "import": "./es/components/CellSelector/index.js",
+      "require": "./lib/components/CellSelector/index.js"
+    },
     "./Badge": {
       "types": "./es/components/Badge/index.d.ts",
       "import": "./es/components/Badge/index.js",
