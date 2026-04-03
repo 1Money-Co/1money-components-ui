@@ -1,11 +1,11 @@
 import { memo, useId, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
-import { FieldShell } from './FieldShell';
-import { OTP_DEFAULT_LENGTH } from './constants';
-import { useSyncRef } from './useSyncRef';
+import { FieldShell } from '../FieldShell';
+import { OTP_DEFAULT_LENGTH } from '../constants';
+import { useSyncRef } from '../useSyncRef';
 import type { ClipboardEvent, FC, KeyboardEvent, ChangeEvent } from 'react';
-import type { InputOTPProps } from './interface';
+import type { InputOTPProps } from '../interface';
 
 const DIGIT_PATTERN = /^\d$/;
 
@@ -18,8 +18,7 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
     disabled = false,
     label,
     info,
-    description,
-    feedback,
+    errorMsg,
     required,
     value,
     defaultValue = '',
@@ -118,8 +117,7 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      description={description}
-      feedback={feedback}
+      errorMsg={errorMsg}
       required={required}
       inputId={autoId}
     >

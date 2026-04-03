@@ -27,19 +27,19 @@ export const Default: Story = {
 
     return (
       <div>
-        <Button color="brand" onClick={() => setOpen(true)}>
+        <Button color="primary" onClick={() => setOpen(true)}>
           Begin Tour
         </Button>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 48, marginTop: 40, width: 500 }}>
           <div style={{ alignSelf: 'flex-start' }}>
-            <Button ref={uploadRef} variant="outlined">Upload</Button>
+            <Button ref={uploadRef} variant="text">Upload</Button>
           </div>
           <div style={{ alignSelf: 'center' }}>
-            <Button ref={saveRef} color="brand">Save</Button>
+            <Button ref={saveRef} color="primary">Save</Button>
           </div>
           <div style={{ alignSelf: 'flex-end' }}>
-            <Button ref={moreRef} variant="outlined">···</Button>
+            <Button ref={moreRef} variant="text">···</Button>
           </div>
         </div>
 

@@ -1,0 +1,62 @@
+@use '@/styles/api' as theme;
+
+$component: 'input';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+  width: 100%;
+
+  &-label-row {
+    display: inline-flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+  }
+
+  &-label {
+    display: inline;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &-required {
+    color: theme.palette(text, 'danger');
+  }
+
+  &-error-msg {
+    display: flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-error-msg-icon {
+    flex-shrink: 0;
+  }
+
+  &-control-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, '050');
+  }
+
+  // ── Status: feedback colors ──
+  &-error &-error-msg {
+    color: theme.palette(text, 'danger');
+  }
+
+  &-warning &-error-msg {
+    color: theme.palette(text, 'warning');
+  }
+
+  &-success &-error-msg {
+    color: theme.palette(text, 'positive');
+  }
+
+  // ── Disabled: text colors ──
+  &-disabled &-label,
+  &-disabled &-error-msg {
+    color: theme.palette(text, 'disabled');
+  }
+}

@@ -25,12 +25,11 @@ jest.mock('lottie-web', () => ({
 }));
 
 describe('Input', () => {
-  it('renders default input with label and feedback', () => {
+  it('renders default input with label and errorMsg', () => {
     const wrapper = render(
       <Input
         label="Amount"
-        description="0.00 USDT available"
-        feedback="Feedback"
+        errorMsg="Feedback"
         placeholder="Value"
       />,
     );
@@ -102,15 +101,16 @@ describe('Input', () => {
     expect(onSearch).toHaveBeenCalledWith('btc');
   });
 
-  it('calls onSearch from the search button', () => {
-    const onSearch = jest.fn();
-    const { getByLabelText } = render(
-      <Input.Search defaultValue="usdt" onSearch={onSearch} />,
+  it('clears search value when allowClear is enabled', () => {
+    const onClear = jest.fn();
+    const { getByLabelText, getByRole } = render(
+      <Input.Search defaultValue="usdt" allowClear onClear={onClear} />,
     );
 
-    fireEvent.click(getByLabelText('search input'));
+    fireEvent.click(getByLabelText('clear search'));
 
-    expect(onSearch).toHaveBeenCalledWith('usdt');
+    expect(getByRole('textbox')).toHaveValue('');
+    expect(onClear).toHaveBeenCalled();
   });
 
   it('renders a textarea with count', () => {
@@ -130,8 +130,8 @@ describe('Input', () => {
     expect(input.closest('.om-react-ui-input')?.querySelector('label')).toHaveAttribute('for', 'email-input');
   });
 
-  it('renders feedback with role=alert on error', () => {
-    const { getByRole } = render(<Input status="error" feedback="Required" />);
+  it('renders errorMsg with role=alert on error', () => {
+    const { getByRole } = render(<Input status="error" errorMsg="Required" />);
     expect(getByRole('alert')).toHaveTextContent('Required');
   });
 
@@ -188,5 +188,52 @@ describe('Input', () => {
     expect(inputs[0]).toHaveValue('1');
     expect(inputs[1]).toHaveValue('2');
     expect(inputs[2]).toHaveValue('');
+  });
+
+  it('renders trade input correctly', () => {
+    const wrapper = render(
+      <Input.Trade
+        currencySymbol="$"
+        currencyUnit="USD"
+        showMax
+        onSwap={jest.fn()}
+        exchangeText="0 USDT"
+      />,
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('trade input calls onMax when Max button is clicked', () => {
+    const onMax = jest.fn();
+    const { getByText } = render(
+      <Input.Trade showMax onMax={onMax} />,
+    );
+
+    fireEvent.click(getByText('Max'));
+
+    expect(onMax).toHaveBeenCalled();
+  });
+
+  it('trade input calls onSwap when swap button is clicked', () => {
+    const onSwap = jest.fn();
+    const { getByLabelText } = render(
+      <Input.Trade onSwap={onSwap} exchangeText="0 USDT" />,
+    );
+
+    fireEvent.click(getByLabelText('swap currency'));
+
+    expect(onSwap).toHaveBeenCalled();
+  });
+
+  it('trade input updates value on change', () => {
+    const onChange = jest.fn();
+    const { getByRole } = render(
+      <Input.Trade onChange={onChange} />,
+    );
+
+    fireEvent.change(getByRole('textbox'), { target: { value: '100' } });
+
+    expect(onChange).toHaveBeenCalledWith('100', expect.any(Object));
   });
 });

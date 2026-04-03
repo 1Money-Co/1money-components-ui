@@ -300,6 +300,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
     "lottie-web": "^5.12.2",
+    "react-calendar": "^6.0.0",
     "react-hook-form": "^7.54.0",
     "react-number-format": "^5.4.4",
     "react-pro-sidebar": "^1.1.0",

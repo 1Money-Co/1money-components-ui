@@ -1,0 +1,122 @@
+@use '@/styles/api' as theme;
+
+$component: 'input';
+
+.#{theme.$prefix}-#{$component} {
+  &-control {
+    display: flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: theme.sizing(component-height, '3xl');
+    padding: 0 theme.spacing(component-padding, 400);
+    background-color: theme.palette(bg, 'default-secondary');
+    border: 1px solid theme.palette(border, 'default');
+    border-radius: theme.shape(300);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  &-control:hover {
+    border-color: theme.palette(border, 'default-tertiary');
+  }
+
+  &-control:focus-within {
+    border-color: theme.palette(border, 'brand');
+    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+  }
+
+  &-control-disabled {
+    cursor: not-allowed;
+  }
+
+  &-field {
+    @include theme.typography(body, lg);
+
+    flex: 1 1 auto;
+    width: 100%;
+    color: theme.palette(text, 'default');
+    background: transparent;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: theme.palette(text, 'neutral-secondary');
+    }
+
+    &:not(:placeholder-shown) {
+      font-weight: 500;
+    }
+  }
+
+  &-prefix,
+  &-suffix {
+    display: inline-flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  &-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: theme.palette(icon, 'default-tertiary');
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-action:disabled {
+    color: theme.palette(icon, 'disabled');
+    cursor: not-allowed;
+  }
+
+  // ── Size ──
+  &-small &-control {
+    height: theme.sizing(component-height, 'lg');
+    padding: 0 theme.spacing(component-padding, 400);
+    border-radius: theme.shape(200);
+  }
+
+  &-small &-field {
+    @include theme.typography(body, md);
+  }
+
+  // ── Status ──
+  &-error &-control,
+  &-error &-control:hover,
+  &-error &-control:focus-within {
+    border-color: theme.palette(border, 'danger');
+    box-shadow: 0 0 0 1px theme.palette(border, 'danger');
+  }
+
+  &-warning &-control,
+  &-warning &-control:hover,
+  &-warning &-control:focus-within {
+    border-color: theme.palette(border, 'warning');
+    box-shadow: none;
+  }
+
+  &-success &-control,
+  &-success &-control:hover,
+  &-success &-control:focus-within {
+    border-color: theme.palette(border, 'positive');
+    box-shadow: none;
+  }
+
+  // ── Disabled ──
+  &-disabled &-control {
+    background-color: theme.palette(bg, 'disabled');
+    border-color: theme.palette(border, 'default');
+    cursor: not-allowed;
+  }
+
+  &-disabled &-field {
+    color: theme.palette(text, 'disabled');
+  }
+}
