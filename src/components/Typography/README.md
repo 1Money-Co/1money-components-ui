@@ -25,13 +25,9 @@ import { Typography } from '@1money/components-ui/Typography';
   Semantic body copy keeps product text aligned with the shared typography scale.
 </Typography.Body>
 
-<Typography.Body size="md" ellipsis={{ rows: 2, tooltip: true }}>
-  Settlement updates often include enough detail to overflow smaller UI slots.
+<Typography.Body size="md" ellipsis={{ tooltip: true }} copyable>
+  0x814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d9c8b7a6f749f
 </Typography.Body>
-
-<Typography.Title size="sm" copyable>
-  0x8f7c5d4e3b2a1908fedcba987654321001234567
-</Typography.Title>
 
 <Typography.Label size="sm" htmlFor="email">
   Email
@@ -66,8 +62,8 @@ import { Typography } from '@1money/components-ui/Typography';
 | `underline` | `boolean` | `false` | Adds underline decoration |
 | `delete` | `boolean` | `false` | Adds line-through decoration |
 | `disabled` | `boolean` | `false` | Uses disabled text styling; `Typography.Link` also blocks interaction |
-| `ellipsis` | `boolean \| TypographyEllipsisConfig` | `false` | Enables single-line truncation by default, or configures multi-line truncation and overflow tooltip behavior |
-| `copyable` | `boolean \| TypographyCopyableConfig` | `false` | Renders a persistent copy action that copies the original text or a configured override |
+| `ellipsis` | `boolean \| TypographyEllipsisConfig` | `false` | Adaptive middle ellipsis — shows full text when it fits, truncates in the middle when it overflows |
+| `copyable` | `boolean \| TypographyCopyableConfig` | `false` | Renders a copy icon next to the text; defaults to showing a success notification |
 
 `Typography.Title`, `Typography.Body`, and `Typography.Label` additionally support:
 
@@ -86,36 +82,52 @@ Supported `as` values:
 
 ## Ellipsis
 
-`ellipsis={true}` enables single-line truncation. Use the object form when you need more control:
+Adaptive middle ellipsis — automatically monitors container width via `ResizeObserver`. When the text fits, it displays in full; when it overflows, it truncates in the middle (e.g. `814f0d3a...749f`).
 
 ```tsx
-<Typography.Body size="md" ellipsis={{ rows: 2, tooltip: true }}>
-  Long body copy...
+// Default: start=8, end=4
+<Typography.Body size="md" ellipsis>
+  0x814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d749f
+</Typography.Body>
+// Fits → 0x814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d749f
+// Overflows → 0x814f0d...749f
+
+// Custom character counts
+<Typography.Body size="md" ellipsis={{ start: 6, end: 6 }}>
+  0x814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d749f
+</Typography.Body>
+// Overflows → 0x814f...0d749f
+
+// With tooltip showing full text on hover
+<Typography.Body size="md" ellipsis={{ tooltip: true }}>
+  0x814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d749f
 </Typography.Body>
 ```
 
-- `rows` defaults to `1`
-- `rows > 1` enables multi-line clamping
-- `tooltip={true}` uses the full source text as the tooltip body
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `start` | `number` | `8` | Characters to keep at the start |
+| `end` | `number` | `4` | Characters to keep at the end |
+| `tooltip` | `boolean \| TooltipProps` | `false` | Show full text in a tooltip when truncated |
+
+- Tooltip is only mounted when the text is actually truncated
 - `tooltip={TooltipProps}` lets you control placement, arrow, delays, and other tooltip options
-- Tooltip content is only mounted when the rendered text actually overflows
+- Copy always uses the original full text, not the truncated display
 
 ## Copyable
 
-`copyable={true}` adds a persistent copy action with default copy/copy-success feedback. Use the object form to override copy text, icon, labels, or reset timing:
+`copyable={true}` adds a copy icon next to the text using the `Copy` component. On success, a `notification.success` toast is shown by default.
 
 ```tsx
 <Typography.Link
   size="md"
   href="https://example.com/reference"
-  copyable={{ text: 'https://example.com/reference', duration: 1200 }}
+  copyable={{ text: 'https://example.com/reference' }}
 >
   https://example.com/reference
 </Typography.Link>
 ```
 
 - Copy defaults to the original full text content, not the visually truncated string
-- `copyable.text` overrides the copied value and is recommended when `children` contains complex nodes
-- `copyable.icon` accepts a single icon node or a `[defaultIcon, successIcon]` tuple
-- `copyable.tooltips` accepts `false` or `[defaultLabel, successLabel]`
-- `copyable.duration` controls how long the success or failure state is shown before resetting
+- `copyable.text` overrides the copied value
+- `copyable.onCopy` overrides the default success notification with a custom callback

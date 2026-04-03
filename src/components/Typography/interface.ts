@@ -75,16 +75,14 @@ export type TypographyColor = (typeof TYPOGRAPHY_COLORS)[number];
 type BaseHTMLProps = Omit<HTMLAttributes<HTMLElement>, 'children' | 'color'>;
 
 export interface TypographyEllipsisConfig {
-  rows?: number;
+  start?: number;
+  end?: number;
   tooltip?: boolean | TooltipProps;
 }
 
 export interface TypographyCopyableConfig {
   text?: string;
-  icon?: ReactNode | [ReactNode, ReactNode];
-  tooltips?: boolean | [ReactNode, ReactNode];
-  duration?: number;
-  onCopy?: (success: boolean, text: string) => void;
+  onCopy?: (value: string) => void;
 }
 
 export interface TypographyCommonProps {

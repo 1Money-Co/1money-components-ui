@@ -63,32 +63,23 @@ $link-sizes: (md, sm);
   }
 
   &-ellipsis {
+    position: relative;
+    display: block;
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &-ellipsis-inline {
-    display: inline-block;
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-    vertical-align: bottom;
-  }
-
-  &-ellipsis-block {
-    display: block;
-    width: 100%;
-    max-width: 100%;
     white-space: nowrap;
   }
 
-  &-ellipsis-multiline {
-    display: -webkit-box;
-    white-space: normal;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--om-typography-ellipsis-rows, 2);
+  &-ellipsis-measure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   &-copyable-wrapper {
@@ -113,40 +104,6 @@ $link-sizes: (md, sm);
   &-copyable-content {
     flex: 1 1 auto;
     min-width: 0;
-  }
-
-  &-copyable-action {
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    color: theme.palette(icon, 'neutral-secondary');
-    background: none;
-    border: none;
-    border-radius: theme.shape(200);
-    outline: none;
-    cursor: pointer;
-    transition:
-      color 0.2s ease,
-      opacity 0.2s ease,
-      box-shadow 0.2s ease;
-
-    &:hover {
-      color: theme.palette(icon, 'default');
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 1px theme.palette(border, 'brand');
-    }
-  }
-
-  &-copyable-action-success {
-    color: theme.palette(icon, 'positive');
-  }
-
-  &-copyable-action-error {
-    color: theme.palette(icon, 'danger');
   }
 
   // Semantic color tokens — derived from the design system's text scale

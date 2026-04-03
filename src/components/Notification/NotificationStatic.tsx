@@ -1,6 +1,7 @@
 import { type ReactElement, useEffect, useState } from 'react';
 import { MemoizedNotification } from './Notification';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import './style';
 import type {
   NotificationKey,
   NotificationOpenConfig,
