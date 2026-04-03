@@ -27,4 +27,4 @@ export interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'pr
   disabled?: boolean;
 }
 
-export type { IconName } from './Icons';
+export type { IconName, SortIconStatus } from './Icons';
