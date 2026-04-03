@@ -119,7 +119,7 @@ describe('Input', () => {
     );
 
     expect(getByRole('textbox')).toBeInTheDocument();
-    expect(getByText('5 / 10')).toBeInTheDocument();
+    expect(getByText('5/10')).toBeInTheDocument();
   });
 
   it('associates label with input via htmlFor', () => {

@@ -14,7 +14,6 @@ import {
   BUTTON_ICON_SIZE_BY_SIZE,
   BUTTON_MODIFIER,
   BUTTON_SLOT,
-  BUTTON_SPINNER_STROKE_WIDTH,
   BUTTON_TYPOGRAPHY_MAP,
   BUTTON_VARIANT,
 } from './constants';
@@ -123,7 +122,6 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const normalizedIconEnd = normalizeAdornment(iconEnd, size);
   const startAdornment = loading ? (
     <Spinner
-      strokeWidth={BUTTON_SPINNER_STROKE_WIDTH}
       className={getLoadingIconClassName(classes, size)}
     />
   ) : normalizedIconStart;
