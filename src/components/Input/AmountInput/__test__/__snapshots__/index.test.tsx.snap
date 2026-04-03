@@ -331,7 +331,7 @@ exports[`InputAmount renders with action and currency 1`] = `
                 </span>
                 <i
                   class="om-react-ui-icons-wrapper"
-                  style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+                  style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                 >
                   <svg
                     class="om-react-ui-icons"
@@ -433,7 +433,7 @@ exports[`InputAmount renders with action and currency 1`] = `
               </span>
               <i
                 class="om-react-ui-icons-wrapper"
-                style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
               >
                 <svg
                   class="om-react-ui-icons"

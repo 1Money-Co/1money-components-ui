@@ -1,6 +1,7 @@
 import Trigger from '@/components/Trigger';
 import type { FC } from 'react';
 import type { DropdownProps } from './interface';
+import './style';
 
 const Dropdown: FC<DropdownProps> = ({
   trigger = 'click',

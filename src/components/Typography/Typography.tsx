@@ -26,6 +26,7 @@ import {
   renderTypographyTextTag,
   renderWithEnhancements,
 } from './render';
+import './style';
 
 function createTypographyVariant<
   P extends TypographyCommonProps & { size: string; id?: string; style?: CSSProperties; as?: TypographyTextTag },

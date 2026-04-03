@@ -25,6 +25,7 @@ import {
   VIRTUAL_LIST_COMPONENT_NAME,
   VIRTUAL_LIST_PREFIXCLS,
 } from './constants';
+import './style';
 
 const EMPTY_DATA: any[] = [];
 

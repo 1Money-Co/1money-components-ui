@@ -3,6 +3,7 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 
 import type { CSSProperties, FC } from 'react';
 import type { SkeletonProps } from './interface';
+import './style';
 
 export const Skeleton: FC<SkeletonProps> = props => {
   const {

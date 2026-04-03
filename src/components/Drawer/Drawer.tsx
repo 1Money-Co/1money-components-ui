@@ -6,6 +6,7 @@ import { TypographyTitle } from '@/components/Typography';
 import classnames, { joinCls } from '@/utils/classnames';
 import { useComposeRef } from '@/utils/ref';
 import type { CSSProperties, ReactNode, RefObject } from 'react';
+import './style';
 import {
   CLOSE_TIMEOUT_MS,
   CONTROL_ICON_SIZE,

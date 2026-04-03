@@ -73,6 +73,9 @@ const PREVIEW_FRAME_STYLE: CSSProperties = {
 const LONG_BODY =
   'This is a long tooltip body used to verify the maximum width, text wrapping, and spacing between title and body in the design system.';
 
+const EXTRA_LONG_TEXT =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
 const meta: Meta<typeof Tooltip> = {
   title: 'Components/Tooltip',
   component: Tooltip,
@@ -240,6 +243,35 @@ export const H5WidthSpec: Story = {
     docs: {
       description: {
         story: 'Switches to a mobile viewport so the tooltip max width drops from 400px to 300px.',
+      },
+    },
+  },
+};
+
+export const LongText: Story = {
+  render: () => (
+    <div style={PREVIEW_GRID_STYLE}>
+      <TooltipPreviewCard
+        label="Long body only"
+        body={EXTRA_LONG_TEXT}
+      />
+      <TooltipPreviewCard
+        label="Long title + long body"
+        title="This is a very long tooltip title that might wrap to multiple lines"
+        body={EXTRA_LONG_TEXT}
+      />
+      <TooltipPreviewCard
+        label="Long body with placement right"
+        body={EXTRA_LONG_TEXT}
+        placement="right"
+      />
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Demonstrates tooltip behavior with extra-long text content, verifying max-width constraints, text wrapping, and overflow handling.',
       },
     },
   },

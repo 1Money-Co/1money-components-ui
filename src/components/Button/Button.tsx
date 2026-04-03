@@ -3,6 +3,7 @@ import Spinner from '@/components/Spinner';
 import { TypographyBody, TypographyHeadline } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { ReactElement, ReactNode } from 'react';
+import './style';
 import {
   BUTTON_COMPONENT_NAME,
   BUTTON_DEFAULT_COLOR,
@@ -12,6 +13,7 @@ import {
   BUTTON_DEFAULT_VARIANT,
   BUTTON_ICON_INHERIT_COLOR,
   BUTTON_ICON_SIZE_BY_SIZE,
+  BUTTON_LOADING_ICON_SIZE_BY_SIZE,
   BUTTON_MODIFIER,
   BUTTON_SLOT,
   BUTTON_TYPOGRAPHY_MAP,
@@ -128,6 +130,7 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const startAdornment = loading ? (
     <Spinner
       className={getLoadingIconClassName(classes, size)}
+      size={BUTTON_LOADING_ICON_SIZE_BY_SIZE[size]}
     />
   ) : normalizedIconStart;
 

@@ -19,6 +19,7 @@ import { useControlledState, useEventCallback } from '@1money/hooks';
 import { joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { TriggerAction, TriggerProps } from './interface';
+import './style';
 
 const PREFIX = 'om-trigger';
 

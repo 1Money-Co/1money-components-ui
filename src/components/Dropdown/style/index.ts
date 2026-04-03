@@ -1,2 +1,2 @@
-import '@/components/Trigger/style/Trigger.scss';
+import '@/components/Trigger/style';
 import './Dropdown.scss';

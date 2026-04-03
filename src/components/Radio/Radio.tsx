@@ -3,6 +3,7 @@ import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { Tag } from '@/components/Tag';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import './style';
 import BaseRadio, { createRadioChangeEvent } from './BaseRadio';
 import {
   RADIO_CELL_CHECK_ICON,

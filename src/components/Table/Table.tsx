@@ -3,6 +3,7 @@ import classnames, { joinCls } from '@/utils/classnames';
 import { useMemoizedFn } from '@1money/hooks';
 import { Pagination } from '@/components/Pagination';
 import { Spinner } from '@/components/Spinner';
+import './style';
 import { InternalRcTable } from './internal';
 import {
   TABLE_BLOCK,

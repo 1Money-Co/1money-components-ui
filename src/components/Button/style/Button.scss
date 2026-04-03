@@ -175,9 +175,9 @@ $button-variants: (
       height: 14px;
     }
 
-    .p-progress-spinner-circle {
-      animation: p-progress-spinner-dash 1.5s ease-in-out infinite;
-      stroke: currentcolor;
+    // Override Spinner's default brand color to inherit Button text color
+    &.#{theme.$prefix}-spinner {
+      color: inherit;
     }
   }
 

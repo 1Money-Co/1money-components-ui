@@ -6,6 +6,7 @@ import { Typography } from '@/components/Typography';
 import { Carousel } from '@/components/Carousel';
 import type { CSSProperties, FC } from 'react';
 import type { CoachMarkProps } from './interface';
+import './style';
 
 const DEFAULT_LABELS = {
   back: 'Back',

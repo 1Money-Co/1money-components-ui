@@ -4,6 +4,7 @@ import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, KeyboardEvent, MouseEvent } from 'react';
 import type { TagProps } from './interface';
+import './style';
 import {
   TAG_PREFIX_CLS,
   TAG_DEFAULT_COLOR,

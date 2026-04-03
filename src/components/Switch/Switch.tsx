@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import './style';
 import {
   SWITCH_PREFIX_CLS,
   SWITCH_DEFAULT_LABEL_PLACEMENT,

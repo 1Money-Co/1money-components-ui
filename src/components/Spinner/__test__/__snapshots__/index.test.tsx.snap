@@ -10,7 +10,7 @@ exports[`Spinner renders brand correctly 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons om-react-ui-spinner-logo om-react-ui-spinner-spin"
@@ -55,7 +55,7 @@ exports[`Spinner renders brand correctly 1`] = `
     >
       <i
         class="om-react-ui-icons-wrapper"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
       >
         <svg
           class="om-react-ui-icons om-react-ui-spinner-logo om-react-ui-spinner-spin"
@@ -157,7 +157,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 74px; --icon-height: 74px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
         >
           <svg
             class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
@@ -237,7 +237,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
     >
       <i
         class="om-react-ui-icons-wrapper"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 74px; --icon-height: 74px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
       >
         <svg
           class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
@@ -374,7 +374,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 74px; --icon-height: 74px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
         >
           <svg
             class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
@@ -449,7 +449,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
     >
       <i
         class="om-react-ui-icons-wrapper"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 74px; --icon-height: 74px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
       >
         <svg
           class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"

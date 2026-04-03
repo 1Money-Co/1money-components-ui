@@ -4,6 +4,7 @@ import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { ChangeEvent, FC } from 'react';
 import type { SliderProps } from './interface';
+import './style';
 
 const DEFAULT_MIN = 0;
 const DEFAULT_MAX = 100;

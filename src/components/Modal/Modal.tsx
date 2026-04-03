@@ -43,6 +43,7 @@ import {
 } from './constants';
 import type { ModalActionKind, ModalControlType } from './constants';
 import type { ModalButtonClickHandler, ModalProps, ModalSize } from './interface';
+import './style';
 type ModalAction = (() => void | Promise<void>) | undefined;
 
 let scrollLockCount = 0;

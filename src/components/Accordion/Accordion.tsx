@@ -5,6 +5,7 @@ import { Typography } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { AccordionItem, AccordionProps } from './interface';
+import './style';
 
 const FILL_ICON_OPEN = 'minus' as const;
 const FILL_ICON_CLOSED = 'add' as const;

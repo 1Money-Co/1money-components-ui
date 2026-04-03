@@ -73,6 +73,12 @@ export const BUTTON_ICON_SIZE_BY_SIZE: Record<ButtonSize, number> = {
   [BUTTON_SIZE.small]: 16,
 };
 
+export const BUTTON_LOADING_ICON_SIZE_BY_SIZE: Record<ButtonSize, number> = {
+  [BUTTON_SIZE.large]: 20,
+  [BUTTON_SIZE.medium]: 16,
+  [BUTTON_SIZE.small]: 14,
+};
+
 export type ButtonVariant = (typeof BUTTON_VARIANTS)[number];
 export type ButtonColor = (typeof BUTTON_COLORS)[number];
 export type ButtonSize = (typeof BUTTON_SIZES)[number];

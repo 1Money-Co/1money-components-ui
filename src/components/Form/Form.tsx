@@ -1,5 +1,5 @@
 import { forwardRef, memo, useImperativeHandle } from 'react';
-import { default as classnames, joinCls } from '@/utils/classnames';
+import { default as classnames } from '@/utils/classnames';
 import { FormContext } from './context';
 import { useFormCore } from './hooks/useFormCore';
 import './style';
@@ -16,10 +16,7 @@ const FormBase = forwardRef<FormInstance, FormProps>((props, ref) => {
     onValuesChange,
     onReset,
     size = 'middle',
-    layout = 'vertical',
     labelAlign = 'left',
-    labelCol = {},
-    wrapperCol = {},
     disabled = false,
     colon = true,
     requiredMark = true,
@@ -36,10 +33,7 @@ const FormBase = forwardRef<FormInstance, FormProps>((props, ref) => {
     onValuesChange,
     onReset,
     size,
-    layout,
     labelAlign,
-    labelCol,
-    wrapperCol,
     disabled,
     colon,
     requiredMark,
@@ -52,10 +46,7 @@ const FormBase = forwardRef<FormInstance, FormProps>((props, ref) => {
     <FormContext.Provider value={contextValue}>
       <form
         {...rest}
-        className={classes(
-          undefined,
-          joinCls(layout === 'inline' && classes('inline'), className),
-        )}
+        className={classes(undefined, className)}
         onSubmit={handleSubmit}
         onReset={handleReset}
       >

@@ -5,6 +5,7 @@ import { clipboard } from '@/utils/clipboard';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, MouseEvent } from 'react';
 import type { CopyProps } from './interface';
+import './style';
 
 const DEFAULT_ICON_SIZE = 20;
 const COPIED_DURATION = 1500;

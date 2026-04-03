@@ -16,7 +16,7 @@ exports[`Button renders a native button and forwards refs 1`] = `
     <div
       class="om-react-ui-spinner om-react-ui-button-loading-icon om-react-ui-button-loading-icon-small"
       role="progressbar"
-      style="width: 32px; height: 32px;"
+      style="width: 14px; height: 14px;"
     >
       <svg
         class="om-react-ui-spinner-circle"

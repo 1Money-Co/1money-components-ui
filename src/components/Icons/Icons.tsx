@@ -8,6 +8,7 @@ import {
   LogoBeta,
   LogoWithBeta,
 } from './Logo';
+import './style';
 
 import {
   IllusChecked,

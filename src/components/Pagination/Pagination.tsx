@@ -3,6 +3,7 @@ import { useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import './style';
 import { usePagination } from './usePagination';
 import {
   PAGINATION_COMPONENT_NAME,

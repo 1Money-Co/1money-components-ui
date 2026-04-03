@@ -5,6 +5,7 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { IconName } from '@/components/Icons';
 import type { EmptyProps } from './interface';
+import './style';
 
 const ICON_SIZE = 24;
 const ICON_INHERIT_COLOR = 'currentColor';

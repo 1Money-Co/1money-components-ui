@@ -31,10 +31,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     onValuesChange,
     onReset,
     size,
-    layout,
     labelAlign,
-    labelCol,
-    wrapperCol,
     disabled,
     colon,
     requiredMark,
@@ -57,10 +54,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     onValuesChange,
     onReset,
     size,
-    layout,
     labelAlign,
-    labelCol,
-    wrapperCol,
     disabled: disabled || isLoading,
     colon,
     requiredMark,
@@ -139,10 +133,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
         onValuesChange={onValuesChange}
         onReset={onReset}
         size={size}
-        layout={layout}
         labelAlign={labelAlign}
-        labelCol={labelCol}
-        wrapperCol={wrapperCol}
         disabled={disabled || isLoading}
         colon={colon}
         requiredMark={requiredMark}

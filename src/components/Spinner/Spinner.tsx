@@ -6,6 +6,7 @@ import classnames, { joinCls } from '@/utils/classnames';
 /* import types */
 import type { FC } from 'react';
 import type { SpinnerProps } from './interface';
+import './style';
 
 const DEFAULT_SIZE = 32;
 

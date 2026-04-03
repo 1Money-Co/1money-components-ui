@@ -88,7 +88,6 @@ export type {
   ValidateStatus,
   ValidateTrigger,
   Rule,
-  ColProps,
   UseFormOptions,
   FieldOptions,
   FieldProps,
