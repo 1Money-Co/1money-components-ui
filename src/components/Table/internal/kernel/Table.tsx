@@ -152,7 +152,7 @@ export interface TableProps<RecordType = DefaultRecordType>
    *
    * !!! DO NOT USE IN PRODUCTION ENVIRONMENT !!!
    */
-  // Used for antd table transform column with additional column
+  // Used fortable transform column with additional column
   transformColumns?: (columns: ColumnsType<RecordType>) => ColumnsType<RecordType>;
 
   /**

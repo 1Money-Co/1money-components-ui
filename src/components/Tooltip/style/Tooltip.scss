@@ -30,17 +30,61 @@ $cls: #{theme.$prefix}-#{$component};
 
   // ── Title variant layout ──
   &.#{$cls}-with-title {
+    align-items: flex-start;
     text-align: left;
-
-    .#{$cls}-title,
-    .#{$cls}-body {
-      min-width: 100%;
-    }
   }
 
   // ── Arrow ──
   .#{$cls}-arrow {
     background-color: theme.palette(bg, 'neutral');
+    border-radius: 0;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  // SVG beak paths shared by both orientations
+  $beak-paths: '%3Cpath d=%22M17.3146 7.35495L10.3664 0.8154C9.80987 0.291642 9.07447 0 8.31027 0H27.6897C26.9255 0 26.1901 0.291642 25.6336 0.815401L18.6854 7.35495C18.3003 7.71735 17.6997 7.71735 17.3146 7.35495Z%22 fill=%22%23000000%22/%3E%3Cpath d=%22M8 0.5H8.34315C9.40401 0.5 10.4214 0.921427 11.1716 1.67157L17.2929 7.79289C17.6834 8.18342 18.3166 8.18342 18.7071 7.79289L24.8284 1.67157C25.5786 0.921426 26.596 0.5 27.6569 0.5H28%22 stroke=%22%23000000%22 stroke-linecap=%22round%22/%3E';
+  $h-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 36 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E#{$beak-paths}%3C/svg%3E");
+  $v-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(0 36) rotate(-90)'%3E#{$beak-paths}%3C/g%3E%3C/svg%3E");
+
+  &[class*='react-tooltip__place-top'] > .#{$cls}-arrow,
+  &[class*='react-tooltip__place-bottom'] > .#{$cls}-arrow {
+    width: 36px;
+    height: 9px;
+    -webkit-mask-image: $h-mask;
+    mask-image: $h-mask;
+  }
+
+  &[class*='react-tooltip__place-left'] > .#{$cls}-arrow,
+  &[class*='react-tooltip__place-right'] > .#{$cls}-arrow {
+    width: 9px;
+    height: 36px;
+    -webkit-mask-image: $v-mask;
+    mask-image: $v-mask;
+  }
+
+  &[class*='react-tooltip__place-top'] > .#{$cls}-arrow {
+    bottom: -8px !important;
+    transform: none;
+  }
+
+  &[class*='react-tooltip__place-bottom'] > .#{$cls}-arrow {
+    top: -8px !important;
+    transform: rotate(180deg);
+  }
+
+  &[class*='react-tooltip__place-left'] > .#{$cls}-arrow {
+    right: -8px !important;
+    transform: none;
+  }
+
+  &[class*='react-tooltip__place-right'] > .#{$cls}-arrow {
+    left: -8px !important;
+    transform: rotate(180deg);
   }
 }
 

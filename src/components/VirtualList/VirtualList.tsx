@@ -141,7 +141,7 @@ export function RawList<T>(props: ListProps<T>, ref: React.Ref<ListRef>) {
   const useVirtual = !!(virtual !== false && height && itemHeight);
   const containerHeight = React.useMemo(
     () => Object.values(heights.maps).reduce((total, curr) => total + curr, 0),
-    [heights.id, heights.maps],
+    [heights.id],
   );
   const inVirtual =
     useVirtual &&
@@ -341,7 +341,7 @@ export function RawList<T>(props: ListProps<T>, ref: React.Ref<ListRef>) {
   const isScrollAtTop = offsetTop <= 0;
   const isScrollAtBottom = offsetTop >= maxScrollHeight;
   const isScrollAtLeft = offsetLeft <= 0;
-  const isScrollAtRight = offsetLeft >= scrollWidth!;
+  const isScrollAtRight = !!scrollWidth && offsetLeft >= scrollWidth - size.width;
 
   const originScroll = useOriginScroll(
     isScrollAtTop,

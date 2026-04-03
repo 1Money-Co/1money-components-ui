@@ -151,7 +151,7 @@ $notification-motion-duration: 240ms;
 
   &-inner {
     min-height: 0;
-    overflow: hidden;
+    overflow: visible;
     transform: translate3d(0, 0, 0);
     opacity: 1;
     transition:
@@ -178,6 +178,10 @@ $notification-motion-duration: 240ms;
 
   &-exit-collapse {
     grid-template-rows: 0fr;
+
+    .#{theme.$prefix}-#{$component}-item-inner {
+      overflow: hidden;
+    }
   }
 
   &-enter,

@@ -240,18 +240,18 @@ function extractTextContent(node: ReactNode): string {
   return '';
 }
 
-function resolveCopyableIcons(icon?: ReactNode | [ReactNode, ReactNode]): [ReactNode, ReactNode] {
-  const defaultIcons: [ReactNode, ReactNode] = [
-    <Icons key="copy" name="copy" size={16} />,
-    <Icons key="check" name="check" size={16} />,
-  ];
+const DEFAULT_COPY_ICONS: [ReactNode, ReactNode] = [
+  <Icons key="copy" name="copy" size={16} />,
+  <Icons key="check" name="check" size={16} />,
+];
 
+function resolveCopyableIcons(icon?: ReactNode | [ReactNode, ReactNode]): [ReactNode, ReactNode] {
   if (!icon) {
-    return defaultIcons;
+    return DEFAULT_COPY_ICONS;
   }
 
   if (Array.isArray(icon)) {
-    return [icon[0] ?? defaultIcons[0], icon[1] ?? defaultIcons[1]];
+    return [icon[0] ?? DEFAULT_COPY_ICONS[0], icon[1] ?? DEFAULT_COPY_ICONS[1]];
   }
 
   return [icon, icon];
@@ -538,7 +538,7 @@ function useTypographyEnhancements(
       middlewares:
         (tooltipConfig as TooltipProps).middlewares ?? DEFAULT_TYPOGRAPHY_TOOLTIP_MIDDLEWARES,
     };
-  }, [children, isOverflowed, ellipsisHasTooltip, ellipsis, textId]);
+  }, [children, isOverflowed, ellipsisHasTooltip, resolvedEllipsis?.tooltip, textId]);
 
   return {
     ellipsis: resolvedEllipsis,
@@ -621,7 +621,7 @@ function renderWithEnhancements(
   );
 }
 
-interface VariantConfig<P> {
+interface VariantConfig {
   category: TypographyCategory;
   defaultTag: TypographyTextTag;
   defaultLayoutMode: TypographyLayoutMode;
@@ -632,7 +632,7 @@ interface VariantConfig<P> {
 function createTypographyVariant<
   P extends TypographyCommonProps & { size: string; id?: string; style?: CSSProperties; as?: TypographyTextTag },
 >(
-  config: VariantConfig<P>,
+  config: VariantConfig,
 ) {
   const { category, defaultTag, defaultLayoutMode, displayName, supportsStrong = false } = config;
 
@@ -669,10 +669,10 @@ function createTypographyVariant<
       copyable,
     });
 
-    const handleTextRef = (node: HTMLElement | null) => {
+    const handleTextRef = useEventCallback((node: HTMLElement | null) => {
       enhancement.setTextNode(node);
       assignRef(ref, node);
-    };
+    });
 
     const textElement = renderTypographyTextTag(
       Component,
@@ -785,10 +785,10 @@ const TypographyLinkBase = forwardRef<HTMLAnchorElement, TypographyLinkProps>((p
     onClick?.(event);
   };
 
-  const handleTextRef = (node: HTMLAnchorElement | null) => {
+  const handleTextRef = useEventCallback((node: HTMLAnchorElement | null) => {
     enhancement.setTextNode(node);
     assignRef(ref, node);
-  };
+  });
 
   const textElement = renderTypographyAnchorTag(
     {

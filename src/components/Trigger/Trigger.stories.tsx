@@ -147,14 +147,6 @@ export const CombinedTriggers: Story = {
   ),
 };
 
-export const WithArrow: Story = {
-  render: (args) => (
-    <Trigger {...args} showArrow content={<MenuContent />}>
-      <Button>With Arrow</Button>
-    </Trigger>
-  ),
-};
-
 export const Placements: Story = {
   render: (args) => {
     const placements: Placement[] = [

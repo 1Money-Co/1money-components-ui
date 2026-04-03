@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ResizeObserver from './ResizeObserver';
 import type { SizeInfo } from './interface';
 
-import './style';
 
 const boxStyle: React.CSSProperties = {
   border: '2px dashed #d9d9d9',

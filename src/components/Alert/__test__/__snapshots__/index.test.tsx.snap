@@ -13,7 +13,7 @@ exports[`Alert renders all status variants 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -81,7 +81,7 @@ exports[`Alert renders all status variants 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -114,7 +114,7 @@ exports[`Alert renders all status variants 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -182,7 +182,7 @@ exports[`Alert renders all status variants 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -272,7 +272,7 @@ exports[`Alert renders all status variants 2`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -340,7 +340,7 @@ exports[`Alert renders all status variants 2`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -372,7 +372,7 @@ exports[`Alert renders all status variants 2`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -415,7 +415,7 @@ exports[`Alert renders all status variants 2`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -448,7 +448,7 @@ exports[`Alert renders all status variants 2`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -491,7 +491,7 @@ exports[`Alert renders all status variants 2`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -581,7 +581,7 @@ exports[`Alert renders all status variants 3`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -649,7 +649,7 @@ exports[`Alert renders all status variants 3`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -681,7 +681,7 @@ exports[`Alert renders all status variants 3`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -724,7 +724,7 @@ exports[`Alert renders all status variants 3`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -756,7 +756,7 @@ exports[`Alert renders all status variants 3`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -809,7 +809,7 @@ exports[`Alert renders all status variants 3`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -842,7 +842,7 @@ exports[`Alert renders all status variants 3`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -895,7 +895,7 @@ exports[`Alert renders all status variants 3`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -985,7 +985,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1053,7 +1053,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1085,7 +1085,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1128,7 +1128,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1160,7 +1160,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1213,7 +1213,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1245,7 +1245,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1288,7 +1288,7 @@ exports[`Alert renders all status variants 4`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1321,7 +1321,7 @@ exports[`Alert renders all status variants 4`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -1364,7 +1364,7 @@ exports[`Alert renders all status variants 4`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -1454,7 +1454,7 @@ exports[`Alert renders correctly 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1527,7 +1527,7 @@ exports[`Alert renders correctly 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1560,7 +1560,7 @@ exports[`Alert renders correctly 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -1633,7 +1633,7 @@ exports[`Alert renders correctly 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -1723,7 +1723,7 @@ exports[`Alert renders without close button when closable is false 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -1796,7 +1796,7 @@ exports[`Alert renders without close button when closable is false 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 32px; --icon-height: 32px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
             class="om-react-ui-icons"

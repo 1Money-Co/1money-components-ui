@@ -55,6 +55,8 @@ const ScrollBar = React.forwardRef<ScrollBarRef, ScrollBarProps>((props, ref) =>
   // ========================= Refs =========================
   const scrollbarRef = React.useRef<HTMLDivElement>(null);
   const thumbRef = React.useRef<HTMLDivElement>(null);
+  const onStartMoveRef = React.useRef(onStartMove);
+  onStartMoveRef.current = onStartMove;
 
   // ======================= Visible ========================
   const [visible, setVisible] = React.useState(showScrollBar);
@@ -97,7 +99,7 @@ const ScrollBar = React.forwardRef<ScrollBarRef, ScrollBarProps>((props, ref) =>
     setPageXY(getPageXY(e, horizontal!));
     setStartTop(stateRef.current.top);
 
-    onStartMove();
+    onStartMoveRef.current();
     e.stopPropagation();
     e.preventDefault();
   };

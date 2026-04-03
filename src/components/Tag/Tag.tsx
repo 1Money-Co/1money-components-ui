@@ -58,13 +58,21 @@ export const Tag: FC<TagProps> = (props) => {
         const typo = TAG_LABEL_TYPOGRAPHY_MAP[size];
         if (typo.variant === 'body') {
           return (
-            <TypographyBody className={classes('label')} size={typo.size} strong={typo.strong}>
+            <TypographyBody
+              className={classes('label', classes(`label-${size}`))}
+              size={typo.size}
+              strong={typo.strong}
+            >
               {label}
             </TypographyBody>
           );
         }
         return (
-          <TypographyLabel className={classes('label')} size={typo.size}>
+          <TypographyLabel
+            as="span"
+            className={classes('label', classes(`label-${size}`))}
+            size={typo.size}
+          >
             {label}
           </TypographyLabel>
         );

@@ -9,7 +9,7 @@ exports[`Tag renders correctly 1`] = `
         class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
         >
           Test
         </span>
@@ -21,7 +21,7 @@ exports[`Tag renders correctly 1`] = `
       class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
       >
         Test
       </span>
@@ -90,7 +90,7 @@ exports[`Tag renders removable 1`] = `
         class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
         >
           Test
         </span>
@@ -102,7 +102,7 @@ exports[`Tag renders removable 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -131,7 +131,7 @@ exports[`Tag renders removable 1`] = `
       class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
     >
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
       >
         Test
       </span>
@@ -143,7 +143,7 @@ exports[`Tag renders removable 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -233,7 +233,7 @@ exports[`Tag renders with icon 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -254,7 +254,7 @@ exports[`Tag renders with icon 1`] = `
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
         >
           Test
         </span>
@@ -270,7 +270,7 @@ exports[`Tag renders with icon 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 12px; --icon-height: 12px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -291,7 +291,7 @@ exports[`Tag renders with icon 1`] = `
         </i>
       </span>
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
       >
         Test
       </span>

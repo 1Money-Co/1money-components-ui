@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+const REACT_MAJOR_VERSION = parseInt(React.version.split('.')[0], 10);
+
 /**
  * Flatten React children into a flat array, expanding fragments.
  */
@@ -58,8 +60,7 @@ export function supportRef(node: any): boolean {
   if (!node) return false;
 
   // React 19+ no need `forwardRef` anymore. So just pass if is a React element (not fragment).
-  const reactVersion = parseInt(React.version.split('.')[0], 10);
-  if (isReactElement(node) && reactVersion >= 19) return true;
+  if (isReactElement(node) && REACT_MAJOR_VERSION >= 19) return true;
 
   // unwrap memo
   const type = (node as any).type;

@@ -61,7 +61,6 @@ export default function useFrameWheel(
 
     nextFrameRef.current = raf(() => {
       // Patch a multiple for Firefox to fix wheel number too small
-      // ref: https://github.com/ant-design/ant-design/issues/26372#issuecomment-679460266
       const patchMultiple = isMouseScrollRef.current ? 10 : 1;
       onWheelDelta(offsetRef.current * patchMultiple, false);
       offsetRef.current = 0;

@@ -375,7 +375,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -437,7 +437,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
           >
             <i
               class="om-react-ui-icons-wrapper"
-              style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             >
               <svg
                 class="om-react-ui-icons"
@@ -475,7 +475,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
         <i
           class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-remove"
           role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           tabindex="0"
         >
           <svg
@@ -506,7 +506,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -568,7 +568,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 16px; --icon-height: 16px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -606,7 +606,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
       <i
         class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-remove"
         role="button"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         tabindex="0"
       >
         <svg
@@ -694,7 +694,7 @@ exports[`UploadFileBar renders success state 1`] = `
         >
           <i
             class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -751,7 +751,7 @@ exports[`UploadFileBar renders success state 1`] = `
         <i
           class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-remove"
           role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           tabindex="0"
         >
           <svg
@@ -782,7 +782,7 @@ exports[`UploadFileBar renders success state 1`] = `
       >
         <i
           class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
             class="om-react-ui-icons"
@@ -839,7 +839,7 @@ exports[`UploadFileBar renders success state 1`] = `
       <i
         class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-remove"
         role="button"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         tabindex="0"
       >
         <svg

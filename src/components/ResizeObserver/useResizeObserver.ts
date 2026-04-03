@@ -64,9 +64,12 @@ export default function useResizeObserver(
   // Dynamic observe
   const isFuncTarget = typeof getTarget === 'function';
   const funcTargetIdRef = React.useRef(0);
+  const getTargetRef = React.useRef(getTarget);
+  getTargetRef.current = getTarget;
 
   React.useEffect(() => {
-    const target = isFuncTarget ? getTarget() : getTarget;
+    const currentGetTarget = getTargetRef.current;
+    const target = typeof currentGetTarget === 'function' ? currentGetTarget() : currentGetTarget;
 
     if (target && enabled) {
       observe(target, onInternalResize);
@@ -79,5 +82,5 @@ export default function useResizeObserver(
         unobserve(target, onInternalResize);
       }
     };
-  }, [enabled, isFuncTarget ? funcTargetIdRef.current : getTarget]);
+  }, [enabled, isFuncTarget, isFuncTarget ? funcTargetIdRef.current : getTarget]);
 }

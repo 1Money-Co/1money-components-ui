@@ -3,7 +3,6 @@ import type * as React from 'react';
 import type { DeepNamePath } from './namePathType';
 
 /**
- * ColumnType which applied in antd: https://ant.design/components/table-cn/#Column
  * - defaultSortOrder
  * - filterDropdown
  * - filterDropdownVisible
@@ -81,7 +80,7 @@ export interface RenderedCell<RecordType> {
 
 export type Direction = 'ltr' | 'rtl';
 
-// SpecialString will be removed in antd@6
+// SpecialString will be removed in feture, do not use it in production environment. It is only used for internal to avoid breaking change when we want to support string type of dataIndex in the future.
 export type SpecialString<T> = T | (string & NonNullable<unknown>);
 
 export type DataIndex<T = unknown> =

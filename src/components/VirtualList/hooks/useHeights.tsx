@@ -21,6 +21,7 @@ export default function useHeights<T>(
   const [updatedMark, setUpdatedMark] = React.useState(0);
   const instanceRef = useRef(new Map<React.Key, HTMLElement>());
   const heightsRef = useRef(new CacheMap());
+  const marginCacheRef = useRef(new Map<React.Key, { marginTop: number; marginBottom: number }>());
 
   const promiseIdRef = useRef<number>(0);
 
@@ -37,11 +38,23 @@ export default function useHeights<T>(
       instanceRef.current.forEach((element, key) => {
         if (element && element.offsetParent) {
           const { offsetHeight } = element;
-          const { marginTop, marginBottom } = getComputedStyle(element);
 
-          const marginTopNum = parseNumber(marginTop);
-          const marginBottomNum = parseNumber(marginBottom);
-          const totalHeight = offsetHeight + marginTopNum + marginBottomNum;
+          // Only call getComputedStyle when offsetHeight changes or no margin cache exists
+          let marginTop: number;
+          let marginBottom: number;
+          const cachedMargin = marginCacheRef.current.get(key);
+          const prevHeight = heightsRef.current.get(key);
+
+          if (!cachedMargin || prevHeight !== undefined && Math.abs(prevHeight - offsetHeight - (cachedMargin.marginTop + cachedMargin.marginBottom)) > 1) {
+            const style = getComputedStyle(element);
+            marginTop = parseNumber(style.marginTop);
+            marginBottom = parseNumber(style.marginBottom);
+            marginCacheRef.current.set(key, { marginTop, marginBottom });
+          } else {
+            ({ marginTop, marginBottom } = cachedMargin);
+          }
+
+          const totalHeight = offsetHeight + marginTop + marginBottom;
 
           if (heightsRef.current.get(key) !== totalHeight) {
             heightsRef.current.set(key, totalHeight);
@@ -78,6 +91,7 @@ export default function useHeights<T>(
       collectHeight();
     } else {
       instanceRef.current.delete(key);
+      marginCacheRef.current.delete(key);
     }
 
     // Instance changed

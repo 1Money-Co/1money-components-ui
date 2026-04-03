@@ -366,14 +366,6 @@ export const HoverTrigger: Story = {
   ),
 };
 
-export const WithArrow: Story = {
-  render: (args) => (
-    <Dropdown {...args} showArrow content={<MenuContent />}>
-      <Button>With Arrow</Button>
-    </Dropdown>
-  ),
-};
-
 export const Placements: Story = {
   render: (args) => {
     const placements: Placement[] = [

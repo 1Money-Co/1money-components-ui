@@ -70,7 +70,10 @@ $thumb-travel: $track-width - $thumb-size - $thumb-offset * 2;
     min-width: 0;
   }
 
-  // Typography styles handled by TypographyBody component
+  // ── Description ──
+  &-description {
+    min-height: 20px;
+  }
 
   // ── Hover ──
   &:not(&-disabled):hover {

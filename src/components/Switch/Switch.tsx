@@ -82,7 +82,7 @@ export const Switch: FC<SwitchProps> = props => {
   const labelElement = (label || description) && (
     <span className={classes('content')}>
       {label && <TypographyBody size={SWITCH_LABEL_SIZE} color={labelColor}>{label}</TypographyBody>}
-      {description && <TypographyBody size={SWITCH_DESCRIPTION_SIZE} color={descriptionColor}>{description}</TypographyBody>}
+      {description && <TypographyBody className={classes('description')} size={SWITCH_DESCRIPTION_SIZE} color={descriptionColor}>{description}</TypographyBody>}
     </span>
   );
 
