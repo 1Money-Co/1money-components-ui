@@ -67,7 +67,6 @@
     "node_modules",
     "**/__test__/",
     "**/stories/",
-    "**/*.stories.*",
     "configs/",
     "lib/",
     "es/",
