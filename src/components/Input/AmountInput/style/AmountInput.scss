@@ -1,0 +1,89 @@
+@use '@/styles/api' as theme;
+
+$component: 'input';
+
+.#{theme.$prefix}-#{$component} {
+  // ── Amount: action button (e.g. "Use Max") ──
+  &-amount-action {
+    @include theme.typography(body, lg, $strong: true);
+
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    color: theme.palette(text, 'brand');
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      color: theme.palette(text, 'brand-secondary');
+      cursor: not-allowed;
+    }
+  }
+
+  // ── Amount: vertical divider ──
+  &-amount-divider {
+    width: 1px;
+    height: theme.spacing(component-padding, 400);
+    background-color: theme.palette(border, 'default');
+  }
+
+  // ── Amount: currency selector button ──
+  &-amount-currency {
+    display: inline-flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    padding: 0;
+    color: theme.palette(text, 'default-tertiary');
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: not-allowed;
+    }
+  }
+
+  // ── Amount: currency icon wrapper ──
+  &-amount-currency-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: theme.shape('full');
+
+    > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // ── Amount: currency label text ──
+  &-amount-currency-label {
+    @include theme.typography(body, lg);
+
+    white-space: nowrap;
+  }
+
+  // ── Amount: small size overrides ──
+  &-small &-amount-action {
+    @include theme.typography(body, md, $strong: true);
+  }
+
+  &-small &-amount-divider {
+    height: theme.spacing(component-padding, 400);
+  }
+
+  &-small &-amount-currency {
+    gap: 6px;
+  }
+
+  &-small &-amount-currency-label {
+    @include theme.typography(body, md);
+  }
+}

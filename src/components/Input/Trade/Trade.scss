@@ -1,0 +1,184 @@
+@use '@/styles/api' as theme;
+
+$component: 'input';
+
+.#{theme.$prefix}-#{$component} {
+  &-trade {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 200);
+    width: 100%;
+  }
+
+  &-trade-main {
+    padding-bottom: theme.spacing(scale, 200);
+    border-bottom: 1px solid theme.palette(border, 'default');
+    transition: border-color 0.2s ease;
+  }
+
+  &-trade-value-line {
+    display: flex;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+  }
+
+  &-trade-symbol {
+    @include theme.typography(display, lg);
+
+    flex-shrink: 0;
+    color: theme.palette(text, 'brand');
+  }
+
+  &-trade-input-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+  }
+
+  &-trade-field {
+    @include theme.typography(display, lg);
+
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    color: theme.palette(text, 'brand');
+    background: transparent;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: theme.palette(text, 'brand');
+    }
+  }
+
+  &-trade-unit {
+    @include theme.typography(display, lg);
+
+    flex-shrink: 0;
+    color: theme.palette(text, 'brand');
+  }
+
+  &-trade-unit-placeholder {
+    color: theme.palette(text, 'neutral-tertiary');
+  }
+
+  &-trade-max {
+    @include theme.typography(body, sm, $strong: true);
+
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: theme.spacing(component-padding, 200);
+    color: theme.palette(text, 'default');
+    background-color: theme.palette(bg, 'neutral-tertiary');
+    border: none;
+    border-radius: theme.shape(200);
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'neutral-tertiary-hover');
+    }
+
+    &:disabled {
+      color: theme.palette(text, 'disabled');
+      background-color: theme.palette(bg, 'disabled');
+      cursor: not-allowed;
+    }
+  }
+
+  &-trade-subline {
+    display: flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    padding-top: theme.spacing(scale, 200);
+  }
+
+  &-trade-swap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: theme.palette(icon, 'default-tertiary');
+    background: transparent;
+    border: none;
+    transform: rotate(-90deg);
+    cursor: pointer;
+
+    &:disabled {
+      color: theme.palette(icon, 'disabled');
+      cursor: not-allowed;
+    }
+  }
+
+  &-trade-exchange {
+    @include theme.typography(body, lg, $strong: true);
+
+    color: theme.palette(text, 'brand');
+  }
+
+  &-trade-error-msg {
+    @include theme.typography(body, sm);
+
+    display: flex;
+    gap: theme.spacing(gap, 100);
+    align-items: center;
+    color: theme.palette(text, 'default-tertiary');
+  }
+
+  // ── Focus ──
+  &-trade:focus-within {
+    .#{theme.$prefix}-#{$component}-trade-main {
+      padding-bottom: calc(#{theme.spacing(scale, 200)} - 1px);
+      border-bottom: 2px solid theme.palette(border, 'brand');
+    }
+  }
+
+  // ── Error ──
+  &-trade-error {
+    .#{theme.$prefix}-#{$component}-trade-symbol,
+    .#{theme.$prefix}-#{$component}-trade-field,
+    .#{theme.$prefix}-#{$component}-trade-unit {
+      color: theme.palette(text, 'danger');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-field::placeholder {
+      color: theme.palette(text, 'danger');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-main {
+      border-bottom-color: theme.palette(border, 'danger');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-error-msg {
+      color: theme.palette(text, 'danger');
+    }
+  }
+
+  // ── Disabled ──
+  &-trade-disabled {
+    .#{theme.$prefix}-#{$component}-trade-symbol,
+    .#{theme.$prefix}-#{$component}-trade-field,
+    .#{theme.$prefix}-#{$component}-trade-unit,
+    .#{theme.$prefix}-#{$component}-trade-unit-placeholder {
+      color: theme.palette(text, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-field::placeholder {
+      color: theme.palette(text, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-main {
+      border-bottom-color: theme.palette(border, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-exchange {
+      color: theme.palette(text, 'disabled');
+    }
+
+    .#{theme.$prefix}-#{$component}-trade-error-msg {
+      color: theme.palette(text, 'disabled');
+    }
+  }
+}

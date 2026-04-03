@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input renders default input with label and feedback 1`] = `
+exports[`Input renders default input with label and errorMsg 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -16,16 +16,11 @@ exports[`Input renders default input with label and feedback 1`] = `
             for="«r0»"
           >
             <span
-              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-md om-react-ui-typography-color-default"
+              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
             >
               Amount
             </span>
           </label>
-        </div>
-        <div
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-color-default-tertiary om-react-ui-input-description"
-        >
-          0.00 USDT available
         </div>
         <div
           class="om-react-ui-input-control-wrapper"
@@ -44,10 +39,14 @@ exports[`Input renders default input with label and feedback 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-input-feedback"
+          class="om-react-ui-input-error-msg"
           role="status"
         >
-          Feedback
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+          >
+            Feedback
+          </span>
         </div>
       </div>
     </div>
@@ -64,16 +63,11 @@ exports[`Input renders default input with label and feedback 1`] = `
           for="«r0»"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-md om-react-ui-typography-color-default"
+            class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
           >
             Amount
           </span>
         </label>
-      </div>
-      <div
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-color-default-tertiary om-react-ui-input-description"
-      >
-        0.00 USDT available
       </div>
       <div
         class="om-react-ui-input-control-wrapper"
@@ -92,10 +86,227 @@ exports[`Input renders default input with label and feedback 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-input-feedback"
+        class="om-react-ui-input-error-msg"
         role="status"
       >
-        Feedback
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+        >
+          Feedback
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Input renders trade input correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-input-trade"
+      >
+        <div
+          class="om-react-ui-input-trade-main"
+        >
+          <div
+            class="om-react-ui-input-trade-value-line"
+          >
+            <span
+              class="om-react-ui-input-trade-symbol"
+            >
+              $
+            </span>
+            <div
+              class="om-react-ui-input-trade-input-wrapper"
+            >
+              <input
+                aria-invalid="false"
+                class="om-react-ui-input-trade-field"
+                id="«rf»"
+                inputmode="decimal"
+                placeholder="0"
+                value=""
+              />
+            </div>
+            <span
+              class="om-react-ui-input-trade-unit om-react-ui-input-trade-unit-placeholder"
+            >
+              USD
+            </span>
+            <button
+              class="om-react-ui-input-trade-max"
+              type="button"
+            >
+              Max
+            </button>
+          </div>
+        </div>
+        <div
+          class="om-react-ui-input-trade-subline"
+        >
+          <button
+            aria-label="swap currency"
+            class="om-react-ui-input-trade-swap"
+            type="button"
+          >
+            <i
+              class="om-react-ui-icons-wrapper"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+            >
+              <svg
+                class="om-react-ui-icons"
+                fill="none"
+                height="24"
+                preserveAspectRatio="xMidYMid meet"
+                shape-rendering="geometricPrecision"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.666 7.44238L15.6699 4.44238L16.5039 3.19531L17.335 4.44434L19.3311 7.44434L20.3643 8.99805L17.5 8.99805L17.5 19.999L15.5 19.999L15.5 8.99805L12.6279 8.99805L13.666 7.44238ZM5.49805 15.0029L6.5 15.0049L6.5 4.00195L8.5 4.00195L8.5 15.0059L9.50195 15.0068L11.3711 15.0088L10.332 16.5625L8.33203 19.5547L7.50098 20.7979L6.66992 19.5547L4.66602 16.5586L3.62402 15.001L5.49805 15.0029Z"
+                />
+              </svg>
+            </i>
+          </button>
+          <span
+            class="om-react-ui-input-trade-exchange"
+          >
+            0 USDT
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-input-trade"
+    >
+      <div
+        class="om-react-ui-input-trade-main"
+      >
+        <div
+          class="om-react-ui-input-trade-value-line"
+        >
+          <span
+            class="om-react-ui-input-trade-symbol"
+          >
+            $
+          </span>
+          <div
+            class="om-react-ui-input-trade-input-wrapper"
+          >
+            <input
+              aria-invalid="false"
+              class="om-react-ui-input-trade-field"
+              id="«rf»"
+              inputmode="decimal"
+              placeholder="0"
+              value=""
+            />
+          </div>
+          <span
+            class="om-react-ui-input-trade-unit om-react-ui-input-trade-unit-placeholder"
+          >
+            USD
+          </span>
+          <button
+            class="om-react-ui-input-trade-max"
+            type="button"
+          >
+            Max
+          </button>
+        </div>
+      </div>
+      <div
+        class="om-react-ui-input-trade-subline"
+      >
+        <button
+          aria-label="swap currency"
+          class="om-react-ui-input-trade-swap"
+          type="button"
+        >
+          <i
+            class="om-react-ui-icons-wrapper"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 24px; --icon-height: 24px;"
+          >
+            <svg
+              class="om-react-ui-icons"
+              fill="none"
+              height="24"
+              preserveAspectRatio="xMidYMid meet"
+              shape-rendering="geometricPrecision"
+              stroke="none"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.666 7.44238L15.6699 4.44238L16.5039 3.19531L17.335 4.44434L19.3311 7.44434L20.3643 8.99805L17.5 8.99805L17.5 19.999L15.5 19.999L15.5 8.99805L12.6279 8.99805L13.666 7.44238ZM5.49805 15.0029L6.5 15.0049L6.5 4.00195L8.5 4.00195L8.5 15.0059L9.50195 15.0068L11.3711 15.0088L10.332 16.5625L8.33203 19.5547L7.50098 20.7979L6.66992 19.5547L4.66602 16.5586L3.62402 15.001L5.49805 15.0029Z"
+              />
+            </svg>
+          </i>
+        </button>
+        <span
+          class="om-react-ui-input-trade-exchange"
+        >
+          0 USDT
+        </span>
       </div>
     </div>
   </div>,

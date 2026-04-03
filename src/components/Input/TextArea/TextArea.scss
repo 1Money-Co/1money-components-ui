@@ -1,0 +1,87 @@
+@use '@/styles/api' as theme;
+
+$component: 'input';
+
+.#{theme.$prefix}-#{$component} {
+  &-textarea-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 200);
+    align-items: stretch;
+    width: 100%;
+    min-height: 120px;
+    padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+    background-color: theme.palette(bg, 'default-secondary');
+    border: 1px solid theme.palette(border, 'default');
+    border-radius: theme.shape(300);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  &-textarea-wrapper:hover {
+    border-color: theme.palette(border, 'default-tertiary');
+  }
+
+  &-textarea-wrapper:focus-within {
+    border-color: theme.palette(border, 'brand');
+    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+  }
+
+  &-textarea {
+    @include theme.typography(body, lg);
+
+    flex: 1 1 auto;
+    width: 100%;
+    color: theme.palette(text, 'default');
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      color: theme.palette(text, 'neutral-secondary');
+    }
+
+    &:not(:placeholder-shown) {
+      font-weight: 500;
+    }
+  }
+
+  &-count {
+    text-align: right;
+  }
+
+  // ── Size ──
+  &-small &-textarea-wrapper {
+    min-height: theme.sizing(component-height, 'lg');
+    padding: theme.spacing(component-padding, 200);
+    border-radius: theme.shape(200);
+  }
+
+  // ── Status ──
+  &-error &-textarea-wrapper {
+    border-color: theme.palette(border, 'danger');
+    box-shadow: 0 0 0 1px theme.palette(border, 'danger');
+  }
+
+  &-warning &-textarea-wrapper {
+    border-color: theme.palette(border, 'warning');
+  }
+
+  &-success &-textarea-wrapper {
+    border-color: theme.palette(border, 'positive');
+  }
+
+  // ── Disabled ──
+  &-disabled &-textarea-wrapper {
+    background-color: theme.palette(bg, 'disabled');
+    border-color: theme.palette(border, 'default');
+    cursor: not-allowed;
+  }
+
+  &-disabled &-textarea {
+    color: theme.palette(text, 'disabled');
+  }
+}

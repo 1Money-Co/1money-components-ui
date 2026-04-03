@@ -1,0 +1,524 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputAmount renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+      >
+        <div
+          class="om-react-ui-input-control-wrapper"
+        >
+          <div
+            class="om-react-ui-input-control"
+          >
+            <input
+              aria-invalid="false"
+              aria-required="false"
+              class="om-react-ui-input-field"
+              id="«r0»"
+              inputmode="decimal"
+              placeholder="Enter amount"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+    >
+      <div
+        class="om-react-ui-input-control-wrapper"
+      >
+        <div
+          class="om-react-ui-input-control"
+        >
+          <input
+            aria-invalid="false"
+            aria-required="false"
+            class="om-react-ui-input-field"
+            id="«r0»"
+            inputmode="decimal"
+            placeholder="Enter amount"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`InputAmount renders disabled state 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default om-react-ui-input-disabled"
+      >
+        <div
+          class="om-react-ui-input-control-wrapper"
+        >
+          <div
+            class="om-react-ui-input-control om-react-ui-input-control-disabled"
+          >
+            <input
+              aria-invalid="false"
+              aria-required="false"
+              class="om-react-ui-input-field"
+              disabled=""
+              id="«r2»"
+              inputmode="decimal"
+              placeholder="0"
+              value=""
+            />
+            <span
+              class="om-react-ui-input-suffix"
+            >
+              <button
+                class="om-react-ui-input-amount-action"
+                disabled=""
+                type="button"
+              >
+                Use Max
+              </button>
+              <span
+                class="om-react-ui-input-amount-divider"
+              />
+              <button
+                class="om-react-ui-input-amount-currency"
+                disabled=""
+                type="button"
+              >
+                <span
+                  class="om-react-ui-input-amount-currency-label"
+                >
+                  USDC
+                </span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default om-react-ui-input-disabled"
+    >
+      <div
+        class="om-react-ui-input-control-wrapper"
+      >
+        <div
+          class="om-react-ui-input-control om-react-ui-input-control-disabled"
+        >
+          <input
+            aria-invalid="false"
+            aria-required="false"
+            class="om-react-ui-input-field"
+            disabled=""
+            id="«r2»"
+            inputmode="decimal"
+            placeholder="0"
+            value=""
+          />
+          <span
+            class="om-react-ui-input-suffix"
+          >
+            <button
+              class="om-react-ui-input-amount-action"
+              disabled=""
+              type="button"
+            >
+              Use Max
+            </button>
+            <span
+              class="om-react-ui-input-amount-divider"
+            />
+            <button
+              class="om-react-ui-input-amount-currency"
+              disabled=""
+              type="button"
+            >
+              <span
+                class="om-react-ui-input-amount-currency-label"
+              >
+                USDC
+              </span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`InputAmount renders with action and currency 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+      >
+        <div
+          class="om-react-ui-input-label-row"
+        >
+          <label
+            class="om-react-ui-input-label"
+            for="«r1»"
+          >
+            <span
+              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+            >
+              You send
+            </span>
+          </label>
+        </div>
+        <div
+          class="om-react-ui-input-control-wrapper"
+        >
+          <div
+            class="om-react-ui-input-control"
+          >
+            <input
+              aria-invalid="false"
+              aria-required="false"
+              class="om-react-ui-input-field"
+              id="«r1»"
+              inputmode="decimal"
+              placeholder="0"
+              value=""
+            />
+            <span
+              class="om-react-ui-input-suffix"
+            >
+              <button
+                class="om-react-ui-input-amount-action"
+                type="button"
+              >
+                Use Max
+              </button>
+              <span
+                class="om-react-ui-input-amount-divider"
+              />
+              <button
+                class="om-react-ui-input-amount-currency"
+                type="button"
+              >
+                <span
+                  class="om-react-ui-input-amount-currency-icon"
+                  style="width: 24px; height: 24px;"
+                >
+                  <img
+                    alt="USDC"
+                    src="usdc.png"
+                  />
+                </span>
+                <span
+                  class="om-react-ui-input-amount-currency-label"
+                >
+                  USDC
+                </span>
+                <i
+                  class="om-react-ui-icons-wrapper"
+                  style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+                >
+                  <svg
+                    class="om-react-ui-icons"
+                    fill="none"
+                    height="20"
+                    preserveAspectRatio="xMidYMid meet"
+                    shape-rendering="geometricPrecision"
+                    stroke="none"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </i>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div
+          class="om-react-ui-input-error-msg"
+          role="status"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+          >
+            $2,992.68 USDC available
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+    >
+      <div
+        class="om-react-ui-input-label-row"
+      >
+        <label
+          class="om-react-ui-input-label"
+          for="«r1»"
+        >
+          <span
+            class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+          >
+            You send
+          </span>
+        </label>
+      </div>
+      <div
+        class="om-react-ui-input-control-wrapper"
+      >
+        <div
+          class="om-react-ui-input-control"
+        >
+          <input
+            aria-invalid="false"
+            aria-required="false"
+            class="om-react-ui-input-field"
+            id="«r1»"
+            inputmode="decimal"
+            placeholder="0"
+            value=""
+          />
+          <span
+            class="om-react-ui-input-suffix"
+          >
+            <button
+              class="om-react-ui-input-amount-action"
+              type="button"
+            >
+              Use Max
+            </button>
+            <span
+              class="om-react-ui-input-amount-divider"
+            />
+            <button
+              class="om-react-ui-input-amount-currency"
+              type="button"
+            >
+              <span
+                class="om-react-ui-input-amount-currency-icon"
+                style="width: 24px; height: 24px;"
+              >
+                <img
+                  alt="USDC"
+                  src="usdc.png"
+                />
+              </span>
+              <span
+                class="om-react-ui-input-amount-currency-label"
+              >
+                USDC
+              </span>
+              <i
+                class="om-react-ui-icons-wrapper"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 20px; --icon-height: 20px;"
+              >
+                <svg
+                  class="om-react-ui-icons"
+                  fill="none"
+                  height="20"
+                  preserveAspectRatio="xMidYMid meet"
+                  shape-rendering="geometricPrecision"
+                  stroke="none"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.92969 10.1336L6.30019 8.67145L12.0143 14.0276L17.728 8.67278L19.0984 10.135L12.0142 16.7742L4.92969 10.1336Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </i>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div
+        class="om-react-ui-input-error-msg"
+        role="status"
+      >
+        <span
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+        >
+          $2,992.68 USDC available
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
