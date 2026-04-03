@@ -1,44 +1,41 @@
-import { memo, useId } from 'react';
+import { memo, useId, useState } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { FieldShell } from './FieldShell';
-import { useSyncRef } from './useSyncRef';
-import InputOTP from './OTP';
-import InputPassword from './Password';
-import InputSearch from './Search';
-import InputTextArea from './TextArea';
+import { FieldShell } from '../FieldShell';
+import { useSyncRef } from '../useSyncRef';
 import type { FC, ChangeEvent } from 'react';
-import type { InputComponent, InputProps } from './interface';
+import type { InputPasswordProps } from '../interface';
 
-const InputBase: FC<InputProps> = (props) => {
+export const InputPassword: FC<InputPasswordProps> = (props) => {
   const {
     className = '',
     prefixCls = 'input',
     size = 'large',
     status = 'default',
     disabled = false,
+    visibilityToggle = true,
+    showIcon = <Icons name="hideBalance" size={16} />,
+    hideIcon = <Icons name="viewBalance" size={16} />,
     label,
     info,
-    description,
-    feedback,
+    errorMsg,
     required,
-    allowClear = false,
     prefix,
     suffix,
     value,
     defaultValue = '',
     onChange,
-    onClear,
     ref,
     id: externalId,
     ...rest
   } = props;
 
+  const [visible, setVisible] = useState(false);
   const autoId = useId();
   const inputId = externalId ?? autoId;
   const classes = classnames(prefixCls);
-  const [inputRef, syncRef] = useSyncRef<HTMLInputElement>(ref);
+  const [, syncRef] = useSyncRef<HTMLInputElement>(ref);
   const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
   const ariaRequired = required ? 'true' : 'false';
   const ariaInvalid = status === 'error' ? 'true' : 'false';
@@ -49,13 +46,10 @@ const InputBase: FC<InputProps> = (props) => {
     onChange?.(nextValue, event);
   });
 
-  const handleClear = useEventCallback(() => {
-    setInnerValue('');
-    inputRef.current?.focus();
-    onClear?.();
+  const handleToggle = useEventCallback(() => {
+    if (disabled) return;
+    setVisible(current => !current);
   });
-
-  const showClearAction = allowClear && !disabled && innerValue.length > 0;
 
   return (
     <FieldShell
@@ -66,8 +60,7 @@ const InputBase: FC<InputProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      description={description}
-      feedback={feedback}
+      errorMsg={errorMsg}
       required={required}
       inputId={inputId}
     >
@@ -79,19 +72,21 @@ const InputBase: FC<InputProps> = (props) => {
           id={inputId}
           className={classes('field')}
           disabled={disabled}
+          type={visible ? 'text' : 'password'}
           value={innerValue}
           onChange={handleChange}
           aria-required={ariaRequired}
           aria-invalid={ariaInvalid}
         />
-        {showClearAction && (
+        {visibilityToggle && (
           <button
             type="button"
             className={classes('action')}
-            aria-label="clear input"
-            onClick={handleClear}
+            disabled={disabled}
+            aria-label="toggle password visibility"
+            onClick={handleToggle}
           >
-            <Icons name="cross" size={16} />
+            {visible ? showIcon : hideIcon}
           </button>
         )}
         {suffix && <span className={classes('suffix')}>{suffix}</span>}
@@ -100,13 +95,4 @@ const InputBase: FC<InputProps> = (props) => {
   );
 };
 
-const MemoizedInput = memo(InputBase);
-
-export const Input = Object.assign(MemoizedInput, {
-  Password: InputPassword,
-  Search: InputSearch,
-  TextArea: InputTextArea,
-  OTP: InputOTP,
-}) as InputComponent;
-
-export default Input;
+export default memo(InputPassword);

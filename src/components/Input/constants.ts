@@ -10,12 +10,10 @@ export type InputStatus = (typeof INPUT_STATUSES)[number];
 export type SearchTrigger = (typeof SEARCH_TRIGGERS)[number];
 
 // ── Typography ──
-export const INPUT_LABEL_SIZE: TypographyLabelSize = 'md';
+export const INPUT_LABEL_SIZE: Record<InputSize, TypographyLabelSize> = { large: 'lg', small: 'md' };
 export const INPUT_LABEL_COLOR: TypographyColor = 'default';
 export const INPUT_INFO_SIZE: TypographyBodySize = 'sm';
 export const INPUT_INFO_COLOR: TypographyColor = 'default-tertiary';
-export const INPUT_DESCRIPTION_SIZE: TypographyBodySize = 'sm';
-export const INPUT_DESCRIPTION_COLOR: TypographyColor = 'default-tertiary';
-export const INPUT_FEEDBACK_SIZE: TypographyBodySize = 'sm';
-export const INPUT_COUNT_SIZE: TypographyBodySize = 'sm';
-export const INPUT_COUNT_COLOR: TypographyColor = 'default-tertiary';
+export const INPUT_ERROR_MSG_SIZE: TypographyBodySize = 'sm';
+export const INPUT_COUNT_SIZE: TypographyBodySize = 'lg';
+export const INPUT_COUNT_COLOR: TypographyColor = 'neutral-secondary';

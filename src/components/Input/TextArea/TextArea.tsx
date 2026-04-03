@@ -2,11 +2,11 @@ import { memo, useId } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { FieldShell } from './FieldShell';
-import { useSyncRef } from './useSyncRef';
-import { INPUT_COUNT_COLOR, INPUT_COUNT_SIZE } from './constants';
+import { FieldShell } from '../FieldShell';
+import { useSyncRef } from '../useSyncRef';
+import { INPUT_COUNT_COLOR, INPUT_COUNT_SIZE } from '../constants';
 import type { FC, ChangeEvent } from 'react';
-import type { InputTextAreaProps } from './interface';
+import type { InputTextAreaProps } from '../interface';
 
 export const InputTextArea: FC<InputTextAreaProps> = (props) => {
   const {
@@ -17,8 +17,7 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
     disabled = false,
     label,
     info,
-    description,
-    feedback,
+    errorMsg,
     required,
     rows = 4,
     showCount = false,
@@ -52,8 +51,7 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      description={description}
-      feedback={feedback}
+      errorMsg={errorMsg}
       required={required}
       inputId={inputId}
     >
@@ -71,7 +69,7 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
         />
         {showCount && (
           <TypographyBody as="div" className={classes('count')} size={INPUT_COUNT_SIZE} color={INPUT_COUNT_COLOR}>
-            {maxLength ? `${innerValue.length} / ${maxLength}` : `${innerValue.length}`}
+            {maxLength ? `${innerValue.length}/${maxLength}` : `${innerValue.length}`}
           </TypographyBody>
         )}
       </div>

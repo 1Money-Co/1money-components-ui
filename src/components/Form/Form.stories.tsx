@@ -13,7 +13,11 @@ import { Button } from '@/components/Button';
 import type { FormInstance } from './interface';
 
 import './style';
-import '@/components/Input/style';
+import '@/components/Input/FieldShell/FieldShell.scss';
+import '@/components/Input/Input/Input.scss';
+import '@/components/Input/TextArea/TextArea.scss';
+import '@/components/Input/OTP/OTP.scss';
+import '@/components/Input/Trade/Trade.scss';
 import '@/components/Checkbox/style';
 import '@/components/Switch/style';
 import '@/components/Button/style';

@@ -53,12 +53,16 @@
       "mcp__figma-dev-mode-mcp-server__get_metadata",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6205)",
       "Bash(git status:*)",
-      "mcp__figma-remote-mcp__get_metadata",
-      "mcp__figma-remote-mcp__get_screenshot",
-      "Bash(curl -s http://localhost:6207)",
-      "Bash(curl -s \"http://localhost:6207/iframe.html?viewMode=story&id=components-tag--default\")",
-      "Bash(curl -s \"http://localhost:6207/iframe.html?viewMode=story&id=components-tag--sizes\")",
-      "Bash(tr '{' '\\\\n{')"
+      "Bash(mkdir:*)",
+      "mcp__chrome-devtools__click",
+      "mcp__chrome-devtools__take_snapshot",
+      "Bash(grep -n 'prefix\\\\b\\\\|$prefix' /Users/wali/1Money/1money-components-ui/src/styles/_settings.scss)",
+      "WebFetch(domain:primereact.org)",
+      "Bash(xargs cat:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6210)"
     ]
   }
 }

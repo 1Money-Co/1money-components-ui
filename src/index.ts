@@ -43,6 +43,7 @@ export { Progress } from './components/Progress';
 export { Radio, RadioGroup } from './components/Radio';
 export { Select } from './components/Select';
 export { Segment } from './components/Segment';
+export { Skeleton } from './components/Skeleton';
 export { Slider } from './components/Slider';
 export { Space } from './components/Space';
 export { Spinner } from './components/Spinner';
@@ -100,6 +101,8 @@ export type {
   InputSearchProps,
   InputTextAreaProps,
   InputOTPProps,
+  InputTradeProps,
+  InputAmountProps,
   InputSize,
   InputStatus,
 } from './components/Input';
@@ -164,9 +167,10 @@ export type {
   SelectValue,
 } from './components/Select';
 export type { SegmentProps, SegmentItem } from './components/Segment';
+export type { SkeletonProps } from './components/Skeleton';
 export type { SliderProps } from './components/Slider';
 export type { SpaceProps } from './components/Space';
-export type { SpinnerProps } from './components/Spinner';
+export type { SpinnerProps, SpinnerType } from './components/Spinner';
 export type { StepProps, StepItem, StepStatus, StepTagConfig } from './components/Step';
 export type { SwitchProps } from './components/Switch';
 export type {

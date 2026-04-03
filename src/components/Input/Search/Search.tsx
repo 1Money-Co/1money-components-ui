@@ -3,16 +3,13 @@ import { useControlledState, useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { Spinner } from '@/components/Spinner';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { FieldShell } from './FieldShell';
-import { useSyncRef } from './useSyncRef';
-import type { FC, ChangeEvent, KeyboardEvent, ReactNode } from 'react';
-import type { InputSearchProps } from './interface';
+import { FieldShell } from '../FieldShell';
+import { useSyncRef } from '../useSyncRef';
+import type { FC, ChangeEvent, KeyboardEvent } from 'react';
+import type { InputSearchProps } from '../interface';
+import type { InputSize } from '../constants';
 
-const renderSearchIcon = (loading: boolean, searchButton: ReactNode | boolean): ReactNode => {
-  if (loading) return <Spinner style={{ width: 16, height: 16 }} />;
-  if (typeof searchButton === 'boolean') return <Icons name="search" size={16} />;
-  return searchButton;
-};
+const SEARCH_ICON_SIZE: Record<InputSize, number> = { large: 20, small: 16 };
 
 export const InputSearch: FC<InputSearchProps> = (props) => {
   const {
@@ -24,10 +21,10 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
     loading = false,
     searchButton = true,
     searchTrigger = 'both',
+    allowClear = false,
     label,
     info,
-    description,
-    feedback,
+    errorMsg,
     required,
     prefix,
     suffix,
@@ -35,6 +32,7 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
     defaultValue = '',
     onChange,
     onSearch,
+    onClear,
     onKeyDown,
     ref,
     id: externalId,
@@ -64,6 +62,19 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
     onKeyDown?.(event);
   });
 
+  const handleClear = useEventCallback(() => {
+    setInnerValue('');
+    inputRef.current?.focus();
+    onClear?.();
+  });
+
+  const showClearAction = allowClear && !disabled && innerValue.length > 0;
+  const iconSize = SEARCH_ICON_SIZE[size];
+
+  const searchIcon = loading
+    ? <Spinner style={{ width: iconSize, height: iconSize }} />
+    : searchButton && (typeof searchButton === 'boolean' ? <Icons name="search" size={iconSize} /> : searchButton);
+
   return (
     <FieldShell
       className={className}
@@ -73,12 +84,12 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      description={description}
-      feedback={feedback}
+      errorMsg={errorMsg}
       required={required}
       inputId={inputId}
     >
       <div className={classes('control', joinCls(disabled && classes('control-disabled')))}>
+        {searchIcon && <span className={classes('prefix')}>{searchIcon}</span>}
         {prefix && <span className={classes('prefix')}>{prefix}</span>}
         <input
           {...rest}
@@ -90,15 +101,14 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
-        {searchButton && (
+        {showClearAction && (
           <button
             type="button"
             className={classes('action')}
-            disabled={disabled || loading}
-            aria-label="search input"
-            onClick={() => handleSearch()}
+            aria-label="clear search"
+            onClick={handleClear}
           >
-            {renderSearchIcon(loading, searchButton)}
+            <Icons name="cross" size={iconSize} />
           </button>
         )}
         {suffix && <span className={classes('suffix')}>{suffix}</span>}

@@ -1,17 +1,16 @@
 import { memo } from 'react';
+import { Icons } from '@/components/Icons';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, ReactNode } from 'react';
-import type { InputSize, InputStatus } from './interface';
+import type { InputSize, InputStatus } from '../constants';
 import {
-  INPUT_DESCRIPTION_COLOR,
-  INPUT_DESCRIPTION_SIZE,
-  INPUT_FEEDBACK_SIZE,
+  INPUT_ERROR_MSG_SIZE,
   INPUT_INFO_COLOR,
   INPUT_INFO_SIZE,
   INPUT_LABEL_COLOR,
   INPUT_LABEL_SIZE,
-} from './constants';
+} from '../constants';
 
 export interface FieldShellProps {
   className?: string;
@@ -21,8 +20,7 @@ export interface FieldShellProps {
   disabled: boolean;
   label?: ReactNode;
   info?: ReactNode;
-  description?: ReactNode;
-  feedback?: ReactNode;
+  errorMsg?: ReactNode;
   required?: boolean;
   inputId?: string;
   children: ReactNode;
@@ -37,8 +35,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
   disabled,
   label,
   info,
-  description,
-  feedback,
+  errorMsg,
   required = false,
   inputId,
 }) => {
@@ -60,7 +57,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
         <div className={classes('label-row')}>
           {label && (
             <label htmlFor={inputId} className={classes('label')}>
-              <TypographyLabel as="span" size={INPUT_LABEL_SIZE} color={INPUT_LABEL_COLOR}>
+              <TypographyLabel as="span" size={INPUT_LABEL_SIZE[size]} color={INPUT_LABEL_COLOR} strong>
                 {label}
               </TypographyLabel>
               {required && <span className={classes('required')}>*</span>}
@@ -69,17 +66,14 @@ const FieldShellBase: FC<FieldShellProps> = ({
           {info && <TypographyBody className={classes('info')} size={INPUT_INFO_SIZE} color={INPUT_INFO_COLOR}>{info}</TypographyBody>}
         </div>
       )}
-      {description && <TypographyBody as="div" className={classes('description')} size={INPUT_DESCRIPTION_SIZE} color={INPUT_DESCRIPTION_COLOR}>{description}</TypographyBody>}
       <div className={classes('control-wrapper')}>{children}</div>
-      {feedback && (
-        <TypographyBody
-          as="div"
-          className={classes('feedback')}
-          size={INPUT_FEEDBACK_SIZE}
-          role={status === 'error' || status === 'warning' ? 'alert' : 'status'}
-        >
-          {feedback}
-        </TypographyBody>
+      {errorMsg && (
+        <div className={classes('error-msg')} role={status === 'error' || status === 'warning' ? 'alert' : 'status'}>
+          {status === 'error' && <Icons className={classes('error-msg-icon')} name="error" size={16} color="danger" />}
+          <TypographyBody as="span" size={INPUT_ERROR_MSG_SIZE} color={status === 'error' ? 'danger' : undefined}>
+            {errorMsg}
+          </TypographyBody>
+        </div>
       )}
     </div>
   );
