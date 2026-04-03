@@ -1,0 +1,47 @@
+@use '@/styles/api' as theme;
+
+$component: 'skeleton';
+
+.#{theme.$prefix}-#{$component} {
+  position: relative;
+  overflow: hidden;
+  background-color: theme.palette(bg, 'default-tertiary');
+  border-radius: theme.shape(100);
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      theme.palette(bg, 'scrim-light'),
+      transparent
+    );
+    transform: translateX(-100%);
+    animation: om-skeleton-wave 1.2s infinite;
+    content: '';
+  }
+
+  // ── Shape: circle ──
+  &-circle {
+    border-radius: theme.shape('full');
+  }
+
+  // ── Animation: none ──
+  &-none::after {
+    animation: none;
+  }
+}
+
+/* stylelint-disable at-rule-prelude-no-invalid */
+@keyframes om-skeleton-wave {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+/* stylelint-enable at-rule-prelude-no-invalid */
