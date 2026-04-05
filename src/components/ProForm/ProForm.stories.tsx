@@ -10,11 +10,13 @@ import {
   ProFormCheckbox,
   ProFormCheckboxGroup,
   ProFormSwitch,
+  ProFormRadioGroup,
+  ProFormSlider,
+  ProFormDatePicker,
 } from './fields';
 import { ProFormDependency } from './ProFormDependency';
 import { ProFormList } from './ProFormList';
 import { ModalForm } from './layouts/ModalForm';
-import { QueryFilter } from './layouts/QueryFilter';
 import { Button } from '@/components/Button';
 
 import './style';
@@ -29,6 +31,9 @@ import '@/components/Switch/style';
 import '@/components/Button/style';
 import '@/components/Grid/style';
 import '@/components/Modal/style';
+import '@/components/Radio/style';
+import '@/components/Slider/style';
+import '@/components/Calendar/style';
 
 const meta: Meta<typeof ProForm> = {
   title: 'Components/ProForm',
@@ -94,6 +99,9 @@ export const AllFieldTypes: Story = {
         agree: true,
         options: [],
         darkMode: false,
+        role: 'admin',
+        volume: 60,
+        date: null,
       }}
       onFinish={(values) => alert(JSON.stringify(values, null, 2))}
     >
@@ -113,6 +121,28 @@ export const AllFieldTypes: Story = {
         }}
       />
       <ProFormSwitch name="darkMode" label="Dark Mode" />
+      <ProFormRadioGroup
+        name="role"
+        label="Role"
+        fieldProps={{
+          direction: 'horizontal',
+          options: [
+            { label: 'Admin', value: 'admin' },
+            { label: 'Editor', value: 'editor' },
+            { label: 'Viewer', value: 'viewer' },
+          ],
+        }}
+      />
+      <ProFormSlider
+        name="volume"
+        label="Volume"
+        fieldProps={{ min: 0, max: 100 }}
+      />
+      <ProFormDatePicker
+        name="date"
+        label="Date"
+        fieldProps={{ dateFormat: 'yy-mm-dd' }}
+      />
     </ProForm>
   ),
 };
@@ -377,21 +407,85 @@ export const ModalFormStory: Story = {
   ),
 };
 
-// ─── QueryFilter ─────────────────────────────────────────────
+// ─── RadioGroup ─────────────────────────────────────────────
 
-export const QueryFilterStory: Story = {
+export const RadioGroupStory: Story = {
   render: (args) => (
-    <QueryFilter
+    <ProForm
       {...args}
-      defaultColsNumber={2}
-      onFinish={(values) => alert('Search: ' + JSON.stringify(values))}
-      onReset={() => alert('Reset')}
+      initialValues={{ gender: 'male', plan: 'pro' }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
     >
-      <ProFormText name="keyword" label="Keyword" placeholder="Search..." />
-      <ProFormText name="category" label="Category" placeholder="Category" />
-      <ProFormText name="status" label="Status" placeholder="Status" />
-      <ProFormText name="author" label="Author" placeholder="Author" />
-    </QueryFilter>
+      <ProFormRadioGroup
+        name="gender"
+        label="Gender"
+        fieldProps={{
+          options: [
+            { label: 'Male', value: 'male' },
+            { label: 'Female', value: 'female' },
+            { label: 'Other', value: 'other' },
+          ],
+        }}
+      />
+      <ProFormRadioGroup
+        name="plan"
+        label="Plan"
+        fieldProps={{
+          direction: 'horizontal',
+          options: [
+            { label: 'Free', value: 'free' },
+            { label: 'Pro', value: 'pro' },
+            { label: 'Enterprise', value: 'enterprise' },
+          ],
+        }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── Slider ─────────────────────────────────────────────────
+
+export const SliderStory: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ volume: 50, price: 200 }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormSlider
+        name="volume"
+        label="Volume"
+        fieldProps={{ min: 0, max: 100, step: 1 }}
+      />
+      <ProFormSlider
+        name="price"
+        label="Price"
+        fieldProps={{ min: 0, max: 1000, step: 10, valuePrefix: '$' }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── DatePicker ─────────────────────────────────────────────
+
+export const DatePickerStory: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ birthday: null, startDate: null }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormDatePicker
+        name="birthday"
+        label="Birthday"
+        fieldProps={{ dateFormat: 'yy-mm-dd', showIcon: true }}
+      />
+      <ProFormDatePicker
+        name="startDate"
+        label="Start Date"
+        fieldProps={{ dateFormat: 'mm/dd/yy', showButtonBar: true }}
+      />
+    </ProForm>
   ),
 };
 

@@ -63,6 +63,7 @@ $component: 'proform';
   display: flex;
   gap: theme.spacing(gap, 200);
   align-items: center;
+  height: theme.sizing(component-height, '3xl');
   margin-left: auto;
 }
 

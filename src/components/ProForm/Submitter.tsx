@@ -39,6 +39,7 @@ const SubmitterBase: FC<SubmitterInternalProps> = (props) => {
   const resetButton = useMemo(
     () => (
       <Button
+        key="reset"
         type="button"
         color="secondary"
         {...resetButtonProps}
@@ -53,6 +54,7 @@ const SubmitterBase: FC<SubmitterInternalProps> = (props) => {
   const submitButton = useMemo(
     () => (
       <Button
+        key="submit"
         type="submit"
         color="primary"
         loading={loading}
