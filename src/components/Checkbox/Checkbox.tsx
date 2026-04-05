@@ -4,6 +4,7 @@ import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import BaseCheckbox from './BaseCheckbox';
 import { CheckboxGroupContext } from './CheckboxGroupContext';
+import './style';
 import {
   CHECKBOX_DESCRIPTION_COLOR_DEFAULT,
   CHECKBOX_DESCRIPTION_COLOR_DISABLED,

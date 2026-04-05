@@ -16,11 +16,6 @@ export type {
   ValidateTrigger,
 };
 
-export interface ColProps {
-  span?: number;
-  offset?: number;
-}
-
 export interface Rule {
   required?: boolean;
   message?: string;
@@ -52,10 +47,7 @@ export interface FormProps
   ) => void;
   onReset?: () => void;
   size?: FormSize;
-  layout?: FormLayout;
   labelAlign?: LabelAlign;
-  labelCol?: ColProps;
-  wrapperCol?: ColProps;
   disabled?: boolean;
   colon?: boolean;
   requiredMark?: boolean;
@@ -73,8 +65,6 @@ export interface FormItemProps {
   help?: ReactNode;
   validateStatus?: ValidateStatus;
   hasFeedback?: boolean;
-  labelCol?: ColProps;
-  wrapperCol?: ColProps;
   colon?: boolean;
   hidden?: boolean;
 }
@@ -133,10 +123,7 @@ export interface FormContextValue {
   registerField: (name: string, rules: Rule[]) => void;
   unregisterField: (name: string) => void;
   size: FormSize;
-  layout: FormLayout;
   labelAlign: LabelAlign;
-  labelCol: ColProps;
-  wrapperCol: ColProps;
   disabled: boolean;
   colon: boolean;
   requiredMark: boolean;
@@ -165,10 +152,7 @@ export interface UseFormCoreConfig {
   ) => void;
   onReset?: () => void;
   size?: FormSize;
-  layout?: FormLayout;
   labelAlign?: LabelAlign;
-  labelCol?: ColProps;
-  wrapperCol?: ColProps;
   disabled?: boolean;
   colon?: boolean;
   requiredMark?: boolean;

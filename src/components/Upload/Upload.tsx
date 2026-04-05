@@ -6,6 +6,7 @@ import { Icons } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import type { FC, PropsWithChildren } from 'react';
 import type { UploadProps } from './interface';
+import './style';
 
 const BUTTON_LABEL_DEFAULT = 'Upload file';
 

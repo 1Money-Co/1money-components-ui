@@ -4,6 +4,7 @@ import { Icons } from '@/components/Icons';
 import { TypographyTitle, TypographyBody, TypographyLink } from '@/components/Typography';
 import type { FC, ReactElement } from 'react';
 import type { AlertProps, AlertStatus } from './interface';
+import './style';
 
 const CLOSE_ALERT_ARIA_LABEL = 'Close alert';
 

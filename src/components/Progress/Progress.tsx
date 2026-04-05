@@ -4,6 +4,7 @@ import { TypographyBody, TypographyDisplay } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, ReactNode } from 'react';
 import type { ProgressProps } from './interface';
+import './style';
 import {
   PROGRESS_DEFAULT_COLOR,
   PROGRESS_DEFAULT_PLACEMENT,

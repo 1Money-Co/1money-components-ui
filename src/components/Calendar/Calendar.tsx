@@ -5,6 +5,7 @@ import Icons from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { CalendarProps } from './interface';
+import './style';
 
 const isSameDay = (d1?: Date, d2?: Date): boolean => {
   if (!d1 || !d2) return false;

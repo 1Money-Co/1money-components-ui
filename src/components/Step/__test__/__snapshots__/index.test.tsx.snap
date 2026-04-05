@@ -75,7 +75,7 @@ exports[`Step renders correctly 1`] = `
                 class="om-react-ui-tag om-react-ui-tag-success om-react-ui-tag-large"
               >
                 <span
-                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
                 >
                   Tag
                 </span>
@@ -127,7 +127,7 @@ exports[`Step renders correctly 1`] = `
                 class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
               >
                 <span
-                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
                 >
                   Tag
                 </span>
@@ -203,7 +203,7 @@ exports[`Step renders correctly 1`] = `
                 class="om-react-ui-tag om-react-ui-tag-negative om-react-ui-tag-large"
               >
                 <span
-                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
                 >
                   Tag
                 </span>
@@ -285,7 +285,7 @@ exports[`Step renders correctly 1`] = `
               class="om-react-ui-tag om-react-ui-tag-success om-react-ui-tag-large"
             >
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
               >
                 Tag
               </span>
@@ -337,7 +337,7 @@ exports[`Step renders correctly 1`] = `
               class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
             >
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
               >
                 Tag
               </span>
@@ -413,7 +413,7 @@ exports[`Step renders correctly 1`] = `
               class="om-react-ui-tag om-react-ui-tag-negative om-react-ui-tag-large"
             >
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label"
+                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
               >
                 Tag
               </span>

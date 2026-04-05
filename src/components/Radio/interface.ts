@@ -10,6 +10,8 @@ export type RadioValueType = string | number;
 export type RadioVariant = 'default' | 'cell';
 export type RadioSize = 'large' | 'medium' | 'small';
 export type RadioOrientation = 'horizontal' | 'vertical';
+export type RadioAlignment = 'left' | 'center' | 'right';
+export type RadioGroupDirection = 'vertical' | 'horizontal';
 
 export interface RadioChangeTarget {
   checked: boolean;
@@ -59,14 +61,12 @@ export interface RadioProps extends NativeRadioInputProps {
   variant?: RadioVariant;
   /** Visual size used by the cell variant */
   size?: RadioSize;
-  /** Layout used by the cell variant */
-  orientation?: RadioOrientation;
+  /** Alignment used by the radio. Default supports `left` / `right`; cell supports `left` / `center`. */
+  alignment?: RadioAlignment;
   /** Optional icon rendered by the cell variant */
-  icon?: IconName;
+  icon?: IconName | ReactNode;
   /** Optional tag label rendered by the cell variant */
   tag?: string;
-  /** Position of the radio relative to the label */
-  direction?: 'left' | 'right';
   /** Callback when checked state changes */
   onChange?: (event: RadioChangeEvent) => void;
 }
@@ -84,10 +84,10 @@ export interface RadioOptionItem {
   variant?: RadioVariant;
   /** Visual size used by the cell variant */
   size?: RadioSize;
-  /** Layout used by the cell variant */
-  orientation?: RadioOrientation;
+  /** Alignment used by the radio. Default supports `left` / `right`; cell supports `left` / `center`. */
+  alignment?: RadioAlignment;
   /** Optional icon rendered by the cell variant */
-  icon?: IconName;
+  icon?: IconName | ReactNode;
   /** Optional tag label rendered by the cell variant */
   tag?: string;
   /** Whether this specific option is disabled */
@@ -112,16 +112,16 @@ export interface RadioGroupProps {
   name?: string;
   /** Disables all radios in the group */
   disabled?: boolean;
-  /** Layout direction of the group */
-  layout?: 'vertical' | 'horizontal';
+  /** @deprecated Use `direction` to control the group direction. */
+  layout?: RadioGroupDirection;
+  /** Direction of the group */
+  direction?: RadioGroupDirection;
   /** Visual variant inherited by child radios */
   variant?: RadioVariant;
   /** Visual size inherited by child radios */
   size?: RadioSize;
-  /** Cell layout inherited by child radios */
-  orientation?: RadioOrientation;
-  /** Position of radio relative to label (inherited by children) */
-  direction?: 'left' | 'right';
+  /** Alignment inherited by child radios. Default supports `left` / `right`; cell supports `left` / `center`. */
+  alignment?: RadioAlignment;
   /** Gap between radio items — accepts spacing token key or CSS value */
   gap?: number | string;
   /** Title attribute for the root radiogroup container */

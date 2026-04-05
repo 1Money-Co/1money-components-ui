@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react';
 import type {
+  RadioAlignment,
   RadioChangeEvent,
   RadioOrientation,
   RadioSize,
@@ -22,8 +23,8 @@ interface RadioGroupContextValue {
   size: RadioSize;
   /** Cell orientation inherited by children */
   orientation: RadioOrientation;
-  /** Position of radio relative to label, inherited by children */
-  direction: 'left' | 'right';
+  /** Alignment inherited by children */
+  alignment: RadioAlignment;
 }
 
 const RadioGroupContext = createContext<RadioGroupContextValue | null>(null);

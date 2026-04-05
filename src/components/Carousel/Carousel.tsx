@@ -3,6 +3,7 @@ import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { CarouselProps } from './interface';
+import './style';
 
 export const Carousel: FC<CarouselProps> = props => {
   const {

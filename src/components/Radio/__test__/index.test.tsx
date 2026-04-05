@@ -1,9 +1,27 @@
 import 'jsdom-global/register';
+import fs from 'fs';
+import path from 'path';
 import * as React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Radio, RadioGroup } from '../index';
-import type { RadioChangeEvent, RadioValueType } from '../interface';
+import type {
+  RadioChangeEvent,
+  RadioGroupProps,
+  RadioOptionItem,
+  RadioProps,
+  RadioValueType,
+} from '../interface';
+
+const readRadioStylesSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../style/Radio.scss'), 'utf8');
+
+// @ts-expect-error RadioGroup no longer supports the orientation prop.
+const invalidRadioGroupProps: RadioGroupProps = { orientation: 'vertical' };
+// @ts-expect-error Radio no longer supports the orientation prop.
+const invalidRadioProps: RadioProps = { orientation: 'vertical' };
+// @ts-expect-error Radio options no longer support the orientation prop.
+const invalidRadioOption: RadioOptionItem = { value: 'a', orientation: 'vertical' };
 
 const originalConsoleError = console.error;
 console.error = (message, ...optionalParams) => {
@@ -95,7 +113,7 @@ describe('Radio', () => {
       <Radio
         variant="cell"
         size="large"
-        orientation="vertical"
+        alignment="center"
         icon="language"
         tag="Tag"
         label="Global account"
@@ -106,6 +124,65 @@ describe('Radio', () => {
     expect(screen.getByText('Global account')).toBeInTheDocument();
     expect(screen.getByText('International settlement')).toBeInTheDocument();
     expect(screen.getByText('Tag')).toBeInTheDocument();
+  });
+
+  it('maps alignment="center" to the centered cell layout', () => {
+    render(
+      <Radio
+        variant="cell"
+        alignment="center"
+        label="Centered"
+      />
+    );
+
+    const radioRoot = screen.getByText('Centered').closest('label');
+
+    expect(radioRoot).toHaveClass('om-react-ui-radio-cell-vertical');
+    expect(radioRoot).not.toHaveClass('om-react-ui-radio-cell-horizontal');
+  });
+
+  it('uses alignment="right" for the default radio layout', () => {
+    render(
+      <Radio
+        alignment="right"
+        label="Aligned right"
+      />
+    );
+
+    const radioRoot = screen.getByText('Aligned right').closest('label');
+
+    expect(radioRoot).toHaveClass('om-react-ui-radio-right');
+  });
+
+  it('renders custom icon nodes for unchecked medium cell options', () => {
+    render(
+      <Radio
+        variant="cell"
+        size="medium"
+        alignment="left"
+        icon={<span data-testid="coin-icon" />}
+        label="USD1"
+      />
+    );
+
+    expect(screen.getByTestId('coin-icon')).toBeInTheDocument();
+  });
+
+  it('maps cell panel backgrounds to the Figma default and checked tokens', () => {
+    const stylesSource = readRadioStylesSource();
+
+    expect(stylesSource).toContain("background-color: theme.palette(bg, 'default');");
+    expect(stylesSource).toContain(
+      "&-cell-input:checked + .#{theme.$prefix}-#{$component}-cell-panel {\n    background-color: theme.palette(bg, 'default-secondary');",
+    );
+  });
+
+  it('keeps small horizontal cell typography aligned with the Figma beta radio spec', () => {
+    const stylesSource = readRadioStylesSource();
+
+    expect(stylesSource).toContain(
+      ".#{theme.$prefix}-#{$component}-description {\n      @include theme.typography(body, md, $strong: true);",
+    );
   });
 });
 
@@ -189,9 +266,9 @@ describe('RadioGroup', () => {
     expect(email).not.toBeChecked();
   });
 
-  it('applies layout classes to the group root', () => {
+  it('applies direction classes to the group root', () => {
     render(
-      <RadioGroup value="a" layout="horizontal">
+      <RadioGroup value="a" direction="horizontal">
         <Radio value="a" label="Option A" />
         <Radio value="b" label="Option B" />
       </RadioGroup>
@@ -200,6 +277,20 @@ describe('RadioGroup', () => {
     expect(screen.getByRole('radiogroup')).toHaveClass(
       'om-react-ui-radio-group-horizontal',
     );
+  });
+
+  it('prefers direction over layout when both are provided', () => {
+    render(
+      <RadioGroup value="a" direction="horizontal" layout="vertical">
+        <Radio value="a" label="Option A" />
+        <Radio value="b" label="Option B" />
+      </RadioGroup>
+    );
+
+    const groupRoot = screen.getByRole('radiogroup');
+
+    expect(groupRoot).toHaveClass('om-react-ui-radio-group-horizontal');
+    expect(groupRoot).not.toHaveClass('om-react-ui-radio-group-vertical');
   });
 
   it('does not emit change events when the group is disabled', () => {
@@ -230,8 +321,8 @@ describe('RadioGroup', () => {
         defaultValue="swift"
         variant="cell"
         size="large"
-        orientation="horizontal"
-        layout="horizontal"
+        alignment="left"
+        direction="horizontal"
         onChange={handleChange}
         options={[
           {
@@ -265,5 +356,60 @@ describe('RadioGroup', () => {
     });
     expect(global).toBeChecked();
     expect(swift).not.toBeChecked();
+  });
+
+  it('inherits centered cell alignment from the group API', () => {
+    render(
+      <RadioGroup
+        defaultValue="global"
+        variant="cell"
+        size="large"
+        alignment="center"
+        direction="horizontal"
+        options={[
+          {
+            value: 'global',
+            label: 'Global account',
+            description: 'International settlement',
+            icon: 'language',
+          },
+        ]}
+      />
+    );
+
+    const radioRoot = screen.getByText('Global account').closest('label');
+
+    expect(radioRoot).toHaveClass('om-react-ui-radio-cell-vertical');
+    expect(radioRoot).not.toHaveClass('om-react-ui-radio-cell-horizontal');
+  });
+
+  it('inherits alignment="right" from the group API for default radios', () => {
+    render(
+      <RadioGroup
+        defaultValue="global"
+        alignment="right"
+      >
+        <Radio value="global" label="Global account" />
+      </RadioGroup>
+    );
+
+    const radioRoot = screen.getByText('Global account').closest('label');
+
+    expect(radioRoot).toHaveClass('om-react-ui-radio-right');
+  });
+
+  it('ignores alignment="right" for the cell variant and keeps left layout', () => {
+    render(
+      <Radio
+        variant="cell"
+        alignment="right"
+        label="Cell right falls back"
+      />
+    );
+
+    const radioRoot = screen.getByText('Cell right falls back').closest('label');
+
+    expect(radioRoot).toHaveClass('om-react-ui-radio-cell-horizontal');
+    expect(radioRoot).not.toHaveClass('om-react-ui-radio-right');
   });
 });

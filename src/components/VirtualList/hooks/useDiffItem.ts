@@ -7,17 +7,17 @@ export default function useDiffItem<T>(
   getKey: GetKey<T>,
   onDiff?: (diffIndex: number) => void,
 ): [T | null] {
-  const [prevData, setPrevData] = React.useState(data);
-  const [diffItem, setDiffItem] = React.useState<T | null>(null);
+  const prevDataRef = React.useRef(data);
+  const diffItemRef = React.useRef<T | null>(null);
 
-  React.useEffect(() => {
-    const diff = findListDiffIndex(prevData || [], data || [], getKey);
+  if (prevDataRef.current !== data) {
+    const diff = findListDiffIndex(prevDataRef.current || [], data || [], getKey);
     if (diff?.index !== undefined) {
       onDiff?.(diff.index);
-      setDiffItem(data[diff.index]);
+      diffItemRef.current = data[diff.index];
     }
-    setPrevData(data);
-  }, [data]);
+    prevDataRef.current = data;
+  }
 
-  return [diffItem];
+  return [diffItemRef.current];
 }

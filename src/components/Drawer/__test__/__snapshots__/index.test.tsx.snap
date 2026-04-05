@@ -29,7 +29,7 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
           >
             <svg
               class="om-react-ui-icons"
@@ -63,7 +63,7 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 14px; --icon-height: 14px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
         >
           <svg
             class="om-react-ui-icons"

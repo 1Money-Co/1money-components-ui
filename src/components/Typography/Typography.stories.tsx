@@ -22,22 +22,18 @@ const STORY_SECTION_STYLE = {
   gap: 12,
 };
 
-const TRUNCATED_CONTAINER_STYLE = {
-  display: 'grid',
-  gap: 8,
-  width: 240,
-};
+const SENDER_ID = '814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b749f';
+const RECIPIENT_ID = '3e83b3c59a1d4f8e7b6c2a0d5f9e8d7c6b4a3f2e1d0c9b8a7f6e5d4c3b2a40bb';
 
-const TRUNCATED_FRAME_STYLE = {
-  width: '100%',
-  padding: 12,
-  borderRadius: 12,
-  background: 'rgba(15, 23, 42, 0.03)',
-  boxShadow: 'inset 0 0 0 1px rgba(15, 23, 42, 0.12)',
+const CONSTRAINED_STYLE = { maxWidth: 200 };
+const ROW_STYLE = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 24,
+  padding: '16px 0',
+  borderBottom: '1px solid rgba(15, 23, 42, 0.08)',
 };
-
-const LONG_TEXT =
-  'Settlement updates often include enough detail to overflow smaller UI slots, so typography needs robust truncation and copy affordances.';
 
 const meta: Meta<typeof Typography.Body> = {
   title: 'Components/Typography',
@@ -206,71 +202,62 @@ export const SemanticTags: Story = {
   ),
 };
 
-export const SingleLineEllipsis: Story = {
+export const MiddleEllipsis: Story = {
   render: () => (
-    <div style={TRUNCATED_CONTAINER_STYLE}>
-      <Typography.Label size="xs" color="default-secondary">
-        Constrained to 240px width
-      </Typography.Label>
-      <div style={TRUNCATED_FRAME_STYLE}>
-        <Typography.Body size="md" ellipsis>
-          {LONG_TEXT}
+    <div style={{ ...STORY_LAYOUT_STYLE, maxWidth: 480 }}>
+      <div style={ROW_STYLE}>
+        <Typography.Label size="md" color="default-secondary">Sender ID</Typography.Label>
+        <div style={CONSTRAINED_STYLE}>
+          <Typography.Body size="md" ellipsis={{ tooltip: true }} copyable>
+            {SENDER_ID}
+          </Typography.Body>
+        </div>
+      </div>
+      <div style={ROW_STYLE}>
+        <Typography.Label size="md" color="default-secondary">Recipient name</Typography.Label>
+        <Typography.Body size="md">Apextech LLC</Typography.Body>
+      </div>
+      <div style={ROW_STYLE}>
+        <Typography.Label size="md" color="default-secondary">Recipient ID</Typography.Label>
+        <div style={CONSTRAINED_STYLE}>
+          <Typography.Body size="md" ellipsis={{ tooltip: true }} copyable>
+            {RECIPIENT_ID}
+          </Typography.Body>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+export const EllipsisCustomChars: Story = {
+  render: () => (
+    <div style={STORY_LAYOUT_STYLE}>
+      <Typography.Label size="xs" color="default-secondary">start=6, end=6</Typography.Label>
+      <div style={CONSTRAINED_STYLE}>
+        <Typography.Body size="md" ellipsis={{ start: 6, end: 6, tooltip: true }}>
+          {SENDER_ID}
+        </Typography.Body>
+      </div>
+
+      <Typography.Label size="xs" color="default-secondary">start=10, end=8</Typography.Label>
+      <div style={CONSTRAINED_STYLE}>
+        <Typography.Body size="md" ellipsis={{ start: 10, end: 8, tooltip: true }}>
+          {SENDER_ID}
         </Typography.Body>
       </div>
     </div>
   ),
 };
 
-export const MultiLineEllipsisWithTooltip: Story = {
+export const CopyableText: Story = {
   render: () => (
-    <div style={TRUNCATED_CONTAINER_STYLE}>
-      <Typography.Label size="xs" color="default-secondary">
-        Constrained to 240px width
-      </Typography.Label>
-      <div style={TRUNCATED_FRAME_STYLE}>
-        <Typography.Body size="md" ellipsis={{ rows: 2, tooltip: true }}>
-          {LONG_TEXT}
-        </Typography.Body>
-      </div>
-    </div>
-  ),
-};
-
-export const CopyableContent: Story = {
-  render: () => (
-    <Typography.Body size="md" copyable>
-      Wallet address copied from the original, untruncated content.
-    </Typography.Body>
-  ),
-};
-
-export const EllipsisAndCopyable: Story = {
-  render: () => (
-    <div style={TRUNCATED_CONTAINER_STYLE}>
-      <Typography.Title
-        size="sm"
-        strong
-        ellipsis={{ rows: 2, tooltip: true }}
-        copyable={{ duration: 1200 }}
-      >
-        {LONG_TEXT}
-      </Typography.Title>
-    </div>
-  ),
-};
-
-export const CopyableLink: Story = {
-  render: () => (
-    <div style={TRUNCATED_CONTAINER_STYLE}>
-      <Typography.Link
-        size="md"
-        href="https://ant.design/components/typography/"
-        target="_blank"
-        ellipsis={{ tooltip: true }}
-        copyable={{ text: 'https://ant.design/components/typography/' }}
-      >
-        https://ant.design/components/typography/
-      </Typography.Link>
+    <div style={STORY_LAYOUT_STYLE}>
+      <Typography.Body size="md" copyable>
+        Plain text with copy action
+      </Typography.Body>
+      <Typography.Body size="md" copyable={{ text: 'custom-override-value' }}>
+        Copy uses a different value
+      </Typography.Body>
     </div>
   ),
 };

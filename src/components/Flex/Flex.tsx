@@ -3,6 +3,7 @@ import classnames, { joinCls } from '@/utils/classnames';
 import { FLEX_CLASS, FLEX_CSS_VARS, FLEX_GAP_DEFAULT, FLEX_GAP_MAP, FLEX_PREFIX, FLEX_WRAP } from './constants';
 import type { CSSProperties, PropsWithChildren } from 'react';
 import type { FlexProps, FlexGap, FlexWrap } from './interface';
+import './style';
 
 const normalizeGap = (gap?: FlexGap) => {
   if (gap === undefined || gap === null) return FLEX_GAP_DEFAULT;

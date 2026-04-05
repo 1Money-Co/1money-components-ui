@@ -1,6 +1,6 @@
 # Radio
 
-A radio button component built on native `input[type="radio"]` with the 1Money design system. It supports standalone controlled and uncontrolled usage, label with description, configurable direction, and grouped selection management via `RadioGroup`.
+A radio button component built on native `input[type="radio"]` with the 1Money design system. It supports standalone controlled and uncontrolled usage, label with description, configurable alignment, and grouped selection management via `RadioGroup`.
 
 ## Import
 
@@ -22,10 +22,9 @@ import { Radio, RadioGroup } from '@1money/components-ui/Radio';
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `variant` | `'default' \| 'cell'` | `'default'` | Visual variant |
 | `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Visual size for the `cell` variant |
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Content layout for the `cell` variant |
-| `icon` | `IconName` | — | Optional icon for the `cell` variant |
+| `alignment` | `'left' \| 'center' \| 'right'` | `'left'` | Alignment control. Default radios support `left` / `right`; `cell` supports `left` / `center` |
+| `icon` | `IconName \| ReactNode` | — | Optional icon for the `cell` variant |
 | `tag` | `string` | — | Optional tag label for the `cell` variant |
-| `direction` | `'left' \| 'right'` | `'left'` | Position of the radio relative to the label |
 | `onChange` | `(event: RadioChangeEvent) => void` | — | Callback when checked state changes |
 | `prefixCls` | `string` | `'radio'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes applied to the root label |
@@ -43,11 +42,11 @@ All additional native radio input props are spread onto the underlying `input[ty
 | `id` | `string` | — | HTML id attribute for the root radiogroup container |
 | `name` | `string` | — | HTML name attribute shared by radios in the group |
 | `disabled` | `boolean` | `false` | Disables all radios in the group |
-| `layout` | `'vertical' \| 'horizontal'` | `'vertical'` | Layout direction of the group |
+| `direction` | `'vertical' \| 'horizontal'` | `'vertical'` | Direction of the group |
+| `layout` | `'vertical' \| 'horizontal'` | — | Deprecated alias for `direction` |
 | `variant` | `'default' \| 'cell'` | `'default'` | Visual variant inherited by child radios |
 | `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Visual size inherited by child radios |
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Cell layout inherited by child radios |
-| `direction` | `'left' \| 'right'` | `'left'` | Position of radio relative to label, inherited by children |
+| `alignment` | `'left' \| 'center' \| 'right'` | `'left'` | Alignment inherited by child radios. Default supports `left` / `right`; `cell` supports `left` / `center` |
 | `gap` | `number \| string` | — | Gap between radio items |
 | `title` | `string` | — | Title attribute for the root radiogroup container |
 | `aria-label` | `string` | — | Accessible label for the group |
@@ -69,8 +68,8 @@ All additional native radio input props are spread onto the underlying `input[ty
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `variant` | `'default' \| 'cell'` | — | Per-option visual variant override |
 | `size` | `'large' \| 'medium' \| 'small'` | — | Per-option size override |
-| `orientation` | `'horizontal' \| 'vertical'` | — | Per-option cell layout override |
-| `icon` | `IconName` | — | Optional icon for the `cell` variant |
+| `alignment` | `'left' \| 'center' \| 'right'` | — | Per-option alignment override. Default supports `left` / `right`; `cell` supports `left` / `center` |
+| `icon` | `IconName \| ReactNode` | — | Optional icon for the `cell` variant |
 | `tag` | `string` | — | Optional tag label for the `cell` variant |
 | `disabled` | `boolean` | — | Whether this specific option is disabled |
 | `required` | `boolean` | — | Whether this specific option is required |
@@ -143,18 +142,20 @@ const [selected, setSelected] = useState<string | number>('email');
 />
 ```
 
-## Direction and Layout
+## Alignment and Direction
 
 ```tsx
-<Radio label="Left aligned" direction="left" />
-<Radio label="Right aligned" direction="right" />
+<Radio label="Left aligned" alignment="left" />
+<Radio label="Right aligned" alignment="right" />
 
-<RadioGroup layout="horizontal" value={selected} onChange={handleChange}>
+<RadioGroup direction="horizontal" value={selected} onChange={handleChange}>
   <Radio value="sm" label="Small" />
   <Radio value="md" label="Medium" />
   <Radio value="lg" label="Large" />
 </RadioGroup>
 ```
+
+For `RadioGroup`, use `direction="vertical" | "horizontal"` to control the group direction. `layout` remains as a deprecated alias. Use `alignment="left" | "right"` for default radios, and `alignment="left" | "center"` for `cell` radios. Passing `alignment="right"` to `cell` falls back to the left layout.
 
 ## Cell Variant
 
@@ -163,7 +164,7 @@ const [selected, setSelected] = useState<string | number>('email');
   checked
   variant="cell"
   size="large"
-  orientation="vertical"
+  alignment="center"
   icon="language"
   tag="Popular"
   label="Global account"
@@ -174,8 +175,8 @@ const [selected, setSelected] = useState<string | number>('email');
   value={selected}
   variant="cell"
   size="large"
-  orientation="horizontal"
-  layout="horizontal"
+  alignment="left"
+  direction="horizontal"
   onChange={handleChange}
   options={[
     { value: 'swift', label: 'SWIFT', description: 'Receive via bank rails' },

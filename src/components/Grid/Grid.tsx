@@ -3,6 +3,7 @@ import type { PropsWithChildren } from 'react';
 import type { GridRowProps } from './interface';
 import { Row } from './Row';
 import { Col } from './Col';
+import './style';
 
 export interface GridProps extends GridRowProps {}
 

@@ -396,7 +396,7 @@ exports[`Switch renders disabled state with description 1`] = `
             Disabled
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled om-react-ui-switch-description"
           >
             Description
           </span>
@@ -436,7 +436,7 @@ exports[`Switch renders disabled state with description 1`] = `
           Disabled
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-disabled om-react-ui-switch-description"
         >
           Description
         </span>
@@ -533,7 +533,7 @@ exports[`Switch renders with description 1`] = `
             Label
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary om-react-ui-switch-description"
           >
             Description
           </span>
@@ -572,7 +572,7 @@ exports[`Switch renders with description 1`] = `
           Label
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary om-react-ui-switch-description"
         >
           Description
         </span>

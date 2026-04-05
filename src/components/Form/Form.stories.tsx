@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Form } from './index';
 import { FormItem } from './FormItem';
 import { useForm } from './hooks/useForm';
-import { FORM_LAYOUTS, FORM_SIZES } from './constants';
+import { FORM_SIZES } from './constants';
 import { Input } from '@/components/Input';
 import { Checkbox } from '@/components/Checkbox';
 import { Switch } from '@/components/Switch';
@@ -26,14 +26,12 @@ const meta: Meta<typeof Form> = {
   title: 'Components/Form',
   component: Form,
   argTypes: {
-    layout: { control: 'radio', options: [...FORM_LAYOUTS] },
     size: { control: 'radio', options: [...FORM_SIZES] },
     disabled: { control: 'boolean' },
     colon: { control: 'boolean' },
     requiredMark: { control: 'boolean' },
   },
   args: {
-    layout: 'vertical',
     size: 'middle',
     disabled: false,
     colon: true,
@@ -71,44 +69,6 @@ export const Default: Story = {
       </Form.Item>
       <Form.Item>
         <Button type="submit" color="primary">Submit</Button>
-      </Form.Item>
-    </Form>
-  ),
-};
-
-export const HorizontalLayout: Story = {
-  args: {
-    layout: 'horizontal',
-    labelCol: { span: 6 },
-    wrapperCol: { span: 18 },
-  },
-  render: (args) => (
-    <Form {...args} initialValues={{ name: '', bio: '' }}>
-      <Form.Item label="Name" name="name" rules={[{ required: true }]}>
-        <Input placeholder="Your name" />
-      </Form.Item>
-      <Form.Item label="Bio" name="bio">
-        <Input.TextArea placeholder="Tell us about yourself" />
-      </Form.Item>
-      <Form.Item label="Active" name="active">
-        <Switch />
-      </Form.Item>
-      <Form.Item wrapperCol={{ offset: 6, span: 18 }}>
-        <Button type="submit" color="primary">Save</Button>
-      </Form.Item>
-    </Form>
-  ),
-};
-
-export const InlineLayout: Story = {
-  args: { layout: 'inline' },
-  render: (args) => (
-    <Form {...args} initialValues={{ keyword: '' }}>
-      <Form.Item label="Keyword" name="keyword">
-        <Input placeholder="Search..." />
-      </Form.Item>
-      <Form.Item>
-        <Button type="submit" color="primary">Search</Button>
       </Form.Item>
     </Form>
   ),
@@ -238,29 +198,3 @@ export const DisabledForm: Story = {
   ),
 };
 
-export const AllLayouts: Story = {
-  render: (args) => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-      {FORM_LAYOUTS.map((layout) => (
-        <div key={layout}>
-          <h3 style={{ margin: '0 0 8px' }}>{layout}</h3>
-          <Form
-            {...args}
-            layout={layout}
-            initialValues={{ field1: '', field2: '' }}
-            labelCol={layout === 'horizontal' ? { span: 6 } : undefined}
-            wrapperCol={layout === 'horizontal' ? { span: 18 } : undefined}
-          >
-            <Form.Item label="Field 1" name="field1" rules={[{ required: true }]}>
-              <Input placeholder="Enter value" />
-            </Form.Item>
-            <Form.Item label="Field 2" name="field2">
-              <Input placeholder="Enter value" />
-            </Form.Item>
-          </Form>
-        </div>
-      ))}
-    </div>
-  ),
-  tags: ['!autodocs', 'dev'],
-};

@@ -7,6 +7,7 @@ import { useSyncRef } from '../useSyncRef';
 import type { FC, ChangeEvent } from 'react';
 import type { InputAmountProps } from '../interface';
 import type { InputSize } from '../constants';
+import './style';
 
 const CLEAR_ICON_SIZE: Record<InputSize, number> = { large: 16, small: 14 };
 const CHEVRON_SIZE: Record<InputSize, number> = { large: 20, small: 16 };

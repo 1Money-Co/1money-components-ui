@@ -5,7 +5,6 @@ import { Copy } from './index';
 import { notification } from '@/components/Notification';
 
 import './style';
-import '../Notification/style';
 import { fail } from 'assert';
 
 const COPY_SUCCESS = () =>

@@ -26,6 +26,12 @@ export function Collection({ children, onBatchResize }: CollectionProps) {
 
   const onCollectionResize = React.useContext(CollectionContext);
 
+  const onBatchResizeRef = React.useRef(onBatchResize);
+  onBatchResizeRef.current = onBatchResize;
+
+  const onCollectionResizeRef = React.useRef(onCollectionResize);
+  onCollectionResizeRef.current = onCollectionResize;
+
   const onResize = React.useCallback<OnCollectionResize>(
     (size, element, data) => {
       resizeIdRef.current += 1;
@@ -39,15 +45,15 @@ export function Collection({ children, onBatchResize }: CollectionProps) {
 
       Promise.resolve().then(() => {
         if (currentId === resizeIdRef.current) {
-          onBatchResize?.(resizeInfosRef.current);
+          onBatchResizeRef.current?.(resizeInfosRef.current);
           resizeInfosRef.current = [];
         }
       });
 
       // Continue bubbling if parent exist
-      onCollectionResize?.(size, element, data);
+      onCollectionResizeRef.current?.(size, element, data);
     },
-    [onBatchResize, onCollectionResize],
+    [],
   );
 
   return <CollectionContext.Provider value={onResize}>{children}</CollectionContext.Provider>;

@@ -1,5 +1,6 @@
 import { memo, Fragment, Children, isValidElement } from 'react';
 import classnames, { joinCls } from '@/utils/classnames';
+import './style';
 import {
   SPACE_CLASS,
   SPACE_CSS_VARS,

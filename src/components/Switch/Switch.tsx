@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { TypographyBody } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import './style';
 import {
   SWITCH_PREFIX_CLS,
   SWITCH_DEFAULT_LABEL_PLACEMENT,
@@ -82,7 +83,7 @@ export const Switch: FC<SwitchProps> = props => {
   const labelElement = (label || description) && (
     <span className={classes('content')}>
       {label && <TypographyBody size={SWITCH_LABEL_SIZE} color={labelColor}>{label}</TypographyBody>}
-      {description && <TypographyBody size={SWITCH_DESCRIPTION_SIZE} color={descriptionColor}>{description}</TypographyBody>}
+      {description && <TypographyBody className={classes('description')} size={SWITCH_DESCRIPTION_SIZE} color={descriptionColor}>{description}</TypographyBody>}
     </span>
   );
 

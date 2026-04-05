@@ -10,12 +10,15 @@ function ResizeObserver(props: ResizeObserverProps, ref: React.Ref<HTMLElement>)
   const { children } = props;
   const childNodes = typeof children === 'function' ? [children] : toArray(children);
 
-  if (childNodes.length > 1) {
-    console.warn(
-      '[ResizeObserver] Find more than one child node with `children`. Please use ResizeObserver.Collection instead.',
-    );
-  } else if (childNodes.length === 0) {
-    console.warn('[ResizeObserver] `children` is empty. Nothing is in observe.');
+  // eslint-disable-next-line no-undef
+  if (typeof process !== 'undefined' && process.env?.NODE_ENV !== 'production') {
+    if (childNodes.length > 1) {
+      console.warn(
+        '[ResizeObserver] Find more than one child node with `children`. Please use ResizeObserver.Collection instead.',
+      );
+    } else if (childNodes.length === 0) {
+      console.warn('[ResizeObserver] `children` is empty. Nothing is in observe.');
+    }
   }
 
   return childNodes.map((child, index) => {

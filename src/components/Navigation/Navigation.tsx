@@ -8,6 +8,7 @@ import NavigationLogo from './NavigationLogo';
 import type { FC, MouseEvent, ReactElement, ReactNode } from 'react';
 import type { NavigationProps, NavigationItem, NavigationHandlers } from './interface';
 import type { IconName } from '@/components/Icons';
+import './style';
 
 const ICON_SIZE = 16;
 const CHEVRON_SIZE = 16;

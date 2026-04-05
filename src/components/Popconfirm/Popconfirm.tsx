@@ -7,6 +7,7 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, MouseEvent } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import type { PopconfirmActionContext, PopconfirmProps } from './interface';
+import './style';
 import {
   POPCONFIRM_ACTION_BUTTON_DEFAULTS,
   POPCONFIRM_ACTION_KIND,

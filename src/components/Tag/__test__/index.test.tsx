@@ -30,6 +30,18 @@ describe('Tag', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('applies size-specific label classes for font alignment', () => {
+    const { getByText, rerender } = render(<Tag label="Large" size="large" />);
+
+    expect(getByText('Large')).toHaveClass('om-react-ui-tag-label-large');
+
+    rerender(<Tag label="Medium" size="medium" />);
+    expect(getByText('Medium')).toHaveClass('om-react-ui-tag-label-medium');
+
+    rerender(<Tag label="Small" size="small" />);
+    expect(getByText('Small')).toHaveClass('om-react-ui-tag-label-small');
+  });
+
   it('renders with icon', () => {
     const wrapper = render(<Tag label="Test" icon="add" />);
     expect(wrapper).toMatchSnapshot();

@@ -3,6 +3,7 @@ import { useControlledState, useEventCallback, useLayoutEffect } from '@1money/h
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { CSSProperties, FC } from 'react';
 import type { SegmentItem, SegmentProps } from './interface';
+import './style';
 
 interface IndicatorStyle {
   width: number;

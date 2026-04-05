@@ -64,7 +64,6 @@ const QueryFilterBase: FC<QueryFilterProps> = (props) => {
   return (
     <ProForm
       {...formProps}
-      layout="inline"
       onFinish={onFinish}
       onReset={onReset}
       submitter={false}

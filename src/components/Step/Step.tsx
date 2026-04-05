@@ -5,6 +5,7 @@ import { TypographyBody, TypographyHeadline } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { ReactNode } from 'react';
 import type { ClassNamesFn } from '@/utils/classnames';
+import './style';
 import {
   STEP_DEFAULT_PREFIX,
   STEP_DESCRIPTION_TYPOGRAPHY,

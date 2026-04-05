@@ -26,9 +26,10 @@ function SingleObserver(props: SingleObserverProps, ref: React.Ref<HTMLElement>)
 
   const mergedRef = useComposeRef(originRef!, elementRef);
 
-  const getDomElement = () => {
-    return getDOM(elementRef.current) as HTMLElement;
-  };
+  const getDomElement = React.useCallback(
+    () => getDOM(elementRef.current) as HTMLElement,
+    [],
+  );
 
   React.useImperativeHandle(ref, () => getDomElement());
 

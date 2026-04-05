@@ -15,6 +15,7 @@ import {
 import { Button } from './index';
 
 import './style';
+import '@/components/Spinner/style';
 
 const columnStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 32 };
 const sectionHeaderStyle: React.CSSProperties = { marginBottom: 12 };

@@ -6,28 +6,11 @@ $component: 'form';
 .#{theme.$prefix}-#{$component} {
   width: 100%;
 
-  &-inline {
-    display: flex;
-    flex-wrap: wrap;
-    gap: theme.spacing(gap, 200);
-    align-items: flex-start;
-  }
 }
 
 // ─── FormItem Root ───────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-item {
   margin-bottom: theme.spacing(gap, 300);
-
-  &-horizontal {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  &-inline {
-    display: inline-flex;
-    margin-right: theme.spacing(gap, 200);
-    margin-bottom: 0;
-  }
 
   &-small {
     margin-bottom: theme.spacing(gap, 200);
@@ -36,21 +19,8 @@ $component: 'form';
 
 // ─── Label ───────────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-item-label-wrapper {
-  &-horizontal {
-    display: flex;
-    align-items: center;
-    min-height: 40px;
-    padding-right: theme.spacing(gap, 200);
-  }
-
   &-vertical {
     margin-bottom: theme.spacing(gap, 200);
-  }
-
-  &-inline {
-    display: inline-flex;
-    align-items: center;
-    margin-right: theme.spacing(gap, 200);
   }
 }
 
@@ -66,12 +36,6 @@ $component: 'form';
     }
   }
 
-  &-colon {
-    &::after {
-      margin-left: theme.spacing(gap, '050');
-      content: ':';
-    }
-  }
 }
 
 // ─── Label Alignment ─────────────────────────────────────────
@@ -81,13 +45,6 @@ $component: 'form';
 
 .#{theme.$prefix}-#{$component}-item-label-wrapper-right {
   text-align: right;
-}
-
-// ─── Control Wrapper ─────────────────────────────────────────
-.#{theme.$prefix}-#{$component}-item-control {
-  &-horizontal {
-    flex: 1;
-  }
 }
 
 // ─── Error & Help Messages ───────────────────────────────────

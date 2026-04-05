@@ -11,11 +11,9 @@ import {
   FORM_HELP_SIZE,
   FORM_LABEL_COLOR,
   FORM_LABEL_SIZE,
-  LABEL_COL_DEFAULT,
-  WRAPPER_COL_DEFAULT,
 } from './constants';
 import type { FC } from 'react';
-import type { ColProps, FormItemProps } from './interface';
+import type { FormItemProps } from './interface';
 
 // ---------------------------------------------------------------------------
 // Nested path helper for reading dot-separated paths (e.g. "items.0.title")
@@ -30,12 +28,6 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
   return current;
 }
 
-const getColStyle = (col: ColProps, layout: string): React.CSSProperties | undefined => {
-  if (layout !== 'horizontal' || !col.span) return undefined;
-  const percentage = `${(col.span / 24) * 100}%`;
-  return { width: percentage, flex: `0 0 ${percentage}` };
-};
-
 const FormItemBase: FC<FormItemProps> = (props) => {
   const {
     children,
@@ -47,8 +39,6 @@ const FormItemBase: FC<FormItemProps> = (props) => {
     required,
     help,
     validateStatus,
-    labelCol,
-    wrapperCol,
     colon: itemColon,
     hidden = false,
   } = props;
@@ -61,20 +51,15 @@ const FormItemBase: FC<FormItemProps> = (props) => {
     validateField,
     registerField,
     unregisterField,
-    layout,
     size,
     labelAlign,
     colon: formColon,
     requiredMark,
     validateTrigger,
-    labelCol: formLabelCol = LABEL_COL_DEFAULT,
-    wrapperCol: formWrapperCol = WRAPPER_COL_DEFAULT,
   } = formContext;
 
   const classes = classnames(prefixCls);
   const finalColon = itemColon !== undefined ? itemColon : formColon;
-  const finalLabelCol = labelCol || formLabelCol;
-  const finalWrapperCol = wrapperCol || formWrapperCol;
   const isRequired = required || rules.some((rule) => rule.required);
   const fieldValue = name
     ? (name.includes('.') ? getNestedValue(values, name) : values[name])
@@ -192,8 +177,6 @@ const FormItemBase: FC<FormItemProps> = (props) => {
       className={classes(
         undefined,
         joinCls(
-          layout === 'horizontal' && classes('horizontal'),
-          layout === 'inline' && classes('inline'),
           size === 'small' && classes('small'),
           className,
         ),
@@ -204,11 +187,10 @@ const FormItemBase: FC<FormItemProps> = (props) => {
           className={classes(
             'label-wrapper',
             joinCls(
-              classes(`label-wrapper-${layout}`),
+              classes('label-wrapper-vertical'),
               labelAlign && classes(`label-wrapper-${labelAlign}`),
             ),
           )}
-          style={getColStyle(finalLabelCol, layout)}
         >
           <TypographyLabel
             as="label"
@@ -218,7 +200,6 @@ const FormItemBase: FC<FormItemProps> = (props) => {
               'label',
               joinCls(
                 isRequired && requiredMark && classes('label-required'),
-                finalColon && layout !== 'vertical' && classes('label-colon'),
               ),
             )}
           >
@@ -227,13 +208,7 @@ const FormItemBase: FC<FormItemProps> = (props) => {
         </div>
       )}
 
-      <div
-        className={classes(
-          'control',
-          joinCls(layout === 'horizontal' && classes('control-horizontal')),
-        )}
-        style={getColStyle(finalWrapperCol, layout)}
-      >
+      <div className={classes('control')}>
         {renderChildren()}
 
         {fieldError && <TypographyBody as="div" className={classes('error')} size={FORM_ERROR_SIZE} color={FORM_ERROR_COLOR}>{fieldError}</TypographyBody>}

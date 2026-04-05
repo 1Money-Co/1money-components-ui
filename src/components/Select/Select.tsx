@@ -56,6 +56,7 @@ import {
   removeMultipleValue,
   toggleMultipleValue,
 } from './utils';
+import './style';
 
 const DEFAULT_MAX_HEIGHT = 320;
 

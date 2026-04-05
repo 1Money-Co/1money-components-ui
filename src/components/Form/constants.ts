@@ -1,7 +1,7 @@
 import type { TypographyBodySize, TypographyColor, TypographyLabelSize } from '@/components/Typography';
 
 export const FORM_SIZES = ['large', 'middle', 'small'] as const;
-export const FORM_LAYOUTS = ['horizontal', 'vertical', 'inline'] as const;
+export const FORM_LAYOUTS = ['vertical'] as const;
 export const LABEL_ALIGNS = ['left', 'right'] as const;
 export const VALIDATE_STATUSES = ['success', 'warning', 'error', 'validating'] as const;
 export const VALIDATE_TRIGGERS = ['onChange', 'onBlur'] as const;
@@ -18,8 +18,6 @@ export const FORM_ITEM_SPACING: Record<FormSize, string> = {
   small: '200',
 };
 
-export const LABEL_COL_DEFAULT = { span: 6 } as const;
-export const WRAPPER_COL_DEFAULT = { span: 18 } as const;
 
 // ── Typography ──
 export const FORM_LABEL_SIZE: TypographyLabelSize = 'md';

@@ -5,6 +5,7 @@ import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { TooltipProps } from './interface';
+import './style';
 
 export const Tooltip: FC<TooltipProps> = (props) => {
   const {

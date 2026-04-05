@@ -24,7 +24,7 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
     size = 24,
     width,
     height,
-    color = '#131313',
+    color = 'currentColor',
     fill,
     stroke,
     className = '',
