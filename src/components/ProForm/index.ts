@@ -48,7 +48,7 @@ export {
 } from './fields';
 export { ModalForm } from './layouts/ModalForm';
 export { QueryFilter } from './layouts/QueryFilter';
-export { useProFormContext } from './context';
+export { useProFormContext, FormListContext, useFormListContext } from './context';
 
 // Re-export types
 export type {
@@ -56,6 +56,9 @@ export type {
   ProFormFieldProps,
   ProFormContextValue,
   ProFormFormInstance,
+  ProFormFieldTransformFn,
+  ProFormFieldConvertValueFn,
+  FormListContextValue,
   SubmitterProps,
   ProFormDependencyProps,
   ProFormListProps,

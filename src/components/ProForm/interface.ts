@@ -1,8 +1,25 @@
-import type { ReactNode, FC, ReactElement } from 'react';
+import type { ReactNode, FC, ReactElement, MutableRefObject } from 'react';
 import type { FormProps, FormItemProps, Rule } from '@/components/Form';
 import type { ButtonProps } from '@/components/Button';
 import type { GridRowProps, GridColProps } from '@/components/Grid';
 import type { ModalProps } from '@/components/Modal';
+
+// ---------------------------------------------------------------------------
+// Transform / ConvertValue function types
+// ---------------------------------------------------------------------------
+
+/** Transform field value before submission */
+export type ProFormFieldTransformFn = (
+  value: unknown,
+  name: string,
+  allValues: Record<string, unknown>,
+) => unknown;
+
+/** Convert stored value before displaying in the field */
+export type ProFormFieldConvertValueFn = (
+  value: unknown,
+  name: string,
+) => unknown;
 
 // ---------------------------------------------------------------------------
 // ProFormContext
@@ -11,6 +28,10 @@ export interface ProFormContextValue {
   readonly?: boolean;
   grid?: boolean;
   colProps?: { span?: number };
+  registerTransform?: (name: string, fn: ProFormFieldTransformFn) => void;
+  unregisterTransform?: (name: string) => void;
+  /** Enhanced form instance (available when rendered inside ProForm) */
+  formInstance?: ProFormFormInstance;
 }
 
 // ---------------------------------------------------------------------------
@@ -24,6 +45,10 @@ export interface ProFormFormInstance {
   setFieldsValue: (values: Record<string, unknown>) => void;
   setFieldValue: (name: string, value: unknown) => void;
   validateFields: (fieldsRules?: Record<string, Rule[]>) => boolean;
+  /** Get all field values with registered transforms applied */
+  getFieldsFormatValue: () => Record<string, unknown>;
+  /** Validate all fields, then return transformed values */
+  validateFieldsReturnFormatValue: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
 }
 
 // ---------------------------------------------------------------------------
@@ -46,6 +71,10 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   placeholder?: string;
   disabled?: boolean;
   width?: 'sm' | 'md' | 'lg' | 'xl' | number;
+  /** Transform field value before submission. Return an object to merge into parent. */
+  transform?: ProFormFieldTransformFn;
+  /** Convert stored value before displaying in the field component */
+  convertValue?: ProFormFieldConvertValueFn;
 }
 
 // ---------------------------------------------------------------------------
@@ -76,6 +105,8 @@ export interface ProFormProps extends Omit<FormProps, 'onSubmit'> {
   loading?: boolean;
   request?: (params?: unknown) => Promise<Record<string, unknown>>;
   params?: unknown;
+  /** Ref to access enhanced form instance with getFieldsFormatValue / validateFieldsReturnFormatValue */
+  formRef?: MutableRefObject<ProFormFormInstance | undefined>;
 }
 
 // ---------------------------------------------------------------------------
@@ -113,8 +144,24 @@ export interface ProFormListProps {
 // ProFormDependency
 // ---------------------------------------------------------------------------
 export interface ProFormDependencyProps {
+  /** Field names to watch. Supports nested paths (e.g. 'user.name'). */
   name: string[];
-  children: (values: Record<string, unknown>) => ReactNode;
+  /**
+   * When inside a ProFormList, field names are automatically prefixed
+   * with the list path to watch row-scoped values.
+   * Set to true to ignore the list prefix and watch global form values instead.
+   */
+  ignoreFormListField?: boolean;
+  /** Render function receives watched values and the form instance */
+  children: (values: Record<string, unknown>, form: ProFormFormInstance) => ReactNode;
+}
+
+// ---------------------------------------------------------------------------
+// FormListContext (used by ProFormList to expose list scope to Dependency)
+// ---------------------------------------------------------------------------
+export interface FormListContextValue {
+  /** Current list field name (e.g. 'items') */
+  listName?: string;
 }
 
 // ---------------------------------------------------------------------------

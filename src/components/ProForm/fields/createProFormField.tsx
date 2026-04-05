@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import { memo, useEffect } from 'react';
 import type { FC, ReactNode } from 'react';
 import { FormItem, useFormContext } from '@/components/Form';
 import { Col } from '@/components/Grid';
@@ -27,6 +27,34 @@ const ReadonlyFieldBase: FC<ReadonlyFieldProps> = ({ name, renderReadonly }) => 
 ReadonlyFieldBase.displayName = 'ReadonlyField';
 
 const ReadonlyField = memo(ReadonlyFieldBase);
+
+// ---------------------------------------------------------------------------
+// ConvertValueWrapper — intercepts form value and applies convertValue before
+// passing it to the actual field component via a controlled value prop
+// ---------------------------------------------------------------------------
+interface ConvertValueWrapperProps<FP> {
+  name: string;
+  convertValue: (value: unknown, name: string) => unknown;
+  component: FC<FP>;
+  componentProps: FP;
+}
+
+function ConvertValueWrapperBase<FP extends object>({
+  name,
+  convertValue,
+  component: Comp,
+  componentProps,
+}: ConvertValueWrapperProps<FP>) {
+  const { values } = useFormContext();
+  const rawValue = values[name];
+  const converted = convertValue(rawValue, name);
+
+  return <Comp {...componentProps} value={converted} />;
+}
+
+ConvertValueWrapperBase.displayName = 'ConvertValueWrapper';
+
+const ConvertValueWrapper = memo(ConvertValueWrapperBase) as typeof ConvertValueWrapperBase;
 
 // ---------------------------------------------------------------------------
 // createProFormField — factory that produces a ProForm-aware field component
@@ -60,11 +88,22 @@ export function createProFormField<FieldProps extends object>(
       placeholder,
       disabled,
       width,
+      transform,
+      convertValue,
       ...rest
     } = props;
 
     const ctx = useProFormContext();
     const mergedReadonly = readonly ?? ctx?.readonly;
+
+    // ── Register / unregister transform ──
+    useEffect(() => {
+      if (!name || !transform) return;
+      ctx.registerTransform?.(name, transform);
+      return () => {
+        ctx.unregisterTransform?.(name);
+      };
+    }, [name, transform, ctx.registerTransform, ctx.unregisterTransform]);
 
     if (hidden) return null;
 
@@ -107,7 +146,9 @@ export function createProFormField<FieldProps extends object>(
         ...(mergedStyle ? { style: mergedStyle } : {}),
       } as FieldProps;
 
-      child = <Component {...componentProps} />;
+      child = convertValue && name
+        ? <ConvertValueWrapper name={name} convertValue={convertValue} component={Component} componentProps={componentProps} />
+        : <Component {...componentProps} />;
     }
 
     // Wrap in FormItem

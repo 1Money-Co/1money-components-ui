@@ -8,8 +8,8 @@ import { useFormCore } from '@/components/Form/hooks/useFormCore';
 import { ProFormContext } from './context';
 import { Submitter } from './Submitter';
 import { CSS_PREFIX } from './constants';
-import { stableSerialize } from './utils';
-import type { ProFormProps, ProFormFormInstance } from './interface';
+import { stableSerialize, transformSubmitValues } from './utils';
+import type { ProFormProps, ProFormFormInstance, ProFormFieldTransformFn } from './interface';
 
 const classes = classnames(CSS_PREFIX);
 
@@ -30,6 +30,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     onFinishFailed,
     onValuesChange,
     onReset,
+    formRef,
     size,
     labelAlign,
     disabled,
@@ -42,6 +43,25 @@ const ProFormBase: FC<ProFormProps> = (props) => {
   const [requestLoading, setRequestLoading] = useSafeState(false);
   const isLoading = loading || requestLoading;
 
+  // ── Transform registry ──
+  const transformKeyRef = useRef<Record<string, ProFormFieldTransformFn>>({});
+
+  const registerTransform = useMemoizedFn((name: string, fn: ProFormFieldTransformFn) => {
+    transformKeyRef.current[name] = fn;
+  });
+
+  const unregisterTransform = useMemoizedFn((name: string) => {
+    delete transformKeyRef.current[name];
+  });
+
+  const onFinishRef = useLatest(onFinish);
+
+  // Intercept onFinish to apply transforms before calling the original callback
+  const handleFinish = useMemoizedFn((values: Record<string, unknown>) => {
+    const transformed = transformSubmitValues(values, transformKeyRef.current);
+    onFinishRef.current?.(transformed);
+  });
+
   const {
     contextValue: formContextValue,
     formInstance,
@@ -49,7 +69,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     handleReset,
   } = useFormCore({
     initialValues,
-    onFinish,
+    onFinish: handleFinish,
     onFinishFailed,
     onValuesChange,
     onReset,
@@ -94,10 +114,40 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     mountedRef.current = true;
   }, [serializedParams]); // Re-fetch when params change
 
+  // ── Enhanced form instance exposed via formRef and context ──
+  const getFieldsFormatValue = useMemoizedFn(() => {
+    const raw = formInstance.getFieldsValue();
+    return transformSubmitValues(raw, transformKeyRef.current);
+  });
+
+  const validateFieldsReturnFormatValue = useMemoizedFn(() => {
+    const isValid = formInstance.validateFields();
+    if (!isValid) {
+      return { success: false };
+    }
+    const raw = formInstance.getFieldsValue();
+    return { success: true, values: transformSubmitValues(raw, transformKeyRef.current) };
+  });
+
+  const enhancedFormInstance = useMemo<ProFormFormInstance>(
+    () => ({
+      ...formInstance,
+      getFieldsFormatValue,
+      validateFieldsReturnFormatValue,
+    }),
+    [formInstance, getFieldsFormatValue, validateFieldsReturnFormatValue],
+  );
+
+  useEffect(() => {
+    if (formRef) {
+      formRef.current = enhancedFormInstance;
+    }
+  });
+
   // ProFormContext value
   const proFormContextValue = useMemo(
-    () => ({ readonly, grid, colProps }),
-    [readonly, grid, colProps],
+    () => ({ readonly, grid, colProps, registerTransform, unregisterTransform, formInstance: enhancedFormInstance }),
+    [readonly, grid, colProps, registerTransform, unregisterTransform, enhancedFormInstance],
   );
 
   const handleFormSubmit = useMemoizedFn((e?: FormEvent) => {
@@ -128,7 +178,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
         {...rest}
         className={joinCls(classes(), className)}
         initialValues={initialValues}
-        onFinish={onFinish}
+        onFinish={handleFinish}
         onFinishFailed={onFinishFailed}
         onValuesChange={onValuesChange}
         onReset={onReset}
