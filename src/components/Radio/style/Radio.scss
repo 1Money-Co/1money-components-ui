@@ -123,7 +123,7 @@ $component: 'radio';
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    background-color: theme.palette(bg, 'default-secondary');
+    background-color: theme.palette(bg, 'default');
     border: 1px solid theme.palette(border, 'default');
     border-radius: theme.shape(300);
     transition:
@@ -212,8 +212,7 @@ $component: 'radio';
     }
   }
 
-  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-medium,
-  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-small {
+  &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-medium {
     .#{theme.$prefix}-#{$component}-label {
       @include theme.typography(body, lg);
     }
@@ -222,6 +221,14 @@ $component: 'radio';
   &-cell-horizontal.#{theme.$prefix}-#{$component}-cell-small {
     .#{theme.$prefix}-#{$component}-content {
       justify-content: center;
+    }
+
+    .#{theme.$prefix}-#{$component}-label {
+      @include theme.typography(body, lg, $strong: true);
+    }
+
+    .#{theme.$prefix}-#{$component}-description {
+      @include theme.typography(body, md, $strong: true);
     }
   }
 
@@ -260,6 +267,7 @@ $component: 'radio';
   }
 
   &-cell-input:checked + .#{theme.$prefix}-#{$component}-cell-panel {
+    background-color: theme.palette(bg, 'default-secondary');
     border-color: theme.palette(border, 'brand');
   }
 
@@ -373,6 +381,16 @@ $component: 'radio';
     }
 
     .#{theme.$prefix}-#{$component}-content {
+      order: 0;
+    }
+
+    .#{theme.$prefix}-#{$component}-cell-indicator,
+    .#{theme.$prefix}-#{$component}-cell-icon,
+    .#{theme.$prefix}-#{$component}-cell-radio {
+      order: 1;
+    }
+
+    .#{theme.$prefix}-#{$component}-cell .#{theme.$prefix}-#{$component}-content {
       order: 0;
     }
   }

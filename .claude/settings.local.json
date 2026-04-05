@@ -69,7 +69,9 @@
       "Bash(for component:*)",
       "Bash(do)",
       "Read(//Users/derrick/Desktop/1money/1money-components-ui/src/components/**)",
-      "Bash(find /Users/derrick/Desktop/1money/1money-components-ui/src/components/Form -type f -name *)"
+      "Bash(find /Users/derrick/Desktop/1money/1money-components-ui/src/components/Form -type f -name *)",
+      "WebFetch(domain:ant.design)",
+      "WebSearch"
     ]
   }
 }

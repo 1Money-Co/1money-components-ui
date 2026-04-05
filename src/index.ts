@@ -6,6 +6,7 @@ export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
 export { CoachMark } from './components/CoachMark';
 export { Copy } from './components/Copy';
+export { Divider } from './components/Divider';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
 export { Form, FormItem, useForm, useFormContext, useFormCore } from './components/Form';
@@ -75,6 +76,7 @@ export type {
 } from './components/Checkbox';
 export type { CoachMarkProps, CoachMarkPlacement, CoachMarkStep, CoachMarkLabels } from './components/CoachMark';
 export type { CopyProps } from './components/Copy';
+export type { DividerProps, DividerType, DividerOrientation, DividerVariant } from './components/Divider';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
 export type {
@@ -147,7 +149,9 @@ export type {
   PopconfirmActionContext,
 } from './components/Popconfirm';
 export type {
+  RadioAlignment,
   RadioChangeEvent,
+  RadioGroupDirection,
   RadioGroupProps,
   RadioOptionItem,
   RadioProps,

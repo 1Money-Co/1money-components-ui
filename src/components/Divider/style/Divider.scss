@@ -1,0 +1,150 @@
+@use '@/styles/api' as theme;
+
+$component: 'divider';
+
+.#{theme.$prefix}-#{$component} {
+  border-block-start: 0;
+  border-block-end: 0;
+  border-inline-start: 0;
+  border-inline-end: 0;
+
+  // ── Horizontal ──────────────────────────────────────────────
+  &-horizontal {
+    display: flex;
+    align-items: center;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: theme.spacing(scale, 300) 0;
+    border-block-start: 1px solid theme.palette(border, default);
+
+    &.#{theme.$prefix}-#{$component}-with-text {
+      margin: theme.spacing(scale, 200) 0;
+      border-block-start: 0;
+      white-space: nowrap;
+      text-align: center;
+
+      &::before,
+      &::after {
+        position: relative;
+        width: 50%;
+        border-block-start: 1px solid transparent;
+        border-block-start-color: inherit;
+        border-block-end: 0;
+        transform: translateY(50%);
+        content: '';
+      }
+    }
+
+    &.#{theme.$prefix}-#{$component}-with-text-left {
+      &::before {
+        width: 5%;
+      }
+
+      &::after {
+        width: 95%;
+      }
+    }
+
+    &.#{theme.$prefix}-#{$component}-with-text-right {
+      &::before {
+        width: 95%;
+      }
+
+      &::after {
+        width: 5%;
+      }
+    }
+
+    &.#{theme.$prefix}-#{$component}-no-default-margin {
+      &.#{theme.$prefix}-#{$component}-with-text-left {
+        &::before {
+          width: 0;
+        }
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &.#{theme.$prefix}-#{$component}-with-text-right {
+        &::before {
+          width: 100%;
+        }
+
+        &::after {
+          width: 0;
+        }
+      }
+    }
+  }
+
+  // ── Vertical ────────────────────────────────────────────────
+  &-vertical {
+    position: relative;
+    display: inline-block;
+    height: 0.9em;
+    margin: 0 theme.spacing(scale, 100);
+    vertical-align: middle;
+    border-inline-start: 1px solid theme.palette(border, default);
+  }
+
+  // ── Inner text ──────────────────────────────────────────────
+  &-inner-text {
+    display: inline-block;
+    padding: 0 theme.spacing(scale, 200);
+    color: theme.palette(text, default);
+
+    @include theme.typography(body, md);
+  }
+
+  // ── Plain style ─────────────────────────────────────────────
+  &-plain &-inner-text {
+    font-weight: 400;
+  }
+
+  // ── Dashed variant ──────────────────────────────────────────
+  &-dashed {
+    background: none;
+    border-style: dashed;
+    border-width: 1px 0 0;
+
+    &.#{theme.$prefix}-#{$component}-with-text {
+      border-style: unset;
+
+      &::before,
+      &::after {
+        border-style: dashed none none;
+      }
+    }
+
+    &.#{theme.$prefix}-#{$component}-vertical {
+      border-inline-start-style: dashed;
+      border-width: 0 0 0 1px;
+    }
+  }
+
+  // ── Dotted variant ──────────────────────────────────────────
+  &-dotted {
+    background: none;
+    border-style: dotted;
+    border-width: 1px 0 0;
+
+    &.#{theme.$prefix}-#{$component}-with-text {
+      border-style: unset;
+
+      &::before,
+      &::after {
+        border-style: dotted none none;
+      }
+    }
+
+    &.#{theme.$prefix}-#{$component}-vertical {
+      border-inline-start-style: dotted;
+      border-width: 0 0 0 1px;
+    }
+  }
+
+  // ── Border color inheritance ────────────────────────────────
+  border-color: theme.palette(border, default);
+}

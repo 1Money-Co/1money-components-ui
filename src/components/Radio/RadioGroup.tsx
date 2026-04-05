@@ -2,13 +2,13 @@ import { memo, useMemo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import {
-  RADIO_DEFAULT_DIRECTION,
+  RADIO_DEFAULT_ALIGNMENT,
   RADIO_DEFAULT_LAYOUT,
-  RADIO_DEFAULT_ORIENTATION,
   RADIO_DEFAULT_SIZE,
   RADIO_DEFAULT_VARIANT,
   RADIO_GROUP_PREFIX_CLS,
   RADIO_VARIANT_CELL,
+  getRadioOrientationFromAlignment,
 } from './constants';
 import { RadioGroupProvider } from './RadioGroupContext';
 import { Radio } from './Radio';
@@ -29,11 +29,11 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
     defaultValue,
     name,
     disabled = false,
-    layout = RADIO_DEFAULT_LAYOUT,
+    layout,
+    direction,
     variant = RADIO_DEFAULT_VARIANT,
     size = RADIO_DEFAULT_SIZE,
-    orientation = RADIO_DEFAULT_ORIENTATION,
-    direction = RADIO_DEFAULT_DIRECTION,
+    alignment,
     gap,
     options,
     children,
@@ -48,6 +48,9 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
   >(defaultValue, value);
 
   const classes = classnames(prefixCls);
+  const resolvedDirection = direction ?? layout ?? RADIO_DEFAULT_LAYOUT;
+  const resolvedAlignment = alignment ?? RADIO_DEFAULT_ALIGNMENT;
+  const resolvedOrientation = getRadioOrientationFromAlignment(resolvedAlignment);
 
   const handleChange = useEventCallback((event: RadioChangeEvent) => {
     if (disabled) return;
@@ -70,10 +73,10 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
       name,
       variant,
       size,
-      orientation,
-      direction,
+      orientation: resolvedOrientation,
+      alignment: resolvedAlignment,
     }),
-    [innerValue, handleChange, disabled, name, variant, size, orientation, direction],
+    [innerValue, handleChange, disabled, name, variant, size, resolvedOrientation, resolvedAlignment],
   );
 
   const content =
@@ -87,7 +90,7 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
         description={opt.description}
         variant={opt.variant}
         size={opt.size}
-        orientation={opt.orientation}
+        alignment={opt.alignment}
         icon={opt.icon}
         tag={opt.tag}
         disabled={opt.disabled}
@@ -108,7 +111,7 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
         aria-labelledby={ariaLabelledBy}
         className={classes(
           void 0,
-          joinCls(classes(layout), variant === RADIO_VARIANT_CELL && classes('cell'), className),
+          joinCls(classes(resolvedDirection), variant === RADIO_VARIANT_CELL && classes('cell'), className),
         )}
         role="radiogroup"
         style={gapStyle}
