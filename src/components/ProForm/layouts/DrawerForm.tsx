@@ -1,30 +1,31 @@
 import { memo } from 'react';
 import type { FC } from 'react';
 import { default as classnames } from '@/utils/classnames';
-import { Modal } from '@/components/Modal';
+import { Drawer } from '@/components/Drawer';
 import { ProForm } from '../ProForm';
 import { CSS_PREFIX } from '../constants';
 import { useOverlayForm } from './useOverlayForm';
-import type { ModalFormProps } from '../interface';
+import type { DrawerFormProps } from '../interface';
 
-const classes = classnames(`${CSS_PREFIX}-modal-form`);
+const classes = classnames(`${CSS_PREFIX}-drawer-form`);
 
-const ModalFormBase: FC<ModalFormProps> = (props) => {
+const DrawerFormBase: FC<DrawerFormProps> = (props) => {
   const {
     open,
     onOpenChange,
     trigger,
     title,
-    width,
+    width = 480,
+    placement = 'right',
     submitTimeout,
     autoClose = true,
-    modalProps,
+    drawerProps,
     onFinish,
     submitter,
     children,
     // destroyOnClose is accepted for API compat but not used —
-    // Modal's own usePresence already unmounts the entire DOM tree
-    // (including form content) after the close animation finishes.
+    // Drawer's own useDrawerTransition already unmounts the entire
+    // DOM tree (including form content) after the close animation.
     destroyOnClose: _destroyOnClose,
     ...formProps
   } = props;
@@ -42,13 +43,14 @@ const ModalFormBase: FC<ModalFormProps> = (props) => {
   return (
     <>
       {triggerNode}
-      <Modal
-        {...modalProps}
+      <Drawer
+        {...drawerProps}
         open={mergedOpen}
         title={title}
-        onCancel={handleHide}
+        placement={placement}
+        width={width}
+        onClose={handleHide}
         footer={null}
-        {...(width !== undefined ? { rootStyle: { ...modalProps?.rootStyle, width } } : {})}
       >
         <div className={classes()}>
           <ProForm
@@ -56,19 +58,19 @@ const ModalFormBase: FC<ModalFormProps> = (props) => {
             onFinish={handleFinish}
             submitter={submitter !== undefined ? submitter : {
               resetButtonProps: { onClick: handleHide },
-              resetText: modalProps?.cancelText ?? 'Cancel',
+              resetText: 'Cancel',
             }}
           >
             {children}
           </ProForm>
         </div>
-      </Modal>
+      </Drawer>
     </>
   );
 };
 
-ModalFormBase.displayName = 'ModalForm';
+DrawerFormBase.displayName = 'DrawerForm';
 
-export const ModalForm = memo(ModalFormBase);
+export const DrawerForm = memo(DrawerFormBase);
 
-export default ModalForm;
+export default DrawerForm;

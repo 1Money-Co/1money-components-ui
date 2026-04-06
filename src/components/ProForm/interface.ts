@@ -1,8 +1,10 @@
 import type { ReactNode, FC, ReactElement, MutableRefObject } from 'react';
 import type { FormProps, FormItemProps, Rule } from '@/components/Form';
 import type { ButtonProps } from '@/components/Button';
-import type { GridRowProps, GridColProps } from '@/components/Grid';
+import type { DrawerProps, DrawerPlacement } from '@/components/Drawer';
+import type { GridRowProps, GridColProps, GridColSize } from '@/components/Grid';
 import type { ModalProps } from '@/components/Modal';
+import type { ProFormMode } from './constants';
 
 // ---------------------------------------------------------------------------
 // Transform / ConvertValue function types
@@ -22,15 +24,27 @@ export type ProFormFieldConvertValueFn = (
 ) => unknown;
 
 // ---------------------------------------------------------------------------
+// Responsive column props for grid mode
+// ---------------------------------------------------------------------------
+export interface ProFormColProps {
+  span?: number;
+  sm?: GridColSize;
+  md?: GridColSize;
+  lg?: GridColSize;
+}
+
+// ---------------------------------------------------------------------------
 // ProFormContext
 // ---------------------------------------------------------------------------
 export interface ProFormContextValue {
+  /** @deprecated Use `mode` instead. Kept for backward compatibility. */
   readonly?: boolean;
+  /** Form mode: 'edit' (default), 'read' (readonly), 'update' (edit existing data) */
+  mode?: ProFormMode;
   grid?: boolean;
-  colProps?: { span?: number };
+  colProps?: ProFormColProps;
   registerTransform?: (name: string, fn: ProFormFieldTransformFn) => void;
   unregisterTransform?: (name: string) => void;
-  /** Enhanced form instance (available when rendered inside ProForm) */
   formInstance?: ProFormFormInstance;
 }
 
@@ -64,16 +78,17 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   labelCol?: { span?: number; offset?: number };
   wrapperCol?: { span?: number; offset?: number };
   colon?: boolean;
+  /** @deprecated Use `mode='read'` instead */
   readonly?: boolean;
+  /** Field-level mode override: 'edit', 'read', or 'update' */
+  mode?: ProFormMode;
   hidden?: boolean;
-  colProps?: { span?: number };
+  colProps?: ProFormColProps;
   fieldProps?: Partial<FieldProps>;
   placeholder?: string;
   disabled?: boolean;
   width?: 'sm' | 'md' | 'lg' | 'xl' | number;
-  /** Transform field value before submission. Return an object to merge into parent. */
   transform?: ProFormFieldTransformFn;
-  /** Convert stored value before displaying in the field component */
   convertValue?: ProFormFieldConvertValueFn;
 }
 
@@ -98,14 +113,16 @@ export interface SubmitterProps {
 // ---------------------------------------------------------------------------
 export interface ProFormProps extends Omit<FormProps, 'onSubmit'> {
   submitter?: SubmitterProps | false;
+  /** @deprecated Use `mode='read'` instead */
   readonly?: boolean;
+  /** Form mode: 'edit' (default), 'read' (readonly), 'update' (edit existing data) */
+  mode?: ProFormMode;
   grid?: boolean;
-  colProps?: { span?: number };
+  colProps?: ProFormColProps;
   rowProps?: Partial<GridRowProps>;
   loading?: boolean;
   request?: (params?: unknown) => Promise<Record<string, unknown>>;
   params?: unknown;
-  /** Ref to access enhanced form instance with getFieldsFormatValue / validateFieldsReturnFormatValue */
   formRef?: MutableRefObject<ProFormFormInstance | undefined>;
 }
 
@@ -177,6 +194,24 @@ export interface ModalFormProps extends Omit<ProFormProps, 'title'> {
   autoClose?: boolean;
   destroyOnClose?: boolean;
   modalProps?: Partial<ModalProps>;
+}
+
+// ---------------------------------------------------------------------------
+// DrawerForm
+// ---------------------------------------------------------------------------
+export interface DrawerFormProps extends Omit<ProFormProps, 'title'> {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  trigger?: ReactElement;
+  title?: ReactNode;
+  /** Width of the drawer (applies when placement is 'left' or 'right') */
+  width?: number | string;
+  /** Placement of the drawer @defaultValue 'right' */
+  placement?: DrawerPlacement;
+  submitTimeout?: number;
+  autoClose?: boolean;
+  destroyOnClose?: boolean;
+  drawerProps?: Partial<DrawerProps>;
 }
 
 // ---------------------------------------------------------------------------

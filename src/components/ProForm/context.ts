@@ -6,6 +6,7 @@ const noop = () => {};
 
 export const ProFormContext = createContext<ProFormContextValue>({
   readonly: false,
+  mode: 'edit',
   grid: false,
   colProps: { span: DEFAULT_COL_SPAN },
   registerTransform: noop,

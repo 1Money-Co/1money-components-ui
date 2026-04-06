@@ -14,8 +14,10 @@ import {
   ProFormSlider,
   ProFormDatePicker,
 } from './fields';
+import { ProFormUpload } from './fields/ProFormUpload';
 import { ProFormDependency } from './ProFormDependency';
 import { ProFormList } from './ProFormList';
+import { DrawerForm } from './layouts/DrawerForm';
 import { ModalForm } from './layouts/ModalForm';
 import { Button } from '@/components/Button';
 
@@ -31,6 +33,8 @@ import '@/components/Switch/style';
 import '@/components/Button/style';
 import '@/components/Grid/style';
 import '@/components/Modal/style';
+import '@/components/Drawer/style';
+import '@/components/Upload/style';
 import '@/components/Radio/style';
 import '@/components/Slider/style';
 import '@/components/Calendar/style';
@@ -407,6 +411,73 @@ export const ModalFormStory: Story = {
   ),
 };
 
+// ─── DrawerForm ─────────────────────────────────────────────
+
+export const DrawerFormStory: Story = {
+  render: (args) => (
+    <DrawerForm
+      {...args}
+      title="Create User"
+      trigger={<Button color="primary">Open Drawer Form</Button>}
+      onFinish={async (values) => {
+        alert(JSON.stringify(values, null, 2));
+      }}
+    >
+      <ProFormText name="name" label="Name" rules={[{ required: true }]} />
+      <ProFormText name="email" label="Email" rules={[{ required: true }]} />
+      <ProFormTextArea name="bio" label="Bio" />
+      <ProFormSwitch name="active" label="Active" />
+    </DrawerForm>
+  ),
+};
+
+export const DrawerFormControlled: Story = {
+  render: (args) => {
+    const [open, setOpen] = useState(false);
+
+    return (
+      <div style={{ display: 'flex', gap: 8 }}>
+        <Button color="primary" onClick={() => setOpen(true)}>Open (Controlled)</Button>
+        <Button color="secondary" onClick={() => setOpen(false)}>Close</Button>
+        <DrawerForm
+          {...args}
+          open={open}
+          onOpenChange={setOpen}
+          title="Edit Profile"
+          width={520}
+          initialValues={{ name: 'Alice', role: 'Admin' }}
+          onFinish={async (values) => {
+            alert(JSON.stringify(values, null, 2));
+          }}
+        >
+          <ProFormText name="name" label="Name" rules={[{ required: true }]} />
+          <ProFormText name="role" label="Role" />
+        </DrawerForm>
+      </div>
+    );
+  },
+  tags: ['!autodocs', 'dev'],
+};
+
+export const DrawerFormLeft: Story = {
+  render: (args) => (
+    <DrawerForm
+      {...args}
+      title="Settings"
+      placement="left"
+      width={400}
+      trigger={<Button color="secondary">Open from Left</Button>}
+      onFinish={async (values) => {
+        alert(JSON.stringify(values, null, 2));
+      }}
+    >
+      <ProFormText name="theme" label="Theme" placeholder="dark / light" />
+      <ProFormText name="language" label="Language" placeholder="en / zh" />
+      <ProFormSwitch name="notifications" label="Enable Notifications" />
+    </DrawerForm>
+  ),
+};
+
 // ─── RadioGroup ─────────────────────────────────────────────
 
 export const RadioGroupStory: Story = {
@@ -542,4 +613,109 @@ export const KitchenSink: Story = {
     </ProForm>
   ),
   tags: ['!autodocs', 'dev'],
+};
+
+// ─── ProFormUpload ──────────────────────────────────────────
+
+export const UploadField: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      onFinish={(values) => {
+        const files = values.attachment as FileList | null;
+        alert(files ? `Selected: ${Array.from(files).map(f => f.name).join(', ')}` : 'No file');
+      }}
+    >
+      <ProFormUpload
+        name="attachment"
+        label="Attachment"
+        fieldProps={{ accept: '.pdf,.png,.jpg', multiple: true, buttonLabel: 'Choose Files' }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── Grid Responsive ────────────────────────────────────────
+
+export const GridResponsive: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      grid
+      rowProps={{ gutter: 16 }}
+      initialValues={{}}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormText
+        name="firstName"
+        label="First Name"
+        colProps={{ span: 12, sm: 12, md: 8, lg: 6 }}
+      />
+      <ProFormText
+        name="lastName"
+        label="Last Name"
+        colProps={{ span: 12, sm: 12, md: 8, lg: 6 }}
+      />
+      <ProFormText
+        name="email"
+        label="Email"
+        colProps={{ span: 24, sm: 24, md: 8, lg: 6 }}
+      />
+      <ProFormText
+        name="phone"
+        label="Phone"
+        colProps={{ span: 24, sm: 12, md: 12, lg: 6 }}
+      />
+      <ProFormTextArea
+        name="address"
+        label="Address"
+        colProps={{ span: 24 }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── Three Modes ────────────────────────────────────────────
+
+export const ModeEdit: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      mode="edit"
+      initialValues={{ name: '', email: '' }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormText name="name" label="Name" rules={[{ required: true }]} />
+      <ProFormText name="email" label="Email" />
+    </ProForm>
+  ),
+};
+
+export const ModeRead: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      mode="read"
+      initialValues={{ name: 'Alice', email: 'alice@example.com', active: true }}
+    >
+      <ProFormText name="name" label="Name" />
+      <ProFormText name="email" label="Email" />
+      <ProFormSwitch name="active" label="Active" />
+    </ProForm>
+  ),
+};
+
+export const ModeUpdate: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      mode="update"
+      initialValues={{ id: 'USR-001', name: 'Alice', email: 'alice@example.com' }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormText name="id" label="ID" mode="read" />
+      <ProFormText name="name" label="Name" rules={[{ required: true }]} />
+      <ProFormText name="email" label="Email" />
+    </ProForm>
+  ),
 };

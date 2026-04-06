@@ -10,7 +10,9 @@ import {
   ProFormCheckboxGroup,
   ProFormSwitch,
   ProFormSelect,
+  ProFormUpload,
 } from './fields';
+import { DrawerForm } from './layouts/DrawerForm';
 import { ModalForm } from './layouts/ModalForm';
 import { QueryFilter } from './layouts/QueryFilter';
 import './style';
@@ -27,6 +29,7 @@ const ProForm = Object.assign(ProFormBase, {
   CheckboxGroup: ProFormCheckboxGroup,
   Switch: ProFormSwitch,
   Select: ProFormSelect,
+  Upload: ProFormUpload,
 });
 
 export { ProForm };
@@ -45,7 +48,9 @@ export {
   ProFormCheckboxGroup,
   ProFormSwitch,
   ProFormSelect,
+  ProFormUpload,
 } from './fields';
+export { DrawerForm } from './layouts/DrawerForm';
 export { ModalForm } from './layouts/ModalForm';
 export { QueryFilter } from './layouts/QueryFilter';
 export { useProFormContext, FormListContext, useFormListContext } from './context';
@@ -59,13 +64,16 @@ export type {
   ProFormFieldTransformFn,
   ProFormFieldConvertValueFn,
   FormListContextValue,
+  ProFormColProps,
   SubmitterProps,
   ProFormDependencyProps,
   ProFormListProps,
   ProFormListAction,
+  DrawerFormProps,
   ModalFormProps,
   QueryFilterProps,
   CreateProFormFieldConfig,
 } from './interface';
 
-export { CSS_PREFIX, WIDTH_SIZE_MAP, DEFAULT_COL_SPAN, DEFAULT_TEXT } from './constants';
+export { CSS_PREFIX, WIDTH_SIZE_MAP, DEFAULT_COL_SPAN, DEFAULT_TEXT, PROFORM_MODES } from './constants';
+export type { ProFormMode } from './constants';

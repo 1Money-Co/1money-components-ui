@@ -82,6 +82,7 @@ export function createProFormField<FieldProps extends object>(
       wrapperCol,
       colon,
       readonly,
+      mode: modeProp,
       hidden,
       colProps,
       fieldProps,
@@ -94,7 +95,10 @@ export function createProFormField<FieldProps extends object>(
     } = props;
 
     const ctx = useProFormContext();
-    const mergedReadonly = readonly ?? ctx?.readonly;
+
+    // Mode resolution: field mode > field readonly > context mode > context readonly > 'edit'
+    const mergedMode = modeProp ?? (readonly !== undefined ? (readonly ? 'read' : 'edit') : undefined) ?? ctx?.mode ?? (ctx?.readonly ? 'read' : 'edit');
+    const isReadonly = mergedMode === 'read';
 
     // ── Register / unregister transform ──
     useEffect(() => {
@@ -123,7 +127,7 @@ export function createProFormField<FieldProps extends object>(
     // Build the child component
     let child: ReactNode;
 
-    if (mergedReadonly) {
+    if (isReadonly) {
       child = <ReadonlyField name={name} renderReadonly={renderReadonly} />;
     } else {
       // Map extra props if a mapper is provided
@@ -156,8 +160,9 @@ export function createProFormField<FieldProps extends object>(
 
     // Wrap in Col if grid mode is active
     if (ctx?.grid) {
-      const span = colProps?.span ?? ctx?.colProps?.span ?? DEFAULT_COL_SPAN;
-      return <Col span={span}>{node}</Col>;
+      const merged = { ...ctx?.colProps, ...colProps };
+      const { span = DEFAULT_COL_SPAN, sm, md, lg } = merged;
+      return <Col span={span} sm={sm} md={md} lg={lg}>{node}</Col>;
     }
 
     return node;

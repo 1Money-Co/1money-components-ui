@@ -19,6 +19,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     className,
     submitter,
     readonly = false,
+    mode: modeProp,
     grid = false,
     colProps,
     rowProps,
@@ -39,6 +40,9 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     validateTrigger,
     ...rest
   } = props;
+
+  // Derive mode: explicit mode prop > readonly compat > default 'edit'
+  const mode = modeProp ?? (readonly ? 'read' : 'edit');
 
   const [requestLoading, setRequestLoading] = useSafeState(false);
   const isLoading = loading || requestLoading;
@@ -146,8 +150,8 @@ const ProFormBase: FC<ProFormProps> = (props) => {
 
   // ProFormContext value
   const proFormContextValue = useMemo(
-    () => ({ readonly, grid, colProps, registerTransform, unregisterTransform, formInstance: enhancedFormInstance }),
-    [readonly, grid, colProps, registerTransform, unregisterTransform, enhancedFormInstance],
+    () => ({ readonly, mode, grid, colProps, registerTransform, unregisterTransform, formInstance: enhancedFormInstance }),
+    [readonly, mode, grid, colProps, registerTransform, unregisterTransform, enhancedFormInstance],
   );
 
   const handleFormSubmit = useMemoizedFn((e?: FormEvent) => {
@@ -164,7 +168,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
   const wrapperProps = grid ? { ...rowProps } : {};
 
   const submitterNode =
-    submitter !== false ? (
+    submitter !== false && mode !== 'read' ? (
       <Submitter
         {...(typeof submitter === 'object' ? submitter : {})}
         form={formInstance as ProFormFormInstance}
