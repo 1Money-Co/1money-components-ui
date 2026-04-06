@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import { WIDTH_SIZE_MAP } from './constants';
-import type { ProFormFieldTransformFn } from './interface';
+import type { ProFormFieldTransformFn, ProFormValueEnumObj } from './interface';
 
 // ---------------------------------------------------------------------------
 // stableSerialize — deterministic deep serialization for params comparison
@@ -178,4 +178,46 @@ export function transformSubmitValues(
   });
 
   return result;
+}
+
+// ---------------------------------------------------------------------------
+// omitNilValues — recursively remove null / undefined / '' from object
+// ---------------------------------------------------------------------------
+export function omitNilValues(
+  values: Record<string, unknown>,
+): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+  for (const key of Object.keys(values)) {
+    const v = values[key];
+    if (v === null || v === undefined || v === '') continue;
+    if (isPlainObject(v)) {
+      const cleaned = omitNilValues(v);
+      if (Object.keys(cleaned).length > 0) {
+        result[key] = cleaned;
+      }
+    } else {
+      result[key] = v;
+    }
+  }
+  return result;
+}
+
+// ---------------------------------------------------------------------------
+// valueEnumToOptions — convert enum object to { label, value, disabled }[]
+// ---------------------------------------------------------------------------
+export interface ValueEnumOption {
+  label: string;
+  value: string | number;
+  disabled?: boolean;
+}
+
+export function valueEnumToOptions(
+  valueEnum: ProFormValueEnumObj,
+): ValueEnumOption[] {
+  return Object.entries(valueEnum).map(([key, config]) => {
+    if (typeof config === 'string') {
+      return { label: config, value: key };
+    }
+    return { label: config.text, value: key, disabled: config.disabled };
+  });
 }

@@ -1,6 +1,7 @@
 import { ProForm as ProFormBase } from './ProForm';
 import { ProFormDependency } from './ProFormDependency';
 import { ProFormList } from './ProFormList';
+import { ProFormGroup } from './ProFormGroup';
 import { Submitter } from './Submitter';
 import {
   ProFormText,
@@ -11,6 +12,7 @@ import {
   ProFormSwitch,
   ProFormSelect,
   ProFormUpload,
+  ProFormFieldSet,
 } from './fields';
 import { DrawerForm } from './layouts/DrawerForm';
 import { ModalForm } from './layouts/ModalForm';
@@ -21,6 +23,8 @@ import './style';
 const ProForm = Object.assign(ProFormBase, {
   Dependency: ProFormDependency,
   List: ProFormList,
+  Group: ProFormGroup,
+  FieldSet: ProFormFieldSet,
   Submitter,
   Text: ProFormText,
   Password: ProFormPassword,
@@ -38,6 +42,7 @@ export default ProForm;
 // Re-export individual pieces for named imports
 export { ProFormDependency } from './ProFormDependency';
 export { ProFormList } from './ProFormList';
+export { ProFormGroup } from './ProFormGroup';
 export { Submitter } from './Submitter';
 export {
   createProFormField,
@@ -49,6 +54,7 @@ export {
   ProFormSwitch,
   ProFormSelect,
   ProFormUpload,
+  ProFormFieldSet,
 } from './fields';
 export { DrawerForm } from './layouts/DrawerForm';
 export { ModalForm } from './layouts/ModalForm';
@@ -63,8 +69,12 @@ export type {
   ProFormFormInstance,
   ProFormFieldTransformFn,
   ProFormFieldConvertValueFn,
+  ProFormValueEnumObj,
+  ProFormRequestOption,
   FormListContextValue,
   ProFormColProps,
+  ProFormFieldSetProps,
+  ProFormGroupProps,
   SubmitterProps,
   ProFormDependencyProps,
   ProFormListProps,

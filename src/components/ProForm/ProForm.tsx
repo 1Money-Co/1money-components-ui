@@ -1,18 +1,99 @@
 import { memo, useEffect, useMemo, useRef, Fragment } from 'react';
-import type { FC, FormEvent } from 'react';
+import type { FC } from 'react';
 import { useLatest, useSafeState, useMemoizedFn } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Form } from '@/components/Form';
+import { useFormInstance } from '@/components/Form/context';
 import { Row } from '@/components/Grid';
-import { useFormCore } from '@/components/Form/hooks/useFormCore';
 import { ProFormContext } from './context';
 import { Submitter } from './Submitter';
 import { CSS_PREFIX } from './constants';
-import { stableSerialize, transformSubmitValues } from './utils';
+import { stableSerialize, transformSubmitValues, omitNilValues } from './utils';
 import type { ProFormProps, ProFormFormInstance, ProFormFieldTransformFn } from './interface';
 
 const classes = classnames(CSS_PREFIX);
 
+// ---------------------------------------------------------------------------
+// Inner component — rendered INSIDE <Form>, can use useFormInstance()
+// ---------------------------------------------------------------------------
+interface ProFormInnerProps extends ProFormProps {
+  isLoading: boolean;
+  applyPipeline: (values: Record<string, unknown>) => Record<string, unknown>;
+  registerTransform: (name: string, fn: ProFormFieldTransformFn) => void;
+  unregisterTransform: (name: string) => void;
+}
+
+const ProFormInner: FC<ProFormInnerProps> = (props) => {
+  const {
+    children,
+    submitter,
+    mode = 'edit',
+    readonly = false,
+    grid = false,
+    colProps,
+    rowProps,
+    formRef,
+    isLoading,
+    applyPipeline,
+    registerTransform,
+    unregisterTransform,
+  } = props;
+
+  const resolvedMode = mode ?? (readonly ? 'read' : 'edit');
+  const form = useFormInstance();
+
+  // Build ProFormFormInstance by extending the real form instance with format methods
+  const proFormFormInstance = useMemo<ProFormFormInstance>(() => ({
+    submit: form.submit,
+    resetFields: form.resetFields,
+    getFieldValue: form.getFieldValue,
+    getFieldsValue: form.getFieldsValue,
+    setFieldsValue: form.setFieldsValue,
+    setFieldValue: form.setFieldValue,
+    validateFields: form.validateFields,
+    getFieldsFormatValue: () => applyPipeline(form.getFieldsValue()),
+    validateFieldsReturnFormatValue: () => {
+      const isValid = form.validateFields();
+      if (!isValid) return { success: false };
+      return { success: true, values: applyPipeline(form.getFieldsValue()) };
+    },
+  }), [form, applyPipeline]);
+
+  useEffect(() => {
+    if (formRef) {
+      formRef.current = proFormFormInstance;
+    }
+  });
+
+  const proFormContextValue = useMemo(
+    () => ({ readonly, mode: resolvedMode, grid, colProps, registerTransform, unregisterTransform, formInstance: proFormFormInstance }),
+    [readonly, resolvedMode, grid, colProps, registerTransform, unregisterTransform, proFormFormInstance],
+  );
+
+  const WrapperComponent = grid ? Row : Fragment;
+  const wrapperProps = grid ? { ...rowProps } : {};
+
+  const submitterNode =
+    submitter !== false && resolvedMode !== 'read' ? (
+      <Submitter
+        {...(typeof submitter === 'object' ? submitter : {})}
+        loading={isLoading}
+      />
+    ) : null;
+
+  return (
+    <ProFormContext.Provider value={proFormContextValue}>
+      <WrapperComponent {...wrapperProps}>
+        {children}
+      </WrapperComponent>
+      {submitterNode}
+    </ProFormContext.Provider>
+  );
+};
+
+// ---------------------------------------------------------------------------
+// Outer component — renders <Form> and sets up transforms / request
+// ---------------------------------------------------------------------------
 const ProFormBase: FC<ProFormProps> = (props) => {
   const {
     children,
@@ -32,6 +113,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     onValuesChange,
     onReset,
     formRef,
+    omitNil = true,
     size,
     labelAlign,
     disabled,
@@ -41,7 +123,6 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     ...rest
   } = props;
 
-  // Derive mode: explicit mode prop > readonly compat > default 'edit'
   const mode = modeProp ?? (readonly ? 'read' : 'edit');
 
   const [requestLoading, setRequestLoading] = useSafeState(false);
@@ -60,41 +141,25 @@ const ProFormBase: FC<ProFormProps> = (props) => {
 
   const onFinishRef = useLatest(onFinish);
 
-  // Intercept onFinish to apply transforms before calling the original callback
+  const applyPipeline = useMemoizedFn((values: Record<string, unknown>) => {
+    let result = transformSubmitValues(values, transformKeyRef.current);
+    if (omitNil) result = omitNilValues(result);
+    return result;
+  });
+
   const handleFinish = useMemoizedFn((values: Record<string, unknown>) => {
-    const transformed = transformSubmitValues(values, transformKeyRef.current);
-    onFinishRef.current?.(transformed);
+    onFinishRef.current?.(applyPipeline(values));
   });
 
-  const {
-    contextValue: formContextValue,
-    formInstance,
-    handleSubmit,
-    handleReset,
-  } = useFormCore({
-    initialValues,
-    onFinish: handleFinish,
-    onFinishFailed,
-    onValuesChange,
-    onReset,
-    size,
-    labelAlign,
-    disabled: disabled || isLoading,
-    colon,
-    requiredMark,
-    validateTrigger,
-  });
-
+  // ── Request / params ──
   const requestRef = useLatest(request);
+  const formInstanceRef = useRef<{ setFieldsValue: (v: Record<string, unknown>) => void } | null>(null);
 
-  // Stable serialization of params for comparison
   const serializedParams = useMemo(
     () => stableSerialize(params),
     [params],
   );
 
-  // Fetch data when request + params change
-  const mountedRef = useRef(false);
   useEffect(() => {
     const fetchData = async () => {
       const requestFn = requestRef.current;
@@ -104,101 +169,49 @@ const ProFormBase: FC<ProFormProps> = (props) => {
       try {
         const data = await requestFn(params);
         if (data && typeof data === 'object') {
-          formInstance.setFieldsValue(data);
+          formInstanceRef.current?.setFieldsValue(data as Record<string, unknown>);
         }
       } finally {
         setRequestLoading(false);
       }
     };
 
-    // Always fetch on mount if request is provided; also re-fetch when params change
     if (requestRef.current) {
       fetchData();
     }
-    mountedRef.current = true;
-  }, [serializedParams]); // Re-fetch when params change
-
-  // ── Enhanced form instance exposed via formRef and context ──
-  const getFieldsFormatValue = useMemoizedFn(() => {
-    const raw = formInstance.getFieldsValue();
-    return transformSubmitValues(raw, transformKeyRef.current);
-  });
-
-  const validateFieldsReturnFormatValue = useMemoizedFn(() => {
-    const isValid = formInstance.validateFields();
-    if (!isValid) {
-      return { success: false };
-    }
-    const raw = formInstance.getFieldsValue();
-    return { success: true, values: transformSubmitValues(raw, transformKeyRef.current) };
-  });
-
-  const enhancedFormInstance = useMemo<ProFormFormInstance>(
-    () => ({
-      ...formInstance,
-      getFieldsFormatValue,
-      validateFieldsReturnFormatValue,
-    }),
-    [formInstance, getFieldsFormatValue, validateFieldsReturnFormatValue],
-  );
-
-  useEffect(() => {
-    if (formRef) {
-      formRef.current = enhancedFormInstance;
-    }
-  });
-
-  // ProFormContext value
-  const proFormContextValue = useMemo(
-    () => ({ readonly, mode, grid, colProps, registerTransform, unregisterTransform, formInstance: enhancedFormInstance }),
-    [readonly, mode, grid, colProps, registerTransform, unregisterTransform, enhancedFormInstance],
-  );
-
-  const handleFormSubmit = useMemoizedFn((e?: FormEvent) => {
-    e?.preventDefault();
-    handleSubmit(e);
-  });
-
-  const handleFormReset = useMemoizedFn((e?: FormEvent) => {
-    e?.preventDefault();
-    handleReset(e);
-  });
-
-  const WrapperComponent = grid ? Row : Fragment;
-  const wrapperProps = grid ? { ...rowProps } : {};
-
-  const submitterNode =
-    submitter !== false && mode !== 'read' ? (
-      <Submitter
-        {...(typeof submitter === 'object' ? submitter : {})}
-        form={formInstance as ProFormFormInstance}
-        loading={isLoading}
-      />
-    ) : null;
+  }, [serializedParams]);
 
   return (
-    <ProFormContext.Provider value={proFormContextValue}>
-      <Form
-        {...rest}
-        className={joinCls(classes(), className)}
-        initialValues={initialValues}
-        onFinish={handleFinish}
-        onFinishFailed={onFinishFailed}
-        onValuesChange={onValuesChange}
-        onReset={onReset}
-        size={size}
-        labelAlign={labelAlign}
-        disabled={disabled || isLoading}
-        colon={colon}
-        requiredMark={requiredMark}
-        validateTrigger={validateTrigger}
-      >
-        <WrapperComponent {...wrapperProps}>
-          {children}
-        </WrapperComponent>
-        {submitterNode}
-      </Form>
-    </ProFormContext.Provider>
+    <Form
+      {...rest}
+      ref={(instance) => {
+        // Capture the form ref for request data loading
+        if (instance) {
+          formInstanceRef.current = instance;
+        }
+      }}
+      className={joinCls(classes(), className)}
+      initialValues={initialValues}
+      onFinish={handleFinish}
+      onFinishFailed={onFinishFailed}
+      onValuesChange={onValuesChange}
+      onReset={onReset}
+      size={size}
+      labelAlign={labelAlign}
+      disabled={disabled || isLoading}
+      colon={colon}
+      requiredMark={requiredMark}
+      validateTrigger={validateTrigger}
+    >
+      <ProFormInner
+        {...props}
+        mode={mode}
+        isLoading={isLoading}
+        applyPipeline={applyPipeline}
+        registerTransform={registerTransform}
+        unregisterTransform={unregisterTransform}
+      />
+    </Form>
   );
 };
 

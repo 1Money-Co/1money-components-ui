@@ -1,13 +1,13 @@
 import { memo, useEffect, useMemo, useRef } from 'react';
 import type { FC, ReactNode } from 'react';
-import { useMemoizedFn } from '@1money/hooks';
+import { useMemoizedFn, useSafeState } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
 import { Button } from '@/components/Button';
 import { useFormContext } from '@/components/Form';
-import { TypographyLabel } from '@/components/Typography';
-import { FormListContext } from './context';
+import { TypographyLabel, TypographyBody } from '@/components/Typography';
+import { FormListContext, useFormListContext } from './context';
 import { CSS_PREFIX, DEFAULT_TEXT, PROFORM_LIST_LABEL_SIZE, PROFORM_LIST_LABEL_COLOR } from './constants';
-import { extractButtonProps } from './utils';
+import { extractButtonProps, getNestedValue } from './utils';
 import type { ProFormListProps, ProFormListAction } from './interface';
 
 const classes = classnames(`${CSS_PREFIX}-list`);
@@ -17,10 +17,12 @@ const generateKey = (): string => `list_${++listKeyCounter}`;
 
 const ProFormListBase: FC<ProFormListProps> = (props) => {
   const {
-    name,
+    name: rawName,
     label,
     min,
     max,
+    required,
+    requiredMessage = 'This list cannot be empty',
     initialValue,
     copyIconProps,
     deleteIconProps,
@@ -32,14 +34,21 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
     onAfterRemove,
   } = props;
 
+  // ── Nested list: prepend parent list name ──
+  const parentCtx = useFormListContext();
+  const fullName = parentCtx.listName ? `${parentCtx.listName}.${rawName}` : rawName;
+
   const { values, setFieldValue } = useFormContext();
   const initialApplied = useRef(false);
   const keysRef = useRef<string[]>([]);
+  const [listError, setListError] = useSafeState<string | null>(null);
 
   const list = useMemo(() => {
-    const raw = values[name];
+    const raw = fullName.includes('.')
+      ? getNestedValue(values, fullName)
+      : values[fullName];
     return Array.isArray(raw) ? (raw as Record<string, unknown>[]) : [];
-  }, [values, name]);
+  }, [values, fullName]);
 
   // Sync keys with list length
   while (keysRef.current.length < list.length) {
@@ -55,12 +64,29 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
     if (list.length !== 0) return;
     if (!Array.isArray(initialValue) || initialValue.length === 0) return;
     initialApplied.current = true;
-    setFieldValue(name, [...initialValue]);
+    setFieldValue(fullName, [...initialValue]);
     keysRef.current = initialValue.map(() => generateKey());
-  }, [list.length, initialValue, name, setFieldValue]);
+  }, [list.length, initialValue, fullName, setFieldValue]);
+
+  // Clear error when list becomes non-empty
+  useEffect(() => {
+    if (required && list.length > 0 && listError) {
+      setListError(null);
+    }
+  }, [list.length, required, listError, setListError]);
 
   const canAdd = max == null || list.length < max;
   const canRemove = min == null || list.length > min;
+
+  const validateList = useMemoizedFn((): boolean => {
+    if (!required) return true;
+    if (list.length === 0) {
+      setListError(requiredMessage);
+      return false;
+    }
+    setListError(null);
+    return true;
+  });
 
   const add = useMemoizedFn((defaultValue?: Record<string, unknown>, index?: number) => {
     if (!canAdd) return;
@@ -73,7 +99,7 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
     newKeys.splice(insertIndex, 0, generateKey());
 
     keysRef.current = newKeys;
-    setFieldValue(name, newList);
+    setFieldValue(fullName, newList);
     onAfterAdd?.(value, insertIndex);
   });
 
@@ -86,8 +112,13 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
     newKeys.splice(index, 1);
 
     keysRef.current = newKeys;
-    setFieldValue(name, newList);
+    setFieldValue(fullName, newList);
     onAfterRemove?.(index);
+
+    // Validate after remove
+    if (required && newList.length === 0) {
+      setListError(requiredMessage);
+    }
   });
 
   const copy = useMemoizedFn((index: number) => {
@@ -109,7 +140,7 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
     newKeys.splice(to, 0, movedKey);
 
     keysRef.current = newKeys;
-    setFieldValue(name, newList);
+    setFieldValue(fullName, newList);
   });
 
   const getList = useMemoizedFn(() => list);
@@ -122,10 +153,10 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
   const mappedFields = useMemo(
     () =>
       list.map((_item, index) => ({
-        name: `${name}.${index}`,
+        name: `${fullName}.${index}`,
         key: keysRef.current[index] || `fallback_${index}`,
       })),
-    [list, name],
+    [list, fullName],
   );
 
   // Render children
@@ -209,7 +240,7 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
     </Button>
   ) : null;
 
-  const formListContextValue = useMemo(() => ({ listName: name }), [name]);
+  const formListContextValue = useMemo(() => ({ listName: fullName }), [fullName]);
 
   return (
     <FormListContext.Provider value={formListContextValue}>
@@ -219,6 +250,7 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
         <div className={classes('content')}>{listDom}</div>
         <div className={classes('actions')}>{actionRows}</div>
         {creatorPosition === 'bottom' && creatorButton}
+        {listError && <TypographyBody as="div" size="sm" color="danger">{listError}</TypographyBody>}
       </div>
     </FormListContext.Provider>
   );

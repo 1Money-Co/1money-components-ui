@@ -10,16 +10,21 @@ import {
   ProFormCheckbox,
   ProFormCheckboxGroup,
   ProFormSwitch,
+  ProFormSelect,
   ProFormRadioGroup,
   ProFormSlider,
   ProFormDatePicker,
 } from './fields';
 import { ProFormUpload } from './fields/ProFormUpload';
+import { ProFormFieldSet } from './fields/ProFormFieldSet';
 import { ProFormDependency } from './ProFormDependency';
 import { ProFormList } from './ProFormList';
+import { ProFormGroup } from './ProFormGroup';
 import { DrawerForm } from './layouts/DrawerForm';
 import { ModalForm } from './layouts/ModalForm';
+import { QueryFilter } from './layouts/QueryFilter';
 import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
 
 import './style';
 import '@/components/Form/style';
@@ -718,4 +723,261 @@ export const ModeUpdate: Story = {
       <ProFormText name="email" label="Email" />
     </ProForm>
   ),
+};
+
+// ─── omitNil ────────────────────────────────────────────────
+
+export const OmitNil: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      omitNil
+      initialValues={{ name: '', email: '', note: null }}
+      onFinish={(values) => {
+        alert('Nil values stripped:\n' + JSON.stringify(values, null, 2));
+      }}
+    >
+      <ProFormText name="name" label="Name (leave empty to omit)" />
+      <ProFormText name="email" label="Email (leave empty to omit)" />
+      <ProFormText name="note" label="Note (null → omitted)" />
+    </ProForm>
+  ),
+};
+
+// ─── valueEnum ──────────────────────────────────────────────
+
+export const ValueEnum: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormSelect
+        name="status"
+        label="Status"
+        valueEnum={{ active: 'Active', inactive: 'Inactive', pending: { text: 'Pending', disabled: true } }}
+      />
+      <ProFormRadioGroup
+        name="role"
+        label="Role"
+        valueEnum={{ admin: 'Admin', editor: 'Editor', viewer: 'Viewer' }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── Field-level dependencies ───────────────────────────────
+
+export const FieldDependencies: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ country: '', city: '' }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormSelect
+        name="country"
+        label="Country"
+        valueEnum={{ us: 'United States', cn: 'China', jp: 'Japan' }}
+      />
+      <ProFormSelect
+        name="city"
+        label="City (auto-loads based on Country)"
+        dependencies={['country']}
+        request={async (params) => {
+          await new Promise((r) => setTimeout(r, 500));
+          const cities: Record<string, Array<{ label: string; value: string }>> = {
+            us: [{ label: 'New York', value: 'ny' }, { label: 'Los Angeles', value: 'la' }],
+            cn: [{ label: 'Beijing', value: 'bj' }, { label: 'Shanghai', value: 'sh' }],
+            jp: [{ label: 'Tokyo', value: 'tk' }, { label: 'Osaka', value: 'os' }],
+          };
+          return cities[params?.country as string] ?? [];
+        }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── Field-level request ────────────────────────────────────
+
+export const FieldRequest: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormSelect
+        name="user"
+        label="User (async loaded)"
+        request={async () => {
+          await new Promise((r) => setTimeout(r, 800));
+          return [
+            { label: 'Alice', value: 'alice' },
+            { label: 'Bob', value: 'bob' },
+            { label: 'Charlie', value: 'charlie' },
+          ];
+        }}
+      />
+    </ProForm>
+  ),
+};
+
+// ─── debounceTime ───────────────────────────────────────────
+
+export const DebounceField: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      onValuesChange={(changed) => {
+        console.log('onValuesChange (debounced):', changed);
+      }}
+    >
+      <ProFormText
+        name="search"
+        label="Search (300ms debounce — check console)"
+        debounceTime={300}
+        placeholder="Type fast..."
+      />
+      <ProFormText name="instant" label="Instant (no debounce)" placeholder="Type fast..." />
+    </ProForm>
+  ),
+  tags: ['!autodocs', 'dev'],
+};
+
+// ─── ProFormGroup ───────────────────────────────────────────
+
+export const GroupCollapsible: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ name: 'Alice', bio: '', theme: 'light' }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProForm.Group title="Basic Info" collapsible>
+        <ProFormText name="name" label="Name" rules={[{ required: true }]} />
+        <ProFormText name="bio" label="Bio" />
+      </ProForm.Group>
+      <ProForm.Group title="Preferences" collapsible defaultCollapsed>
+        <ProFormText name="theme" label="Theme" />
+        <ProFormSwitch name="notifications" label="Notifications" />
+      </ProForm.Group>
+    </ProForm>
+  ),
+};
+
+export const GroupWithExtra: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProForm.Group
+        title="Contact"
+        extra={<Button color="secondary" size="small">Import</Button>}
+      >
+        <ProFormText name="email" label="Email" />
+        <ProFormText name="phone" label="Phone" />
+      </ProForm.Group>
+    </ProForm>
+  ),
+};
+
+// ─── ProFormFieldSet ────────────────────────────────────────
+
+export const FieldSet: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ phone: ['+1', '555-0100'] }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProForm.FieldSet name="phone" label="Phone Number" gap={8}>
+        <Input placeholder="Area code" style={{ width: 80 }} />
+        <Input placeholder="Number" style={{ width: 200 }} />
+      </ProForm.FieldSet>
+      <ProFormText name="email" label="Email" />
+    </ProForm>
+  ),
+};
+
+// ─── Nested List ────────────────────────────────────────────
+
+export const NestedList: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{
+        groups: [
+          { title: 'Group A', items: [{ name: 'Item 1' }] },
+        ],
+      }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormList name="groups" label="Groups">
+        {(fields) =>
+          fields.map(({ name, key }) => (
+            <div key={key} style={{ border: '1px solid #eee', padding: 12, marginBottom: 8, borderRadius: 4 }}>
+              <ProFormText name={`${name}.title`} label="Group Title" />
+              <ProFormList name="items" label="Items">
+                {(subFields) =>
+                  subFields.map((sf) => (
+                    <ProFormText key={sf.key} name={`${sf.name}.name`} label="Item Name" />
+                  ))
+                }
+              </ProFormList>
+            </div>
+          ))
+        }
+      </ProFormList>
+    </ProForm>
+  ),
+  tags: ['!autodocs', 'dev'],
+};
+
+// ─── Empty List Validation ──────────────────────────────────
+
+export const ListRequired: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ members: [] }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormList
+        name="members"
+        label="Team Members"
+        required
+        requiredMessage="Add at least one member"
+      >
+        {(fields) =>
+          fields.map(({ name, key }) => (
+            <ProFormText key={key} name={`${name}.name`} label="Name" />
+          ))
+        }
+      </ProFormList>
+    </ProForm>
+  ),
+};
+
+// ─── syncToUrl ──────────────────────────────────────────────
+
+export const SyncToUrl: Story = {
+  render: (args) => (
+    <QueryFilter
+      {...args}
+      syncToUrl
+      onFinish={(values) => {
+        console.log('QueryFilter submit:', values);
+        alert('Check URL bar — params synced!\n' + JSON.stringify(values));
+      }}
+    >
+      <ProFormText name="keyword" label="Keyword" placeholder="Search..." />
+      <ProFormSelect
+        name="status"
+        label="Status"
+        valueEnum={{ all: 'All', active: 'Active', inactive: 'Inactive' }}
+      />
+    </QueryFilter>
+  ),
+  tags: ['!autodocs', 'dev'],
 };

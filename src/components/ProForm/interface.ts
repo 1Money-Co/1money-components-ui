@@ -1,5 +1,5 @@
-import type { ReactNode, FC, ReactElement, MutableRefObject } from 'react';
-import type { FormProps, FormItemProps, Rule } from '@/components/Form';
+import type { ReactNode, FC, ReactElement, MutableRefObject, CSSProperties } from 'react';
+import type { FormProps, FormItemProps, FormCoreInstance, Rule } from '@/components/Form';
 import type { ButtonProps } from '@/components/Button';
 import type { DrawerProps, DrawerPlacement } from '@/components/Drawer';
 import type { GridRowProps, GridColProps, GridColSize } from '@/components/Grid';
@@ -24,6 +24,14 @@ export type ProFormFieldConvertValueFn = (
 ) => unknown;
 
 // ---------------------------------------------------------------------------
+// valueEnum
+// ---------------------------------------------------------------------------
+export type ProFormValueEnumObj = Record<
+  string | number,
+  string | { text: string; disabled?: boolean }
+>;
+
+// ---------------------------------------------------------------------------
 // Responsive column props for grid mode
 // ---------------------------------------------------------------------------
 export interface ProFormColProps {
@@ -31,6 +39,15 @@ export interface ProFormColProps {
   sm?: GridColSize;
   md?: GridColSize;
   lg?: GridColSize;
+}
+
+// ---------------------------------------------------------------------------
+// Async option type (used by field-level request)
+// ---------------------------------------------------------------------------
+export interface ProFormRequestOption {
+  label: string;
+  value: unknown;
+  disabled?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -59,9 +76,7 @@ export interface ProFormFormInstance {
   setFieldsValue: (values: Record<string, unknown>) => void;
   setFieldValue: (name: string, value: unknown) => void;
   validateFields: (fieldsRules?: Record<string, Rule[]>) => boolean;
-  /** Get all field values with registered transforms applied */
   getFieldsFormatValue: () => Record<string, unknown>;
-  /** Validate all fields, then return transformed values */
   validateFieldsReturnFormatValue: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
 }
 
@@ -90,6 +105,16 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   width?: 'sm' | 'md' | 'lg' | 'xl' | number;
   transform?: ProFormFieldTransformFn;
   convertValue?: ProFormFieldConvertValueFn;
+  /** Field names to watch — auto-wraps with ProFormDependency */
+  dependencies?: string[];
+  /** Async option loader (works with Select, RadioGroup, CheckboxGroup) */
+  request?: (params?: Record<string, unknown>) => Promise<ProFormRequestOption[]>;
+  /** Extra params passed to request; merged with dependency values */
+  params?: Record<string, unknown>;
+  /** Quick enum → options conversion for Select/Radio/Checkbox fields */
+  valueEnum?: ProFormValueEnumObj;
+  /** Debounce delay (ms) for field onChange */
+  debounceTime?: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -99,7 +124,7 @@ export interface SubmitterProps {
   submitText?: ReactNode;
   resetText?: ReactNode;
   render?: (
-    props: { form?: ProFormFormInstance; submit: () => void; reset: () => void },
+    props: { form: FormCoreInstance; submit: () => void; reset: () => void },
     dom: ReactElement[],
   ) => ReactNode;
   onSubmit?: () => void;
@@ -124,6 +149,8 @@ export interface ProFormProps extends Omit<FormProps, 'onSubmit'> {
   request?: (params?: unknown) => Promise<Record<string, unknown>>;
   params?: unknown;
   formRef?: MutableRefObject<ProFormFormInstance | undefined>;
+  /** Strip null / undefined / empty-string values before onFinish (default: true) */
+  omitNil?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -142,6 +169,10 @@ export interface ProFormListProps {
   label?: ReactNode;
   min?: number;
   max?: number;
+  /** Validate that the list is not empty on form submission */
+  required?: boolean;
+  /** Error message when list is empty (used with required) */
+  requiredMessage?: string;
   initialValue?: Record<string, unknown>[];
   copyIconProps?: false | Partial<ButtonProps>;
   deleteIconProps?: false | Partial<ButtonProps>;
@@ -161,15 +192,8 @@ export interface ProFormListProps {
 // ProFormDependency
 // ---------------------------------------------------------------------------
 export interface ProFormDependencyProps {
-  /** Field names to watch. Supports nested paths (e.g. 'user.name'). */
   name: string[];
-  /**
-   * When inside a ProFormList, field names are automatically prefixed
-   * with the list path to watch row-scoped values.
-   * Set to true to ignore the list prefix and watch global form values instead.
-   */
   ignoreFormListField?: boolean;
-  /** Render function receives watched values and the form instance */
   children: (values: Record<string, unknown>, form: ProFormFormInstance) => ReactNode;
 }
 
@@ -177,8 +201,37 @@ export interface ProFormDependencyProps {
 // FormListContext (used by ProFormList to expose list scope to Dependency)
 // ---------------------------------------------------------------------------
 export interface FormListContextValue {
-  /** Current list field name (e.g. 'items') */
   listName?: string;
+}
+
+// ---------------------------------------------------------------------------
+// ProFormFieldSet
+// ---------------------------------------------------------------------------
+export interface ProFormFieldSetProps {
+  name?: string;
+  label?: ReactNode;
+  rules?: Rule[];
+  required?: boolean;
+  help?: ReactNode;
+  /** Gap between child fields in px */
+  gap?: number;
+  style?: CSSProperties;
+  children?: ReactNode;
+}
+
+// ---------------------------------------------------------------------------
+// ProFormGroup
+// ---------------------------------------------------------------------------
+export interface ProFormGroupProps {
+  title?: ReactNode;
+  /** Extra content rendered at the right of the title */
+  extra?: ReactNode;
+  collapsible?: boolean;
+  defaultCollapsed?: boolean;
+  collapsed?: boolean;
+  onCollapse?: (collapsed: boolean) => void;
+  style?: CSSProperties;
+  children?: ReactNode;
 }
 
 // ---------------------------------------------------------------------------
@@ -204,9 +257,7 @@ export interface DrawerFormProps extends Omit<ProFormProps, 'title'> {
   onOpenChange?: (open: boolean) => void;
   trigger?: ReactElement;
   title?: ReactNode;
-  /** Width of the drawer (applies when placement is 'left' or 'right') */
   width?: number | string;
-  /** Placement of the drawer @defaultValue 'right' */
   placement?: DrawerPlacement;
   submitTimeout?: number;
   autoClose?: boolean;
@@ -228,6 +279,8 @@ export interface QueryFilterProps extends ProFormProps {
     searchText?: ReactNode;
     resetText?: ReactNode;
   };
+  /** Sync form values to URL search params */
+  syncToUrl?: boolean | ((values: Record<string, unknown>, type: 'get' | 'set') => Record<string, unknown>);
 }
 
 // ---------------------------------------------------------------------------

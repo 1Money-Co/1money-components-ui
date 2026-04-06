@@ -1,4 +1,4 @@
-import { memo, useState, useMemo } from 'react';
+import { memo, useState, useMemo, useEffect, useRef } from 'react';
 import type { FC, ReactNode } from 'react';
 import { useControlledState, useMemoizedFn } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
@@ -10,6 +10,34 @@ import React from 'react';
 
 const classes = classnames(`${CSS_PREFIX}-query-filter`);
 
+// ---------------------------------------------------------------------------
+// URL sync helpers
+// ---------------------------------------------------------------------------
+function getUrlParams(): Record<string, string> {
+  if (typeof window === 'undefined') return {};
+  const params: Record<string, string> = {};
+  new URLSearchParams(window.location.search).forEach((v, k) => {
+    params[k] = v;
+  });
+  return params;
+}
+
+function setUrlParams(params: Record<string, unknown>) {
+  if (typeof window === 'undefined') return;
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v !== null && v !== undefined && v !== '') {
+      sp.set(k, String(v));
+    }
+  }
+  const search = sp.toString();
+  const url = search ? `${window.location.pathname}?${search}` : window.location.pathname;
+  window.history.replaceState(null, '', url);
+}
+
+// ---------------------------------------------------------------------------
+// QueryFilter
+// ---------------------------------------------------------------------------
 const QueryFilterBase: FC<QueryFilterProps> = (props) => {
   const {
     defaultCollapsed = true,
@@ -19,10 +47,12 @@ const QueryFilterBase: FC<QueryFilterProps> = (props) => {
     labelWidth,
     split = false,
     searchConfig,
+    syncToUrl,
     onFinish,
     onReset,
     children,
     submitter = false,
+    initialValues: initialValuesProp,
     ...formProps
   } = props;
 
@@ -30,6 +60,36 @@ const QueryFilterBase: FC<QueryFilterProps> = (props) => {
     defaultCollapsed,
     controlledCollapsed,
   );
+
+  // ── syncToUrl: merge URL params into initial values on mount ──
+  const syncInitRef = useRef(false);
+  const initialValues = useMemo(() => {
+    if (!syncToUrl || syncInitRef.current) return initialValuesProp;
+    syncInitRef.current = true;
+    const urlParams = getUrlParams();
+    if (typeof syncToUrl === 'function') {
+      return { ...initialValuesProp, ...syncToUrl(urlParams, 'get') };
+    }
+    return { ...initialValuesProp, ...urlParams };
+  }, []);
+
+  const handleSyncSet = useMemoizedFn((values: Record<string, unknown>) => {
+    if (!syncToUrl) return;
+    const toWrite = typeof syncToUrl === 'function'
+      ? syncToUrl(values, 'set')
+      : values;
+    setUrlParams(toWrite);
+  });
+
+  const handleFinish = useMemoizedFn((values: Record<string, unknown>) => {
+    handleSyncSet(values);
+    onFinish?.(values);
+  });
+
+  const handleReset = useMemoizedFn(() => {
+    if (syncToUrl) setUrlParams({});
+    onReset?.();
+  });
 
   const handleCollapse = useMemoizedFn(() => {
     const next = !collapsed;
@@ -64,8 +124,9 @@ const QueryFilterBase: FC<QueryFilterProps> = (props) => {
   return (
     <ProForm
       {...formProps}
-      onFinish={onFinish}
-      onReset={onReset}
+      initialValues={initialValues}
+      onFinish={handleFinish}
+      onReset={handleReset}
       submitter={false}
     >
       <div className={classes()}>
@@ -84,7 +145,7 @@ const QueryFilterBase: FC<QueryFilterProps> = (props) => {
           <Button type="submit" color="primary">
             {searchText}
           </Button>
-          <Button type="button" color="secondary" onClick={() => onReset?.()}>
+          <Button type="button" color="secondary" onClick={handleReset}>
             {resetText}
           </Button>
           {hasMore && (

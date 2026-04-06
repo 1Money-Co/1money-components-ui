@@ -9,7 +9,7 @@ export { Copy } from './components/Copy';
 export { Divider } from './components/Divider';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
-export { Form, FormItem, useForm, useFormContext, useFormCore } from './components/Form';
+export { Form, FormItem, useForm, useFormContext, useFormInstance, useFormCore } from './components/Form';
 export { Grid, Row, Col } from './components/Grid';
 export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
@@ -83,6 +83,7 @@ export type {
   FormProps,
   FormItemProps,
   FormInstance,
+  FormCoreInstance,
   FormContextValue,
   FormLayout,
   FormSize,
