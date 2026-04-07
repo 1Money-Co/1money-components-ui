@@ -233,7 +233,7 @@ const activityDetailsPanelStyle: CSSProperties = {
 
 const activityDetailRowStyle: CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: '280px 360px 360px 88px',
+  gridTemplateColumns: '280fr 360fr 360fr 88fr',
   alignItems: 'center',
   padding: '16px',
   columnGap: 0,
@@ -420,6 +420,7 @@ const activityLedgerRows: ActivityLedgerRow[] = [
     cryptoAmount: '+2,500.00 USDC',
     fiatAmount: '-2,500.00 USD',
     status: 'completed',
+    details: ACTIVITY_LEDGER_DETAIL_ROWS,
   },
   {
     id: 'activity-row-2',
@@ -439,6 +440,7 @@ const activityLedgerRows: ActivityLedgerRow[] = [
     cryptoAmount: '+2,500.00 USDC',
     fiatAmount: '-2,500.00 USD',
     status: 'completed',
+    details: ACTIVITY_LEDGER_DETAIL_ROWS,
   },
   {
     id: 'activity-row-4',
@@ -448,6 +450,7 @@ const activityLedgerRows: ActivityLedgerRow[] = [
     cryptoAmount: '+2,500.00 USDC',
     fiatAmount: '-2,500.00 USD',
     status: 'completed',
+    details: ACTIVITY_LEDGER_DETAIL_ROWS,
   },
 ];
 
