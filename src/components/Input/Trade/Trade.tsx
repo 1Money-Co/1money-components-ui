@@ -1,9 +1,9 @@
 import { memo, useId } from 'react';
-import { useControlledState, useEventCallback } from '@1money/hooks';
+import { useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { useSyncRef } from '../useSyncRef';
-import type { FC, ChangeEvent } from 'react';
+import { useAmountInput } from '../useAmountInput';
+import type { FC } from 'react';
 import type { InputTradeProps } from '../interface';
 
 const TRADE_PREFIX = 'input';
@@ -14,6 +14,7 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
     prefixCls = TRADE_PREFIX,
     status = 'default',
     disabled = false,
+    readOnly = false,
     currencySymbol = '$',
     currencyUnit = 'USD',
     exchangeText,
@@ -22,22 +23,36 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
     onMax,
     onSwap,
     value,
-    defaultValue = '',
+    defaultValue,
     onChange,
     placeholder = '0',
+    min,
+    max,
+    maxFractionDigits,
+    negative,
     ref,
-    ...rest
   } = props;
 
   const autoId = useId();
   const classes = classnames(prefixCls);
-  const [inputRef, syncRef] = useSyncRef<HTMLInputElement>(ref);
-  const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
 
-  const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
-    const nextValue = event.target.value;
-    setInnerValue(nextValue);
-    onChange?.(nextValue, event);
+  const {
+    syncRef,
+    formattedValue,
+    hasValue,
+    handleChange,
+    handleSelect,
+  } = useAmountInput({
+    value,
+    defaultValue,
+    onChange,
+    min,
+    max,
+    maxFractionDigits,
+    negative,
+    disabled,
+    readOnly,
+    ref,
   });
 
   const handleMax = useEventCallback(() => {
@@ -51,7 +66,6 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
   });
 
   const isError = status === 'error';
-  const hasValue = innerValue.length > 0;
 
   return (
     <div
@@ -69,13 +83,14 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
           <span className={classes('trade-symbol')}>{currencySymbol}</span>
           <div className={classes('trade-input-wrapper')}>
             <input
-              {...rest}
               ref={syncRef}
               id={autoId}
               className={classes('trade-field')}
               disabled={disabled}
-              value={innerValue}
+              readOnly={readOnly}
+              value={formattedValue}
               onChange={handleChange}
+              onSelect={handleSelect}
               placeholder={placeholder}
               inputMode="decimal"
               aria-invalid={isError ? 'true' : 'false'}

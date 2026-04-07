@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Icons } from '@/components/Icons';
+import { Skeleton } from '@/components/Skeleton';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, ReactNode } from 'react';
@@ -18,6 +19,8 @@ export interface FieldShellProps {
   size: InputSize;
   status: InputStatus;
   disabled: boolean;
+  loading?: boolean;
+  readOnly?: boolean;
   label?: ReactNode;
   info?: ReactNode;
   errorMsg?: ReactNode;
@@ -33,6 +36,8 @@ const FieldShellBase: FC<FieldShellProps> = ({
   size,
   status,
   disabled,
+  loading = false,
+  readOnly = false,
   label,
   info,
   errorMsg,
@@ -49,6 +54,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
           classes(size),
           classes(status),
           disabled && classes('disabled'),
+          readOnly && classes('readonly'),
           className,
         ),
       )}
@@ -56,12 +62,16 @@ const FieldShellBase: FC<FieldShellProps> = ({
       {(label || info) && (
         <div className={classes('label-row')}>
           {label && (
-            <label htmlFor={inputId} className={classes('label')}>
-              <TypographyLabel as="span" size={INPUT_LABEL_SIZE[size]} color={INPUT_LABEL_COLOR} strong>
-                {label}
-              </TypographyLabel>
-              {required && <span className={classes('required')}>*</span>}
-            </label>
+            loading
+              ? <Skeleton width="72px" height="18px" className={classes('label-loading')} />
+              : (
+                <label htmlFor={inputId} className={classes('label')}>
+                  <TypographyLabel as="span" size={INPUT_LABEL_SIZE[size]} color={INPUT_LABEL_COLOR} strong>
+                    {label}
+                  </TypographyLabel>
+                  {required && <span className={classes('required')}>*</span>}
+                </label>
+              )
           )}
           {info && <TypographyBody className={classes('info')} size={INPUT_INFO_SIZE} color={INPUT_INFO_COLOR}>{info}</TypographyBody>}
         </div>
