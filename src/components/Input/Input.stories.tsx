@@ -10,7 +10,7 @@ import './Input/Input.scss';
 import './TextArea/TextArea.scss';
 import './OTP/OTP.scss';
 import './Trade/Trade.scss';
-import './AmountInput/style/AmountInput.scss';
+import './Amount/style/Amount.scss';
 
 const meta: Meta<typeof Input> = {
   title: 'Components/Input',
@@ -801,3 +801,4 @@ export const Mask: Story = {
   ),
   tags: ['!autodocs'],
 };
+

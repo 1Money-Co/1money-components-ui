@@ -91,6 +91,7 @@ export interface InputTradeProps {
   prefixCls?: string;
   status?: InputStatus;
   disabled?: boolean;
+  readOnly?: boolean;
   ref?: RefObject<HTMLInputElement | null>;
   value?: string;
   defaultValue?: string;
@@ -111,10 +112,19 @@ export interface InputTradeProps {
   /** Callback when value changes */
   onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+
+  /** Minimum numeric value (inclusive) */
+  min?: number | bigint;
+  /** Maximum numeric value (inclusive) */
+  max?: number | bigint;
+  /** Maximum number of fraction digits (decimal places) */
+  maxFractionDigits?: number | bigint;
+  /** Allow negative numbers */
+  negative?: boolean;
 }
 
 export interface InputAmountProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange'>,
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange' | 'min' | 'max'>,
     Omit<InputBaseProps, 'allowClear'> {
   ref?: RefObject<HTMLInputElement | null>;
   value?: string;
@@ -134,6 +144,15 @@ export interface InputAmountProps
   currencyLabel?: string;
   /** Callback when the currency selector is clicked */
   onCurrencyClick?: () => void;
+
+  /** Minimum numeric value (inclusive) */
+  min?: number | bigint;
+  /** Maximum numeric value (inclusive) */
+  max?: number | bigint;
+  /** Maximum number of fraction digits (decimal places) */
+  maxFractionDigits?: number | bigint;
+  /** Allow negative numbers */
+  negative?: boolean;
 }
 
 export interface InputMaskProps

@@ -8,7 +8,7 @@ import { useSyncRef } from '../useSyncRef';
 import type { FC, ChangeEvent } from 'react';
 import type { InputComponent, InputProps } from '../interface';
 
-import InputAmount from '../AmountInput';
+import InputAmount from '../Amount';
 import InputOTP from '../OTP';
 import InputPassword from '../Password';
 import InputSearch from '../Search';
@@ -94,6 +94,7 @@ const InputBase: FC<InputProps> = (props) => {
       size={size}
       status={status}
       disabled={isDisabled}
+      loading={loading}
       readOnly={readOnly}
       label={label}
       info={info}

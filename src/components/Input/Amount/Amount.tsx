@@ -1,10 +1,11 @@
 import { memo, useId } from 'react';
-import { useControlledState, useEventCallback } from '@1money/hooks';
+import { useEventCallback } from '@1money/hooks';
 import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from '../FieldShell';
-import { useSyncRef } from '../useSyncRef';
-import type { FC, ChangeEvent } from 'react';
+import { useAmountInput } from '../useAmountInput';
+import { DEFAULT_PLACEHOLDER } from './helper';
+import type { FC } from 'react';
 import type { InputAmountProps } from '../interface';
 import type { InputSize } from '../constants';
 import './style';
@@ -20,6 +21,8 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
     size = 'large',
     status = 'default',
     disabled = false,
+    loading = false,
+    readOnly = false,
     label,
     info,
     errorMsg,
@@ -33,10 +36,14 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
     currencyLabel,
     onCurrencyClick,
     value,
-    defaultValue = '',
+    defaultValue,
     onChange,
     onClear,
-    placeholder = '0',
+    placeholder = DEFAULT_PLACEHOLDER,
+    min,
+    max,
+    maxFractionDigits,
+    negative,
     ref,
     id: externalId,
     ...rest
@@ -45,32 +52,47 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
   const autoId = useId();
   const inputId = externalId ?? autoId;
   const classes = classnames(prefixCls);
-  const [inputRef, syncRef] = useSyncRef<HTMLInputElement>(ref);
-  const [innerValue, setInnerValue] = useControlledState(defaultValue, value);
 
-  const handleChange = useEventCallback((event: ChangeEvent<HTMLInputElement>) => {
-    const nextValue = event.target.value;
-    setInnerValue(nextValue);
-    onChange?.(nextValue, event);
+  const isDisabled = disabled || loading;
+
+  const {
+    inputRef,
+    syncRef,
+    formattedValue,
+    hasValue,
+    handleChange,
+    handleSelect,
+    clear,
+  } = useAmountInput({
+    value,
+    defaultValue,
+    onChange,
+    min,
+    max,
+    maxFractionDigits,
+    negative,
+    disabled: isDisabled,
+    readOnly,
+    ref,
   });
 
   const handleClear = useEventCallback(() => {
-    setInnerValue('');
+    clear();
     inputRef.current?.focus();
     onClear?.();
   });
 
   const handleAction = useEventCallback(() => {
-    if (disabled) return;
+    if (isDisabled || readOnly) return;
     onAction?.();
   });
 
   const handleCurrencyClick = useEventCallback(() => {
-    if (disabled) return;
+    if (isDisabled) return;
     onCurrencyClick?.();
   });
 
-  const showClearAction = allowClear && !disabled && innerValue.length > 0;
+  const showClearAction = allowClear && !isDisabled && !readOnly && hasValue;
   const clearIconSize = CLEAR_ICON_SIZE[size];
   const chevronSize = CHEVRON_SIZE[size];
   const currencyIconSize = CURRENCY_ICON_SIZE[size];
@@ -84,23 +106,27 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
       prefixCls={prefixCls}
       size={size}
       status={status}
-      disabled={disabled}
+      disabled={isDisabled}
+      loading={loading}
+      readOnly={readOnly}
       label={label}
       info={info}
       errorMsg={errorMsg}
       required={required}
       inputId={inputId}
     >
-      <div className={classes('control', joinCls(disabled && classes('control-disabled')))}>
+      <div className={classes('control', joinCls(isDisabled && classes('control-disabled')))}>
         {prefix && <span className={classes('prefix')}>{prefix}</span>}
         <input
           {...rest}
           ref={syncRef}
           id={inputId}
           className={classes('field')}
-          disabled={disabled}
-          value={innerValue}
+          disabled={isDisabled}
+          readOnly={readOnly}
+          value={formattedValue}
           onChange={handleChange}
+          onSelect={handleSelect}
           placeholder={placeholder}
           inputMode="decimal"
           aria-required={required ? 'true' : 'false'}
@@ -124,7 +150,7 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
                 <button
                   type="button"
                   className={classes('amount-action')}
-                  disabled={disabled}
+                  disabled={isDisabled}
                   onClick={handleAction}
                 >
                   {actionLabel}
@@ -137,7 +163,7 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
                 <button
                   type="button"
                   className={classes('amount-currency')}
-                  disabled={disabled}
+                  disabled={isDisabled}
                   onClick={handleCurrencyClick}
                 >
                   {currencyIcon && (
