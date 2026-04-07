@@ -109,6 +109,15 @@ $component: 'input';
     box-shadow: none;
   }
 
+  // ── Read-only ──
+  &-readonly &-control,
+  &-readonly &-control:hover,
+  &-readonly &-control:focus-within {
+    background-color: theme.palette(bg, 'neutral-tertiary');
+    border-color: transparent;
+    box-shadow: none;
+  }
+
   // ── Disabled ──
   &-disabled &-control {
     background-color: theme.palette(bg, 'disabled');

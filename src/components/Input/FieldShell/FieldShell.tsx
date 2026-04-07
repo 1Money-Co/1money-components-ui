@@ -18,6 +18,7 @@ export interface FieldShellProps {
   size: InputSize;
   status: InputStatus;
   disabled: boolean;
+  readOnly?: boolean;
   label?: ReactNode;
   info?: ReactNode;
   errorMsg?: ReactNode;
@@ -33,6 +34,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
   size,
   status,
   disabled,
+  readOnly = false,
   label,
   info,
   errorMsg,
@@ -49,6 +51,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
           classes(size),
           classes(status),
           disabled && classes('disabled'),
+          readOnly && classes('readonly'),
           className,
         ),
       )}
