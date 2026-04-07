@@ -10,7 +10,7 @@ import './Input/Input.scss';
 import './TextArea/TextArea.scss';
 import './OTP/OTP.scss';
 import './Trade/Trade.scss';
-import './AmountInput/style/AmountInput.scss';
+import './Amount/style/Amount.scss';
 
 const meta: Meta<typeof Input> = {
   title: 'Components/Input',
@@ -72,6 +72,22 @@ export const Default: Story = {
                   </div>
                 )),
               )}
+              {/* Read-Only */}
+              {valueTypes.map((vt) => (
+                <div key={`readonly-${vt}`} style={{ width: 310 }}>
+                  <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>
+                    read-only / {vt}
+                  </p>
+                  <Input
+                    size={size}
+                    readOnly
+                    label="Label"
+                    errorMsg="Feedback"
+                    placeholder="Value"
+                    defaultValue={vt === 'Filled' ? 'Read-only value' : undefined}
+                  />
+                </div>
+              ))}
               {/* Disabled */}
               {valueTypes.map((vt) => (
                 <div key={`disabled-${vt}`} style={{ width: 310 }}>
@@ -785,3 +801,4 @@ export const Mask: Story = {
   ),
   tags: ['!autodocs'],
 };
+
