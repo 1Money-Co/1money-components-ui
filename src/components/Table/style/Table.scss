@@ -12,7 +12,7 @@ $component: 'om-react-ui-table';
   overflow: clip;
   font-variant: tabular-nums;
   background: theme.palette(bg, 'default');
-  border: 1px solid theme.palette(border, 'default');
+  border: 1px solid theme.palette(border, 'neutral');
   border-radius: theme.shape(300);
 
   // Inner table element
@@ -31,7 +31,7 @@ $component: 'om-react-ui-table';
     text-align: start;
     overflow-wrap: break-word;
     background: theme.palette(bg, 'default-secondary');
-    border-bottom: 1px solid theme.palette(border, 'default');
+    border-bottom: 1px solid theme.palette(border, 'neutral');
 
     @include theme.typography(label, md);
   }
@@ -42,7 +42,7 @@ $component: 'om-react-ui-table';
     padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
     vertical-align: middle;
     overflow-wrap: break-word;
-    border-bottom: 1px solid theme.palette(border, 'default');
+    border-bottom: 1px solid theme.palette(border, 'neutral');
 
     @include theme.typography(body, md);
   }
@@ -61,7 +61,7 @@ $component: 'om-react-ui-table';
     }
 
     &:hover > td {
-      background: theme.palette(bg, 'default-hover');
+      background: theme.palette(bg, 'default-secondary');
     }
   }
 
@@ -105,7 +105,7 @@ $component: 'om-react-ui-table';
 
   &-tbody > tr:hover &-cell-fix-start,
   &-tbody > tr:hover &-cell-fix-end {
-    background: theme.palette(bg, 'default-hover');
+    background: theme.palette(bg, 'default-secondary');
   }
 
   // Header fixed cells need header background
@@ -161,14 +161,14 @@ $component: 'om-react-ui-table';
       display: flex;
 
       &:hover .#{$component}-cell {
-        background: theme.palette(bg, 'default-hover');
+        background: theme.palette(bg, 'default-secondary');
       }
     }
 
     .#{$component}-cell {
       padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
       overflow-wrap: break-word;
-      border-bottom: 1px solid theme.palette(border, 'default');
+      border-bottom: 1px solid theme.palette(border, 'neutral');
 
       @include theme.typography(body, md);
     }
@@ -226,9 +226,18 @@ $component: 'om-react-ui-table';
   }
 
   &-stroke {
-    .#{$component}-cell,
-    .#{$component}-thead > tr > th {
-      border-bottom: 1px solid theme.palette(border, 'default');
+    .#{$component}-thead > tr > th,
+    .#{$component}-thead > tr > td {
+      border-bottom: none;
+    }
+
+
+    // Spacer columns: no border, no padding
+    .#{$component}-thead > tr > th.#{$component}-cell--spacer,
+    .#{$component}-thead > tr > td.#{$component}-cell--spacer,
+    .#{$component}-tbody > tr > td.#{$component}-cell--spacer {
+      padding: 0;
+      border-bottom: none;
     }
   }
 

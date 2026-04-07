@@ -61,6 +61,7 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
   const renderedColumns = useTableColumns({
     columns,
     size,
+    variant,
     expandable,
     mergedExpandedRowKeys: expand.mergedExpandedRowKeys,
     triggerExpand: expand.triggerExpand,

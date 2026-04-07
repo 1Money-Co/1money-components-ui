@@ -9,6 +9,7 @@ import type {
   TableRowSelection,
   TableSize,
   TableSortOrder,
+  TableVariant,
 } from '../interface';
 import type { TableSorterState } from './useTableDataPipeline';
 
@@ -17,6 +18,7 @@ type ColumnTransform<T> = (columns: TableColumn<T>[]) => TableColumn<T>[];
 interface UseTableColumnsConfig<T> {
   columns: TableColumn<T>[];
   size: TableSize;
+  variant: TableVariant;
   expandable?: TableExpandableConfig<T>;
   mergedExpandedRowKeys: Key[];
   triggerExpand: (key: Key, record: T) => void;
@@ -131,6 +133,16 @@ function makeSortTransform<T>(config: UseTableColumnsConfig<T>): ColumnTransform
     }));
 }
 
+const SPACER_COLUMN_CLS = 'om-react-ui-table-cell--spacer';
+
+function makeSpacerTransform<T>(): ColumnTransform<T> {
+  return (columns) => [
+    { key: '__spacer_start__', width: 16, title: '', className: SPACER_COLUMN_CLS, render: () => null },
+    ...columns,
+    { key: '__spacer_end__', width: 16, title: '', className: SPACER_COLUMN_CLS, render: () => null },
+  ];
+}
+
 function makeRenderTransform<T>(): ColumnTransform<T> {
   return (columns) =>
     columns.map((column) => ({
@@ -149,6 +161,7 @@ function makeRenderTransform<T>(): ColumnTransform<T> {
 export function useTableColumns<T>(config: UseTableColumnsConfig<T>) {
   const {
     columns,
+    variant,
     expandable,
     rowSelection,
     mergedExpandedRowKeys,
@@ -176,10 +189,14 @@ export function useTableColumns<T>(config: UseTableColumnsConfig<T>) {
     }
     transforms.push(makeSortTransform(config));
     transforms.push(makeRenderTransform<T>());
+    if (variant === 'stroke') {
+      transforms.push(makeSpacerTransform<T>());
+    }
 
     return transforms.reduce((cols, fn) => fn(cols), columns);
   }, [
     columns,
+    variant,
     expandable,
     rowSelection,
     mergedExpandedRowKeys,

@@ -116,7 +116,7 @@ const expandedPanelStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   gap: 16,
-  paddingLeft: 48,
+  padding: '0 0 16px 64px',
 };
 
 const groupStyle: CSSProperties = {
@@ -364,6 +364,27 @@ const expandableListRows: WalletRegistryRow[] = [
     countryFlag: '🇺🇸',
     groups: EXPANDABLE_LIST_GROUPS,
   },
+  {
+    id: 'wallet-global-treasury',
+    walletName: 'Global Treasury',
+    walletSummary: '2 banks, 4 wallets',
+    countryFlag: '🇸🇬',
+    groups: EXPANDABLE_LIST_GROUPS,
+  },
+  {
+    id: 'wallet-merchant-settlement',
+    walletName: 'Merchant Settlement',
+    walletSummary: '2 banks, 2 wallets',
+    countryFlag: '🇬🇧',
+    groups: EXPANDABLE_LIST_GROUPS,
+  },
+  {
+    id: 'wallet-apac-operations',
+    walletName: 'APAC Operations',
+    walletSummary: '2 banks, 5 wallets',
+    countryFlag: '🇭🇰',
+    groups: EXPANDABLE_LIST_GROUPS,
+  },
 ];
 
 const walletListPanelRows: WalletListRow[] = [
@@ -596,7 +617,11 @@ const WalletDetailsPanel = ({ record }: { record: WalletRegistryRow }) => (
             const statusTag = getStatusTagProps(account.status);
 
             return (
-              <div key={account.id} style={accountCardStyle}>
+              <div
+                key={account.id}
+                className="om-react-ui-table-expandable-account-card"
+                style={accountCardStyle}
+              >
                 <div style={walletCellStyle}>
                   <FlagBadge flag={account.countryFlag} size={24} />
                   <TypographyTitle size="sm" strong>
@@ -1036,7 +1061,7 @@ export const ExpandableList: Story = {
   render: () => (
     <WalletRegistryStory
       dataSource={expandableListRows}
-      defaultExpandedKeys={['wallet-big-tom']}
+      defaultExpandedKeys={['wallet-big-tom', 'wallet-global-treasury']}
     />
   ),
 };
