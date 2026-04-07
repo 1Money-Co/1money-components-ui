@@ -1,9 +1,11 @@
-import { memo, useMemo } from 'react';
+import { memo, useEffect, useRef, useCallback } from 'react';
 import type { FC, ReactNode } from 'react';
 import { FormItem, useFormContext } from '@/components/Form';
 import { Col } from '@/components/Grid';
 import { useProFormContext } from '../context';
-import { resolveWidth } from '../utils';
+import { ProFormDependency } from '../ProFormDependency';
+import { useFieldRequest } from '../hooks/useFieldRequest';
+import { resolveWidth, valueEnumToOptions } from '../utils';
 import { DEFAULT_COL_SPAN } from '../constants';
 import type { CreateProFormFieldConfig, ProFormFieldProps } from '../interface';
 
@@ -29,6 +31,34 @@ ReadonlyFieldBase.displayName = 'ReadonlyField';
 const ReadonlyField = memo(ReadonlyFieldBase);
 
 // ---------------------------------------------------------------------------
+// ConvertValueWrapper — intercepts form value and applies convertValue before
+// passing it to the actual field component via a controlled value prop
+// ---------------------------------------------------------------------------
+interface ConvertValueWrapperProps<FP> {
+  name: string;
+  convertValue: (value: unknown, name: string) => unknown;
+  component: FC<FP>;
+  componentProps: FP;
+}
+
+function ConvertValueWrapperBase<FP extends object>({
+  name,
+  convertValue,
+  component: Comp,
+  componentProps,
+}: ConvertValueWrapperProps<FP>) {
+  const { values } = useFormContext();
+  const rawValue = values[name];
+  const converted = convertValue(rawValue, name);
+
+  return <Comp {...componentProps} value={converted} />;
+}
+
+ConvertValueWrapperBase.displayName = 'ConvertValueWrapper';
+
+const ConvertValueWrapper = memo(ConvertValueWrapperBase) as typeof ConvertValueWrapperBase;
+
+// ---------------------------------------------------------------------------
 // createProFormField — factory that produces a ProForm-aware field component
 // ---------------------------------------------------------------------------
 export function createProFormField<FieldProps extends object>(
@@ -36,13 +66,12 @@ export function createProFormField<FieldProps extends object>(
 ): FC<ProFormFieldProps<FieldProps>> {
   const {
     component: Component,
-    // valuePropName is intentionally unused here — FormItem already handles
-    // value injection via cloneElement for all form-aware components
     mapProps,
     renderReadonly,
   } = config;
 
-  const ProFormFieldComponent: FC<ProFormFieldProps<FieldProps>> = (props) => {
+  // Inner component — handles mode, transform, request, valueEnum, debounce, render
+  const InnerField: FC<ProFormFieldProps<FieldProps> & { dependenciesValues?: Record<string, unknown> }> = (props) => {
     const {
       name,
       label,
@@ -54,17 +83,69 @@ export function createProFormField<FieldProps extends object>(
       wrapperCol,
       colon,
       readonly,
+      mode: modeProp,
       hidden,
       colProps,
       fieldProps,
       placeholder,
       disabled,
       width,
+      transform,
+      convertValue,
+      // Field-level features
+      dependencies: _deps,
+      request,
+      params,
+      valueEnum,
+      debounceTime,
+      dependenciesValues,
       ...rest
-    } = props;
+    } = props as ProFormFieldProps<FieldProps> & { dependenciesValues?: Record<string, unknown> };
 
     const ctx = useProFormContext();
-    const mergedReadonly = readonly ?? ctx?.readonly;
+
+    // Mode resolution
+    const mergedMode = modeProp ?? (readonly !== undefined ? (readonly ? 'read' : 'edit') : undefined) ?? ctx?.mode ?? (ctx?.readonly ? 'read' : 'edit');
+    const isReadonly = mergedMode === 'read';
+
+    // ── Register / unregister transform ──
+    useEffect(() => {
+      if (!name || !transform) return;
+      ctx.registerTransform?.(name, transform);
+      return () => {
+        ctx.unregisterTransform?.(name);
+      };
+    }, [name, transform, ctx.registerTransform, ctx.unregisterTransform]);
+
+    // ── Field-level request ──
+    const mergedRequestParams = dependenciesValues
+      ? { ...params, ...dependenciesValues }
+      : params;
+    const [requestLoading, requestOptions] = useFieldRequest(request, mergedRequestParams);
+
+    // ── Debounce onChange ──
+    const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const originalOnChangeRef = useRef<((...args: unknown[]) => void) | undefined>(undefined);
+
+    const debouncedOnChange = useCallback(
+      (...args: unknown[]) => {
+        if (!debounceTime || debounceTime <= 0) {
+          originalOnChangeRef.current?.(...args);
+          return;
+        }
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+        debounceRef.current = setTimeout(() => {
+          originalOnChangeRef.current?.(...args);
+        }, debounceTime);
+      },
+      [debounceTime],
+    );
+
+    useEffect(() => {
+      return () => {
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+      };
+    }, []);
 
     if (hidden) return null;
 
@@ -84,30 +165,45 @@ export function createProFormField<FieldProps extends object>(
     // Build the child component
     let child: ReactNode;
 
-    if (mergedReadonly) {
+    if (isReadonly) {
       child = <ReadonlyField name={name} renderReadonly={renderReadonly} />;
     } else {
-      // Map extra props if a mapper is provided
       const mapped = mapProps ? mapProps(rest as Record<string, unknown>) : {};
-
-      // Resolve width to a pixel value
       const widthStyle = width !== undefined ? { width: resolveWidth(width) } : undefined;
-
-      // Merge all component props
       const fieldStyle = (fieldProps as Record<string, unknown>)?.style as Record<string, unknown> | undefined;
       const mergedStyle = widthStyle
         ? { ...(fieldStyle || {}), ...widthStyle }
         : fieldStyle;
 
+      // Merge valueEnum + request options into fieldProps.options
+      let mergedOptions = (fieldProps as Record<string, unknown>)?.options as unknown[] | undefined;
+      if (valueEnum) {
+        mergedOptions = valueEnumToOptions(valueEnum);
+      }
+      if (requestOptions.length > 0) {
+        mergedOptions = requestOptions;
+      }
+
       const componentProps = {
         ...mapped,
         ...(fieldProps || {}),
+        ...(mergedOptions !== undefined ? { options: mergedOptions } : {}),
+        ...(requestLoading ? { loading: true } : {}),
         ...(placeholder !== undefined ? { placeholder } : {}),
         ...(disabled !== undefined ? { disabled } : {}),
         ...(mergedStyle ? { style: mergedStyle } : {}),
       } as FieldProps;
 
-      child = <Component {...componentProps} />;
+      // Wire debounce — capture the original onChange from fieldProps before FormItem injects it
+      if (debounceTime && debounceTime > 0) {
+        const fp = componentProps as Record<string, unknown>;
+        originalOnChangeRef.current = fp.onChange as ((...args: unknown[]) => void) | undefined;
+        fp.onChange = debouncedOnChange;
+      }
+
+      child = convertValue && name
+        ? <ConvertValueWrapper name={name} convertValue={convertValue} component={Component} componentProps={componentProps} />
+        : <Component {...componentProps} />;
     }
 
     // Wrap in FormItem
@@ -115,14 +211,31 @@ export function createProFormField<FieldProps extends object>(
 
     // Wrap in Col if grid mode is active
     if (ctx?.grid) {
-      const span = colProps?.span ?? ctx?.colProps?.span ?? DEFAULT_COL_SPAN;
-      return <Col span={span}>{node}</Col>;
+      const merged = { ...ctx?.colProps, ...colProps };
+      const { span = DEFAULT_COL_SPAN, sm, md, lg } = merged;
+      return <Col span={span} sm={sm} md={md} lg={lg}>{node}</Col>;
     }
 
     return node;
   };
 
-  // memo + displayName will be set externally by each concrete field
+  // Outer component — handles auto-wrapping with ProFormDependency
+  const ProFormFieldComponent: FC<ProFormFieldProps<FieldProps>> = (props) => {
+    const { dependencies } = props;
+
+    if (dependencies && dependencies.length > 0) {
+      return (
+        <ProFormDependency name={dependencies}>
+          {(depValues) => (
+            <InnerField {...props} dependenciesValues={depValues} />
+          )}
+        </ProFormDependency>
+      );
+    }
+
+    return <InnerField {...props} />;
+  };
+
   const MemoizedField = memo(ProFormFieldComponent);
   return MemoizedField;
 }

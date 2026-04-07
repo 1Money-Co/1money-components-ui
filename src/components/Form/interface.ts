@@ -89,6 +89,18 @@ export interface FieldComponentProps {
   render?: (props: FieldProps) => ReactNode;
 }
 
+/** Lightweight form instance returned by useFormCore and available via FormContext */
+export interface FormCoreInstance {
+  submit: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
+  resetFields: () => void;
+  getFieldValue: (name: string) => unknown;
+  getFieldsValue: () => Record<string, unknown>;
+  setFieldsValue: (values: Record<string, unknown>) => void;
+  setFieldValue: (name: string, value: unknown) => void;
+  validateFields: (fieldsRules?: Record<string, Rule[]>) => boolean;
+}
+
+/** Full form instance returned by useForm — extends FormCoreInstance with async validation, field helpers, etc. */
 export interface FormInstance {
   getFieldValue: (name: string) => unknown;
   getFieldsValue: (nameList?: string[]) => Record<string, unknown>;
@@ -117,6 +129,7 @@ export interface FormContextValue {
   values: Record<string, unknown>;
   errors: Record<string, string>;
   touched: Record<string, boolean>;
+  formInstance: FormCoreInstance;
   setFieldValue: (name: string, value: unknown) => void;
   setFieldError: (name: string, error: string | null) => void;
   validateField: (name: string, rules: Rule[], providedValue?: unknown) => boolean;
@@ -177,15 +190,7 @@ export interface UseFormCoreReturn {
   handleSubmit: (e?: React.FormEvent) => void;
   handleReset: (e?: React.FormEvent) => void;
   resetFields: () => void;
-  formInstance: {
-    submit: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
-    resetFields: () => void;
-    getFieldValue: (name: string) => unknown;
-    getFieldsValue: () => Record<string, unknown>;
-    setFieldsValue: (values: Record<string, unknown>) => void;
-    setFieldValue: (name: string, value: unknown) => void;
-    validateFields: (fieldsRules?: Record<string, Rule[]>) => boolean;
-  };
+  formInstance: FormCoreInstance;
   contextValue: FormContextValue;
 }
 
@@ -199,5 +204,6 @@ export interface FormComponent
     options?: UseFormOptions,
   ) => [FormInstance];
   useFormContext: () => FormContextValue;
+  useFormInstance: () => FormCoreInstance;
   useFormCore: (config?: UseFormCoreConfig) => UseFormCoreReturn;
 }

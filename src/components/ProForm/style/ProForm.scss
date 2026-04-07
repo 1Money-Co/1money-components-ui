@@ -50,6 +50,50 @@ $component: 'proform';
   width: 100%;
 }
 
+// ─── DrawerForm ──────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-drawer-form {
+  width: 100%;
+}
+
+// ─── ProFormGroup ────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.#{theme.$prefix}-#{$component}-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: theme.spacing(gap, 200);
+  cursor: pointer;
+  user-select: none;
+}
+
+.#{theme.$prefix}-#{$component}-group-title {
+  display: flex;
+  gap: theme.spacing(gap, 100);
+  align-items: center;
+}
+
+.#{theme.$prefix}-#{$component}-group-arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.#{theme.$prefix}-#{$component}-group-body {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+}
+
+// ─── ProFormFieldSet ─────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-fieldset {
+  display: flex;
+  align-items: flex-start;
+}
+
 // ─── QueryFilter ─────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-query-filter {
   display: flex;
@@ -63,6 +107,7 @@ $component: 'proform';
   display: flex;
   gap: theme.spacing(gap, 200);
   align-items: center;
+  height: theme.sizing(component-height, '3xl');
   margin-left: auto;
 }
 

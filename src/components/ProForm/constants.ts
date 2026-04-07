@@ -11,6 +11,9 @@ export const WIDTH_SIZE_MAP: Record<string, number> = {
 
 export const DEFAULT_COL_SPAN = 24;
 
+export const PROFORM_MODES = ['edit', 'read', 'update'] as const;
+export type ProFormMode = (typeof PROFORM_MODES)[number];
+
 // ── Typography ──
 export const PROFORM_LIST_LABEL_SIZE: TypographyLabelSize = 'md';
 export const PROFORM_LIST_LABEL_COLOR: TypographyColor = 'default';

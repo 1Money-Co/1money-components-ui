@@ -1,6 +1,7 @@
 import { ProForm as ProFormBase } from './ProForm';
 import { ProFormDependency } from './ProFormDependency';
 import { ProFormList } from './ProFormList';
+import { ProFormGroup } from './ProFormGroup';
 import { Submitter } from './Submitter';
 import {
   ProFormText,
@@ -10,7 +11,10 @@ import {
   ProFormCheckboxGroup,
   ProFormSwitch,
   ProFormSelect,
+  ProFormUpload,
+  ProFormFieldSet,
 } from './fields';
+import { DrawerForm } from './layouts/DrawerForm';
 import { ModalForm } from './layouts/ModalForm';
 import { QueryFilter } from './layouts/QueryFilter';
 import './style';
@@ -19,6 +23,8 @@ import './style';
 const ProForm = Object.assign(ProFormBase, {
   Dependency: ProFormDependency,
   List: ProFormList,
+  Group: ProFormGroup,
+  FieldSet: ProFormFieldSet,
   Submitter,
   Text: ProFormText,
   Password: ProFormPassword,
@@ -27,6 +33,7 @@ const ProForm = Object.assign(ProFormBase, {
   CheckboxGroup: ProFormCheckboxGroup,
   Switch: ProFormSwitch,
   Select: ProFormSelect,
+  Upload: ProFormUpload,
 });
 
 export { ProForm };
@@ -35,6 +42,7 @@ export default ProForm;
 // Re-export individual pieces for named imports
 export { ProFormDependency } from './ProFormDependency';
 export { ProFormList } from './ProFormList';
+export { ProFormGroup } from './ProFormGroup';
 export { Submitter } from './Submitter';
 export {
   createProFormField,
@@ -45,10 +53,13 @@ export {
   ProFormCheckboxGroup,
   ProFormSwitch,
   ProFormSelect,
+  ProFormUpload,
+  ProFormFieldSet,
 } from './fields';
+export { DrawerForm } from './layouts/DrawerForm';
 export { ModalForm } from './layouts/ModalForm';
 export { QueryFilter } from './layouts/QueryFilter';
-export { useProFormContext } from './context';
+export { useProFormContext, FormListContext, useFormListContext } from './context';
 
 // Re-export types
 export type {
@@ -56,13 +67,23 @@ export type {
   ProFormFieldProps,
   ProFormContextValue,
   ProFormFormInstance,
+  ProFormFieldTransformFn,
+  ProFormFieldConvertValueFn,
+  ProFormValueEnumObj,
+  ProFormRequestOption,
+  FormListContextValue,
+  ProFormColProps,
+  ProFormFieldSetProps,
+  ProFormGroupProps,
   SubmitterProps,
   ProFormDependencyProps,
   ProFormListProps,
   ProFormListAction,
+  DrawerFormProps,
   ModalFormProps,
   QueryFilterProps,
   CreateProFormFieldConfig,
 } from './interface';
 
-export { CSS_PREFIX, WIDTH_SIZE_MAP, DEFAULT_COL_SPAN, DEFAULT_TEXT } from './constants';
+export { CSS_PREFIX, WIDTH_SIZE_MAP, DEFAULT_COL_SPAN, DEFAULT_TEXT, PROFORM_MODES } from './constants';
+export type { ProFormMode } from './constants';

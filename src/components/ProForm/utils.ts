@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import { WIDTH_SIZE_MAP } from './constants';
+import type { ProFormFieldTransformFn, ProFormValueEnumObj } from './interface';
 
 // ---------------------------------------------------------------------------
 // stableSerialize — deterministic deep serialization for params comparison
@@ -114,4 +115,109 @@ export function extractButtonProps(
   }
   const { disabled = false, ...rest } = config;
   return { disabled, rest };
+}
+
+// ---------------------------------------------------------------------------
+// transformSubmitValues — apply registered field transforms to form values
+// ---------------------------------------------------------------------------
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+export function transformSubmitValues(
+  values: Record<string, unknown>,
+  transforms: Record<string, ProFormFieldTransformFn>,
+): Record<string, unknown> {
+  const keys = Object.keys(transforms);
+  if (keys.length === 0) return values;
+
+  const result = { ...values };
+
+  // Process transforms in sorted key order for determinism
+  keys.sort().forEach((name) => {
+    const transformFn = transforms[name];
+    if (typeof transformFn !== 'function') return;
+
+    const rawValue = getNestedValue(result, name);
+    const transformed = transformFn(rawValue, name, result);
+
+    if (isPlainObject(transformed)) {
+      // If transform returns an object, delete original key and merge to parent
+      const dotIndex = name.lastIndexOf('.');
+      if (dotIndex === -1) {
+        // Top-level field — delete original and merge at root
+        delete result[name];
+        Object.assign(result, transformed);
+      } else {
+        // Nested field — delete original and merge into parent object
+        const parentPath = name.slice(0, dotIndex);
+        const parent = getNestedValue(result, parentPath);
+        if (isPlainObject(parent)) {
+          const childKey = name.slice(dotIndex + 1);
+          delete parent[childKey];
+          Object.assign(parent, transformed);
+        }
+      }
+    } else {
+      // Primitive value — replace in-place
+      const keys = name.split('.');
+      if (keys.length === 1) {
+        result[name] = transformed;
+      } else {
+        let current: Record<string, unknown> = result;
+        for (let i = 0; i < keys.length - 1; i++) {
+          const key = keys[i];
+          if (!isPlainObject(current[key]) && !Array.isArray(current[key])) {
+            current[key] = {};
+          }
+          current = current[key] as Record<string, unknown>;
+        }
+        current[keys[keys.length - 1]] = transformed;
+      }
+    }
+  });
+
+  return result;
+}
+
+// ---------------------------------------------------------------------------
+// omitNilValues — recursively remove null / undefined / '' from object
+// ---------------------------------------------------------------------------
+export function omitNilValues(
+  values: Record<string, unknown>,
+): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+  for (const key of Object.keys(values)) {
+    const v = values[key];
+    if (v === null || v === undefined || v === '') continue;
+    if (isPlainObject(v)) {
+      const cleaned = omitNilValues(v);
+      if (Object.keys(cleaned).length > 0) {
+        result[key] = cleaned;
+      }
+    } else {
+      result[key] = v;
+    }
+  }
+  return result;
+}
+
+// ---------------------------------------------------------------------------
+// valueEnumToOptions — convert enum object to { label, value, disabled }[]
+// ---------------------------------------------------------------------------
+export interface ValueEnumOption {
+  label: string;
+  value: string | number;
+  disabled?: boolean;
+}
+
+export function valueEnumToOptions(
+  valueEnum: ProFormValueEnumObj,
+): ValueEnumOption[] {
+  return Object.entries(valueEnum).map(([key, config]) => {
+    if (typeof config === 'string') {
+      return { label: config, value: key };
+    }
+    return { label: config.text, value: key, disabled: config.disabled };
+  });
 }

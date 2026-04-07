@@ -6,3 +6,8 @@ export { ProFormCheckbox } from './ProFormCheckbox';
 export { ProFormCheckboxGroup } from './ProFormCheckboxGroup';
 export { ProFormSwitch } from './ProFormSwitch';
 export { ProFormSelect } from './ProFormSelect';
+export { ProFormRadioGroup } from './ProFormRadioGroup';
+export { ProFormSlider } from './ProFormSlider';
+export { ProFormDatePicker } from './ProFormDatePicker';
+export { ProFormUpload } from './ProFormUpload';
+export { ProFormFieldSet } from './ProFormFieldSet';

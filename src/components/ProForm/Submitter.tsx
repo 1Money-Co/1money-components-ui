@@ -2,12 +2,12 @@ import { memo, useMemo } from 'react';
 import type { FC, ReactElement } from 'react';
 import { useMemoizedFn } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
+import { useFormInstance } from '@/components/Form/context';
 import { Button } from '@/components/Button';
 import { CSS_PREFIX, DEFAULT_TEXT } from './constants';
-import type { SubmitterProps, ProFormFormInstance } from './interface';
+import type { SubmitterProps } from './interface';
 
 export interface SubmitterInternalProps extends SubmitterProps {
-  form?: ProFormFormInstance;
   loading?: boolean;
 }
 
@@ -22,23 +22,25 @@ const SubmitterBase: FC<SubmitterInternalProps> = (props) => {
     onReset,
     submitButtonProps,
     resetButtonProps,
-    form,
     loading = false,
   } = props;
 
+  const form = useFormInstance();
+
   const handleSubmit = useMemoizedFn(() => {
     onSubmit?.();
-    form?.submit();
+    form.submit();
   });
 
   const handleReset = useMemoizedFn(() => {
     onReset?.();
-    form?.resetFields();
+    form.resetFields();
   });
 
   const resetButton = useMemo(
     () => (
       <Button
+        key="reset"
         type="button"
         color="secondary"
         {...resetButtonProps}
@@ -53,6 +55,7 @@ const SubmitterBase: FC<SubmitterInternalProps> = (props) => {
   const submitButton = useMemo(
     () => (
       <Button
+        key="submit"
         type="submit"
         color="primary"
         loading={loading}
