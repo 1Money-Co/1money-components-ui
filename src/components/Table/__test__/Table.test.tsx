@@ -1,8 +1,15 @@
 import '@testing-library/jest-dom';
+import fs from 'fs';
+import path from 'path';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Table from '../Table';
 import { InternalRcTable } from '../internal';
+
+const readTableStylesSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../style/Table.scss'), 'utf8');
+const readTableStoriesSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../Table.stories.tsx'), 'utf8');
 
 describe('Table', () => {
   it('renders the vendored kernel through the local internal barrel', () => {
@@ -154,6 +161,38 @@ describe('Table', () => {
     );
 
     expect(container.querySelector('.om-react-ui-table')).toBeTruthy();
+  });
+
+  it('maps row hover backgrounds to the default secondary token', () => {
+    const stylesSource = readTableStylesSource();
+
+    expect(stylesSource).toContain(
+      "&:hover > td {\n      background: theme.palette(bg, 'default-secondary');",
+    );
+    expect(stylesSource).toContain(
+      "&-tbody > tr:hover &-cell-fix-start,\n  &-tbody > tr:hover &-cell-fix-end {\n    background: theme.palette(bg, 'default-secondary');",
+    );
+    expect(stylesSource).toContain(
+      "&:hover .#{$component}-cell {\n        background: theme.palette(bg, 'default-secondary');",
+    );
+  });
+
+  it('uses border-bottom on cells as row separators without affecting table layout', () => {
+    const stylesSource = readTableStylesSource();
+
+    expect(stylesSource).toContain("border-bottom: 1px solid theme.palette(border, 'neutral');");
+    expect(stylesSource).not.toContain('display: table-cell;');
+    expect(stylesSource).toContain(
+      "&-small {\n    --table-row-height: 56px;\n    --table-header-height: 40px;\n\n    .#{$component}-thead > tr > th,\n    .#{$component}-thead > tr > td {\n      padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);",
+    );
+  });
+
+  it('adds hover treatment to expandable-list detail rows', () => {
+    const stylesSource = readTableStylesSource();
+    const storiesSource = readTableStoriesSource();
+
+    expect(storiesSource).toContain('className="om-react-ui-table-expandable-account-card"');
+    expect(stylesSource).toContain("&:hover > td {\n      background: theme.palette(bg, 'default-secondary');");
   });
 
   it('renders the expand affordance as a plain icon trigger', async () => {

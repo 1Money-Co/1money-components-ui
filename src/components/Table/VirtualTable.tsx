@@ -61,6 +61,7 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
   const renderedColumns = useTableColumns({
     columns,
     size,
+    variant,
     expandable,
     mergedExpandedRowKeys: expand.mergedExpandedRowKeys,
     triggerExpand: expand.triggerExpand,

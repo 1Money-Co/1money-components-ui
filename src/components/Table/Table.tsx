@@ -61,6 +61,7 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
   const renderedColumns = useTableColumns({
     columns,
     size,
+    variant,
     expandable,
     mergedExpandedRowKeys: expand.mergedExpandedRowKeys,
     triggerExpand: expand.triggerExpand,
@@ -80,6 +81,14 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
     ? { current: 1, pageSize: 10 }
     : pipeline.pagination;
 
+  const wrappedExpandedRowRender = useMemoizedFn(
+    (record: T, index: number, indent: number, expanded: boolean) => (
+      <ExpandedRowContainer>
+        {expandable?.expandedRowRender?.(record, index, indent, expanded)}
+      </ExpandedRowContainer>
+    ),
+  );
+
   const mergedExpandable = useMemo(
     () =>
       expandable
@@ -87,16 +96,12 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
             ...expandable,
             expandedRowKeys: expand.mergedExpandedRowKeys,
             expandedRowRender: expandable.expandedRowRender
-              ? (record: T, index: number, indent: number, expanded: boolean) => (
-                  <ExpandedRowContainer>
-                    {expandable.expandedRowRender?.(record, index, indent, expanded)}
-                  </ExpandedRowContainer>
-                )
+              ? wrappedExpandedRowRender
               : undefined,
             showExpandColumn: false,
           } as ExpandableConfig<T>)
         : undefined,
-    [expandable, expand.mergedExpandedRowKeys],
+    [expandable, expand.mergedExpandedRowKeys, wrappedExpandedRowRender],
   );
 
   void bordered;
