@@ -98,6 +98,7 @@ export const AllVariants: Story = {
             variant="cell"
             size="large"
             alignment="left"
+            icon="swift"
             label="Wire transfer"
             description="Receive via SWIFT"
             style={{ width: 320 }}
@@ -291,6 +292,7 @@ export const CellStates: Story = {
         variant="cell"
         size="large"
         alignment="left"
+        icon="swift"
         label="Checked"
         description="Primary selection"
         style={{ width: 300 }}
@@ -300,6 +302,7 @@ export const CellStates: Story = {
         variant="cell"
         size="medium"
         alignment="left"
+        icon="swift"
         label="Medium"
         style={{ width: 180 }}
       />
@@ -308,6 +311,7 @@ export const CellStates: Story = {
         variant="cell"
         size="small"
         alignment="left"
+        icon="swift"
         label="Small"
         style={{ width: 180 }}
       />
@@ -317,6 +321,7 @@ export const CellStates: Story = {
         variant="cell"
         size="large"
         alignment="left"
+        icon="swift"
         label="Disabled checked"
         description="Disabled state"
         style={{ width: 300 }}
@@ -372,6 +377,7 @@ export const CellSizeMatrix: Story = {
             variant="cell"
             size="large"
             alignment="left"
+            icon="swift"
             label="Large"
             description="Description"
             style={{ width: 300 }}
@@ -381,6 +387,7 @@ export const CellSizeMatrix: Story = {
             variant="cell"
             size="medium"
             alignment="left"
+            icon="swift"
             label="Medium"
             style={{ width: 180 }}
           />
@@ -389,6 +396,7 @@ export const CellSizeMatrix: Story = {
             variant="cell"
             size="small"
             alignment="left"
+            icon="swift"
             label="Small"
             style={{ width: 180 }}
           />
@@ -455,6 +463,7 @@ export const GroupCellOptions: Story = {
             value: 'swift',
             label: 'SWIFT',
             description: 'Receive via bank rails',
+            icon: 'swift',
           },
           {
             value: 'global',
@@ -478,6 +487,7 @@ export const GroupCellDirections: Story = {
         value: 'swift',
         label: 'SWIFT',
         description: 'Receive via bank rails',
+        icon: 'swift',
       },
       {
         value: 'global',
@@ -540,6 +550,7 @@ export const GroupCellAlignments: Story = {
         value: 'checked',
         label: 'Label',
         description: 'Description',
+        icon: 'language',
       },
       {
         value: 'unchecked',

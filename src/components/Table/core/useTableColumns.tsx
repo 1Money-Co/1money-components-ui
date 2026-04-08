@@ -102,6 +102,7 @@ function makeSelectionTransform<T>(config: UseTableColumnsConfig<T>): ColumnTran
     {
       key: '__selection__',
       width: rowSelection.columnWidth ?? 48,
+      fixed: rowSelection.fixed ? 'left' : undefined,
       ...(selectionType === 'checkbox'
         ? {
             renderHeader: () => (

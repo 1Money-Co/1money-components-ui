@@ -67,6 +67,7 @@ $button-variants: (
   gap: var(--om-button-gap);
   align-items: center;
   justify-content: center;
+  height: 52px;
   padding: theme.spacing(component-padding, 400);
   color: var(--om-button-text);
   line-height: 1.25;
@@ -90,12 +91,14 @@ $button-variants: (
 
   // ── Sizes ──
   &-medium {
+    height: 40px;
     padding: theme.spacing(component-padding, 300);
     line-height: 1.14;
     border-radius: theme.shape(300);
   }
 
   &-small {
+    height: 32px;
     padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
     line-height: 1.33;
     border-radius: theme.shape(200);
@@ -115,6 +118,7 @@ $button-variants: (
     --om-button-disabled-bg: transparent;
     --om-button-gap: #{theme.spacing(gap, 100)};
 
+    height: auto;
     padding: 0;
     border-radius: 0;
 

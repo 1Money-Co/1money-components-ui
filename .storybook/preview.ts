@@ -23,7 +23,7 @@ export const decorators = [
     attributeName: 'data-mode',
   }),
   (Story, context) => {
-    if (context.viewMode !== 'story' || context.parameters.disableCanvasPadding) {
+    if (context.parameters.disableCanvasPadding) {
       return createElement(Story);
     }
 

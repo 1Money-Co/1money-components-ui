@@ -294,7 +294,7 @@ $component: 'radio';
   &-cell-vertical
     .#{theme.$prefix}-#{$component}-cell-input:checked
     + .#{theme.$prefix}-#{$component}-cell-panel {
-    border-width: 2px;
+      border-width: 1px;
   }
 
   &-cell-input:focus-visible + .#{theme.$prefix}-#{$component}-cell-panel {

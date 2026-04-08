@@ -90,11 +90,3 @@ export const WithAction: Story = {
   },
 };
 
-export const CustomIcon: Story = {
-  args: {
-    variant: 'stroke',
-    icon: <Icons name="bank" size={24} color="#646465" />,
-    title: undefined,
-    description: "You don't have any bank accounts linked",
-  },
-};

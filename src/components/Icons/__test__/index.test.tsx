@@ -1,8 +1,9 @@
 import 'jsdom-global/register';
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Icons, IconWrapper } from '../index';
+import { Illustrations as IllustrationsStory } from '../Icons.stories';
 
 const originalConsoleError = console.error;
 console.error = (message, ...optionalParams) => {
@@ -59,5 +60,51 @@ describe('Icons', () => {
       '#9FA3A3',
       '#131313',
     ]);
+  });
+
+  it('renders illustrations on a 74px canvas', () => {
+    const { container } = render(
+      <>
+        <Icons name='illusChecked' />
+        <Icons name='illusEmailError' />
+        <Icons name='illusAddAccount' />
+      </>
+    );
+
+    expect(Array.from(container.querySelectorAll('svg')).map(svg => svg.getAttribute('viewBox'))).toEqual([
+      '0 0 74 74',
+      '0 0 74 74',
+      '0 0 74 74',
+    ]);
+  });
+
+  it('uses figma default border color for illustrations', () => {
+    const { container } = render(
+      <>
+        <Icons name='illusChecked' />
+        <Icons name='illusEmailError' />
+        <Icons name='illusAddAccount' />
+      </>
+    );
+
+    expect(container.innerHTML).toContain('#131313');
+    expect(container.innerHTML).not.toContain('#1D1D1F');
+  });
+
+  it('renders pending illustration with the figma transfer direction', () => {
+    const { container } = render(<Icons name='illusPending' />);
+
+    expect(container.innerHTML).toContain('translate(74 0) scale(-1 1)');
+  });
+
+  it('shows pending illustration with warning color in the story', () => {
+    const renderStory = IllustrationsStory.render as any;
+    render(renderStory(IllustrationsStory.args as any, {}));
+
+    const pendingLabel = screen.getByText('illusPending');
+    const pendingCard = pendingLabel.parentElement;
+
+    expect(pendingCard?.innerHTML).toContain('#F4C600');
+    expect(pendingCard?.innerHTML).not.toContain('#AE0000');
   });
 });

@@ -44,6 +44,11 @@ const VirtualTableInner = <T extends Record<string, any> = Record<string, any>>(
     onRow,
     rowClassName,
     summary,
+    showHeader,
+    tableLayout,
+    components,
+    direction,
+    rowHoverable,
     ...rest
   } = props;
 
@@ -139,6 +144,11 @@ const VirtualTableInner = <T extends Record<string, any> = Record<string, any>>(
         onRow={onRow}
         rowClassName={rowClassName}
         summary={summary}
+        showHeader={showHeader}
+        tableLayout={tableLayout}
+        components={components}
+        direction={direction}
+        rowHoverable={rowHoverable}
       />
       {pagination !== false ? (
         <div className={`${prefixCls}-pagination`}>
