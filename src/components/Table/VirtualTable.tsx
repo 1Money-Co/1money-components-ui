@@ -19,7 +19,7 @@ import { TableEmptyState } from './renderers/EmptyState';
 import type { TableRef, VirtualTableProps } from './interface';
 import type { ColumnsType as InternalColumnsType, ExpandableConfig, Reference } from './internal/kernel/interface';
 
-const VirtualTableInner = <T extends Record<string, unknown> = Record<string, unknown>>(
+const VirtualTableInner = <T extends Record<string, any> = Record<string, any>>(
   props: VirtualTableProps<T>,
   ref: Ref<TableRef>,
 ) => {
@@ -41,6 +41,9 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
     childrenColumnName,
     indentSize,
     expandable,
+    onRow,
+    rowClassName,
+    summary,
     ...rest
   } = props;
 
@@ -53,6 +56,7 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
   const pipeline = useTableDataPipeline({ columns, dataSource, pagination, onChange });
   const selection = useTableSelection({
     rowSelection,
+    dataSource,
     currentDataSource: pipeline.currentDataSource,
     getRowKey,
   });
@@ -81,6 +85,11 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
     ? { current: 1, pageSize: 10 }
     : pipeline.pagination;
 
+  const kernelOnExpand = useMemoizedFn((expanded: boolean, record: T) => {
+    const recordKey = getRowKey(record, dataSource.indexOf(record));
+    expand.onKernelExpand(expanded, record, recordKey);
+  });
+
   const mergedExpandable = useMemo(
     () =>
       expandable
@@ -95,9 +104,10 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
                 )
               : undefined,
             showExpandColumn: false,
+            onExpand: kernelOnExpand,
           } as ExpandableConfig<T>)
         : undefined,
-    [expandable, expand.mergedExpandedRowKeys],
+    [expandable, expand.mergedExpandedRowKeys, kernelOnExpand],
   );
 
   void bordered;
@@ -126,6 +136,9 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
         childrenColumnName={childrenColumnName}
         indentSize={indentSize}
         expandable={mergedExpandable}
+        onRow={onRow}
+        rowClassName={rowClassName}
+        summary={summary}
       />
       {pagination !== false ? (
         <div className={`${prefixCls}-pagination`}>
@@ -147,7 +160,7 @@ const VirtualTableInner = <T extends Record<string, unknown> = Record<string, un
   );
 };
 
-type ForwardGenericVirtualTable = (<T extends Record<string, unknown> = Record<string, unknown>>(
+type ForwardGenericVirtualTable = (<T extends Record<string, any> = Record<string, any>>(
   props: VirtualTableProps<T> & { ref?: Ref<TableRef> },
 ) => ReactElement | null) & { displayName?: string };
 

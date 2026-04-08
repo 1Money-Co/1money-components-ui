@@ -54,7 +54,7 @@ describe('Table', () => {
 
     await user.click(screen.getByRole('checkbox', { name: 'Select row' }));
 
-    expect(onChange).toHaveBeenCalledWith(['1'], [{ id: '1', name: 'Alice' }]);
+    expect(onChange).toHaveBeenCalledWith(['1'], [{ id: '1', name: 'Alice' }], { type: 'single' });
   });
 
   it('renders expanded content through expandable.expandedRowRender', async () => {
@@ -428,6 +428,7 @@ describe('Table', () => {
         expect.objectContaining({ id: '1' }),
         expect.objectContaining({ id: '3' }),
       ]),
+      { type: 'all' },
     );
   });
 
@@ -553,6 +554,7 @@ describe('Table', () => {
     expect(onChange).toHaveBeenLastCalledWith(
       ['1', '3'],
       expect.anything(),
+      { type: 'all' },
     );
   });
 
@@ -613,9 +615,9 @@ describe('Table', () => {
 
     const radios = screen.getAllByRole('radio');
     await user.click(radios[0]);
-    expect(onChange).toHaveBeenLastCalledWith(['1'], expect.anything());
+    expect(onChange).toHaveBeenLastCalledWith(['1'], expect.anything(), { type: 'single' });
 
     await user.click(radios[1]);
-    expect(onChange).toHaveBeenLastCalledWith(['2'], expect.anything());
+    expect(onChange).toHaveBeenLastCalledWith(['2'], expect.anything(), { type: 'single' });
   });
 });

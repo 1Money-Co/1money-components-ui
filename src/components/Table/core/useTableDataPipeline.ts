@@ -1,7 +1,23 @@
 import { useMemo } from 'react';
 import { useControlledState, useMemoizedFn } from '@1money/hooks';
 import type { Key } from 'react';
-import type { TableColumn, TableColumnSorterConfig, TablePaginationConfig, TableSortOrder } from '../interface';
+import type { TableAction, TableChangeMeta, TableColumn, TableColumnGroup, TableColumnSorterConfig, TableColumnType, TablePaginationConfig, TableSortOrder } from '../interface';
+
+function isColumnGroup<T>(col: TableColumnType<T>): col is TableColumnGroup<T> {
+  return 'children' in col && Array.isArray((col as TableColumnGroup<T>).children);
+}
+
+function flattenColumns<T>(columns: TableColumnType<T>[]): TableColumn<T>[] {
+  const result: TableColumn<T>[] = [];
+  for (const col of columns) {
+    if (isColumnGroup(col)) {
+      result.push(...flattenColumns(col.children));
+    } else {
+      result.push(col);
+    }
+  }
+  return result;
+}
 
 export interface TableSorterFieldState {
   columnKey: Key;
@@ -19,15 +35,15 @@ export interface TablePipelineState {
 }
 
 export interface ApplyTablePipelineInput<T> extends TablePipelineState {
-  columns: TableColumn<T>[];
+  columns: TableColumnType<T>[];
   dataSource: T[];
 }
 
 export interface UseTableDataPipelineInput<T> {
-  columns: TableColumn<T>[];
+  columns: TableColumnType<T>[];
   dataSource: T[];
   pagination?: false | TablePaginationConfig;
-  onChange?: (meta: { currentDataSource: T[] }) => void;
+  onChange?: (meta: TableChangeMeta<T>) => void;
 }
 
 export interface UseTableDataPipelineResult<T> {
@@ -114,7 +130,8 @@ export const applyTablePipeline = <T,>({
       ? [{ columnKey: sorter.columnKey, order: sorter.order }]
       : [];
 
-  const sorted = applySortToData(dataSource, columns, sorterStates);
+  const leafColumns = flattenColumns(columns);
+  const sorted = applySortToData(dataSource, leafColumns, sorterStates);
 
   if (!pagination) {
     return { currentDataSource: sorted, total: sorted.length };
@@ -129,18 +146,27 @@ export const applyTablePipeline = <T,>({
   };
 };
 
-const getInitialSorter = <T,>(columns: TableColumn<T>[]): TableSorterState => {
-  const activeColumn = columns.find((column) => column.sortOrder !== undefined)
-    ?? columns.find((column) => column.defaultSortOrder !== undefined);
+function collectSorterStates<T>(columns: TableColumnType<T>[]): TableSorterFieldState[] {
+  const leaves = flattenColumns(columns);
+  const states: TableSorterFieldState[] = [];
+  for (const col of leaves) {
+    const order = col.sortOrder ?? col.defaultSortOrder;
+    if (col.key != null && order) {
+      states.push({ columnKey: col.key, order });
+    }
+  }
+  return states;
+}
 
-  return {
-    columnKey: activeColumn?.key,
-    order: activeColumn?.sortOrder ?? activeColumn?.defaultSortOrder ?? null,
-  };
+const getInitialSorter = <T,>(columns: TableColumnType<T>[]): TableSorterState => {
+  const states = collectSorterStates(columns);
+  if (states.length === 0) return {};
+  return { columnKey: states[0].columnKey, order: states[0].order };
 };
 
-const getControlledSorter = <T,>(columns: TableColumn<T>[]): TableSorterState | undefined => {
-  const controlledColumn = columns.find((column) => column.sortOrder !== undefined);
+const getControlledSorter = <T,>(columns: TableColumnType<T>[]): TableSorterState | undefined => {
+  const leaves = flattenColumns(columns);
+  const controlledColumn = leaves.find((column) => column.sortOrder !== undefined);
 
   if (!controlledColumn) {
     return undefined;
@@ -175,13 +201,21 @@ export const useTableDataPipeline = <T,>({
     ? false
     : { current, pageSize };
 
-  const sorterStates: TableSorterFieldState[] = useMemo(
-    () =>
+  const sorterStates: TableSorterFieldState[] = useMemo(() => {
+    // Start with the primary user-toggled sorter
+    const primary: TableSorterFieldState[] =
       sorter.columnKey != null && sorter.order
         ? [{ columnKey: sorter.columnKey, order: sorter.order }]
-        : [],
-    [sorter],
-  );
+        : [];
+
+    // Collect any other columns that have a controlled sortOrder (for multi-sort)
+    const leafColumns = flattenColumns(columns);
+    const additional = leafColumns
+      .filter((col) => col.key != null && col.sortOrder && col.key !== sorter.columnKey)
+      .map((col) => ({ columnKey: col.key!, order: col.sortOrder! as Exclude<TableSortOrder, null> }));
+
+    return [...primary, ...additional];
+  }, [sorter, columns]);
 
   const result = useMemo(
     () => applyTablePipeline({
@@ -199,14 +233,22 @@ export const useTableDataPipeline = <T,>({
       const nextSorter = typeof updater === 'function' ? updater(sorter) : updater;
       setSorter(nextSorter);
 
+      // Reset pagination to page 1 when sorting changes
+      if (mergedPagination !== false) {
+        setCurrent(1);
+      }
+
       if (onChange) {
+        const resetPagination = mergedPagination === false
+          ? false
+          : { current: 1, pageSize };
         const nextResult = applyTablePipeline({
           columns,
           dataSource,
           sorter: nextSorter,
-          pagination: mergedPagination,
+          pagination: resetPagination,
         });
-        onChange({ currentDataSource: nextResult.currentDataSource });
+        onChange({ currentDataSource: nextResult.currentDataSource, action: 'sort' });
       }
     },
   );
@@ -231,7 +273,7 @@ export const useTableDataPipeline = <T,>({
           sorter,
           pagination: nextValue,
         });
-        onChange({ currentDataSource: nextResult.currentDataSource });
+        onChange({ currentDataSource: nextResult.currentDataSource, action: 'paginate' });
       }
     },
   );

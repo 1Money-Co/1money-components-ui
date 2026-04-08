@@ -1,3 +1,4 @@
+import { createElement, type CSSProperties } from 'react';
 import type { Preview } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import ComponentDocsPage from '../src/stories/docs/ComponentDocsPage';
@@ -5,6 +6,12 @@ import './tailwind.css';
 import '../src/stories/docs/storybook-docs.css';
 import 'primeicons/primeicons.css';
 import '../src/styles/index.scss';
+
+const storyCanvasStyle: CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  padding: 24,
+};
 
 export const decorators = [
   withThemeByDataAttribute({
@@ -15,6 +22,13 @@ export const decorators = [
     defaultTheme: 'light',
     attributeName: 'data-mode',
   }),
+  (Story, context) => {
+    if (context.viewMode !== 'story' || context.parameters.disableCanvasPadding) {
+      return createElement(Story);
+    }
+
+    return createElement('div', { style: storyCanvasStyle }, createElement(Story));
+  },
 ];
 
 const preview: Preview = {
@@ -25,6 +39,7 @@ const preview: Preview = {
     },
   },
   parameters: {
+    layout: 'fullscreen',
     backgrounds: {
       options: {
         canvas: {

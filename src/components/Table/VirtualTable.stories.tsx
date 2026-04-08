@@ -24,7 +24,7 @@ const columns = [
   { key: 'wallet', dataIndex: 'wallet', title: 'Wallet', width: 260 },
   { key: 'network', dataIndex: 'network', title: 'Network', width: 180 },
   { key: 'amount', dataIndex: 'amount', title: 'Amount', width: 180 },
-] as const;
+];
 
 const meta: Meta<typeof VirtualTable> = {
   title: 'Components/VirtualTable',
@@ -47,7 +47,7 @@ export const VirtualTableBasic: Story = {};
 export const VirtualTableExpandable: Story = {
   args: {
     expandable: {
-      expandedRowRender: (record: Row) => `Expanded details for ${record.wallet}`,
+      expandedRowRender: (record: Record<string, any>) => `Expanded details for ${record.wallet}`,
     },
   },
 };

@@ -20,7 +20,7 @@ import { TableEmptyState } from './renderers/EmptyState';
 import type { TableProps, TableRef } from './interface';
 import type { ColumnsType as InternalColumnsType, ExpandableConfig, Reference } from './internal/kernel/interface';
 
-const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>(
+const TableInner = <T extends Record<string, any> = Record<string, any>>(
   props: TableProps<T>,
   ref: Ref<TableRef>,
 ) => {
@@ -41,6 +41,9 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
     childrenColumnName,
     indentSize,
     expandable,
+    onRow,
+    rowClassName,
+    summary,
     ...rest
   } = props;
 
@@ -53,6 +56,7 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
   const pipeline = useTableDataPipeline({ columns, dataSource, pagination, onChange });
   const selection = useTableSelection({
     rowSelection,
+    dataSource,
     currentDataSource: pipeline.currentDataSource,
     getRowKey,
   });
@@ -89,6 +93,12 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
     ),
   );
 
+  // Wire kernel's onExpand (triggered by expandRowByClick) to our state
+  const kernelOnExpand = useMemoizedFn((expanded: boolean, record: T) => {
+    const recordKey = getRowKey(record, dataSource.indexOf(record));
+    expand.onKernelExpand(expanded, record, recordKey);
+  });
+
   const mergedExpandable = useMemo(
     () =>
       expandable
@@ -99,9 +109,10 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
               ? wrappedExpandedRowRender
               : undefined,
             showExpandColumn: false,
+            onExpand: kernelOnExpand,
           } as ExpandableConfig<T>)
         : undefined,
-    [expandable, expand.mergedExpandedRowKeys, wrappedExpandedRowRender],
+    [expandable, expand.mergedExpandedRowKeys, wrappedExpandedRowRender, kernelOnExpand],
   );
 
   void bordered;
@@ -125,6 +136,9 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
         childrenColumnName={childrenColumnName}
         indentSize={indentSize}
         expandable={mergedExpandable}
+        onRow={onRow}
+        rowClassName={rowClassName}
+        summary={summary}
       />
       {pagination !== false ? (
         <div className={`${prefixCls}-pagination`}>
@@ -146,7 +160,7 @@ const TableInner = <T extends Record<string, unknown> = Record<string, unknown>>
   );
 };
 
-type ForwardGenericTable = (<T extends Record<string, unknown> = Record<string, unknown>>(
+type ForwardGenericTable = (<T extends Record<string, any> = Record<string, any>>(
   props: TableProps<T> & { ref?: Ref<TableRef> },
 ) => ReactElement | null) & { displayName?: string };
 
