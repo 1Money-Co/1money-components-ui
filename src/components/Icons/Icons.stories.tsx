@@ -661,7 +661,7 @@ export const Illustrations: Story = {
   args: {
     prefixCls: 'icons',
     color: '#AE0000',
-    borderColor: '#1D1D1F',
+    borderColor: '#131313',
     size: 74,
     // @ts-expect-error
     illustrations: true,
@@ -710,7 +710,7 @@ export const Illustrations: Story = {
         <span>illusVerification</span>
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusPending' />")}>
-        <Icons {...args} name='illusPending' />
+        <Icons {...args} name='illusPending' color='#F4C600' />
         <span>illusPending</span>
       </CopyIconBox>
       <CopyIconBox onClick={() => handleCopy("<Icons name='illusPasskey' />")}>

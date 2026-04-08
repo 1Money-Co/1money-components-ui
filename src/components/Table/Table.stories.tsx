@@ -6,7 +6,7 @@ import { Icons } from '@/components/Icons';
 import { Tag } from '@/components/Tag';
 import { TypographyBody, TypographyLabel, TypographyTitle } from '@/components/Typography';
 import { Table, VirtualTable } from './index';
-import type { TableColumn } from './interface';
+import type { TableColumn, TableProps } from './interface';
 import './style';
 
 interface BankAccountRow {
@@ -81,7 +81,8 @@ const hintStyle: CSSProperties = {
 };
 
 const figmaFrameStyle: CSSProperties = {
-  maxWidth: 1088,
+  width: '100%',
+  boxSizing: 'border-box',
 };
 
 const walletCellStyle: CSSProperties = {
@@ -993,7 +994,7 @@ const meta: Meta<typeof Table> = {
   component: Table,
   args: {
     rowKey: 'id',
-    columns: portfolioColumns,
+    columns: portfolioColumns as unknown as TableColumn<Record<string, any>>[],
     dataSource: portfolioRows,
     pagination: false,
     variant: 'stroke',
@@ -1035,7 +1036,7 @@ const WalletRegistryStory = ({
 
   return (
     <div style={figmaFrameStyle}>
-      <Table
+      <Table<WalletRegistryRow>
         rowKey="id"
         size="small"
         variant="stroke"
@@ -1048,7 +1049,7 @@ const WalletRegistryStory = ({
         expandable={{
           showExpandColumn: false,
           expandedRowKeys: expandedKeys,
-          expandedRowRender: (record: WalletRegistryRow) => (
+          expandedRowRender: (record) => (
             <WalletDetailsPanel record={record} />
           ),
         }}
@@ -1089,7 +1090,7 @@ export const FigmaAutoConversionTable: Story = {
 
     return (
       <div style={figmaFrameStyle}>
-        <Table
+        <Table<ActivityLedgerRow>
           rowKey="id"
           size="small"
           variant="stroke"
@@ -1102,8 +1103,8 @@ export const FigmaAutoConversionTable: Story = {
           expandable={{
             showExpandColumn: false,
             expandedRowKeys: expandedKeys,
-            rowExpandable: (record: ActivityLedgerRow) => Boolean(record.details?.length),
-            expandedRowRender: (record: ActivityLedgerRow) => (
+            rowExpandable: (record) => Boolean(record.details?.length),
+            expandedRowRender: (record) => (
               record.details
                 ? <ActivityLedgerDetailsPanel details={record.details} />
                 : null
@@ -1118,7 +1119,7 @@ export const FigmaAutoConversionTable: Story = {
 export const WalletListPanel: Story = {
   render: () => (
     <div style={figmaFrameStyle}>
-      <Table
+      <Table<WalletListRow>
         rowKey="id"
         size="large"
         variant="stroke"
@@ -1146,7 +1147,7 @@ export const SelectionAndSort: Story = {
           Selected rows: {selectedKeys.join(', ')}
         </TypographyBody>
         <Table
-          {...args}
+          {...(args as TableProps<Record<string, any>>)}
           rowSelection={{
             type: 'checkbox',
             selectedRowKeys: selectedKeys,
@@ -1160,7 +1161,7 @@ export const SelectionAndSort: Story = {
 
 export const FixedAndSticky: Story = {
   render: () => (
-    <Table
+    <Table<PortfolioRow>
       rowKey="id"
       pagination={false}
       sticky
@@ -1227,13 +1228,13 @@ export const Variants: Story = {
         <TypographyTitle size="sm" strong style={sectionTitleStyle}>
           Stroke
         </TypographyTitle>
-        <Table {...args} dataSource={portfolioRows.slice(0, 4)} variant="stroke" />
+        <Table {...(args as TableProps<Record<string, any>>)} dataSource={portfolioRows.slice(0, 4)} variant="stroke" />
       </div>
       <div>
         <TypographyTitle size="sm" strong style={sectionTitleStyle}>
           Fill
         </TypographyTitle>
-        <Table {...args} dataSource={portfolioRows.slice(0, 4)} variant="fill" />
+        <Table {...(args as TableProps<Record<string, any>>)} dataSource={portfolioRows.slice(0, 4)} variant="fill" />
       </div>
     </div>
   ),
@@ -1246,13 +1247,13 @@ export const Sizes: Story = {
         <TypographyTitle size="sm" strong style={sectionTitleStyle}>
           Large
         </TypographyTitle>
-        <Table {...args} dataSource={portfolioRows.slice(0, 3)} size="large" />
+        <Table {...(args as TableProps<Record<string, any>>)} dataSource={portfolioRows.slice(0, 3)} size="large" />
       </div>
       <div>
         <TypographyTitle size="sm" strong style={sectionTitleStyle}>
           Small
         </TypographyTitle>
-        <Table {...args} dataSource={portfolioRows.slice(0, 3)} size="small" />
+        <Table {...(args as TableProps<Record<string, any>>)} dataSource={portfolioRows.slice(0, 3)} size="small" />
       </div>
     </div>
   ),
@@ -1276,7 +1277,7 @@ export const VirtualScrolling: Story = {
         <TypographyBody size="sm" color="default-tertiary" style={hintStyle}>
           5,000 rows rendered with the virtualized table kernel.
         </TypographyBody>
-        <VirtualTable
+        <VirtualTable<PortfolioRow>
           rowKey="id"
           columns={virtualColumns}
           dataSource={largeData}

@@ -23,8 +23,21 @@ export const useTableExpand = <T,>({
     expandable?.onExpandedRowsChange?.(nextKeys);
   });
 
+  // Called by the kernel's onExpand (e.g. expandRowByClick) — updates state
+  // and delegates to user callbacks
+  const onKernelExpand = useMemoizedFn((expanded: boolean, record: T, recordKey: Key) => {
+    const nextKeys = expanded
+      ? [...mergedExpandedRowKeys, recordKey]
+      : mergedExpandedRowKeys.filter(key => key !== recordKey);
+
+    setMergedExpandedRowKeys(nextKeys);
+    expandable?.onExpand?.(expanded, record);
+    expandable?.onExpandedRowsChange?.(nextKeys);
+  });
+
   return {
     mergedExpandedRowKeys,
     triggerExpand,
+    onKernelExpand,
   };
 };
