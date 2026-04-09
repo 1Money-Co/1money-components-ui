@@ -290,7 +290,7 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1Money-Co/1money-react-ui"
+    "url": "https://github.com/1Money-Co/1money-components-ui"
   },
   "peerDependencies": {
     "primeicons": ">=7",
