@@ -40,6 +40,7 @@ export interface PaginationPageItem extends PaginationItemBase {
 export interface PaginationControlItem extends PaginationItemBase {
   type: 'previous' | 'next';
   page: number;
+  disabled: boolean;
 }
 
 export interface PaginationEllipsisItem extends PaginationItemBase {

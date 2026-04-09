@@ -43,7 +43,8 @@ export const PAGINATION_CONTROL_ICON = {
 export const PAGINATION_TEXT_COLOR = {
   default: 'default',
   current: 'on-neutral',
-} as const satisfies Record<'current' | 'default', TypographyColor>;
+  disabled: 'disabled',
+} as const satisfies Record<'current' | 'default' | 'disabled', TypographyColor>;
 
 // --- BEM modifiers ---
 export const PAGINATION_SLOT = {
@@ -54,6 +55,7 @@ export const PAGINATION_SLOT = {
   buttonPage: 'button-page',
   buttonControl: 'button-control',
   buttonCurrent: 'button-current',
+  buttonDisabled: 'button-disabled',
   ellipsis: 'ellipsis',
   icon: 'icon',
 } as const;

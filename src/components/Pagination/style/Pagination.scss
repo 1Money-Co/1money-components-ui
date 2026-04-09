@@ -49,6 +49,13 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
       outline: none;
       box-shadow: 0 0 0 2px theme.palette(border, 'brand');
     }
+
+    &:disabled,
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   &-button-page {

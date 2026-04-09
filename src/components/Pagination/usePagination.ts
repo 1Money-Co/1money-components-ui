@@ -98,10 +98,12 @@ const createPageItem = (
 const createControlItem = (
   type: 'previous' | 'next',
   page: number,
+  disabled: boolean,
 ): PaginationControlItem => ({
   key: type,
   type,
   page,
+  disabled,
 });
 
 const createEllipsisItem = (
@@ -155,11 +157,13 @@ const buildPaginationItems = (
   createControlItem(
     PAGINATION_ITEM_TYPE.previous,
     clamp(current - 1, PAGINATION_DEFAULT_CURRENT, totalPages),
+    current <= PAGINATION_DEFAULT_CURRENT,
   ),
   ...buildPageItems(current, totalPages, boundaryCount, middlePageCount),
   createControlItem(
     PAGINATION_ITEM_TYPE.next,
     clamp(current + 1, PAGINATION_DEFAULT_CURRENT, totalPages),
+    current >= totalPages,
   ),
 ];
 

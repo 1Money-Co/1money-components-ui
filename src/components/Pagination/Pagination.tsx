@@ -30,6 +30,10 @@ const getButtonAriaLabel = (item: PaginationPageItem | PaginationControlItem) =>
 };
 
 const getItemTextColor = (item: PaginationPageItem | PaginationControlItem) => {
+  if (item.type !== PAGINATION_ITEM_TYPE.page && item.disabled) {
+    return PAGINATION_TEXT_COLOR.disabled;
+  }
+
   if (item.type === PAGINATION_ITEM_TYPE.page && item.current) {
     return PAGINATION_TEXT_COLOR.current;
   }
@@ -106,6 +110,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
           const isPage = item.type === PAGINATION_ITEM_TYPE.page;
           const isControl = !isPage;
           const isPrevious = item.type === PAGINATION_ITEM_TYPE.previous;
+          const isDisabled = isControl && item.disabled;
           const iconName = isControl
             ? PAGINATION_CONTROL_ICON[item.type as keyof typeof PAGINATION_CONTROL_ICON]
             : undefined;
@@ -119,11 +124,13 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                   joinCls(
                     isPage ? classes(PAGINATION_SLOT.buttonPage) : classes(PAGINATION_SLOT.buttonControl),
                     isPage && item.current && classes(PAGINATION_SLOT.buttonCurrent),
+                    isDisabled && classes(PAGINATION_SLOT.buttonDisabled),
                   ),
                 )}
                 aria-label={getButtonAriaLabel(item)}
                 aria-current={isPage && item.current ? 'page' : undefined}
-                data-page={item.page}
+                disabled={isDisabled || undefined}
+                data-page={isDisabled ? undefined : item.page}
               >
                 {isControl && isPrevious && (
                   <span className={classes(PAGINATION_SLOT.icon)}>
