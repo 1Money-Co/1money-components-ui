@@ -6,14 +6,14 @@ exports[`Spinner renders brand correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-spinner om-react-ui-spinner-brand"
+        class="om-component-ui-spinner om-component-ui-spinner-brand"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons om-react-ui-spinner-logo om-react-ui-spinner-spin"
+            class="om-component-ui-icons om-component-ui-spinner-logo om-component-ui-spinner-spin"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -38,10 +38,10 @@ exports[`Spinner renders brand correctly 1`] = `
           </svg>
         </i>
         <div
-          class="om-react-ui-spinner-content"
+          class="om-component-ui-spinner-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary om-react-ui-spinner-title"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary om-component-ui-spinner-title"
           >
             Loading
           </span>
@@ -51,14 +51,14 @@ exports[`Spinner renders brand correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-spinner om-react-ui-spinner-brand"
+      class="om-component-ui-spinner om-component-ui-spinner-brand"
     >
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
       >
         <svg
-          class="om-react-ui-icons om-react-ui-spinner-logo om-react-ui-spinner-spin"
+          class="om-component-ui-icons om-component-ui-spinner-logo om-component-ui-spinner-spin"
           fill="none"
           height="32"
           preserveAspectRatio="xMidYMid meet"
@@ -83,10 +83,10 @@ exports[`Spinner renders brand correctly 1`] = `
         </svg>
       </i>
       <div
-        class="om-react-ui-spinner-content"
+        class="om-component-ui-spinner-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary om-react-ui-spinner-title"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary om-component-ui-spinner-title"
         >
           Loading
         </span>
@@ -153,14 +153,14 @@ exports[`Spinner renders brand-bg correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-spinner om-react-ui-spinner-brand om-react-ui-spinner-brand-bg"
+        class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
         >
           <svg
-            class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
+            class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
             fill="none"
             height="74"
             preserveAspectRatio="xMidYMid meet"
@@ -215,15 +215,15 @@ exports[`Spinner renders brand-bg correctly 1`] = `
           </svg>
         </i>
         <div
-          class="om-react-ui-spinner-content"
+          class="om-component-ui-spinner-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
           >
             Loading
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary om-react-ui-spinner-body"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary om-component-ui-spinner-body"
           >
             Please wait
           </span>
@@ -233,14 +233,14 @@ exports[`Spinner renders brand-bg correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-spinner om-react-ui-spinner-brand om-react-ui-spinner-brand-bg"
+      class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
     >
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
       >
         <svg
-          class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
+          class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
           fill="none"
           height="74"
           preserveAspectRatio="xMidYMid meet"
@@ -295,15 +295,15 @@ exports[`Spinner renders brand-bg correctly 1`] = `
         </svg>
       </i>
       <div
-        class="om-react-ui-spinner-content"
+        class="om-component-ui-spinner-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+          class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
         >
           Loading
         </div>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary om-react-ui-spinner-body"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary om-component-ui-spinner-body"
         >
           Please wait
         </span>
@@ -370,14 +370,14 @@ exports[`Spinner renders brand-bg without body 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-spinner om-react-ui-spinner-brand om-react-ui-spinner-brand-bg"
+        class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
         >
           <svg
-            class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
+            class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
             fill="none"
             height="74"
             preserveAspectRatio="xMidYMid meet"
@@ -432,10 +432,10 @@ exports[`Spinner renders brand-bg without body 1`] = `
           </svg>
         </i>
         <div
-          class="om-react-ui-spinner-content"
+          class="om-component-ui-spinner-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
           >
             Loading
           </div>
@@ -445,14 +445,14 @@ exports[`Spinner renders brand-bg without body 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-spinner om-react-ui-spinner-brand om-react-ui-spinner-brand-bg"
+      class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
     >
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
       >
         <svg
-          class="om-react-ui-icons om-react-ui-spinner-logo-bg om-react-ui-spinner-spin"
+          class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
           fill="none"
           height="74"
           preserveAspectRatio="xMidYMid meet"
@@ -507,10 +507,10 @@ exports[`Spinner renders brand-bg without body 1`] = `
         </svg>
       </i>
       <div
-        class="om-react-ui-spinner-content"
+        class="om-component-ui-spinner-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+          class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
         >
           Loading
         </div>
@@ -577,16 +577,16 @@ exports[`Spinner renders default type correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-spinner"
+        class="om-component-ui-spinner"
         role="progressbar"
         style="width: 32px; height: 32px;"
       >
         <svg
-          class="om-react-ui-spinner-circle"
+          class="om-component-ui-spinner-circle"
           viewBox="0 0 50 50"
         >
           <circle
-            class="om-react-ui-spinner-path"
+            class="om-component-ui-spinner-path"
             cx="25"
             cy="25"
             fill="none"
@@ -599,16 +599,16 @@ exports[`Spinner renders default type correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-spinner"
+      class="om-component-ui-spinner"
       role="progressbar"
       style="width: 32px; height: 32px;"
     >
       <svg
-        class="om-react-ui-spinner-circle"
+        class="om-component-ui-spinner-circle"
         viewBox="0 0 50 50"
       >
         <circle
-          class="om-react-ui-spinner-path"
+          class="om-component-ui-spinner-path"
           cx="25"
           cy="25"
           fill="none"

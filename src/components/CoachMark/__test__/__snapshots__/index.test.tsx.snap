@@ -7,76 +7,76 @@ exports[`CoachMark renders correctly 1`] = `
     <div>
       <div
         aria-label="Welcome"
-        class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
         role="dialog"
       >
         <svg
           aria-hidden="true"
-          class="om-react-ui-coach-mark-arrow"
+          class="om-component-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            class="om-react-ui-coach-mark-arrow-fill"
+            class="om-component-ui-coach-mark-arrow-fill"
             d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
           />
           <path
-            class="om-react-ui-coach-mark-arrow-stroke"
+            class="om-component-ui-coach-mark-arrow-stroke"
             d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
           />
         </svg>
         <div
-          class="om-react-ui-coach-mark-content"
+          class="om-component-ui-coach-mark-content"
         >
           <div
-            class="om-react-ui-coach-mark-text"
+            class="om-component-ui-coach-mark-text"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
             >
               Welcome
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
             >
               This is the first step
             </span>
           </div>
         </div>
         <div
-          class="om-react-ui-coach-mark-footer"
+          class="om-component-ui-coach-mark-footer"
         >
           <button
             aria-label="Back"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
             disabled=""
             type="button"
           >
             Back
           </button>
           <div
-            class="om-react-ui-carousel"
+            class="om-component-ui-carousel"
           >
             <button
               aria-label="Go to step 1"
-              class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+              class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
               type="button"
             />
             <button
               aria-label="Go to step 2"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
             <button
               aria-label="Go to step 3"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
           </div>
           <button
             aria-label="Next"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
             type="button"
           >
             Next
@@ -84,15 +84,15 @@ exports[`CoachMark renders correctly 1`] = `
         </div>
         <button
           aria-label="Dismiss"
-          class="om-react-ui-coach-mark-dismiss"
+          class="om-component-ui-coach-mark-dismiss"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -116,76 +116,76 @@ exports[`CoachMark renders correctly 1`] = `
   "container": <div>
     <div
       aria-label="Welcome"
-      class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
       role="dialog"
     >
       <svg
         aria-hidden="true"
-        class="om-react-ui-coach-mark-arrow"
+        class="om-component-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          class="om-react-ui-coach-mark-arrow-fill"
+          class="om-component-ui-coach-mark-arrow-fill"
           d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
         />
         <path
-          class="om-react-ui-coach-mark-arrow-stroke"
+          class="om-component-ui-coach-mark-arrow-stroke"
           d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
         />
       </svg>
       <div
-        class="om-react-ui-coach-mark-content"
+        class="om-component-ui-coach-mark-content"
       >
         <div
-          class="om-react-ui-coach-mark-text"
+          class="om-component-ui-coach-mark-text"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
           >
             Welcome
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
           >
             This is the first step
           </span>
         </div>
       </div>
       <div
-        class="om-react-ui-coach-mark-footer"
+        class="om-component-ui-coach-mark-footer"
       >
         <button
           aria-label="Back"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
           disabled=""
           type="button"
         >
           Back
         </button>
         <div
-          class="om-react-ui-carousel"
+          class="om-component-ui-carousel"
         >
           <button
             aria-label="Go to step 1"
-            class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+            class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
             type="button"
           />
           <button
             aria-label="Go to step 2"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
           <button
             aria-label="Go to step 3"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
         </div>
         <button
           aria-label="Next"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
           type="button"
         >
           Next
@@ -193,15 +193,15 @@ exports[`CoachMark renders correctly 1`] = `
       </div>
       <button
         aria-label="Dismiss"
-        class="om-react-ui-coach-mark-dismiss"
+        class="om-component-ui-coach-mark-dismiss"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -282,75 +282,75 @@ exports[`CoachMark renders last step with finish button 1`] = `
     <div>
       <div
         aria-label="Done"
-        class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
         role="dialog"
       >
         <svg
           aria-hidden="true"
-          class="om-react-ui-coach-mark-arrow"
+          class="om-component-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            class="om-react-ui-coach-mark-arrow-fill"
+            class="om-component-ui-coach-mark-arrow-fill"
             d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
           />
           <path
-            class="om-react-ui-coach-mark-arrow-stroke"
+            class="om-component-ui-coach-mark-arrow-stroke"
             d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
           />
         </svg>
         <div
-          class="om-react-ui-coach-mark-content"
+          class="om-component-ui-coach-mark-content"
         >
           <div
-            class="om-react-ui-coach-mark-text"
+            class="om-component-ui-coach-mark-text"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
             >
               Done
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
             >
               All set
             </span>
           </div>
         </div>
         <div
-          class="om-react-ui-coach-mark-footer"
+          class="om-component-ui-coach-mark-footer"
         >
           <button
             aria-label="Back"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
             type="button"
           >
             Back
           </button>
           <div
-            class="om-react-ui-carousel"
+            class="om-component-ui-carousel"
           >
             <button
               aria-label="Go to step 1"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
             <button
               aria-label="Go to step 2"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
             <button
               aria-label="Go to step 3"
-              class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+              class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
               type="button"
             />
           </div>
           <button
             aria-label="Finish"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
             type="button"
           >
             Finish
@@ -358,15 +358,15 @@ exports[`CoachMark renders last step with finish button 1`] = `
         </div>
         <button
           aria-label="Dismiss"
-          class="om-react-ui-coach-mark-dismiss"
+          class="om-component-ui-coach-mark-dismiss"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -390,75 +390,75 @@ exports[`CoachMark renders last step with finish button 1`] = `
   "container": <div>
     <div
       aria-label="Done"
-      class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
       role="dialog"
     >
       <svg
         aria-hidden="true"
-        class="om-react-ui-coach-mark-arrow"
+        class="om-component-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          class="om-react-ui-coach-mark-arrow-fill"
+          class="om-component-ui-coach-mark-arrow-fill"
           d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
         />
         <path
-          class="om-react-ui-coach-mark-arrow-stroke"
+          class="om-component-ui-coach-mark-arrow-stroke"
           d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
         />
       </svg>
       <div
-        class="om-react-ui-coach-mark-content"
+        class="om-component-ui-coach-mark-content"
       >
         <div
-          class="om-react-ui-coach-mark-text"
+          class="om-component-ui-coach-mark-text"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
           >
             Done
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
           >
             All set
           </span>
         </div>
       </div>
       <div
-        class="om-react-ui-coach-mark-footer"
+        class="om-component-ui-coach-mark-footer"
       >
         <button
           aria-label="Back"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
           type="button"
         >
           Back
         </button>
         <div
-          class="om-react-ui-carousel"
+          class="om-component-ui-carousel"
         >
           <button
             aria-label="Go to step 1"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
           <button
             aria-label="Go to step 2"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
           <button
             aria-label="Go to step 3"
-            class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+            class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
             type="button"
           />
         </div>
         <button
           aria-label="Finish"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
           type="button"
         >
           Finish
@@ -466,15 +466,15 @@ exports[`CoachMark renders last step with finish button 1`] = `
       </div>
       <button
         aria-label="Dismiss"
-        class="om-react-ui-coach-mark-dismiss"
+        class="om-component-ui-coach-mark-dismiss"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -555,83 +555,83 @@ exports[`CoachMark renders with icon 1`] = `
     <div>
       <div
         aria-label="Title"
-        class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
         role="dialog"
       >
         <svg
           aria-hidden="true"
-          class="om-react-ui-coach-mark-arrow"
+          class="om-component-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            class="om-react-ui-coach-mark-arrow-fill"
+            class="om-component-ui-coach-mark-arrow-fill"
             d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
           />
           <path
-            class="om-react-ui-coach-mark-arrow-stroke"
+            class="om-component-ui-coach-mark-arrow-stroke"
             d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
           />
         </svg>
         <div
-          class="om-react-ui-coach-mark-content"
+          class="om-component-ui-coach-mark-content"
         >
           <div
-            class="om-react-ui-coach-mark-icon"
+            class="om-component-ui-coach-mark-icon"
           >
             <span>
               Icon
             </span>
           </div>
           <div
-            class="om-react-ui-coach-mark-text"
+            class="om-component-ui-coach-mark-text"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
             >
               Title
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
             >
               Description
             </span>
           </div>
         </div>
         <div
-          class="om-react-ui-coach-mark-footer"
+          class="om-component-ui-coach-mark-footer"
         >
           <button
             aria-label="Back"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
             disabled=""
             type="button"
           >
             Back
           </button>
           <div
-            class="om-react-ui-carousel"
+            class="om-component-ui-carousel"
           >
             <button
               aria-label="Go to step 1"
-              class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+              class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
               type="button"
             />
             <button
               aria-label="Go to step 2"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
             <button
               aria-label="Go to step 3"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
           </div>
           <button
             aria-label="Next"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
             type="button"
           >
             Next
@@ -639,15 +639,15 @@ exports[`CoachMark renders with icon 1`] = `
         </div>
         <button
           aria-label="Dismiss"
-          class="om-react-ui-coach-mark-dismiss"
+          class="om-component-ui-coach-mark-dismiss"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -671,83 +671,83 @@ exports[`CoachMark renders with icon 1`] = `
   "container": <div>
     <div
       aria-label="Title"
-      class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
       role="dialog"
     >
       <svg
         aria-hidden="true"
-        class="om-react-ui-coach-mark-arrow"
+        class="om-component-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          class="om-react-ui-coach-mark-arrow-fill"
+          class="om-component-ui-coach-mark-arrow-fill"
           d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
         />
         <path
-          class="om-react-ui-coach-mark-arrow-stroke"
+          class="om-component-ui-coach-mark-arrow-stroke"
           d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
         />
       </svg>
       <div
-        class="om-react-ui-coach-mark-content"
+        class="om-component-ui-coach-mark-content"
       >
         <div
-          class="om-react-ui-coach-mark-icon"
+          class="om-component-ui-coach-mark-icon"
         >
           <span>
             Icon
           </span>
         </div>
         <div
-          class="om-react-ui-coach-mark-text"
+          class="om-component-ui-coach-mark-text"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
           >
             Title
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
           >
             Description
           </span>
         </div>
       </div>
       <div
-        class="om-react-ui-coach-mark-footer"
+        class="om-component-ui-coach-mark-footer"
       >
         <button
           aria-label="Back"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
           disabled=""
           type="button"
         >
           Back
         </button>
         <div
-          class="om-react-ui-carousel"
+          class="om-component-ui-carousel"
         >
           <button
             aria-label="Go to step 1"
-            class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+            class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
             type="button"
           />
           <button
             aria-label="Go to step 2"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
           <button
             aria-label="Go to step 3"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
         </div>
         <button
           aria-label="Next"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
           type="button"
         >
           Next
@@ -755,15 +755,15 @@ exports[`CoachMark renders with icon 1`] = `
       </div>
       <button
         aria-label="Dismiss"
-        class="om-react-ui-coach-mark-dismiss"
+        class="om-component-ui-coach-mark-dismiss"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -844,71 +844,71 @@ exports[`CoachMark renders without dismiss button 1`] = `
     <div>
       <div
         aria-label="Welcome"
-        class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+        class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
         role="dialog"
       >
         <svg
           aria-hidden="true"
-          class="om-react-ui-coach-mark-arrow"
+          class="om-component-ui-coach-mark-arrow"
           fill="none"
           viewBox="0 0 36 9"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            class="om-react-ui-coach-mark-arrow-fill"
+            class="om-component-ui-coach-mark-arrow-fill"
             d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
           />
           <path
-            class="om-react-ui-coach-mark-arrow-stroke"
+            class="om-component-ui-coach-mark-arrow-stroke"
             d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
           />
         </svg>
         <div
-          class="om-react-ui-coach-mark-content"
+          class="om-component-ui-coach-mark-content"
         >
           <div
-            class="om-react-ui-coach-mark-text"
+            class="om-component-ui-coach-mark-text"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
             >
               Welcome
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
             >
               This is the first step
             </span>
           </div>
         </div>
         <div
-          class="om-react-ui-coach-mark-footer"
+          class="om-component-ui-coach-mark-footer"
         >
           <button
             aria-label="Back"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
             disabled=""
             type="button"
           >
             Back
           </button>
           <div
-            class="om-react-ui-carousel"
+            class="om-component-ui-carousel"
           >
             <button
               aria-label="Go to step 1"
-              class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+              class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
               type="button"
             />
             <button
               aria-label="Go to step 2"
-              class="om-react-ui-carousel-dot"
+              class="om-component-ui-carousel-dot"
               type="button"
             />
           </div>
           <button
             aria-label="Next"
-            class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+            class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
             type="button"
           >
             Next
@@ -920,71 +920,71 @@ exports[`CoachMark renders without dismiss button 1`] = `
   "container": <div>
     <div
       aria-label="Welcome"
-      class="om-react-ui-coach-mark om-react-ui-coach-mark-top"
+      class="om-component-ui-coach-mark om-component-ui-coach-mark-top"
       role="dialog"
     >
       <svg
         aria-hidden="true"
-        class="om-react-ui-coach-mark-arrow"
+        class="om-component-ui-coach-mark-arrow"
         fill="none"
         viewBox="0 0 36 9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          class="om-react-ui-coach-mark-arrow-fill"
+          class="om-component-ui-coach-mark-arrow-fill"
           d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
         />
         <path
-          class="om-react-ui-coach-mark-arrow-stroke"
+          class="om-component-ui-coach-mark-arrow-stroke"
           d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
         />
       </svg>
       <div
-        class="om-react-ui-coach-mark-content"
+        class="om-component-ui-coach-mark-content"
       >
         <div
-          class="om-react-ui-coach-mark-text"
+          class="om-component-ui-coach-mark-text"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-lg om-react-ui-typography-color-default"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-lg om-component-ui-typography-color-default"
           >
             Welcome
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default-secondary"
           >
             This is the first step
           </span>
         </div>
       </div>
       <div
-        class="om-react-ui-coach-mark-footer"
+        class="om-component-ui-coach-mark-footer"
       >
         <button
           aria-label="Back"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-back"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-back"
           disabled=""
           type="button"
         >
           Back
         </button>
         <div
-          class="om-react-ui-carousel"
+          class="om-component-ui-carousel"
         >
           <button
             aria-label="Go to step 1"
-            class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+            class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
             type="button"
           />
           <button
             aria-label="Go to step 2"
-            class="om-react-ui-carousel-dot"
+            class="om-component-ui-carousel-dot"
             type="button"
           />
         </div>
         <button
           aria-label="Next"
-          class="om-react-ui-coach-mark-btn om-react-ui-coach-mark-btn-next"
+          class="om-component-ui-coach-mark-btn om-component-ui-coach-mark-btn-next"
           type="button"
         >
           Next

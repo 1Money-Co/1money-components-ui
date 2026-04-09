@@ -61,6 +61,6 @@ describe('VirtualTable', () => {
       />,
     );
 
-    expect(container.querySelector('.om-react-ui-table-loading-overlay')).toBeTruthy();
+    expect(container.querySelector('.om-component-ui-table-loading-overlay')).toBeTruthy();
   });
 });

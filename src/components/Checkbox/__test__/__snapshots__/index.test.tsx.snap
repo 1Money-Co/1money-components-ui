@@ -2,26 +2,26 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <label
-  class="om-react-ui-checkbox"
+  class="om-component-ui-checkbox"
 >
   <span
-    class="om-react-ui-checkbox-box-wrapper"
+    class="om-component-ui-checkbox-box-wrapper"
   >
     <input
       aria-label="Test"
-      class="om-react-ui-checkbox-input"
+      class="om-component-ui-checkbox-input"
       type="checkbox"
     />
     <span
       aria-hidden="true"
-      class="om-react-ui-checkbox-box"
+      class="om-component-ui-checkbox-box"
     />
   </span>
   <span
-    class="om-react-ui-checkbox-content"
+    class="om-component-ui-checkbox-content"
   >
     <span
-      class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-checkbox-label"
+      class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default om-component-ui-typography-strong om-component-ui-checkbox-label"
     >
       Test
     </span>

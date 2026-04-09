@@ -28,27 +28,27 @@ describe('Progress', () => {
   it('derives not-started when percent is 0 and state is omitted', () => {
     render(<Progress percent={0} />);
 
-    expect(screen.getByTestId('progress-root')).toHaveClass('om-react-ui-progress-state-not-started');
+    expect(screen.getByTestId('progress-root')).toHaveClass('om-component-ui-progress-state-not-started');
     expect(screen.getByText('0%')).toBeInTheDocument();
   });
 
   it('derives success when percent is 100 and state is omitted', () => {
     render(<Progress percent={100} />);
 
-    expect(screen.getByTestId('progress-root')).toHaveClass('om-react-ui-progress-state-success');
+    expect(screen.getByTestId('progress-root')).toHaveClass('om-component-ui-progress-state-success');
     expect(screen.getByText('100%')).toBeInTheDocument();
   });
 
   it('derives default when percent is between 1 and 99 and state is omitted', () => {
     render(<Progress percent={25} />);
 
-    expect(screen.getByTestId('progress-root')).toHaveClass('om-react-ui-progress-state-default');
+    expect(screen.getByTestId('progress-root')).toHaveClass('om-component-ui-progress-state-default');
   });
 
   it('keeps explicit state over derived state', () => {
     render(<Progress percent={100} state="error" feedback="Failed" />);
 
-    expect(screen.getByTestId('progress-root')).toHaveClass('om-react-ui-progress-state-error');
+    expect(screen.getByTestId('progress-root')).toHaveClass('om-component-ui-progress-state-error');
     expect(screen.getByText('Failed')).toBeInTheDocument();
   });
 

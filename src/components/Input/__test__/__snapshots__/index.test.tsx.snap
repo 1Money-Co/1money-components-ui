@@ -6,32 +6,32 @@ exports[`Input renders default input with label and errorMsg 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+        class="om-component-ui-input om-component-ui-input-large om-component-ui-input-default"
       >
         <div
-          class="om-react-ui-input-label-row"
+          class="om-component-ui-input-label-row"
         >
           <label
-            class="om-react-ui-input-label"
+            class="om-component-ui-input-label"
             for="«r0»"
           >
             <span
-              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+              class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
             >
               Amount
             </span>
           </label>
         </div>
         <div
-          class="om-react-ui-input-control-wrapper"
+          class="om-component-ui-input-control-wrapper"
         >
           <div
-            class="om-react-ui-input-control"
+            class="om-component-ui-input-control"
           >
             <input
               aria-invalid="false"
               aria-required="false"
-              class="om-react-ui-input-field"
+              class="om-component-ui-input-field"
               id="«r0»"
               placeholder="Value"
               value=""
@@ -39,11 +39,11 @@ exports[`Input renders default input with label and errorMsg 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-input-error-msg"
+          class="om-component-ui-input-error-msg"
           role="status"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm"
           >
             Feedback
           </span>
@@ -53,32 +53,32 @@ exports[`Input renders default input with label and errorMsg 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+      class="om-component-ui-input om-component-ui-input-large om-component-ui-input-default"
     >
       <div
-        class="om-react-ui-input-label-row"
+        class="om-component-ui-input-label-row"
       >
         <label
-          class="om-react-ui-input-label"
+          class="om-component-ui-input-label"
           for="«r0»"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             Amount
           </span>
         </label>
       </div>
       <div
-        class="om-react-ui-input-control-wrapper"
+        class="om-component-ui-input-control-wrapper"
       >
         <div
-          class="om-react-ui-input-control"
+          class="om-component-ui-input-control"
         >
           <input
             aria-invalid="false"
             aria-required="false"
-            class="om-react-ui-input-field"
+            class="om-component-ui-input-field"
             id="«r0»"
             placeholder="Value"
             value=""
@@ -86,11 +86,11 @@ exports[`Input renders default input with label and errorMsg 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-input-error-msg"
+        class="om-component-ui-input-error-msg"
         role="status"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm"
         >
           Feedback
         </span>
@@ -157,25 +157,25 @@ exports[`Input renders trade input correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-input-trade"
+        class="om-component-ui-input-trade"
       >
         <div
-          class="om-react-ui-input-trade-main"
+          class="om-component-ui-input-trade-main"
         >
           <div
-            class="om-react-ui-input-trade-value-line"
+            class="om-component-ui-input-trade-value-line"
           >
             <span
-              class="om-react-ui-input-trade-symbol"
+              class="om-component-ui-input-trade-symbol"
             >
               $
             </span>
             <div
-              class="om-react-ui-input-trade-input-wrapper"
+              class="om-component-ui-input-trade-input-wrapper"
             >
               <input
                 aria-invalid="false"
-                class="om-react-ui-input-trade-field"
+                class="om-component-ui-input-trade-field"
                 id="«rf»"
                 inputmode="decimal"
                 placeholder="0"
@@ -183,12 +183,12 @@ exports[`Input renders trade input correctly 1`] = `
               />
             </div>
             <span
-              class="om-react-ui-input-trade-unit om-react-ui-input-trade-unit-placeholder"
+              class="om-component-ui-input-trade-unit om-component-ui-input-trade-unit-placeholder"
             >
               USD
             </span>
             <button
-              class="om-react-ui-input-trade-max"
+              class="om-component-ui-input-trade-max"
               type="button"
             >
               Max
@@ -196,19 +196,19 @@ exports[`Input renders trade input correctly 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-input-trade-subline"
+          class="om-component-ui-input-trade-subline"
         >
           <button
             aria-label="swap currency"
-            class="om-react-ui-input-trade-swap"
+            class="om-component-ui-input-trade-swap"
             type="button"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -225,7 +225,7 @@ exports[`Input renders trade input correctly 1`] = `
             </i>
           </button>
           <span
-            class="om-react-ui-input-trade-exchange"
+            class="om-component-ui-input-trade-exchange"
           >
             0 USDT
           </span>
@@ -235,25 +235,25 @@ exports[`Input renders trade input correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-input-trade"
+      class="om-component-ui-input-trade"
     >
       <div
-        class="om-react-ui-input-trade-main"
+        class="om-component-ui-input-trade-main"
       >
         <div
-          class="om-react-ui-input-trade-value-line"
+          class="om-component-ui-input-trade-value-line"
         >
           <span
-            class="om-react-ui-input-trade-symbol"
+            class="om-component-ui-input-trade-symbol"
           >
             $
           </span>
           <div
-            class="om-react-ui-input-trade-input-wrapper"
+            class="om-component-ui-input-trade-input-wrapper"
           >
             <input
               aria-invalid="false"
-              class="om-react-ui-input-trade-field"
+              class="om-component-ui-input-trade-field"
               id="«rf»"
               inputmode="decimal"
               placeholder="0"
@@ -261,12 +261,12 @@ exports[`Input renders trade input correctly 1`] = `
             />
           </div>
           <span
-            class="om-react-ui-input-trade-unit om-react-ui-input-trade-unit-placeholder"
+            class="om-component-ui-input-trade-unit om-component-ui-input-trade-unit-placeholder"
           >
             USD
           </span>
           <button
-            class="om-react-ui-input-trade-max"
+            class="om-component-ui-input-trade-max"
             type="button"
           >
             Max
@@ -274,19 +274,19 @@ exports[`Input renders trade input correctly 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-input-trade-subline"
+        class="om-component-ui-input-trade-subline"
       >
         <button
           aria-label="swap currency"
-          class="om-react-ui-input-trade-swap"
+          class="om-component-ui-input-trade-swap"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -303,7 +303,7 @@ exports[`Input renders trade input correctly 1`] = `
           </i>
         </button>
         <span
-          class="om-react-ui-input-trade-exchange"
+          class="om-component-ui-input-trade-exchange"
         >
           0 USDT
         </span>
@@ -370,16 +370,16 @@ exports[`Input renders with prefix and suffix 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+        class="om-component-ui-input om-component-ui-input-large om-component-ui-input-default"
       >
         <div
-          class="om-react-ui-input-control-wrapper"
+          class="om-component-ui-input-control-wrapper"
         >
           <div
-            class="om-react-ui-input-control"
+            class="om-component-ui-input-control"
           >
             <span
-              class="om-react-ui-input-prefix"
+              class="om-component-ui-input-prefix"
             >
               <span>
                 USD
@@ -388,12 +388,12 @@ exports[`Input renders with prefix and suffix 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="om-react-ui-input-field"
+              class="om-component-ui-input-field"
               id="«r1»"
               value="100"
             />
             <span
-              class="om-react-ui-input-suffix"
+              class="om-component-ui-input-suffix"
             >
               <button
                 type="button"
@@ -408,16 +408,16 @@ exports[`Input renders with prefix and suffix 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-input om-react-ui-input-large om-react-ui-input-default"
+      class="om-component-ui-input om-component-ui-input-large om-component-ui-input-default"
     >
       <div
-        class="om-react-ui-input-control-wrapper"
+        class="om-component-ui-input-control-wrapper"
       >
         <div
-          class="om-react-ui-input-control"
+          class="om-component-ui-input-control"
         >
           <span
-            class="om-react-ui-input-prefix"
+            class="om-component-ui-input-prefix"
           >
             <span>
               USD
@@ -426,12 +426,12 @@ exports[`Input renders with prefix and suffix 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="om-react-ui-input-field"
+            class="om-component-ui-input-field"
             id="«r1»"
             value="100"
           />
           <span
-            class="om-react-ui-input-suffix"
+            class="om-component-ui-input-suffix"
           >
             <button
               type="button"

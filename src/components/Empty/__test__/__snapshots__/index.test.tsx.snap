@@ -6,17 +6,17 @@ exports[`Empty renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-empty om-react-ui-empty-stroke"
+        class="om-component-ui-empty om-component-ui-empty-stroke"
       >
         <div
-          class="om-react-ui-empty-icon"
+          class="om-component-ui-empty-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -35,15 +35,15 @@ exports[`Empty renders correctly 1`] = `
           </i>
         </div>
         <div
-          class="om-react-ui-empty-content"
+          class="om-component-ui-empty-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-neutral-secondary om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-neutral-secondary om-component-ui-typography-strong"
           >
             No record found
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
           >
             Try adjusting your filters
           </span>
@@ -53,17 +53,17 @@ exports[`Empty renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-empty om-react-ui-empty-stroke"
+      class="om-component-ui-empty om-component-ui-empty-stroke"
     >
       <div
-        class="om-react-ui-empty-icon"
+        class="om-component-ui-empty-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -82,15 +82,15 @@ exports[`Empty renders correctly 1`] = `
         </i>
       </div>
       <div
-        class="om-react-ui-empty-content"
+        class="om-component-ui-empty-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-neutral-secondary om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-neutral-secondary om-component-ui-typography-strong"
         >
           No record found
         </div>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
         >
           Try adjusting your filters
         </span>
@@ -157,17 +157,17 @@ exports[`Empty renders fill variant 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-empty om-react-ui-empty-fill"
+        class="om-component-ui-empty om-component-ui-empty-fill"
       >
         <div
-          class="om-react-ui-empty-icon"
+          class="om-component-ui-empty-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -186,10 +186,10 @@ exports[`Empty renders fill variant 1`] = `
           </i>
         </div>
         <div
-          class="om-react-ui-empty-content"
+          class="om-component-ui-empty-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
           >
             No data available
           </span>
@@ -199,17 +199,17 @@ exports[`Empty renders fill variant 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-empty om-react-ui-empty-fill"
+      class="om-component-ui-empty om-component-ui-empty-fill"
     >
       <div
-        class="om-react-ui-empty-icon"
+        class="om-component-ui-empty-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -228,10 +228,10 @@ exports[`Empty renders fill variant 1`] = `
         </i>
       </div>
       <div
-        class="om-react-ui-empty-content"
+        class="om-component-ui-empty-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
         >
           No data available
         </span>
@@ -298,17 +298,17 @@ exports[`Empty renders with action 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-empty om-react-ui-empty-stroke"
+        class="om-component-ui-empty om-component-ui-empty-stroke"
       >
         <div
-          class="om-react-ui-empty-icon"
+          class="om-component-ui-empty-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -327,16 +327,16 @@ exports[`Empty renders with action 1`] = `
           </i>
         </div>
         <div
-          class="om-react-ui-empty-content"
+          class="om-component-ui-empty-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
           >
             You don't have any bank accounts linked
           </span>
         </div>
         <div
-          class="om-react-ui-empty-action"
+          class="om-component-ui-empty-action"
         >
           <button>
             Add new bank account
@@ -347,17 +347,17 @@ exports[`Empty renders with action 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-empty om-react-ui-empty-stroke"
+      class="om-component-ui-empty om-component-ui-empty-stroke"
     >
       <div
-        class="om-react-ui-empty-icon"
+        class="om-component-ui-empty-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -376,16 +376,16 @@ exports[`Empty renders with action 1`] = `
         </i>
       </div>
       <div
-        class="om-react-ui-empty-content"
+        class="om-component-ui-empty-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
         >
           You don't have any bank accounts linked
         </span>
       </div>
       <div
-        class="om-react-ui-empty-action"
+        class="om-component-ui-empty-action"
       >
         <button>
           Add new bank account
@@ -453,20 +453,20 @@ exports[`Empty renders with custom icon element 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-empty om-react-ui-empty-stroke"
+        class="om-component-ui-empty om-component-ui-empty-stroke"
       >
         <div
-          class="om-react-ui-empty-icon"
+          class="om-component-ui-empty-icon"
         >
           <svg
             data-testid="custom-icon"
           />
         </div>
         <div
-          class="om-react-ui-empty-content"
+          class="om-component-ui-empty-content"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
           >
             Custom icon test
           </span>
@@ -476,20 +476,20 @@ exports[`Empty renders with custom icon element 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-empty om-react-ui-empty-stroke"
+      class="om-component-ui-empty om-component-ui-empty-stroke"
     >
       <div
-        class="om-react-ui-empty-icon"
+        class="om-component-ui-empty-icon"
       >
         <svg
           data-testid="custom-icon"
         />
       </div>
       <div
-        class="om-react-ui-empty-content"
+        class="om-component-ui-empty-content"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-neutral-secondary"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-neutral-secondary"
         >
           Custom icon test
         </span>

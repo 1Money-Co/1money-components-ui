@@ -1,7 +1,7 @@
 import type { ButtonProps } from '@/components/Button';
 import type { IconName } from '@/components/Icons';
 
-export const MODAL_NAMESPACE = 'om-react-ui';
+export const MODAL_NAMESPACE = 'om-component-ui';
 export const MODAL_DEFAULT_PREFIX = 'modal';
 
 export const MODAL_SIZE = {

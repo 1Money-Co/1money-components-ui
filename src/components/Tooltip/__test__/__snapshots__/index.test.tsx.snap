@@ -128,34 +128,34 @@ exports[`Tooltip renders in controlled open state 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-component-ui-tooltip react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
         id="test-controlled"
         role="tooltip"
       >
         <div
-          class="om-react-ui-tooltip-body"
+          class="om-component-ui-tooltip-body"
         >
           Controlled
         </div>
         <div
-          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
+          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-component-ui-tooltip-arrow"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-component-ui-tooltip react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
       id="test-controlled"
       role="tooltip"
     >
       <div
-        class="om-react-ui-tooltip-body"
+        class="om-component-ui-tooltip-body"
       >
         Controlled
       </div>
       <div
-        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
+        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-component-ui-tooltip-arrow"
       />
     </div>
   </div>,
@@ -219,44 +219,44 @@ exports[`Tooltip renders in controlled open state with title 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip om-react-ui-tooltip-with-title react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+        class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-component-ui-tooltip om-component-ui-tooltip-with-title react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
         id="test-controlled-title"
         role="tooltip"
       >
         <div
-          class="om-react-ui-tooltip-title"
+          class="om-component-ui-tooltip-title"
         >
           Title
         </div>
         <div
-          class="om-react-ui-tooltip-body"
+          class="om-component-ui-tooltip-body"
         >
           Body text
         </div>
         <div
-          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
+          class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-component-ui-tooltip-arrow"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-react-ui-tooltip om-react-ui-tooltip-with-title react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
+      class="react-tooltip core-styles-module_tooltip__3vRRp styles-module_tooltip__mnnfp styles-module_dark__xNqje om-component-ui-tooltip om-component-ui-tooltip-with-title react-tooltip__place-top core-styles-module_closing__sGnxF react-tooltip__closing"
       id="test-controlled-title"
       role="tooltip"
     >
       <div
-        class="om-react-ui-tooltip-title"
+        class="om-component-ui-tooltip-title"
       >
         Title
       </div>
       <div
-        class="om-react-ui-tooltip-body"
+        class="om-component-ui-tooltip-body"
       >
         Body text
       </div>
       <div
-        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-react-ui-tooltip-arrow"
+        class="react-tooltip-arrow core-styles-module_arrow__cvMwQ styles-module_arrow__K0L3T om-component-ui-tooltip-arrow"
       />
     </div>
   </div>,

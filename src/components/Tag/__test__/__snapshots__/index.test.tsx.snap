@@ -6,10 +6,10 @@ exports[`Tag renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <span
-        class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+        class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
         >
           Test
         </span>
@@ -18,10 +18,10 @@ exports[`Tag renders correctly 1`] = `
   </body>,
   "container": <div>
     <span
-      class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+      class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
     >
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+        class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
       >
         Test
       </span>
@@ -87,25 +87,25 @@ exports[`Tag renders removable 1`] = `
   "baseElement": <body>
     <div>
       <span
-        class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+        class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
         >
           Test
         </span>
         <span
           aria-label="Remove"
-          class="om-react-ui-tag-remove"
+          class="om-component-ui-tag-remove"
           role="button"
           tabindex="0"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="12"
               preserveAspectRatio="xMidYMid meet"
@@ -128,25 +128,25 @@ exports[`Tag renders removable 1`] = `
   </body>,
   "container": <div>
     <span
-      class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+      class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
     >
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+        class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
       >
         Test
       </span>
       <span
         aria-label="Remove"
-        class="om-react-ui-tag-remove"
+        class="om-component-ui-tag-remove"
         role="button"
         tabindex="0"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="12"
             preserveAspectRatio="xMidYMid meet"
@@ -226,17 +226,17 @@ exports[`Tag renders with icon 1`] = `
   "baseElement": <body>
     <div>
       <span
-        class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+        class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
       >
         <span
-          class="om-react-ui-tag-icon"
+          class="om-component-ui-tag-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="12"
               preserveAspectRatio="xMidYMid meet"
@@ -254,7 +254,7 @@ exports[`Tag renders with icon 1`] = `
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
         >
           Test
         </span>
@@ -263,17 +263,17 @@ exports[`Tag renders with icon 1`] = `
   </body>,
   "container": <div>
     <span
-      class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+      class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
     >
       <span
-        class="om-react-ui-tag-icon"
+        class="om-component-ui-tag-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 12px; --icon-height: 12px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="12"
             preserveAspectRatio="xMidYMid meet"
@@ -291,7 +291,7 @@ exports[`Tag renders with icon 1`] = `
         </i>
       </span>
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+        class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
       >
         Test
       </span>

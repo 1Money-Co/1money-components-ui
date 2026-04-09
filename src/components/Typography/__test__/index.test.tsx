@@ -251,7 +251,7 @@ describe('Typography', () => {
     );
 
     const wrapper = screen.getByText('Copiable body text').parentElement;
-    expect(wrapper).toHaveClass('om-react-ui-typography-copyable-wrapper');
+    expect(wrapper).toHaveClass('om-component-ui-typography-copyable-wrapper');
   });
 
   it('renders a Copy component with text override via copyable config', () => {
@@ -262,7 +262,7 @@ describe('Typography', () => {
     );
 
     const wrapper = screen.getByText('Visible body text').parentElement;
-    expect(wrapper).toHaveClass('om-react-ui-typography-copyable-wrapper');
+    expect(wrapper).toHaveClass('om-component-ui-typography-copyable-wrapper');
   });
 
   it('uses a block wrapper when body text is rendered as a paragraph and copyable', () => {
@@ -274,7 +274,7 @@ describe('Typography', () => {
 
     const paragraph = screen.getByText('Paragraph copy');
     expect(paragraph.tagName).toBe('P');
-    expect(paragraph.parentElement).toHaveClass('om-react-ui-typography-copyable-wrapper-block');
+    expect(paragraph.parentElement).toHaveClass('om-component-ui-typography-copyable-wrapper-block');
   });
 
   it('copies the full text when ellipsis and copyable are combined', () => {
@@ -287,7 +287,7 @@ describe('Typography', () => {
 
     expect(screen.getByText('814f0d3a...749f')).toBeInTheDocument();
     const wrapper = screen.getByText('814f0d3a...749f').parentElement;
-    expect(wrapper).toHaveClass('om-react-ui-typography-copyable-wrapper');
+    expect(wrapper).toHaveClass('om-component-ui-typography-copyable-wrapper');
   });
 
   it('keeps disabled link behavior while exposing copyable support', async () => {
@@ -311,6 +311,6 @@ describe('Typography', () => {
     expect(onClick).not.toHaveBeenCalled();
 
     const wrapper = screen.getByText('Disabled copyable link').parentElement;
-    expect(wrapper).toHaveClass('om-react-ui-typography-copyable-wrapper');
+    expect(wrapper).toHaveClass('om-component-ui-typography-copyable-wrapper');
   });
 });

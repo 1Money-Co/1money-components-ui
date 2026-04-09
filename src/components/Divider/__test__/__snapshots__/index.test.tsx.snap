@@ -6,11 +6,11 @@ exports[`Divider renders dashed variant correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-center om-react-ui-divider-dashed"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-center om-component-ui-divider-dashed"
         role="separator"
       >
         <span
-          class="om-react-ui-divider-inner-text"
+          class="om-component-ui-divider-inner-text"
         >
           Dashed
         </span>
@@ -19,11 +19,11 @@ exports[`Divider renders dashed variant correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-center om-react-ui-divider-dashed"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-center om-component-ui-divider-dashed"
       role="separator"
     >
       <span
-        class="om-react-ui-divider-inner-text"
+        class="om-component-ui-divider-inner-text"
       >
         Dashed
       </span>
@@ -89,14 +89,14 @@ exports[`Divider renders dotted variant correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-dotted"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-dotted"
         role="separator"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-dotted"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-dotted"
       role="separator"
     />
   </div>,
@@ -160,14 +160,14 @@ exports[`Divider renders horizontal divider correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal"
+        class="om-component-ui-divider om-component-ui-divider-horizontal"
         role="separator"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal"
+      class="om-component-ui-divider om-component-ui-divider-horizontal"
       role="separator"
     />
   </div>,
@@ -231,11 +231,11 @@ exports[`Divider renders plain style correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-center om-react-ui-divider-plain"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-center om-component-ui-divider-plain"
         role="separator"
       >
         <span
-          class="om-react-ui-divider-inner-text"
+          class="om-component-ui-divider-inner-text"
         >
           Plain
         </span>
@@ -244,11 +244,11 @@ exports[`Divider renders plain style correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-center om-react-ui-divider-plain"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-center om-component-ui-divider-plain"
       role="separator"
     >
       <span
-        class="om-react-ui-divider-inner-text"
+        class="om-component-ui-divider-inner-text"
       >
         Plain
       </span>
@@ -314,14 +314,14 @@ exports[`Divider renders vertical divider correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-vertical"
+        class="om-component-ui-divider om-component-ui-divider-vertical"
         role="separator"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-vertical"
+      class="om-component-ui-divider om-component-ui-divider-vertical"
       role="separator"
     />
   </div>,
@@ -385,11 +385,11 @@ exports[`Divider renders with left orientation correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-left"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-left"
         role="separator"
       >
         <span
-          class="om-react-ui-divider-inner-text"
+          class="om-component-ui-divider-inner-text"
         >
           Left
         </span>
@@ -398,11 +398,11 @@ exports[`Divider renders with left orientation correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-left"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-left"
       role="separator"
     >
       <span
-        class="om-react-ui-divider-inner-text"
+        class="om-component-ui-divider-inner-text"
       >
         Left
       </span>
@@ -468,11 +468,11 @@ exports[`Divider renders with orientationMargin correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-left om-react-ui-divider-no-default-margin"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-left om-component-ui-divider-no-default-margin"
         role="separator"
       >
         <span
-          class="om-react-ui-divider-inner-text"
+          class="om-component-ui-divider-inner-text"
           style="margin-inline-start: 0;"
         >
           Custom Margin
@@ -482,11 +482,11 @@ exports[`Divider renders with orientationMargin correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-left om-react-ui-divider-no-default-margin"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-left om-component-ui-divider-no-default-margin"
       role="separator"
     >
       <span
-        class="om-react-ui-divider-inner-text"
+        class="om-component-ui-divider-inner-text"
         style="margin-inline-start: 0;"
       >
         Custom Margin
@@ -553,11 +553,11 @@ exports[`Divider renders with right orientation correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-right"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-right"
         role="separator"
       >
         <span
-          class="om-react-ui-divider-inner-text"
+          class="om-component-ui-divider-inner-text"
         >
           Right
         </span>
@@ -566,11 +566,11 @@ exports[`Divider renders with right orientation correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-right"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-right"
       role="separator"
     >
       <span
-        class="om-react-ui-divider-inner-text"
+        class="om-component-ui-divider-inner-text"
       >
         Right
       </span>
@@ -636,11 +636,11 @@ exports[`Divider renders with text correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-center"
+        class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-center"
         role="separator"
       >
         <span
-          class="om-react-ui-divider-inner-text"
+          class="om-component-ui-divider-inner-text"
         >
           Section
         </span>
@@ -649,11 +649,11 @@ exports[`Divider renders with text correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-divider om-react-ui-divider-horizontal om-react-ui-divider-with-text om-react-ui-divider-with-text-center"
+      class="om-component-ui-divider om-component-ui-divider-horizontal om-component-ui-divider-with-text om-component-ui-divider-with-text-center"
       role="separator"
     >
       <span
-        class="om-react-ui-divider-inner-text"
+        class="om-component-ui-divider-inner-text"
       >
         Section
       </span>

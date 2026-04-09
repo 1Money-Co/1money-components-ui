@@ -233,10 +233,10 @@ describe('Pagination', () => {
     );
 
     expect(
-      screen.getByRole('button', { name: 'Page 1, current page' }).querySelector('.om-react-ui-typography'),
-    ).toHaveClass('om-react-ui-typography-color-on-neutral');
+      screen.getByRole('button', { name: 'Page 1, current page' }).querySelector('.om-component-ui-typography'),
+    ).toHaveClass('om-component-ui-typography-color-on-neutral');
     expect(
-      screen.getByRole('button', { name: 'Previous page' }).querySelector('.om-react-ui-typography'),
-    ).toHaveClass('om-react-ui-typography-color-disabled');
+      screen.getByRole('button', { name: 'Previous page' }).querySelector('.om-component-ui-typography'),
+    ).toHaveClass('om-component-ui-typography-color-disabled');
   });
 });

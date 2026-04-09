@@ -6,10 +6,10 @@ exports[`Calendar renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-calendar-wrapper"
+        class="om-component-ui-calendar-wrapper"
       >
         <span
-          class="om-react-ui-calendar om-react-ui-calendar-large p-calendar p-component p-inputwrapper"
+          class="om-component-ui-calendar om-component-ui-calendar-large p-calendar p-component p-inputwrapper"
           data-pc-name="calendar"
           data-pc-section="root"
         >
@@ -33,10 +33,10 @@ exports[`Calendar renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-calendar-wrapper"
+      class="om-component-ui-calendar-wrapper"
     >
       <span
-        class="om-react-ui-calendar om-react-ui-calendar-large p-calendar p-component p-inputwrapper"
+        class="om-component-ui-calendar om-component-ui-calendar-large p-calendar p-component p-inputwrapper"
         data-pc-name="calendar"
         data-pc-section="root"
       >
@@ -117,15 +117,15 @@ exports[`Calendar renders with label 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-calendar-wrapper"
+        class="om-component-ui-calendar-wrapper"
       >
         <span
-          class="om-react-ui-calendar-label om-react-ui-calendar-label-required"
+          class="om-component-ui-calendar-label om-component-ui-calendar-label-required"
         >
           Select Date
         </span>
         <span
-          class="om-react-ui-calendar om-react-ui-calendar-large p-calendar p-component p-inputwrapper"
+          class="om-component-ui-calendar om-component-ui-calendar-large p-calendar p-component p-inputwrapper"
           data-pc-name="calendar"
           data-pc-section="root"
         >
@@ -149,15 +149,15 @@ exports[`Calendar renders with label 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-calendar-wrapper"
+      class="om-component-ui-calendar-wrapper"
     >
       <span
-        class="om-react-ui-calendar-label om-react-ui-calendar-label-required"
+        class="om-component-ui-calendar-label om-component-ui-calendar-label-required"
       >
         Select Date
       </span>
       <span
-        class="om-react-ui-calendar om-react-ui-calendar-large p-calendar p-component p-inputwrapper"
+        class="om-component-ui-calendar om-component-ui-calendar-large p-calendar p-component p-inputwrapper"
         data-pc-name="calendar"
         data-pc-section="root"
       >
@@ -238,10 +238,10 @@ exports[`Calendar renders with message 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-calendar-wrapper"
+        class="om-component-ui-calendar-wrapper"
       >
         <span
-          class="om-react-ui-calendar om-react-ui-calendar-large p-calendar p-component p-inputwrapper p-invalid"
+          class="om-component-ui-calendar om-component-ui-calendar-large p-calendar p-component p-inputwrapper p-invalid"
           data-pc-name="calendar"
           data-pc-section="root"
         >
@@ -261,7 +261,7 @@ exports[`Calendar renders with message 1`] = `
           />
         </span>
         <span
-          class="om-react-ui-calendar-message om-react-ui-calendar-message-error"
+          class="om-component-ui-calendar-message om-component-ui-calendar-message-error"
         >
           Please select a date
         </span>
@@ -270,10 +270,10 @@ exports[`Calendar renders with message 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-calendar-wrapper"
+      class="om-component-ui-calendar-wrapper"
     >
       <span
-        class="om-react-ui-calendar om-react-ui-calendar-large p-calendar p-component p-inputwrapper p-invalid"
+        class="om-component-ui-calendar om-component-ui-calendar-large p-calendar p-component p-inputwrapper p-invalid"
         data-pc-name="calendar"
         data-pc-section="root"
       >
@@ -293,7 +293,7 @@ exports[`Calendar renders with message 1`] = `
         />
       </span>
       <span
-        class="om-react-ui-calendar-message om-react-ui-calendar-message-error"
+        class="om-component-ui-calendar-message om-component-ui-calendar-message-error"
       >
         Please select a date
       </span>

@@ -137,8 +137,8 @@ describe('Radio', () => {
 
     const radioRoot = screen.getByText('Centered').closest('label');
 
-    expect(radioRoot).toHaveClass('om-react-ui-radio-cell-vertical');
-    expect(radioRoot).not.toHaveClass('om-react-ui-radio-cell-horizontal');
+    expect(radioRoot).toHaveClass('om-component-ui-radio-cell-vertical');
+    expect(radioRoot).not.toHaveClass('om-component-ui-radio-cell-horizontal');
   });
 
   it('uses alignment="right" for the default radio layout', () => {
@@ -151,7 +151,7 @@ describe('Radio', () => {
 
     const radioRoot = screen.getByText('Aligned right').closest('label');
 
-    expect(radioRoot).toHaveClass('om-react-ui-radio-right');
+    expect(radioRoot).toHaveClass('om-component-ui-radio-right');
   });
 
   it('renders custom icon nodes for unchecked medium cell options', () => {
@@ -275,7 +275,7 @@ describe('RadioGroup', () => {
     );
 
     expect(screen.getByRole('radiogroup')).toHaveClass(
-      'om-react-ui-radio-group-horizontal',
+      'om-component-ui-radio-group-horizontal',
     );
   });
 
@@ -289,8 +289,8 @@ describe('RadioGroup', () => {
 
     const groupRoot = screen.getByRole('radiogroup');
 
-    expect(groupRoot).toHaveClass('om-react-ui-radio-group-horizontal');
-    expect(groupRoot).not.toHaveClass('om-react-ui-radio-group-vertical');
+    expect(groupRoot).toHaveClass('om-component-ui-radio-group-horizontal');
+    expect(groupRoot).not.toHaveClass('om-component-ui-radio-group-vertical');
   });
 
   it('does not emit change events when the group is disabled', () => {
@@ -379,8 +379,8 @@ describe('RadioGroup', () => {
 
     const radioRoot = screen.getByText('Global account').closest('label');
 
-    expect(radioRoot).toHaveClass('om-react-ui-radio-cell-vertical');
-    expect(radioRoot).not.toHaveClass('om-react-ui-radio-cell-horizontal');
+    expect(radioRoot).toHaveClass('om-component-ui-radio-cell-vertical');
+    expect(radioRoot).not.toHaveClass('om-component-ui-radio-cell-horizontal');
   });
 
   it('inherits alignment="right" from the group API for default radios', () => {
@@ -395,7 +395,7 @@ describe('RadioGroup', () => {
 
     const radioRoot = screen.getByText('Global account').closest('label');
 
-    expect(radioRoot).toHaveClass('om-react-ui-radio-right');
+    expect(radioRoot).toHaveClass('om-component-ui-radio-right');
   });
 
   it('ignores alignment="right" for the cell variant and keeps left layout', () => {
@@ -409,7 +409,7 @@ describe('RadioGroup', () => {
 
     const radioRoot = screen.getByText('Cell right falls back').closest('label');
 
-    expect(radioRoot).toHaveClass('om-react-ui-radio-cell-horizontal');
-    expect(radioRoot).not.toHaveClass('om-react-ui-radio-right');
+    expect(radioRoot).toHaveClass('om-component-ui-radio-cell-horizontal');
+    expect(radioRoot).not.toHaveClass('om-component-ui-radio-right');
   });
 });

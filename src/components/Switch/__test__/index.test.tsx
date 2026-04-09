@@ -65,7 +65,7 @@ describe('Switch', () => {
       <Switch label="Label" description="Description" />,
     );
 
-    expect(getByText('Description')).toHaveClass('om-react-ui-typography-color-default-tertiary');
+    expect(getByText('Description')).toHaveClass('om-component-ui-typography-color-default-tertiary');
   });
 
   it('renders with right label placement', () => {
