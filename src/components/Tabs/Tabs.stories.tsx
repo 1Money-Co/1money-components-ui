@@ -74,6 +74,10 @@ export const WithContent: Story = {
   ),
 };
 
+export const FullWidth: Story = {
+  render: () => <Tabs items={DEFAULT_ITEMS} fullWidth />,
+};
+
 export const NoAnimation: Story = {
   render: () => <Tabs items={DEFAULT_ITEMS} animated={false} />,
 };
@@ -107,6 +111,17 @@ export const AllVariants: Story = {
           items={[
             { key: 'tab1', label: 'Label' },
             { key: 'tab2', label: 'Label', disabled: true },
+            { key: 'tab3', label: 'Label' },
+          ]}
+        />
+      </div>
+      <div>
+        <h3 style={{ marginBottom: 12 }}>Full Width</h3>
+        <Tabs
+          fullWidth
+          items={[
+            { key: 'tab1', label: 'Label' },
+            { key: 'tab2', label: 'Label' },
             { key: 'tab3', label: 'Label' },
           ]}
         />
