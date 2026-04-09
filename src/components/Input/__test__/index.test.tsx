@@ -127,7 +127,7 @@ describe('Input', () => {
 
     const input = getByRole('textbox');
     expect(input).toHaveAttribute('id', 'email-input');
-    expect(input.closest('.om-react-ui-input')?.querySelector('label')).toHaveAttribute('for', 'email-input');
+    expect(input.closest('.om-component-ui-input')?.querySelector('label')).toHaveAttribute('for', 'email-input');
   });
 
   it('renders errorMsg with role=alert on error', () => {

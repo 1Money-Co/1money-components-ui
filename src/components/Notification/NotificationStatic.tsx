@@ -40,7 +40,7 @@ type LegacyReactDOMModule = typeof import('react-dom') & {
   unmountComponentAtNode?: (container: Element | DocumentFragment) => boolean;
 };
 
-const NOTIFICATION_ROOT_ID = 'om-react-ui-notification-root';
+const NOTIFICATION_ROOT_ID = 'om-component-ui-notification-root';
 const DEFAULT_NOTIFICATION_PLACEMENT: NotificationPlacement = 'topRight';
 const DEFAULT_NOTIFICATION_DURATION = 4.5;
 const DEFAULT_NOTIFICATION_MAX_COUNT = Number.POSITIVE_INFINITY;

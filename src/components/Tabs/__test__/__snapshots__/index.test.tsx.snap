@@ -6,53 +6,53 @@ exports[`Tabs renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-tabs"
+        class="om-component-ui-tabs"
       >
         <div
-          class="om-react-ui-tabs-header"
+          class="om-component-ui-tabs-header"
           role="tablist"
         >
           <button
             aria-selected="true"
-            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+            class="om-component-ui-tabs-tab om-component-ui-tabs-tab-active"
             role="tab"
             tabindex="0"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 1
             </span>
           </button>
           <button
             aria-selected="false"
-            class="om-react-ui-tabs-tab"
+            class="om-component-ui-tabs-tab"
             role="tab"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 2
             </span>
           </button>
           <button
             aria-selected="false"
-            class="om-react-ui-tabs-tab"
+            class="om-component-ui-tabs-tab"
             role="tab"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 3
             </span>
           </button>
           <span
-            class="om-react-ui-tabs-indicator"
+            class="om-component-ui-tabs-indicator"
             style="width: 0px; transform: translateX(0px);"
           />
         </div>
@@ -61,53 +61,53 @@ exports[`Tabs renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-tabs"
+      class="om-component-ui-tabs"
     >
       <div
-        class="om-react-ui-tabs-header"
+        class="om-component-ui-tabs-header"
         role="tablist"
       >
         <button
           aria-selected="true"
-          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+          class="om-component-ui-tabs-tab om-component-ui-tabs-tab-active"
           role="tab"
           tabindex="0"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 1
           </span>
         </button>
         <button
           aria-selected="false"
-          class="om-react-ui-tabs-tab"
+          class="om-component-ui-tabs-tab"
           role="tab"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 2
           </span>
         </button>
         <button
           aria-selected="false"
-          class="om-react-ui-tabs-tab"
+          class="om-component-ui-tabs-tab"
           role="tab"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 3
           </span>
         </button>
         <span
-          class="om-react-ui-tabs-indicator"
+          class="om-component-ui-tabs-indicator"
           style="width: 0px; transform: translateX(0px);"
         />
       </div>
@@ -173,50 +173,50 @@ exports[`Tabs renders with badges 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-tabs"
+        class="om-component-ui-tabs"
       >
         <div
-          class="om-react-ui-tabs-header"
+          class="om-component-ui-tabs-header"
           role="tablist"
         >
           <button
             aria-selected="true"
-            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+            class="om-component-ui-tabs-tab om-component-ui-tabs-tab-active"
             role="tab"
             tabindex="0"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 1
             </span>
             <span
-              class="om-react-ui-tabs-tab-badge"
+              class="om-component-ui-tabs-tab-badge"
             >
               5
             </span>
           </button>
           <button
             aria-selected="false"
-            class="om-react-ui-tabs-tab"
+            class="om-component-ui-tabs-tab"
             role="tab"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 2
             </span>
             <span
-              class="om-react-ui-tabs-tab-badge"
+              class="om-component-ui-tabs-tab-badge"
             >
               10
             </span>
           </button>
           <span
-            class="om-react-ui-tabs-indicator"
+            class="om-component-ui-tabs-indicator"
             style="width: 0px; transform: translateX(0px);"
           />
         </div>
@@ -225,50 +225,50 @@ exports[`Tabs renders with badges 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-tabs"
+      class="om-component-ui-tabs"
     >
       <div
-        class="om-react-ui-tabs-header"
+        class="om-component-ui-tabs-header"
         role="tablist"
       >
         <button
           aria-selected="true"
-          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+          class="om-component-ui-tabs-tab om-component-ui-tabs-tab-active"
           role="tab"
           tabindex="0"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 1
           </span>
           <span
-            class="om-react-ui-tabs-tab-badge"
+            class="om-component-ui-tabs-tab-badge"
           >
             5
           </span>
         </button>
         <button
           aria-selected="false"
-          class="om-react-ui-tabs-tab"
+          class="om-component-ui-tabs-tab"
           role="tab"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 2
           </span>
           <span
-            class="om-react-ui-tabs-tab-badge"
+            class="om-component-ui-tabs-tab-badge"
           >
             10
           </span>
         </button>
         <span
-          class="om-react-ui-tabs-indicator"
+          class="om-component-ui-tabs-indicator"
           style="width: 0px; transform: translateX(0px);"
         />
       </div>
@@ -334,21 +334,21 @@ exports[`Tabs renders with disabled tab 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-tabs"
+        class="om-component-ui-tabs"
       >
         <div
-          class="om-react-ui-tabs-header"
+          class="om-component-ui-tabs-header"
           role="tablist"
         >
           <button
             aria-selected="true"
-            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+            class="om-component-ui-tabs-tab om-component-ui-tabs-tab-active"
             role="tab"
             tabindex="0"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 1
             </span>
@@ -356,19 +356,19 @@ exports[`Tabs renders with disabled tab 1`] = `
           <button
             aria-disabled="true"
             aria-selected="false"
-            class="om-react-ui-tabs-tab om-react-ui-tabs-tab-disabled"
+            class="om-component-ui-tabs-tab om-component-ui-tabs-tab-disabled"
             role="tab"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-tabs-tab-label"
+              class="om-component-ui-tabs-tab-label"
             >
               Tab 2
             </span>
           </button>
           <span
-            class="om-react-ui-tabs-indicator"
+            class="om-component-ui-tabs-indicator"
             style="width: 0px; transform: translateX(0px);"
           />
         </div>
@@ -377,21 +377,21 @@ exports[`Tabs renders with disabled tab 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-tabs"
+      class="om-component-ui-tabs"
     >
       <div
-        class="om-react-ui-tabs-header"
+        class="om-component-ui-tabs-header"
         role="tablist"
       >
         <button
           aria-selected="true"
-          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-active"
+          class="om-component-ui-tabs-tab om-component-ui-tabs-tab-active"
           role="tab"
           tabindex="0"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 1
           </span>
@@ -399,19 +399,19 @@ exports[`Tabs renders with disabled tab 1`] = `
         <button
           aria-disabled="true"
           aria-selected="false"
-          class="om-react-ui-tabs-tab om-react-ui-tabs-tab-disabled"
+          class="om-component-ui-tabs-tab om-component-ui-tabs-tab-disabled"
           role="tab"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-tabs-tab-label"
+            class="om-component-ui-tabs-tab-label"
           >
             Tab 2
           </span>
         </button>
         <span
-          class="om-react-ui-tabs-indicator"
+          class="om-component-ui-tabs-indicator"
           style="width: 0px; transform: translateX(0px);"
         />
       </div>

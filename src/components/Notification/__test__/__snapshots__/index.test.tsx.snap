@@ -6,23 +6,23 @@ exports[`Notification renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-notification om-react-ui-notification-info"
+        class="om-component-ui-notification om-component-ui-notification-info"
       >
         <div
-          class="om-react-ui-notification-content-wrapper"
+          class="om-component-ui-notification-content-wrapper"
         >
           <div
-            class="om-react-ui-notification-icon-wrapper"
+            class="om-component-ui-notification-icon-wrapper"
           >
             <span
-              class="om-react-ui-notification-icon"
+              class="om-component-ui-notification-icon"
             >
               <i
-                class="om-react-ui-icons-wrapper"
+                class="om-component-ui-icons-wrapper"
                 style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
               >
                 <svg
-                  class="om-react-ui-icons"
+                  class="om-component-ui-icons"
                   fill="none"
                   height="32"
                   preserveAspectRatio="xMidYMid meet"
@@ -73,15 +73,15 @@ exports[`Notification renders correctly 1`] = `
             </span>
           </div>
           <div
-            class="om-react-ui-notification-content"
+            class="om-component-ui-notification-content"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-secondary om-react-ui-typography-strong om-react-ui-notification-title"
+              class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default-secondary om-component-ui-typography-strong om-component-ui-notification-title"
             >
               Test title
             </div>
             <div
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary om-react-ui-notification-body"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary om-component-ui-notification-body"
             >
               Test body
             </div>
@@ -89,15 +89,15 @@ exports[`Notification renders correctly 1`] = `
         </div>
         <button
           aria-label="Close notification"
-          class="om-react-ui-notification-close"
+          class="om-component-ui-notification-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -120,23 +120,23 @@ exports[`Notification renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-notification om-react-ui-notification-info"
+      class="om-component-ui-notification om-component-ui-notification-info"
     >
       <div
-        class="om-react-ui-notification-content-wrapper"
+        class="om-component-ui-notification-content-wrapper"
       >
         <div
-          class="om-react-ui-notification-icon-wrapper"
+          class="om-component-ui-notification-icon-wrapper"
         >
           <span
-            class="om-react-ui-notification-icon"
+            class="om-component-ui-notification-icon"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="32"
                 preserveAspectRatio="xMidYMid meet"
@@ -187,15 +187,15 @@ exports[`Notification renders correctly 1`] = `
           </span>
         </div>
         <div
-          class="om-react-ui-notification-content"
+          class="om-component-ui-notification-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default-secondary om-react-ui-typography-strong om-react-ui-notification-title"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default-secondary om-component-ui-typography-strong om-component-ui-notification-title"
           >
             Test title
           </div>
           <div
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary om-react-ui-notification-body"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary om-component-ui-notification-body"
           >
             Test body
           </div>
@@ -203,15 +203,15 @@ exports[`Notification renders correctly 1`] = `
       </div>
       <button
         aria-label="Close notification"
-        class="om-react-ui-notification-close"
+        class="om-component-ui-notification-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="currentColor"
             height="16"
             preserveAspectRatio="xMidYMid meet"

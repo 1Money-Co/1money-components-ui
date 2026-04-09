@@ -620,7 +620,7 @@ const WalletDetailsPanel = ({ record }: { record: WalletRegistryRow }) => (
             return (
               <div
                 key={account.id}
-                className="om-react-ui-table-expandable-account-card"
+                className="om-component-ui-table-expandable-account-card"
                 style={accountCardStyle}
               >
                 <div style={walletCellStyle}>

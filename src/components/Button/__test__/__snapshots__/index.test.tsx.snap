@@ -3,7 +3,7 @@
 exports[`Button renders a native button and forwards refs 1`] = `
 <button
   aria-label="Save draft"
-  class="om-react-ui-button om-react-ui-button-secondary om-react-ui-button-small om-react-ui-button-rounded om-react-ui-button-disabled om-react-ui-button-loading"
+  class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-small om-component-ui-button-rounded om-component-ui-button-disabled om-component-ui-button-loading"
   data-testid="button"
   disabled=""
   name="save"
@@ -11,19 +11,19 @@ exports[`Button renders a native button and forwards refs 1`] = `
   value="draft"
 >
   <span
-    class="om-react-ui-button-icon-start"
+    class="om-component-ui-button-icon-start"
   >
     <div
-      class="om-react-ui-spinner om-react-ui-button-loading-icon om-react-ui-button-loading-icon-small"
+      class="om-component-ui-spinner om-component-ui-button-loading-icon om-component-ui-button-loading-icon-small"
       role="progressbar"
       style="width: 14px; height: 14px;"
     >
       <svg
-        class="om-react-ui-spinner-circle"
+        class="om-component-ui-spinner-circle"
         viewBox="0 0 50 50"
       >
         <circle
-          class="om-react-ui-spinner-path"
+          class="om-component-ui-spinner-path"
           cx="25"
           cy="25"
           fill="none"
@@ -34,7 +34,7 @@ exports[`Button renders a native button and forwards refs 1`] = `
     </div>
   </span>
   <span
-    class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+    class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
   >
     Save
   </span>

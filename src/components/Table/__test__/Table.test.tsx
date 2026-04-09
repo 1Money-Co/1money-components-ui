@@ -115,12 +115,12 @@ describe('Table', () => {
     );
 
     const title = screen.getByText('Name');
-    const headerCell = title.closest('.om-react-ui-table-header-cell');
+    const headerCell = title.closest('.om-component-ui-table-header-cell');
     const sortButton = screen.getByRole('button', { name: /sort name/i });
     const sortIcon = sortButton.querySelector('svg');
 
-    expect(headerCell).toHaveClass('om-react-ui-table-header-cell--small');
-    expect(sortButton).toHaveClass('om-react-ui-table-sort-trigger--small');
+    expect(headerCell).toHaveClass('om-component-ui-table-header-cell--small');
+    expect(sortButton).toHaveClass('om-component-ui-table-sort-trigger--small');
     expect(sortIcon).toHaveAttribute('width', '12');
     expect(sortIcon).toHaveAttribute('height', '12');
   });
@@ -160,7 +160,7 @@ describe('Table', () => {
       />,
     );
 
-    expect(container.querySelector('.om-react-ui-table')).toBeTruthy();
+    expect(container.querySelector('.om-component-ui-table')).toBeTruthy();
   });
 
   it('maps row hover backgrounds to the default secondary token', () => {
@@ -191,7 +191,7 @@ describe('Table', () => {
     const stylesSource = readTableStylesSource();
     const storiesSource = readTableStoriesSource();
 
-    expect(storiesSource).toContain('className="om-react-ui-table-expandable-account-card"');
+    expect(storiesSource).toContain('className="om-component-ui-table-expandable-account-card"');
     expect(stylesSource).toContain("&:hover > td {\n      background: theme.palette(bg, 'default-secondary');");
   });
 
@@ -210,7 +210,7 @@ describe('Table', () => {
     const expandButton = screen.getByRole('button', { name: /expand row/i });
     const expandIcon = expandButton.querySelector('i');
 
-    expect(expandButton).toHaveClass('om-react-ui-table-expand-trigger');
+    expect(expandButton).toHaveClass('om-component-ui-table-expand-trigger');
     expect(expandButton).toHaveAttribute('aria-expanded', 'false');
     expect(expandButton).not.toHaveAttribute('class', expect.stringContaining('--'));
     expect(expandIcon).not.toHaveStyle('transform: rotate(180deg)');
@@ -287,8 +287,8 @@ describe('Table', () => {
       />,
     );
 
-    expect(container.querySelector('.om-react-ui-table-small')).toBeTruthy();
-    expect(container.querySelector('.om-react-ui-table-stroke')).toBeTruthy();
+    expect(container.querySelector('.om-component-ui-table-small')).toBeTruthy();
+    expect(container.querySelector('.om-component-ui-table-stroke')).toBeTruthy();
   });
 
   // ========================= Loading =========================
@@ -303,8 +303,8 @@ describe('Table', () => {
       />,
     );
 
-    expect(container.querySelector('.om-react-ui-table-wrapper--loading')).toBeTruthy();
-    expect(container.querySelector('.om-react-ui-table-loading-overlay')).toBeTruthy();
+    expect(container.querySelector('.om-component-ui-table-wrapper--loading')).toBeTruthy();
+    expect(container.querySelector('.om-component-ui-table-loading-overlay')).toBeTruthy();
   });
 
   it('hides empty state when loading with empty data', () => {
@@ -330,7 +330,7 @@ describe('Table', () => {
       />,
     );
 
-    expect(container.querySelector('.om-react-ui-table-loading-overlay')).toBeFalsy();
+    expect(container.querySelector('.om-component-ui-table-loading-overlay')).toBeFalsy();
   });
 
   // ========================= Pagination =========================

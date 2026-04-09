@@ -1,6 +1,6 @@
 {
   "name": "@1money/component-ui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "React Components based on primereact for 1money front-end projects",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -290,7 +290,7 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1Money-Co/1money-react-ui"
+    "url": "https://github.com/1Money-Co/1money-components-ui"
   },
   "peerDependencies": {
     "primeicons": ">=7",

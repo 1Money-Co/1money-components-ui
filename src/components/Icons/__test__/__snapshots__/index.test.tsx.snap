@@ -6,11 +6,11 @@ exports[`Icons renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
-          class="om-react-ui-icons"
+          class="om-component-ui-icons"
           fill="none"
           height="24"
           preserveAspectRatio="xMidYMid meet"
@@ -35,11 +35,11 @@ exports[`Icons renders correctly 1`] = `
     </div>
     <div>
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
-          class="om-react-ui-icons"
+          class="om-component-ui-icons"
           fill="none"
           height="24"
           preserveAspectRatio="xMidYMid meet"
@@ -54,11 +54,11 @@ exports[`Icons renders correctly 1`] = `
   </body>,
   "container": <div>
     <i
-      class="om-react-ui-icons-wrapper"
+      class="om-component-ui-icons-wrapper"
       style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
     >
       <svg
-        class="om-react-ui-icons"
+        class="om-component-ui-icons"
         fill="none"
         height="24"
         preserveAspectRatio="xMidYMid meet"
@@ -141,11 +141,11 @@ exports[`Icons renders correctly 2`] = `
   "baseElement": <body>
     <div>
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
-          class="om-react-ui-icons"
+          class="om-component-ui-icons"
           fill="none"
           height="24"
           preserveAspectRatio="xMidYMid meet"
@@ -170,11 +170,11 @@ exports[`Icons renders correctly 2`] = `
     </div>
     <div>
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
       >
         <svg
-          class="om-react-ui-icons"
+          class="om-component-ui-icons"
           fill="none"
           height="24"
           preserveAspectRatio="xMidYMid meet"
@@ -189,11 +189,11 @@ exports[`Icons renders correctly 2`] = `
   </body>,
   "container": <div>
     <i
-      class="om-react-ui-icons-wrapper"
+      class="om-component-ui-icons-wrapper"
       style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
     >
       <svg
-        class="om-react-ui-icons"
+        class="om-component-ui-icons"
         fill="none"
         height="24"
         preserveAspectRatio="xMidYMid meet"

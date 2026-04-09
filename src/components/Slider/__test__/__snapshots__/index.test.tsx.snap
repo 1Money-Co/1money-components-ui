@@ -6,28 +6,28 @@ exports[`Slider renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-slider"
+        class="om-component-ui-slider"
       >
         <div
-          class="om-react-ui-slider-label-row"
+          class="om-component-ui-slider-label-row"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-label"
           >
             Price
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-slider-output"
           >
             $0-100
           </span>
         </div>
         <div
-          class="om-react-ui-slider-track-wrapper"
+          class="om-component-ui-slider-track-wrapper"
         >
           <input
             aria-label="Price"
-            class="om-react-ui-slider-input"
+            class="om-component-ui-slider-input"
             max="100"
             min="0"
             step="1"
@@ -35,20 +35,20 @@ exports[`Slider renders correctly 1`] = `
             value="0"
           />
           <div
-            class="om-react-ui-slider-track"
+            class="om-component-ui-slider-track"
           >
             <div
-              class="om-react-ui-slider-fill"
+              class="om-component-ui-slider-fill"
               style="width: 0%;"
             />
           </div>
           <div
-            class="om-react-ui-slider-knob"
+            class="om-component-ui-slider-knob"
             style="left: 0%;"
           />
         </div>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-description"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-description"
         >
           Set your price
         </span>
@@ -57,28 +57,28 @@ exports[`Slider renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-slider"
+      class="om-component-ui-slider"
     >
       <div
-        class="om-react-ui-slider-label-row"
+        class="om-component-ui-slider-label-row"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-label"
         >
           Price
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-slider-output"
         >
           $0-100
         </span>
       </div>
       <div
-        class="om-react-ui-slider-track-wrapper"
+        class="om-component-ui-slider-track-wrapper"
       >
         <input
           aria-label="Price"
-          class="om-react-ui-slider-input"
+          class="om-component-ui-slider-input"
           max="100"
           min="0"
           step="1"
@@ -86,20 +86,20 @@ exports[`Slider renders correctly 1`] = `
           value="0"
         />
         <div
-          class="om-react-ui-slider-track"
+          class="om-component-ui-slider-track"
         >
           <div
-            class="om-react-ui-slider-fill"
+            class="om-component-ui-slider-fill"
             style="width: 0%;"
           />
         </div>
         <div
-          class="om-react-ui-slider-knob"
+          class="om-component-ui-slider-knob"
           style="left: 0%;"
         />
       </div>
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-description"
+        class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-description"
       >
         Set your price
       </span>
@@ -165,28 +165,28 @@ exports[`Slider renders disabled state 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-slider om-react-ui-slider-disabled"
+        class="om-component-ui-slider om-component-ui-slider-disabled"
       >
         <div
-          class="om-react-ui-slider-label-row"
+          class="om-component-ui-slider-label-row"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-label"
           >
             Price
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-slider-output"
           >
             $0-100
           </span>
         </div>
         <div
-          class="om-react-ui-slider-track-wrapper"
+          class="om-component-ui-slider-track-wrapper"
         >
           <input
             aria-label="Price"
-            class="om-react-ui-slider-input"
+            class="om-component-ui-slider-input"
             disabled=""
             max="100"
             min="0"
@@ -195,19 +195,19 @@ exports[`Slider renders disabled state 1`] = `
             value="0"
           />
           <div
-            class="om-react-ui-slider-track"
+            class="om-component-ui-slider-track"
           >
             <div
-              class="om-react-ui-slider-fill"
+              class="om-component-ui-slider-fill"
               style="width: 0%;"
             />
           </div>
           <div
-            class="om-react-ui-slider-knob"
+            class="om-component-ui-slider-knob"
             style="left: 0%;"
           />
           <div
-            class="om-react-ui-slider-knob-end"
+            class="om-component-ui-slider-knob-end"
           />
         </div>
       </div>
@@ -215,28 +215,28 @@ exports[`Slider renders disabled state 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-slider om-react-ui-slider-disabled"
+      class="om-component-ui-slider om-component-ui-slider-disabled"
     >
       <div
-        class="om-react-ui-slider-label-row"
+        class="om-component-ui-slider-label-row"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-label"
         >
           Price
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-slider-output"
         >
           $0-100
         </span>
       </div>
       <div
-        class="om-react-ui-slider-track-wrapper"
+        class="om-component-ui-slider-track-wrapper"
       >
         <input
           aria-label="Price"
-          class="om-react-ui-slider-input"
+          class="om-component-ui-slider-input"
           disabled=""
           max="100"
           min="0"
@@ -245,19 +245,19 @@ exports[`Slider renders disabled state 1`] = `
           value="0"
         />
         <div
-          class="om-react-ui-slider-track"
+          class="om-component-ui-slider-track"
         >
           <div
-            class="om-react-ui-slider-fill"
+            class="om-component-ui-slider-fill"
             style="width: 0%;"
           />
         </div>
         <div
-          class="om-react-ui-slider-knob"
+          class="om-component-ui-slider-knob"
           style="left: 0%;"
         />
         <div
-          class="om-react-ui-slider-knob-end"
+          class="om-component-ui-slider-knob-end"
         />
       </div>
     </div>
@@ -322,28 +322,28 @@ exports[`Slider renders with a value 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-slider"
+        class="om-component-ui-slider"
       >
         <div
-          class="om-react-ui-slider-label-row"
+          class="om-component-ui-slider-label-row"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-label"
           >
             Price
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-slider-output"
           >
             $40
           </span>
         </div>
         <div
-          class="om-react-ui-slider-track-wrapper"
+          class="om-component-ui-slider-track-wrapper"
         >
           <input
             aria-label="Price"
-            class="om-react-ui-slider-input"
+            class="om-component-ui-slider-input"
             max="100"
             min="0"
             step="1"
@@ -351,15 +351,15 @@ exports[`Slider renders with a value 1`] = `
             value="40"
           />
           <div
-            class="om-react-ui-slider-track"
+            class="om-component-ui-slider-track"
           >
             <div
-              class="om-react-ui-slider-fill"
+              class="om-component-ui-slider-fill"
               style="width: 40%;"
             />
           </div>
           <div
-            class="om-react-ui-slider-knob"
+            class="om-component-ui-slider-knob"
             style="left: 40%;"
           />
         </div>
@@ -368,28 +368,28 @@ exports[`Slider renders with a value 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-slider"
+      class="om-component-ui-slider"
     >
       <div
-        class="om-react-ui-slider-label-row"
+        class="om-component-ui-slider-label-row"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-slider-label"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-slider-label"
         >
           Price
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-slider-output"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-slider-output"
         >
           $40
         </span>
       </div>
       <div
-        class="om-react-ui-slider-track-wrapper"
+        class="om-component-ui-slider-track-wrapper"
       >
         <input
           aria-label="Price"
-          class="om-react-ui-slider-input"
+          class="om-component-ui-slider-input"
           max="100"
           min="0"
           step="1"
@@ -397,15 +397,15 @@ exports[`Slider renders with a value 1`] = `
           value="40"
         />
         <div
-          class="om-react-ui-slider-track"
+          class="om-component-ui-slider-track"
         >
           <div
-            class="om-react-ui-slider-fill"
+            class="om-component-ui-slider-fill"
             style="width: 40%;"
           />
         </div>
         <div
-          class="om-react-ui-slider-knob"
+          class="om-component-ui-slider-knob"
           style="left: 40%;"
         />
       </div>

@@ -11,7 +11,7 @@ exports[`Popconfirm renders correctly 1`] = `
     Toggle
   </button>
   <div
-    class="om-trigger-panel om-react-ui-popconfirm-overlay"
+    class="om-trigger-panel om-component-ui-popconfirm-overlay"
     data-floating-ui-focusable=""
     data-placement="top"
     data-side="top"
@@ -21,7 +21,7 @@ exports[`Popconfirm renders correctly 1`] = `
     tabindex="-1"
   >
     <div
-      class="om-react-ui-popconfirm"
+      class="om-component-ui-popconfirm"
     >
       <svg
         aria-hidden="true"
@@ -40,17 +40,17 @@ exports[`Popconfirm renders correctly 1`] = `
         />
       </svg>
       <div
-        class="om-react-ui-popconfirm-header"
+        class="om-component-ui-popconfirm-header"
       >
         <span
-          class="om-react-ui-popconfirm-icon"
+          class="om-component-ui-popconfirm-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -100,39 +100,39 @@ exports[`Popconfirm renders correctly 1`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-popconfirm-content"
+          class="om-component-ui-popconfirm-content"
         >
           <div
-            class="om-react-ui-popconfirm-title"
+            class="om-component-ui-popconfirm-title"
           >
             Delete transfer rule?
           </div>
           <div
-            class="om-react-ui-popconfirm-body"
+            class="om-component-ui-popconfirm-body"
           >
             This action removes the rule immediately and cannot be undone.
           </div>
         </div>
       </div>
       <div
-        class="om-react-ui-popconfirm-actions"
+        class="om-component-ui-popconfirm-actions"
       >
         <button
-          class="om-react-ui-button om-react-ui-button-secondary om-react-ui-button-small"
+          class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-small"
           type="button"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
           >
             Cancel
           </span>
         </button>
         <button
-          class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-small"
+          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-small"
           type="button"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
           >
             Confirm
           </span>

@@ -6,30 +6,30 @@ exports[`Nav renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="om-react-ui-nav"
+        class="om-component-ui-nav"
       >
         <div
-          class="om-react-ui-nav-content"
+          class="om-component-ui-nav-content"
         >
           <div>
             <div
-              class="om-react-ui-nav-group"
+              class="om-component-ui-nav-group"
             >
               <div
-                class="om-react-ui-nav-group-header"
+                class="om-component-ui-nav-group-header"
               >
                 <div
-                  class="om-react-ui-nav-group-header-content"
+                  class="om-component-ui-nav-group-header-content"
                 >
                   <span
-                    class="om-react-ui-nav-group-header-icon"
+                    class="om-component-ui-nav-group-header-icon"
                   >
                     <i
-                      class="om-react-ui-icons-wrapper"
+                      class="om-component-ui-icons-wrapper"
                       style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                     >
                       <svg
-                        class="om-react-ui-icons"
+                        class="om-component-ui-icons"
                         fill="none"
                         height="20"
                         preserveAspectRatio="xMidYMid meet"
@@ -51,26 +51,26 @@ exports[`Nav renders correctly 1`] = `
                     </i>
                   </span>
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong om-react-ui-nav-group-header-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong om-component-ui-nav-group-header-label"
                   >
                     GROUP ONE
                   </div>
                 </div>
               </div>
               <div
-                class="om-react-ui-nav-item-wrapper"
+                class="om-component-ui-nav-item-wrapper"
               >
                 <button
-                  class="om-react-ui-nav-item"
+                  class="om-component-ui-nav-item"
                   data-depth="1"
                   style="--om-nav-indent: 1;"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-nav-item-content"
+                    class="om-component-ui-nav-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                     >
                       Item 1
                     </div>
@@ -78,32 +78,32 @@ exports[`Nav renders correctly 1`] = `
                 </button>
               </div>
               <div
-                class="om-react-ui-nav-item-wrapper"
+                class="om-component-ui-nav-item-wrapper"
               >
                 <button
-                  class="om-react-ui-nav-item om-react-ui-nav-item-expandable"
+                  class="om-component-ui-nav-item om-component-ui-nav-item-expandable"
                   data-depth="1"
                   style="--om-nav-indent: 1;"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-nav-item-content"
+                    class="om-component-ui-nav-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                     >
                       Item 2
                     </div>
                   </div>
                   <span
-                    class="om-react-ui-nav-item-arrow om-react-ui-nav-item-arrow-open"
+                    class="om-component-ui-nav-item-arrow om-component-ui-nav-item-arrow-open"
                   >
                     <i
-                      class="om-react-ui-icons-wrapper"
+                      class="om-component-ui-icons-wrapper"
                       style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                     >
                       <svg
-                        class="om-react-ui-icons"
+                        class="om-component-ui-icons"
                         fill="none"
                         height="20"
                         preserveAspectRatio="xMidYMid meet"
@@ -123,25 +123,25 @@ exports[`Nav renders correctly 1`] = `
                   </span>
                 </button>
                 <div
-                  class="om-react-ui-nav-submenu om-react-ui-nav-submenu-open"
+                  class="om-component-ui-nav-submenu om-component-ui-nav-submenu-open"
                 >
                   <div
-                    class="om-react-ui-nav-submenu-inner"
+                    class="om-component-ui-nav-submenu-inner"
                   >
                     <div
-                      class="om-react-ui-nav-item-wrapper"
+                      class="om-component-ui-nav-item-wrapper"
                     >
                       <button
-                        class="om-react-ui-nav-item"
+                        class="om-component-ui-nav-item"
                         data-depth="2"
                         style="--om-nav-indent: 2;"
                         type="button"
                       >
                         <div
-                          class="om-react-ui-nav-item-content"
+                          class="om-component-ui-nav-item-content"
                         >
                           <div
-                            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                           >
                             Sub Item 1
                           </div>
@@ -149,19 +149,19 @@ exports[`Nav renders correctly 1`] = `
                       </button>
                     </div>
                     <div
-                      class="om-react-ui-nav-item-wrapper"
+                      class="om-component-ui-nav-item-wrapper"
                     >
                       <button
-                        class="om-react-ui-nav-item"
+                        class="om-component-ui-nav-item"
                         data-depth="2"
                         style="--om-nav-indent: 2;"
                         type="button"
                       >
                         <div
-                          class="om-react-ui-nav-item-content"
+                          class="om-component-ui-nav-item-content"
                         >
                           <div
-                            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                           >
                             Sub Item 2
                           </div>
@@ -179,30 +179,30 @@ exports[`Nav renders correctly 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="om-react-ui-nav"
+      class="om-component-ui-nav"
     >
       <div
-        class="om-react-ui-nav-content"
+        class="om-component-ui-nav-content"
       >
         <div>
           <div
-            class="om-react-ui-nav-group"
+            class="om-component-ui-nav-group"
           >
             <div
-              class="om-react-ui-nav-group-header"
+              class="om-component-ui-nav-group-header"
             >
               <div
-                class="om-react-ui-nav-group-header-content"
+                class="om-component-ui-nav-group-header-content"
               >
                 <span
-                  class="om-react-ui-nav-group-header-icon"
+                  class="om-component-ui-nav-group-header-icon"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="20"
                       preserveAspectRatio="xMidYMid meet"
@@ -224,26 +224,26 @@ exports[`Nav renders correctly 1`] = `
                   </i>
                 </span>
                 <div
-                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong om-react-ui-nav-group-header-label"
+                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong om-component-ui-nav-group-header-label"
                 >
                   GROUP ONE
                 </div>
               </div>
             </div>
             <div
-              class="om-react-ui-nav-item-wrapper"
+              class="om-component-ui-nav-item-wrapper"
             >
               <button
-                class="om-react-ui-nav-item"
+                class="om-component-ui-nav-item"
                 data-depth="1"
                 style="--om-nav-indent: 1;"
                 type="button"
               >
                 <div
-                  class="om-react-ui-nav-item-content"
+                  class="om-component-ui-nav-item-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                   >
                     Item 1
                   </div>
@@ -251,32 +251,32 @@ exports[`Nav renders correctly 1`] = `
               </button>
             </div>
             <div
-              class="om-react-ui-nav-item-wrapper"
+              class="om-component-ui-nav-item-wrapper"
             >
               <button
-                class="om-react-ui-nav-item om-react-ui-nav-item-expandable"
+                class="om-component-ui-nav-item om-component-ui-nav-item-expandable"
                 data-depth="1"
                 style="--om-nav-indent: 1;"
                 type="button"
               >
                 <div
-                  class="om-react-ui-nav-item-content"
+                  class="om-component-ui-nav-item-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                   >
                     Item 2
                   </div>
                 </div>
                 <span
-                  class="om-react-ui-nav-item-arrow om-react-ui-nav-item-arrow-open"
+                  class="om-component-ui-nav-item-arrow om-component-ui-nav-item-arrow-open"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="20"
                       preserveAspectRatio="xMidYMid meet"
@@ -296,25 +296,25 @@ exports[`Nav renders correctly 1`] = `
                 </span>
               </button>
               <div
-                class="om-react-ui-nav-submenu om-react-ui-nav-submenu-open"
+                class="om-component-ui-nav-submenu om-component-ui-nav-submenu-open"
               >
                 <div
-                  class="om-react-ui-nav-submenu-inner"
+                  class="om-component-ui-nav-submenu-inner"
                 >
                   <div
-                    class="om-react-ui-nav-item-wrapper"
+                    class="om-component-ui-nav-item-wrapper"
                   >
                     <button
-                      class="om-react-ui-nav-item"
+                      class="om-component-ui-nav-item"
                       data-depth="2"
                       style="--om-nav-indent: 2;"
                       type="button"
                     >
                       <div
-                        class="om-react-ui-nav-item-content"
+                        class="om-component-ui-nav-item-content"
                       >
                         <div
-                          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                         >
                           Sub Item 1
                         </div>
@@ -322,19 +322,19 @@ exports[`Nav renders correctly 1`] = `
                     </button>
                   </div>
                   <div
-                    class="om-react-ui-nav-item-wrapper"
+                    class="om-component-ui-nav-item-wrapper"
                   >
                     <button
-                      class="om-react-ui-nav-item"
+                      class="om-component-ui-nav-item"
                       data-depth="2"
                       style="--om-nav-indent: 2;"
                       type="button"
                     >
                       <div
-                        class="om-react-ui-nav-item-content"
+                        class="om-component-ui-nav-item-content"
                       >
                         <div
-                          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                         >
                           Sub Item 2
                         </div>
@@ -409,55 +409,55 @@ exports[`Nav renders deep nesting 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="om-react-ui-nav"
+        class="om-component-ui-nav"
       >
         <div
-          class="om-react-ui-nav-content"
+          class="om-component-ui-nav-content"
         >
           <div>
             <div
-              class="om-react-ui-nav-group"
+              class="om-component-ui-nav-group"
             >
               <div
-                class="om-react-ui-nav-group-header"
+                class="om-component-ui-nav-group-header"
               >
                 <div
-                  class="om-react-ui-nav-group-header-content"
+                  class="om-component-ui-nav-group-header-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong om-react-ui-nav-group-header-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong om-component-ui-nav-group-header-label"
                   >
                     GROUP
                   </div>
                 </div>
               </div>
               <div
-                class="om-react-ui-nav-item-wrapper"
+                class="om-component-ui-nav-item-wrapper"
               >
                 <button
-                  class="om-react-ui-nav-item om-react-ui-nav-item-expandable"
+                  class="om-component-ui-nav-item om-component-ui-nav-item-expandable"
                   data-depth="1"
                   style="--om-nav-indent: 1;"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-nav-item-content"
+                    class="om-component-ui-nav-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                     >
                       Level 1
                     </div>
                   </div>
                   <span
-                    class="om-react-ui-nav-item-arrow om-react-ui-nav-item-arrow-open"
+                    class="om-component-ui-nav-item-arrow om-component-ui-nav-item-arrow-open"
                   >
                     <i
-                      class="om-react-ui-icons-wrapper"
+                      class="om-component-ui-icons-wrapper"
                       style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                     >
                       <svg
-                        class="om-react-ui-icons"
+                        class="om-component-ui-icons"
                         fill="none"
                         height="20"
                         preserveAspectRatio="xMidYMid meet"
@@ -477,38 +477,38 @@ exports[`Nav renders deep nesting 1`] = `
                   </span>
                 </button>
                 <div
-                  class="om-react-ui-nav-submenu om-react-ui-nav-submenu-open"
+                  class="om-component-ui-nav-submenu om-component-ui-nav-submenu-open"
                 >
                   <div
-                    class="om-react-ui-nav-submenu-inner"
+                    class="om-component-ui-nav-submenu-inner"
                   >
                     <div
-                      class="om-react-ui-nav-item-wrapper"
+                      class="om-component-ui-nav-item-wrapper"
                     >
                       <button
-                        class="om-react-ui-nav-item om-react-ui-nav-item-expandable"
+                        class="om-component-ui-nav-item om-component-ui-nav-item-expandable"
                         data-depth="2"
                         style="--om-nav-indent: 2;"
                         type="button"
                       >
                         <div
-                          class="om-react-ui-nav-item-content"
+                          class="om-component-ui-nav-item-content"
                         >
                           <div
-                            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                           >
                             Level 2
                           </div>
                         </div>
                         <span
-                          class="om-react-ui-nav-item-arrow om-react-ui-nav-item-arrow-open"
+                          class="om-component-ui-nav-item-arrow om-component-ui-nav-item-arrow-open"
                         >
                           <i
-                            class="om-react-ui-icons-wrapper"
+                            class="om-component-ui-icons-wrapper"
                             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                           >
                             <svg
-                              class="om-react-ui-icons"
+                              class="om-component-ui-icons"
                               fill="none"
                               height="20"
                               preserveAspectRatio="xMidYMid meet"
@@ -528,25 +528,25 @@ exports[`Nav renders deep nesting 1`] = `
                         </span>
                       </button>
                       <div
-                        class="om-react-ui-nav-submenu om-react-ui-nav-submenu-open"
+                        class="om-component-ui-nav-submenu om-component-ui-nav-submenu-open"
                       >
                         <div
-                          class="om-react-ui-nav-submenu-inner"
+                          class="om-component-ui-nav-submenu-inner"
                         >
                           <div
-                            class="om-react-ui-nav-item-wrapper"
+                            class="om-component-ui-nav-item-wrapper"
                           >
                             <button
-                              class="om-react-ui-nav-item"
+                              class="om-component-ui-nav-item"
                               data-depth="3"
                               style="--om-nav-indent: 3;"
                               type="button"
                             >
                               <div
-                                class="om-react-ui-nav-item-content"
+                                class="om-component-ui-nav-item-content"
                               >
                                 <div
-                                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                                 >
                                   Level 3
                                 </div>
@@ -567,55 +567,55 @@ exports[`Nav renders deep nesting 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="om-react-ui-nav"
+      class="om-component-ui-nav"
     >
       <div
-        class="om-react-ui-nav-content"
+        class="om-component-ui-nav-content"
       >
         <div>
           <div
-            class="om-react-ui-nav-group"
+            class="om-component-ui-nav-group"
           >
             <div
-              class="om-react-ui-nav-group-header"
+              class="om-component-ui-nav-group-header"
             >
               <div
-                class="om-react-ui-nav-group-header-content"
+                class="om-component-ui-nav-group-header-content"
               >
                 <div
-                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong om-react-ui-nav-group-header-label"
+                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong om-component-ui-nav-group-header-label"
                 >
                   GROUP
                 </div>
               </div>
             </div>
             <div
-              class="om-react-ui-nav-item-wrapper"
+              class="om-component-ui-nav-item-wrapper"
             >
               <button
-                class="om-react-ui-nav-item om-react-ui-nav-item-expandable"
+                class="om-component-ui-nav-item om-component-ui-nav-item-expandable"
                 data-depth="1"
                 style="--om-nav-indent: 1;"
                 type="button"
               >
                 <div
-                  class="om-react-ui-nav-item-content"
+                  class="om-component-ui-nav-item-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                   >
                     Level 1
                   </div>
                 </div>
                 <span
-                  class="om-react-ui-nav-item-arrow om-react-ui-nav-item-arrow-open"
+                  class="om-component-ui-nav-item-arrow om-component-ui-nav-item-arrow-open"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="20"
                       preserveAspectRatio="xMidYMid meet"
@@ -635,38 +635,38 @@ exports[`Nav renders deep nesting 1`] = `
                 </span>
               </button>
               <div
-                class="om-react-ui-nav-submenu om-react-ui-nav-submenu-open"
+                class="om-component-ui-nav-submenu om-component-ui-nav-submenu-open"
               >
                 <div
-                  class="om-react-ui-nav-submenu-inner"
+                  class="om-component-ui-nav-submenu-inner"
                 >
                   <div
-                    class="om-react-ui-nav-item-wrapper"
+                    class="om-component-ui-nav-item-wrapper"
                   >
                     <button
-                      class="om-react-ui-nav-item om-react-ui-nav-item-expandable"
+                      class="om-component-ui-nav-item om-component-ui-nav-item-expandable"
                       data-depth="2"
                       style="--om-nav-indent: 2;"
                       type="button"
                     >
                       <div
-                        class="om-react-ui-nav-item-content"
+                        class="om-component-ui-nav-item-content"
                       >
                         <div
-                          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                         >
                           Level 2
                         </div>
                       </div>
                       <span
-                        class="om-react-ui-nav-item-arrow om-react-ui-nav-item-arrow-open"
+                        class="om-component-ui-nav-item-arrow om-component-ui-nav-item-arrow-open"
                       >
                         <i
-                          class="om-react-ui-icons-wrapper"
+                          class="om-component-ui-icons-wrapper"
                           style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
                         >
                           <svg
-                            class="om-react-ui-icons"
+                            class="om-component-ui-icons"
                             fill="none"
                             height="20"
                             preserveAspectRatio="xMidYMid meet"
@@ -686,25 +686,25 @@ exports[`Nav renders deep nesting 1`] = `
                       </span>
                     </button>
                     <div
-                      class="om-react-ui-nav-submenu om-react-ui-nav-submenu-open"
+                      class="om-component-ui-nav-submenu om-component-ui-nav-submenu-open"
                     >
                       <div
-                        class="om-react-ui-nav-submenu-inner"
+                        class="om-component-ui-nav-submenu-inner"
                       >
                         <div
-                          class="om-react-ui-nav-item-wrapper"
+                          class="om-component-ui-nav-item-wrapper"
                         >
                           <button
-                            class="om-react-ui-nav-item"
+                            class="om-component-ui-nav-item"
                             data-depth="3"
                             style="--om-nav-indent: 3;"
                             type="button"
                           >
                             <div
-                              class="om-react-ui-nav-item-content"
+                              class="om-component-ui-nav-item-content"
                             >
                               <div
-                                class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                                class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                               >
                                 Level 3
                               </div>
@@ -782,42 +782,42 @@ exports[`Nav renders with active item 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="om-react-ui-nav"
+        class="om-component-ui-nav"
       >
         <div
-          class="om-react-ui-nav-content"
+          class="om-component-ui-nav-content"
         >
           <div>
             <div
-              class="om-react-ui-nav-group"
+              class="om-component-ui-nav-group"
             >
               <div
-                class="om-react-ui-nav-group-header"
+                class="om-component-ui-nav-group-header"
               >
                 <div
-                  class="om-react-ui-nav-group-header-content"
+                  class="om-component-ui-nav-group-header-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong om-react-ui-nav-group-header-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong om-component-ui-nav-group-header-label"
                   >
                     GROUP
                   </div>
                 </div>
               </div>
               <div
-                class="om-react-ui-nav-item-wrapper"
+                class="om-component-ui-nav-item-wrapper"
               >
                 <button
-                  class="om-react-ui-nav-item om-react-ui-nav-item-active"
+                  class="om-component-ui-nav-item om-component-ui-nav-item-active"
                   data-depth="1"
                   style="--om-nav-indent: 1;"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-nav-item-content"
+                    class="om-component-ui-nav-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                     >
                       Item 1
                     </div>
@@ -825,19 +825,19 @@ exports[`Nav renders with active item 1`] = `
                 </button>
               </div>
               <div
-                class="om-react-ui-nav-item-wrapper"
+                class="om-component-ui-nav-item-wrapper"
               >
                 <button
-                  class="om-react-ui-nav-item"
+                  class="om-component-ui-nav-item"
                   data-depth="1"
                   style="--om-nav-indent: 1;"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-nav-item-content"
+                    class="om-component-ui-nav-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                     >
                       Item 2
                     </div>
@@ -852,42 +852,42 @@ exports[`Nav renders with active item 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="om-react-ui-nav"
+      class="om-component-ui-nav"
     >
       <div
-        class="om-react-ui-nav-content"
+        class="om-component-ui-nav-content"
       >
         <div>
           <div
-            class="om-react-ui-nav-group"
+            class="om-component-ui-nav-group"
           >
             <div
-              class="om-react-ui-nav-group-header"
+              class="om-component-ui-nav-group-header"
             >
               <div
-                class="om-react-ui-nav-group-header-content"
+                class="om-component-ui-nav-group-header-content"
               >
                 <div
-                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong om-react-ui-nav-group-header-label"
+                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong om-component-ui-nav-group-header-label"
                 >
                   GROUP
                 </div>
               </div>
             </div>
             <div
-              class="om-react-ui-nav-item-wrapper"
+              class="om-component-ui-nav-item-wrapper"
             >
               <button
-                class="om-react-ui-nav-item om-react-ui-nav-item-active"
+                class="om-component-ui-nav-item om-component-ui-nav-item-active"
                 data-depth="1"
                 style="--om-nav-indent: 1;"
                 type="button"
               >
                 <div
-                  class="om-react-ui-nav-item-content"
+                  class="om-component-ui-nav-item-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                   >
                     Item 1
                   </div>
@@ -895,19 +895,19 @@ exports[`Nav renders with active item 1`] = `
               </button>
             </div>
             <div
-              class="om-react-ui-nav-item-wrapper"
+              class="om-component-ui-nav-item-wrapper"
             >
               <button
-                class="om-react-ui-nav-item"
+                class="om-component-ui-nav-item"
                 data-depth="1"
                 style="--om-nav-indent: 1;"
                 type="button"
               >
                 <div
-                  class="om-react-ui-nav-item-content"
+                  class="om-component-ui-nav-item-content"
                 >
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-nav-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-nav-item-label"
                   >
                     Item 2
                   </div>
@@ -979,20 +979,20 @@ exports[`Navigation renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="om-react-ui-navigation"
+        class="om-component-ui-navigation"
       >
         <div
-          class="om-react-ui-navigation-header"
+          class="om-component-ui-navigation-header"
         >
           <i
-            class="om-react-ui-icons-logo-with-words"
+            class="om-component-ui-icons-logo-with-words"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(7, 51, 135); font-style: normal; --icon-color: #073387; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -1017,11 +1017,11 @@ exports[`Navigation renders correctly 1`] = `
               </svg>
             </i>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 108px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 108px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -1056,30 +1056,30 @@ exports[`Navigation renders correctly 1`] = `
           </i>
         </div>
         <div
-          class="om-react-ui-navigation-nav"
+          class="om-component-ui-navigation-nav"
         >
           <div
-            class="om-react-ui-navigation-menu"
+            class="om-component-ui-navigation-menu"
           >
             <div
-              class="om-react-ui-navigation-item-wrapper"
+              class="om-component-ui-navigation-item-wrapper"
             >
               <button
-                class="om-react-ui-navigation-item"
+                class="om-component-ui-navigation-item"
                 type="button"
               >
                 <div
-                  class="om-react-ui-navigation-item-content"
+                  class="om-component-ui-navigation-item-content"
                 >
                   <span
-                    class="om-react-ui-navigation-item-icon"
+                    class="om-component-ui-navigation-item-icon"
                   >
                     <i
-                      class="om-react-ui-icons-wrapper"
+                      class="om-component-ui-icons-wrapper"
                       style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                     >
                       <svg
-                        class="om-react-ui-icons"
+                        class="om-component-ui-icons"
                         fill="none"
                         height="16"
                         preserveAspectRatio="xMidYMid meet"
@@ -1101,7 +1101,7 @@ exports[`Navigation renders correctly 1`] = `
                     </i>
                   </span>
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                   >
                     Home
                   </div>
@@ -1109,24 +1109,24 @@ exports[`Navigation renders correctly 1`] = `
               </button>
             </div>
             <div
-              class="om-react-ui-navigation-item-wrapper"
+              class="om-component-ui-navigation-item-wrapper"
             >
               <button
-                class="om-react-ui-navigation-item"
+                class="om-component-ui-navigation-item"
                 type="button"
               >
                 <div
-                  class="om-react-ui-navigation-item-content"
+                  class="om-component-ui-navigation-item-content"
                 >
                   <span
-                    class="om-react-ui-navigation-item-icon"
+                    class="om-component-ui-navigation-item-icon"
                   >
                     <i
-                      class="om-react-ui-icons-wrapper"
+                      class="om-component-ui-icons-wrapper"
                       style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                     >
                       <svg
-                        class="om-react-ui-icons"
+                        class="om-component-ui-icons"
                         fill="none"
                         height="16"
                         preserveAspectRatio="xMidYMid meet"
@@ -1145,7 +1145,7 @@ exports[`Navigation renders correctly 1`] = `
                     </i>
                   </span>
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                   >
                     Settings
                   </div>
@@ -1159,20 +1159,20 @@ exports[`Navigation renders correctly 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="om-react-ui-navigation"
+      class="om-component-ui-navigation"
     >
       <div
-        class="om-react-ui-navigation-header"
+        class="om-component-ui-navigation-header"
       >
         <i
-          class="om-react-ui-icons-logo-with-words"
+          class="om-component-ui-icons-logo-with-words"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(7, 51, 135); font-style: normal; --icon-color: #073387; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1197,11 +1197,11 @@ exports[`Navigation renders correctly 1`] = `
             </svg>
           </i>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 108px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 108px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1236,30 +1236,30 @@ exports[`Navigation renders correctly 1`] = `
         </i>
       </div>
       <div
-        class="om-react-ui-navigation-nav"
+        class="om-component-ui-navigation-nav"
       >
         <div
-          class="om-react-ui-navigation-menu"
+          class="om-component-ui-navigation-menu"
         >
           <div
-            class="om-react-ui-navigation-item-wrapper"
+            class="om-component-ui-navigation-item-wrapper"
           >
             <button
-              class="om-react-ui-navigation-item"
+              class="om-component-ui-navigation-item"
               type="button"
             >
               <div
-                class="om-react-ui-navigation-item-content"
+                class="om-component-ui-navigation-item-content"
               >
                 <span
-                  class="om-react-ui-navigation-item-icon"
+                  class="om-component-ui-navigation-item-icon"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="16"
                       preserveAspectRatio="xMidYMid meet"
@@ -1281,7 +1281,7 @@ exports[`Navigation renders correctly 1`] = `
                   </i>
                 </span>
                 <div
-                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                 >
                   Home
                 </div>
@@ -1289,24 +1289,24 @@ exports[`Navigation renders correctly 1`] = `
             </button>
           </div>
           <div
-            class="om-react-ui-navigation-item-wrapper"
+            class="om-component-ui-navigation-item-wrapper"
           >
             <button
-              class="om-react-ui-navigation-item"
+              class="om-component-ui-navigation-item"
               type="button"
             >
               <div
-                class="om-react-ui-navigation-item-content"
+                class="om-component-ui-navigation-item-content"
               >
                 <span
-                  class="om-react-ui-navigation-item-icon"
+                  class="om-component-ui-navigation-item-icon"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="16"
                       preserveAspectRatio="xMidYMid meet"
@@ -1325,7 +1325,7 @@ exports[`Navigation renders correctly 1`] = `
                   </i>
                 </span>
                 <div
-                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                 >
                   Settings
                 </div>
@@ -1396,17 +1396,17 @@ exports[`Navigation renders with collapsed state 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="om-react-ui-navigation om-react-ui-navigation-collapsed"
+        class="om-component-ui-navigation om-component-ui-navigation-collapsed"
       >
         <div
-          class="om-react-ui-navigation-header"
+          class="om-component-ui-navigation-header"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(7, 51, 135); font-style: normal; --icon-color: #073387; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1432,24 +1432,24 @@ exports[`Navigation renders with collapsed state 1`] = `
           </i>
         </div>
         <div
-          class="om-react-ui-navigation-nav"
+          class="om-component-ui-navigation-nav"
         >
           <div
-            class="om-react-ui-navigation-menu"
+            class="om-component-ui-navigation-menu"
           >
             <button
-              class="om-react-ui-navigation-collapsed-item"
+              class="om-component-ui-navigation-collapsed-item"
               type="button"
             >
               <span
-                class="om-react-ui-navigation-collapsed-item-icon"
+                class="om-component-ui-navigation-collapsed-item-icon"
               >
                 <i
-                  class="om-react-ui-icons-wrapper"
+                  class="om-component-ui-icons-wrapper"
                   style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                 >
                   <svg
-                    class="om-react-ui-icons"
+                    class="om-component-ui-icons"
                     fill="none"
                     height="16"
                     preserveAspectRatio="xMidYMid meet"
@@ -1471,24 +1471,24 @@ exports[`Navigation renders with collapsed state 1`] = `
                 </i>
               </span>
               <span
-                class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+                class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-xs om-component-ui-navigation-collapsed-item-label"
               >
                 Home
               </span>
             </button>
             <button
-              class="om-react-ui-navigation-collapsed-item"
+              class="om-component-ui-navigation-collapsed-item"
               type="button"
             >
               <span
-                class="om-react-ui-navigation-collapsed-item-icon"
+                class="om-component-ui-navigation-collapsed-item-icon"
               >
                 <i
-                  class="om-react-ui-icons-wrapper"
+                  class="om-component-ui-icons-wrapper"
                   style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                 >
                   <svg
-                    class="om-react-ui-icons"
+                    class="om-component-ui-icons"
                     fill="none"
                     height="16"
                     preserveAspectRatio="xMidYMid meet"
@@ -1507,7 +1507,7 @@ exports[`Navigation renders with collapsed state 1`] = `
                 </i>
               </span>
               <span
-                class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+                class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-xs om-component-ui-navigation-collapsed-item-label"
               >
                 Settings
               </span>
@@ -1519,17 +1519,17 @@ exports[`Navigation renders with collapsed state 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="om-react-ui-navigation om-react-ui-navigation-collapsed"
+      class="om-component-ui-navigation om-component-ui-navigation-collapsed"
     >
       <div
-        class="om-react-ui-navigation-header"
+        class="om-component-ui-navigation-header"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(7, 51, 135); font-style: normal; --icon-color: #073387; --icon-width: 24px; --icon-height: 24px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="24"
             preserveAspectRatio="xMidYMid meet"
@@ -1555,24 +1555,24 @@ exports[`Navigation renders with collapsed state 1`] = `
         </i>
       </div>
       <div
-        class="om-react-ui-navigation-nav"
+        class="om-component-ui-navigation-nav"
       >
         <div
-          class="om-react-ui-navigation-menu"
+          class="om-component-ui-navigation-menu"
         >
           <button
-            class="om-react-ui-navigation-collapsed-item"
+            class="om-component-ui-navigation-collapsed-item"
             type="button"
           >
             <span
-              class="om-react-ui-navigation-collapsed-item-icon"
+              class="om-component-ui-navigation-collapsed-item-icon"
             >
               <i
-                class="om-react-ui-icons-wrapper"
+                class="om-component-ui-icons-wrapper"
                 style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
               >
                 <svg
-                  class="om-react-ui-icons"
+                  class="om-component-ui-icons"
                   fill="none"
                   height="16"
                   preserveAspectRatio="xMidYMid meet"
@@ -1594,24 +1594,24 @@ exports[`Navigation renders with collapsed state 1`] = `
               </i>
             </span>
             <span
-              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+              class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-xs om-component-ui-navigation-collapsed-item-label"
             >
               Home
             </span>
           </button>
           <button
-            class="om-react-ui-navigation-collapsed-item"
+            class="om-component-ui-navigation-collapsed-item"
             type="button"
           >
             <span
-              class="om-react-ui-navigation-collapsed-item-icon"
+              class="om-component-ui-navigation-collapsed-item-icon"
             >
               <i
-                class="om-react-ui-icons-wrapper"
+                class="om-component-ui-icons-wrapper"
                 style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
               >
                 <svg
-                  class="om-react-ui-icons"
+                  class="om-component-ui-icons"
                   fill="none"
                   height="16"
                   preserveAspectRatio="xMidYMid meet"
@@ -1630,7 +1630,7 @@ exports[`Navigation renders with collapsed state 1`] = `
               </i>
             </span>
             <span
-              class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs om-react-ui-navigation-collapsed-item-label"
+              class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-xs om-component-ui-navigation-collapsed-item-label"
             >
               Settings
             </span>
@@ -1699,20 +1699,20 @@ exports[`Navigation renders with sub-menu items 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="om-react-ui-navigation"
+        class="om-component-ui-navigation"
       >
         <div
-          class="om-react-ui-navigation-header"
+          class="om-component-ui-navigation-header"
         >
           <i
-            class="om-react-ui-icons-logo-with-words"
+            class="om-component-ui-icons-logo-with-words"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(7, 51, 135); font-style: normal; --icon-color: #073387; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -1737,11 +1737,11 @@ exports[`Navigation renders with sub-menu items 1`] = `
               </svg>
             </i>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 108px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 108px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -1776,30 +1776,30 @@ exports[`Navigation renders with sub-menu items 1`] = `
           </i>
         </div>
         <div
-          class="om-react-ui-navigation-nav"
+          class="om-component-ui-navigation-nav"
         >
           <div
-            class="om-react-ui-navigation-menu"
+            class="om-component-ui-navigation-menu"
           >
             <div
-              class="om-react-ui-navigation-item-wrapper"
+              class="om-component-ui-navigation-item-wrapper"
             >
               <button
-                class="om-react-ui-navigation-item om-react-ui-navigation-item-expandable"
+                class="om-component-ui-navigation-item om-component-ui-navigation-item-expandable"
                 type="button"
               >
                 <div
-                  class="om-react-ui-navigation-item-content"
+                  class="om-component-ui-navigation-item-content"
                 >
                   <span
-                    class="om-react-ui-navigation-item-icon"
+                    class="om-component-ui-navigation-item-icon"
                   >
                     <i
-                      class="om-react-ui-icons-wrapper"
+                      class="om-component-ui-icons-wrapper"
                       style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                     >
                       <svg
-                        class="om-react-ui-icons"
+                        class="om-component-ui-icons"
                         fill="none"
                         height="16"
                         preserveAspectRatio="xMidYMid meet"
@@ -1821,20 +1821,20 @@ exports[`Navigation renders with sub-menu items 1`] = `
                     </i>
                   </span>
                   <div
-                    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                   >
                     Menu
                   </div>
                 </div>
                 <span
-                  class="om-react-ui-navigation-item-arrow om-react-ui-navigation-item-arrow-open"
+                  class="om-component-ui-navigation-item-arrow om-component-ui-navigation-item-arrow-open"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="16"
                       preserveAspectRatio="xMidYMid meet"
@@ -1854,34 +1854,34 @@ exports[`Navigation renders with sub-menu items 1`] = `
                 </span>
               </button>
               <div
-                class="om-react-ui-navigation-submenu om-react-ui-navigation-submenu-open"
+                class="om-component-ui-navigation-submenu om-component-ui-navigation-submenu-open"
               >
                 <div
-                  class="om-react-ui-navigation-submenu-inner"
+                  class="om-component-ui-navigation-submenu-inner"
                 >
                   <button
-                    class="om-react-ui-navigation-submenu-item"
+                    class="om-component-ui-navigation-submenu-item"
                     type="button"
                   >
                     <div
-                      class="om-react-ui-navigation-item-content"
+                      class="om-component-ui-navigation-item-content"
                     >
                       <div
-                        class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                        class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                       >
                         Sub Item 1
                       </div>
                     </div>
                   </button>
                   <button
-                    class="om-react-ui-navigation-submenu-item"
+                    class="om-component-ui-navigation-submenu-item"
                     type="button"
                   >
                     <div
-                      class="om-react-ui-navigation-item-content"
+                      class="om-component-ui-navigation-item-content"
                     >
                       <div
-                        class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                        class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                       >
                         Sub Item 2
                       </div>
@@ -1897,20 +1897,20 @@ exports[`Navigation renders with sub-menu items 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="om-react-ui-navigation"
+      class="om-component-ui-navigation"
     >
       <div
-        class="om-react-ui-navigation-header"
+        class="om-component-ui-navigation-header"
       >
         <i
-          class="om-react-ui-icons-logo-with-words"
+          class="om-component-ui-icons-logo-with-words"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgb(7, 51, 135); font-style: normal; --icon-color: #073387; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1935,11 +1935,11 @@ exports[`Navigation renders with sub-menu items 1`] = `
             </svg>
           </i>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 108px; height: 24px; color: rgb(19, 19, 19); font-style: normal; --icon-color: #131313; --icon-width: 108px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1974,30 +1974,30 @@ exports[`Navigation renders with sub-menu items 1`] = `
         </i>
       </div>
       <div
-        class="om-react-ui-navigation-nav"
+        class="om-component-ui-navigation-nav"
       >
         <div
-          class="om-react-ui-navigation-menu"
+          class="om-component-ui-navigation-menu"
         >
           <div
-            class="om-react-ui-navigation-item-wrapper"
+            class="om-component-ui-navigation-item-wrapper"
           >
             <button
-              class="om-react-ui-navigation-item om-react-ui-navigation-item-expandable"
+              class="om-component-ui-navigation-item om-component-ui-navigation-item-expandable"
               type="button"
             >
               <div
-                class="om-react-ui-navigation-item-content"
+                class="om-component-ui-navigation-item-content"
               >
                 <span
-                  class="om-react-ui-navigation-item-icon"
+                  class="om-component-ui-navigation-item-icon"
                 >
                   <i
-                    class="om-react-ui-icons-wrapper"
+                    class="om-component-ui-icons-wrapper"
                     style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                   >
                     <svg
-                      class="om-react-ui-icons"
+                      class="om-component-ui-icons"
                       fill="none"
                       height="16"
                       preserveAspectRatio="xMidYMid meet"
@@ -2019,20 +2019,20 @@ exports[`Navigation renders with sub-menu items 1`] = `
                   </i>
                 </span>
                 <div
-                  class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                  class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                 >
                   Menu
                 </div>
               </div>
               <span
-                class="om-react-ui-navigation-item-arrow om-react-ui-navigation-item-arrow-open"
+                class="om-component-ui-navigation-item-arrow om-component-ui-navigation-item-arrow-open"
               >
                 <i
-                  class="om-react-ui-icons-wrapper"
+                  class="om-component-ui-icons-wrapper"
                   style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
                 >
                   <svg
-                    class="om-react-ui-icons"
+                    class="om-component-ui-icons"
                     fill="none"
                     height="16"
                     preserveAspectRatio="xMidYMid meet"
@@ -2052,34 +2052,34 @@ exports[`Navigation renders with sub-menu items 1`] = `
               </span>
             </button>
             <div
-              class="om-react-ui-navigation-submenu om-react-ui-navigation-submenu-open"
+              class="om-component-ui-navigation-submenu om-component-ui-navigation-submenu-open"
             >
               <div
-                class="om-react-ui-navigation-submenu-inner"
+                class="om-component-ui-navigation-submenu-inner"
               >
                 <button
-                  class="om-react-ui-navigation-submenu-item"
+                  class="om-component-ui-navigation-submenu-item"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-navigation-item-content"
+                    class="om-component-ui-navigation-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                     >
                       Sub Item 1
                     </div>
                   </div>
                 </button>
                 <button
-                  class="om-react-ui-navigation-submenu-item"
+                  class="om-component-ui-navigation-submenu-item"
                   type="button"
                 >
                   <div
-                    class="om-react-ui-navigation-item-content"
+                    class="om-component-ui-navigation-item-content"
                   >
                     <div
-                      class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-navigation-item-label"
+                      class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-navigation-item-label"
                     >
                       Sub Item 2
                     </div>

@@ -2,7 +2,7 @@
 
 exports[`Flex renders vertical layout 1`] = `
 <div
-  class="om-react-ui-flex om-react-ui-flex-vertical"
+  class="om-component-ui-flex om-component-ui-flex-vertical"
   style="--om-flex-gap: 8px;"
 >
   <div>
@@ -16,7 +16,7 @@ exports[`Flex renders vertical layout 1`] = `
 
 exports[`Flex renders with gap and alignment 1`] = `
 <div
-  class="om-react-ui-flex om-react-ui-flex-wrap-wrap om-react-ui-flex-align-center om-react-ui-flex-justify-space-between"
+  class="om-component-ui-flex om-component-ui-flex-wrap-wrap om-component-ui-flex-align-center om-component-ui-flex-justify-space-between"
   style="--om-flex-gap: 16px;"
 >
   <div>

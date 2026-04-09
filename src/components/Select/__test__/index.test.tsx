@@ -97,7 +97,7 @@ describe('Select', () => {
       />,
     );
 
-    const removeButton = container.querySelector('.om-react-ui-select-tag-remove');
+    const removeButton = container.querySelector('.om-component-ui-select-tag-remove');
 
     expect(removeButton).not.toBeNull();
 

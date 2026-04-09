@@ -6,25 +6,25 @@ exports[`Upload renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-upload"
+        class="om-component-ui-upload"
       >
         <input
-          class="om-react-ui-upload-input"
+          class="om-component-ui-upload-input"
           type="file"
         />
         <button
-          class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-small"
+          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-small"
           type="button"
         >
           <span
-            class="om-react-ui-button-icon-start"
+            class="om-component-ui-button-icon-start"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
@@ -53,7 +53,7 @@ exports[`Upload renders correctly 1`] = `
             </i>
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
           >
             Upload file
           </span>
@@ -63,25 +63,25 @@ exports[`Upload renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-upload"
+      class="om-component-ui-upload"
     >
       <input
-        class="om-react-ui-upload-input"
+        class="om-component-ui-upload-input"
         type="file"
       />
       <button
-        class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-small"
+        class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-small"
         type="button"
       >
         <span
-          class="om-react-ui-button-icon-start"
+          class="om-component-ui-button-icon-start"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -110,7 +110,7 @@ exports[`Upload renders correctly 1`] = `
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
         >
           Upload file
         </span>
@@ -177,35 +177,35 @@ exports[`Upload renders with label and description 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-upload"
+        class="om-component-ui-upload"
       >
         <label
-          class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-upload-label"
+          class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-upload-label"
         >
           Upload Document
         </label>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-upload-description"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-upload-description"
         >
           Max 10MB
         </span>
         <input
-          class="om-react-ui-upload-input"
+          class="om-component-ui-upload-input"
           type="file"
         />
         <button
-          class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-small"
+          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-small"
           type="button"
         >
           <span
-            class="om-react-ui-button-icon-start"
+            class="om-component-ui-button-icon-start"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
@@ -234,7 +234,7 @@ exports[`Upload renders with label and description 1`] = `
             </i>
           </span>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
           >
             Upload file
           </span>
@@ -244,35 +244,35 @@ exports[`Upload renders with label and description 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-upload"
+      class="om-component-ui-upload"
     >
       <label
-        class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-lg om-react-ui-upload-label"
+        class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-upload-label"
       >
         Upload Document
       </label>
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-upload-description"
+        class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-upload-description"
       >
         Max 10MB
       </span>
       <input
-        class="om-react-ui-upload-input"
+        class="om-component-ui-upload-input"
         type="file"
       />
       <button
-        class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-small"
+        class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-small"
         type="button"
       >
         <span
-          class="om-react-ui-button-icon-start"
+          class="om-component-ui-button-icon-start"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -301,7 +301,7 @@ exports[`Upload renders with label and description 1`] = `
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong"
         >
           Upload file
         </span>
@@ -368,17 +368,17 @@ exports[`UploadFileBar renders error state with message 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-upload-file-bar om-react-ui-upload-file-bar-failure"
+        class="om-component-ui-upload-file-bar om-component-ui-upload-file-bar-failure"
       >
         <div
-          class="om-react-ui-upload-file-bar-inner"
+          class="om-component-ui-upload-file-bar-inner"
         >
           <i
-            class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
+            class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-file"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -396,16 +396,16 @@ exports[`UploadFileBar renders error state with message 1`] = `
             </svg>
           </i>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong om-react-ui-upload-file-bar-name"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong om-component-ui-upload-file-bar-name"
           >
             test.pdf
           </span>
           <i
-            class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-status"
+            class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-status"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgba(174, 0, 0, 0.102); font-style: normal; --icon-color: #AE00001A; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -433,14 +433,14 @@ exports[`UploadFileBar renders error state with message 1`] = `
             </svg>
           </i>
           <div
-            class="om-react-ui-upload-file-bar-message"
+            class="om-component-ui-upload-file-bar-message"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
@@ -466,19 +466,28 @@ exports[`UploadFileBar renders error state with message 1`] = `
               </svg>
             </i>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm"
             >
               Upload failed
             </span>
           </div>
         </div>
-        <button
-          aria-label="Remove file"
-          class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
-          type="button"
+        <i
+          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
+          role="button"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+          tabindex="0"
         >
-          <span
-            class="om-react-ui-button-icon-start"
+          <svg
+            class="om-component-ui-icons"
+            fill="none"
+            height="20"
+            preserveAspectRatio="xMidYMid meet"
+            shape-rendering="geometricPrecision"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <i
               class="om-react-ui-icons-wrapper"
@@ -507,17 +516,17 @@ exports[`UploadFileBar renders error state with message 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-upload-file-bar om-react-ui-upload-file-bar-failure"
+      class="om-component-ui-upload-file-bar om-component-ui-upload-file-bar-failure"
     >
       <div
-        class="om-react-ui-upload-file-bar-inner"
+        class="om-component-ui-upload-file-bar-inner"
       >
         <i
-          class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
+          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-file"
           style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="20"
             preserveAspectRatio="xMidYMid meet"
@@ -535,16 +544,16 @@ exports[`UploadFileBar renders error state with message 1`] = `
           </svg>
         </i>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong om-react-ui-upload-file-bar-name"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong om-component-ui-upload-file-bar-name"
         >
           test.pdf
         </span>
         <i
-          class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-status"
+          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-status"
           style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgba(174, 0, 0, 0.102); font-style: normal; --icon-color: #AE00001A; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="20"
             preserveAspectRatio="xMidYMid meet"
@@ -572,14 +581,14 @@ exports[`UploadFileBar renders error state with message 1`] = `
           </svg>
         </i>
         <div
-          class="om-react-ui-upload-file-bar-message"
+          class="om-component-ui-upload-file-bar-message"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -605,19 +614,28 @@ exports[`UploadFileBar renders error state with message 1`] = `
             </svg>
           </i>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm"
           >
             Upload failed
           </span>
         </div>
       </div>
-      <button
-        aria-label="Remove file"
-        class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
-        type="button"
+      <i
+        class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
+        role="button"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+        tabindex="0"
       >
-        <span
-          class="om-react-ui-button-icon-start"
+        <svg
+          class="om-component-ui-icons"
+          fill="none"
+          height="20"
+          preserveAspectRatio="xMidYMid meet"
+          shape-rendering="geometricPrecision"
+          stroke="none"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <i
             class="om-react-ui-icons-wrapper"
@@ -703,17 +721,17 @@ exports[`UploadFileBar renders success state 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-upload-file-bar om-react-ui-upload-file-bar-success"
+        class="om-component-ui-upload-file-bar om-component-ui-upload-file-bar-success"
       >
         <div
-          class="om-react-ui-upload-file-bar-inner"
+          class="om-component-ui-upload-file-bar-inner"
         >
           <i
-            class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
+            class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-file"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -731,16 +749,16 @@ exports[`UploadFileBar renders success state 1`] = `
             </svg>
           </i>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong om-react-ui-upload-file-bar-name"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong om-component-ui-upload-file-bar-name"
           >
             test.pdf
           </span>
           <i
-            class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-status"
+            class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-status"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgba(31, 88, 0, 0.2); font-style: normal; --icon-color: #1F580033; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -764,13 +782,22 @@ exports[`UploadFileBar renders success state 1`] = `
             </svg>
           </i>
         </div>
-        <button
-          aria-label="Remove file"
-          class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
-          type="button"
+        <i
+          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
+          role="button"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+          tabindex="0"
         >
-          <span
-            class="om-react-ui-button-icon-start"
+          <svg
+            class="om-component-ui-icons"
+            fill="none"
+            height="20"
+            preserveAspectRatio="xMidYMid meet"
+            shape-rendering="geometricPrecision"
+            stroke="none"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <i
               class="om-react-ui-icons-wrapper"
@@ -799,17 +826,17 @@ exports[`UploadFileBar renders success state 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-upload-file-bar om-react-ui-upload-file-bar-success"
+      class="om-component-ui-upload-file-bar om-component-ui-upload-file-bar-success"
     >
       <div
-        class="om-react-ui-upload-file-bar-inner"
+        class="om-component-ui-upload-file-bar-inner"
       >
         <i
-          class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-file"
+          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-file"
           style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="20"
             preserveAspectRatio="xMidYMid meet"
@@ -827,16 +854,16 @@ exports[`UploadFileBar renders success state 1`] = `
           </svg>
         </i>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong om-react-ui-upload-file-bar-name"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong om-component-ui-upload-file-bar-name"
         >
           test.pdf
         </span>
         <i
-          class="om-react-ui-icons-wrapper om-react-ui-upload-file-bar-icon-status"
+          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-status"
           style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: rgba(31, 88, 0, 0.2); font-style: normal; --icon-color: #1F580033; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="20"
             preserveAspectRatio="xMidYMid meet"
@@ -860,13 +887,22 @@ exports[`UploadFileBar renders success state 1`] = `
           </svg>
         </i>
       </div>
-      <button
-        aria-label="Remove file"
-        class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
-        type="button"
+      <i
+        class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
+        role="button"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+        tabindex="0"
       >
-        <span
-          class="om-react-ui-button-icon-start"
+        <svg
+          class="om-component-ui-icons"
+          fill="none"
+          height="20"
+          preserveAspectRatio="xMidYMid meet"
+          shape-rendering="geometricPrecision"
+          stroke="none"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <i
             class="om-react-ui-icons-wrapper"

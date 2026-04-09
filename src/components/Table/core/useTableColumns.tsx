@@ -163,7 +163,7 @@ function makeSortTransform<T>(config: UseTableColumnsConfig<T>): ColumnTransform
     });
 }
 
-const SPACER_COLUMN_CLS = 'om-react-ui-table-cell--spacer';
+const SPACER_COLUMN_CLS = 'om-component-ui-table-cell--spacer';
 
 function makeSpacerTransform<T>(): ColumnTransform<T> {
   return (columns) => [
