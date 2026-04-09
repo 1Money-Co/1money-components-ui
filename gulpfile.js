@@ -60,25 +60,33 @@ module.exports = function (config) {
   // reference the '@/' alias which only resolves inside this repo.
   const rewriteScssToCss = done => {
     const targets = [params.dest.lib, params.dest.es].filter(Boolean);
-    const walk = dir => {
+    const walk = (dir, distRoot) => {
       if (!fs.existsSync(dir)) return;
       for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
         const full = path.join(dir, entry.name);
         if (entry.isDirectory()) {
-          walk(full);
+          walk(full, distRoot);
         } else if (/\.(js|d\.ts|map)$/.test(entry.name)) {
           const src = fs.readFileSync(full, 'utf8');
-          const next = src.replace(
+          let next = src.replace(
             /(["'])(\.{1,2}\/[^"']+?)\.(scss|sass|less)\1/g,
             '$1$2.css$1'
           );
+          // Rewrite any unresolved '@/...' aliases left by babel into
+          // relative paths rooted at the current dist (lib/ or es/).
+          next = next.replace(/(["'])@\/([^"']+)\1/g, (_, q, sub) => {
+            const target = path.join(distRoot, sub);
+            let rel = path.relative(path.dirname(full), target).replace(/\\/g, '/');
+            if (!rel.startsWith('.')) rel = './' + rel;
+            return q + rel + q;
+          });
           if (next !== src) fs.writeFileSync(full, next);
         } else if (/\.(scss|sass|less)$/.test(entry.name)) {
           fs.unlinkSync(full);
         }
       }
     };
-    targets.forEach(walk);
+    targets.forEach(dir => walk(dir, dir));
     done();
   };
 
