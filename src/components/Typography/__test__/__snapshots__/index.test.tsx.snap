@@ -3,32 +3,32 @@
 exports[`Typography renders semantic variants with expected default tags 1`] = `
 <div>
   <div
-    class="om-react-ui-typography om-react-ui-typography-display om-react-ui-typography-display-xl"
+    class="om-component-ui-typography om-component-ui-typography-display om-component-ui-typography-display-xl"
   >
     Display
   </div>
   <div
-    class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-md"
+    class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-md"
   >
     Headline
   </div>
   <div
-    class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-strong"
+    class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-strong"
   >
     Title
   </div>
   <span
-    class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong om-react-ui-typography-underline om-react-ui-typography-delete om-react-ui-typography-underline-delete"
+    class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong om-component-ui-typography-underline om-component-ui-typography-delete om-component-ui-typography-underline-delete"
   >
     Body
   </span>
   <label
-    class="om-react-ui-typography om-react-ui-typography-label om-react-ui-typography-label-xs"
+    class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-xs"
   >
     Label
   </label>
   <a
-    class="om-react-ui-typography om-react-ui-typography-link om-react-ui-typography-link-sm"
+    class="om-component-ui-typography om-component-ui-typography-link om-component-ui-typography-link-sm"
     href="https://example.com"
   >
     Link

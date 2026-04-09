@@ -10,24 +10,24 @@ exports[`Progress renders correctly 1`] = `
         aria-valuemin="0"
         aria-valuenow="25"
         aria-valuetext="25%"
-        class="om-react-ui-progress om-react-ui-progress-state-default om-react-ui-progress-color-gray om-react-ui-progress-placement-left"
+        class="om-component-ui-progress om-component-ui-progress-state-default om-component-ui-progress-color-gray om-component-ui-progress-placement-left"
         data-testid="progress-root"
         role="progressbar"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-display om-react-ui-typography-display-sm om-react-ui-progress-info"
+          class="om-component-ui-typography om-component-ui-typography-display om-component-ui-typography-display-sm om-component-ui-progress-info"
           data-testid="progress-info"
         >
           25%
         </div>
         <div
-          class="om-react-ui-progress-bar"
+          class="om-component-ui-progress-bar"
         >
           <div
-            class="om-react-ui-progress-rail"
+            class="om-component-ui-progress-rail"
           >
             <div
-              class="om-react-ui-progress-track"
+              class="om-component-ui-progress-track"
               data-testid="progress-track"
               style="width: 25%;"
             />
@@ -42,24 +42,24 @@ exports[`Progress renders correctly 1`] = `
       aria-valuemin="0"
       aria-valuenow="25"
       aria-valuetext="25%"
-      class="om-react-ui-progress om-react-ui-progress-state-default om-react-ui-progress-color-gray om-react-ui-progress-placement-left"
+      class="om-component-ui-progress om-component-ui-progress-state-default om-component-ui-progress-color-gray om-component-ui-progress-placement-left"
       data-testid="progress-root"
       role="progressbar"
     >
       <div
-        class="om-react-ui-typography om-react-ui-typography-display om-react-ui-typography-display-sm om-react-ui-progress-info"
+        class="om-component-ui-typography om-component-ui-typography-display om-component-ui-typography-display-sm om-component-ui-progress-info"
         data-testid="progress-info"
       >
         25%
       </div>
       <div
-        class="om-react-ui-progress-bar"
+        class="om-component-ui-progress-bar"
       >
         <div
-          class="om-react-ui-progress-rail"
+          class="om-component-ui-progress-rail"
         >
           <div
-            class="om-react-ui-progress-track"
+            class="om-component-ui-progress-track"
             data-testid="progress-track"
             style="width: 25%;"
           />

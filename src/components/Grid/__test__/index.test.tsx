@@ -28,7 +28,7 @@ afterAll(() => {
 
 describe('Grid', () => {
   it('renders row/col with gutter + alignment', () => {
-    const OM_PREFIX = 'om-react-ui';
+    const OM_PREFIX = 'om-component-ui';
     const ROW_CLASS = `${OM_PREFIX}-${GRID_ROW_PREFIX}`;
     const GUTTER_X = 16;
     const GUTTER_Y = 8;

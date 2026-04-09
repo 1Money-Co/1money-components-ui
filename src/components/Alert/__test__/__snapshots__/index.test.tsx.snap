@@ -6,17 +6,17 @@ exports[`Alert renders all status variants 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-info"
+        class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -66,25 +66,25 @@ exports[`Alert renders all status variants 1`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             info alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -107,17 +107,17 @@ exports[`Alert renders all status variants 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-alert om-react-ui-alert-info"
+      class="om-component-ui-alert om-component-ui-alert-info"
     >
       <span
-        class="om-react-ui-alert-icon"
+        class="om-component-ui-alert-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -167,25 +167,25 @@ exports[`Alert renders all status variants 1`] = `
         </i>
       </span>
       <div
-        class="om-react-ui-alert-content"
+        class="om-component-ui-alert-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           info alert
         </div>
       </div>
       <button
         aria-label="Close alert"
-        class="om-react-ui-alert-close"
+        class="om-component-ui-alert-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="currentColor"
             height="16"
             preserveAspectRatio="xMidYMid meet"
@@ -265,17 +265,17 @@ exports[`Alert renders all status variants 2`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-info"
+        class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -325,25 +325,25 @@ exports[`Alert renders all status variants 2`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             info alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -365,17 +365,17 @@ exports[`Alert renders all status variants 2`] = `
     </div>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-success"
+        class="om-component-ui-alert om-component-ui-alert-success"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -400,25 +400,25 @@ exports[`Alert renders all status variants 2`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             success alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -441,17 +441,17 @@ exports[`Alert renders all status variants 2`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-alert om-react-ui-alert-success"
+      class="om-component-ui-alert om-component-ui-alert-success"
     >
       <span
-        class="om-react-ui-alert-icon"
+        class="om-component-ui-alert-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -476,25 +476,25 @@ exports[`Alert renders all status variants 2`] = `
         </i>
       </span>
       <div
-        class="om-react-ui-alert-content"
+        class="om-component-ui-alert-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           success alert
         </div>
       </div>
       <button
         aria-label="Close alert"
-        class="om-react-ui-alert-close"
+        class="om-component-ui-alert-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="currentColor"
             height="16"
             preserveAspectRatio="xMidYMid meet"
@@ -574,17 +574,17 @@ exports[`Alert renders all status variants 3`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-info"
+        class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -634,25 +634,25 @@ exports[`Alert renders all status variants 3`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             info alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -674,17 +674,17 @@ exports[`Alert renders all status variants 3`] = `
     </div>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-success"
+        class="om-component-ui-alert om-component-ui-alert-success"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -709,25 +709,25 @@ exports[`Alert renders all status variants 3`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             success alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -749,17 +749,17 @@ exports[`Alert renders all status variants 3`] = `
     </div>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-warning"
+        class="om-component-ui-alert om-component-ui-alert-warning"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -794,25 +794,25 @@ exports[`Alert renders all status variants 3`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             warning alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -835,17 +835,17 @@ exports[`Alert renders all status variants 3`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-alert om-react-ui-alert-warning"
+      class="om-component-ui-alert om-component-ui-alert-warning"
     >
       <span
-        class="om-react-ui-alert-icon"
+        class="om-component-ui-alert-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -880,25 +880,25 @@ exports[`Alert renders all status variants 3`] = `
         </i>
       </span>
       <div
-        class="om-react-ui-alert-content"
+        class="om-component-ui-alert-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           warning alert
         </div>
       </div>
       <button
         aria-label="Close alert"
-        class="om-react-ui-alert-close"
+        class="om-component-ui-alert-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="currentColor"
             height="16"
             preserveAspectRatio="xMidYMid meet"
@@ -978,17 +978,17 @@ exports[`Alert renders all status variants 4`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-info"
+        class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -1038,25 +1038,25 @@ exports[`Alert renders all status variants 4`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             info alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -1078,17 +1078,17 @@ exports[`Alert renders all status variants 4`] = `
     </div>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-success"
+        class="om-component-ui-alert om-component-ui-alert-success"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -1113,25 +1113,25 @@ exports[`Alert renders all status variants 4`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             success alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -1153,17 +1153,17 @@ exports[`Alert renders all status variants 4`] = `
     </div>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-warning"
+        class="om-component-ui-alert om-component-ui-alert-warning"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -1198,25 +1198,25 @@ exports[`Alert renders all status variants 4`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             warning alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -1238,17 +1238,17 @@ exports[`Alert renders all status variants 4`] = `
     </div>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-error"
+        class="om-component-ui-alert om-component-ui-alert-error"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -1273,25 +1273,25 @@ exports[`Alert renders all status variants 4`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             error alert
           </div>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -1314,17 +1314,17 @@ exports[`Alert renders all status variants 4`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-alert om-react-ui-alert-error"
+      class="om-component-ui-alert om-component-ui-alert-error"
     >
       <span
-        class="om-react-ui-alert-icon"
+        class="om-component-ui-alert-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -1349,25 +1349,25 @@ exports[`Alert renders all status variants 4`] = `
         </i>
       </span>
       <div
-        class="om-react-ui-alert-content"
+        class="om-component-ui-alert-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           error alert
         </div>
       </div>
       <button
         aria-label="Close alert"
-        class="om-react-ui-alert-close"
+        class="om-component-ui-alert-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="currentColor"
             height="16"
             preserveAspectRatio="xMidYMid meet"
@@ -1447,17 +1447,17 @@ exports[`Alert renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-info"
+        class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -1507,30 +1507,30 @@ exports[`Alert renders correctly 1`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             Test Title
           </div>
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             Test body text.
           </span>
         </div>
         <button
           aria-label="Close alert"
-          class="om-react-ui-alert-close"
+          class="om-component-ui-alert-close"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="currentColor"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -1553,17 +1553,17 @@ exports[`Alert renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-alert om-react-ui-alert-info"
+      class="om-component-ui-alert om-component-ui-alert-info"
     >
       <span
-        class="om-react-ui-alert-icon"
+        class="om-component-ui-alert-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -1613,30 +1613,30 @@ exports[`Alert renders correctly 1`] = `
         </i>
       </span>
       <div
-        class="om-react-ui-alert-content"
+        class="om-component-ui-alert-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           Test Title
         </div>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-secondary"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
         >
           Test body text.
         </span>
       </div>
       <button
         aria-label="Close alert"
-        class="om-react-ui-alert-close"
+        class="om-component-ui-alert-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="currentColor"
             height="16"
             preserveAspectRatio="xMidYMid meet"
@@ -1716,17 +1716,17 @@ exports[`Alert renders without close button when closable is false 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-alert om-react-ui-alert-info"
+        class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-react-ui-alert-icon"
+          class="om-component-ui-alert-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="32"
               preserveAspectRatio="xMidYMid meet"
@@ -1776,10 +1776,10 @@ exports[`Alert renders without close button when closable is false 1`] = `
           </i>
         </span>
         <div
-          class="om-react-ui-alert-content"
+          class="om-component-ui-alert-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
           >
             No close
           </div>
@@ -1789,17 +1789,17 @@ exports[`Alert renders without close button when closable is false 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-alert om-react-ui-alert-info"
+      class="om-component-ui-alert om-component-ui-alert-info"
     >
       <span
-        class="om-react-ui-alert-icon"
+        class="om-component-ui-alert-icon"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="32"
             preserveAspectRatio="xMidYMid meet"
@@ -1849,10 +1849,10 @@ exports[`Alert renders without close button when closable is false 1`] = `
         </i>
       </span>
       <div
-        class="om-react-ui-alert-content"
+        class="om-component-ui-alert-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-sm om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           No close
         </div>

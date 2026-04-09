@@ -6,16 +6,16 @@ exports[`Copy renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-copy-inner"
+        class="om-component-ui-copy-inner"
         role="button"
         tabindex="0"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="20"
             preserveAspectRatio="xMidYMid meet"
@@ -42,16 +42,16 @@ exports[`Copy renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-copy-inner"
+      class="om-component-ui-copy-inner"
       role="button"
       tabindex="0"
     >
       <i
-        class="om-react-ui-icons-wrapper"
+        class="om-component-ui-icons-wrapper"
         style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
       >
         <svg
-          class="om-react-ui-icons"
+          class="om-component-ui-icons"
           fill="none"
           height="20"
           preserveAspectRatio="xMidYMid meet"

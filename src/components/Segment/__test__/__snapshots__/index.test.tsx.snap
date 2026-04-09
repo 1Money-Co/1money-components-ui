@@ -6,51 +6,51 @@ exports[`Segment renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-segment"
+        class="om-component-ui-segment"
       >
         <div
-          class="om-react-ui-segment-track"
+          class="om-component-ui-segment-track"
           role="radiogroup"
         >
           <span
-            class="om-react-ui-segment-indicator"
+            class="om-component-ui-segment-indicator"
             style="width: 0px; transform: translateX(0px);"
           />
           <button
             aria-checked="true"
-            class="om-react-ui-segment-item om-react-ui-segment-item-active"
+            class="om-component-ui-segment-item om-component-ui-segment-item-active"
             role="radio"
             tabindex="0"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 1
             </span>
           </button>
           <button
             aria-checked="false"
-            class="om-react-ui-segment-item"
+            class="om-component-ui-segment-item"
             role="radio"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 2
             </span>
           </button>
           <button
             aria-checked="false"
-            class="om-react-ui-segment-item"
+            class="om-component-ui-segment-item"
             role="radio"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 3
             </span>
@@ -61,51 +61,51 @@ exports[`Segment renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-segment"
+      class="om-component-ui-segment"
     >
       <div
-        class="om-react-ui-segment-track"
+        class="om-component-ui-segment-track"
         role="radiogroup"
       >
         <span
-          class="om-react-ui-segment-indicator"
+          class="om-component-ui-segment-indicator"
           style="width: 0px; transform: translateX(0px);"
         />
         <button
           aria-checked="true"
-          class="om-react-ui-segment-item om-react-ui-segment-item-active"
+          class="om-component-ui-segment-item om-component-ui-segment-item-active"
           role="radio"
           tabindex="0"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 1
           </span>
         </button>
         <button
           aria-checked="false"
-          class="om-react-ui-segment-item"
+          class="om-component-ui-segment-item"
           role="radio"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 2
           </span>
         </button>
         <button
           aria-checked="false"
-          class="om-react-ui-segment-item"
+          class="om-component-ui-segment-item"
           role="radio"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 3
           </span>
@@ -173,51 +173,51 @@ exports[`Segment renders with default value 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-segment"
+        class="om-component-ui-segment"
       >
         <div
-          class="om-react-ui-segment-track"
+          class="om-component-ui-segment-track"
           role="radiogroup"
         >
           <span
-            class="om-react-ui-segment-indicator"
+            class="om-component-ui-segment-indicator"
             style="width: 0px; transform: translateX(0px);"
           />
           <button
             aria-checked="false"
-            class="om-react-ui-segment-item"
+            class="om-component-ui-segment-item"
             role="radio"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 1
             </span>
           </button>
           <button
             aria-checked="true"
-            class="om-react-ui-segment-item om-react-ui-segment-item-active"
+            class="om-component-ui-segment-item om-component-ui-segment-item-active"
             role="radio"
             tabindex="0"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 2
             </span>
           </button>
           <button
             aria-checked="false"
-            class="om-react-ui-segment-item"
+            class="om-component-ui-segment-item"
             role="radio"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 3
             </span>
@@ -228,51 +228,51 @@ exports[`Segment renders with default value 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-segment"
+      class="om-component-ui-segment"
     >
       <div
-        class="om-react-ui-segment-track"
+        class="om-component-ui-segment-track"
         role="radiogroup"
       >
         <span
-          class="om-react-ui-segment-indicator"
+          class="om-component-ui-segment-indicator"
           style="width: 0px; transform: translateX(0px);"
         />
         <button
           aria-checked="false"
-          class="om-react-ui-segment-item"
+          class="om-component-ui-segment-item"
           role="radio"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 1
           </span>
         </button>
         <button
           aria-checked="true"
-          class="om-react-ui-segment-item om-react-ui-segment-item-active"
+          class="om-component-ui-segment-item om-component-ui-segment-item-active"
           role="radio"
           tabindex="0"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 2
           </span>
         </button>
         <button
           aria-checked="false"
-          class="om-react-ui-segment-item"
+          class="om-component-ui-segment-item"
           role="radio"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 3
           </span>
@@ -340,25 +340,25 @@ exports[`Segment renders with disabled item 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-segment"
+        class="om-component-ui-segment"
       >
         <div
-          class="om-react-ui-segment-track"
+          class="om-component-ui-segment-track"
           role="radiogroup"
         >
           <span
-            class="om-react-ui-segment-indicator"
+            class="om-component-ui-segment-indicator"
             style="width: 0px; transform: translateX(0px);"
           />
           <button
             aria-checked="true"
-            class="om-react-ui-segment-item om-react-ui-segment-item-active"
+            class="om-component-ui-segment-item om-component-ui-segment-item-active"
             role="radio"
             tabindex="0"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 1
             </span>
@@ -366,13 +366,13 @@ exports[`Segment renders with disabled item 1`] = `
           <button
             aria-checked="false"
             aria-disabled="true"
-            class="om-react-ui-segment-item om-react-ui-segment-item-disabled"
+            class="om-component-ui-segment-item om-component-ui-segment-item-disabled"
             role="radio"
             tabindex="-1"
             type="button"
           >
             <span
-              class="om-react-ui-segment-item-label"
+              class="om-component-ui-segment-item-label"
             >
               Tab 2
             </span>
@@ -383,25 +383,25 @@ exports[`Segment renders with disabled item 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-segment"
+      class="om-component-ui-segment"
     >
       <div
-        class="om-react-ui-segment-track"
+        class="om-component-ui-segment-track"
         role="radiogroup"
       >
         <span
-          class="om-react-ui-segment-indicator"
+          class="om-component-ui-segment-indicator"
           style="width: 0px; transform: translateX(0px);"
         />
         <button
           aria-checked="true"
-          class="om-react-ui-segment-item om-react-ui-segment-item-active"
+          class="om-component-ui-segment-item om-component-ui-segment-item-active"
           role="radio"
           tabindex="0"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 1
           </span>
@@ -409,13 +409,13 @@ exports[`Segment renders with disabled item 1`] = `
         <button
           aria-checked="false"
           aria-disabled="true"
-          class="om-react-ui-segment-item om-react-ui-segment-item-disabled"
+          class="om-component-ui-segment-item om-component-ui-segment-item-disabled"
           role="radio"
           tabindex="-1"
           type="button"
         >
           <span
-            class="om-react-ui-segment-item-label"
+            class="om-component-ui-segment-item-label"
           >
             Tab 2
           </span>

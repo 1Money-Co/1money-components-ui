@@ -123,7 +123,7 @@ describe('InputTrade — numeric behavior', () => {
 
   it('hides unit placeholder style when value exists', () => {
     const { container } = render(<InputTrade defaultValue="5" />);
-    const unit = container.querySelector('.om-react-ui-input-trade-unit') as HTMLElement;
+    const unit = container.querySelector('.om-component-ui-input-trade-unit') as HTMLElement;
     expect(unit.className).not.toContain('placeholder');
   });
 

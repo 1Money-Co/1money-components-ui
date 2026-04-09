@@ -48,7 +48,7 @@ describe('Drawer', () => {
     );
 
     const dialog = screen.getByRole('dialog');
-    const root = document.body.querySelector('.om-react-ui-drawer-root');
+    const root = document.body.querySelector('.om-component-ui-drawer-root');
 
     expect(dialog).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Go back' })).toBeInTheDocument();
@@ -83,7 +83,7 @@ describe('Drawer', () => {
       </Drawer>
     );
 
-    const overlay = document.body.querySelector('.om-react-ui-drawer-overlay');
+    const overlay = document.body.querySelector('.om-component-ui-drawer-overlay');
 
     expect(overlay).toBeInTheDocument();
 
@@ -102,7 +102,7 @@ describe('Drawer', () => {
       </Drawer>
     );
 
-    const overlay = document.body.querySelector('.om-react-ui-drawer-overlay');
+    const overlay = document.body.querySelector('.om-component-ui-drawer-overlay');
 
     expect(overlay).toBeInTheDocument();
 

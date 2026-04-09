@@ -3,30 +3,30 @@
 exports[`Pagination renders the default structure and matches the snapshot 1`] = `
 <nav
   aria-label="Pagination"
-  class="om-react-ui-pagination"
+  class="om-component-ui-pagination"
 >
   <ul
-    class="om-react-ui-pagination-list"
+    class="om-component-ui-pagination-list"
   >
     <li
-      class="om-react-ui-pagination-item"
+      class="om-component-ui-pagination-item"
     >
       <button
         aria-label="Previous page"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-control om-react-ui-pagination-button-disabled"
+        class="om-component-ui-pagination-button om-component-ui-pagination-button-control om-component-ui-pagination-button-disabled"
         data-page="1"
         disabled=""
         type="button"
       >
         <span
-          class="om-react-ui-pagination-icon"
+          class="om-component-ui-pagination-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="16"
               preserveAspectRatio="xMidYMid meet"
@@ -45,56 +45,56 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-disabled om-component-ui-typography-strong"
         >
           Previous
         </span>
       </button>
     </li>
     <li
-      class="om-react-ui-pagination-item"
+      class="om-component-ui-pagination-item"
     >
       <button
         aria-current="page"
         aria-label="Page 1, current page"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-page om-react-ui-pagination-button-current"
+        class="om-component-ui-pagination-button om-component-ui-pagination-button-page om-component-ui-pagination-button-current"
         data-page="1"
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-on-neutral om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-on-neutral om-component-ui-typography-strong"
         >
           1
         </span>
       </button>
     </li>
     <li
-      class="om-react-ui-pagination-item"
+      class="om-component-ui-pagination-item"
     >
       <button
         aria-label="Go to page 2"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        class="om-component-ui-pagination-button om-component-ui-pagination-button-page"
         data-page="2"
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           2
         </span>
       </button>
     </li>
     <li
-      class="om-react-ui-pagination-item"
+      class="om-component-ui-pagination-item"
     >
       <button
         aria-label="Go to page 3"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        class="om-component-ui-pagination-button om-component-ui-pagination-button-page"
         data-page="3"
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           3
         </span>
@@ -102,53 +102,53 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
     </li>
     <li
       aria-hidden="true"
-      class="om-react-ui-pagination-item om-react-ui-pagination-item-ellipsis"
+      class="om-component-ui-pagination-item om-component-ui-pagination-item-ellipsis"
     >
       <span
-        class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-pagination-ellipsis"
+        class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default om-component-ui-typography-strong om-component-ui-pagination-ellipsis"
       >
         ...
       </span>
     </li>
     <li
-      class="om-react-ui-pagination-item"
+      class="om-component-ui-pagination-item"
     >
       <button
         aria-label="Go to page 68"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-page"
+        class="om-component-ui-pagination-button om-component-ui-pagination-button-page"
         data-page="68"
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           68
         </span>
       </button>
     </li>
     <li
-      class="om-react-ui-pagination-item"
+      class="om-component-ui-pagination-item"
     >
       <button
         aria-label="Next page"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-control"
+        class="om-component-ui-pagination-button om-component-ui-pagination-button-control"
         data-page="2"
         type="button"
       >
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
         >
           Next
         </span>
         <span
-          class="om-react-ui-pagination-icon"
+          class="om-component-ui-pagination-icon"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="16"
               preserveAspectRatio="xMidYMid meet"

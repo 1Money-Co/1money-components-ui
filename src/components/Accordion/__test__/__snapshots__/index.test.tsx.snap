@@ -6,27 +6,27 @@ exports[`Accordion renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+        class="om-component-ui-accordion om-component-ui-accordion-fill om-component-ui-accordion-large"
       >
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 1
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -45,24 +45,24 @@ exports[`Accordion renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 2
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -81,24 +81,24 @@ exports[`Accordion renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 3
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -121,27 +121,27 @@ exports[`Accordion renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+      class="om-component-ui-accordion om-component-ui-accordion-fill om-component-ui-accordion-large"
     >
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 1
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -160,24 +160,24 @@ exports[`Accordion renders correctly 1`] = `
         </button>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 2
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -196,24 +196,24 @@ exports[`Accordion renders correctly 1`] = `
         </button>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 3
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -293,27 +293,27 @@ exports[`Accordion renders small size 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-small"
+        class="om-component-ui-accordion om-component-ui-accordion-fill om-component-ui-accordion-small"
       >
         <div
-          class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+          class="om-component-ui-accordion-item om-component-ui-accordion-item-active"
         >
           <button
             aria-expanded="true"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-md om-react-ui-typography-strong om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-md om-component-ui-typography-strong om-component-ui-accordion-title"
             >
               Item 1
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="20"
                 preserveAspectRatio="xMidYMid meet"
@@ -332,30 +332,30 @@ exports[`Accordion renders small size 1`] = `
             </i>
           </button>
           <div
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-accordion-content"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-accordion-content"
           >
             Content 1
           </div>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-md om-react-ui-typography-strong om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-md om-component-ui-typography-strong om-component-ui-accordion-title"
             >
               Item 2
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="20"
                 preserveAspectRatio="xMidYMid meet"
@@ -374,24 +374,24 @@ exports[`Accordion renders small size 1`] = `
           </button>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-md om-react-ui-typography-strong om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-md om-component-ui-typography-strong om-component-ui-accordion-title"
             >
               Item 3
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="20"
                 preserveAspectRatio="xMidYMid meet"
@@ -414,27 +414,27 @@ exports[`Accordion renders small size 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-small"
+      class="om-component-ui-accordion om-component-ui-accordion-fill om-component-ui-accordion-small"
     >
       <div
-        class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+        class="om-component-ui-accordion-item om-component-ui-accordion-item-active"
       >
         <button
           aria-expanded="true"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-md om-react-ui-typography-strong om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-md om-component-ui-typography-strong om-component-ui-accordion-title"
           >
             Item 1
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -453,30 +453,30 @@ exports[`Accordion renders small size 1`] = `
           </i>
         </button>
         <div
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-accordion-content"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-accordion-content"
         >
           Content 1
         </div>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-md om-react-ui-typography-strong om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-md om-component-ui-typography-strong om-component-ui-accordion-title"
           >
             Item 2
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -495,24 +495,24 @@ exports[`Accordion renders small size 1`] = `
         </button>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-md om-react-ui-typography-strong om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-md om-component-ui-typography-strong om-component-ui-accordion-title"
           >
             Item 3
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -592,27 +592,27 @@ exports[`Accordion renders stroke variant 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-accordion om-react-ui-accordion-stroke om-react-ui-accordion-large"
+        class="om-component-ui-accordion om-component-ui-accordion-stroke om-component-ui-accordion-large"
       >
         <div
-          class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+          class="om-component-ui-accordion-item om-component-ui-accordion-item-active"
         >
           <button
             aria-expanded="true"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 1
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -631,30 +631,30 @@ exports[`Accordion renders stroke variant 1`] = `
             </i>
           </button>
           <div
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-accordion-content"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-accordion-content"
           >
             Content 1
           </div>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 2
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -674,24 +674,24 @@ exports[`Accordion renders stroke variant 1`] = `
           </button>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 3
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -715,27 +715,27 @@ exports[`Accordion renders stroke variant 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-accordion om-react-ui-accordion-stroke om-react-ui-accordion-large"
+      class="om-component-ui-accordion om-component-ui-accordion-stroke om-component-ui-accordion-large"
     >
       <div
-        class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+        class="om-component-ui-accordion-item om-component-ui-accordion-item-active"
       >
         <button
           aria-expanded="true"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 1
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -754,30 +754,30 @@ exports[`Accordion renders stroke variant 1`] = `
           </i>
         </button>
         <div
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-accordion-content"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-accordion-content"
         >
           Content 1
         </div>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 2
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -797,24 +797,24 @@ exports[`Accordion renders stroke variant 1`] = `
         </button>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 3
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -895,27 +895,27 @@ exports[`Accordion renders with active keys 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+        class="om-component-ui-accordion om-component-ui-accordion-fill om-component-ui-accordion-large"
       >
         <div
-          class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+          class="om-component-ui-accordion-item om-component-ui-accordion-item-active"
         >
           <button
             aria-expanded="true"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 1
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -934,30 +934,30 @@ exports[`Accordion renders with active keys 1`] = `
             </i>
           </button>
           <div
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-accordion-content"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-accordion-content"
           >
             Content 1
           </div>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 2
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -976,24 +976,24 @@ exports[`Accordion renders with active keys 1`] = `
           </button>
         </div>
         <div
-          class="om-react-ui-accordion-item"
+          class="om-component-ui-accordion-item"
         >
           <button
             aria-expanded="false"
-            class="om-react-ui-accordion-header"
+            class="om-component-ui-accordion-header"
             type="button"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
             >
               Item 3
             </div>
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-accordion-icon"
+                class="om-component-ui-icons om-component-ui-accordion-icon"
                 fill="none"
                 height="24"
                 preserveAspectRatio="xMidYMid meet"
@@ -1016,27 +1016,27 @@ exports[`Accordion renders with active keys 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-accordion om-react-ui-accordion-fill om-react-ui-accordion-large"
+      class="om-component-ui-accordion om-component-ui-accordion-fill om-component-ui-accordion-large"
     >
       <div
-        class="om-react-ui-accordion-item om-react-ui-accordion-item-active"
+        class="om-component-ui-accordion-item om-component-ui-accordion-item-active"
       >
         <button
           aria-expanded="true"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 1
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1055,30 +1055,30 @@ exports[`Accordion renders with active keys 1`] = `
           </i>
         </button>
         <div
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-accordion-content"
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-accordion-content"
         >
           Content 1
         </div>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 2
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"
@@ -1097,24 +1097,24 @@ exports[`Accordion renders with active keys 1`] = `
         </button>
       </div>
       <div
-        class="om-react-ui-accordion-item"
+        class="om-component-ui-accordion-item"
       >
         <button
           aria-expanded="false"
-          class="om-react-ui-accordion-header"
+          class="om-component-ui-accordion-header"
           type="button"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-accordion-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-accordion-title"
           >
             Item 3
           </div>
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
           >
             <svg
-              class="om-react-ui-icons om-react-ui-accordion-icon"
+              class="om-component-ui-icons om-component-ui-accordion-icon"
               fill="none"
               height="24"
               preserveAspectRatio="xMidYMid meet"

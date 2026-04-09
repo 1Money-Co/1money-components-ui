@@ -4,7 +4,7 @@ import { toArray } from './utils/reactUtil';
 import SingleObserver from './SingleObserver';
 import { Collection } from './Collection';
 
-const INTERNAL_PREFIX_KEY = 'om-react-ui-observer-key';
+const INTERNAL_PREFIX_KEY = 'om-component-ui-observer-key';
 
 function ResizeObserver(props: ResizeObserverProps, ref: React.Ref<HTMLElement>) {
   const { children } = props;

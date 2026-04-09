@@ -6,26 +6,26 @@ exports[`Carousel renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-carousel"
+        class="om-component-ui-carousel"
       >
         <button
           aria-label="Go to step 1"
-          class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+          class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
           type="button"
         />
         <button
           aria-label="Go to step 2"
-          class="om-react-ui-carousel-dot"
+          class="om-component-ui-carousel-dot"
           type="button"
         />
         <button
           aria-label="Go to step 3"
-          class="om-react-ui-carousel-dot"
+          class="om-component-ui-carousel-dot"
           type="button"
         />
         <button
           aria-label="Go to step 4"
-          class="om-react-ui-carousel-dot"
+          class="om-component-ui-carousel-dot"
           type="button"
         />
       </div>
@@ -33,26 +33,26 @@ exports[`Carousel renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-carousel"
+      class="om-component-ui-carousel"
     >
       <button
         aria-label="Go to step 1"
-        class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+        class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
         type="button"
       />
       <button
         aria-label="Go to step 2"
-        class="om-react-ui-carousel-dot"
+        class="om-component-ui-carousel-dot"
         type="button"
       />
       <button
         aria-label="Go to step 3"
-        class="om-react-ui-carousel-dot"
+        class="om-component-ui-carousel-dot"
         type="button"
       />
       <button
         aria-label="Go to step 4"
-        class="om-react-ui-carousel-dot"
+        class="om-component-ui-carousel-dot"
         type="button"
       />
     </div>
@@ -117,21 +117,21 @@ exports[`Carousel renders with active index 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-carousel"
+        class="om-component-ui-carousel"
       >
         <button
           aria-label="Go to step 1"
-          class="om-react-ui-carousel-dot"
+          class="om-component-ui-carousel-dot"
           type="button"
         />
         <button
           aria-label="Go to step 2"
-          class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+          class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
           type="button"
         />
         <button
           aria-label="Go to step 3"
-          class="om-react-ui-carousel-dot"
+          class="om-component-ui-carousel-dot"
           type="button"
         />
       </div>
@@ -139,21 +139,21 @@ exports[`Carousel renders with active index 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-carousel"
+      class="om-component-ui-carousel"
     >
       <button
         aria-label="Go to step 1"
-        class="om-react-ui-carousel-dot"
+        class="om-component-ui-carousel-dot"
         type="button"
       />
       <button
         aria-label="Go to step 2"
-        class="om-react-ui-carousel-dot om-react-ui-carousel-dot-active"
+        class="om-component-ui-carousel-dot om-component-ui-carousel-dot-active"
         type="button"
       />
       <button
         aria-label="Go to step 3"
-        class="om-react-ui-carousel-dot"
+        class="om-component-ui-carousel-dot"
         type="button"
       />
     </div>

@@ -6,24 +6,24 @@ exports[`Step renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="om-react-ui-step"
+        class="om-component-ui-step"
       >
         <div
-          class="om-react-ui-step-item om-react-ui-step-item-completed"
+          class="om-component-ui-step-item om-component-ui-step-item-completed"
         >
           <div
             aria-hidden="true"
-            class="om-react-ui-step-indicator-column"
+            class="om-component-ui-step-indicator-column"
           >
             <div
-              class="om-react-ui-step-indicator"
+              class="om-component-ui-step-indicator"
             >
               <i
-                class="om-react-ui-icons-wrapper"
+                class="om-component-ui-icons-wrapper"
                 style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; font-style: normal; --icon-color: var(--om-step-status-success-bg); --icon-width: 22px; --icon-height: 22px;"
               >
                 <svg
-                  class="om-react-ui-icons om-react-ui-step-indicator-icon om-react-ui-step-indicator-icon-completed"
+                  class="om-component-ui-icons om-component-ui-step-indicator-icon om-component-ui-step-indicator-icon-completed"
                   fill="none"
                   height="22"
                   preserveAspectRatio="xMidYMid meet"
@@ -48,34 +48,34 @@ exports[`Step renders correctly 1`] = `
               </i>
             </div>
             <span
-              class="om-react-ui-step-connector"
+              class="om-component-ui-step-connector"
             />
           </div>
           <div
-            class="om-react-ui-step-content om-react-ui-step-content-continuation"
+            class="om-component-ui-step-content om-component-ui-step-content-continuation"
           >
             <div
-              class="om-react-ui-step-copy"
+              class="om-component-ui-step-copy"
             >
               <div
-                class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-xs om-react-ui-typography-color-default"
+                class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-xs om-component-ui-typography-color-default"
               >
                 Text Heading
               </div>
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+                class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary"
               >
                 Body text
               </span>
             </div>
             <div
-              class="om-react-ui-step-tag"
+              class="om-component-ui-step-tag"
             >
               <span
-                class="om-react-ui-tag om-react-ui-tag-success om-react-ui-tag-large"
+                class="om-component-ui-tag om-component-ui-tag-success om-component-ui-tag-large"
               >
                 <span
-                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+                  class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
                 >
                   Tag
                 </span>
@@ -84,50 +84,50 @@ exports[`Step renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-step-item om-react-ui-step-item-default"
+          class="om-component-ui-step-item om-component-ui-step-item-default"
         >
           <div
             aria-hidden="true"
-            class="om-react-ui-step-indicator-column"
+            class="om-component-ui-step-indicator-column"
           >
             <div
-              class="om-react-ui-step-indicator"
+              class="om-component-ui-step-indicator"
             >
               <span
-                class="om-react-ui-step-indicator-number"
+                class="om-component-ui-step-indicator-number"
               >
                 2
               </span>
             </div>
             <span
-              class="om-react-ui-step-connector"
+              class="om-component-ui-step-connector"
             />
           </div>
           <div
-            class="om-react-ui-step-content om-react-ui-step-content-continuation"
+            class="om-component-ui-step-content om-component-ui-step-content-continuation"
           >
             <div
-              class="om-react-ui-step-copy"
+              class="om-component-ui-step-copy"
             >
               <div
-                class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-xs om-react-ui-typography-color-default"
+                class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-xs om-component-ui-typography-color-default"
               >
                 Text Heading
               </div>
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+                class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary"
               >
                 Body text
               </span>
             </div>
             <div
-              class="om-react-ui-step-tag"
+              class="om-component-ui-step-tag"
             >
               <span
-                class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+                class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
               >
                 <span
-                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+                  class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
                 >
                   Tag
                 </span>
@@ -136,21 +136,21 @@ exports[`Step renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-step-item om-react-ui-step-item-error"
+          class="om-component-ui-step-item om-component-ui-step-item-error"
         >
           <div
             aria-hidden="true"
-            class="om-react-ui-step-indicator-column"
+            class="om-component-ui-step-indicator-column"
           >
             <div
-              class="om-react-ui-step-indicator"
+              class="om-component-ui-step-indicator"
             >
               <i
-                class="om-react-ui-icons-wrapper"
+                class="om-component-ui-icons-wrapper"
                 style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; font-style: normal; --icon-color: var(--om-step-status-error-bg); --icon-width: 22px; --icon-height: 22px;"
               >
                 <svg
-                  class="om-react-ui-icons om-react-ui-step-indicator-icon om-react-ui-step-indicator-icon-error"
+                  class="om-component-ui-icons om-component-ui-step-indicator-icon om-component-ui-step-indicator-icon-error"
                   fill="none"
                   height="22"
                   preserveAspectRatio="xMidYMid meet"
@@ -180,30 +180,30 @@ exports[`Step renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="om-react-ui-step-content"
+            class="om-component-ui-step-content"
           >
             <div
-              class="om-react-ui-step-copy"
+              class="om-component-ui-step-copy"
             >
               <div
-                class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-xs om-react-ui-typography-color-default"
+                class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-xs om-component-ui-typography-color-default"
               >
                 Text Heading
               </div>
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+                class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary"
               >
                 Body text
               </span>
             </div>
             <div
-              class="om-react-ui-step-tag"
+              class="om-component-ui-step-tag"
             >
               <span
-                class="om-react-ui-tag om-react-ui-tag-negative om-react-ui-tag-large"
+                class="om-component-ui-tag om-component-ui-tag-negative om-component-ui-tag-large"
               >
                 <span
-                  class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+                  class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
                 >
                   Tag
                 </span>
@@ -216,24 +216,24 @@ exports[`Step renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="om-react-ui-step"
+      class="om-component-ui-step"
     >
       <div
-        class="om-react-ui-step-item om-react-ui-step-item-completed"
+        class="om-component-ui-step-item om-component-ui-step-item-completed"
       >
         <div
           aria-hidden="true"
-          class="om-react-ui-step-indicator-column"
+          class="om-component-ui-step-indicator-column"
         >
           <div
-            class="om-react-ui-step-indicator"
+            class="om-component-ui-step-indicator"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; font-style: normal; --icon-color: var(--om-step-status-success-bg); --icon-width: 22px; --icon-height: 22px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-step-indicator-icon om-react-ui-step-indicator-icon-completed"
+                class="om-component-ui-icons om-component-ui-step-indicator-icon om-component-ui-step-indicator-icon-completed"
                 fill="none"
                 height="22"
                 preserveAspectRatio="xMidYMid meet"
@@ -258,34 +258,34 @@ exports[`Step renders correctly 1`] = `
             </i>
           </div>
           <span
-            class="om-react-ui-step-connector"
+            class="om-component-ui-step-connector"
           />
         </div>
         <div
-          class="om-react-ui-step-content om-react-ui-step-content-continuation"
+          class="om-component-ui-step-content om-component-ui-step-content-continuation"
         >
           <div
-            class="om-react-ui-step-copy"
+            class="om-component-ui-step-copy"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-xs om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-xs om-component-ui-typography-color-default"
             >
               Text Heading
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary"
             >
               Body text
             </span>
           </div>
           <div
-            class="om-react-ui-step-tag"
+            class="om-component-ui-step-tag"
           >
             <span
-              class="om-react-ui-tag om-react-ui-tag-success om-react-ui-tag-large"
+              class="om-component-ui-tag om-component-ui-tag-success om-component-ui-tag-large"
             >
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+                class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
               >
                 Tag
               </span>
@@ -294,50 +294,50 @@ exports[`Step renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-step-item om-react-ui-step-item-default"
+        class="om-component-ui-step-item om-component-ui-step-item-default"
       >
         <div
           aria-hidden="true"
-          class="om-react-ui-step-indicator-column"
+          class="om-component-ui-step-indicator-column"
         >
           <div
-            class="om-react-ui-step-indicator"
+            class="om-component-ui-step-indicator"
           >
             <span
-              class="om-react-ui-step-indicator-number"
+              class="om-component-ui-step-indicator-number"
             >
               2
             </span>
           </div>
           <span
-            class="om-react-ui-step-connector"
+            class="om-component-ui-step-connector"
           />
         </div>
         <div
-          class="om-react-ui-step-content om-react-ui-step-content-continuation"
+          class="om-component-ui-step-content om-component-ui-step-content-continuation"
         >
           <div
-            class="om-react-ui-step-copy"
+            class="om-component-ui-step-copy"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-xs om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-xs om-component-ui-typography-color-default"
             >
               Text Heading
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary"
             >
               Body text
             </span>
           </div>
           <div
-            class="om-react-ui-step-tag"
+            class="om-component-ui-step-tag"
           >
             <span
-              class="om-react-ui-tag om-react-ui-tag-neutral om-react-ui-tag-large"
+              class="om-component-ui-tag om-component-ui-tag-neutral om-component-ui-tag-large"
             >
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+                class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
               >
                 Tag
               </span>
@@ -346,21 +346,21 @@ exports[`Step renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="om-react-ui-step-item om-react-ui-step-item-error"
+        class="om-component-ui-step-item om-component-ui-step-item-error"
       >
         <div
           aria-hidden="true"
-          class="om-react-ui-step-indicator-column"
+          class="om-component-ui-step-indicator-column"
         >
           <div
-            class="om-react-ui-step-indicator"
+            class="om-component-ui-step-indicator"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; font-style: normal; --icon-color: var(--om-step-status-error-bg); --icon-width: 22px; --icon-height: 22px;"
             >
               <svg
-                class="om-react-ui-icons om-react-ui-step-indicator-icon om-react-ui-step-indicator-icon-error"
+                class="om-component-ui-icons om-component-ui-step-indicator-icon om-component-ui-step-indicator-icon-error"
                 fill="none"
                 height="22"
                 preserveAspectRatio="xMidYMid meet"
@@ -390,30 +390,30 @@ exports[`Step renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="om-react-ui-step-content"
+          class="om-component-ui-step-content"
         >
           <div
-            class="om-react-ui-step-copy"
+            class="om-component-ui-step-copy"
           >
             <div
-              class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-xs om-react-ui-typography-color-default"
+              class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-xs om-component-ui-typography-color-default"
             >
               Text Heading
             </div>
             <span
-              class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-color-default-tertiary"
+              class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-tertiary"
             >
               Body text
             </span>
           </div>
           <div
-            class="om-react-ui-step-tag"
+            class="om-component-ui-step-tag"
           >
             <span
-              class="om-react-ui-tag om-react-ui-tag-negative om-react-ui-tag-large"
+              class="om-component-ui-tag om-component-ui-tag-negative om-component-ui-tag-large"
             >
               <span
-                class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-sm om-react-ui-typography-strong om-react-ui-tag-label om-react-ui-tag-label-large"
+                class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-sm om-component-ui-typography-strong om-component-ui-tag-label om-component-ui-tag-label-large"
               >
                 Tag
               </span>

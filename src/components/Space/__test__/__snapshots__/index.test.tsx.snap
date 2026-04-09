@@ -2,39 +2,39 @@
 
 exports[`Space renders horizontal spacing with split 1`] = `
 <div
-  class="om-react-ui-space om-react-ui-space-align-center om-react-ui-space-wrap"
+  class="om-component-ui-space om-component-ui-space-align-center om-component-ui-space-wrap"
   style="--om-space-column-gap: 8px; --om-space-row-gap: 8px;"
 >
   <div
-    class="om-react-ui-space-item"
+    class="om-component-ui-space-item"
   >
     <div>
       One
     </div>
   </div>
   <span
-    class="om-react-ui-space-split"
+    class="om-component-ui-space-split"
   >
     <span>
       |
     </span>
   </span>
   <div
-    class="om-react-ui-space-item"
+    class="om-component-ui-space-item"
   >
     <div>
       Two
     </div>
   </div>
   <span
-    class="om-react-ui-space-split"
+    class="om-component-ui-space-split"
   >
     <span>
       |
     </span>
   </span>
   <div
-    class="om-react-ui-space-item"
+    class="om-component-ui-space-item"
   >
     <div>
       Three
@@ -45,18 +45,18 @@ exports[`Space renders horizontal spacing with split 1`] = `
 
 exports[`Space renders vertical spacing with numeric sizes 1`] = `
 <div
-  class="om-react-ui-space om-react-ui-space-vertical"
+  class="om-component-ui-space om-component-ui-space-vertical"
   style="--om-space-column-gap: 8px; --om-space-row-gap: 16px;"
 >
   <div
-    class="om-react-ui-space-item"
+    class="om-component-ui-space-item"
   >
     <div>
       Top
     </div>
   </div>
   <div
-    class="om-react-ui-space-item"
+    class="om-component-ui-space-item"
   >
     <div>
       Bottom

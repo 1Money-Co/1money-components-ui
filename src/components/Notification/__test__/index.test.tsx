@@ -143,7 +143,7 @@ describe('Notification', () => {
     const { container } = render(
       <NotificationCard title="No icon" showIcon={false} />
     );
-    expect(container.querySelector('.om-react-ui-notification-icon')).toBeNull();
+    expect(container.querySelector('.om-component-ui-notification-icon')).toBeNull();
   });
 
   it('hides close button when closable is false', () => {
@@ -164,7 +164,7 @@ describe('Notification', () => {
     });
 
     expect(screen.getByText('Placed notification')).toBeInTheDocument();
-    expect(document.querySelector('.om-react-ui-notification-stack-bottomLeft')).toContainElement(
+    expect(document.querySelector('.om-component-ui-notification-stack-bottomLeft')).toContainElement(
       screen.getByText('Placed notification')
     );
   });
@@ -186,10 +186,10 @@ describe('Notification', () => {
     });
 
     expect(screen.getByText('Auto close')).toBeInTheDocument();
-    expect(screen.getByText('Auto close').closest('.om-react-ui-notification-item'))
-      .toHaveClass('om-react-ui-notification-item-exit');
-    expect(screen.getByText('Auto close').closest('.om-react-ui-notification-item'))
-      .not.toHaveClass('om-react-ui-notification-item-exit-collapse');
+    expect(screen.getByText('Auto close').closest('.om-component-ui-notification-item'))
+      .toHaveClass('om-component-ui-notification-item-exit');
+    expect(screen.getByText('Auto close').closest('.om-component-ui-notification-item'))
+      .not.toHaveClass('om-component-ui-notification-item-exit-collapse');
 
     await act(async () => {
       jest.advanceTimersByTime(NOTIFICATION_MOTION_DURATION);
@@ -221,7 +221,7 @@ describe('Notification', () => {
 
     expect(screen.getByText('Sync complete')).toBeInTheDocument();
     expect(screen.queryByText('Sync in progress')).not.toBeInTheDocument();
-    expect(document.querySelectorAll('.om-react-ui-notification-item')).toHaveLength(1);
+    expect(document.querySelectorAll('.om-component-ui-notification-item')).toHaveLength(1);
   });
 
   it('applies maxCount per placement and removes the oldest notification', async () => {
@@ -248,10 +248,10 @@ describe('Notification', () => {
 
     expect(screen.getByText('First notification')).toBeInTheDocument();
     expect(screen.getByText('Second notification')).toBeInTheDocument();
-    expect(screen.getByText('First notification').closest('.om-react-ui-notification-item'))
-      .toHaveClass('om-react-ui-notification-item-exit');
-    expect(screen.getByText('First notification').closest('.om-react-ui-notification-item'))
-      .toHaveClass('om-react-ui-notification-item-exit-collapse');
+    expect(screen.getByText('First notification').closest('.om-component-ui-notification-item'))
+      .toHaveClass('om-component-ui-notification-item-exit');
+    expect(screen.getByText('First notification').closest('.om-component-ui-notification-item'))
+      .toHaveClass('om-component-ui-notification-item-exit-collapse');
 
     await act(async () => {
       jest.advanceTimersByTime(NOTIFICATION_MOTION_DURATION);
@@ -283,10 +283,10 @@ describe('Notification', () => {
       });
     });
 
-    expect(document.querySelector('.om-react-ui-notification-stack-bottomRight')).toContainElement(
+    expect(document.querySelector('.om-component-ui-notification-stack-bottomRight')).toContainElement(
       screen.getByText('Default placement')
     );
-    expect(document.querySelector('.om-react-ui-notification-stack-topLeft')).toContainElement(
+    expect(document.querySelector('.om-component-ui-notification-stack-topLeft')).toContainElement(
       screen.getByText('Override placement')
     );
   });
@@ -307,8 +307,8 @@ describe('Notification', () => {
     });
 
     expect(screen.getByText('Dismiss me')).toBeInTheDocument();
-    expect(screen.getByText('Dismiss me').closest('.om-react-ui-notification-item'))
-      .toHaveClass('om-react-ui-notification-item-exit');
+    expect(screen.getByText('Dismiss me').closest('.om-component-ui-notification-item'))
+      .toHaveClass('om-component-ui-notification-item-exit');
 
     await act(async () => {
       jest.advanceTimersByTime(NOTIFICATION_MOTION_DURATION);

@@ -1,5 +1,5 @@
 // Styles API — single public entrypoint for component and business SCSS.
 // Usage: @use '@/styles/api' as theme;
-$prefix: 'om-react-ui' !default;
+$prefix: 'om-component-ui' !default;
 
 @forward './public';

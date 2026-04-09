@@ -2,37 +2,37 @@
 
 exports[`Drawer renders the figma-aligned header and footer structure when open 1`] = `
 <div
-  class="om-react-ui-drawer-root om-react-ui-drawer-root-open"
+  class="om-component-ui-drawer-root om-component-ui-drawer-root-open"
 >
   <div
     aria-hidden="true"
-    class="om-react-ui-drawer-overlay"
+    class="om-component-ui-drawer-overlay"
   />
   <div
     aria-label="Title"
     aria-modal="true"
-    class="om-react-ui-drawer om-react-ui-drawer-right"
+    class="om-component-ui-drawer om-component-ui-drawer-right"
     role="dialog"
     style="width: 360px;"
     tabindex="-1"
   >
     <div
-      class="om-react-ui-drawer-header"
+      class="om-component-ui-drawer-header"
     >
       <div
-        class="om-react-ui-drawer-header-main"
+        class="om-component-ui-drawer-header-main"
       >
         <button
           aria-label="Go back"
-          class="om-react-ui-drawer-control om-react-ui-drawer-control-back"
+          class="om-component-ui-drawer-control om-component-ui-drawer-control-back"
           type="button"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="14"
               preserveAspectRatio="xMidYMid meet"
@@ -51,22 +51,22 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
           </i>
         </button>
         <div
-          class="om-react-ui-typography om-react-ui-typography-title om-react-ui-typography-title-lg om-react-ui-typography-color-default om-react-ui-typography-strong om-react-ui-drawer-title"
+          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-lg om-component-ui-typography-color-default om-component-ui-typography-strong om-component-ui-drawer-title"
         >
           Title
         </div>
       </div>
       <button
         aria-label="Close drawer"
-        class="om-react-ui-drawer-control om-react-ui-drawer-control-close"
+        class="om-component-ui-drawer-control om-component-ui-drawer-control-close"
         type="button"
       >
         <i
-          class="om-react-ui-icons-wrapper"
+          class="om-component-ui-icons-wrapper"
           style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
         >
           <svg
-            class="om-react-ui-icons"
+            class="om-component-ui-icons"
             fill="none"
             height="14"
             preserveAspectRatio="xMidYMid meet"
@@ -86,36 +86,36 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
       </button>
     </div>
     <div
-      class="om-react-ui-drawer-body"
+      class="om-component-ui-drawer-body"
     >
       <div>
         Body content
       </div>
     </div>
     <div
-      class="om-react-ui-drawer-footer"
+      class="om-component-ui-drawer-footer"
     >
       <div
         style="display: flex; gap: 12px; width: 100%;"
       >
         <button
-          class="om-react-ui-button om-react-ui-button-secondary om-react-ui-button-medium"
+          class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-medium"
           style="flex: 1;"
           type="button"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong"
           >
             Cancel
           </span>
         </button>
         <button
-          class="om-react-ui-button om-react-ui-button-primary om-react-ui-button-medium"
+          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-medium"
           style="flex: 1;"
           type="button"
         >
           <span
-            class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-md om-react-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong"
           >
             Confirm
           </span>

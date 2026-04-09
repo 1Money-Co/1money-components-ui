@@ -18,7 +18,7 @@ import {
 import { Button } from '../index';
 
 const getButtonClassName = (slotOrModifier?: string) =>
-  `om-react-ui-${BUTTON_DEFAULT_PREFIX}${slotOrModifier ? `-${slotOrModifier}` : ''}`;
+  `om-component-ui-${BUTTON_DEFAULT_PREFIX}${slotOrModifier ? `-${slotOrModifier}` : ''}`;
 
 const readButtonStylesSource = () =>
   fs.readFileSync(path.resolve(__dirname, '../style/Button.scss'), 'utf8');
@@ -110,7 +110,7 @@ describe('Button', () => {
       </Button>
     );
 
-    const iconWrappers = container.querySelectorAll('.om-react-ui-icons-wrapper');
+    const iconWrappers = container.querySelectorAll('.om-component-ui-icons-wrapper');
 
     expect(iconWrappers).toHaveLength(2);
     iconWrappers.forEach(iconWrapper => {
@@ -185,7 +185,7 @@ describe('Button', () => {
       </Button>
     );
 
-    const iconWrapper = container.querySelector('.om-react-ui-icons-wrapper');
+    const iconWrapper = container.querySelector('.om-component-ui-icons-wrapper');
 
     expect(iconWrapper).toHaveAttribute(
       'style',

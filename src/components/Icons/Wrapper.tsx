@@ -11,8 +11,8 @@ const ensureSvgColorRules = () => {
   const style = document.createElement('style');
   style.id = SVG_COLOR_STYLE_ID;
   style.textContent =
-    '.om-react-ui-icons *:not(g):not(defs):not(clipPath):not(linearGradient):not([fill]):not([stroke]):not([stroke-width]){fill:currentcolor}' +
-    '.om-react-ui-icons *:not(g):not(defs):not(clipPath):not(linearGradient)[stroke-width]:not([stroke]):not([fill]){stroke:currentcolor}';
+    '.om-component-ui-icons *:not(g):not(defs):not(clipPath):not(linearGradient):not([fill]):not([stroke]):not([stroke-width]){fill:currentcolor}' +
+    '.om-component-ui-icons *:not(g):not(defs):not(clipPath):not(linearGradient)[stroke-width]:not([stroke]):not([fill]){stroke:currentcolor}';
   document.head.appendChild(style);
 };
 
