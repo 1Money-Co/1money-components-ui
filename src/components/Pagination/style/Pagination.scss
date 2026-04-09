@@ -67,15 +67,6 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
     }
   }
 
-  &-button-disabled {
-    color: theme.palette(text, 'disabled');
-    cursor: not-allowed;
-
-    &:hover {
-      background-color: transparent;
-    }
-  }
-
   &-icon {
     display: inline-flex;
     flex-shrink: 0;
@@ -89,7 +80,4 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
     cursor: default;
   }
 
-  &-disabled {
-    cursor: not-allowed;
-  }
 }

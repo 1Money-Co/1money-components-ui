@@ -1,4 +1,4 @@
-// Typography primitives — font families, weights, line-heights, tracking, and default text color.
+// Typography primitives — font families, weights, tracking, and default text color.
 
 @use '../color/primitives' as color;
 
@@ -13,10 +13,6 @@ $om-font-weight-regular: 400 !default;
 $om-font-weight-medium: 500 !default;
 $om-font-weight-semibold: 600 !default;
 $om-font-weight-bold: 700 !default;
-
-// ── Line-height ratios ──
-$om-line-height-tight: 1.08 !default;
-$om-line-height-reading: 1.4 !default;
 
 // ── Letter spacing ──
 $om-tracking-tight: -0.25px !default;

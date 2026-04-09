@@ -105,15 +105,25 @@ export const Popconfirm: FC<PopconfirmProps> = (props) => {
         const actionContext: PopconfirmActionContext = { close, open };
 
         return (
-          <div
-            className={classes(
-              undefined,
-              joinCls(
-                !showArrow && classes(POPCONFIRM_SLOT.noArrow),
-                className,
-              ),
+          <div className={classes(undefined, className)}>
+            {showArrow && (
+              <svg
+                className={classes(POPCONFIRM_SLOT.arrow)}
+                viewBox="0 0 36 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
+                  className={classes(POPCONFIRM_SLOT.arrowFill)}
+                />
+                <path
+                  d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
+                  className={classes(POPCONFIRM_SLOT.arrowStroke)}
+                />
+              </svg>
             )}
-          >
             {(showIcon || title || body) && (
               <div className={classes(POPCONFIRM_SLOT.header)}>
                 {showIcon && (

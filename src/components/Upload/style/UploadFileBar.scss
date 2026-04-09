@@ -73,8 +73,6 @@ $component: 'upload-file-bar';
 
     &-remove {
       flex-shrink: 0;
-      color: theme.palette(icon, 'default');
-      cursor: pointer;
     }
   }
 

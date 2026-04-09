@@ -13,9 +13,8 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
     >
       <button
         aria-label="Previous page"
-        class="om-react-ui-pagination-button om-react-ui-pagination-button-control om-react-ui-pagination-button-disabled"
+        class="om-react-ui-pagination-button om-react-ui-pagination-button-control"
         data-page="1"
-        disabled=""
         type="button"
       >
         <span
@@ -45,7 +44,7 @@ exports[`Pagination renders the default structure and matches the snapshot 1`] =
           </i>
         </span>
         <span
-          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-disabled om-react-ui-typography-strong"
+          class="om-react-ui-typography om-react-ui-typography-body om-react-ui-typography-body-lg om-react-ui-typography-color-default om-react-ui-typography-strong"
         >
           Previous
         </span>

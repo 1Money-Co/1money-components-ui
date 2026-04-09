@@ -8,7 +8,6 @@ export interface UsePaginationOptions {
   pageSize?: number;
   current?: number;
   defaultCurrent?: number;
-  disabled?: boolean;
   /**
    * Number of pages always displayed at both the start and end of the pagination.
    */
@@ -30,7 +29,6 @@ export interface PaginationProps
 export interface PaginationItemBase {
   key: string;
   type: PaginationItemType;
-  disabled?: boolean;
 }
 
 export interface PaginationPageItem extends PaginationItemBase {

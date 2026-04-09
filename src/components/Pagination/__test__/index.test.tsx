@@ -138,7 +138,6 @@ describe('Pagination', () => {
     );
 
     expect(screen.getByRole('navigation', { name: 'Pagination' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Previous page' })).toBeDisabled();
     expect(screen.getByRole('button', { name: 'Page 1, current page' })).toHaveAttribute('aria-current', 'page');
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -160,26 +159,6 @@ describe('Pagination', () => {
 
     expect(onChange).toHaveBeenCalledWith(2, 10);
     expect(screen.getByRole('button', { name: 'Page 2, current page' })).toHaveAttribute('aria-current', 'page');
-  });
-
-  it('freezes interaction when disabled', async () => {
-    const onChange = jest.fn();
-    const user = userEvent.setup();
-
-    render(
-      <Pagination
-        total={680}
-        pageSize={10}
-        defaultCurrent={2}
-        disabled
-        onChange={onChange}
-      />,
-    );
-
-    await user.click(screen.getByRole('button', { name: 'Next page' }));
-
-    expect(onChange).not.toHaveBeenCalled();
-    expect(screen.getByRole('button', { name: 'Go to page 3' })).toBeDisabled();
   });
 
   it('renders nothing when total is zero', () => {
@@ -223,7 +202,7 @@ describe('Pagination', () => {
     ).toBe(PAGINATION_CHEVRON_RIGHT_PATH);
   });
 
-  it('applies explicit typography colors for current and disabled items', () => {
+  it('applies explicit typography color for the current page', () => {
     render(
       <Pagination
         total={680}
@@ -235,8 +214,5 @@ describe('Pagination', () => {
     expect(
       screen.getByRole('button', { name: 'Page 1, current page' }).querySelector('.om-react-ui-typography'),
     ).toHaveClass('om-react-ui-typography-color-on-neutral');
-    expect(
-      screen.getByRole('button', { name: 'Previous page' }).querySelector('.om-react-ui-typography'),
-    ).toHaveClass('om-react-ui-typography-color-disabled');
   });
 });

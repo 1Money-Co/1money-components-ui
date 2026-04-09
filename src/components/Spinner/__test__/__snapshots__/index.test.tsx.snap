@@ -218,7 +218,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
           class="om-react-ui-spinner-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-typography-color-default om-react-ui-spinner-title"
           >
             Loading
           </div>
@@ -298,7 +298,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
         class="om-react-ui-spinner-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+          class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-typography-color-default om-react-ui-spinner-title"
         >
           Loading
         </div>
@@ -435,7 +435,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
           class="om-react-ui-spinner-content"
         >
           <div
-            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+            class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-typography-color-default om-react-ui-spinner-title"
           >
             Loading
           </div>
@@ -510,7 +510,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
         class="om-react-ui-spinner-content"
       >
         <div
-          class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-spinner-title"
+          class="om-react-ui-typography om-react-ui-typography-headline om-react-ui-typography-headline-sm om-react-ui-typography-color-default om-react-ui-spinner-title"
         >
           Loading
         </div>

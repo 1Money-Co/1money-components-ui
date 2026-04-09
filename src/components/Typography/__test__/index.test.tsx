@@ -38,6 +38,8 @@ jest.mock('@/components/Tooltip', () => ({
 const originalConsoleError = console.error;
 const readTypographyStylesSource = () =>
   fs.readFileSync(path.resolve(__dirname, '../style/Typography.scss'), 'utf8');
+const readSemanticTypographySource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../../../styles/tokens/typography/_semantic-typography.scss'), 'utf8');
 const readSemanticColorSource = () =>
   fs.readFileSync(path.resolve(__dirname, '../../../styles/tokens/color/_semantic-color.scss'), 'utf8');
 
@@ -104,6 +106,28 @@ describe('Typography', () => {
 
     expect(semanticColorSource).toContain("'on-neutral-secondary': p.$grey-300");
     expect(semanticColorSource).toContain("'on-neutral-tertiary': p.$grey-200");
+  });
+
+  it('encodes Figma line-heights as discrete typography token values', () => {
+    const semanticTypographySource = readSemanticTypographySource();
+
+    [
+      ['76px', '106px'],
+      ['64px', '90px'],
+      ['52px', '72px'],
+      ['46px', '64px'],
+      ['36px', '50px'],
+      ['32px', '44px'],
+      ['28px', '40px'],
+      ['24px', '34px'],
+      ['18px', '26px'],
+      ['16px', '22px'],
+      ['14px', '20px'],
+      ['12px', '16px'],
+      ['10px', '14px'],
+    ].forEach(([fontSize, lineHeight]) => {
+      expect(semanticTypographySource).toContain(`font-size: ${fontSize},\n    line-height: ${lineHeight},`);
+    });
   });
 
   it('inherits text color by default', () => {
