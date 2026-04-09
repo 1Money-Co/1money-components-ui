@@ -32,8 +32,8 @@ const getRangeDateStyles = (
     selectedDates[0] &&
     selectedDates[1] &&
     !isSameDay(selectedDates[0], selectedDates[1]);
-  const isStart = hasRange && isSameDay(cellDate, selectedDates[0]);
-  const isEnd = hasRange && isSameDay(cellDate, selectedDates[1]);
+  const isStart = hasRange && isSameDay(cellDate, selectedDates[0] ?? undefined);
+  const isEnd = hasRange && isSameDay(cellDate, selectedDates[1] ?? undefined);
   const inRange =
     selectedDates[0] &&
     selectedDates[1] &&
@@ -78,7 +78,7 @@ export const Calendar: FC<CalendarProps> = props => {
     defaultValue ?? null,
     value,
   );
-  const [viewDate, setViewDate] = useState<Date | undefined>(viewDateProp);
+  const [viewDate, setViewDate] = useState<Date | undefined>(viewDateProp ?? undefined);
 
   const handleViewDateChange = useEventCallback(
     (e: Parameters<NonNullable<CalendarProps['onViewDateChange']>>[0]) => {

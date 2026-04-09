@@ -474,7 +474,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
         </div>
         <button
           aria-label="Remove file"
-          class="om-react-ui-button om-react-ui-button-white om-react-ui-button-small om-react-ui-upload-file-bar-icon-remove"
+          class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
           type="button"
         >
           <span
@@ -613,7 +613,7 @@ exports[`UploadFileBar renders error state with message 1`] = `
       </div>
       <button
         aria-label="Remove file"
-        class="om-react-ui-button om-react-ui-button-white om-react-ui-button-small om-react-ui-upload-file-bar-icon-remove"
+        class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
         type="button"
       >
         <span
@@ -766,7 +766,7 @@ exports[`UploadFileBar renders success state 1`] = `
         </div>
         <button
           aria-label="Remove file"
-          class="om-react-ui-button om-react-ui-button-white om-react-ui-button-small om-react-ui-upload-file-bar-icon-remove"
+          class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
           type="button"
         >
           <span
@@ -862,7 +862,7 @@ exports[`UploadFileBar renders success state 1`] = `
       </div>
       <button
         aria-label="Remove file"
-        class="om-react-ui-button om-react-ui-button-white om-react-ui-button-small om-react-ui-upload-file-bar-icon-remove"
+        class="om-react-ui-button om-react-ui-button-white om-react-ui-button-medium om-react-ui-upload-file-bar-icon-remove"
         type="button"
       >
         <span

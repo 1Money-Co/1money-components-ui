@@ -65,7 +65,7 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
       <Button
         className={classes('icon-remove')}
         color="white"
-        size="small"
+        size="medium"
         aria-label="Remove file"
         iconStart={<Icons name="remove" size={20} />}
         onClick={handleRemove}

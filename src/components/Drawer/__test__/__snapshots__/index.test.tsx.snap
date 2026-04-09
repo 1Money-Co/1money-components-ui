@@ -29,17 +29,17 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
         >
           <i
             class="om-react-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-react-ui-icons"
               fill="none"
-              height="14"
+              height="20"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="14"
+              width="20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -63,17 +63,17 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
       >
         <i
           class="om-react-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
             class="om-react-ui-icons"
             fill="none"
-            height="14"
+            height="20"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="14"
+            width="20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

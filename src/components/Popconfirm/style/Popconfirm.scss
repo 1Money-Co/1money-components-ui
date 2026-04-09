@@ -50,6 +50,7 @@ $arrow-side-offset: calc(-1 * ($arrow-width + $arrow-height) / 2);
     gap: theme.spacing(gap, 100);
     align-items: flex-start;
     min-width: 0;
+    margin-top: 8px;
   }
 
   &-title {
