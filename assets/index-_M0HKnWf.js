@@ -1,0 +1,1 @@
+import{r as t}from"./index-CP2yOfOm.js";function f(e){var u=t.useRef(e);u.current=t.useMemo(function(){return e},[e]);var n=t.useRef(void 0);return n.current||(n.current=function(){for(var o=arguments.length,a=new Array(o),r=0;r<o;r++)a[r]=arguments[r];return u.current.apply(this,a)}),n.current}export{f as u};

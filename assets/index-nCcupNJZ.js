@@ -1,0 +1,1 @@
+import{r as t}from"./index-CP2yOfOm.js";function n(e){var r=t.useRef(e);return r.current=e,r}function u(e){var r=n(e);return t.useCallback(function(){return r.current.apply(r,arguments)},[])}export{n as a,u};
