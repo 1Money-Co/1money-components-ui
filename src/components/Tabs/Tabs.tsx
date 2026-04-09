@@ -69,7 +69,7 @@ export const Tabs: FC<TabsProps> = props => {
 
   return (
     <div {...rest} className={classes(undefined, className)}>
-      <div className={classes('header', fullWidth && classes('header-full-width'))} ref={headerRef} role="tablist">
+      <div className={classes('header', fullWidth ? classes('header-full-width') : undefined)} ref={headerRef} role="tablist">
         {items.map(item => (
           <button
             key={item.key}
