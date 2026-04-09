@@ -24,6 +24,8 @@ export interface TabsProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChang
   items: TabItem[];
   /** Whether to animate the indicator transition (default: true) */
   animated?: boolean;
+  /** Whether the tab bar extends full width with a bottom border (default: false) */
+  fullWidth?: boolean;
   /** Callback when active tab changes */
   onChange?: (key: string) => void;
 }
