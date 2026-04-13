@@ -77,7 +77,7 @@ $component: 'spinner';
   &-content {
     display: flex;
     flex-direction: column;
-    gap: theme.spacing(gap, 200);
+    gap: theme.spacing(gap, 100);
     align-items: center;
     white-space: nowrap;
   }

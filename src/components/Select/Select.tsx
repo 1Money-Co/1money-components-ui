@@ -283,7 +283,7 @@ export const Select: FC<SelectProps> = (props) => {
       return;
     }
 
-    listRef.current[activeIndex]?.focus();
+    listRef.current[activeIndex]?.focus({ preventScroll: true });
   }, [activeIndex, innerOpen, searchable]);
 
   useEffect(() => {
@@ -293,7 +293,7 @@ export const Select: FC<SelectProps> = (props) => {
 
   useEffect(() => {
     if (innerOpen && searchable) {
-      searchInputRef.current?.focus();
+      searchInputRef.current?.focus({ preventScroll: true });
     }
   }, [innerOpen, searchable]);
 
@@ -335,7 +335,7 @@ export const Select: FC<SelectProps> = (props) => {
     commitChange(option.value, option);
     handleOpenChange(false);
     onBlur?.();
-    triggerRef.current?.focus();
+    triggerRef.current?.focus({ preventScroll: true });
   });
 
   const handleRemoveSelectedValue = useEventCallback((optionValue: SelectOptionValue) => {
@@ -400,21 +400,21 @@ export const Select: FC<SelectProps> = (props) => {
     if (event.key === 'ArrowDown' && firstEnabledIndex >= 0) {
       event.preventDefault();
       setActiveIndex(firstEnabledIndex);
-      listRef.current[firstEnabledIndex]?.focus();
+      listRef.current[firstEnabledIndex]?.focus({ preventScroll: true });
       return;
     }
 
     if (event.key === 'ArrowUp' && lastEnabledIndex !== null) {
       event.preventDefault();
       setActiveIndex(lastEnabledIndex);
-      listRef.current[lastEnabledIndex]?.focus();
+      listRef.current[lastEnabledIndex]?.focus({ preventScroll: true });
       return;
     }
 
     if (event.key === 'Escape') {
       event.preventDefault();
       handleOpenChange(false);
-      triggerRef.current?.focus();
+      triggerRef.current?.focus({ preventScroll: true });
     }
   });
 
@@ -521,7 +521,7 @@ export const Select: FC<SelectProps> = (props) => {
 
       {innerOpen && !disabled && (
         <FloatingPortal>
-          <FloatingFocusManager context={context} modal={false} initialFocus={-1}>
+          <FloatingFocusManager context={context} modal={false} initialFocus={-1} returnFocus={false}>
             <div
               {...getFloatingProps({
                 ref: setFloating,

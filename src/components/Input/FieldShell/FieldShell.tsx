@@ -3,7 +3,7 @@ import { Icons } from '@/components/Icons';
 import { Skeleton } from '@/components/Skeleton';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import type { FC, ReactNode } from 'react';
+import type { FC, MouseEvent, ReactNode } from 'react';
 import type { InputSize, InputStatus } from '../constants';
 import {
   INPUT_ERROR_MSG_SIZE,
@@ -26,6 +26,7 @@ export interface FieldShellProps {
   errorMsg?: ReactNode;
   required?: boolean;
   inputId?: string;
+  onControlWrapperClick?: (e: MouseEvent<HTMLDivElement>) => void;
   children: ReactNode;
 }
 
@@ -43,6 +44,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
   errorMsg,
   required = false,
   inputId,
+  onControlWrapperClick,
 }) => {
   const classes = classnames(prefixCls);
 
@@ -76,7 +78,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
           {info && <TypographyBody className={classes('info')} size={INPUT_INFO_SIZE} color={INPUT_INFO_COLOR}>{info}</TypographyBody>}
         </div>
       )}
-      <div className={classes('control-wrapper')}>{children}</div>
+      <div className={classes('control-wrapper')} onClick={onControlWrapperClick}>{children}</div>
       {errorMsg && (
         <div className={classes('error-msg')} role={status === 'error' || status === 'warning' ? 'alert' : 'status'}>
           {status === 'error' && <Icons className={classes('error-msg-icon')} name="error" size={16} color="danger" />}

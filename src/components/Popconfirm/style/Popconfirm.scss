@@ -4,7 +4,6 @@ $component: 'popconfirm';
 $cls: #{theme.$prefix}-#{$component};
 $arrow-width: 36px;
 $arrow-height: 9px;
-$arrow-inset: theme.spacing(scale, 500);
 $arrow-side-offset: calc(-1 * ($arrow-width + $arrow-height) / 2);
 
 .#{$cls}-overlay {
@@ -50,7 +49,7 @@ $arrow-side-offset: calc(-1 * ($arrow-width + $arrow-height) / 2);
     gap: theme.spacing(gap, 100);
     align-items: flex-start;
     min-width: 0;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 
   &-title {
@@ -98,77 +97,35 @@ $arrow-side-offset: calc(-1 * ($arrow-width + $arrow-height) / 2);
 }
 
 // ── Arrow positioning by placement ──
+// Uses --arrow-x / --arrow-y CSS vars set by Floating UI's arrow middleware
+// to always center the arrow on the trigger element.
 
 // Top: arrow at bottom, pointing down
 .#{$cls}-overlay[data-side='top'] .#{$cls}-arrow {
   bottom: -$arrow-height;
-  left: 50%;
+  left: var(--arrow-x, 50%);
   transform: translateX(-50%) rotate(180deg);
-}
-
-.#{$cls}-overlay[data-side='top'][data-align='start'] .#{$cls}-arrow {
-  left: $arrow-inset;
-  transform: rotate(180deg);
-}
-
-.#{$cls}-overlay[data-side='top'][data-align='end'] .#{$cls}-arrow {
-  right: $arrow-inset;
-  left: auto;
-  transform: rotate(180deg);
 }
 
 // Bottom: arrow at top, pointing up
 .#{$cls}-overlay[data-side='bottom'] .#{$cls}-arrow {
   top: -$arrow-height;
-  left: 50%;
+  left: var(--arrow-x, 50%);
   transform: translateX(-50%);
-}
-
-.#{$cls}-overlay[data-side='bottom'][data-align='start'] .#{$cls}-arrow {
-  left: $arrow-inset;
-  transform: none;
-}
-
-.#{$cls}-overlay[data-side='bottom'][data-align='end'] .#{$cls}-arrow {
-  right: $arrow-inset;
-  left: auto;
-  transform: none;
 }
 
 // Left: arrow at right, pointing right
 .#{$cls}-overlay[data-side='left'] .#{$cls}-arrow {
-  top: 50%;
+  top: var(--arrow-y, 50%);
   right: $arrow-side-offset;
   transform: translateY(-50%) rotate(90deg);
 }
 
-.#{$cls}-overlay[data-side='left'][data-align='start'] .#{$cls}-arrow {
-  top: $arrow-inset;
-  transform: rotate(90deg);
-}
-
-.#{$cls}-overlay[data-side='left'][data-align='end'] .#{$cls}-arrow {
-  top: auto;
-  bottom: $arrow-inset;
-  transform: rotate(90deg);
-}
-
 // Right: arrow at left, pointing left
 .#{$cls}-overlay[data-side='right'] .#{$cls}-arrow {
-  top: 50%;
+  top: var(--arrow-y, 50%);
   left: $arrow-side-offset;
   transform: translateY(-50%) rotate(-90deg);
-}
-
-.#{$cls}-overlay[data-side='right'][data-align='start'] .#{$cls}-arrow {
-  top: $arrow-inset;
-  transform: rotate(-90deg);
-}
-
-.#{$cls}-overlay[data-side='right'][data-align='end'] .#{$cls}-arrow {
-  top: auto;
-  bottom: $arrow-inset;
-  transform: rotate(-90deg);
 }
 
 @include theme.down(sm) {

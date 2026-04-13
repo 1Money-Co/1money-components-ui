@@ -17,30 +17,30 @@ $component: 'input';
     font-weight: 500;
     text-align: center;
     background-color: theme.palette(bg, 'default-secondary');
-    border: 1px solid theme.palette(border, 'default');
+    border: none;
     border-radius: theme.shape(300);
     outline: none;
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default');
   }
 
   &-otp-cell:hover:not(:disabled) {
-    border-color: theme.palette(border, 'default-tertiary');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default-tertiary');
   }
 
   &-error &-otp-cell:hover:not(:disabled) {
-    border-color: theme.palette(border, 'danger');
+    box-shadow: inset 0 0 0 2px theme.palette(border, 'danger');
   }
 
   &-warning &-otp-cell:hover:not(:disabled) {
-    border-color: theme.palette(border, 'warning');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'warning');
   }
 
   &-success &-otp-cell:hover:not(:disabled) {
-    border-color: theme.palette(border, 'positive');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'positive');
   }
 
   &-otp-cell:focus {
-    border-color: theme.palette(border, 'brand');
-    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+    box-shadow: inset 0 0 0 2px theme.palette(border, 'brand');
   }
 
   // ── Size ──
@@ -53,23 +53,22 @@ $component: 'input';
   // ── Status ──
   &-error &-otp-cell {
     color: theme.palette(text, 'danger');
-    border-color: theme.palette(border, 'danger');
-    box-shadow: 0 0 0 1px theme.palette(border, 'danger');
+    box-shadow: inset 0 0 0 2px theme.palette(border, 'danger');
   }
 
   &-warning &-otp-cell {
-    border-color: theme.palette(border, 'warning');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'warning');
   }
 
   &-success &-otp-cell {
-    border-color: theme.palette(border, 'positive');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'positive');
   }
 
   // ── Disabled ──
   &-disabled &-otp-cell {
     color: theme.palette(text, 'disabled');
     background-color: theme.palette(bg, 'disabled');
-    border-color: theme.palette(border, 'default');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default');
     cursor: not-allowed;
   }
 }

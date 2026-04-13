@@ -150,7 +150,7 @@ $cell-size: theme.sizing(component-height, 'md');
 
       .p-datepicker-calendar-container {
         table {
-          width: var(--content-width, 332px);
+          width: var(--content-width, 280px);
           margin: 0;
           table-layout: fixed;
           border-collapse: separate;
@@ -183,6 +183,7 @@ $cell-size: theme.sizing(component-height, 'md');
             max-width: $cell-size !important;
             height: $cell-size !important;
             max-height: $cell-size !important;
+            margin: 0 !important;
             padding: 0 !important;
             color: theme.palette(text, 'default');
             border: none;

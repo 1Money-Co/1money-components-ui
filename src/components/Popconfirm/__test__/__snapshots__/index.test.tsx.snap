@@ -20,22 +20,25 @@ exports[`Popconfirm renders correctly 1`] = `
     style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
     tabindex="-1"
   >
+    <span
+      style="position: absolute; width: 0px; height: 0px; pointer-events: none; visibility: hidden;"
+    />
     <div
       class="om-component-ui-popconfirm"
     >
       <svg
         aria-hidden="true"
-        class="om-react-ui-popconfirm-arrow"
+        class="om-component-ui-popconfirm-arrow"
         fill="none"
         viewBox="0 0 36 9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          class="om-react-ui-popconfirm-arrow-fill"
+          class="om-component-ui-popconfirm-arrow-fill"
           d="M17.3146 1.64505L10.3664 8.1846C9.80987 8.70836 9.07447 9 8.31027 9H27.6897C26.9255 9 26.1901 8.70836 25.6336 8.1846L18.6854 1.64505C18.3003 1.28265 17.6997 1.28265 17.3146 1.64505Z"
         />
         <path
-          class="om-react-ui-popconfirm-arrow-stroke"
+          class="om-component-ui-popconfirm-arrow-stroke"
           d="M8 8.5H8.34315C9.40401 8.5 10.4214 8.07857 11.1716 7.32843L17.2929 1.20711C17.6834 0.816582 18.3166 0.816583 18.7071 1.20711L24.8284 7.32843C25.5786 8.07857 26.596 8.5 27.6569 8.5H28"
         />
       </svg>

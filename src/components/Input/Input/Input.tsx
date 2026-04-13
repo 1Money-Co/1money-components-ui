@@ -5,7 +5,7 @@ import { Spinner } from '@/components/Spinner';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from '../FieldShell';
 import { useSyncRef } from '../useSyncRef';
-import type { FC, ChangeEvent } from 'react';
+import type { FC, ChangeEvent, MouseEvent } from 'react';
 import type { InputComponent, InputProps } from '../interface';
 
 import InputAmount from '../Amount';
@@ -78,6 +78,11 @@ const InputBase: FC<InputProps> = (props) => {
     onChange?.(nextValue, event);
   });
 
+  const handleControlClick = useEventCallback((e: MouseEvent<HTMLDivElement>) => {
+    if (e.target instanceof HTMLInputElement) return;
+    inputRef.current?.focus();
+  });
+
   const handleClear = useEventCallback(() => {
     setInnerValue('');
     inputRef.current?.focus();
@@ -101,6 +106,7 @@ const InputBase: FC<InputProps> = (props) => {
       errorMsg={errorMsg}
       required={required}
       inputId={inputId}
+      onControlWrapperClick={handleControlClick}
     >
       <div className={classes('control', joinCls(isDisabled && classes('control-disabled')))}>
         {prefix && <span className={classes('prefix')}>{prefix}</span>}

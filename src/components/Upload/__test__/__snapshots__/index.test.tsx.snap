@@ -472,29 +472,20 @@ exports[`UploadFileBar renders error state with message 1`] = `
             </span>
           </div>
         </div>
-        <i
-          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
-          role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
-          tabindex="0"
+        <button
+          aria-label="Remove file"
+          class="om-component-ui-button om-component-ui-button-white om-component-ui-button-medium om-component-ui-upload-file-bar-icon-remove"
+          type="button"
         >
-          <svg
-            class="om-component-ui-icons"
-            fill="none"
-            height="20"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="om-component-ui-button-icon-start"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="20"
                 preserveAspectRatio="xMidYMid meet"
@@ -620,29 +611,20 @@ exports[`UploadFileBar renders error state with message 1`] = `
           </span>
         </div>
       </div>
-      <i
-        class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
-        role="button"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
-        tabindex="0"
+      <button
+        aria-label="Remove file"
+        class="om-component-ui-button om-component-ui-button-white om-component-ui-button-medium om-component-ui-upload-file-bar-icon-remove"
+        type="button"
       >
-        <svg
-          class="om-component-ui-icons"
-          fill="none"
-          height="20"
-          preserveAspectRatio="xMidYMid meet"
-          shape-rendering="geometricPrecision"
-          stroke="none"
-          viewBox="0 0 24 24"
-          width="20"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          class="om-component-ui-button-icon-start"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -782,29 +764,20 @@ exports[`UploadFileBar renders success state 1`] = `
             </svg>
           </i>
         </div>
-        <i
-          class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
-          role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
-          tabindex="0"
+        <button
+          aria-label="Remove file"
+          class="om-component-ui-button om-component-ui-button-white om-component-ui-button-medium om-component-ui-upload-file-bar-icon-remove"
+          type="button"
         >
-          <svg
-            class="om-component-ui-icons"
-            fill="none"
-            height="20"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="om-component-ui-button-icon-start"
           >
             <i
-              class="om-react-ui-icons-wrapper"
+              class="om-component-ui-icons-wrapper"
               style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
             >
               <svg
-                class="om-react-ui-icons"
+                class="om-component-ui-icons"
                 fill="none"
                 height="20"
                 preserveAspectRatio="xMidYMid meet"
@@ -887,29 +860,20 @@ exports[`UploadFileBar renders success state 1`] = `
           </svg>
         </i>
       </div>
-      <i
-        class="om-component-ui-icons-wrapper om-component-ui-upload-file-bar-icon-remove"
-        role="button"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
-        tabindex="0"
+      <button
+        aria-label="Remove file"
+        class="om-component-ui-button om-component-ui-button-white om-component-ui-button-medium om-component-ui-upload-file-bar-icon-remove"
+        type="button"
       >
-        <svg
-          class="om-component-ui-icons"
-          fill="none"
-          height="20"
-          preserveAspectRatio="xMidYMid meet"
-          shape-rendering="geometricPrecision"
-          stroke="none"
-          viewBox="0 0 24 24"
-          width="20"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          class="om-component-ui-button-icon-start"
         >
           <i
-            class="om-react-ui-icons-wrapper"
+            class="om-component-ui-icons-wrapper"
             style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
-              class="om-react-ui-icons"
+              class="om-component-ui-icons"
               fill="none"
               height="20"
               preserveAspectRatio="xMidYMid meet"

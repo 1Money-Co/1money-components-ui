@@ -4,7 +4,7 @@ $component: 'upload-file-bar';
 
 .#{theme.$prefix}-#{$component} {
   display: flex;
-  gap: theme.spacing(gap, 300);
+  gap: theme.spacing(gap, 100);
   align-items: center;
   width: 100%;
 
