@@ -1,4 +1,4 @@
-import { Icons } from '@/components/Icons';
+import { Logo, LogoWithWords } from '@/components/Icons';
 import type { FC, MouseEvent } from 'react';
 
 const LOGO_COLLAPSED_SIZE = 24;
@@ -14,8 +14,8 @@ interface NavigationLogoProps {
 
 const NavigationLogo: FC<NavigationLogoProps> = ({ collapsed, onClick }) => {
   const logo = collapsed
-    ? <Icons name="logo" size={LOGO_COLLAPSED_SIZE} color={LOGO_COLOR} />
-    : <Icons name="logoWithWords" width={LOGO_WIDTH} height={LOGO_HEIGHT} logoColor={LOGO_COLOR} wordColor={WORD_COLOR} />;
+    ? <Logo size={LOGO_COLLAPSED_SIZE} color={LOGO_COLOR} />
+    : <LogoWithWords width={LOGO_WIDTH} height={LOGO_HEIGHT} logoColor={LOGO_COLOR} wordColor={WORD_COLOR} />;
 
   if (onClick) {
     return (

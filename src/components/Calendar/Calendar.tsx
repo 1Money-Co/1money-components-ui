@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Calendar as PrimeCalendar } from 'primereact/calendar';
 import { useControlledState, useEventCallback } from '@1money/hooks';
-import Icons from '@/components/Icons';
+import { ChevronLeftIcon, ChevronRightIcon } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { CalendarProps } from './interface';
@@ -112,8 +112,8 @@ export const Calendar: FC<CalendarProps> = props => {
         )}
         panelClassName={classes('panel', panelClassName)}
         placeholder={placeholder}
-        prevIcon={<Icons name="chevronLeft" size={24} />}
-        nextIcon={<Icons name="chevronRight" size={24} />}
+        prevIcon={<ChevronLeftIcon size={24} />}
+        nextIcon={<ChevronRightIcon size={24} />}
         selectionMode={selectionMode}
         pt={
           selectionMode === 'range'

@@ -1,6 +1,6 @@
 import { memo, useId } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
-import { Icons } from '@/components/Icons';
+import { CrossIcon, SearchIcon } from '@/components/Icons';
 import { Spinner } from '@/components/Spinner';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from '../FieldShell';
@@ -73,7 +73,7 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
 
   const searchIcon = loading
     ? <Spinner style={{ width: iconSize, height: iconSize }} />
-    : searchButton && (typeof searchButton === 'boolean' ? <Icons name="search" size={iconSize} /> : searchButton);
+    : searchButton && (typeof searchButton === 'boolean' ? <SearchIcon size={iconSize} /> : searchButton);
 
   return (
     <FieldShell
@@ -108,7 +108,7 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
             aria-label="clear search"
             onClick={handleClear}
           >
-            <Icons name="cross" size={iconSize} />
+            <CrossIcon size={iconSize} />
           </button>
         )}
         {suffix && <span className={classes('suffix')}>{suffix}</span>}

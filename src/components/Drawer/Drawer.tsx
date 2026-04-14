@@ -1,6 +1,6 @@
 import { useEventCallback } from '@1money/hooks';
 import { forwardRef, memo, useEffect, useRef, useState } from 'react';
-import { Icons } from '@/components/Icons';
+import { ArrowLeftIcon, CrossIcon } from '@/components/Icons';
 import { Portal } from '@/components/Portal';
 import { TypographyTitle } from '@/components/Typography';
 import classnames, { joinCls } from '@/utils/classnames';
@@ -285,7 +285,7 @@ const DrawerBase = forwardRef<HTMLDivElement, DrawerProps>((props, ref) => {
                   classes,
                   type: 'back',
                   label: 'Go back',
-                  icon: backIcon ?? <Icons name="arrowLeft" size={CONTROL_ICON_SIZE} />,
+                  icon: backIcon ?? <ArrowLeftIcon size={CONTROL_ICON_SIZE} />,
                   onClick: handleBack,
                 })}
                 {title != null && <TypographyTitle className={classes('title')} size={DRAWER_TITLE_SIZE} strong color={DRAWER_TITLE_COLOR}>{title}</TypographyTitle>}
@@ -294,7 +294,7 @@ const DrawerBase = forwardRef<HTMLDivElement, DrawerProps>((props, ref) => {
                 classes,
                 type: 'close',
                 label: 'Close drawer',
-                icon: closeIcon ?? <Icons name="cross" size={CONTROL_ICON_SIZE} />,
+                icon: closeIcon ?? <CrossIcon size={CONTROL_ICON_SIZE} />,
                 onClick: handleClose,
               })}
             </div>

@@ -21,6 +21,7 @@ ensureSvgColorRules();
 export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
   const {
     children,
+    svgComponent: SvgComponent,
     size = 24,
     width,
     height,
@@ -30,7 +31,7 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
     className = '',
     wrapperCls = '',
     prefixCls = 'icons',
-    viewBox = '0 0 24 24',
+    viewBox,
     style,
     ariaLabel,
     tabIndex,
@@ -54,6 +55,16 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
     '--icon-height': iconHeight,
     ...style,
   } as CSSProperties), [color, iconWidth, iconHeight, style]);
+  const svgProps = {
+    width: width ?? size,
+    height: height ?? size,
+    preserveAspectRatio: 'xMidYMid meet',
+    shapeRendering: 'geometricPrecision',
+    className: classes(undefined, className),
+    fill: fill ? 'currentColor' : 'none',
+    stroke: stroke ? 'currentColor' : 'none',
+    ...(viewBox ? { viewBox } : {}),
+  };
 
   return <i
     style={mergedStyle}
@@ -64,19 +75,17 @@ export const IconWrapper: FC<PropsWithChildren<IconWrapperProps>> = (props) => {
     onClick={onClick}
     onKeyDown={onKeyDown}
   >
-    <svg
-      width={width ?? size}
-      height={height ?? size}
-      viewBox={viewBox}
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="xMidYMid meet"
-      shapeRendering="geometricPrecision"
-      className={classes(undefined, className)}
-      fill={fill ? 'currentColor' : 'none'}
-      stroke={stroke ? 'currentColor' : 'none'}
-    >
-      { children }
-    </svg>
+    {SvgComponent ? (
+      <SvgComponent {...svgProps} />
+    ) : (
+      <svg
+        {...svgProps}
+        viewBox={viewBox ?? '0 0 24 24'}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        { children }
+      </svg>
+    )}
   </i>;
 };
 

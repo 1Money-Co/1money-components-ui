@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Icons } from '@/components/Icons';
+import { CrossIcon } from '@/components/Icons';
 import type { ClassNamesFn } from '@/utils/classnames';
 import type { FC, MouseEvent as ReactMouseEvent, ReactNode } from 'react';
 import type {
@@ -43,7 +43,7 @@ const DefaultMultipleValueContent: FC<
           }}
           onClick={onRemoveClick}
         >
-          <Icons name="cross" size={12} color="currentColor" />
+          <CrossIcon size={12} color="currentColor" />
         </span>
       </span>
     ))}

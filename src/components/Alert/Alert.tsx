@@ -1,6 +1,12 @@
 import { memo } from 'react';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { Icons } from '@/components/Icons';
+import {
+  CrossIcon,
+  NotificationErrorIcon,
+  NotificationInfoIcon,
+  NotificationSuccessIcon,
+  NotificationWarningIcon,
+} from '@/components/Icons';
 import { TypographyTitle, TypographyBody, TypographyLink } from '@/components/Typography';
 import type { FC, ReactElement } from 'react';
 import type { AlertProps, AlertStatus } from './interface';
@@ -9,10 +15,10 @@ import './style';
 const CLOSE_ALERT_ARIA_LABEL = 'Close alert';
 
 const STATUS_ICON_MAP: Record<AlertStatus, ReactElement> = {
-  info: <Icons name="notificationInfo" size={32} />,
-  success: <Icons name="notificationSuccess" size={32} />,
-  warning: <Icons name="notificationWarning" size={32} />,
-  error: <Icons name="notificationError" size={32} />,
+  info: <NotificationInfoIcon size={32} />,
+  success: <NotificationSuccessIcon size={32} />,
+  warning: <NotificationWarningIcon size={32} />,
+  error: <NotificationErrorIcon size={32} />,
 };
 
 export const Alert: FC<AlertProps> = props => {
@@ -78,7 +84,7 @@ export const Alert: FC<AlertProps> = props => {
           onClick={onClose}
           aria-label={CLOSE_ALERT_ARIA_LABEL}
         >
-          <Icons name="cross" size={16} fill/>
+          <CrossIcon size={16} fill />
         </button>
       )}
     </div>

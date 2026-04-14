@@ -1,4 +1,4 @@
-import type { CSSProperties, HTMLAttributes, KeyboardEvent, MouseEvent } from 'react';
+import type { ComponentType, CSSProperties, HTMLAttributes, KeyboardEvent, MouseEvent, SVGProps } from 'react';
 
 export interface IconWrapperProps {
   id?: string;
@@ -15,6 +15,7 @@ export interface IconWrapperProps {
   stroke?: boolean;
   ariaLabel?: string;
   tabIndex?: number;
+  svgComponent?: ComponentType<SVGProps<SVGSVGElement>>;
   onClick?: (e: MouseEvent<HTMLElement>) => unknown;
   onKeyDown?: (e: KeyboardEvent<HTMLElement>) => unknown;
 }
