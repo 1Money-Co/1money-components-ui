@@ -9,6 +9,6 @@ export interface IconProps extends BaseIconProps {
 
 export interface IconsProps extends IconProps {}
 
-export type { CanonicalIconName, IconAliasName, IconName } from './types';
-export type { SortIconStatus } from './SVGs';
+export type { CanonicalIconName, IconName } from './types';
+export type { SortIconStatus } from './icon-set';
 export type { IconHoverProps, IconWrapperProps };

@@ -51,9 +51,7 @@ const config: StorybookConfig = {
   viteFinal: config => {
     config.plugins = [
       ...(config.plugins ?? []),
-      svgr({
-        include: ['**/src/components/Icons/assets/raw/**/*.svg'],
-      }),
+      svgr({ include: '**/*.svg' }),
     ];
 
     if (!config.resolve) config.resolve = {};

@@ -38,17 +38,17 @@ describe('Icons', () => {
     expect(dynamicSvg?.innerHTML).toBe(compatSvg?.innerHTML);
   });
 
-  it('resolves legacy aliases through the compatibility wrapper', () => {
+  it('resolves legacy names as first-class registry entries', () => {
     const { container } = render(
       <>
-        <Icons name='depositFiatCrypto' size={16} />
+        <Icon name='depositFiatCrypto' size={16} />
         <Icon name='deposit' size={16} />
       </>,
     );
 
-    const [compatSvg, canonicalSvg] = Array.from(container.querySelectorAll('svg'));
+    const [legacySvg, canonicalSvg] = Array.from(container.querySelectorAll('svg'));
 
-    expect(compatSvg?.innerHTML).toBe(canonicalSvg?.innerHTML);
+    expect(legacySvg?.innerHTML).toBe(canonicalSvg?.innerHTML);
   });
 
   it('keeps special component props on direct static exports', () => {

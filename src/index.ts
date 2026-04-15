@@ -139,7 +139,6 @@ export type {
 export type { GridRowProps, GridColProps } from './components/Grid';
 export type {
   CanonicalIconName,
-  IconAliasName,
   IconName,
   IconProps,
   IconsProps,

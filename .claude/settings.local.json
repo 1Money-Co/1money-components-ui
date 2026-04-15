@@ -97,7 +97,24 @@
       "Bash(break)",
       "Bash(grep -nE 'blue-700|grey-300|grey-200|grey-100|grey-400|red-600|grey-900|grey-800|grey-700|grey-500|grey-50\\\\b|^\\\\s*$grey|^\\\\s*$blue|^\\\\s*$red' src/styles/tokens/color/_primitives.scss)",
       "Bash(grep -n \"box-sizing\" /Users/wali/1Money/1money-components-ui/src/styles/_*.scss /Users/wali/1Money/1money-components-ui/src/styles/system/*.scss)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(xargs -I {} ls -la {})",
+      "Bash(mv currency/ACHIcon.svg system/)",
+      "Bash(mv currency/APIKeyIcon.svg system/)",
+      "Bash(mv currency/AutoConversionRulesIcon.svg system/)",
+      "Bash(mv currency/BrokenLinkIcon.svg system/)",
+      "Bash(mv currency/BusinessAccountIcon.svg system/)",
+      "Bash(mkdir -p icons/static)",
+      "Bash(mv assets:*)",
+      "Bash(mv static-icons/*.tsx icons/static/)",
+      "Bash(mv static-icons/index.ts icons/static/)",
+      "Bash(rmdir static-icons:*)",
+      "Bash(mv assets/raw source)",
+      "Bash(rmdir assets:*)",
+      "Bash(mv static/*.tsx .)",
+      "Bash(mv static/index.ts .)",
+      "Bash(rmdir static:*)",
+      "Bash(npx babel:*)"
     ]
   }
 }

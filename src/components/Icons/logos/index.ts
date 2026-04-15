@@ -6,9 +6,9 @@ export {
   LogoWithBeta,
   LogoWithWords,
   LogoWord,
-} from '../Logo';
+} from './Logo';
 
 export type {
   LogoWithBetaCustomProps,
   LogoWithWordsCustomProps,
-} from '../Logo';
+} from './Logo';

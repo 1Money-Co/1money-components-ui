@@ -1,5 +1,3 @@
-import { iconAliases } from './aliases';
-
 export const canonicalIconNames = [
   'illusChecked',
   'illusEmailError',
@@ -147,8 +145,14 @@ export const canonicalIconNames = [
   'notificationWarning',
   'notificationSuccess',
   'notificationError',
+  'depositFiatCrypto',
+  'withdrawFiatCrypto',
+  'accountdLocked',
+  'personalSettings',
+  'security2',
+  'iconPix',
+  'noApiKeys',
 ] as const;
 
 export type CanonicalIconName = (typeof canonicalIconNames)[number];
-export type IconAliasName = keyof typeof iconAliases;
-export type IconName = CanonicalIconName | IconAliasName;
+export type IconName = CanonicalIconName;

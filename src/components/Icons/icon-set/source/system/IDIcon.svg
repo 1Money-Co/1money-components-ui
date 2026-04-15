@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d='M2 8C2 7.44772 2.44772 7 3 7H21C21.5523 7 22 7.44771 22 8V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V8Z' stroke-width='2' />
+<path d='M14 12.5H19.5' stroke-width='2' />
+<path d='M14 15.5H19.5' stroke-width='2' />
+<path d='M5.5 17C5.5 16.4477 5.94772 16 6.5 16H9.5C10.0523 16 10.5 16.4477 10.5 17H5.5Z' stroke-width='2' />
+<circle cx='8' cy='12' r='2' fill='#131313' />
+<path d='M9 7V3H15V7' stroke-width='2' stroke-linejoin='round' />
+</svg>

@@ -2,9 +2,9 @@ import { memo } from 'react';
 import Icon from './Icon';
 import type { FC } from 'react';
 import type { IconsProps } from './interface';
-import type { IllustrationsCustomProps } from './illustration-set';
+import type { IllustrationsCustomProps } from './illustrations';
 import type { LogoWithBetaCustomProps, LogoWithWordsCustomProps } from './logos';
-import type { SortIconStatus } from './SVGs';
+import type { SortIconStatus } from './icon-set';
 
 export interface StatusIconsProps extends IconsProps {
   name: 'statusSuccess' | 'statusFail';
@@ -50,6 +50,6 @@ export const Icons: FC<
   | SortIconsProps
 > = (props) => <Icon {...props} />;
 
-export type { SortIconStatus } from './SVGs';
+export type { SortIconStatus } from './icon-set';
 
 export default memo(Icons);

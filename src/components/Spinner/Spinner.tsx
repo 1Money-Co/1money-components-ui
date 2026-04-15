@@ -1,6 +1,6 @@
 'use client';
 import { memo } from 'react';
-import { Logo, LogoBg } from '@/components/Icons/Logo';
+import { Logo, LogoBg } from '@/components/Icons/logos';
 import { Typography } from '@/components/Typography';
 import classnames, { joinCls } from '@/utils/classnames';
 /* import types */
