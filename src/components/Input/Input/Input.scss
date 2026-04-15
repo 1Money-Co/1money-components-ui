@@ -92,7 +92,7 @@ $component: 'input';
   &-error &-control:hover,
   &-error &-control:focus-within {
     border-color: theme.palette(border, 'danger');
-    box-shadow: 0 0 0 1px theme.palette(border, 'danger');
+    box-shadow: none;
   }
 
   &-warning &-control,
