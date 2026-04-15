@@ -46,10 +46,12 @@ $cls: #{theme.$prefix}-#{$component};
     mask-size: 100% 100%;
   }
 
-  // SVG beak paths shared by both orientations
-  $beak-paths: '%3Cpath d=%22M17.3146 7.35495L10.3664 0.8154C9.80987 0.291642 9.07447 0 8.31027 0H27.6897C26.9255 0 26.1901 0.291642 25.6336 0.815401L18.6854 7.35495C18.3003 7.71735 17.6997 7.71735 17.3146 7.35495Z%22 fill=%22%23000000%22/%3E%3Cpath d=%22M8 0.5H8.34315C9.40401 0.5 10.4214 0.921427 11.1716 1.67157L17.2929 7.79289C17.6834 8.18342 18.3166 8.18342 18.7071 7.79289L24.8284 1.67157C25.5786 0.921426 26.596 0.5 27.6569 0.5H28%22 stroke=%22%23000000%22 stroke-linecap=%22round%22/%3E';
-  $h-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 36 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E#{$beak-paths}%3C/svg%3E");
-  $v-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(0 36) rotate(-90)'%3E#{$beak-paths}%3C/g%3E%3C/svg%3E");
+  // SVG beak masks. Base64-encoded to survive CSS minification (cssnano in the
+  // consumer build pipeline strips attribute quotes from URL-encoded SVG data
+  // URLs, producing invalid SVG like `viewBox=0 0 36 9` and breaking the mask).
+  // Base64 only uses A-Z a-z 0-9 + / = — all safe from minification.
+  $h-mask: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzYgOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTcuMzE0NiA3LjM1NDk1TDEwLjM2NjQgMC44MTU0QzkuODA5ODcgMC4yOTE2NDIgOS4wNzQ0NyAwIDguMzEwMjcgMEgyNy42ODk3QzI2LjkyNTUgMCAyNi4xOTAxIDAuMjkxNjQyIDI1LjYzMzYgMC44MTU0MDFMMTguNjg1NCA3LjM1NDk1QzE4LjMwMDMgNy43MTczNSAxNy42OTk3IDcuNzE3MzUgMTcuMzE0NiA3LjM1NDk1WiIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Ik04IDAuNUg4LjM0MzE1QzkuNDA0MDEgMC41IDEwLjQyMTQgMC45MjE0MjcgMTEuMTcxNiAxLjY3MTU3TDE3LjI5MjkgNy43OTI4OUMxNy42ODM0IDguMTgzNDIgMTguMzE2NiA4LjE4MzQyIDE4LjcwNzEgNy43OTI4OUwyNC44Mjg0IDEuNjcxNTdDMjUuNTc4NiAwLjkyMTQyNiAyNi41OTYgMC41IDI3LjY1NjkgMC41SDI4IiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==");
+  $v-mask: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgOSAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDM2KSByb3RhdGUoLTkwKSI+PHBhdGggZD0iTTE3LjMxNDYgNy4zNTQ5NUwxMC4zNjY0IDAuODE1NEM5LjgwOTg3IDAuMjkxNjQyIDkuMDc0NDcgMCA4LjMxMDI3IDBIMjcuNjg5N0MyNi45MjU1IDAgMjYuMTkwMSAwLjI5MTY0MiAyNS42MzM2IDAuODE1NDAxTDE4LjY4NTQgNy4zNTQ5NUMxOC4zMDAzIDcuNzE3MzUgMTcuNjk5NyA3LjcxNzM1IDE3LjMxNDYgNy4zNTQ5NVoiIGZpbGw9IiMwMDAwMDAiLz48cGF0aCBkPSJNOCAwLjVIOC4zNDMxNUM5LjQwNDAxIDAuNSAxMC40MjE0IDAuOTIxNDI3IDExLjE3MTYgMS42NzE1N0wxNy4yOTI5IDcuNzkyODlDMTcuNjgzNCA4LjE4MzQyIDE4LjMxNjYgOC4xODM0MiAxOC43MDcxIDcuNzkyODlMMjQuODI4NCAxLjY3MTU3QzI1LjU3ODYgMC45MjE0MjYgMjYuNTk2IDAuNSAyNy42NTY5IDAuNUgyOCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L2c+PC9zdmc+");
 
   &[class*='react-tooltip__place-top'] > .#{$cls}-arrow,
   &[class*='react-tooltip__place-bottom'] > .#{$cls}-arrow {
