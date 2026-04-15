@@ -336,8 +336,6 @@ $cell-size: theme.sizing(component-height, 'md');
 // Range selection styles
 .#{theme.$prefix}-#{$component}-p-start {
   position: relative;
-  // background-color: theme.palette(bg, 'brand-tertiary') !important;
-  // border-radius: theme.shape('full') 0 0 theme.shape('full') !important;
   background-color: transparent !important;
   border-radius: 0 !important;
 
@@ -370,9 +368,6 @@ $cell-size: theme.sizing(component-height, 'md');
 
 .#{theme.$prefix}-#{$component}-p-end {
   position: relative;
-  // background-color: theme.palette(bg, 'brand-tertiary') !important;
-  // border-radius: 0 theme.shape('full') theme.shape('full') 0 !important;
-
   background-color: transparent !important;
   border-radius: 0 !important;
 
