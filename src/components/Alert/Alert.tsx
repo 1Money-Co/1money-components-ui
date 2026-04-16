@@ -55,9 +55,9 @@ export const Alert: FC<AlertProps> = props => {
         </span>
       )}
       <div className={classes('content', hasTitleAndBody ? classes('content-title-body') : undefined)}>
-        {title && useBodyTypographyForTitle
+        {title ? useBodyTypographyForTitle
                 ? <TypographyBody size="md" color="default-secondary">{title}</TypographyBody>
-                : <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle>}
+                : <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle> : null}
         {body ? <TypographyBody size="md" color="default-secondary">{body}</TypographyBody> : null
         }
         {link && (
