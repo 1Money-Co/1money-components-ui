@@ -7,8 +7,10 @@ import { Radio, RadioGroup } from './index';
 import {
   RADIO_ALIGNMENTS,
   RADIO_DEFAULT_ALIGNMENT,
+  RADIO_DEFAULT_LABEL_PLACEMENT,
   RADIO_DEFAULT_SIZE,
   RADIO_DEFAULT_VARIANT,
+  RADIO_LABEL_PLACEMENTS,
   RADIO_SIZES,
   RADIO_VARIANTS,
 } from './constants';
@@ -26,6 +28,7 @@ const meta: Meta<typeof Radio> = {
     variant: { control: 'radio', options: [...RADIO_VARIANTS] },
     size: { control: 'radio', options: [...RADIO_SIZES] },
     alignment: { control: 'radio', options: [...RADIO_ALIGNMENTS] },
+    labelPlacement: { control: 'radio', options: [...RADIO_LABEL_PLACEMENTS] },
     label: { control: 'text' },
     description: { control: 'text' },
     tag: { control: 'text' },
@@ -37,6 +40,7 @@ const meta: Meta<typeof Radio> = {
     variant: RADIO_DEFAULT_VARIANT,
     size: RADIO_DEFAULT_SIZE,
     alignment: RADIO_DEFAULT_ALIGNMENT,
+    labelPlacement: RADIO_DEFAULT_LABEL_PLACEMENT,
     label: 'Radio label',
     icon: 'swift',
     onChange: fn(),
@@ -79,14 +83,14 @@ export const AllVariants: Story = {
         </div>
       </div>
       <div>
-        <h3 style={{ marginBottom: 12 }}>Alignment: Right</h3>
+        <h3 style={{ marginBottom: 12 }}>Label Placement: Right</h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <Radio label="Unchecked" alignment="right" />
-          <Radio label="Checked" alignment="right" checked />
+          <Radio label="Unchecked" labelPlacement="right" />
+          <Radio label="Checked" labelPlacement="right" checked />
           <Radio
             label="With description"
             description="Helper text"
-            alignment="right"
+            labelPlacement="right"
           />
         </div>
       </div>
@@ -266,7 +270,7 @@ export const GroupDisabled: Story = {
   ),
 };
 
-export const GroupAlignmentRight: Story = {
+export const GroupLabelPlacementRight: Story = {
   render: () => {
     const [value, setValue] = React.useState<string | number>('a');
     const handleChange = (event: RadioChangeEvent) => {
@@ -276,7 +280,7 @@ export const GroupAlignmentRight: Story = {
     };
 
     return (
-      <RadioGroup value={value} onChange={handleChange} alignment="right">
+      <RadioGroup value={value} onChange={handleChange} labelPlacement="right">
         <Radio value="a" label="Option A" description="Description A" />
         <Radio value="b" label="Option B" description="Description B" />
       </RadioGroup>

@@ -10,7 +10,8 @@ export type RadioValueType = string | number;
 export type RadioVariant = 'default' | 'cell';
 export type RadioSize = 'large' | 'medium' | 'small';
 export type RadioOrientation = 'horizontal' | 'vertical';
-export type RadioAlignment = 'left' | 'center' | 'right';
+export type RadioAlignment = 'left' | 'center';
+export type RadioLabelPlacement = 'left' | 'right';
 export type RadioGroupDirection = 'vertical' | 'horizontal';
 
 export interface RadioChangeTarget {
@@ -61,8 +62,10 @@ export interface RadioProps extends NativeRadioInputProps {
   variant?: RadioVariant;
   /** Visual size used by the cell variant */
   size?: RadioSize;
-  /** Alignment used by the radio. Default supports `left` / `right`; cell supports `left` / `center`. */
+  /** Alignment used by the cell variant (`left` for horizontal, `center` for vertical). */
   alignment?: RadioAlignment;
+  /** Placement of the label relative to the radio dot for the default variant. */
+  labelPlacement?: RadioLabelPlacement;
   /** Optional icon rendered by the cell variant */
   icon?: IconName | ReactNode;
   /** Optional tag label rendered by the cell variant */
@@ -84,8 +87,10 @@ export interface RadioOptionItem {
   variant?: RadioVariant;
   /** Visual size used by the cell variant */
   size?: RadioSize;
-  /** Alignment used by the radio. Default supports `left` / `right`; cell supports `left` / `center`. */
+  /** Alignment used by the cell variant (`left` for horizontal, `center` for vertical). */
   alignment?: RadioAlignment;
+  /** Placement of the label relative to the radio dot for the default variant. */
+  labelPlacement?: RadioLabelPlacement;
   /** Optional icon rendered by the cell variant */
   icon?: IconName | ReactNode;
   /** Optional tag label rendered by the cell variant */
@@ -120,8 +125,10 @@ export interface RadioGroupProps {
   variant?: RadioVariant;
   /** Visual size inherited by child radios */
   size?: RadioSize;
-  /** Alignment inherited by child radios. Default supports `left` / `right`; cell supports `left` / `center`. */
+  /** Alignment inherited by cell-variant child radios. */
   alignment?: RadioAlignment;
+  /** Label placement inherited by default-variant child radios. */
+  labelPlacement?: RadioLabelPlacement;
   /** Gap between radio items — accepts spacing token key or CSS value */
   gap?: number | string;
   /** Title attribute for the root radiogroup container */

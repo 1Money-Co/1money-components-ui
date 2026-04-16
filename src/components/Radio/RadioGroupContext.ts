@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react';
 import type {
   RadioAlignment,
   RadioChangeEvent,
-  RadioOrientation,
+  RadioLabelPlacement,
   RadioSize,
   RadioValueType,
   RadioVariant,
@@ -21,10 +21,10 @@ interface RadioGroupContextValue {
   variant: RadioVariant;
   /** Visual size inherited by children */
   size: RadioSize;
-  /** Cell orientation inherited by children */
-  orientation: RadioOrientation;
   /** Alignment inherited by children */
   alignment: RadioAlignment;
+  /** Label placement inherited by default-variant children */
+  labelPlacement?: RadioLabelPlacement;
 }
 
 const RadioGroupContext = createContext<RadioGroupContextValue | null>(null);

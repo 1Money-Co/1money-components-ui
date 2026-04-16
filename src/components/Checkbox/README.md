@@ -72,7 +72,7 @@ Selected values are returned in declaration order, and `options` items can defin
 | `onChange` | `(checkedValue: CheckboxValueType[]) => void` | — | Callback when the selected values change |
 | `name` | `string` | — | Shared native name passed to all child inputs |
 | `disabled` | `boolean` | `false` | Disables the entire group |
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | Layout direction for the group |
+| `direction` | `'horizontal' \| 'vertical'` | `'horizontal'` | Layout direction for the group |
 | `children` | `ReactNode` | — | Direct `Checkbox` children controlled by the group |
 | `className` | `string` | `''` | Additional CSS classes |
 | `prefixCls` | `string` | `'checkbox-group'` | CSS class prefix |
