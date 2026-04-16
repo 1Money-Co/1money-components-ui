@@ -61,7 +61,8 @@ $component: 'input';
 
   // ── Status ──
   &-error &-textarea-wrapper {
-    box-shadow: inset 0 0 0 2px theme.palette(border, 'danger');
+    border-color: theme.palette(border, 'danger');
+    box-shadow: none;
   }
 
   &-warning &-textarea-wrapper {
