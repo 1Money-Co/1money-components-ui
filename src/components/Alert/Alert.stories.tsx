@@ -20,13 +20,16 @@ const stackStyle: React.CSSProperties = {
   gap: 16,
 };
 
+const multiLineTitle = 'This title is intentionally long enough to wrap onto multiple lines so the single-content icon alignment is easy to verify.';
+const multiLineBody = 'This body copy is intentionally long enough to wrap onto multiple lines so the single-content icon alignment is easy to verify in Storybook.';
+
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
   component: Alert,
   parameters: {
     docs: {
       description: {
-        component: 'Alert is an inline feedback surface for contextual messaging. It supports title/body content, inline links, and a right-side action that can coexist with the close button.',
+        component: 'Alert is an inline feedback surface for contextual messaging. It supports title/body content, inline links, and a right-side action that can coexist with the close button. Single-content alerts without links use the body text style and vertically center the icon.',
       },
     },
   },
@@ -52,7 +55,7 @@ const meta: Meta<typeof Alert> = {
   },
   args: {
     status: 'info',
-    closable: true,
+    closable: false,
     showIcon: true,
     title: 'Network connection restored',
     body: 'Background syncing has resumed and your data is up to date.',
@@ -164,9 +167,41 @@ export const CustomIcon: Story = {
   ),
 };
 
+export const SingleContentStates: Story = {
+  render: (args) => (
+    <div style={stackStyle}>
+      <Alert
+        {...args}
+        title={multiLineTitle}
+        body={undefined}
+        link={undefined}
+        closable={false}
+      />
+      <Alert
+        {...args}
+        title={undefined}
+        body={multiLineBody}
+        link={undefined}
+        closable={false}
+      />
+      <Alert
+        {...args}
+        title={multiLineTitle}
+        body={undefined}
+        link={{ label: 'Open details', onClick: fn() }}
+        closable={false}
+      />
+    </div>
+  ),
+  args: {
+    status: 'info',
+  },
+  tags: ['!autodocs', 'dev'],
+};
+
 export const TitleOnly: Story = {
   args: {
-    title: 'Alert with title only',
+    title: multiLineTitle,
     body: undefined,
     link: undefined,
     closable: false,
@@ -176,7 +211,7 @@ export const TitleOnly: Story = {
 export const BodyOnly: Story = {
   args: {
     title: undefined,
-    body: 'Alert with body only.',
+    body: multiLineBody,
     link: undefined,
     closable: false,
   },
