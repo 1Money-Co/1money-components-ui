@@ -24,7 +24,8 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
     allowClear = false,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
     required,
     prefix,
     suffix,
@@ -84,7 +85,8 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={inputId}
     >

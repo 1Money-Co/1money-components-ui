@@ -18,7 +18,7 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
     currencySymbol = '$',
     currencyUnit = 'USD',
     exchangeText,
-    errorMsg,
+    feedback,
     showMax = false,
     onMax,
     onSwap,
@@ -131,10 +131,10 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
         </div>
       )}
 
-      {errorMsg && (
+      {feedback && (
         <div className={classes('trade-error-msg')}>
           {isError && <Icons name="error" size={16} />}
-          <span>{errorMsg}</span>
+          <span>{feedback}</span>
         </div>
       )}
     </div>

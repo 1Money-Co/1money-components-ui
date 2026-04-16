@@ -49,7 +49,8 @@ const InputBase: FC<InputProps> = (props) => {
     loading = false,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
     required,
     allowClear = false,
     prefix,
@@ -104,7 +105,8 @@ const InputBase: FC<InputProps> = (props) => {
       readOnly={readOnly}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={inputId}
       onControlWrapperClick={handleControlClick}

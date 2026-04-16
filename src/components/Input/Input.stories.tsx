@@ -2,6 +2,7 @@ import React from 'react';
 import { fn } from '@storybook/test';
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { Icons } from '@/components/Icons';
 import { Input } from './index';
 import { INPUT_SIZES, INPUT_STATUSES } from './constants';
 
@@ -21,7 +22,8 @@ const meta: Meta<typeof Input> = {
     size: { control: 'radio', options: [...INPUT_SIZES] },
     status: { control: 'radio', options: [...INPUT_STATUSES] },
     label: { control: 'text' },
-    errorMsg: { control: 'text' },
+    feedback: { control: 'text' },
+    feedbackIcon: { control: false },
     placeholder: { control: 'text' },
   },
   args: {
@@ -30,7 +32,8 @@ const meta: Meta<typeof Input> = {
     size: 'large',
     status: 'default',
     label: 'Label',
-    errorMsg: 'Feedback',
+    feedback: 'Feedback',
+    feedbackIcon: <Icons name="info" size={16} />,
     placeholder: 'Value',
     onChange: fn(),
   },
@@ -63,8 +66,8 @@ export const Default: Story = {
                       size={size}
                       status={status}
                       label="Label"
-
-                      errorMsg="Feedback"
+                      feedback="Feedback"
+                      feedbackIcon={status === 'error' ? <Icons name="error" size={16} /> : <Icons name="info" size={16} />}
                       placeholder="Value"
                       allowClear
                       defaultValue={vt === 'Filled' ? 'Input value' : undefined}
@@ -82,7 +85,8 @@ export const Default: Story = {
                     size={size}
                     readOnly
                     label="Label"
-                    errorMsg="Feedback"
+                    feedback="Feedback"
+                    feedbackIcon={<Icons name="info" size={16} />}
                     placeholder="Value"
                     defaultValue={vt === 'Filled' ? 'Read-only value' : undefined}
                   />
@@ -98,8 +102,8 @@ export const Default: Story = {
                     size={size}
                     disabled
                     label="Label"
-
-                    errorMsg="Feedback"
+                    feedback="Feedback"
+                    feedbackIcon={<Icons name="info" size={16} />}
                     placeholder="Value"
                     defaultValue={vt === 'Filled' ? 'Disabled value' : undefined}
                   />
@@ -215,8 +219,8 @@ export const Password: Story = {
                   <Input.Password
                     size={size}
                     label="Password"
-
-                    errorMsg="Feedback"
+                    feedback="Feedback"
+                    feedbackIcon={<Icons name="info" size={16} />}
                     placeholder="Enter password"
                     defaultValue={vt === 'Filled' ? 'secretpass' : undefined}
                   />
@@ -229,7 +233,8 @@ export const Password: Story = {
                   size={size}
                   status="error"
                   label="Password"
-                  errorMsg="Password too short"
+                  feedback="Password too short"
+                  feedbackIcon={<Icons name="error" size={16} />}
                   placeholder="Enter password"
                   defaultValue="123"
                 />
@@ -347,7 +352,8 @@ export const TextArea: Story = {
                   </p>
                   <Input.TextArea
                     label="Label"
-                    errorMsg="Feedback"
+                    feedback="Feedback"
+                    feedbackIcon={status === 'error' ? <Icons name="error" size={16} /> : <Icons name="info" size={16} />}
                     status={status}
                     placeholder="Value"
                     defaultValue={vt === 'Filled' ? 'Longer memo value that spans multiple lines to demonstrate the filled state of the textarea component' : undefined}
@@ -366,7 +372,8 @@ export const TextArea: Story = {
                 </p>
                 <Input.TextArea
                   label="Label"
-                  errorMsg="Feedback"
+                  feedback="Feedback"
+                  feedbackIcon={<Icons name="info" size={16} />}
                   disabled
                   placeholder="Value"
                   defaultValue={vt === 'Filled' ? 'Disabled filled value' : undefined}
@@ -388,7 +395,8 @@ export const TextArea: Story = {
               <Input.TextArea
                 size="small"
                 label="Label"
-                errorMsg="Feedback"
+                feedback="Feedback"
+                feedbackIcon={<Icons name="info" size={16} />}
                 placeholder="Value"
                 rows={3}
                 showCount
@@ -400,7 +408,8 @@ export const TextArea: Story = {
               <Input.TextArea
                 size="small"
                 label="Label"
-                errorMsg="Feedback"
+                feedback="Feedback"
+                feedbackIcon={<Icons name="info" size={16} />}
                 placeholder="Value"
                 defaultValue="Small filled value"
                 rows={3}
@@ -431,8 +440,8 @@ export const OTP: Story = {
               <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Empty</p>
               <Input.OTP
                 label="Verification Code"
-
-                errorMsg="Feedback"
+                feedback="Feedback"
+                feedbackIcon={<Icons name="info" size={16} />}
                 length={6}
                 onComplete={onComplete}
                 onChange={onChange}
@@ -442,8 +451,8 @@ export const OTP: Story = {
               <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Partial</p>
               <Input.OTP
                 label="Verification Code"
-
-                errorMsg="Feedback"
+                feedback="Feedback"
+                feedbackIcon={<Icons name="info" size={16} />}
                 length={6}
                 defaultValue="123"
                 onComplete={onComplete}
@@ -455,7 +464,8 @@ export const OTP: Story = {
               <Input.OTP
                 label="Verification Code"
                 status="error"
-                errorMsg="Invalid code"
+                feedback="Invalid code"
+                feedbackIcon={<Icons name="error" size={16} />}
                 length={6}
                 defaultValue="999999"
                 onComplete={onComplete}
@@ -557,7 +567,7 @@ export const Trade: Story = {
           onMax={fn()}
           onSwap={fn()}
           exchangeText="123,456,789 USDT"
-          errorMsg="Insufficient balance"
+          feedback="Insufficient balance"
         />
       </div>
       <div>
@@ -592,7 +602,8 @@ export const Amount: Story = {
             <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Placeholder</p>
             <Input.Amount
               label="You send"
-              errorMsg="$2,992.68 USDC available"
+              feedback="$2,992.68 USDC available"
+              feedbackIcon={<Icons name="info" size={16} />}
               placeholder="Enter amount"
               actionLabel="Use Max"
               onAction={fn()}
@@ -606,7 +617,8 @@ export const Amount: Story = {
             <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Filled</p>
             <Input.Amount
               label="You send"
-              errorMsg="$2,992.68 USDC available"
+              feedback="$2,992.68 USDC available"
+              feedbackIcon={<Icons name="info" size={16} />}
               defaultValue="1,250.00"
               actionLabel="Use Max"
               onAction={fn()}
@@ -620,7 +632,8 @@ export const Amount: Story = {
             <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Disabled</p>
             <Input.Amount
               label="You send"
-              errorMsg="$2,992.68 USDC available"
+              feedback="$2,992.68 USDC available"
+              feedbackIcon={<Icons name="info" size={16} />}
               disabled
               actionLabel="Use Max"
               currencyIcon={<img src={USDC_ICON} alt="USDC" />}
@@ -633,7 +646,8 @@ export const Amount: Story = {
             <Input.Amount
               label="You send"
               status="error"
-              errorMsg="Insufficient balance"
+              feedback="Insufficient balance"
+              feedbackIcon={<Icons name="error" size={16} />}
               defaultValue="999,999.99"
               actionLabel="Use Max"
               onAction={fn()}
@@ -654,7 +668,8 @@ export const Amount: Story = {
             <Input.Amount
               size="small"
               label="You send"
-              errorMsg="$2,992.68 USDT available"
+              feedback="$2,992.68 USDT available"
+              feedbackIcon={<Icons name="info" size={16} />}
               placeholder="Enter amount"
               actionLabel="Use Max"
               onAction={fn()}
@@ -668,7 +683,8 @@ export const Amount: Story = {
             <Input.Amount
               size="small"
               label="You send"
-              errorMsg="$2,992.68 USDT available"
+              feedback="$2,992.68 USDT available"
+              feedbackIcon={<Icons name="info" size={16} />}
               defaultValue="500.00"
               actionLabel="Use Max"
               onAction={fn()}
@@ -687,7 +703,8 @@ export const Amount: Story = {
           <div style={{ width: 400 }}>
             <Input.Amount
               label="You send"
-              errorMsg="65,482.55 USD1 available"
+              feedback="65,482.55 USD1 available"
+              feedbackIcon={<Icons name="info" size={16} />}
               defaultValue="0"
               prefix={
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
@@ -781,7 +798,8 @@ export const Mask: Story = {
               label="CPF"
               mask="999.999.999-99"
               status="error"
-              errorMsg="Invalid CPF"
+              feedback="Invalid CPF"
+              feedbackIcon={<Icons name="error" size={16} />}
               defaultValue="123"
             />
           </div>

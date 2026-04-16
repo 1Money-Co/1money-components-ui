@@ -3,10 +3,11 @@ import { Icons } from '@/components/Icons';
 import { Skeleton } from '@/components/Skeleton';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import type { IconName } from '@/components/Icons';
 import type { FC, MouseEvent, ReactNode } from 'react';
 import type { InputSize, InputStatus } from '../constants';
 import {
-  INPUT_ERROR_MSG_SIZE,
+  INPUT_FEEDBACK_SIZE,
   INPUT_INFO_COLOR,
   INPUT_INFO_SIZE,
   INPUT_LABEL_COLOR,
@@ -23,7 +24,8 @@ export interface FieldShellProps {
   readOnly?: boolean;
   label?: ReactNode;
   info?: ReactNode;
-  errorMsg?: ReactNode;
+  feedback?: ReactNode;
+  feedbackIcon?: IconName | ReactNode;
   required?: boolean;
   inputId?: string;
   onControlWrapperClick?: (e: MouseEvent<HTMLDivElement>) => void;
@@ -41,7 +43,8 @@ const FieldShellBase: FC<FieldShellProps> = ({
   readOnly = false,
   label,
   info,
-  errorMsg,
+  feedback,
+  feedbackIcon,
   required = false,
   inputId,
   onControlWrapperClick,
@@ -79,11 +82,13 @@ const FieldShellBase: FC<FieldShellProps> = ({
         </div>
       )}
       <div className={classes('control-wrapper')} onClick={onControlWrapperClick}>{children}</div>
-      {errorMsg && (
+      {feedback && (
         <div className={classes('error-msg')} role={status === 'error' || status === 'warning' ? 'alert' : 'status'}>
-          {status === 'error' && <Icons className={classes('error-msg-icon')} name="error" size={16} color="danger" />}
-          <TypographyBody as="span" size={INPUT_ERROR_MSG_SIZE} color={status === 'error' ? 'danger' : undefined}>
-            {errorMsg}
+          {feedbackIcon && (typeof feedbackIcon === 'string'
+            ? <Icons className={classes('error-msg-icon')} name={feedbackIcon as IconName} size={16} color={status === 'error' ? 'danger' : undefined} />
+            : feedbackIcon)}
+          <TypographyBody as="span" size={INPUT_FEEDBACK_SIZE} color={status === 'error' ? 'danger' : undefined}>
+            {feedback}
           </TypographyBody>
         </div>
       )}

@@ -17,7 +17,8 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
     disabled = false,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
     required,
     rows = 4,
     showCount = false,
@@ -51,7 +52,8 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={inputId}
     >

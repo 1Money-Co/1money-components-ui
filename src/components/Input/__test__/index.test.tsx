@@ -25,11 +25,11 @@ jest.mock('lottie-web', () => ({
 }));
 
 describe('Input', () => {
-  it('renders default input with label and errorMsg', () => {
+  it('renders default input with label and feedback', () => {
     const wrapper = render(
       <Input
         label="Amount"
-        errorMsg="Feedback"
+        feedback="Feedback"
         placeholder="Value"
       />,
     );
@@ -130,8 +130,8 @@ describe('Input', () => {
     expect(input.closest('.om-component-ui-input')?.querySelector('label')).toHaveAttribute('for', 'email-input');
   });
 
-  it('renders errorMsg with role=alert on error', () => {
-    const { getByRole } = render(<Input status="error" errorMsg="Required" />);
+  it('renders feedback with role=alert on error', () => {
+    const { getByRole } = render(<Input status="error" feedback="Required" />);
     expect(getByRole('alert')).toHaveTextContent('Required');
   });
 

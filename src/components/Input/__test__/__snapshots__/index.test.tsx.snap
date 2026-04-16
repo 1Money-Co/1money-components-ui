@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input renders default input with label and errorMsg 1`] = `
+exports[`Input renders default input with label and feedback 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

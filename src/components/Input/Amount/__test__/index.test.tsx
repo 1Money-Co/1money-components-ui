@@ -36,7 +36,7 @@ describe('InputAmount', () => {
     const wrapper = render(
       <InputAmount
         label="You send"
-        errorMsg="$2,992.68 USDC available"
+        feedback="$2,992.68 USDC available"
         actionLabel="Use Max"
         onAction={jest.fn()}
         currencyIcon={<img src="usdc.png" alt="USDC" />}

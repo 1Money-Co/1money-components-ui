@@ -21,7 +21,7 @@ export const MultipleFiles: Story = {
     <Upload
       label="Label"
       description="Description"
-      errorMsg="Feedback"
+      feedback="Feedback"
       className=''
     >
        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

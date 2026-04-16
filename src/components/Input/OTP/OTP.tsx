@@ -18,7 +18,8 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
     disabled = false,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
     required,
     value,
     defaultValue = '',
@@ -117,7 +118,8 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={autoId}
     >
