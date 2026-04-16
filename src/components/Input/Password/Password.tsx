@@ -19,7 +19,9 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
     hideIcon = <Icons name="viewBalance" size={16} />,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
+    tip,
     required,
     prefix,
     suffix,
@@ -60,7 +62,9 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      tip={tip}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={inputId}
     >

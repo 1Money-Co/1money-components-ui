@@ -6,6 +6,7 @@ import type {
   RefObject,
   TextareaHTMLAttributes,
 } from 'react';
+import type { IconName } from '@/components/Icons';
 import type { InputSize, InputStatus, SearchTrigger } from './constants';
 
 export type { InputSize, InputStatus, SearchTrigger };
@@ -17,7 +18,9 @@ export interface InputBaseProps {
   status?: InputStatus;
   label?: ReactNode;
   info?: ReactNode;
-  errorMsg?: ReactNode;
+  tip?: ReactNode;
+  feedback?: ReactNode;
+  feedbackIcon?: IconName | ReactNode;
   required?: boolean;
   disabled?: boolean;
   prefix?: ReactNode;
@@ -102,7 +105,7 @@ export interface InputTradeProps {
   /** Exchange info displayed in the subline, e.g. "0 USDT" */
   exchangeText?: ReactNode;
   /** Error or helper message displayed below the subline */
-  errorMsg?: ReactNode;
+  feedback?: ReactNode;
   /** Whether to show the Max button */
   showMax?: boolean;
   /** Callback when Max button is clicked */

@@ -178,9 +178,9 @@ describe('InputTrade — numeric behavior', () => {
     expect(onMax).not.toHaveBeenCalled();
   });
 
-  it('applies error status class and aria-invalid, renders errorMsg', () => {
+  it('applies error status class and aria-invalid, renders feedback', () => {
     const { container } = render(
-      <InputTrade status="error" errorMsg="Insufficient balance" />,
+      <InputTrade status="error" feedback="Insufficient balance" />,
     );
     const input = getInput(container);
     expect(input.getAttribute('aria-invalid')).toBe('true');

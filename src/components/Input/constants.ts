@@ -14,6 +14,6 @@ export const INPUT_LABEL_SIZE: Record<InputSize, TypographyLabelSize> = { large:
 export const INPUT_LABEL_COLOR: TypographyColor = 'default';
 export const INPUT_INFO_SIZE: TypographyBodySize = 'sm';
 export const INPUT_INFO_COLOR: TypographyColor = 'default-tertiary';
-export const INPUT_ERROR_MSG_SIZE: TypographyBodySize = 'sm';
+export const INPUT_FEEDBACK_SIZE: TypographyBodySize = 'sm';
 export const INPUT_COUNT_SIZE: TypographyBodySize = 'lg';
 export const INPUT_COUNT_COLOR: TypographyColor = 'neutral-secondary';

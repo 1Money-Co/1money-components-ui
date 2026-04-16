@@ -20,8 +20,19 @@ $component: 'input';
     cursor: pointer;
   }
 
-  &-required {
-    color: theme.palette(text, 'danger');
+  &-optional {
+    font-style: italic;
+  }
+
+  &-tip-trigger {
+    display: inline-flex;
+    align-items: center;
+    color: theme.palette(text, 'default-tertiary');
+    cursor: pointer;
+
+    &:hover {
+      color: theme.palette(text, 'default');
+    }
   }
 
   &-error-msg {

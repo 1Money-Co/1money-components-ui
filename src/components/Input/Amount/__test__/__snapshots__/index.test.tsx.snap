@@ -124,7 +124,7 @@ exports[`InputAmount renders disabled state 1`] = `
               aria-required="false"
               class="om-component-ui-input-field"
               disabled=""
-              id="«r2»"
+              id="«r4»"
               inputmode="decimal"
               placeholder="0"
               value=""
@@ -174,7 +174,7 @@ exports[`InputAmount renders disabled state 1`] = `
             aria-required="false"
             class="om-component-ui-input-field"
             disabled=""
-            id="«r2»"
+            id="«r4»"
             inputmode="decimal"
             placeholder="0"
             value=""
@@ -275,7 +275,7 @@ exports[`InputAmount renders with action and currency 1`] = `
         >
           <label
             class="om-component-ui-input-label"
-            for="«r1»"
+            for="«r2»"
           >
             <span
               class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
@@ -294,7 +294,7 @@ exports[`InputAmount renders with action and currency 1`] = `
               aria-invalid="false"
               aria-required="false"
               class="om-component-ui-input-field"
-              id="«r1»"
+              id="«r2»"
               inputmode="decimal"
               placeholder="0"
               value=""
@@ -377,7 +377,7 @@ exports[`InputAmount renders with action and currency 1`] = `
       >
         <label
           class="om-component-ui-input-label"
-          for="«r1»"
+          for="«r2»"
         >
           <span
             class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-typography-color-default om-component-ui-typography-strong"
@@ -396,7 +396,7 @@ exports[`InputAmount renders with action and currency 1`] = `
             aria-invalid="false"
             aria-required="false"
             class="om-component-ui-input-field"
-            id="«r1»"
+            id="«r2»"
             inputmode="decimal"
             placeholder="0"
             value=""

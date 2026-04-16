@@ -97,7 +97,9 @@ export const InputMask: FC<InputMaskProps> = (props) => {
     autoClear = false,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
+    tip,
     required,
     prefix,
     suffix,
@@ -298,7 +300,9 @@ export const InputMask: FC<InputMaskProps> = (props) => {
       disabled={isDisabled}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      tip={tip}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={inputId}
     >
