@@ -99,6 +99,7 @@ export const InputMask: FC<InputMaskProps> = (props) => {
     info,
     feedback,
     feedbackIcon,
+    tip,
     required,
     prefix,
     suffix,
@@ -299,6 +300,7 @@ export const InputMask: FC<InputMaskProps> = (props) => {
       disabled={isDisabled}
       label={label}
       info={info}
+      tip={tip}
       feedback={feedback}
       feedbackIcon={feedbackIcon}
       required={required}

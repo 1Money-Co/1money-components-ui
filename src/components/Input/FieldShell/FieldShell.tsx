@@ -1,6 +1,7 @@
-import { memo } from 'react';
+import { memo, useId } from 'react';
 import { Icons } from '@/components/Icons';
 import { Skeleton } from '@/components/Skeleton';
+import { Tooltip } from '@/components/Tooltip';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { IconName } from '@/components/Icons';
@@ -24,6 +25,7 @@ export interface FieldShellProps {
   readOnly?: boolean;
   label?: ReactNode;
   info?: ReactNode;
+  tip?: ReactNode;
   feedback?: ReactNode;
   feedbackIcon?: IconName | ReactNode;
   required?: boolean;
@@ -43,13 +45,15 @@ const FieldShellBase: FC<FieldShellProps> = ({
   readOnly = false,
   label,
   info,
+  tip,
   feedback,
   feedbackIcon,
-  required = false,
+  required = true,
   inputId,
   onControlWrapperClick,
 }) => {
   const classes = classnames(prefixCls);
+  const tipId = useId();
 
   return (
     <div
@@ -64,7 +68,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
         ),
       )}
     >
-      {(label || info) && (
+      {(label || info || tip) && (
         <div className={classes('label-row')}>
           {label && (
             loading
@@ -74,11 +78,19 @@ const FieldShellBase: FC<FieldShellProps> = ({
                   <TypographyLabel as="span" size={INPUT_LABEL_SIZE[size]} color={INPUT_LABEL_COLOR} strong>
                     {label}
                   </TypographyLabel>
-                  {required && <span className={classes('required')}>*</span>}
+                  {!required && <>{' '}<TypographyLabel as="span" className={classes('optional')} size={INPUT_LABEL_SIZE[size]} color="default-tertiary" strong>(Optional)</TypographyLabel></>}
                 </label>
               )
           )}
           {info && <TypographyBody className={classes('info')} size={INPUT_INFO_SIZE} color={INPUT_INFO_COLOR}>{info}</TypographyBody>}
+          {tip && (
+            <>
+              <span data-tooltip-id={tipId} className={classes('tip-trigger')}>
+                <Icons name="info" size={16} />
+              </span>
+              <Tooltip id={tipId} placement="top" body={tip} />
+            </>
+          )}
         </div>
       )}
       <div className={classes('control-wrapper')} onClick={onControlWrapperClick}>{children}</div>

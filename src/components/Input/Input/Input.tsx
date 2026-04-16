@@ -51,6 +51,7 @@ const InputBase: FC<InputProps> = (props) => {
     info,
     feedback,
     feedbackIcon,
+    tip,
     required,
     allowClear = false,
     prefix,
@@ -105,6 +106,7 @@ const InputBase: FC<InputProps> = (props) => {
       readOnly={readOnly}
       label={label}
       info={info}
+      tip={tip}
       feedback={feedback}
       feedbackIcon={feedbackIcon}
       required={required}

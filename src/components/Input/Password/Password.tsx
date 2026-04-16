@@ -21,6 +21,7 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
     info,
     feedback,
     feedbackIcon,
+    tip,
     required,
     prefix,
     suffix,
@@ -61,6 +62,7 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
       disabled={disabled}
       label={label}
       info={info}
+      tip={tip}
       feedback={feedback}
       feedbackIcon={feedbackIcon}
       required={required}

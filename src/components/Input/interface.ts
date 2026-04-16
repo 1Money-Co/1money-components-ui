@@ -18,6 +18,7 @@ export interface InputBaseProps {
   status?: InputStatus;
   label?: ReactNode;
   info?: ReactNode;
+  tip?: ReactNode;
   feedback?: ReactNode;
   feedbackIcon?: IconName | ReactNode;
   required?: boolean;

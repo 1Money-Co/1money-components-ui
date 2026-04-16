@@ -27,6 +27,7 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
     info,
     feedback,
     feedbackIcon,
+    tip,
     required,
     allowClear = false,
     prefix,
@@ -112,6 +113,7 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
       readOnly={readOnly}
       label={label}
       info={info}
+      tip={tip}
       feedback={feedback}
       feedbackIcon={feedbackIcon}
       required={required}

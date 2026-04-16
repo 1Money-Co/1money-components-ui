@@ -176,7 +176,7 @@ exports[`Input renders trade input correctly 1`] = `
               <input
                 aria-invalid="false"
                 class="om-component-ui-input-trade-field"
-                id="«rf»"
+                id="«ru»"
                 inputmode="decimal"
                 placeholder="0"
                 value=""
@@ -254,7 +254,7 @@ exports[`Input renders trade input correctly 1`] = `
             <input
               aria-invalid="false"
               class="om-component-ui-input-trade-field"
-              id="«rf»"
+              id="«ru»"
               inputmode="decimal"
               placeholder="0"
               value=""
@@ -389,7 +389,7 @@ exports[`Input renders with prefix and suffix 1`] = `
               aria-invalid="false"
               aria-required="false"
               class="om-component-ui-input-field"
-              id="«r1»"
+              id="«r2»"
               value="100"
             />
             <span
@@ -427,7 +427,7 @@ exports[`Input renders with prefix and suffix 1`] = `
             aria-invalid="false"
             aria-required="false"
             class="om-component-ui-input-field"
-            id="«r1»"
+            id="«r2»"
             value="100"
           />
           <span

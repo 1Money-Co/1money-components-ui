@@ -160,10 +160,36 @@ export const Default: Story = {
               />
             </div>
             <div style={{ width: 310 }}>
+              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Optional (required=false)</p>
+              <Input
+                label="Label"
+                required={false}
+                placeholder="Optional field"
+              />
+            </div>
+            <div style={{ width: 310 }}>
               <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>With Info</p>
               <Input
                 label="Label"
                 info="Optional hint"
+                placeholder="Value"
+              />
+            </div>
+            <div style={{ width: 310 }}>
+              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>With Tip</p>
+              <Input
+                label="Label"
+                tip="This is a helpful tooltip"
+                placeholder="Value"
+              />
+            </div>
+            <div style={{ width: 310 }}>
+              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Optional + Info + Tip</p>
+              <Input
+                label="Label"
+                required={false}
+                info="Optional hint"
+                tip="This is a helpful tooltip"
                 placeholder="Value"
               />
             </div>
