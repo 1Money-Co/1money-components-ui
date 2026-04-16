@@ -193,6 +193,15 @@ export const SingleContentStates: Story = {
         link={{ label: 'Open details', onClick: fn() }}
         closable={false}
       />
+      <Alert
+
+        title={multiLineTitle}
+        body={undefined}
+        closable={false}
+        action={<Button onClick={(() => {
+          console.log('Action button clicked');
+        })}>Take action</Button>}
+      />
     </div>
   ),
   args: {
