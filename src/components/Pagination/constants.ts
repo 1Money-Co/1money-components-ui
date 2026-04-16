@@ -58,7 +58,6 @@ export const PAGINATION_SLOT = {
   buttonDisabled: 'button-disabled',
   ellipsis: 'ellipsis',
   icon: 'icon',
-  disabled: 'disabled',
 } as const;
 
 // --- Typography ---

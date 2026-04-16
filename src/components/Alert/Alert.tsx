@@ -23,6 +23,7 @@ export const Alert: FC<AlertProps> = props => {
     title,
     body,
     link,
+    action,
     icon,
     showIcon = true,
     closable = true,
@@ -33,6 +34,9 @@ export const Alert: FC<AlertProps> = props => {
 
   const classes = classnames(prefixCls);
   const iconElement = icon ?? STATUS_ICON_MAP[status];
+  const contentSectionCount = [title, body, link].filter(value => value != null).length;
+  const closeAlignment = contentSectionCount === 1 ? 'center' : 'top';
+  const useBodyTypographyForTitle = title != null && body == null;
 
   return (
     <div
@@ -51,7 +55,11 @@ export const Alert: FC<AlertProps> = props => {
       <div className={classes('content')}>
         {title && (
           typeof title === 'string'
-            ? <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle>
+            ? (
+              useBodyTypographyForTitle
+                ? <TypographyBody size="md" color="default-secondary">{title}</TypographyBody>
+                : <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle>
+            )
             : title
         )}
         {body && (
@@ -71,15 +79,24 @@ export const Alert: FC<AlertProps> = props => {
           </TypographyLink>
         )}
       </div>
-      {closable && (
-        <button
-          type="button"
-          className={classes('close')}
-          onClick={onClose}
-          aria-label={CLOSE_ALERT_ARIA_LABEL}
-        >
-          <Icons name="cross" size={16} fill/>
-        </button>
+      {(action || closable) && (
+        <div className={classes('right')}>
+          {action && (
+            <div className={classes('action')}>
+              {action}
+            </div>
+          )}
+          {closable && (
+            <button
+              type="button"
+              className={classes('close', classes(`close-${closeAlignment}`))}
+              onClick={onClose}
+              aria-label={CLOSE_ALERT_ARIA_LABEL}
+            >
+              <Icons name="cross" size={16} fill/>
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

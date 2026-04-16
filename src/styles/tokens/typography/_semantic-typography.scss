@@ -1,91 +1,91 @@
 // Typography scale — Sass maps encoding the complete Figma typography spec.
 // Key names (xl/lg/md/sm/xs) align with component size props.
-// Line-height values preserve the original Figma percentages.
+// Line-height values use the discrete px tokens defined in Figma.
 
 @use 'sass:map';
 @use './primitives' as *;
 
 // ── Display ──
-// Base: Aeonik / 500 / 108% / #131313
+// Base: Aeonik / 500 / line-height tokens / #131313
 $om-typography-display: (
   'xl': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 76px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 106px,
     letter-spacing: $om-tracking-tight,
   ),
   'lg': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 64px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 90px,
     letter-spacing: $om-tracking-tight,
   ),
   'md': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 52px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 72px,
     letter-spacing: $om-tracking-none,
   ),
   'sm': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 46px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 64px,
     letter-spacing: $om-tracking-none,
   ),
   'xs': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 36px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 50px,
     letter-spacing: $om-tracking-none,
   ),
 ) !default;
 
 // ── Headline ──
-// Base: Aeonik / 500 / 108% / #131313
+// Base: Aeonik / 500 / line-height tokens / #131313
 $om-typography-headline: (
   'lg': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 32px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 44px,
     letter-spacing: $om-tracking-none,
   ),
   'md': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 28px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 40px,
     letter-spacing: $om-tracking-none,
   ),
   'sm': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 24px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 34px,
     letter-spacing: $om-tracking-none,
   ),
   'xs': (
     font-family: $om-font-display,
     font-weight: $om-font-weight-medium,
     font-size: 18px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 26px,
     letter-spacing: $om-tracking-none,
   ),
 ) !default;
 
 // ── Title ──
-// Base: Inter / 500 / 108% / #131313 — strong = 700
+// Base: Inter / 500 / line-height tokens / #131313 — strong = 700
 $om-typography-title: (
   'lg': (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 18px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 26px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-bold),
   ),
@@ -93,7 +93,7 @@ $om-typography-title: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 16px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 22px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-bold),
   ),
@@ -101,20 +101,20 @@ $om-typography-title: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 14px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 20px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-bold),
   ),
 ) !default;
 
 // ── Body ──
-// Base: Inter / 400 / 140% / #131313 — strong = 500
+// Base: Inter / 400 / line-height tokens / #131313 — strong = 500
 $om-typography-body: (
   'lg': (
     font-family: $om-font-body,
     font-weight: $om-font-weight-regular,
     font-size: 16px,
-    line-height: $om-line-height-reading * 100%,
+    line-height: 22px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-medium),
   ),
@@ -122,7 +122,7 @@ $om-typography-body: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-regular,
     font-size: 14px,
-    line-height: $om-line-height-reading * 100%,
+    line-height: 20px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-medium),
   ),
@@ -130,20 +130,20 @@ $om-typography-body: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-regular,
     font-size: 12px,
-    line-height: $om-line-height-reading * 100%,
+    line-height: 16px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-medium),
   ),
 ) !default;
 
 // ── Link ──
-// Base: Inter / 500 / 140% / underline / #131313
+// Base: Inter / 500 / line-height tokens / underline / #131313
 $om-typography-link: (
   'md': (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 14px,
-    line-height: $om-line-height-reading * 100%,
+    line-height: 20px,
     letter-spacing: $om-tracking-none,
     text-decoration: underline,
     text-decoration-skip-ink: none,
@@ -152,7 +152,7 @@ $om-typography-link: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 12px,
-    line-height: $om-line-height-reading * 100%,
+    line-height: 16px,
     letter-spacing: $om-tracking-none,
     text-decoration: underline,
     text-decoration-skip-ink: none,
@@ -160,13 +160,13 @@ $om-typography-link: (
 ) !default;
 
 // ── Label ──
-// Base: Inter / 500 / 108% / #131313 — strong = 700 (xl) / 600 (rest)
+// Base: Inter / 500 / line-height tokens / #131313 — strong = 700 (xl) / 600 (rest)
 $om-typography-label: (
   'xl': (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 18px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 26px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-bold),
   ),
@@ -174,7 +174,7 @@ $om-typography-label: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 16px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 22px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-semibold),
   ),
@@ -182,7 +182,7 @@ $om-typography-label: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 14px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 20px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-semibold),
   ),
@@ -190,7 +190,7 @@ $om-typography-label: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 12px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 16px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-semibold),
   ),
@@ -198,7 +198,7 @@ $om-typography-label: (
     font-family: $om-font-body,
     font-weight: $om-font-weight-medium,
     font-size: 10px,
-    line-height: $om-line-height-tight * 100%,
+    line-height: 14px,
     letter-spacing: $om-tracking-none,
     strong: (font-weight: $om-font-weight-semibold),
   ),

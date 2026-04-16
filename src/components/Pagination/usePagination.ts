@@ -88,13 +88,11 @@ const getVisiblePages = (
 const createPageItem = (
   page: number,
   current: number,
-  disabled: boolean,
 ): PaginationPageItem => ({
   key: `${PAGINATION_KEY_PREFIX.page}-${page}`,
   type: PAGINATION_ITEM_TYPE.page,
   page,
   current: page === current,
-  disabled,
 });
 
 const createControlItem = (
@@ -114,13 +112,11 @@ const createEllipsisItem = (
   key: `${PAGINATION_KEY_PREFIX.ellipsis}-${position}`,
   type: PAGINATION_ITEM_TYPE.ellipsis,
   position,
-  disabled: true,
 });
 
 const buildPageItems = (
   current: number,
   totalPages: number,
-  disabled: boolean,
   boundaryCount: number,
   middlePageCount: number,
 ): PaginationItem[] => {
@@ -134,7 +130,7 @@ const buildPageItems = (
       const gap = page - previousPage;
 
       if (gap === PAGINATION_GAP_FILL_THRESHOLD) {
-        items.push(createPageItem(previousPage + 1, current, disabled));
+        items.push(createPageItem(previousPage + 1, current));
       } else if (gap > PAGINATION_GAP_FILL_THRESHOLD) {
         ellipsisCount += 1;
         items.push(createEllipsisItem(
@@ -145,7 +141,7 @@ const buildPageItems = (
       }
     }
 
-    items.push(createPageItem(page, current, disabled));
+    items.push(createPageItem(page, current));
     previousPage = page;
   });
 
@@ -155,27 +151,21 @@ const buildPageItems = (
 const buildPaginationItems = (
   current: number,
   totalPages: number,
-  disabled: boolean,
   boundaryCount: number,
   middlePageCount: number,
-) => {
-  const canPrevious = current > PAGINATION_DEFAULT_CURRENT;
-  const canNext = current < totalPages;
-
-  return [
-    createControlItem(
-      PAGINATION_ITEM_TYPE.previous,
-      clamp(current - 1, PAGINATION_DEFAULT_CURRENT, totalPages),
-      disabled || !canPrevious,
-    ),
-    ...buildPageItems(current, totalPages, disabled, boundaryCount, middlePageCount),
-    createControlItem(
-      PAGINATION_ITEM_TYPE.next,
-      clamp(current + 1, PAGINATION_DEFAULT_CURRENT, totalPages),
-      disabled || !canNext,
-    ),
-  ];
-};
+) => [
+  createControlItem(
+    PAGINATION_ITEM_TYPE.previous,
+    clamp(current - 1, PAGINATION_DEFAULT_CURRENT, totalPages),
+    current <= PAGINATION_DEFAULT_CURRENT,
+  ),
+  ...buildPageItems(current, totalPages, boundaryCount, middlePageCount),
+  createControlItem(
+    PAGINATION_ITEM_TYPE.next,
+    clamp(current + 1, PAGINATION_DEFAULT_CURRENT, totalPages),
+    current >= totalPages,
+  ),
+];
 
 export const usePagination = (options: UsePaginationOptions): UsePaginationResult => {
   const {
@@ -183,7 +173,6 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
     pageSize,
     current,
     defaultCurrent = PAGINATION_DEFAULT_CURRENT,
-    disabled = false,
     boundaryCount,
     middlePageCount,
     onChange,
@@ -208,10 +197,6 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
   );
 
   const goTo = useEventCallback((page: number) => {
-    if (disabled) {
-      return;
-    }
-
     const nextPage = clamp(toInteger(page, resolvedCurrent), PAGINATION_DEFAULT_CURRENT, totalPages);
 
     if (nextPage === resolvedCurrent) {
@@ -234,11 +219,10 @@ export const usePagination = (options: UsePaginationOptions): UsePaginationResul
     () => buildPaginationItems(
       resolvedCurrent,
       totalPages,
-      disabled,
       resolvedBoundaryCount,
       resolvedMiddlePageCount,
     ),
-    [resolvedCurrent, totalPages, disabled, resolvedBoundaryCount, resolvedMiddlePageCount],
+    [resolvedCurrent, totalPages, resolvedBoundaryCount, resolvedMiddlePageCount],
   );
 
   return {

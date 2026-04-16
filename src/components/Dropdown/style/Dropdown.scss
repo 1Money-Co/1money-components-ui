@@ -1,2 +1,32 @@
-// Dropdown uses Trigger's base styles.
-// This file is kept for backward compatibility with existing style imports.
+@use '@/styles/api' as theme;
+
+// Dropdown uses Trigger's base styles for the panel/arrow.
+// This file adds dropdown-specific item styles.
+
+.om-dropdown {
+  &-item {
+    display: flex;
+    gap: theme.spacing(gap, 300);
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    padding: theme.spacing(component-padding, 200) theme.spacing(component-padding, 300);
+    color: theme.palette(text, 'default');
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: theme.shape(200);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+
+    @include theme.typography(body, md, $strong: true);
+
+    &:hover {
+      background-color: theme.palette(bg, 'default-secondary');
+    }
+
+    &--selected {
+      background-color: theme.palette(bg, 'default-secondary');
+    }
+  }
+}

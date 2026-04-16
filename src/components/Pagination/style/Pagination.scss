@@ -49,6 +49,13 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
       outline: none;
       box-shadow: 0 0 0 2px theme.palette(border, 'brand');
     }
+
+    &:disabled,
+    &-disabled {
+      color: theme.palette(text, 'disabled');
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   &-button-page {
@@ -67,15 +74,6 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
     }
   }
 
-  &-button-disabled {
-    color: theme.palette(text, 'disabled');
-    cursor: not-allowed;
-
-    &:hover {
-      background-color: transparent;
-    }
-  }
-
   &-icon {
     display: inline-flex;
     flex-shrink: 0;
@@ -89,7 +87,4 @@ $pagination-control-size: calc(#{theme.spacing(scale, 400)} + #{theme.spacing(sc
     cursor: default;
   }
 
-  &-disabled {
-    cursor: not-allowed;
-  }
 }

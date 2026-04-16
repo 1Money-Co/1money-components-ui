@@ -22,7 +22,9 @@ export const POPCONFIRM_ACTION_KIND = {
 
 export const POPCONFIRM_SLOT = {
   overlay: 'overlay',
-  noArrow: 'no-arrow',
+  arrow: 'arrow',
+  arrowFill: 'arrow-fill',
+  arrowStroke: 'arrow-stroke',
   header: 'header',
   icon: 'icon',
   content: 'content',

@@ -9,7 +9,7 @@ export const DRAWER_PHASES = {
 } as const;
 
 export const CLOSE_TIMEOUT_MS = 300;
-export const CONTROL_ICON_SIZE = 14;
+export const CONTROL_ICON_SIZE = 20;
 export const DEFAULT_WIDTH = 360;
 export const DEFAULT_HEIGHT = 360;
 export const DEFAULT_PLACEMENT = 'right';

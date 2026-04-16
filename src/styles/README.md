@@ -32,7 +32,7 @@ styles/
 │   │   ├── _functions.scss        # Pure component-height token query helpers
 │   │   └── _index.scss
 │   ├── typography/
-│   │   ├── _primitives.scss       # Font families, weights, line-heights, tracking (internal)
+│   │   ├── _primitives.scss       # Font families, weights, tracking (internal)
 │   │   ├── _semantic-typography.scss # Full Figma typography spec as Sass maps
 │   │   ├── _functions.scss        # Pure typography scale query helpers
 │   │   └── _index.scss
@@ -553,7 +553,7 @@ Override CSS variables to customize the theme:
 
   /* Typography overrides */
   --om-body-md-font-size: 16px;
-  --om-body-md-line-height: 140%;
+  --om-body-md-line-height: 20px;
   --om-headline-lg-font-family: 'Custom Font', sans-serif;
 }
 ```

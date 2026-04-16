@@ -36,7 +36,7 @@ export const Spinner: FC<SpinnerProps> = props => {
           <div className={classes('content')}>
             {title && (
               hasBg
-                ? <Typography.Headline size="sm" className={classes('title')}>{title}</Typography.Headline>
+                ? <Typography.Headline size="sm" color="default" className={classes('title')}>{title}</Typography.Headline>
                 : <Typography.Body size="md" color="default-tertiary" className={classes('title')}>{title}</Typography.Body>
             )}
             {body && (

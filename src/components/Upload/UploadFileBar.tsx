@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
+import { Button } from '@/components/Button';
 import { Icons } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import type { FC } from 'react';
@@ -61,10 +62,12 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
           </div>
         )}
       </div>
-      <Icons
-        wrapperCls={classes('icon-remove')}
-        name="remove"
-        size={20}
+      <Button
+        className={classes('icon-remove')}
+        color="white"
+        size="medium"
+        aria-label="Remove file"
+        iconStart={<Icons name="remove" size={20} />}
         onClick={handleRemove}
       />
     </div>

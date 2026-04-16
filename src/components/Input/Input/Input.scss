@@ -12,21 +12,20 @@ $component: 'input';
     height: theme.sizing(component-height, '3xl');
     padding: 0 theme.spacing(component-padding, 400);
     background-color: theme.palette(bg, 'default-secondary');
-    border: 1px solid theme.palette(border, 'default');
+    border: none;
     border-radius: theme.shape(300);
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default');
     transition:
-      border-color 0.2s ease,
       box-shadow 0.2s ease,
       background-color 0.2s ease;
   }
 
   &-control:hover {
-    border-color: theme.palette(border, 'default-tertiary');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default-tertiary');
   }
 
   &-control:focus-within {
-    border-color: theme.palette(border, 'brand');
-    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+    box-shadow: inset 0 0 0 2px theme.palette(border, 'brand');
   }
 
   &-control-disabled {
@@ -98,15 +97,13 @@ $component: 'input';
   &-warning &-control,
   &-warning &-control:hover,
   &-warning &-control:focus-within {
-    border-color: theme.palette(border, 'warning');
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'warning');
   }
 
   &-success &-control,
   &-success &-control:hover,
   &-success &-control:focus-within {
-    border-color: theme.palette(border, 'positive');
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'positive');
   }
 
   // ── Read-only ──
@@ -114,14 +111,13 @@ $component: 'input';
   &-readonly &-control:hover,
   &-readonly &-control:focus-within {
     background-color: theme.palette(bg, 'neutral-tertiary');
-    border-color: transparent;
     box-shadow: none;
   }
 
   // ── Disabled ──
   &-disabled &-control {
     background-color: theme.palette(bg, 'disabled');
-    border-color: theme.palette(border, 'default');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default');
     cursor: not-allowed;
   }
 

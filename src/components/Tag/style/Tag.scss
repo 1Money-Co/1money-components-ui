@@ -75,15 +75,6 @@ $tag-variants: (
     white-space: nowrap;
   }
 
-  &-label-large,
-  &-label-medium {
-    line-height: 1.33;
-  }
-
-  &-label-small {
-    line-height: 1.08;
-  }
-
   // ── Remove button ──
   &-remove {
     display: inline-flex;
