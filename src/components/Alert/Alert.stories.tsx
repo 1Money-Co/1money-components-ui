@@ -21,7 +21,9 @@ const stackStyle: React.CSSProperties = {
 };
 
 const multiLineTitle = 'This title is intentionally long enough to wrap onto multiple lines so the single-content icon alignment is easy to verify.';
-const multiLineBody = 'This body copy is intentionally long enough to wrap onto multiple lines so the single-content icon alignment is easy to verify in Storybook.';
+const multiLineBody = <>
+  For other stablecoins or fiat currency pairs not listed above, please contact us at <a rel='noopener noreferrer nofollow' href='mailto:support@1money.com' className='tw-text-primary tw-underline tw-font-medium'>support@1money.com</a>
+</>;
 
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
