@@ -53,7 +53,7 @@ export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   /** Whether to show the status icon. Defaults to true. */
   showIcon?: boolean;
 
-  /** Whether to show the close button. Defaults to true. */
+  /** Whether to show the close button. Defaults to false. */
   closable?: boolean;
 
   /** Callback fired when the close button is clicked */

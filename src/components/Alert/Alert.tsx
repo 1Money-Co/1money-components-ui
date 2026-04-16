@@ -26,7 +26,7 @@ export const Alert: FC<AlertProps> = props => {
     action,
     icon,
     showIcon = true,
-    closable = true,
+    closable = false,
     onClose,
     ref: _ref,
     ...rest
@@ -37,6 +37,8 @@ export const Alert: FC<AlertProps> = props => {
   const contentSectionCount = [title, body, link].filter(value => value != null).length;
   const closeAlignment = contentSectionCount === 1 ? 'center' : 'top';
   const useBodyTypographyForTitle = title != null && body == null;
+  const hasTitleAndBody = title != null && body != null;
+  const iconAlignment = link == null && contentSectionCount === 1 && (title != null || body != null) ? 'center' : 'top';
 
   return (
     <div
@@ -48,11 +50,11 @@ export const Alert: FC<AlertProps> = props => {
       )}
     >
       {showIcon && (
-        <span className={classes('icon')}>
+        <span className={classes('icon', classes(`icon-${iconAlignment}`))}>
           {iconElement}
         </span>
       )}
-      <div className={classes('content')}>
+      <div className={classes('content', hasTitleAndBody ? classes('content-title-body') : undefined)}>
         {title && (
           typeof title === 'string'
             ? (

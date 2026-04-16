@@ -45,6 +45,14 @@ $alert-variants: (
     justify-content: center;
   }
 
+  &-icon-center {
+    align-self: center;
+  }
+
+  &-icon-top {
+    align-self: flex-start;
+  }
+
   // ── Content area ──
   &-content {
     display: flex;
@@ -53,6 +61,9 @@ $alert-variants: (
     gap: theme.spacing(gap, 100);
     align-items: flex-start;
     min-width: 0;
+  }
+
+  &-content-title-body {
     padding-top: theme.spacing(scale, 200);
   }
 
