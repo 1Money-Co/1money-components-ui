@@ -59,7 +59,7 @@ $alert-variants: (
     flex: 1 0 0;
     flex-direction: column;
     gap: theme.spacing(gap, 100);
-    align-items: flex-start;
+    align-self: center;
     min-width: 0;
   }
 

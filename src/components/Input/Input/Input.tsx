@@ -79,6 +79,7 @@ const InputBase: FC<InputProps> = (props) => {
   });
 
   const handleControlClick = useEventCallback((e: MouseEvent<HTMLDivElement>) => {
+    if (isDisabled || readOnly) return;
     if (e.target instanceof HTMLInputElement) return;
     inputRef.current?.focus();
   });
