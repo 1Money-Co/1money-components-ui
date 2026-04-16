@@ -8,7 +8,6 @@ import {
   RADIO_DEFAULT_VARIANT,
   RADIO_GROUP_PREFIX_CLS,
   RADIO_VARIANT_CELL,
-  getRadioOrientationFromAlignment,
 } from './constants';
 import { RadioGroupProvider } from './RadioGroupContext';
 import { Radio } from './Radio';
@@ -34,6 +33,7 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
     variant = RADIO_DEFAULT_VARIANT,
     size = RADIO_DEFAULT_SIZE,
     alignment,
+    labelPlacement,
     gap,
     options,
     children,
@@ -50,7 +50,6 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
   const classes = classnames(prefixCls);
   const resolvedDirection = direction ?? layout ?? RADIO_DEFAULT_LAYOUT;
   const resolvedAlignment = alignment ?? RADIO_DEFAULT_ALIGNMENT;
-  const resolvedOrientation = getRadioOrientationFromAlignment(resolvedAlignment);
 
   const handleChange = useEventCallback((event: RadioChangeEvent) => {
     if (disabled) return;
@@ -73,10 +72,10 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
       name,
       variant,
       size,
-      orientation: resolvedOrientation,
       alignment: resolvedAlignment,
+      labelPlacement,
     }),
-    [innerValue, handleChange, disabled, name, variant, size, resolvedOrientation, resolvedAlignment],
+    [innerValue, handleChange, disabled, name, variant, size, resolvedAlignment, labelPlacement],
   );
 
   const content =
@@ -91,6 +90,7 @@ export const RadioGroup: FC<RadioGroupProps> = (props) => {
         variant={opt.variant}
         size={opt.size}
         alignment={opt.alignment}
+        labelPlacement={opt.labelPlacement}
         icon={opt.icon}
         tag={opt.tag}
         disabled={opt.disabled}

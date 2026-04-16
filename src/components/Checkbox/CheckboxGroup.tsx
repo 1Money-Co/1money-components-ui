@@ -55,7 +55,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = (props) => {
     defaultValue = [],
     onChange,
     children,
-    orientation = 'horizontal',
+    direction = 'horizontal',
     title,
     'aria-label': ariaLabel,
     'aria-labelledby': ariaLabelledBy,
@@ -154,7 +154,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = (props) => {
         className={classes(
           undefined,
           joinCls(
-            classes(orientation),
+            classes(direction),
             disabled && classes('disabled'),
             className,
           ),

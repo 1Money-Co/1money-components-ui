@@ -1,9 +1,9 @@
 import type { IconName } from '@/components/Icons';
 import type {
   RadioAlignment,
+  RadioLabelPlacement,
   RadioOrientation,
   RadioSize,
-  RadioVariant,
 } from './interface';
 
 export const RADIO_PREFIX_CLS = 'radio';
@@ -24,12 +24,15 @@ export const RADIO_ORIENTATIONS = [RADIO_ORIENTATION_HORIZONTAL, RADIO_ORIENTATI
 
 export const RADIO_ALIGNMENT_LEFT = 'left';
 export const RADIO_ALIGNMENT_CENTER = 'center';
-export const RADIO_ALIGNMENT_RIGHT = 'right';
 export const RADIO_ALIGNMENTS = [
   RADIO_ALIGNMENT_LEFT,
   RADIO_ALIGNMENT_CENTER,
-  RADIO_ALIGNMENT_RIGHT,
 ] as const;
+
+export const RADIO_LABEL_PLACEMENT_LEFT = 'left';
+export const RADIO_LABEL_PLACEMENT_RIGHT = 'right';
+export const RADIO_LABEL_PLACEMENTS = [RADIO_LABEL_PLACEMENT_LEFT, RADIO_LABEL_PLACEMENT_RIGHT] as const;
+export const RADIO_DEFAULT_LABEL_PLACEMENT: (typeof RADIO_LABEL_PLACEMENTS)[number] = RADIO_LABEL_PLACEMENT_LEFT;
 
 export const RADIO_LAYOUT_VERTICAL = 'vertical';
 export const RADIO_LAYOUT_HORIZONTAL = 'horizontal';
@@ -39,7 +42,7 @@ export const RADIO_DEFAULT_VARIANT: (typeof RADIO_VARIANTS)[number] = RADIO_VARI
 export const RADIO_DEFAULT_SIZE: (typeof RADIO_SIZES)[number] = RADIO_SIZE_LARGE;
 export const RADIO_DEFAULT_ORIENTATION: (typeof RADIO_ORIENTATIONS)[number] = RADIO_ORIENTATION_HORIZONTAL;
 export const RADIO_DEFAULT_ALIGNMENT: (typeof RADIO_ALIGNMENTS)[number] = RADIO_ALIGNMENT_LEFT;
-export const RADIO_DEFAULT_LAYOUT: (typeof RADIO_LAYOUTS)[number] = RADIO_LAYOUT_VERTICAL;
+export const RADIO_DEFAULT_LAYOUT: (typeof RADIO_LAYOUTS)[number] = RADIO_LAYOUT_HORIZONTAL;
 
 export const RADIO_INPUT_TYPE = 'radio';
 export const RADIO_CELL_CHECK_ICON: IconName = 'check';
@@ -74,34 +77,21 @@ export const getRadioOrientationFromAlignment = (
     : RADIO_ORIENTATION_HORIZONTAL
 );
 
-export const getRadioAlignmentFromDirection = (
-  direction?: 'left' | 'right',
-): RadioAlignment | undefined => {
-  if (direction === 'right') {
-    return RADIO_ALIGNMENT_RIGHT;
-  }
-
-  if (direction === 'left') {
-    return RADIO_ALIGNMENT_LEFT;
-  }
-
-  return undefined;
-};
-
 export const normalizeRadioAlignment = (
   alignment: RadioAlignment,
-  variant: RadioVariant,
-): RadioAlignment => {
-  if (variant === RADIO_VARIANT_CELL) {
-    return alignment === RADIO_ALIGNMENT_CENTER
-      ? RADIO_ALIGNMENT_CENTER
-      : RADIO_ALIGNMENT_LEFT;
-  }
+): RadioAlignment => (
+  alignment === RADIO_ALIGNMENT_CENTER
+    ? RADIO_ALIGNMENT_CENTER
+    : RADIO_ALIGNMENT_LEFT
+);
 
-  return alignment === RADIO_ALIGNMENT_RIGHT
-    ? RADIO_ALIGNMENT_RIGHT
-    : RADIO_ALIGNMENT_LEFT;
-};
+export const resolveDefaultVariantLabelPlacement = (
+  labelPlacement: RadioLabelPlacement | undefined,
+): RadioLabelPlacement => (
+  labelPlacement === RADIO_LABEL_PLACEMENT_RIGHT
+    ? RADIO_LABEL_PLACEMENT_RIGHT
+    : RADIO_LABEL_PLACEMENT_LEFT
+);
 
 export const RADIO_CELL_INDICATOR_ICON_COLOR = 'var(--om-radio-cell-indicator-icon)';
 export const RADIO_CELL_ICON_COLOR = 'var(--om-radio-cell-icon)';

@@ -6,7 +6,6 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 import './style';
 import BaseRadio, { createRadioChangeEvent } from './BaseRadio';
 import {
-  RADIO_ALIGNMENT_RIGHT,
   RADIO_CELL_CHECK_ICON,
   RADIO_CELL_ICON_COLOR,
   RADIO_CELL_ICON_SIZE_MAP,
@@ -15,6 +14,7 @@ import {
   RADIO_DEFAULT_SIZE,
   RADIO_DEFAULT_VARIANT,
   RADIO_INPUT_TYPE,
+  RADIO_LABEL_PLACEMENT_RIGHT,
   RADIO_ORIENTATION_HORIZONTAL,
   RADIO_ORIENTATION_VERTICAL,
   RADIO_PREFIX_CLS,
@@ -24,6 +24,7 @@ import {
   RADIO_VARIANT_CELL,
   getRadioOrientationFromAlignment,
   normalizeRadioAlignment,
+  resolveDefaultVariantLabelPlacement,
 } from './constants';
 import { useRadioGroupContext } from './RadioGroupContext';
 import type { ChangeEvent, FC, ReactNode } from 'react';
@@ -50,6 +51,7 @@ export const Radio: FC<RadioProps> = (props) => {
     variant: variantProp,
     size: sizeProp,
     alignment: alignmentProp,
+    labelPlacement: labelPlacementProp,
     icon,
     tag,
     onChange,
@@ -67,9 +69,14 @@ export const Radio: FC<RadioProps> = (props) => {
     ?? groupContext?.alignment
     ?? RADIO_DEFAULT_ALIGNMENT
   );
-  const alignment = normalizeRadioAlignment(requestedAlignment, variant);
+  const alignment = normalizeRadioAlignment(requestedAlignment);
   const orientation = getRadioOrientationFromAlignment(alignment);
-  const isRightAligned = alignment === RADIO_ALIGNMENT_RIGHT;
+  const resolvedLabelPlacement = resolveDefaultVariantLabelPlacement(
+    labelPlacementProp ?? groupContext?.labelPlacement,
+  );
+  const isRightAligned = variant === RADIO_VARIANT_CELL
+    ? false
+    : resolvedLabelPlacement === RADIO_LABEL_PLACEMENT_RIGHT;
   const name = isSelectableInGroup ? (nameProp ?? groupContext?.name) : nameProp;
   const inferredAriaLabel = (
     typeof label === 'string' || typeof label === 'number'

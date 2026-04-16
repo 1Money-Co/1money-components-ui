@@ -26,14 +26,14 @@ const meta: Meta<typeof CheckboxGroup> = {
   component: CheckboxGroup,
   argTypes: {
     disabled: { control: 'boolean' },
-    orientation: {
+    direction: {
       control: 'radio',
       options: ['horizontal', 'vertical'],
     },
   },
   args: {
     disabled: false,
-    orientation: 'horizontal',
+    direction: 'horizontal',
     onChange: fn(),
   },
   tags: ['autodocs'],
@@ -63,7 +63,7 @@ export const WithOptions: Story = {
 
 export const Vertical: Story = {
   args: {
-    orientation: 'vertical',
+    direction: 'vertical',
     options: OPTIONS.map((option) => ({ ...option })),
     defaultValue: ['pear'],
   },

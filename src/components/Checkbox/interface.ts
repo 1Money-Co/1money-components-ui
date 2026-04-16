@@ -91,7 +91,7 @@ export interface CheckboxGroupProps {
   defaultValue?: CheckboxValueType[];
   onChange?: (checkedValue: CheckboxValueType[]) => void;
   children?: ReactNode;
-  orientation?: 'horizontal' | 'vertical';
+  direction?: 'horizontal' | 'vertical';
   title?: string;
   'aria-label'?: string;
   'aria-labelledby'?: string;
