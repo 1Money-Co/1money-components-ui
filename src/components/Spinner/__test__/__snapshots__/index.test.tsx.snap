@@ -151,7 +151,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
           </svg>
           <div
             class="om-component-ui-spinner-lottie"
-            style="width: 29.6px; height: 29.6px;"
+            style="width: 49.33333333333333px; height: 49.33333333333333px;"
           />
         </div>
         <div
@@ -221,7 +221,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
         </svg>
         <div
           class="om-component-ui-spinner-lottie"
-          style="width: 29.6px; height: 29.6px;"
+          style="width: 49.33333333333333px; height: 49.33333333333333px;"
         />
       </div>
       <div
@@ -348,7 +348,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
           </svg>
           <div
             class="om-component-ui-spinner-lottie"
-            style="width: 29.6px; height: 29.6px;"
+            style="width: 49.33333333333333px; height: 49.33333333333333px;"
           />
         </div>
         <div
@@ -413,7 +413,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
         </svg>
         <div
           class="om-component-ui-spinner-lottie"
-          style="width: 29.6px; height: 29.6px;"
+          style="width: 49.33333333333333px; height: 49.33333333333333px;"
         />
       </div>
       <div
