@@ -1,0 +1,56 @@
+@use '@/styles/api' as theme;
+@use '@/styles/recipes/variants' as variants;
+
+$component: 'link';
+
+// ── Variant DSL ──
+$link-variant-schema: variants.om-variant-schema(
+  $component, text, hover-text, disabled-text
+);
+$link-variants: (
+  'primary': (
+    text: theme.palette(text, 'brand'),
+    hover-text: theme.palette(text, 'on-brand-secondary'),
+    disabled-text: theme.palette(text, 'brand-secondary'),
+  ),
+  'black': (
+    text: theme.palette(text, 'default'),
+    hover-text: theme.palette(text, 'default-secondary'),
+    disabled-text: theme.palette(text, 'disabled'),
+  ),
+  'grey': (
+    text: theme.palette(text, 'default-tertiary'),
+    hover-text: theme.palette(text, 'default-secondary'),
+    disabled-text: theme.palette(text, 'disabled'),
+  ),
+);
+
+.#{theme.$prefix}-#{$component} {
+  @include variants.om-variant-default($link-variants, 'primary', $link-variant-schema);
+
+  display: inline-flex;
+  align-items: center;
+  color: var(--om-link-text);
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  @include theme.typography(link, md);
+
+  &:hover:not(&-disabled) {
+    color: var(--om-link-hover-text);
+  }
+
+  &-disabled {
+    color: var(--om-link-disabled-text);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  // ── Size variants ──
+  &-small {
+    @include theme.typography(link, sm);
+  }
+
+  // ── Color variants ──
+  @include variants.om-variant-classes($link-variants, $link-variant-schema, $default: 'primary');
+}
