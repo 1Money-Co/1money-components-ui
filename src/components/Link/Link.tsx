@@ -9,7 +9,7 @@ import {
   LINK_PREFIX_CLS,
 } from './constants';
 
-export const Link: FC<LinkProps> = (props) => {
+const LinkComponent: FC<LinkProps> = (props) => {
   const {
     children,
     className = '',
@@ -27,7 +27,7 @@ export const Link: FC<LinkProps> = (props) => {
   } = props;
 
   const classes = classnames(prefixCls);
-  const resolvedRel = target === '_blank' && rel === undefined ? 'noreferrer' : rel;
+  const resolvedRel = target === '_blank' && rel === undefined ? 'noopener noreferrer' : rel;
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (disabled) {
@@ -63,4 +63,6 @@ export const Link: FC<LinkProps> = (props) => {
   );
 };
 
-export default memo(Link);
+export const Link = memo(LinkComponent);
+
+export default Link;

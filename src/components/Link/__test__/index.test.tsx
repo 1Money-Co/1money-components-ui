@@ -16,14 +16,6 @@ console.error = (message, ...optionalParams) => {
   originalConsoleError(message, ...optionalParams);
 };
 
-jest.mock('lottie-web', () => ({
-  loadAnimation: jest.fn(() => ({
-    play: jest.fn(),
-    pause: jest.fn(),
-    destroy: jest.fn(),
-  })),
-}));
-
 describe('Link', () => {
   it('renders correctly', () => {
     const wrapper = render(<Link href="#">Link</Link>);
@@ -51,6 +43,17 @@ describe('Link', () => {
     expect(getByText('Small')).toHaveClass('om-component-ui-link-small');
   });
 
+  it('invokes onClick when not disabled', () => {
+    const handleClick = jest.fn();
+    const { getByText } = render(
+      <Link href="#" onClick={handleClick}>
+        Click
+      </Link>,
+    );
+    fireEvent.click(getByText('Click'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
   it('blocks navigation and onClick when disabled', () => {
     const handleClick = jest.fn();
     const { getByText } = render(
@@ -69,12 +72,12 @@ describe('Link', () => {
     expect(handleClick).not.toHaveBeenCalled();
   });
 
-  it('defaults rel to "noreferrer" for target="_blank"', () => {
+  it('defaults rel to "noopener noreferrer" for target="_blank"', () => {
     const { getByText } = render(
       <Link href="https://example.com" target="_blank">
         External
       </Link>,
     );
-    expect(getByText('External')).toHaveAttribute('rel', 'noreferrer');
+    expect(getByText('External')).toHaveAttribute('rel', 'noopener noreferrer');
   });
 });

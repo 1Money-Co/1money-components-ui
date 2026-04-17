@@ -24,7 +24,7 @@ Disabled:
 <Link disabled>Read more</Link>
 ```
 
-External (auto `rel="noreferrer"` when `target="_blank"`):
+External (auto `rel="noopener noreferrer"` when `target="_blank"`):
 
 ```tsx
 <Link href="https://docs.1money.com" target="_blank">
@@ -41,7 +41,7 @@ External (auto `rel="noreferrer"` when `target="_blank"`):
 | `disabled` | `boolean` | `false` | Disables navigation, click, and focus |
 | `href` | `string` | — | Target URL |
 | `target` | `'_blank' \| '_self' \| ...` | — | Anchor target |
-| `rel` | `string` | auto `'noreferrer'` when `target="_blank"` | Anchor rel attribute |
+| `rel` | `string` | auto `'noopener noreferrer'` when `target="_blank"` | Anchor rel attribute |
 | `onClick` | `(e: MouseEvent) => void` | — | Click handler (suppressed when disabled) |
 | `prefixCls` | `string` | `'link'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |

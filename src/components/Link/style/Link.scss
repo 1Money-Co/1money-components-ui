@@ -47,10 +47,6 @@ $link-variants: (
   }
 
   // ── Size variants ──
-  &-large {
-    @include theme.typography(link, md);
-  }
-
   &-small {
     @include theme.typography(link, sm);
   }
