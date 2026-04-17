@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import type { FC } from 'react';
-import { FormItem, useFormContext } from '@/components/Form';
+import { FormItem } from '../core';
+import { useProFormContext } from '../context';
 import { default as classnames } from '@/utils/classnames';
 import { CSS_PREFIX } from '../constants';
 import type { ProFormFieldSetProps } from '../interface';
@@ -19,7 +20,7 @@ const ProFormFieldSetBase: FC<ProFormFieldSetProps> = (props) => {
     children,
   } = props;
 
-  const { values, setFieldValue } = useFormContext();
+  const { values, setFieldValue } = useProFormContext();
   const value = name ? (Array.isArray(values[name]) ? (values[name] as unknown[]) : []) : [];
 
   let itemIndex = -1;

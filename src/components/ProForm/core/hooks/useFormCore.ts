@@ -3,7 +3,7 @@ import type { FormEvent } from 'react';
 import { useEventCallback, useMemoizedFn } from '@1money/hooks';
 import type {
   Rule,
-  FormContextValue,
+  FormCoreContextShape,
   UseFormCoreConfig,
   UseFormCoreReturn,
 } from '../interface';
@@ -172,7 +172,6 @@ export const useFormCore = (config: UseFormCoreConfig = {}): UseFormCoreReturn =
         }
       }
 
-      // Clear error if validation passes
       if (errors[name]) {
         setFieldError(name, null);
       }
@@ -323,7 +322,7 @@ export const useFormCore = (config: UseFormCoreConfig = {}): UseFormCoreReturn =
     ],
   );
 
-  const contextValue: FormContextValue = useMemo(
+  const coreContextShape: FormCoreContextShape = useMemo(
     () => ({
       values,
       errors,
@@ -379,7 +378,7 @@ export const useFormCore = (config: UseFormCoreConfig = {}): UseFormCoreReturn =
     handleReset,
     resetFields,
     formInstance,
-    contextValue,
+    coreContextShape,
   };
 };
 

@@ -1,21 +1,28 @@
 import { createContext, useContext } from 'react';
-import type { ProFormContextValue, FormListContextValue } from './interface';
-import { DEFAULT_COL_SPAN } from './constants';
+import type { ProFormContextValue, FormListContextValue, ProFormFormInstance } from './interface';
 
-const noop = () => {};
-
-export const ProFormContext = createContext<ProFormContextValue>({
-  readonly: false,
-  mode: 'edit',
-  grid: false,
-  colProps: { span: DEFAULT_COL_SPAN },
-  registerTransform: noop,
-  unregisterTransform: noop,
-});
+export const ProFormContext = createContext<ProFormContextValue | null>(null);
 
 ProFormContext.displayName = 'ProFormContext';
 
-export const useProFormContext = (): ProFormContextValue => useContext(ProFormContext);
+/**
+ * Read the unified ProForm context (merged form core + ProForm semantics).
+ * Throws when used outside `<ProForm>`.
+ */
+export const useProFormContext = (): ProFormContextValue => {
+  const ctx = useContext(ProFormContext);
+  if (!ctx) {
+    throw new Error('useProFormContext must be used within a <ProForm> component');
+  }
+  return ctx;
+};
+
+/**
+ * Read the ProForm form instance (superset of FormCoreInstance with format helpers).
+ */
+export const useFormInstance = (): ProFormFormInstance => {
+  return useProFormContext().formInstance;
+};
 
 // ---------------------------------------------------------------------------
 // FormListContext — provides list scope info to ProFormDependency

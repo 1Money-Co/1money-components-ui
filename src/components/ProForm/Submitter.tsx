@@ -2,7 +2,7 @@ import { memo, useMemo } from 'react';
 import type { FC, ReactElement } from 'react';
 import { useMemoizedFn } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
-import { useFormInstance } from '@/components/Form/context';
+import { useFormInstance } from './context';
 import { Button } from '@/components/Button';
 import { CSS_PREFIX, DEFAULT_TEXT } from './constants';
 import type { SubmitterProps } from './interface';

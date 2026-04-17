@@ -1,5 +1,5 @@
 import type React from 'react';
-import type { FC, FormHTMLAttributes, ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react';
+import type { FC, ReactNode } from 'react';
 import type {
   FormSize,
   FormLayout,
@@ -28,30 +28,6 @@ export interface Rule {
     value: unknown,
     values: Record<string, unknown>,
   ) => boolean | string | Promise<boolean | string>;
-}
-
-export interface FormProps
-  extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'onReset'> {
-  children?: ReactNode;
-  className?: string;
-  prefixCls?: string;
-  initialValues?: Record<string, unknown>;
-  onFinish?: (values: Record<string, unknown>) => void;
-  onFinishFailed?: (errorInfo: {
-    values: Record<string, unknown>;
-    errors: Record<string, string>;
-  }) => void;
-  onValuesChange?: (
-    changedValues: Record<string, unknown>,
-    allValues: Record<string, unknown>,
-  ) => void;
-  onReset?: () => void;
-  size?: FormSize;
-  labelAlign?: LabelAlign;
-  disabled?: boolean;
-  colon?: boolean;
-  requiredMark?: boolean;
-  validateTrigger?: ValidateTrigger;
 }
 
 export interface FormItemProps {
@@ -89,7 +65,7 @@ export interface FieldComponentProps {
   render?: (props: FieldProps) => ReactNode;
 }
 
-/** Lightweight form instance returned by useFormCore and available via FormContext */
+/** Lightweight form instance returned by useFormCore */
 export interface FormCoreInstance {
   submit: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
   resetFields: () => void;
@@ -125,24 +101,6 @@ export interface FormInstance {
   unregisterField: (name: string) => void;
 }
 
-export interface FormContextValue {
-  values: Record<string, unknown>;
-  errors: Record<string, string>;
-  touched: Record<string, boolean>;
-  formInstance: FormCoreInstance;
-  setFieldValue: (name: string, value: unknown) => void;
-  setFieldError: (name: string, error: string | null) => void;
-  validateField: (name: string, rules: Rule[], providedValue?: unknown) => boolean;
-  registerField: (name: string, rules: Rule[]) => void;
-  unregisterField: (name: string) => void;
-  size: FormSize;
-  labelAlign: LabelAlign;
-  disabled: boolean;
-  colon: boolean;
-  requiredMark: boolean;
-  validateTrigger: ValidateTrigger;
-}
-
 export interface UseFormOptions {
   onValuesChange?: (
     changedValues: Record<string, unknown>,
@@ -172,6 +130,25 @@ export interface UseFormCoreConfig {
   validateTrigger?: ValidateTrigger;
 }
 
+/** Internal shape of data produced by useFormCore, consumed by ProForm to build ProFormContext */
+export interface FormCoreContextShape {
+  values: Record<string, unknown>;
+  errors: Record<string, string>;
+  touched: Record<string, boolean>;
+  formInstance: FormCoreInstance;
+  setFieldValue: (name: string, value: unknown) => void;
+  setFieldError: (name: string, error: string | null) => void;
+  validateField: (name: string, rules: Rule[], providedValue?: unknown) => boolean;
+  registerField: (name: string, rules: Rule[]) => void;
+  unregisterField: (name: string) => void;
+  size: FormSize;
+  labelAlign: LabelAlign;
+  disabled: boolean;
+  colon: boolean;
+  requiredMark: boolean;
+  validateTrigger: ValidateTrigger;
+}
+
 export interface UseFormCoreReturn {
   values: Record<string, unknown>;
   errors: Record<string, string>;
@@ -191,19 +168,5 @@ export interface UseFormCoreReturn {
   handleReset: (e?: React.FormEvent) => void;
   resetFields: () => void;
   formInstance: FormCoreInstance;
-  contextValue: FormContextValue;
-}
-
-export interface FormComponent
-  extends ForwardRefExoticComponent<
-    FormProps & RefAttributes<FormInstance>
-  > {
-  Item: FC<FormItemProps>;
-  useForm: (
-    initialValues?: Record<string, unknown>,
-    options?: UseFormOptions,
-  ) => [FormInstance];
-  useFormContext: () => FormContextValue;
-  useFormInstance: () => FormCoreInstance;
-  useFormCore: (config?: UseFormCoreConfig) => UseFormCoreReturn;
+  coreContextShape: FormCoreContextShape;
 }

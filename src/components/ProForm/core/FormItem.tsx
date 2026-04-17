@@ -2,7 +2,7 @@ import React, { memo, useEffect } from 'react';
 import { useEventCallback } from '@1money/hooks';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { useFormContext } from './context';
+import { useProFormContext } from '../context';
 import {
   FORM_COMPONENT_NAMES,
   FORM_ERROR_COLOR,
@@ -43,7 +43,7 @@ const FormItemBase: FC<FormItemProps> = (props) => {
     hidden = false,
   } = props;
 
-  const formContext = useFormContext();
+  const ctx = useProFormContext();
   const {
     values,
     errors,
@@ -56,7 +56,7 @@ const FormItemBase: FC<FormItemProps> = (props) => {
     colon: formColon,
     requiredMark,
     validateTrigger,
-  } = formContext;
+  } = ctx;
 
   const classes = classnames(prefixCls);
   const finalColon = itemColon !== undefined ? itemColon : formColon;
@@ -100,7 +100,7 @@ const FormItemBase: FC<FormItemProps> = (props) => {
         unregisterField(name);
       }
     };
-  }, [name]); // Only re-register when field name changes
+  }, [name]);
 
   const renderChildren = () => {
     if (!children) return null;
@@ -171,6 +171,9 @@ const FormItemBase: FC<FormItemProps> = (props) => {
   if (hidden) {
     return null;
   }
+
+  // Suppress unused-warning: finalColon is intentionally not rendered yet but kept in API
+  void finalColon;
 
   return (
     <div

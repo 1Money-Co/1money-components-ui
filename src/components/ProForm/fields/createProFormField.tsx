@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef, useCallback } from 'react';
 import type { FC, ReactNode } from 'react';
-import { FormItem, useFormContext } from '@/components/Form';
+import { FormItem } from '../core';
 import { Col } from '@/components/Grid';
 import { useProFormContext } from '../context';
 import { ProFormDependency } from '../ProFormDependency';
@@ -10,7 +10,7 @@ import { DEFAULT_COL_SPAN } from '../constants';
 import type { CreateProFormFieldConfig, ProFormFieldProps } from '../interface';
 
 // ---------------------------------------------------------------------------
-// ReadonlyField — reads value from FormContext and renders it
+// ReadonlyField — reads value from ProFormContext and renders it
 // ---------------------------------------------------------------------------
 interface ReadonlyFieldProps {
   name?: string;
@@ -18,7 +18,7 @@ interface ReadonlyFieldProps {
 }
 
 const ReadonlyFieldBase: FC<ReadonlyFieldProps> = ({ name, renderReadonly }) => {
-  const { values } = useFormContext();
+  const { values } = useProFormContext();
   const value = name ? values[name] : undefined;
 
   const rendered = renderReadonly ? renderReadonly(value) : (value != null && value !== '' ? String(value) : '-');
@@ -47,7 +47,7 @@ function ConvertValueWrapperBase<FP extends object>({
   component: Comp,
   componentProps,
 }: ConvertValueWrapperProps<FP>) {
-  const { values } = useFormContext();
+  const { values } = useProFormContext();
   const rawValue = values[name];
   const converted = convertValue(rawValue, name);
 

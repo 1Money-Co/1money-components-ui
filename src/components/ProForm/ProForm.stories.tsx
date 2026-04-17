@@ -27,7 +27,6 @@ import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 
 import './style';
-import '@/components/Form/style';
 import '@/components/Input/FieldShell/FieldShell.scss';
 import '@/components/Input/Input/Input.scss';
 import '@/components/Input/TextArea/TextArea.scss';

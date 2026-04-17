@@ -3,9 +3,8 @@ import type { FC, ReactNode } from 'react';
 import { useMemoizedFn, useSafeState } from '@1money/hooks';
 import { default as classnames } from '@/utils/classnames';
 import { Button } from '@/components/Button';
-import { useFormContext } from '@/components/Form';
 import { TypographyLabel, TypographyBody } from '@/components/Typography';
-import { FormListContext, useFormListContext } from './context';
+import { FormListContext, useFormListContext, useProFormContext } from './context';
 import { CSS_PREFIX, DEFAULT_TEXT, PROFORM_LIST_LABEL_SIZE, PROFORM_LIST_LABEL_COLOR } from './constants';
 import { extractButtonProps, getNestedValue } from './utils';
 import type { ProFormListProps, ProFormListAction } from './interface';
@@ -38,7 +37,7 @@ const ProFormListBase: FC<ProFormListProps> = (props) => {
   const parentCtx = useFormListContext();
   const fullName = parentCtx.listName ? `${parentCtx.listName}.${rawName}` : rawName;
 
-  const { values, setFieldValue } = useFormContext();
+  const { values, setFieldValue } = useProFormContext();
   const initialApplied = useRef(false);
   const keysRef = useRef<string[]>([]);
   const [listError, setListError] = useSafeState<string | null>(null);
