@@ -23,7 +23,7 @@ $component: 'upload';
   &-slot {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: theme.spacing(scale, 200);
     width: 100%;
   }
 
