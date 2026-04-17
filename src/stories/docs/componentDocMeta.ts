@@ -94,7 +94,7 @@ export const COMPONENT_DOC_META: Record<string, ComponentDocMeta> = {
       'Use it when labels, descriptions, validation status, prefix/suffix slots, and helper feedback all need to stay visually consistent.',
     ],
   },
-  Modal: {
+  Dialog: {
     whenToUse: [
       'Use it for blocking tasks that require focused attention before the user can continue.',
       'Use it when confirmation, acknowledgement, or critical workflow steps should interrupt the current page.',
@@ -125,7 +125,7 @@ export const COMPONENT_DOC_META: Record<string, ComponentDocMeta> = {
   ProForm: {
     whenToUse: [
       'Use it when you need higher-level, product-ready form composition rather than assembling every field manually.',
-      'Use it for search forms, modal forms, and structured data-entry flows that benefit from field wrappers and layout helpers.',
+      'Use it for search forms, dialog forms, and structured data-entry flows that benefit from field wrappers and layout helpers.',
       'Use it when a page should move quickly from schema-like field configuration to working business forms.',
     ],
   },

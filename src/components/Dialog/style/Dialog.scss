@@ -1,6 +1,6 @@
 @use '@/styles/api' as theme;
 
-$component: 'modal';
+$component: 'dialog';
 $dialog-width-small: 450px;
 $dialog-width-large: 740px;
 $dialog-transition-duration: 200ms;

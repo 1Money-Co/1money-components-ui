@@ -1,8 +1,7 @@
 import type { HTMLAttributes, ReactNode } from 'react';
+import type { DividerOrientation, DividerType, DividerVariant } from './constants';
 
-export type DividerType = 'horizontal' | 'vertical';
-export type DividerOrientation = 'left' | 'center' | 'right';
-export type DividerVariant = 'solid' | 'dashed' | 'dotted';
+export type { DividerOrientation, DividerType, DividerVariant } from './constants';
 
 export interface DividerProps extends HTMLAttributes<HTMLDivElement> {
   /** Direction type of the divider */

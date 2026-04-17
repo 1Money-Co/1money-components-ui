@@ -1,4 +1,4 @@
 export { DrawerForm } from './DrawerForm';
-export { ModalForm } from './ModalForm';
+export { DialogForm } from './DialogForm';
 export { QueryFilter } from './QueryFilter';
 export { useOverlayForm } from './useOverlayForm';

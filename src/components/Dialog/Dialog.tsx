@@ -19,37 +19,27 @@ import type { ReactNode, RefObject } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import type { IconName } from '@/components/Icons';
 import {
-  MODAL_ACTION_KIND,
-  MODAL_BUTTON_HTML_TYPE,
-  MODAL_BUTTON_SIZE,
-  MODAL_CLOSE_TIMEOUT,
-  MODAL_CONTROL_ICON_SIZE,
-  MODAL_CONTROL_LABELS,
-  MODAL_CONTROL_TYPE,
-  MODAL_DEFAULT_BUTTON_COLORS,
-  MODAL_DEFAULT_CANCEL_TEXT,
-  MODAL_DEFAULT_ICONS,
-  MODAL_DEFAULT_ILLUSTRATION_SIZE,
-  MODAL_DEFAULT_OK_TEXT,
-  MODAL_DEFAULT_PREFIX,
-  MODAL_ESCAPE_KEY,
-  MODAL_KEYDOWN_EVENT,
-  MODAL_MODIFIER,
-  MODAL_NAMESPACE,
-  MODAL_OVERFLOW_HIDDEN,
-  MODAL_OVERFLOW_RESET,
-  MODAL_SIZE,
-  MODAL_SLOT,
+  DIALOG_ACTION_KIND,
+  DIALOG_CONTROL_LABELS,
+  DIALOG_CONTROL_TYPE,
+  DIALOG_DEFAULT_BUTTON_COLORS,
+  DIALOG_DEFAULT_ICONS,
+  DIALOG_DEFAULT_PREFIX,
+  DIALOG_DEFAULTS,
+  DIALOG_MODIFIER,
+  DIALOG_NAMESPACE,
+  DIALOG_SIZE,
+  DIALOG_SLOT,
 } from './constants';
-import type { ModalActionKind, ModalControlType } from './constants';
-import type { ModalButtonClickHandler, ModalProps, ModalSize } from './interface';
+import type { DialogActionKind, DialogControlType } from './constants';
+import type { DialogButtonClickHandler, DialogProps, DialogSize } from './interface';
 import './style';
-type ModalAction = (() => void | Promise<void>) | undefined;
+type DialogAction = (() => void | Promise<void>) | undefined;
 
 let scrollLockCount = 0;
 
 const getClassName = (prefixCls: string, slot?: string, modifier?: string) => {
-  const baseClassName = `${MODAL_NAMESPACE}-${prefixCls}${slot ? `-${slot}` : ''}`;
+  const baseClassName = `${DIALOG_NAMESPACE}-${prefixCls}${slot ? `-${slot}` : ''}`;
   return modifier ? `${baseClassName}-${modifier}` : baseClassName;
 };
 
@@ -60,7 +50,7 @@ const setBodyOverflow = (value: string) => {
 
 const lockBodyScroll = () => {
   scrollLockCount += 1;
-  setBodyOverflow(MODAL_OVERFLOW_HIDDEN);
+  setBodyOverflow(DIALOG_DEFAULTS.overflowHidden);
 };
 
 const unlockBodyScroll = () => {
@@ -69,7 +59,7 @@ const unlockBodyScroll = () => {
   if (scrollLockCount === 0) {
     requestAnimationFrame(() => {
       if (scrollLockCount === 0) {
-        setBodyOverflow(MODAL_OVERFLOW_RESET);
+        setBodyOverflow(DIALOG_DEFAULTS.overflowReset);
       }
     });
   }
@@ -155,20 +145,20 @@ const useDialogFocus = (
   }, [active]);
 };
 
-const useEscapeClose = (enabled: boolean, onClose: ModalAction) => {
+const useEscapeClose = (enabled: boolean, onClose: DialogAction) => {
   useEffect(() => {
     if (!enabled || typeof document === 'undefined') return undefined;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== MODAL_ESCAPE_KEY) return;
+      if (event.key !== DIALOG_DEFAULTS.escapeKey) return;
       event.preventDefault();
       void onClose?.();
     };
 
-    document.addEventListener(MODAL_KEYDOWN_EVENT, handleKeyDown);
+    document.addEventListener(DIALOG_DEFAULTS.keydownEvent, handleKeyDown);
 
     return () => {
-      document.removeEventListener(MODAL_KEYDOWN_EVENT, handleKeyDown);
+      document.removeEventListener(DIALOG_DEFAULTS.keydownEvent, handleKeyDown);
     };
   }, [enabled, onClose]);
 };
@@ -190,20 +180,20 @@ const renderIllustrationNode = (illustration?: ReactNode | IconName) => {
   if (!illustration) return null;
 
   if (typeof illustration === 'string') {
-    return <Icons name={illustration as IconName} size={MODAL_DEFAULT_ILLUSTRATION_SIZE} />;
+    return <Icons name={illustration as IconName} size={DIALOG_DEFAULTS.illustrationSize} />;
   }
 
   return isValidElement(illustration) ? illustration : null;
 };
 
-const toVoidHandler = (action?: ModalAction) => () => {
+const toVoidHandler = (action?: DialogAction) => () => {
   void action?.();
 };
 
 const createActionHandler = (
-  action?: ModalAction,
+  action?: DialogAction,
   buttonClick?: ButtonProps['onClick'],
-): ModalButtonClickHandler => (event) => {
+): DialogButtonClickHandler => (event) => {
   buttonClick?.(event);
 
   if (event.defaultPrevented || !action) return;
@@ -213,17 +203,17 @@ const createActionHandler = (
 
 const renderControlButton = (
   prefixCls: string,
-  type: ModalControlType,
+  type: DialogControlType,
   iconNode: ReactNode,
-  onClick?: ModalAction,
+  onClick?: DialogAction,
 ) => (
   <button
-    type={MODAL_BUTTON_HTML_TYPE}
+    type={DIALOG_DEFAULTS.buttonHtmlType}
     className={classNames(
-      getClassName(prefixCls, MODAL_SLOT.control),
-      getClassName(prefixCls, MODAL_SLOT.control, type),
+      getClassName(prefixCls, DIALOG_SLOT.control),
+      getClassName(prefixCls, DIALOG_SLOT.control, type),
     )}
-    aria-label={MODAL_CONTROL_LABELS[type]}
+    aria-label={DIALOG_CONTROL_LABELS[type]}
     onClick={toVoidHandler(onClick)}
   >
     {iconNode}
@@ -238,9 +228,9 @@ const renderActionButton = ({
   buttonProps,
 }: {
   prefixCls: string;
-  kind: ModalActionKind;
+  kind: DialogActionKind;
   text: ReactNode;
-  action?: ModalAction;
+  action?: DialogAction;
   buttonProps?: Partial<ButtonProps>;
 }) => {
   if (text == null || !action) return null;
@@ -248,12 +238,12 @@ const renderActionButton = ({
   return (
     <Button
       {...buttonProps}
-      type={MODAL_BUTTON_HTML_TYPE}
-      size={MODAL_BUTTON_SIZE}
-      color={buttonProps?.color ?? MODAL_DEFAULT_BUTTON_COLORS[kind]}
+      type={DIALOG_DEFAULTS.buttonHtmlType}
+      size={DIALOG_DEFAULTS.buttonSize}
+      color={buttonProps?.color ?? DIALOG_DEFAULT_BUTTON_COLORS[kind]}
       className={classNames(
-        getClassName(prefixCls, MODAL_SLOT.actionButton),
-        getClassName(prefixCls, MODAL_SLOT.actionButton, kind),
+        getClassName(prefixCls, DIALOG_SLOT.actionButton),
+        getClassName(prefixCls, DIALOG_SLOT.actionButton, kind),
         buttonProps?.className,
       )}
       style={buttonProps?.style}
@@ -270,8 +260,8 @@ const resolveFooterNode = ({
   cancelButton,
   okButton,
 }: {
-  footer: ModalProps['footer'];
-  size: ModalSize;
+  footer: DialogProps['footer'];
+  size: DialogSize;
   cancelButton: ReactNode;
   okButton: ReactNode;
 }) => {
@@ -280,7 +270,7 @@ const resolveFooterNode = ({
   if (footer !== undefined) return footer;
   if (!cancelButton && !okButton) return null;
 
-  return size === MODAL_SIZE.large
+  return size === DIALOG_SIZE.large
     ? (
       <>
         {cancelButton}
@@ -295,13 +285,13 @@ const resolveFooterNode = ({
     );
 };
 
-const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
+const DialogBase = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
   const {
     className,
     style,
-    prefixCls = MODAL_DEFAULT_PREFIX,
+    prefixCls = DIALOG_DEFAULT_PREFIX,
     open = false,
-    size = MODAL_SIZE.small,
+    size = DIALOG_SIZE.small,
     maskClosable = true,
     showCloseIcon = true,
     showBackIcon = false,
@@ -317,8 +307,8 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     onOk,
     onCancel,
     onBack,
-    okText = MODAL_DEFAULT_OK_TEXT,
-    cancelText = MODAL_DEFAULT_CANCEL_TEXT,
+    okText = DIALOG_DEFAULTS.okText,
+    cancelText = DIALOG_DEFAULTS.cancelText,
     rootStyle,
     wrapperStyle,
     bodyStyle,
@@ -329,7 +319,7 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     okButtonProps,
     ...rest
   } = props;
-  const mounted = usePresence(open, MODAL_CLOSE_TIMEOUT);
+  const mounted = usePresence(open, DIALOG_DEFAULTS.closeTimeoutMs);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
   const descriptionId = useId();
@@ -361,11 +351,11 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   const closeControlNode = showCloseIcon
     ? renderControlButton(
       prefixCls,
-      MODAL_CONTROL_TYPE.close,
+      DIALOG_CONTROL_TYPE.close,
       closeIcon ?? (
         <Icons
-          name={MODAL_DEFAULT_ICONS[MODAL_CONTROL_TYPE.close]}
-          size={MODAL_CONTROL_ICON_SIZE}
+          name={DIALOG_DEFAULT_ICONS[DIALOG_CONTROL_TYPE.close]}
+          size={DIALOG_DEFAULTS.controlIconSize}
         />
       ),
       handleCancel,
@@ -374,11 +364,11 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   const backControlNode = showBackIcon
     ? renderControlButton(
       prefixCls,
-      MODAL_CONTROL_TYPE.back,
+      DIALOG_CONTROL_TYPE.back,
       backIcon ?? (
         <Icons
-          name={MODAL_DEFAULT_ICONS[MODAL_CONTROL_TYPE.back]}
-          size={MODAL_CONTROL_ICON_SIZE}
+          name={DIALOG_DEFAULT_ICONS[DIALOG_CONTROL_TYPE.back]}
+          size={DIALOG_DEFAULTS.controlIconSize}
         />
       ),
       handleBack,
@@ -402,14 +392,14 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   ));
   const cancelButton = renderActionButton({
     prefixCls,
-    kind: MODAL_ACTION_KIND.cancel,
+    kind: DIALOG_ACTION_KIND.cancel,
     text: cancelText,
     action: onCancel,
     buttonProps: cancelButtonProps,
   });
   const okButton = renderActionButton({
     prefixCls,
-    kind: MODAL_ACTION_KIND.ok,
+    kind: DIALOG_ACTION_KIND.ok,
     text: okText,
     action: onOk,
     buttonProps: okButtonProps,
@@ -428,22 +418,22 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
       <div
         style={rootStyle}
         className={classNames(
-          getClassName(prefixCls, MODAL_SLOT.root),
+          getClassName(prefixCls, DIALOG_SLOT.root),
           getClassName(
             prefixCls,
-            MODAL_SLOT.root,
-            open ? MODAL_MODIFIER.open : MODAL_MODIFIER.closed,
+            DIALOG_SLOT.root,
+            open ? DIALOG_MODIFIER.open : DIALOG_MODIFIER.closed,
           ),
         )}
       >
         <div
           aria-hidden="true"
-          className={getClassName(prefixCls, MODAL_SLOT.overlay)}
+          className={getClassName(prefixCls, DIALOG_SLOT.overlay)}
           onClick={handleOverlayClick}
         />
         <div
           style={wrapperStyle}
-          className={getClassName(prefixCls, MODAL_SLOT.wrapper)}
+          className={getClassName(prefixCls, DIALOG_SLOT.wrapper)}
         >
           <div
             {...rest}
@@ -457,44 +447,44 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
             className={classNames(
               getClassName(prefixCls),
               getClassName(prefixCls, undefined, size),
-              fullWidth && getClassName(prefixCls, undefined, MODAL_MODIFIER.fullWidth),
-              hasMedia && getClassName(prefixCls, undefined, MODAL_MODIFIER.withMedia),
+              fullWidth && getClassName(prefixCls, undefined, DIALOG_MODIFIER.fullWidth),
+              hasMedia && getClassName(prefixCls, undefined, DIALOG_MODIFIER.withMedia),
               className,
             )}
           >
             {closeControlNode}
-            {hasMedia && <div className={getClassName(prefixCls, MODAL_SLOT.media)}>{media}</div>}
-            <div className={getClassName(prefixCls, MODAL_SLOT.inner)}>
+            {hasMedia && <div className={getClassName(prefixCls, DIALOG_SLOT.media)}>{media}</div>}
+            <div className={getClassName(prefixCls, DIALOG_SLOT.inner)}>
               {backControlNode && (
                 <div
                   style={headerStyle}
-                  className={getClassName(prefixCls, MODAL_SLOT.header)}
+                  className={getClassName(prefixCls, DIALOG_SLOT.header)}
                 >
                   {backControlNode}
                 </div>
               )}
               <div
                 style={bodyStyle}
-                className={getClassName(prefixCls, MODAL_SLOT.body)}
+                className={getClassName(prefixCls, DIALOG_SLOT.body)}
               >
                 {(illustrationNode || titleNode || descriptionNode) && (
-                  <div className={getClassName(prefixCls, MODAL_SLOT.summary)}>
+                  <div className={getClassName(prefixCls, DIALOG_SLOT.summary)}>
                     {illustrationNode && (
-                      <div className={getClassName(prefixCls, MODAL_SLOT.illustration)}>
+                      <div className={getClassName(prefixCls, DIALOG_SLOT.illustration)}>
                         {illustrationNode}
                       </div>
                     )}
                     {(titleNode || descriptionNode) && (
-                      <div className={getClassName(prefixCls, MODAL_SLOT.copy)}>
+                      <div className={getClassName(prefixCls, DIALOG_SLOT.copy)}>
                         {titleNode && (
-                          <div id={titleId} className={getClassName(prefixCls, MODAL_SLOT.title)}>
+                          <div id={titleId} className={getClassName(prefixCls, DIALOG_SLOT.title)}>
                             {titleNode}
                           </div>
                         )}
                         {descriptionNode && (
                           <div
                             id={descriptionId}
-                            className={getClassName(prefixCls, MODAL_SLOT.description)}
+                            className={getClassName(prefixCls, DIALOG_SLOT.description)}
                           >
                             {descriptionNode}
                           </div>
@@ -506,7 +496,7 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
                 {childrenNode && (
                   <div
                     style={contentStyle}
-                    className={getClassName(prefixCls, MODAL_SLOT.content)}
+                    className={getClassName(prefixCls, DIALOG_SLOT.content)}
                   >
                     {childrenNode}
                   </div>
@@ -516,8 +506,8 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
                 <div
                   style={footerStyle}
                   className={classNames(
-                    getClassName(prefixCls, MODAL_SLOT.footer),
-                    getClassName(prefixCls, MODAL_SLOT.footer, size),
+                    getClassName(prefixCls, DIALOG_SLOT.footer),
+                    getClassName(prefixCls, DIALOG_SLOT.footer, size),
                   )}
                 >
                   {footerNode}
@@ -531,10 +521,10 @@ const ModalBase = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   );
 });
 
-ModalBase.displayName = 'Modal';
+DialogBase.displayName = 'Dialog';
 
-export const Modal = memo(ModalBase);
+export const Dialog = memo(DialogBase);
 
-Modal.displayName = 'Modal';
+Dialog.displayName = 'Dialog';
 
-export default Modal;
+export default Dialog;

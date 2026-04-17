@@ -1,1 +1,1 @@
-import './Modal.scss';
+import './Dialog.scss';

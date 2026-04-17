@@ -1,18 +1,26 @@
 import { memo } from 'react';
 import classnames, { joinCls } from '@/utils/classnames';
 import './style';
+import {
+  DIVIDER_COMPONENT_NAME,
+  DIVIDER_DEFAULT_PREFIX,
+  DIVIDER_DEFAULTS,
+  DIVIDER_MODIFIER,
+  DIVIDER_ORIENTATION_MARGIN_PROPERTY,
+  DIVIDER_SLOT,
+  DIVIDER_TYPE,
+  DIVIDER_VARIANT,
+} from './constants';
 import type { DividerProps } from './interface';
-
-const DIVIDER_PREFIX = 'divider';
 
 export const Divider = memo<DividerProps>(props => {
   const {
-    type = 'horizontal',
-    orientation = 'center',
+    type = DIVIDER_DEFAULTS.type,
+    orientation = DIVIDER_DEFAULTS.orientation,
     orientationMargin,
     plain = false,
-    variant = 'solid',
-    prefixCls = DIVIDER_PREFIX,
+    variant = DIVIDER_DEFAULTS.variant,
+    prefixCls = DIVIDER_DEFAULT_PREFIX,
     className,
     children,
     style,
@@ -20,27 +28,24 @@ export const Divider = memo<DividerProps>(props => {
   } = props;
 
   const classes = classnames(prefixCls);
-  const isHorizontal = type === 'horizontal';
-  const hasChildren = children !== undefined && children !== null && children !== '';
+  const showInlineText = type === DIVIDER_TYPE.horizontal && !!children;
   const hasCustomMargin = orientationMargin != null && orientationMargin !== '';
 
   const classNameValue = joinCls(
     classes(),
     classes(type),
-    hasChildren && isHorizontal && classes('with-text'),
-    hasChildren && isHorizontal && classes(`with-text-${orientation}`),
-    plain && classes('plain'),
-    variant !== 'solid' && classes(variant),
-    hasCustomMargin && classes('no-default-margin'),
+    showInlineText && classes(DIVIDER_MODIFIER.withText),
+    showInlineText && classes(`${DIVIDER_MODIFIER.withText}-${orientation}`),
+    plain && classes(DIVIDER_MODIFIER.plain),
+    variant !== DIVIDER_VARIANT.solid && classes(variant),
+    hasCustomMargin && classes(DIVIDER_MODIFIER.noDefaultMargin),
     className,
   );
 
+  const marginProperty = DIVIDER_ORIENTATION_MARGIN_PROPERTY[orientation];
   const innerStyle =
-    hasChildren && isHorizontal && hasCustomMargin
-      ? {
-          ...(orientation === 'left' ? { marginInlineStart: orientationMargin } : {}),
-          ...(orientation === 'right' ? { marginInlineEnd: orientationMargin } : {}),
-        }
+    showInlineText && hasCustomMargin && marginProperty
+      ? { [marginProperty]: orientationMargin }
       : undefined;
 
   return (
@@ -50,15 +55,15 @@ export const Divider = memo<DividerProps>(props => {
       style={style}
       role="separator"
     >
-      {hasChildren && isHorizontal ? (
-        <span className={classes('inner-text')} style={innerStyle}>
+      {showInlineText && (
+        <span className={classes(DIVIDER_SLOT.innerText)} style={innerStyle}>
           {children}
         </span>
-      ) : null}
+      )}
     </div>
   );
 });
 
-Divider.displayName = 'Divider';
+Divider.displayName = DIVIDER_COMPONENT_NAME;
 
 export default Divider;

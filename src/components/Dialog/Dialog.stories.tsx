@@ -3,8 +3,8 @@ import { fn } from '@storybook/test';
 import { Button } from '@/components/Button';
 import { Icons } from '@/components/Icons';
 import { TypographyBody } from '@/components/Typography';
-import { MODAL_SIZE, MODAL_SIZES } from './constants';
-import { Modal } from './index';
+import { DIALOG_SIZE, DIALOG_SIZES } from './constants';
+import { Dialog } from './index';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import './style';
@@ -34,13 +34,13 @@ const MediaPlaceholder = () => (
   </div>
 );
 
-const meta: Meta<typeof Modal> = {
-  title: 'Components/Modal',
-  component: Modal,
+const meta: Meta<typeof Dialog> = {
+  title: 'Components/Dialog',
+  component: Dialog,
   argTypes: {
     size: {
       control: 'radio',
-      options: MODAL_SIZES,
+      options: DIALOG_SIZES,
     },
     open: {
       control: false,
@@ -72,15 +72,15 @@ const meta: Meta<typeof Modal> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Modal>;
+type Story = StoryObj<typeof Dialog>;
 
-const ModalLauncher = (args: React.ComponentProps<typeof Modal>) => {
+const DialogLauncher = (args: React.ComponentProps<typeof Dialog>) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Open modal</Button>
-      <Modal
+      <Button onClick={() => setOpen(true)}>Open dialog</Button>
+      <Dialog
         {...args}
         open={open}
         onBack={args.onBack}
@@ -99,26 +99,26 @@ const ModalLauncher = (args: React.ComponentProps<typeof Modal>) => {
 
 export const Small: Story = {
   args: {
-    size: MODAL_SIZE.small,
+    size: DIALOG_SIZE.small,
     illustration: 'illus2FA',
     okText: 'Button',
     cancelText: 'Button',
   },
-  render: (args) => <ModalLauncher {...args} />,
+  render: (args) => <DialogLauncher {...args} />,
 };
 
 export const Large: Story = {
   args: {
-    size: MODAL_SIZE.large,
+    size: DIALOG_SIZE.large,
     showBackIcon: true,
     illustration: 'illus2FA',
   },
-  render: (args) => <ModalLauncher {...args} />,
+  render: (args) => <DialogLauncher {...args} />,
 };
 
 export const WithMedia: Story = {
   args: {
-    size: MODAL_SIZE.small,
+    size: DIALOG_SIZE.small,
     title: 'Text Heading',
     description: 'Body text',
     showCloseIcon: false,
@@ -126,12 +126,12 @@ export const WithMedia: Story = {
     cancelText: 'Button',
     media: <MediaPlaceholder />,
   },
-  render: (args) => <ModalLauncher {...args} />,
+  render: (args) => <DialogLauncher {...args} />,
 };
 
 export const CustomContent: Story = {
   args: {
-    size: MODAL_SIZE.small,
+    size: DIALOG_SIZE.small,
     title: 'Security check required',
     illustration: <Icons name="illusLocked" size={74} />,
     description: undefined,
@@ -141,10 +141,10 @@ export const CustomContent: Story = {
           Review the details below before continuing.
         </TypographyBody>
         <TypographyBody size="md" color="default-secondary">
-          This modal keeps the Figma shell and footer layout while allowing arbitrary content.
+          This dialog keeps the Figma shell and footer layout while allowing arbitrary content.
         </TypographyBody>
       </>
     ),
   },
-  render: (args) => <ModalLauncher {...args} />,
+  render: (args) => <DialogLauncher {...args} />,
 };

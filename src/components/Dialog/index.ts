@@ -1,7 +1,7 @@
-import Modal from './Modal';
+import Dialog from './Dialog';
 
-export { Modal } from './Modal';
+export { Dialog } from './Dialog';
 
-export default Modal;
+export default Dialog;
 
 export * from './interface';
