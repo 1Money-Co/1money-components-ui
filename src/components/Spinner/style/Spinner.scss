@@ -49,11 +49,6 @@ $component: 'spinner';
     stroke-linecap: round;
   }
 
-  // ── Shared spin animation for Logo ──
-  &-spin {
-    animation: om-spin 1s linear infinite;
-  }
-
   // ── Brand (no background) ──
   &-brand {
     display: flex;
@@ -68,9 +63,29 @@ $component: 'spinner';
     border-radius: theme.shape(600);
   }
 
-  // ── Logo icon color ──
-  &-logo {
-    color: theme.palette(icon, 'brand');
+  // ── Lottie animation container ──
+  &-lottie {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  // ── Brand-bg icon stack (static gradient circle + centered lottie) ──
+  &-icon-wrap {
+    position: relative;
+    flex-shrink: 0;
+
+    .#{theme.$prefix}-#{$component}-bg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .#{theme.$prefix}-#{$component}-lottie {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   // ── Content section ──
