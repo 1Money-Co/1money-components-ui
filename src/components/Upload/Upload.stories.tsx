@@ -22,18 +22,15 @@ export const MultipleFiles: Story = {
       label="Label"
       description="Description"
       feedback="Feedback"
-      className=''
     >
-       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
-        <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
-        <UploadFileBar
-          fileName="File name.PDF"
-          status={1}
-          message="Upload failed"
-          onRemove={fn()}
-        />
-      </div>
+      <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
+      <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
+      <UploadFileBar
+        fileName="File name.PDF"
+        status={1}
+        message="Upload failed"
+        onRemove={fn()}
+      />
     </Upload>
   ),
 };
