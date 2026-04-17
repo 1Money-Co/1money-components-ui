@@ -15,6 +15,7 @@ export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
 export { Drawer } from './components/Drawer';
 export { Dropdown } from './components/Dropdown';
+export { Link } from './components/Link';
 export { Modal } from './components/Modal';
 export { Navigation, Nav } from './components/Navigation';
 export { notification } from './components/Notification';
@@ -115,6 +116,7 @@ export type {
   DropdownContentContext,
   DropdownTrigger,
 } from './components/Dropdown';
+export type { LinkProps, LinkColor, LinkSize } from './components/Link';
 export type { ModalProps, ModalSize, ModalFooterRender } from './components/Modal';
 export type { NavigationProps, NavigationItem, NavigationHandlers, NavProps, NavItem } from './components/Navigation';
 export type {

@@ -14,15 +14,15 @@
       "import": "./es/index.css",
       "require": "./lib/index.css"
     },
-    "./Cell": {
-      "types": "./es/components/Cell/index.d.ts",
-      "import": "./es/components/Cell/index.js",
-      "require": "./lib/components/Cell/index.js"
+    "./Accordion": {
+      "types": "./es/components/Accordion/index.d.ts",
+      "import": "./es/components/Accordion/index.js",
+      "require": "./lib/components/Accordion/index.js"
     },
-    "./Badge": {
-      "types": "./es/components/Badge/index.d.ts",
-      "import": "./es/components/Badge/index.js",
-      "require": "./lib/components/Badge/index.js"
+    "./Alert": {
+      "types": "./es/components/Alert/index.d.ts",
+      "import": "./es/components/Alert/index.js",
+      "require": "./lib/components/Alert/index.js"
     },
     "./Button": {
       "types": "./es/components/Button/index.d.ts",
@@ -34,100 +34,95 @@
       "import": "./es/components/Calendar/index.js",
       "require": "./lib/components/Calendar/index.js"
     },
+    "./Carousel": {
+      "types": "./es/components/Carousel/index.d.ts",
+      "import": "./es/components/Carousel/index.js",
+      "require": "./lib/components/Carousel/index.js"
+    },
     "./Checkbox": {
       "types": "./es/components/Checkbox/index.d.ts",
       "import": "./es/components/Checkbox/index.js",
       "require": "./lib/components/Checkbox/index.js"
     },
     "./CheckboxGroup": {
-      "types": "./es/components/CheckboxGroup/index.d.ts",
-      "import": "./es/components/CheckboxGroup/index.js",
-      "require": "./lib/components/CheckboxGroup/index.js"
+      "types": "./es/components/Checkbox/index.d.ts",
+      "import": "./es/components/Checkbox/index.js",
+      "require": "./lib/components/Checkbox/index.js"
     },
-    "./Collapse": {
-      "types": "./es/components/Collapse/index.d.ts",
-      "import": "./es/components/Collapse/index.js",
-      "require": "./lib/components/Collapse/index.js"
-    },
-    "./ConfirmPopup": {
-      "types": "./es/components/ConfirmPopup/index.d.ts",
-      "import": "./es/components/ConfirmPopup/index.js",
-      "require": "./lib/components/ConfirmPopup/index.js"
+    "./CoachMark": {
+      "types": "./es/components/CoachMark/index.d.ts",
+      "import": "./es/components/CoachMark/index.js",
+      "require": "./lib/components/CoachMark/index.js"
     },
     "./Copy": {
       "types": "./es/components/Copy/index.d.ts",
       "import": "./es/components/Copy/index.js",
       "require": "./lib/components/Copy/index.js"
     },
-    "./Dropdown": {
-      "types": "./es/components/Dropdown/index.d.ts",
-      "import": "./es/components/Dropdown/index.js",
-      "require": "./lib/components/Dropdown/index.js"
+    "./Divider": {
+      "types": "./es/components/Divider/index.d.ts",
+      "import": "./es/components/Divider/index.js",
+      "require": "./lib/components/Divider/index.js"
     },
     "./Drawer": {
       "types": "./es/components/Drawer/index.d.ts",
       "import": "./es/components/Drawer/index.js",
       "require": "./lib/components/Drawer/index.js"
     },
-    "./Form": {
-      "types": "./es/components/Form/index.d.ts",
-      "import": "./es/components/Form/index.js",
-      "require": "./lib/components/Form/index.js"
+    "./Dropdown": {
+      "types": "./es/components/Dropdown/index.d.ts",
+      "import": "./es/components/Dropdown/index.js",
+      "require": "./lib/components/Dropdown/index.js"
     },
-    "./ProForm": {
-      "types": "./es/components/ProForm/index.d.ts",
-      "import": "./es/components/ProForm/index.js",
-      "require": "./lib/components/ProForm/index.js"
-    },
-    "./Grid": {
-      "types": "./es/components/Grid/index.d.ts",
-      "import": "./es/components/Grid/index.js",
-      "require": "./lib/components/Grid/index.js"
+    "./Empty": {
+      "types": "./es/components/Empty/index.d.ts",
+      "import": "./es/components/Empty/index.js",
+      "require": "./lib/components/Empty/index.js"
     },
     "./Flex": {
       "types": "./es/components/Flex/index.d.ts",
       "import": "./es/components/Flex/index.js",
       "require": "./lib/components/Flex/index.js"
     },
+    "./Form": {
+      "types": "./es/components/Form/index.d.ts",
+      "import": "./es/components/Form/index.js",
+      "require": "./lib/components/Form/index.js"
+    },
+    "./Grid": {
+      "types": "./es/components/Grid/index.d.ts",
+      "import": "./es/components/Grid/index.js",
+      "require": "./lib/components/Grid/index.js"
+    },
+    "./Icons": {
+      "types": "./es/components/Icons/index.d.ts",
+      "import": "./es/components/Icons/index.js",
+      "require": "./lib/components/Icons/index.js"
+    },
     "./Input": {
       "types": "./es/components/Input/index.d.ts",
       "import": "./es/components/Input/index.js",
       "require": "./lib/components/Input/index.js"
     },
-    "./InputAmount": {
-      "types": "./es/components/InputAmount/index.d.ts",
-      "import": "./es/components/InputAmount/index.js",
-      "require": "./lib/components/InputAmount/index.js"
-    },
-    "./Loading": {
-      "types": "./es/components/Loading/index.d.ts",
-      "import": "./es/components/Loading/index.js",
-      "require": "./lib/components/Loading/index.js"
-    },
-    "./Menu": {
-      "types": "./es/components/Menu/index.d.ts",
-      "import": "./es/components/Menu/index.js",
-      "require": "./lib/components/Menu/index.js"
-    },
-    "./Message": {
-      "types": "./es/components/Message/index.d.ts",
-      "import": "./es/components/Message/index.js",
-      "require": "./lib/components/Message/index.js"
+    "./Link": {
+      "types": "./es/components/Link/index.d.ts",
+      "import": "./es/components/Link/index.js",
+      "require": "./lib/components/Link/index.js"
     },
     "./Modal": {
       "types": "./es/components/Modal/index.d.ts",
       "import": "./es/components/Modal/index.js",
       "require": "./lib/components/Modal/index.js"
     },
+    "./Navigation": {
+      "types": "./es/components/Navigation/index.d.ts",
+      "import": "./es/components/Navigation/index.js",
+      "require": "./lib/components/Navigation/index.js"
+    },
     "./Notification": {
       "types": "./es/components/Notification/index.d.ts",
       "import": "./es/components/Notification/index.js",
       "require": "./lib/components/Notification/index.js"
-    },
-    "./Portal": {
-      "types": "./es/components/Portal/index.d.ts",
-      "import": "./es/components/Portal/index.js",
-      "require": "./lib/components/Portal/index.js"
     },
     "./Pagination": {
       "types": "./es/components/Pagination/index.d.ts",
@@ -139,10 +134,15 @@
       "import": "./es/components/Popconfirm/index.js",
       "require": "./lib/components/Popconfirm/index.js"
     },
-    "./Popup": {
-      "types": "./es/components/Popup/index.d.ts",
-      "import": "./es/components/Popup/index.js",
-      "require": "./lib/components/Popup/index.js"
+    "./Portal": {
+      "types": "./es/components/Portal/index.d.ts",
+      "import": "./es/components/Portal/index.js",
+      "require": "./lib/components/Portal/index.js"
+    },
+    "./ProForm": {
+      "types": "./es/components/ProForm/index.d.ts",
+      "import": "./es/components/ProForm/index.js",
+      "require": "./lib/components/ProForm/index.js"
     },
     "./Progress": {
       "types": "./es/components/Progress/index.d.ts",
@@ -159,6 +159,11 @@
       "import": "./es/components/Radio/index.js",
       "require": "./lib/components/Radio/index.js"
     },
+    "./ResizeObserver": {
+      "types": "./es/components/ResizeObserver/index.d.ts",
+      "import": "./es/components/ResizeObserver/index.js",
+      "require": "./lib/components/ResizeObserver/index.js"
+    },
     "./Segment": {
       "types": "./es/components/Segment/index.d.ts",
       "import": "./es/components/Segment/index.js",
@@ -173,6 +178,11 @@
       "types": "./es/components/Skeleton/index.d.ts",
       "import": "./es/components/Skeleton/index.js",
       "require": "./lib/components/Skeleton/index.js"
+    },
+    "./Slider": {
+      "types": "./es/components/Slider/index.d.ts",
+      "import": "./es/components/Slider/index.js",
+      "require": "./lib/components/Slider/index.js"
     },
     "./Space": {
       "types": "./es/components/Space/index.d.ts",
@@ -194,45 +204,30 @@
       "import": "./es/components/Switch/index.js",
       "require": "./lib/components/Switch/index.js"
     },
-    "./Icons": {
-      "types": "./es/components/Icons/index.d.ts",
-      "import": "./es/components/Icons/index.js",
-      "require": "./lib/components/Icons/index.js"
-    },
-    "./Clipboard": {
-      "types": "./es/components/Clipboard/index.d.ts",
-      "import": "./es/components/Clipboard/index.js",
-      "require": "./lib/components/Clipboard/index.js"
-    },
-    "./Sidebar": {
-      "types": "./es/components/Sidebar/index.d.ts",
-      "import": "./es/components/Sidebar/index.js",
-      "require": "./lib/components/Sidebar/index.js"
-    },
-    "./Tab": {
-      "types": "./es/components/Tab/index.d.ts",
-      "import": "./es/components/Tab/index.js",
-      "require": "./lib/components/Tab/index.js"
+    "./Table": {
+      "types": "./es/components/Table/index.d.ts",
+      "import": "./es/components/Table/index.js",
+      "require": "./lib/components/Table/index.js"
     },
     "./Tabs": {
       "types": "./es/components/Tabs/index.d.ts",
       "import": "./es/components/Tabs/index.js",
       "require": "./lib/components/Tabs/index.js"
     },
-    "./Table": {
-      "types": "./es/components/Table/index.d.ts",
-      "import": "./es/components/Table/index.js",
-      "require": "./lib/components/Table/index.js"
-    },
-    "./Toast": {
-      "types": "./es/components/Toast/index.d.ts",
-      "import": "./es/components/Toast/index.js",
-      "require": "./lib/components/Toast/index.js"
+    "./Tag": {
+      "types": "./es/components/Tag/index.d.ts",
+      "import": "./es/components/Tag/index.js",
+      "require": "./lib/components/Tag/index.js"
     },
     "./Tooltip": {
       "types": "./es/components/Tooltip/index.d.ts",
       "import": "./es/components/Tooltip/index.js",
       "require": "./lib/components/Tooltip/index.js"
+    },
+    "./Tour": {
+      "types": "./es/components/Tour/index.d.ts",
+      "import": "./es/components/Tour/index.js",
+      "require": "./lib/components/Tour/index.js"
     },
     "./Trigger": {
       "types": "./es/components/Trigger/index.d.ts",
@@ -248,11 +243,6 @@
       "types": "./es/components/Upload/index.d.ts",
       "import": "./es/components/Upload/index.js",
       "require": "./lib/components/Upload/index.js"
-    },
-    "./ResizeObserver": {
-      "types": "./es/components/ResizeObserver/index.d.ts",
-      "import": "./es/components/ResizeObserver/index.js",
-      "require": "./lib/components/ResizeObserver/index.js"
     },
     "./VirtualList": {
       "types": "./es/components/VirtualList/index.d.ts",
