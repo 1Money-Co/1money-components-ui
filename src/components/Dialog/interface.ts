@@ -6,19 +6,19 @@ import type {
 } from 'react';
 import type { ButtonProps } from '@/components/Button';
 import type { IconName } from '@/components/Icons';
-import type { ModalSize } from './constants';
+import type { DialogSize } from './constants';
 
-export type { ModalSize } from './constants';
-export type ModalFooterRender = (
+export type { DialogSize } from './constants';
+export type DialogFooterRender = (
   cancelButton: ReactNode,
   okButton: ReactNode,
 ) => ReactNode;
 
-export interface ModalProps
+export interface DialogProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title' | 'onCancel'> {
   prefixCls?: string;
   open?: boolean;
-  size?: ModalSize;
+  size?: DialogSize;
   maskClosable?: boolean;
   showCloseIcon?: boolean;
   showBackIcon?: boolean;
@@ -30,7 +30,7 @@ export interface ModalProps
   media?: ReactNode;
   closeIcon?: ReactNode;
   backIcon?: ReactNode;
-  footer?: ReactNode | ModalFooterRender | null;
+  footer?: ReactNode | DialogFooterRender | null;
   onOk?: () => void | Promise<void>;
   onCancel?: () => void | Promise<void>;
   onBack?: () => void;
@@ -46,4 +46,4 @@ export interface ModalProps
   okButtonProps?: Partial<ButtonProps>;
 }
 
-export type ModalButtonClickHandler = MouseEventHandler<HTMLButtonElement>;
+export type DialogButtonClickHandler = MouseEventHandler<HTMLButtonElement>;

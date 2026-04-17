@@ -18,7 +18,7 @@ const OPTIONS = [
   { label: 'Dogecoin', value: 'doge' },
   { label: 'Cardano', value: 'ada' },
   { label: 'Polygon', value: 'matic' },
-] as const;
+];
 
 const GROUPED_OPTIONS = [
   {
@@ -35,7 +35,7 @@ const GROUPED_OPTIONS = [
       { label: 'GBP', value: 'gbp', description: 'British Pound' },
     ],
   },
-] as const;
+];
 
 const ASSET_OPTIONS = [
   { label: 'Bitcoin', value: 'btc', description: 'Bitcoin network' },
@@ -45,7 +45,7 @@ const ASSET_OPTIONS = [
   { label: 'Solana', value: 'sol', description: 'Solana network' },
   { label: 'Dogecoin', value: 'doge', description: 'Dogecoin network' },
   { label: 'MATIC', value: 'matic', description: 'Polygon PoS' },
-] as const;
+];
 
 const GROUPED_ASSET_OPTIONS = [
   {
@@ -70,7 +70,7 @@ const GROUPED_ASSET_OPTIONS = [
       { label: 'MATIC', value: 'matic', description: 'Polygon PoS' },
     ],
   },
-] as const;
+];
 
 const storyContainerStyle: React.CSSProperties = {
   width: 280,
@@ -495,6 +495,54 @@ export const GroupedAssetOptions: Story = {
     placeholder: 'Select asset',
     options: GROUPED_ASSET_OPTIONS,
     value: 'usdt',
+  },
+  tags: ['!autodocs', 'dev'],
+};
+
+export const SearchOnlyFiltered: Story = {
+  render: (args) => {
+    const [value, setValue] = useState<string | number | undefined>(undefined);
+    const [searchValue, setSearchValue] = useState('');
+
+    const trimmed = searchValue.trim().toLowerCase();
+    const filteredOptions = trimmed
+      ? ASSET_OPTIONS.filter((option) => {
+          const label = String(option.label).toLowerCase();
+          const description = String(option.description ?? '').toLowerCase();
+          const optionValue = String(option.value).toLowerCase();
+          return (
+            label.includes(trimmed) ||
+            description.includes(trimmed) ||
+            optionValue.includes(trimmed)
+          );
+        })
+      : [];
+
+    return (
+      <div style={storyContainerStyle}>
+        <Select
+          {...args}
+          value={value}
+          options={filteredOptions}
+          searchValue={searchValue}
+          emptyContent={trimmed ? 'No matches' : 'Type to search assets'}
+          onSearchChange={(next) => {
+            setSearchValue(next);
+            args.onSearchChange?.(next);
+          }}
+          onChange={(nextValue, option) => {
+            setValue(nextValue as string | number | undefined);
+            args.onChange?.(nextValue, option);
+          }}
+        />
+      </div>
+    );
+  },
+  args: {
+    label: undefined,
+    placeholder: 'Select asset',
+    searchable: true,
+    searchPlaceholder: 'Search',
   },
   tags: ['!autodocs', 'dev'],
 };

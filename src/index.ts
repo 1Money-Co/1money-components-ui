@@ -2,6 +2,7 @@ export { Accordion } from './components/Accordion';
 export { Alert } from './components/Alert';
 export { Button } from './components/Button';
 export { Calendar } from './components/Calendar';
+export { Cell } from './components/Cell';
 export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
 export { CoachMark } from './components/CoachMark';
@@ -16,7 +17,7 @@ export { Input } from './components/Input';
 export { Drawer } from './components/Drawer';
 export { Dropdown } from './components/Dropdown';
 export { Link } from './components/Link';
-export { Modal } from './components/Modal';
+export { Dialog } from './components/Dialog';
 export { Navigation, Nav } from './components/Navigation';
 export { notification } from './components/Notification';
 export {
@@ -35,7 +36,7 @@ export {
   ProFormCheckboxGroup,
   ProFormSwitch,
   ProFormSelect,
-  ModalForm,
+  DialogForm,
   QueryFilter,
   useProFormContext,
 } from './components/ProForm';
@@ -67,6 +68,7 @@ export type { AccordionProps, AccordionItem } from './components/Accordion';
 export type { AlertProps, AlertStatus, AlertLinkConfig } from './components/Alert';
 export type { ButtonProps } from './components/Button';
 export type { CalendarProps } from './components/Calendar';
+export type { CellProps } from './components/Cell';
 export type { CarouselProps } from './components/Carousel';
 export type {
   CheckboxChangeEvent,
@@ -117,7 +119,7 @@ export type {
   DropdownTrigger,
 } from './components/Dropdown';
 export type { LinkProps, LinkColor, LinkSize } from './components/Link';
-export type { ModalProps, ModalSize, ModalFooterRender } from './components/Modal';
+export type { DialogProps, DialogSize, DialogFooterRender } from './components/Dialog';
 export type { NavigationProps, NavigationItem, NavigationHandlers, NavProps, NavItem } from './components/Navigation';
 export type {
   NotificationLinkConfig,
@@ -239,7 +241,7 @@ export type {
   ProFormDependencyProps,
   ProFormListProps,
   ProFormListAction,
-  ModalFormProps,
+  DialogFormProps,
   QueryFilterProps,
   CreateProFormFieldConfig,
 } from './components/ProForm';

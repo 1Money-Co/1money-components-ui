@@ -35,10 +35,9 @@ export const Alert: FC<AlertProps> = props => {
   const classes = classnames(prefixCls);
   const iconElement = icon ?? STATUS_ICON_MAP[status];
   const contentSectionCount = [title, body, link].filter(value => value != null).length;
-  const closeAlignment = contentSectionCount === 1 ? 'center' : 'top';
-  const useBodyTypographyForTitle = title != null && body == null;
-  const hasTitleAndBody = title != null && body != null;
-  const iconAlignment = link == null && contentSectionCount === 1 && (title != null || body != null) ? 'center' : 'top';
+  const useBodyTypographyForTitle = !!title && !body;
+  const hasTitleAndBody = !!title && !!body;
+  const iconAlignment = link == null && contentSectionCount === 1 && (!!title || !!body) ? 'center' : 'top';
 
   return (
     <div
@@ -82,7 +81,7 @@ export const Alert: FC<AlertProps> = props => {
           {closable && (
             <button
               type="button"
-              className={classes('close', classes(`close-${closeAlignment}`))}
+              className={classes('close', classes('close-top'))}
               onClick={onClose}
               aria-label={CLOSE_ALERT_ARIA_LABEL}
             >

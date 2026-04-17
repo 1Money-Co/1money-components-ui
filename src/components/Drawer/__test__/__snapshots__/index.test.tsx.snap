@@ -99,23 +99,23 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
         style="display: flex; gap: 12px; width: 100%;"
       >
         <button
-          class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-medium"
+          class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-large"
           style="flex: 1;"
           type="button"
         >
           <span
-            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-strong"
           >
             Cancel
           </span>
         </button>
         <button
-          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-medium"
+          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-large"
           style="flex: 1;"
           type="button"
         >
           <span
-            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-strong"
           >
             Confirm
           </span>

@@ -4,20 +4,18 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
-  MODAL_CONTROL_ICON_SIZE,
-  MODAL_CONTROL_LABELS,
-  MODAL_CONTROL_TYPE,
-  MODAL_DEFAULT_CANCEL_TEXT,
-  MODAL_DEFAULT_OK_TEXT,
-  MODAL_DEFAULT_PREFIX,
-  MODAL_NAMESPACE,
-  MODAL_SIZE,
-  MODAL_SLOT,
+  DIALOG_CONTROL_LABELS,
+  DIALOG_CONTROL_TYPE,
+  DIALOG_DEFAULT_PREFIX,
+  DIALOG_DEFAULTS,
+  DIALOG_NAMESPACE,
+  DIALOG_SIZE,
+  DIALOG_SLOT,
 } from '../constants';
-import { Modal } from '../index';
+import { Dialog } from '../index';
 
-const getModalClassSelector = (slot: string, modifier?: string) =>
-  `.${MODAL_NAMESPACE}-${MODAL_DEFAULT_PREFIX}-${slot}${modifier ? `-${modifier}` : ''}`;
+const getDialogClassSelector = (slot: string, modifier?: string) =>
+  `.${DIALOG_NAMESPACE}-${DIALOG_DEFAULT_PREFIX}-${slot}${modifier ? `-${modifier}` : ''}`;
 
 const originalConsoleError = console.error;
 
@@ -38,10 +36,10 @@ afterAll(() => {
   console.error = originalConsoleError;
 });
 
-describe('Modal', () => {
+describe('Dialog', () => {
   it('renders content in a portal when open', () => {
     render(
-      <Modal
+      <Dialog
         open
         title="Text Heading"
         description="Body text"
@@ -57,19 +55,19 @@ describe('Modal', () => {
     expect(screen.getByText('Text Heading')).toBeInTheDocument();
     expect(screen.getByText('Body text')).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: MODAL_DEFAULT_OK_TEXT }),
+      screen.getByRole('button', { name: DIALOG_DEFAULTS.okText }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: MODAL_DEFAULT_CANCEL_TEXT }),
+      screen.getByRole('button', { name: DIALOG_DEFAULTS.cancelText }),
     ).toBeInTheDocument();
 
     const closeButton = screen.getByRole('button', {
-      name: MODAL_CONTROL_LABELS[MODAL_CONTROL_TYPE.close],
+      name: DIALOG_CONTROL_LABELS[DIALOG_CONTROL_TYPE.close],
     });
     const closeIcon = closeButton.querySelector('svg');
 
-    expect(closeIcon).toHaveAttribute('width', String(MODAL_CONTROL_ICON_SIZE));
-    expect(closeIcon).toHaveAttribute('height', String(MODAL_CONTROL_ICON_SIZE));
+    expect(closeIcon).toHaveAttribute('width', String(DIALOG_DEFAULTS.controlIconSize));
+    expect(closeIcon).toHaveAttribute('height', String(DIALOG_DEFAULTS.controlIconSize));
   });
 
   it('calls onCancel when clicking the overlay if maskClosable is enabled', async () => {
@@ -77,7 +75,7 @@ describe('Modal', () => {
     const user = userEvent.setup();
 
     render(
-      <Modal
+      <Dialog
         open
         title="Text Heading"
         description="Body text"
@@ -86,7 +84,7 @@ describe('Modal', () => {
       />
     );
 
-    const overlay = document.querySelector(getModalClassSelector(MODAL_SLOT.overlay));
+    const overlay = document.querySelector(getDialogClassSelector(DIALOG_SLOT.overlay));
 
     expect(overlay).not.toBeNull();
 
@@ -100,7 +98,7 @@ describe('Modal', () => {
     const user = userEvent.setup();
 
     render(
-      <Modal
+      <Dialog
         open
         title="Text Heading"
         description="Body text"
@@ -110,7 +108,7 @@ describe('Modal', () => {
       />
     );
 
-    const overlay = document.querySelector(getModalClassSelector(MODAL_SLOT.overlay));
+    const overlay = document.querySelector(getDialogClassSelector(DIALOG_SLOT.overlay));
 
     expect(overlay).not.toBeNull();
 
@@ -124,9 +122,9 @@ describe('Modal', () => {
     const user = userEvent.setup();
 
     render(
-      <Modal
+      <Dialog
         open
-        size={MODAL_SIZE.large}
+        size={DIALOG_SIZE.large}
         showBackIcon
         title="Text Heading"
         description="Body text"
@@ -137,13 +135,13 @@ describe('Modal', () => {
     );
 
     const footer = document.querySelector(
-      getModalClassSelector(MODAL_SLOT.footer, MODAL_SIZE.large),
+      getDialogClassSelector(DIALOG_SLOT.footer, DIALOG_SIZE.large),
     );
 
     expect(footer).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', {
-      name: MODAL_CONTROL_LABELS[MODAL_CONTROL_TYPE.back],
+      name: DIALOG_CONTROL_LABELS[DIALOG_CONTROL_TYPE.back],
     }));
 
     expect(onBack).toHaveBeenCalledTimes(1);

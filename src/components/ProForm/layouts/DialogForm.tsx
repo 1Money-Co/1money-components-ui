@@ -1,15 +1,15 @@
 import { memo } from 'react';
 import type { FC } from 'react';
 import { default as classnames } from '@/utils/classnames';
-import { Modal } from '@/components/Modal';
+import { Dialog } from '@/components/Dialog';
 import { ProForm } from '../ProForm';
 import { CSS_PREFIX } from '../constants';
 import { useOverlayForm } from './useOverlayForm';
-import type { ModalFormProps } from '../interface';
+import type { DialogFormProps } from '../interface';
 
-const classes = classnames(`${CSS_PREFIX}-modal-form`);
+const classes = classnames(`${CSS_PREFIX}-dialog-form`);
 
-const ModalFormBase: FC<ModalFormProps> = (props) => {
+const DialogFormBase: FC<DialogFormProps> = (props) => {
   const {
     open,
     onOpenChange,
@@ -18,12 +18,12 @@ const ModalFormBase: FC<ModalFormProps> = (props) => {
     width,
     submitTimeout,
     autoClose = true,
-    modalProps,
+    dialogProps,
     onFinish,
     submitter,
     children,
     // destroyOnClose is accepted for API compat but not used —
-    // Modal's own usePresence already unmounts the entire DOM tree
+    // Dialog's own usePresence already unmounts the entire DOM tree
     // (including form content) after the close animation finishes.
     destroyOnClose: _destroyOnClose,
     ...formProps
@@ -42,13 +42,13 @@ const ModalFormBase: FC<ModalFormProps> = (props) => {
   return (
     <>
       {triggerNode}
-      <Modal
-        {...modalProps}
+      <Dialog
+        {...dialogProps}
         open={mergedOpen}
         title={title}
         onCancel={handleHide}
         footer={null}
-        {...(width !== undefined ? { rootStyle: { ...modalProps?.rootStyle, width } } : {})}
+        {...(width !== undefined ? { rootStyle: { ...dialogProps?.rootStyle, width } } : {})}
       >
         <div className={classes()}>
           <ProForm
@@ -56,19 +56,19 @@ const ModalFormBase: FC<ModalFormProps> = (props) => {
             onFinish={handleFinish}
             submitter={submitter !== undefined ? submitter : {
               resetButtonProps: { onClick: handleHide },
-              resetText: modalProps?.cancelText ?? 'Cancel',
+              resetText: dialogProps?.cancelText ?? 'Cancel',
             }}
           >
             {children}
           </ProForm>
         </div>
-      </Modal>
+      </Dialog>
     </>
   );
 };
 
-ModalFormBase.displayName = 'ModalForm';
+DialogFormBase.displayName = 'DialogForm';
 
-export const ModalForm = memo(ModalFormBase);
+export const DialogForm = memo(DialogFormBase);
 
-export default ModalForm;
+export default DialogForm;

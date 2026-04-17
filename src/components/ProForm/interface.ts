@@ -3,7 +3,7 @@ import type { FormProps, FormItemProps, FormCoreInstance, Rule } from '@/compone
 import type { ButtonProps } from '@/components/Button';
 import type { DrawerProps, DrawerPlacement } from '@/components/Drawer';
 import type { GridRowProps, GridColProps, GridColSize } from '@/components/Grid';
-import type { ModalProps } from '@/components/Modal';
+import type { DialogProps } from '@/components/Dialog';
 import type { ProFormMode } from './constants';
 
 // ---------------------------------------------------------------------------
@@ -235,9 +235,9 @@ export interface ProFormGroupProps {
 }
 
 // ---------------------------------------------------------------------------
-// ModalForm
+// DialogForm
 // ---------------------------------------------------------------------------
-export interface ModalFormProps extends Omit<ProFormProps, 'title'> {
+export interface DialogFormProps extends Omit<ProFormProps, 'title'> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   trigger?: ReactElement;
@@ -246,7 +246,7 @@ export interface ModalFormProps extends Omit<ProFormProps, 'title'> {
   submitTimeout?: number;
   autoClose?: boolean;
   destroyOnClose?: boolean;
-  modalProps?: Partial<ModalProps>;
+  dialogProps?: Partial<DialogProps>;
 }
 
 // ---------------------------------------------------------------------------

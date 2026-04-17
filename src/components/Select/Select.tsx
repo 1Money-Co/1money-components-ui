@@ -38,11 +38,7 @@ import SelectFieldShell from './SelectFieldShell';
 import SelectOptionContent from './SelectOptionContent';
 import SelectSearchControl from './SelectSearchControl';
 import SelectValueContent from './SelectValueContent';
-import {
-  SELECT_EMPTY_COLOR,
-  SELECT_EMPTY_SIZE,
-  SELECT_GROUP_LABEL_SIZE,
-} from './constants';
+import { SELECT_TYPOGRAPHY } from './constants';
 import {
   extractOptionText,
   filterOptionGroups,
@@ -543,7 +539,7 @@ export const Select: FC<SelectProps> = (props) => {
               <div className={classes('panel-body')}>
                 {visibleFlatOptions.length === 0 ? (
                   <div className={classes('empty')}>
-                    <TypographyBody size={SELECT_EMPTY_SIZE} color={SELECT_EMPTY_COLOR}>{emptyContent}</TypographyBody>
+                    <TypographyBody size={SELECT_TYPOGRAPHY.empty.size} color={SELECT_TYPOGRAPHY.empty.color}>{emptyContent}</TypographyBody>
                   </div>
                 ) : (
                   (() => {
@@ -553,7 +549,7 @@ export const Select: FC<SelectProps> = (props) => {
                       <div key={group.key} className={classes('group')}>
                         {group.label && (
                           <div className={classes('group-label')}>
-                            <TypographyLabel size={SELECT_GROUP_LABEL_SIZE} strong>{group.label}</TypographyLabel>
+                            <TypographyLabel size={SELECT_TYPOGRAPHY.groupLabel.size} strong>{group.label}</TypographyLabel>
                           </div>
                         )}
                         {group.options.map((option) => {

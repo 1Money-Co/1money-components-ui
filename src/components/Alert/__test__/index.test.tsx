@@ -125,20 +125,22 @@ describe('Alert', () => {
     expect(screen.getByText('Only link').closest('.om-component-ui-alert')?.querySelector('.om-component-ui-alert-icon')).toHaveClass(iconTopClass);
   });
 
-  it('centers the close button when exactly one text section is rendered', () => {
+  it('top aligns the close button when exactly one text section is rendered', () => {
     render(
       <Alert title="Title only" closable />
     );
 
-    expect(screen.getByLabelText('Close alert')).toHaveClass(closeCenterClass);
+    expect(screen.getByLabelText('Close alert')).toHaveClass(closeTopClass);
+    expect(screen.getByLabelText('Close alert')).not.toHaveClass(closeCenterClass);
   });
 
-  it('centers the close button when link is the only content section', () => {
+  it('top aligns the close button when link is the only content section', () => {
     render(
       <Alert link={{ label: 'Only link', onClick: jest.fn() }} closable />
     );
 
-    expect(screen.getByLabelText('Close alert')).toHaveClass(closeCenterClass);
+    expect(screen.getByLabelText('Close alert')).toHaveClass(closeTopClass);
+    expect(screen.getByLabelText('Close alert')).not.toHaveClass(closeCenterClass);
   });
 
   it('top aligns the close button when multiple content sections are rendered', () => {

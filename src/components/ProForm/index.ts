@@ -15,7 +15,7 @@ import {
   ProFormFieldSet,
 } from './fields';
 import { DrawerForm } from './layouts/DrawerForm';
-import { ModalForm } from './layouts/ModalForm';
+import { DialogForm } from './layouts/DialogForm';
 import { QueryFilter } from './layouts/QueryFilter';
 import './style';
 
@@ -57,7 +57,7 @@ export {
   ProFormFieldSet,
 } from './fields';
 export { DrawerForm } from './layouts/DrawerForm';
-export { ModalForm } from './layouts/ModalForm';
+export { DialogForm } from './layouts/DialogForm';
 export { QueryFilter } from './layouts/QueryFilter';
 export { useProFormContext, FormListContext, useFormListContext } from './context';
 
@@ -80,7 +80,7 @@ export type {
   ProFormListProps,
   ProFormListAction,
   DrawerFormProps,
-  ModalFormProps,
+  DialogFormProps,
   QueryFilterProps,
   CreateProFormFieldConfig,
 } from './interface';

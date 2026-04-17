@@ -45,8 +45,8 @@ $component: 'proform';
   align-items: center;
 }
 
-// ─── ModalForm ───────────────────────────────────────────────
-.#{theme.$prefix}-#{$component}-modal-form {
+// ─── DialogForm ──────────────────────────────────────────────
+.#{theme.$prefix}-#{$component}-dialog-form {
   width: 100%;
 }
 
