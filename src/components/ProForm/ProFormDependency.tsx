@@ -1,6 +1,5 @@
 import { memo, useMemo } from 'react';
 import type { FC } from 'react';
-import { useFormContext } from '@/components/Form';
 import { useProFormContext, useFormListContext } from './context';
 import { getNestedValue } from './utils';
 import type { ProFormDependencyProps, ProFormFormInstance } from './interface';
@@ -10,8 +9,7 @@ const ProFormDependencyBase: FC<ProFormDependencyProps> = ({
   ignoreFormListField,
   children,
 }) => {
-  const { values } = useFormContext();
-  const { formInstance } = useProFormContext();
+  const { values, formInstance } = useProFormContext();
   const formListCtx = useFormListContext();
 
   // Resolve the actual paths to watch, considering FormList scope

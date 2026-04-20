@@ -2,98 +2,22 @@ import { memo, useEffect, useMemo, useRef, Fragment } from 'react';
 import type { FC } from 'react';
 import { useLatest, useSafeState, useMemoizedFn } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { Form } from '@/components/Form';
-import { useFormInstance } from '@/components/Form/context';
 import { Row } from '@/components/Grid';
+import { useFormCore } from './core/hooks/useFormCore';
 import { ProFormContext } from './context';
 import { Submitter } from './Submitter';
 import { CSS_PREFIX } from './constants';
 import { stableSerialize, transformSubmitValues, omitNilValues } from './utils';
-import type { ProFormProps, ProFormFormInstance, ProFormFieldTransformFn } from './interface';
+import type {
+  ProFormProps,
+  ProFormContextValue,
+  ProFormFormInstance,
+  ProFormFieldTransformFn,
+} from './interface';
 
 const classes = classnames(CSS_PREFIX);
+const formClasses = classnames('form');
 
-// ---------------------------------------------------------------------------
-// Inner component — rendered INSIDE <Form>, can use useFormInstance()
-// ---------------------------------------------------------------------------
-interface ProFormInnerProps extends ProFormProps {
-  isLoading: boolean;
-  applyPipeline: (values: Record<string, unknown>) => Record<string, unknown>;
-  registerTransform: (name: string, fn: ProFormFieldTransformFn) => void;
-  unregisterTransform: (name: string) => void;
-}
-
-const ProFormInner: FC<ProFormInnerProps> = (props) => {
-  const {
-    children,
-    submitter,
-    mode = 'edit',
-    readonly = false,
-    grid = false,
-    colProps,
-    rowProps,
-    formRef,
-    isLoading,
-    applyPipeline,
-    registerTransform,
-    unregisterTransform,
-  } = props;
-
-  const resolvedMode = mode ?? (readonly ? 'read' : 'edit');
-  const form = useFormInstance();
-
-  // Build ProFormFormInstance by extending the real form instance with format methods
-  const proFormFormInstance = useMemo<ProFormFormInstance>(() => ({
-    submit: form.submit,
-    resetFields: form.resetFields,
-    getFieldValue: form.getFieldValue,
-    getFieldsValue: form.getFieldsValue,
-    setFieldsValue: form.setFieldsValue,
-    setFieldValue: form.setFieldValue,
-    validateFields: form.validateFields,
-    getFieldsFormatValue: () => applyPipeline(form.getFieldsValue()),
-    validateFieldsReturnFormatValue: () => {
-      const isValid = form.validateFields();
-      if (!isValid) return { success: false };
-      return { success: true, values: applyPipeline(form.getFieldsValue()) };
-    },
-  }), [form, applyPipeline]);
-
-  useEffect(() => {
-    if (formRef) {
-      formRef.current = proFormFormInstance;
-    }
-  });
-
-  const proFormContextValue = useMemo(
-    () => ({ readonly, mode: resolvedMode, grid, colProps, registerTransform, unregisterTransform, formInstance: proFormFormInstance }),
-    [readonly, resolvedMode, grid, colProps, registerTransform, unregisterTransform, proFormFormInstance],
-  );
-
-  const WrapperComponent = grid ? Row : Fragment;
-  const wrapperProps = grid ? { ...rowProps } : {};
-
-  const submitterNode =
-    submitter !== false && resolvedMode !== 'read' ? (
-      <Submitter
-        {...(typeof submitter === 'object' ? submitter : {})}
-        loading={isLoading}
-      />
-    ) : null;
-
-  return (
-    <ProFormContext.Provider value={proFormContextValue}>
-      <WrapperComponent {...wrapperProps}>
-        {children}
-      </WrapperComponent>
-      {submitterNode}
-    </ProFormContext.Provider>
-  );
-};
-
-// ---------------------------------------------------------------------------
-// Outer component — renders <Form> and sets up transforms / request
-// ---------------------------------------------------------------------------
 const ProFormBase: FC<ProFormProps> = (props) => {
   const {
     children,
@@ -114,12 +38,13 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     onReset,
     formRef,
     omitNil = true,
-    size,
-    labelAlign,
-    disabled,
-    colon,
-    requiredMark,
-    validateTrigger,
+    size = 'middle',
+    labelAlign = 'left',
+    disabled = false,
+    colon = true,
+    requiredMark = true,
+    validateTrigger = 'onChange',
+    prefixCls: _prefixCls,
     ...rest
   } = props;
 
@@ -151,9 +76,49 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     onFinishRef.current?.(applyPipeline(values));
   });
 
-  // ── Request / params ──
+  // ── Core form engine ──
+  const {
+    coreContextShape,
+    formInstance: coreInstance,
+    handleSubmit,
+    handleReset,
+  } = useFormCore({
+    initialValues,
+    onFinish: handleFinish,
+    onFinishFailed,
+    onValuesChange,
+    onReset,
+    size,
+    labelAlign,
+    disabled: disabled || isLoading,
+    colon,
+    requiredMark,
+    validateTrigger,
+  });
+
+  // ── ProForm instance: superset of FormCoreInstance ──
+  const proFormFormInstance = useMemo<ProFormFormInstance>(
+    () => ({
+      ...coreInstance,
+      getFieldsFormatValue: () => applyPipeline(coreInstance.getFieldsValue()),
+      validateFieldsReturnFormatValue: () => {
+        const isValid = coreInstance.validateFields();
+        if (!isValid) return { success: false };
+        return { success: true, values: applyPipeline(coreInstance.getFieldsValue()) };
+      },
+    }),
+    [coreInstance, applyPipeline],
+  );
+
+  // ── Sync to formRef prop ──
+  useEffect(() => {
+    if (formRef) {
+      formRef.current = proFormFormInstance;
+    }
+  });
+
+  // ── request / params auto-load ──
   const requestRef = useLatest(request);
-  const formInstanceRef = useRef<{ setFieldsValue: (v: Record<string, unknown>) => void } | null>(null);
 
   const serializedParams = useMemo(
     () => stableSerialize(params),
@@ -169,7 +134,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
       try {
         const data = await requestFn(params);
         if (data && typeof data === 'object') {
-          formInstanceRef.current?.setFieldsValue(data as Record<string, unknown>);
+          coreInstance.setFieldsValue(data as Record<string, unknown>);
         }
       } finally {
         setRequestLoading(false);
@@ -179,39 +144,55 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     if (requestRef.current) {
       fetchData();
     }
-  }, [serializedParams]);
+  }, [serializedParams, params, requestRef, setRequestLoading, coreInstance]);
+
+  // ── Merged context ──
+  const contextValue = useMemo<ProFormContextValue>(
+    () => ({
+      ...coreContextShape,
+      formInstance: proFormFormInstance,
+      readonly,
+      mode,
+      grid,
+      colProps: colProps ?? { span: 24 },
+      registerTransform,
+      unregisterTransform,
+    }),
+    [
+      coreContextShape,
+      proFormFormInstance,
+      readonly,
+      mode,
+      grid,
+      colProps,
+      registerTransform,
+      unregisterTransform,
+    ],
+  );
+
+  const WrapperComponent = grid ? Row : Fragment;
+  const wrapperProps = grid ? { ...rowProps } : {};
+
+  const submitterNode =
+    submitter !== false && mode !== 'read' ? (
+      <Submitter
+        {...(typeof submitter === 'object' ? submitter : {})}
+        loading={isLoading}
+      />
+    ) : null;
 
   return (
-    <Form
-      {...rest}
-      ref={(instance) => {
-        // Capture the form ref for request data loading
-        if (instance) {
-          formInstanceRef.current = instance;
-        }
-      }}
-      className={joinCls(classes(), className)}
-      initialValues={initialValues}
-      onFinish={handleFinish}
-      onFinishFailed={onFinishFailed}
-      onValuesChange={onValuesChange}
-      onReset={onReset}
-      size={size}
-      labelAlign={labelAlign}
-      disabled={disabled || isLoading}
-      colon={colon}
-      requiredMark={requiredMark}
-      validateTrigger={validateTrigger}
-    >
-      <ProFormInner
-        {...props}
-        mode={mode}
-        isLoading={isLoading}
-        applyPipeline={applyPipeline}
-        registerTransform={registerTransform}
-        unregisterTransform={unregisterTransform}
-      />
-    </Form>
+    <ProFormContext.Provider value={contextValue}>
+      <form
+        {...rest}
+        className={formClasses(undefined, joinCls(classes(), className))}
+        onSubmit={handleSubmit}
+        onReset={handleReset}
+      >
+        <WrapperComponent {...wrapperProps}>{children}</WrapperComponent>
+        {submitterNode}
+      </form>
+    </ProFormContext.Provider>
   );
 };
 

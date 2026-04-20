@@ -10,7 +10,6 @@ export { Copy } from './components/Copy';
 export { Divider } from './components/Divider';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
-export { Form, FormItem, useForm, useFormContext, useFormInstance, useFormCore } from './components/Form';
 export { Grid, Row, Col } from './components/Grid';
 export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
@@ -25,9 +24,10 @@ export {
 } from './components/Portal';
 export {
   ProForm,
+  ProFormItem,
   ProFormDependency,
   ProFormList,
-  Submitter,
+  ProFormGroup,
   createProFormField,
   ProFormText,
   ProFormPassword,
@@ -36,9 +36,14 @@ export {
   ProFormCheckboxGroup,
   ProFormSwitch,
   ProFormSelect,
+  ProFormRadioGroup,
+  ProFormSlider,
+  ProFormDatePicker,
+  ProFormUpload,
+  ProFormFieldSet,
   DialogForm,
+  DrawerForm,
   QueryFilter,
-  useProFormContext,
 } from './components/ProForm';
 export { Pagination } from './components/Pagination';
 export { Popconfirm } from './components/Popconfirm';
@@ -82,22 +87,17 @@ export type { CopyProps } from './components/Copy';
 export type { DividerProps, DividerType, DividerOrientation, DividerVariant } from './components/Divider';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
+// Form-related types (formerly from ./components/Form) are now exposed via ProForm
 export type {
-  FormProps,
-  FormItemProps,
   FormInstance,
   FormCoreInstance,
-  FormContextValue,
   FormLayout,
   FormSize,
   LabelAlign,
   ValidateStatus,
   ValidateTrigger,
   Rule,
-  UseFormOptions,
-  FieldOptions,
-  FieldProps,
-} from './components/Form';
+} from './components/ProForm';
 export type { GridRowProps, GridColProps } from './components/Grid';
 export type { IconName, IconsProps, IconWrapperProps, IconHoverProps } from './components/Icons';
 export type {
@@ -234,14 +234,25 @@ export type {
 } from './components/Upload';
 export type {
   ProFormProps,
+  ProFormItemProps,
   ProFormFieldProps,
   ProFormContextValue,
   ProFormFormInstance,
+  ProFormMode,
+  ProFormColProps,
+  ProFormValueType,
+  ProFormFieldTransformFn,
+  ProFormFieldConvertValueFn,
+  ProFormValueEnumObj,
+  ProFormRequestOption,
+  ProFormFieldSetProps,
+  ProFormGroupProps,
   SubmitterProps,
   ProFormDependencyProps,
   ProFormListProps,
   ProFormListAction,
   DialogFormProps,
+  DrawerFormProps,
   QueryFilterProps,
   CreateProFormFieldConfig,
 } from './components/ProForm';

@@ -18,8 +18,6 @@ export const FORM_ITEM_SPACING: Record<FormSize, string> = {
   small: '200',
 };
 
-
-// ── Typography ──
 export const FORM_LABEL_SIZE: TypographyLabelSize = 'md';
 export const FORM_LABEL_COLOR: TypographyColor = 'default';
 export const FORM_ERROR_SIZE: TypographyBodySize = 'sm';
