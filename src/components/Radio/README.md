@@ -22,7 +22,8 @@ import { Radio, RadioGroup } from '@1money/components-ui/Radio';
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `variant` | `'default' \| 'cell'` | `'default'` | Visual variant |
 | `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Visual size for the `cell` variant |
-| `alignment` | `'left' \| 'center' \| 'right'` | `'left'` | Alignment control. Default radios support `left` / `right`; `cell` supports `left` / `center` |
+| `alignment` | `'left' \| 'center'` | `'left'` | Alignment for the `cell` variant (`left` for horizontal, `center` for vertical) |
+| `labelPlacement` | `'left' \| 'right'` | `'left'` | Placement of the label relative to the radio dot for the default variant |
 | `icon` | `IconName \| ReactNode` | — | Optional icon for the `cell` variant |
 | `tag` | `string` | — | Optional tag label for the `cell` variant |
 | `onChange` | `(event: RadioChangeEvent) => void` | — | Callback when checked state changes |
@@ -42,11 +43,12 @@ All additional native radio input props are spread onto the underlying `input[ty
 | `id` | `string` | — | HTML id attribute for the root radiogroup container |
 | `name` | `string` | — | HTML name attribute shared by radios in the group |
 | `disabled` | `boolean` | `false` | Disables all radios in the group |
-| `direction` | `'vertical' \| 'horizontal'` | `'vertical'` | Direction of the group |
+| `direction` | `'vertical' \| 'horizontal'` | `'horizontal'` | Direction of the group |
 | `layout` | `'vertical' \| 'horizontal'` | — | Deprecated alias for `direction` |
 | `variant` | `'default' \| 'cell'` | `'default'` | Visual variant inherited by child radios |
 | `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Visual size inherited by child radios |
-| `alignment` | `'left' \| 'center' \| 'right'` | `'left'` | Alignment inherited by child radios. Default supports `left` / `right`; `cell` supports `left` / `center` |
+| `alignment` | `'left' \| 'center'` | `'left'` | Alignment inherited by cell-variant child radios (`left` / `center`) |
+| `labelPlacement` | `'left' \| 'right'` | — | Label placement inherited by default-variant child radios |
 | `gap` | `number \| string` | — | Gap between radio items |
 | `title` | `string` | — | Title attribute for the root radiogroup container |
 | `aria-label` | `string` | — | Accessible label for the group |
@@ -68,7 +70,8 @@ All additional native radio input props are spread onto the underlying `input[ty
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `variant` | `'default' \| 'cell'` | — | Per-option visual variant override |
 | `size` | `'large' \| 'medium' \| 'small'` | — | Per-option size override |
-| `alignment` | `'left' \| 'center' \| 'right'` | — | Per-option alignment override. Default supports `left` / `right`; `cell` supports `left` / `center` |
+| `alignment` | `'left' \| 'center'` | — | Per-option alignment override for cell variant (`left` / `center`) |
+| `labelPlacement` | `'left' \| 'right'` | — | Per-option label placement override for default variant |
 | `icon` | `IconName \| ReactNode` | — | Optional icon for the `cell` variant |
 | `tag` | `string` | — | Optional tag label for the `cell` variant |
 | `disabled` | `boolean` | — | Whether this specific option is disabled |
@@ -142,11 +145,16 @@ const [selected, setSelected] = useState<string | number>('email');
 />
 ```
 
-## Alignment and Direction
+## Label Placement and Direction
 
 ```tsx
-<Radio label="Left aligned" alignment="left" />
-<Radio label="Right aligned" alignment="right" />
+{/* Default variant uses labelPlacement */}
+<Radio label="Dot on left, label on right" labelPlacement="left" />
+<Radio label="Dot on right, label on left" labelPlacement="right" />
+
+{/* Cell variant uses alignment */}
+<Radio variant="cell" alignment="left" icon="swift" label="Horizontal" />
+<Radio variant="cell" alignment="center" icon="swift" label="Vertical" />
 
 <RadioGroup direction="horizontal" value={selected} onChange={handleChange}>
   <Radio value="sm" label="Small" />
@@ -155,7 +163,7 @@ const [selected, setSelected] = useState<string | number>('email');
 </RadioGroup>
 ```
 
-For `RadioGroup`, use `direction="vertical" | "horizontal"` to control the group direction. `layout` remains as a deprecated alias. Use `alignment="left" | "right"` for default radios, and `alignment="left" | "center"` for `cell` radios. Passing `alignment="right"` to `cell` falls back to the left layout.
+For `RadioGroup`, use `direction="vertical" | "horizontal"` to control the group direction. `layout` remains as a deprecated alias. Use `labelPlacement="left" | "right"` for default radios, and `alignment="left" | "center"` for `cell` radios. The `alignment` prop on default radios is still supported for backward compatibility but `labelPlacement` is preferred.
 
 ## Cell Variant
 

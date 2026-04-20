@@ -15,6 +15,7 @@ type BaseRadioProps = Omit<
   | 'direction'
   | 'icon'
   | 'label'
+  | 'labelPlacement'
   | 'onChange'
   | 'alignment'
   | 'ref'

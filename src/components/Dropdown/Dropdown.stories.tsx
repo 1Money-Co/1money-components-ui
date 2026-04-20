@@ -7,6 +7,7 @@ import { Icons } from '@/components/Icons';
 import { Input } from '@/components/Input';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { Placement } from '@floating-ui/react';
+import { joinCls } from '@/utils/classnames';
 import { Dropdown } from './index';
 
 import '../Alert/style';
@@ -27,40 +28,6 @@ const panelContentStyle: React.CSSProperties = {
   minWidth: 160,
 };
 
-const menuItemStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 8,
-  padding: '8px 12px',
-  fontSize: 14,
-  lineHeight: '20px',
-  color: '#131313',
-  background: 'transparent',
-  border: 'none',
-  borderRadius: 8,
-  cursor: 'pointer',
-  textAlign: 'left',
-  width: '100%',
-};
-
-const dropdownItemStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 12,
-  minHeight: 40,
-  padding: '8px 12px',
-  borderRadius: 8,
-  cursor: 'pointer',
-  border: 'none',
-  background: 'transparent',
-  width: '100%',
-  textAlign: 'left',
-};
-
-const dropdownItemSelectedStyle: React.CSSProperties = {
-  ...dropdownItemStyle,
-  backgroundColor: '#f8f8f8',
-};
 
 const groupHeaderStyle: React.CSSProperties = {
   padding: '8px 0',
@@ -227,18 +194,19 @@ const ADDRESSES: AddressItem[] = [
 function MenuContent({ onClose }: { onClose?: () => void }) {
   return (
     <div style={panelContentStyle}>
-      <button type="button" style={menuItemStyle} onClick={onClose}>
+      <button type="button" className="om-dropdown-item" onClick={onClose}>
         Edit
       </button>
-      <button type="button" style={menuItemStyle} onClick={onClose}>
+      <button type="button" className="om-dropdown-item" onClick={onClose}>
         Duplicate
       </button>
-      <button type="button" style={menuItemStyle} onClick={onClose}>
+      <button type="button" className="om-dropdown-item" onClick={onClose}>
         Archive
       </button>
       <button
         type="button"
-        style={{ ...menuItemStyle, color: '#e53935' }}
+        className="om-dropdown-item"
+        style={{ color: '#e53935' }}
         onClick={onClose}
       >
         Delete
@@ -266,7 +234,7 @@ function DropdownItem({
   return (
     <button
       type="button"
-      style={selected ? dropdownItemSelectedStyle : dropdownItemStyle}
+      className={joinCls('om-dropdown-item', selected && 'om-dropdown-item--selected')}
       onClick={onClick}
     >
       {left && <div style={{ flexShrink: 0 }}>{left}</div>}
@@ -435,31 +403,6 @@ export const Controlled: Story = {
       </div>
     );
   },
-};
-
-export const RenderFunction: Story = {
-  render: (args) => (
-    <Dropdown
-      {...args}
-      content={({ close }) => (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, minWidth: 200 }}>
-          <p style={{ margin: 0, fontSize: 14, lineHeight: '20px' }}>
-            Are you sure you want to delete this item?
-          </p>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <Button size="small" color="grey" onClick={close}>
-              Cancel
-            </Button>
-            <Button size="small" color="red" onClick={close}>
-              Delete
-            </Button>
-          </div>
-        </div>
-      )}
-    >
-      <Button color="red">Delete Item</Button>
-    </Dropdown>
-  ),
 };
 
 export const Disabled: Story = {
@@ -860,34 +803,34 @@ export const Nested: Story = {
       {...args}
       content={
         <div style={panelContentStyle}>
-          <button type="button" style={menuItemStyle}>
+          <button type="button" className="om-dropdown-item">
             Profile
           </button>
           <Dropdown
             placement="right-start"
             content={
               <div style={panelContentStyle}>
-                <button type="button" style={menuItemStyle}>
+                <button type="button" className="om-dropdown-item">
                   English
                 </button>
-                <button type="button" style={menuItemStyle}>
+                <button type="button" className="om-dropdown-item">
                   中文
                 </button>
-                <button type="button" style={menuItemStyle}>
+                <button type="button" className="om-dropdown-item">
                   日本語
                 </button>
               </div>
             }
           >
-            <button type="button" style={{ ...menuItemStyle, justifyContent: 'space-between' }}>
+            <button type="button" className="om-dropdown-item" style={{ justifyContent: 'space-between' }}>
               Language
               <Icons name="chevronRight" size={14} color="#9fa3a3" />
             </button>
           </Dropdown>
-          <button type="button" style={menuItemStyle}>
+          <button type="button" className="om-dropdown-item">
             Settings
           </button>
-          <button type="button" style={{ ...menuItemStyle, color: '#e53935' }}>
+          <button type="button" className="om-dropdown-item" style={{ color: '#e53935' }}>
             Sign out
           </button>
         </div>

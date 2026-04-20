@@ -1,13 +1,70 @@
 @use '@/styles/api' as theme;
 
+// ===========================================================================
+// Form internals (formerly Form.scss) — applied to the <form> element and
+// FormItem that ProForm renders internally. Selector names retained for
+// backwards-compatible class targeting.
+// ===========================================================================
+
+$form: 'form';
+
+.#{theme.$prefix}-#{$form} {
+  width: 100%;
+}
+
+.#{theme.$prefix}-#{$form}-item {
+  margin-bottom: theme.spacing(gap, 300);
+
+  &-small {
+    margin-bottom: theme.spacing(gap, 200);
+  }
+}
+
+.#{theme.$prefix}-#{$form}-item-label-wrapper {
+  &-vertical {
+    margin-bottom: theme.spacing(gap, 200);
+  }
+}
+
+.#{theme.$prefix}-#{$form}-item-label {
+  display: inline;
+  padding: 0;
+
+  &-required {
+    &::before {
+      margin-right: theme.spacing(gap, '050');
+      color: theme.palette(text, 'danger');
+      content: '*';
+    }
+  }
+}
+
+.#{theme.$prefix}-#{$form}-item-label-wrapper-left {
+  text-align: left;
+}
+
+.#{theme.$prefix}-#{$form}-item-label-wrapper-right {
+  text-align: right;
+}
+
+.#{theme.$prefix}-#{$form}-item-error {
+  margin-top: theme.spacing(gap, '050');
+}
+
+.#{theme.$prefix}-#{$form}-item-help {
+  margin-top: theme.spacing(gap, '050');
+}
+
+// ===========================================================================
+// ProForm-specific styles
+// ===========================================================================
+
 $component: 'proform';
 
-// ─── ProForm Root ────────────────────────────────────────────
 .#{theme.$prefix}-#{$component} {
   width: 100%;
 }
 
-// ─── Submitter ───────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-submitter {
   display: flex;
   gap: theme.spacing(gap, 200);
@@ -15,7 +72,6 @@ $component: 'proform';
   padding-top: theme.spacing(gap, 300);
 }
 
-// ─── ProFormList ─────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-list {
   display: flex;
   flex-direction: column;
@@ -45,17 +101,14 @@ $component: 'proform';
   align-items: center;
 }
 
-// ─── ModalForm ───────────────────────────────────────────────
-.#{theme.$prefix}-#{$component}-modal-form {
+.#{theme.$prefix}-#{$component}-dialog-form {
   width: 100%;
 }
 
-// ─── DrawerForm ──────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-drawer-form {
   width: 100%;
 }
 
-// ─── ProFormGroup ────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-group {
   display: flex;
   flex-direction: column;
@@ -88,13 +141,11 @@ $component: 'proform';
   gap: theme.spacing(gap, 200);
 }
 
-// ─── ProFormFieldSet ─────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-fieldset {
   display: flex;
   align-items: flex-start;
 }
 
-// ─── QueryFilter ─────────────────────────────────────────────
 .#{theme.$prefix}-#{$component}-query-filter {
   display: flex;
   flex-wrap: wrap;

@@ -30,7 +30,7 @@ const getButtonAriaLabel = (item: PaginationPageItem | PaginationControlItem) =>
 };
 
 const getItemTextColor = (item: PaginationPageItem | PaginationControlItem) => {
-  if (item.disabled) {
+  if (item.type !== PAGINATION_ITEM_TYPE.page && item.disabled) {
     return PAGINATION_TEXT_COLOR.disabled;
   }
 
@@ -49,7 +49,6 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
     pageSize,
     current,
     defaultCurrent = PAGINATION_DEFAULT_CURRENT,
-    disabled = false,
     boundaryCount,
     middlePageCount,
     onChange,
@@ -63,7 +62,6 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
     pageSize,
     current,
     defaultCurrent,
-    disabled,
     boundaryCount,
     middlePageCount,
     onChange,
@@ -86,13 +84,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
       {...rest}
       ref={ref}
       aria-label={ariaLabel}
-      className={classes(
-        undefined,
-        joinCls(
-          disabled && classes(PAGINATION_SLOT.disabled),
-          className,
-        ),
-      )}
+      className={classes(undefined, className)}
     >
       <ul className={classes(PAGINATION_SLOT.list)} onClick={handleListClick}>
         {items.map(item => {
@@ -118,6 +110,7 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
           const isPage = item.type === PAGINATION_ITEM_TYPE.page;
           const isControl = !isPage;
           const isPrevious = item.type === PAGINATION_ITEM_TYPE.previous;
+          const isDisabled = isControl && item.disabled;
           const iconName = isControl
             ? PAGINATION_CONTROL_ICON[item.type as keyof typeof PAGINATION_CONTROL_ICON]
             : undefined;
@@ -131,13 +124,13 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
                   joinCls(
                     isPage ? classes(PAGINATION_SLOT.buttonPage) : classes(PAGINATION_SLOT.buttonControl),
                     isPage && item.current && classes(PAGINATION_SLOT.buttonCurrent),
-                    item.disabled && classes(PAGINATION_SLOT.buttonDisabled),
+                    isDisabled && classes(PAGINATION_SLOT.buttonDisabled),
                   ),
                 )}
-                disabled={item.disabled}
                 aria-label={getButtonAriaLabel(item)}
                 aria-current={isPage && item.current ? 'page' : undefined}
-                data-page={item.page}
+                disabled={isDisabled || undefined}
+                data-page={isDisabled ? undefined : item.page}
               >
                 {isControl && isPrevious && (
                   <span className={classes(PAGINATION_SLOT.icon)}>

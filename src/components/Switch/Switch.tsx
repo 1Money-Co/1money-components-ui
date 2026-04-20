@@ -6,13 +6,8 @@ import './style';
 import {
   SWITCH_PREFIX_CLS,
   SWITCH_DEFAULT_LABEL_PLACEMENT,
-  SWITCH_LABEL_PLACEMENT_RIGHT,
-  SWITCH_LABEL_COLOR_DEFAULT,
-  SWITCH_LABEL_COLOR_DISABLED,
-  SWITCH_DESCRIPTION_COLOR_DEFAULT,
-  SWITCH_DESCRIPTION_COLOR_DISABLED,
-  SWITCH_LABEL_SIZE,
-  SWITCH_DESCRIPTION_SIZE,
+  SWITCH_LABEL_PLACEMENT,
+  SWITCH_TYPOGRAPHY,
 } from './constants';
 import type { ChangeEvent, FC } from 'react';
 import type { SwitchProps } from './interface';
@@ -42,8 +37,8 @@ export const Switch: FC<SwitchProps> = props => {
   );
 
   const classes = classnames(prefixCls);
-  const labelColor = disabled ? SWITCH_LABEL_COLOR_DISABLED : SWITCH_LABEL_COLOR_DEFAULT;
-  const descriptionColor = disabled ? SWITCH_DESCRIPTION_COLOR_DISABLED : SWITCH_DESCRIPTION_COLOR_DEFAULT;
+  const labelColor = disabled ? SWITCH_TYPOGRAPHY.label.color.disabled : SWITCH_TYPOGRAPHY.label.color.default;
+  const descriptionColor = disabled ? SWITCH_TYPOGRAPHY.description.color.disabled : SWITCH_TYPOGRAPHY.description.color.default;
 
   const inferredAriaLabel =
     typeof label === 'string' || typeof label === 'number'
@@ -82,8 +77,8 @@ export const Switch: FC<SwitchProps> = props => {
 
   const labelElement = (label || description) && (
     <span className={classes('content')}>
-      {label && <TypographyBody size={SWITCH_LABEL_SIZE} color={labelColor}>{label}</TypographyBody>}
-      {description && <TypographyBody className={classes('description')} size={SWITCH_DESCRIPTION_SIZE} color={descriptionColor}>{description}</TypographyBody>}
+      {label && <TypographyBody size={SWITCH_TYPOGRAPHY.label.size} color={labelColor}>{label}</TypographyBody>}
+      {description && <TypographyBody className={classes('description')} size={SWITCH_TYPOGRAPHY.description.size} color={descriptionColor}>{description}</TypographyBody>}
     </span>
   );
 
@@ -95,7 +90,7 @@ export const Switch: FC<SwitchProps> = props => {
         joinCls(
           innerChecked && classes('checked'),
           disabled && classes('disabled'),
-          labelPlacement === SWITCH_LABEL_PLACEMENT_RIGHT && classes(SWITCH_LABEL_PLACEMENT_RIGHT),
+          labelPlacement === SWITCH_LABEL_PLACEMENT.right && classes(SWITCH_LABEL_PLACEMENT.right),
           className,
         ),
       )}

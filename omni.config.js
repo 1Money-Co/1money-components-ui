@@ -32,8 +32,7 @@ module.exports = {
 
     reserve: {
       assets: [
-        path.resolve('./src/components/Loading/lottie-pure.json'),
-        path.resolve('./src/components/Loading/lottie-pattern.json')
+        path.resolve('./src/components/Spinner/lottie-pure.json')
       ] // Reserve other asset paths in build output
     },
 

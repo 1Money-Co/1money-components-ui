@@ -1,0 +1,254 @@
+@use '@/styles/api' as theme;
+
+$component: 'dialog';
+$dialog-width-small: 450px;
+$dialog-width-large: 740px;
+$dialog-transition-duration: 200ms;
+
+.#{theme.$prefix}-#{$component}-root {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.#{theme.$prefix}-#{$component}-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: theme.palette(bg, 'scrim-dark');
+  opacity: 0;
+  transition: opacity $dialog-transition-duration ease;
+}
+
+.#{theme.$prefix}-#{$component}-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: theme.spacing(scale, 400);
+  pointer-events: none;
+}
+
+.#{theme.$prefix}-#{$component} {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: min(100%, $dialog-width-small);
+  max-height: calc(100vh - #{theme.spacing(scale, 800)});
+  overflow: hidden;
+  background-color: theme.palette(bg, 'default');
+  border: 1px solid theme.palette(border, 'neutral');
+  border-radius: theme.shape(600);
+  outline: none;
+  box-shadow: theme.shadows('200');
+  transform: translateY(theme.spacing(scale, 400));
+  opacity: 0;
+  transition:
+    opacity $dialog-transition-duration ease,
+    transform $dialog-transition-duration ease;
+  pointer-events: auto;
+
+  &-small {
+    width: min(100%, $dialog-width-small);
+  }
+
+  &-large {
+    width: min(100%, $dialog-width-large);
+  }
+
+  &-full-width {
+    width: calc(100vw - #{theme.spacing(scale, 800)});
+    max-width: none;
+  }
+
+  &-with-media {
+    .#{theme.$prefix}-#{$component}-inner {
+      padding-top: theme.spacing(scale, 800);
+    }
+  }
+
+  &-media {
+    width: 100%;
+    overflow: hidden;
+    background-color: theme.palette(bg, 'default-tertiary');
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 600);
+    width: 100%;
+    padding: theme.spacing(scale, 1000) theme.spacing(scale, 1000) theme.spacing(scale, 800);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 24px;
+  }
+
+  &-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: theme.palette(icon, 'default-tertiary');
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    .#{theme.$prefix}-icons-wrapper {
+      --icon-color: currentcolor;
+    }
+
+    &:hover {
+      color: theme.palette(icon, 'default');
+    }
+  }
+
+  &-control-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 600);
+    width: 100%;
+    min-width: 0;
+  }
+
+  &-summary {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 300);
+    width: 100%;
+    min-width: 0;
+  }
+
+  &-illustration {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 0;
+  }
+
+  &-copy {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 300);
+    width: 100%;
+    min-width: 0;
+  }
+
+  &-title,
+  &-description,
+  &-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  &-title {
+    color: theme.palette(text, 'default');
+  }
+
+  &-description {
+    color: theme.palette(text, 'default-secondary');
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 300);
+  }
+
+  &-footer {
+    display: flex;
+    gap: theme.spacing(gap, 300);
+    width: 100%;
+
+    &-small {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &-large {
+      align-items: stretch;
+    }
+  }
+
+  &-action-button {
+    width: 100%;
+    min-height: 52px;
+    border-radius: theme.shape(300);
+
+    &.#{theme.$prefix}-button {
+      justify-content: center;
+    }
+  }
+
+  &-action-button-cancel.#{theme.$prefix}-button {
+    color: theme.palette(text, 'default');
+    background-color: theme.palette(bg, 'neutral-tertiary');
+
+    &:hover:not(:disabled) {
+      background-color: theme.palette(bg, 'neutral-secondary');
+    }
+  }
+
+  &-footer-large > .#{theme.$prefix}-#{$component}-action-button {
+    flex: 1 1 0;
+  }
+}
+
+.#{theme.$prefix}-#{$component}-root-open {
+  .#{theme.$prefix}-#{$component}-overlay {
+    opacity: 1;
+  }
+
+  .#{theme.$prefix}-#{$component} {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.#{theme.$prefix}-#{$component}-root-closed {
+  .#{theme.$prefix}-#{$component}-overlay {
+    opacity: 0;
+  }
+
+  .#{theme.$prefix}-#{$component} {
+    transform: translateY(theme.spacing(scale, 400));
+    opacity: 0;
+  }
+}
+
+@include theme.down(sm) {
+  .#{theme.$prefix}-#{$component} {
+    &-wrapper {
+      align-items: flex-end;
+    }
+
+    &-full-width {
+      width: 100%;
+    }
+
+    &-inner {
+      padding-right: theme.spacing(scale, 800);
+      padding-left: theme.spacing(scale, 800);
+    }
+
+    &-footer-large {
+      flex-direction: column;
+    }
+  }
+}

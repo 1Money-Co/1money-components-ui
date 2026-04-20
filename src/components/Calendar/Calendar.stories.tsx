@@ -56,16 +56,6 @@ export const Range: Story = {
   },
 };
 
-export const Multiple: Story = {
-  args: {
-    size: 'large',
-    disabled: false,
-    label: 'Select Multiple Dates',
-    required: true,
-    selectionMode: 'multiple',
-  },
-};
-
 export const AllVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>

@@ -21,8 +21,8 @@ importers:
   .:
     dependencies:
       '@1money/hooks':
-        specifier: 0.1.0
-        version: 0.1.0(react@19.1.0)
+        specifier: 0.1.1
+        version: 0.1.1(react@19.1.0)
       '@dnd-kit/core':
         specifier: ^6.3.1
         version: 6.3.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -414,8 +414,8 @@ importers:
 
 packages:
 
-  '@1money/hooks@0.1.0':
-    resolution: {integrity: sha512-2USrmq0U8DqSSKFAmBGff5DNhJqEMRlEPFtVSioGwunS9Vp/kQ34hDA/0hxJ5AGTc7cF6LGbrkPHaQ9l+EhITQ==}
+  '@1money/hooks@0.1.1':
+    resolution: {integrity: sha512-VoXZiuvQNvZvamxj15SDqtT3HuWfJQzCUbp8SCrsNNXc1CF9Fru8i8miib5vkUDGXfiuJE9NNCQAE53KYjdClw==}
     peerDependencies:
       react: '>=16.8.0'
 
@@ -9518,7 +9518,7 @@ packages:
 
 snapshots:
 
-  '@1money/hooks@0.1.0(react@19.1.0)':
+  '@1money/hooks@0.1.1(react@19.1.0)':
     dependencies:
       react: 19.1.0
 

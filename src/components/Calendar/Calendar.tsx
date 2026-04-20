@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { Calendar as PrimeCalendar } from 'primereact/calendar';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { ChevronLeftIcon, ChevronRightIcon } from '@/components/Icons';
@@ -28,8 +28,12 @@ const getRangeDateStyles = (
 
   const cellDate = new Date(date.year, date.month, date.day);
 
-  const isStart = selectedDates[0] && isSameDay(cellDate, selectedDates[0]);
-  const isEnd = selectedDates[1] && isSameDay(cellDate, selectedDates[1]);
+  const hasRange =
+    selectedDates[0] &&
+    selectedDates[1] &&
+    !isSameDay(selectedDates[0], selectedDates[1]);
+  const isStart = hasRange && isSameDay(cellDate, selectedDates[0] ?? undefined);
+  const isEnd = hasRange && isSameDay(cellDate, selectedDates[1] ?? undefined);
   const inRange =
     selectedDates[0] &&
     selectedDates[1] &&
@@ -63,6 +67,8 @@ export const Calendar: FC<CalendarProps> = props => {
     selectionMode = 'single',
     contentWidth,
     panelStyle,
+    viewDate: viewDateProp,
+    onViewDateChange,
     onChange,
     ref,
     ...rest
@@ -71,6 +77,14 @@ export const Calendar: FC<CalendarProps> = props => {
   const [date, setDate] = useControlledState<CalendarProps['value']>(
     defaultValue ?? null,
     value,
+  );
+  const [viewDate, setViewDate] = useState<Date | undefined>(viewDateProp ?? undefined);
+
+  const handleViewDateChange = useEventCallback(
+    (e: Parameters<NonNullable<CalendarProps['onViewDateChange']>>[0]) => {
+      setViewDate(e.value);
+      onViewDateChange?.(e);
+    },
   );
 
   const handleChange = useEventCallback((e: Parameters<NonNullable<CalendarProps['onChange']>>[0]) => {
@@ -96,6 +110,8 @@ export const Calendar: FC<CalendarProps> = props => {
         {...rest}
         invalid={invalid}
         value={date as PrimeCalendar['props']['value']}
+        viewDate={viewDate}
+        onViewDateChange={handleViewDateChange}
         onChange={handleChange}
         panelStyle={{
           ...panelStyle,

@@ -44,13 +44,16 @@ export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   /** Optional link rendered below the body */
   link?: AlertLinkConfig;
 
+  /** Optional action element rendered on the right side */
+  action?: ReactNode;
+
   /** Custom icon element. When provided, overrides the default status icon. */
   icon?: ReactNode;
 
   /** Whether to show the status icon. Defaults to true. */
   showIcon?: boolean;
 
-  /** Whether to show the close button. Defaults to true. */
+  /** Whether to show the close button. Defaults to false. */
   closable?: boolean;
 
   /** Callback fired when the close button is clicked */

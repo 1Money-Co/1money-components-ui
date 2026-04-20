@@ -9,7 +9,6 @@ const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination',
   component: Pagination,
   argTypes: {
-    disabled: { control: 'boolean' },
     total: { control: 'number' },
     pageSize: { control: 'number' },
     defaultCurrent: { control: 'number' },
@@ -20,7 +19,6 @@ const meta: Meta<typeof Pagination> = {
     total: 680,
     pageSize: 10,
     defaultCurrent: 1,
-    disabled: false,
     boundaryCount: 1,
     middlePageCount: 3,
     onChange: fn(),
@@ -40,8 +38,3 @@ export const MiddlePage: Story = {
   },
 };
 
-export const Disabled: Story = {
-  args: {
-    disabled: true,
-  },
-};

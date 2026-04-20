@@ -21,13 +21,12 @@ import { ProFormDependency } from './ProFormDependency';
 import { ProFormList } from './ProFormList';
 import { ProFormGroup } from './ProFormGroup';
 import { DrawerForm } from './layouts/DrawerForm';
-import { ModalForm } from './layouts/ModalForm';
+import { DialogForm } from './layouts/DialogForm';
 import { QueryFilter } from './layouts/QueryFilter';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 
 import './style';
-import '@/components/Form/style';
 import '@/components/Input/FieldShell/FieldShell.scss';
 import '@/components/Input/Input/Input.scss';
 import '@/components/Input/TextArea/TextArea.scss';
@@ -37,7 +36,7 @@ import '@/components/Checkbox/style';
 import '@/components/Switch/style';
 import '@/components/Button/style';
 import '@/components/Grid/style';
-import '@/components/Modal/style';
+import '@/components/Dialog/style';
 import '@/components/Drawer/style';
 import '@/components/Upload/style';
 import '@/components/Radio/style';
@@ -397,14 +396,14 @@ export const DynamicList: Story = {
   ),
 };
 
-// ─── ModalForm ───────────────────────────────────────────────
+// ─── DialogForm ──────────────────────────────────────────────
 
-export const ModalFormStory: Story = {
+export const DialogFormStory: Story = {
   render: (args) => (
-    <ModalForm
+    <DialogForm
       {...args}
       title="Create User"
-      trigger={<Button color="primary">Open Modal Form</Button>}
+      trigger={<Button color="primary">Open Dialog Form</Button>}
       onFinish={async (values) => {
         alert(JSON.stringify(values, null, 2));
       }}
@@ -412,7 +411,7 @@ export const ModalFormStory: Story = {
       <ProFormText name="name" label="Name" rules={[{ required: true }]} />
       <ProFormText name="email" label="Email" rules={[{ required: true }]} />
       <ProFormSwitch name="active" label="Active" />
-    </ModalForm>
+    </DialogForm>
   ),
 };
 

@@ -150,7 +150,7 @@ $cell-size: theme.sizing(component-height, 'md');
 
       .p-datepicker-calendar-container {
         table {
-          width: var(--content-width, 332px);
+          width: var(--content-width, 280px);
           margin: 0;
           table-layout: fixed;
           border-collapse: separate;
@@ -183,6 +183,7 @@ $cell-size: theme.sizing(component-height, 'md');
             max-width: $cell-size !important;
             height: $cell-size !important;
             max-height: $cell-size !important;
+            margin: 0 !important;
             padding: 0 !important;
             color: theme.palette(text, 'default');
             border: none;
@@ -335,8 +336,25 @@ $cell-size: theme.sizing(component-height, 'md');
 
 // Range selection styles
 .#{theme.$prefix}-#{$component}-p-start {
-  background-color: theme.palette(bg, 'brand-tertiary') !important;
-  border-radius: theme.shape('full') 0 0 theme.shape('full') !important;
+  position: relative;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+
+  &::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--om-bg-brand-tertiary, #edf2f9);
+    content: '';
+  }
+
+  & .p-highlight{
+    position: relative;
+    z-index: 1;
+  }
 
   &:last-child {
     border-radius: theme.shape('full') !important;
@@ -350,8 +368,25 @@ $cell-size: theme.sizing(component-height, 'md');
 }
 
 .#{theme.$prefix}-#{$component}-p-end {
-  background-color: theme.palette(bg, 'brand-tertiary') !important;
-  border-radius: 0 theme.shape('full') theme.shape('full') 0 !important;
+  position: relative;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--om-bg-brand-tertiary, #edf2f9);
+    content: '';
+  }
+
+  & .p-highlight {
+    position: relative;
+    z-index: 1;
+  }
 
   &:first-child {
     border-radius: theme.shape('full') !important;

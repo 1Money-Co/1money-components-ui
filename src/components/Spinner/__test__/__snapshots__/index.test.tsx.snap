@@ -8,35 +8,10 @@ exports[`Spinner renders brand correctly 1`] = `
       <div
         class="om-component-ui-spinner om-component-ui-spinner-brand"
       >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
-        >
-          <svg
-            class="om-component-ui-icons om-component-ui-spinner-logo om-component-ui-spinner-spin"
-            fill="none"
-            height="32"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 248 248"
-            width="32"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M157.276 114.325C174.548 103.32 186.004 83.9979 186.004 62C186.004 27.7583 158.246 0 124.004 0C95.6448 0 71.7327 19.0401 64.3538 45.0343C88.5333 45.7406 109.988 57.3119 124.004 75.0356C125.875 77.4013 127.613 79.8767 129.208 82.4504C134.087 90.3248 137.62 99.1203 139.487 108.516C145.711 109.752 151.672 111.72 157.276 114.325Z"
-            />
-            <path
-              d="M108.52 108.517C109.757 102.295 111.724 96.336 114.329 90.7333C103.324 73.4586 84.0001 62 62 62C27.7583 62 0 89.7583 0 124C0 152.362 19.0439 176.276 45.042 183.652C45.7477 159.472 57.3192 138.017 75.0435 124C75.4946 123.643 75.9496 123.291 76.4086 122.944C85.7205 115.904 96.6406 110.879 108.52 108.517Z"
-            />
-            <path
-              d="M90.7354 133.672C73.4617 144.677 62.0039 164.001 62.0039 186C62.0039 220.242 89.7623 248 124.004 248C152.363 248 176.275 228.96 183.654 202.966C159.474 202.259 138.02 190.688 124.004 172.964C116.837 163.902 111.615 153.231 108.968 141.582C108.809 140.886 108.66 140.186 108.52 139.483C102.298 138.246 96.3383 136.278 90.7354 133.672Z"
-            />
-            <path
-              d="M133.676 157.274C144.681 174.544 164.003 186 186 186C220.242 186 248 158.242 248 124C248 95.6437 228.964 71.7336 202.973 64.3521C202.266 88.5307 190.695 109.984 172.972 124C163.908 131.168 153.235 136.391 141.584 139.038C140.888 139.196 140.189 139.345 139.487 139.484C138.25 145.708 136.282 151.669 133.676 157.274Z"
-            />
-          </svg>
-        </i>
+        <div
+          class="om-component-ui-spinner-lottie"
+          style="width: 32px; height: 32px;"
+        />
         <div
           class="om-component-ui-spinner-content"
         >
@@ -53,35 +28,10 @@ exports[`Spinner renders brand correctly 1`] = `
     <div
       class="om-component-ui-spinner om-component-ui-spinner-brand"
     >
-      <i
-        class="om-component-ui-icons-wrapper"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 32px; --icon-height: 32px;"
-      >
-        <svg
-          class="om-component-ui-icons om-component-ui-spinner-logo om-component-ui-spinner-spin"
-          fill="none"
-          height="32"
-          preserveAspectRatio="xMidYMid meet"
-          shape-rendering="geometricPrecision"
-          stroke="none"
-          viewBox="0 0 248 248"
-          width="32"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M157.276 114.325C174.548 103.32 186.004 83.9979 186.004 62C186.004 27.7583 158.246 0 124.004 0C95.6448 0 71.7327 19.0401 64.3538 45.0343C88.5333 45.7406 109.988 57.3119 124.004 75.0356C125.875 77.4013 127.613 79.8767 129.208 82.4504C134.087 90.3248 137.62 99.1203 139.487 108.516C145.711 109.752 151.672 111.72 157.276 114.325Z"
-          />
-          <path
-            d="M108.52 108.517C109.757 102.295 111.724 96.336 114.329 90.7333C103.324 73.4586 84.0001 62 62 62C27.7583 62 0 89.7583 0 124C0 152.362 19.0439 176.276 45.042 183.652C45.7477 159.472 57.3192 138.017 75.0435 124C75.4946 123.643 75.9496 123.291 76.4086 122.944C85.7205 115.904 96.6406 110.879 108.52 108.517Z"
-          />
-          <path
-            d="M90.7354 133.672C73.4617 144.677 62.0039 164.001 62.0039 186C62.0039 220.242 89.7623 248 124.004 248C152.363 248 176.275 228.96 183.654 202.966C159.474 202.259 138.02 190.688 124.004 172.964C116.837 163.902 111.615 153.231 108.968 141.582C108.809 140.886 108.66 140.186 108.52 139.483C102.298 138.246 96.3383 136.278 90.7354 133.672Z"
-          />
-          <path
-            d="M133.676 157.274C144.681 174.544 164.003 186 186 186C220.242 186 248 158.242 248 124C248 95.6437 228.964 71.7336 202.973 64.3521C202.266 88.5307 190.695 109.984 172.972 124C163.908 131.168 153.235 136.391 141.584 139.038C140.888 139.196 140.189 139.345 139.487 139.484C138.25 145.708 136.282 151.669 133.676 157.274Z"
-          />
-        </svg>
-      </i>
+      <div
+        class="om-component-ui-spinner-lottie"
+        style="width: 32px; height: 32px;"
+      />
       <div
         class="om-component-ui-spinner-content"
       >
@@ -155,36 +105,22 @@ exports[`Spinner renders brand-bg correctly 1`] = `
       <div
         class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
       >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
+        <div
+          class="om-component-ui-spinner-icon-wrap"
+          style="width: 74px; height: 74px;"
         >
           <svg
-            class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
-            fill="none"
+            aria-hidden="true"
+            class="om-component-ui-spinner-bg"
             height="74"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
             viewBox="0 0 56 57"
             width="74"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M-7.62939e-06 28.75C-7.62939e-06 13.286 12.536 0.75 28 0.75C43.464 0.75 56 13.286 56 28.75C56 44.214 43.464 56.75 28 56.75C12.536 56.75 -7.62939e-06 44.214 -7.62939e-06 28.75Z"
-              fill="url(#paint0_radial_1648_22005)"
-            />
-            <path
-              d="M31.7569 27.4077C33.707 26.1652 35.0004 23.9836 35.0004 21.5C35.0004 17.634 31.8664 14.5 28.0004 14.5C24.7986 14.5 22.0988 16.6497 21.2657 19.5845C23.9957 19.6643 26.4179 20.9707 28.0004 22.9718C28.2117 23.2389 28.4079 23.5183 28.588 23.8089C29.1388 24.698 29.5377 25.691 29.7485 26.7518C30.4512 26.8914 31.1242 27.1135 31.7569 27.4077Z"
-            />
-            <path
-              d="M26.2523 26.752C26.3919 26.0494 26.614 25.3766 26.9081 24.7441C25.6656 22.7937 23.4839 21.5 21 21.5C17.134 21.5 14 24.634 14 28.5C14 31.7021 16.1501 34.4021 19.0854 35.2349C19.1651 32.5049 20.4715 30.0825 22.4726 28.5C22.5236 28.4597 22.5749 28.42 22.6268 28.3808C23.6781 27.5859 24.911 27.0186 26.2523 26.752Z"
-            />
-            <path
-              d="M24.2443 29.592C22.2941 30.8345 21.0004 33.0162 21.0004 35.5C21.0004 39.366 24.1344 42.5 28.0004 42.5C31.2023 42.5 33.902 40.3503 34.7351 37.4155C32.0052 37.3357 29.5829 36.0293 28.0004 34.0282C27.1913 33.0051 26.6017 31.8003 26.3028 30.4851C26.2849 30.4065 26.2681 30.3274 26.2523 30.248C25.5497 30.1084 24.8769 29.8862 24.2443 29.592Z"
-            />
-            <path
-              d="M29.0924 32.2567C30.335 34.2066 32.5164 35.5 35 35.5C38.866 35.5 42 32.366 42 28.5C42 25.2985 39.8507 22.5989 36.9163 21.7656C36.8365 24.4954 35.5301 26.9176 33.5291 28.5C32.5058 29.3093 31.3007 29.8989 29.9852 30.1978C29.9067 30.2156 29.8278 30.2324 29.7485 30.2482C29.6089 30.9509 29.3867 31.624 29.0924 32.2567Z"
+            <circle
+              cx="28"
+              cy="28.75"
+              fill="url(#spinner-bg-r0)"
+              r="28"
             />
             <defs>
               <radialgradient
@@ -192,7 +128,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
                 cy="0"
                 gradientTransform="translate(-34.9085 92.6678) rotate(-45.6594) scale(108.853 103.698)"
                 gradientUnits="userSpaceOnUse"
-                id="paint0_radial_1648_22005"
+                id="spinner-bg-r0"
                 r="1"
               >
                 <stop
@@ -213,12 +149,16 @@ exports[`Spinner renders brand-bg correctly 1`] = `
               </radialgradient>
             </defs>
           </svg>
-        </i>
+          <div
+            class="om-component-ui-spinner-lottie"
+            style="width: 49.33333333333333px; height: 49.33333333333333px;"
+          />
+        </div>
         <div
           class="om-component-ui-spinner-content"
         >
           <div
-            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-typography-color-default om-component-ui-spinner-title"
           >
             Loading
           </div>
@@ -235,36 +175,22 @@ exports[`Spinner renders brand-bg correctly 1`] = `
     <div
       class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
     >
-      <i
-        class="om-component-ui-icons-wrapper"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
+      <div
+        class="om-component-ui-spinner-icon-wrap"
+        style="width: 74px; height: 74px;"
       >
         <svg
-          class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
-          fill="none"
+          aria-hidden="true"
+          class="om-component-ui-spinner-bg"
           height="74"
-          preserveAspectRatio="xMidYMid meet"
-          shape-rendering="geometricPrecision"
-          stroke="none"
           viewBox="0 0 56 57"
           width="74"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M-7.62939e-06 28.75C-7.62939e-06 13.286 12.536 0.75 28 0.75C43.464 0.75 56 13.286 56 28.75C56 44.214 43.464 56.75 28 56.75C12.536 56.75 -7.62939e-06 44.214 -7.62939e-06 28.75Z"
-            fill="url(#paint0_radial_1648_22005)"
-          />
-          <path
-            d="M31.7569 27.4077C33.707 26.1652 35.0004 23.9836 35.0004 21.5C35.0004 17.634 31.8664 14.5 28.0004 14.5C24.7986 14.5 22.0988 16.6497 21.2657 19.5845C23.9957 19.6643 26.4179 20.9707 28.0004 22.9718C28.2117 23.2389 28.4079 23.5183 28.588 23.8089C29.1388 24.698 29.5377 25.691 29.7485 26.7518C30.4512 26.8914 31.1242 27.1135 31.7569 27.4077Z"
-          />
-          <path
-            d="M26.2523 26.752C26.3919 26.0494 26.614 25.3766 26.9081 24.7441C25.6656 22.7937 23.4839 21.5 21 21.5C17.134 21.5 14 24.634 14 28.5C14 31.7021 16.1501 34.4021 19.0854 35.2349C19.1651 32.5049 20.4715 30.0825 22.4726 28.5C22.5236 28.4597 22.5749 28.42 22.6268 28.3808C23.6781 27.5859 24.911 27.0186 26.2523 26.752Z"
-          />
-          <path
-            d="M24.2443 29.592C22.2941 30.8345 21.0004 33.0162 21.0004 35.5C21.0004 39.366 24.1344 42.5 28.0004 42.5C31.2023 42.5 33.902 40.3503 34.7351 37.4155C32.0052 37.3357 29.5829 36.0293 28.0004 34.0282C27.1913 33.0051 26.6017 31.8003 26.3028 30.4851C26.2849 30.4065 26.2681 30.3274 26.2523 30.248C25.5497 30.1084 24.8769 29.8862 24.2443 29.592Z"
-          />
-          <path
-            d="M29.0924 32.2567C30.335 34.2066 32.5164 35.5 35 35.5C38.866 35.5 42 32.366 42 28.5C42 25.2985 39.8507 22.5989 36.9163 21.7656C36.8365 24.4954 35.5301 26.9176 33.5291 28.5C32.5058 29.3093 31.3007 29.8989 29.9852 30.1978C29.9067 30.2156 29.8278 30.2324 29.7485 30.2482C29.6089 30.9509 29.3867 31.624 29.0924 32.2567Z"
+          <circle
+            cx="28"
+            cy="28.75"
+            fill="url(#spinner-bg-r0)"
+            r="28"
           />
           <defs>
             <radialgradient
@@ -272,7 +198,7 @@ exports[`Spinner renders brand-bg correctly 1`] = `
               cy="0"
               gradientTransform="translate(-34.9085 92.6678) rotate(-45.6594) scale(108.853 103.698)"
               gradientUnits="userSpaceOnUse"
-              id="paint0_radial_1648_22005"
+              id="spinner-bg-r0"
               r="1"
             >
               <stop
@@ -293,12 +219,16 @@ exports[`Spinner renders brand-bg correctly 1`] = `
             </radialgradient>
           </defs>
         </svg>
-      </i>
+        <div
+          class="om-component-ui-spinner-lottie"
+          style="width: 49.33333333333333px; height: 49.33333333333333px;"
+        />
+      </div>
       <div
         class="om-component-ui-spinner-content"
       >
         <div
-          class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
+          class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-typography-color-default om-component-ui-spinner-title"
         >
           Loading
         </div>
@@ -372,36 +302,22 @@ exports[`Spinner renders brand-bg without body 1`] = `
       <div
         class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
       >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
+        <div
+          class="om-component-ui-spinner-icon-wrap"
+          style="width: 74px; height: 74px;"
         >
           <svg
-            class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
-            fill="none"
+            aria-hidden="true"
+            class="om-component-ui-spinner-bg"
             height="74"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
             viewBox="0 0 56 57"
             width="74"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M-7.62939e-06 28.75C-7.62939e-06 13.286 12.536 0.75 28 0.75C43.464 0.75 56 13.286 56 28.75C56 44.214 43.464 56.75 28 56.75C12.536 56.75 -7.62939e-06 44.214 -7.62939e-06 28.75Z"
-              fill="url(#paint0_radial_1648_22005)"
-            />
-            <path
-              d="M31.7569 27.4077C33.707 26.1652 35.0004 23.9836 35.0004 21.5C35.0004 17.634 31.8664 14.5 28.0004 14.5C24.7986 14.5 22.0988 16.6497 21.2657 19.5845C23.9957 19.6643 26.4179 20.9707 28.0004 22.9718C28.2117 23.2389 28.4079 23.5183 28.588 23.8089C29.1388 24.698 29.5377 25.691 29.7485 26.7518C30.4512 26.8914 31.1242 27.1135 31.7569 27.4077Z"
-            />
-            <path
-              d="M26.2523 26.752C26.3919 26.0494 26.614 25.3766 26.9081 24.7441C25.6656 22.7937 23.4839 21.5 21 21.5C17.134 21.5 14 24.634 14 28.5C14 31.7021 16.1501 34.4021 19.0854 35.2349C19.1651 32.5049 20.4715 30.0825 22.4726 28.5C22.5236 28.4597 22.5749 28.42 22.6268 28.3808C23.6781 27.5859 24.911 27.0186 26.2523 26.752Z"
-            />
-            <path
-              d="M24.2443 29.592C22.2941 30.8345 21.0004 33.0162 21.0004 35.5C21.0004 39.366 24.1344 42.5 28.0004 42.5C31.2023 42.5 33.902 40.3503 34.7351 37.4155C32.0052 37.3357 29.5829 36.0293 28.0004 34.0282C27.1913 33.0051 26.6017 31.8003 26.3028 30.4851C26.2849 30.4065 26.2681 30.3274 26.2523 30.248C25.5497 30.1084 24.8769 29.8862 24.2443 29.592Z"
-            />
-            <path
-              d="M29.0924 32.2567C30.335 34.2066 32.5164 35.5 35 35.5C38.866 35.5 42 32.366 42 28.5C42 25.2985 39.8507 22.5989 36.9163 21.7656C36.8365 24.4954 35.5301 26.9176 33.5291 28.5C32.5058 29.3093 31.3007 29.8989 29.9852 30.1978C29.9067 30.2156 29.8278 30.2324 29.7485 30.2482C29.6089 30.9509 29.3867 31.624 29.0924 32.2567Z"
+            <circle
+              cx="28"
+              cy="28.75"
+              fill="url(#spinner-bg-r1)"
+              r="28"
             />
             <defs>
               <radialgradient
@@ -409,7 +325,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
                 cy="0"
                 gradientTransform="translate(-34.9085 92.6678) rotate(-45.6594) scale(108.853 103.698)"
                 gradientUnits="userSpaceOnUse"
-                id="paint0_radial_1648_22005"
+                id="spinner-bg-r1"
                 r="1"
               >
                 <stop
@@ -430,12 +346,16 @@ exports[`Spinner renders brand-bg without body 1`] = `
               </radialgradient>
             </defs>
           </svg>
-        </i>
+          <div
+            class="om-component-ui-spinner-lottie"
+            style="width: 49.33333333333333px; height: 49.33333333333333px;"
+          />
+        </div>
         <div
           class="om-component-ui-spinner-content"
         >
           <div
-            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
+            class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-typography-color-default om-component-ui-spinner-title"
           >
             Loading
           </div>
@@ -447,36 +367,22 @@ exports[`Spinner renders brand-bg without body 1`] = `
     <div
       class="om-component-ui-spinner om-component-ui-spinner-brand om-component-ui-spinner-brand-bg"
     >
-      <i
-        class="om-component-ui-icons-wrapper"
-        style="display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 74px; --icon-height: 74px;"
+      <div
+        class="om-component-ui-spinner-icon-wrap"
+        style="width: 74px; height: 74px;"
       >
         <svg
-          class="om-component-ui-icons om-component-ui-spinner-logo-bg om-component-ui-spinner-spin"
-          fill="none"
+          aria-hidden="true"
+          class="om-component-ui-spinner-bg"
           height="74"
-          preserveAspectRatio="xMidYMid meet"
-          shape-rendering="geometricPrecision"
-          stroke="none"
           viewBox="0 0 56 57"
           width="74"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M-7.62939e-06 28.75C-7.62939e-06 13.286 12.536 0.75 28 0.75C43.464 0.75 56 13.286 56 28.75C56 44.214 43.464 56.75 28 56.75C12.536 56.75 -7.62939e-06 44.214 -7.62939e-06 28.75Z"
-            fill="url(#paint0_radial_1648_22005)"
-          />
-          <path
-            d="M31.7569 27.4077C33.707 26.1652 35.0004 23.9836 35.0004 21.5C35.0004 17.634 31.8664 14.5 28.0004 14.5C24.7986 14.5 22.0988 16.6497 21.2657 19.5845C23.9957 19.6643 26.4179 20.9707 28.0004 22.9718C28.2117 23.2389 28.4079 23.5183 28.588 23.8089C29.1388 24.698 29.5377 25.691 29.7485 26.7518C30.4512 26.8914 31.1242 27.1135 31.7569 27.4077Z"
-          />
-          <path
-            d="M26.2523 26.752C26.3919 26.0494 26.614 25.3766 26.9081 24.7441C25.6656 22.7937 23.4839 21.5 21 21.5C17.134 21.5 14 24.634 14 28.5C14 31.7021 16.1501 34.4021 19.0854 35.2349C19.1651 32.5049 20.4715 30.0825 22.4726 28.5C22.5236 28.4597 22.5749 28.42 22.6268 28.3808C23.6781 27.5859 24.911 27.0186 26.2523 26.752Z"
-          />
-          <path
-            d="M24.2443 29.592C22.2941 30.8345 21.0004 33.0162 21.0004 35.5C21.0004 39.366 24.1344 42.5 28.0004 42.5C31.2023 42.5 33.902 40.3503 34.7351 37.4155C32.0052 37.3357 29.5829 36.0293 28.0004 34.0282C27.1913 33.0051 26.6017 31.8003 26.3028 30.4851C26.2849 30.4065 26.2681 30.3274 26.2523 30.248C25.5497 30.1084 24.8769 29.8862 24.2443 29.592Z"
-          />
-          <path
-            d="M29.0924 32.2567C30.335 34.2066 32.5164 35.5 35 35.5C38.866 35.5 42 32.366 42 28.5C42 25.2985 39.8507 22.5989 36.9163 21.7656C36.8365 24.4954 35.5301 26.9176 33.5291 28.5C32.5058 29.3093 31.3007 29.8989 29.9852 30.1978C29.9067 30.2156 29.8278 30.2324 29.7485 30.2482C29.6089 30.9509 29.3867 31.624 29.0924 32.2567Z"
+          <circle
+            cx="28"
+            cy="28.75"
+            fill="url(#spinner-bg-r1)"
+            r="28"
           />
           <defs>
             <radialgradient
@@ -484,7 +390,7 @@ exports[`Spinner renders brand-bg without body 1`] = `
               cy="0"
               gradientTransform="translate(-34.9085 92.6678) rotate(-45.6594) scale(108.853 103.698)"
               gradientUnits="userSpaceOnUse"
-              id="paint0_radial_1648_22005"
+              id="spinner-bg-r1"
               r="1"
             >
               <stop
@@ -505,12 +411,16 @@ exports[`Spinner renders brand-bg without body 1`] = `
             </radialgradient>
           </defs>
         </svg>
-      </i>
+        <div
+          class="om-component-ui-spinner-lottie"
+          style="width: 49.33333333333333px; height: 49.33333333333333px;"
+        />
+      </div>
       <div
         class="om-component-ui-spinner-content"
       >
         <div
-          class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-spinner-title"
+          class="om-component-ui-typography om-component-ui-typography-headline om-component-ui-typography-headline-sm om-component-ui-typography-color-default om-component-ui-spinner-title"
         >
           Loading
         </div>

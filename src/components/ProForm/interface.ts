@@ -1,23 +1,27 @@
-import type { ReactNode, FC, ReactElement, MutableRefObject, CSSProperties } from 'react';
-import type { FormProps, FormItemProps, FormCoreInstance, Rule } from '@/components/Form';
+import type { ReactNode, FC, ReactElement, MutableRefObject, CSSProperties, FormHTMLAttributes } from 'react';
+import type {
+  FormCoreInstance,
+  FormSize,
+  LabelAlign,
+  ValidateStatus,
+  ValidateTrigger,
+  Rule,
+} from './core/interface';
 import type { ButtonProps } from '@/components/Button';
 import type { DrawerProps, DrawerPlacement } from '@/components/Drawer';
 import type { GridRowProps, GridColProps, GridColSize } from '@/components/Grid';
-import type { ModalProps } from '@/components/Modal';
+import type { DialogProps } from '@/components/Dialog';
 import type { ProFormMode } from './constants';
 
 // ---------------------------------------------------------------------------
 // Transform / ConvertValue function types
 // ---------------------------------------------------------------------------
-
-/** Transform field value before submission */
 export type ProFormFieldTransformFn = (
   value: unknown,
   name: string,
   allValues: Record<string, unknown>,
 ) => unknown;
 
-/** Convert stored value before displaying in the field */
 export type ProFormFieldConvertValueFn = (
   value: unknown,
   name: string,
@@ -51,33 +55,47 @@ export interface ProFormRequestOption {
 }
 
 // ---------------------------------------------------------------------------
-// ProFormContext
+// ProFormFormInstance — superset of FormCoreInstance with format helpers
 // ---------------------------------------------------------------------------
-export interface ProFormContextValue {
-  /** @deprecated Use `mode` instead. Kept for backward compatibility. */
-  readonly?: boolean;
-  /** Form mode: 'edit' (default), 'read' (readonly), 'update' (edit existing data) */
-  mode?: ProFormMode;
-  grid?: boolean;
-  colProps?: ProFormColProps;
-  registerTransform?: (name: string, fn: ProFormFieldTransformFn) => void;
-  unregisterTransform?: (name: string) => void;
-  formInstance?: ProFormFormInstance;
+export interface ProFormFormInstance extends FormCoreInstance {
+  getFieldsFormatValue: () => Record<string, unknown>;
+  validateFieldsReturnFormatValue: () => {
+    success: boolean;
+    values?: Record<string, unknown>;
+    errors?: Record<string, string>;
+  };
 }
 
 // ---------------------------------------------------------------------------
-// FormInstance (lightweight subset used inside ProForm)
+// ProFormContext — unified context that replaces the former FormContext
+// Includes core form state + ProForm-specific fields.
 // ---------------------------------------------------------------------------
-export interface ProFormFormInstance {
-  submit: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
-  resetFields: () => void;
-  getFieldValue: (name: string) => unknown;
-  getFieldsValue: () => Record<string, unknown>;
-  setFieldsValue: (values: Record<string, unknown>) => void;
+export interface ProFormContextValue {
+  // ── Core form state (from useFormCore) ──
+  values: Record<string, unknown>;
+  errors: Record<string, string>;
+  touched: Record<string, boolean>;
+  formInstance: ProFormFormInstance;
   setFieldValue: (name: string, value: unknown) => void;
-  validateFields: (fieldsRules?: Record<string, Rule[]>) => boolean;
-  getFieldsFormatValue: () => Record<string, unknown>;
-  validateFieldsReturnFormatValue: () => { success: boolean; values?: Record<string, unknown>; errors?: Record<string, string> };
+  setFieldError: (name: string, error: string | null) => void;
+  validateField: (name: string, rules: Rule[], providedValue?: unknown) => boolean;
+  registerField: (name: string, rules: Rule[]) => void;
+  unregisterField: (name: string) => void;
+  size: FormSize;
+  labelAlign: LabelAlign;
+  disabled: boolean;
+  colon: boolean;
+  requiredMark: boolean;
+  validateTrigger: ValidateTrigger;
+
+  // ── ProForm specifics ──
+  /** @deprecated Use `mode` instead. Kept for backward compatibility. */
+  readonly: boolean;
+  mode: ProFormMode;
+  grid: boolean;
+  colProps: ProFormColProps;
+  registerTransform: (name: string, fn: ProFormFieldTransformFn) => void;
+  unregisterTransform: (name: string) => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -95,7 +113,6 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   colon?: boolean;
   /** @deprecated Use `mode='read'` instead */
   readonly?: boolean;
-  /** Field-level mode override: 'edit', 'read', or 'update' */
   mode?: ProFormMode;
   hidden?: boolean;
   colProps?: ProFormColProps;
@@ -105,16 +122,56 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   width?: 'sm' | 'md' | 'lg' | 'xl' | number;
   transform?: ProFormFieldTransformFn;
   convertValue?: ProFormFieldConvertValueFn;
-  /** Field names to watch — auto-wraps with ProFormDependency */
   dependencies?: string[];
-  /** Async option loader (works with Select, RadioGroup, CheckboxGroup) */
   request?: (params?: Record<string, unknown>) => Promise<ProFormRequestOption[]>;
-  /** Extra params passed to request; merged with dependency values */
   params?: Record<string, unknown>;
-  /** Quick enum → options conversion for Select/Radio/Checkbox fields */
   valueEnum?: ProFormValueEnumObj;
-  /** Debounce delay (ms) for field onChange */
   debounceTime?: number;
+}
+
+// ---------------------------------------------------------------------------
+// ProFormItem — FormItem + ProForm semantic extensions
+// ---------------------------------------------------------------------------
+export type ProFormValueType =
+  | 'text'
+  | 'password'
+  | 'digit'
+  | 'date'
+  | 'dateTime'
+  | 'select'
+  | 'radio'
+  | 'switch'
+  | 'tag';
+
+export interface ProFormItemProps {
+  children?: ReactNode;
+  className?: string;
+  prefixCls?: string;
+  label?: ReactNode;
+  name?: string;
+  rules?: Rule[];
+  required?: boolean;
+  help?: ReactNode;
+  validateStatus?: ValidateStatus;
+  hasFeedback?: boolean;
+  colon?: boolean;
+  hidden?: boolean;
+  /** Transform before submit, registered into ProForm pipeline */
+  transform?: ProFormFieldTransformFn;
+  /** Convert the displayed value before rendering into children */
+  convertValue?: ProFormFieldConvertValueFn;
+  /** Built-in read-mode value type renderer */
+  valueType?: ProFormValueType;
+  /** Custom read-mode rendering; overrides valueType */
+  readonlyRender?: (value: unknown, values: Record<string, unknown>) => ReactNode;
+  /** Grid column config; falls back to ProForm.colProps */
+  colProps?: ProFormColProps;
+  /** Per-item mode override */
+  mode?: ProFormMode;
+  /** Placeholder shown in read mode when the value is empty (default: '-') */
+  emptyText?: ReactNode;
+  /** Value enum for select/radio/tag value types */
+  valueEnum?: ProFormValueEnumObj;
 }
 
 // ---------------------------------------------------------------------------
@@ -136,11 +193,31 @@ export interface SubmitterProps {
 // ---------------------------------------------------------------------------
 // ProForm
 // ---------------------------------------------------------------------------
-export interface ProFormProps extends Omit<FormProps, 'onSubmit'> {
+export interface ProFormProps
+  extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'onReset'> {
+  children?: ReactNode;
+  className?: string;
+  prefixCls?: string;
+  initialValues?: Record<string, unknown>;
+  onFinish?: (values: Record<string, unknown>) => void;
+  onFinishFailed?: (errorInfo: {
+    values: Record<string, unknown>;
+    errors: Record<string, string>;
+  }) => void;
+  onValuesChange?: (
+    changedValues: Record<string, unknown>,
+    allValues: Record<string, unknown>,
+  ) => void;
+  onReset?: () => void;
+  size?: FormSize;
+  labelAlign?: LabelAlign;
+  disabled?: boolean;
+  colon?: boolean;
+  requiredMark?: boolean;
+  validateTrigger?: ValidateTrigger;
   submitter?: SubmitterProps | false;
   /** @deprecated Use `mode='read'` instead */
   readonly?: boolean;
-  /** Form mode: 'edit' (default), 'read' (readonly), 'update' (edit existing data) */
   mode?: ProFormMode;
   grid?: boolean;
   colProps?: ProFormColProps;
@@ -149,7 +226,6 @@ export interface ProFormProps extends Omit<FormProps, 'onSubmit'> {
   request?: (params?: unknown) => Promise<Record<string, unknown>>;
   params?: unknown;
   formRef?: MutableRefObject<ProFormFormInstance | undefined>;
-  /** Strip null / undefined / empty-string values before onFinish (default: true) */
   omitNil?: boolean;
 }
 
@@ -169,9 +245,7 @@ export interface ProFormListProps {
   label?: ReactNode;
   min?: number;
   max?: number;
-  /** Validate that the list is not empty on form submission */
   required?: boolean;
-  /** Error message when list is empty (used with required) */
   requiredMessage?: string;
   initialValue?: Record<string, unknown>[];
   copyIconProps?: false | Partial<ButtonProps>;
@@ -213,7 +287,6 @@ export interface ProFormFieldSetProps {
   rules?: Rule[];
   required?: boolean;
   help?: ReactNode;
-  /** Gap between child fields in px */
   gap?: number;
   style?: CSSProperties;
   children?: ReactNode;
@@ -224,7 +297,6 @@ export interface ProFormFieldSetProps {
 // ---------------------------------------------------------------------------
 export interface ProFormGroupProps {
   title?: ReactNode;
-  /** Extra content rendered at the right of the title */
   extra?: ReactNode;
   collapsible?: boolean;
   defaultCollapsed?: boolean;
@@ -235,9 +307,9 @@ export interface ProFormGroupProps {
 }
 
 // ---------------------------------------------------------------------------
-// ModalForm
+// DialogForm
 // ---------------------------------------------------------------------------
-export interface ModalFormProps extends Omit<ProFormProps, 'title'> {
+export interface DialogFormProps extends Omit<ProFormProps, 'title'> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   trigger?: ReactElement;
@@ -246,7 +318,7 @@ export interface ModalFormProps extends Omit<ProFormProps, 'title'> {
   submitTimeout?: number;
   autoClose?: boolean;
   destroyOnClose?: boolean;
-  modalProps?: Partial<ModalProps>;
+  dialogProps?: Partial<DialogProps>;
 }
 
 // ---------------------------------------------------------------------------
@@ -279,7 +351,6 @@ export interface QueryFilterProps extends ProFormProps {
     searchText?: ReactNode;
     resetText?: ReactNode;
   };
-  /** Sync form values to URL search params */
   syncToUrl?: boolean | ((values: Record<string, unknown>, type: 'get' | 'set') => Record<string, unknown>);
 }
 

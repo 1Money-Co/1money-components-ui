@@ -242,7 +242,7 @@ describe('InputAmount — numeric behavior', () => {
 
   it('sets aria-required and aria-invalid correctly', () => {
     const { container } = render(
-      <InputAmount required status="error" errorMsg="bad" />,
+      <InputAmount required status="error" feedback="bad" />,
     );
     const input = getInput(container);
     expect(input.getAttribute('aria-required')).toBe('true');

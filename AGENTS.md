@@ -112,7 +112,13 @@ import { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';
 import '@1money/components-ui/index.css';
 ```
 
-**Available components:** Button, Checkbox, Tag, Tooltip, Notification, Icons (+ IconWrapper, IconHover), Spinner
+**Available components:** Accordion, Alert, Button, Calendar, Carousel, Cell, Checkbox (+ CheckboxGroup), CoachMark, Copy, Dialog, Divider, Drawer, Dropdown, Empty, Flex, Grid (+ Row, Col), Icons (+ IconWrapper, IconHover), Input, Link, Navigation (+ Nav), Notification, Pagination, Popconfirm, Portal, ProForm (unified form system, see below), Progress, Radio (+ RadioGroup), ResizeObserver, Segment, Select, Skeleton, Slider, Space, Spinner, Step, Switch, Table (+ VirtualTable), Tabs, Tag, Tooltip, Tour, Trigger, Typography, Upload (+ UploadFileBar), VirtualList
+
+**ProForm system:** The form layer is consolidated into a single `ProForm` module — there is no standalone `Form` component. `ProForm` wraps a `<form>` element, provides the unified `ProFormContext` (combines form-core state and ProForm semantics), and exposes:
+- `ProForm` (root) with static sub-components: `ProForm.Item`, `ProForm.Dependency`, `ProForm.List`, `ProForm.Group`, `ProForm.FieldSet`, `ProForm.Submitter`, `ProForm.Text / Password / TextArea / Checkbox / CheckboxGroup / Switch / Select / RadioGroup / Slider / DatePicker / Upload`, plus hooks `ProForm.useForm`, `ProForm.useInstance`, `ProForm.useContext`.
+- `ProFormItem` — the public item primitive (supports `transform`, `convertValue`, `valueType`, `readonlyRender`, `colProps`, `mode`, `emptyText`, `valueEnum`).
+- Named exports for all field components, `ProFormDependency`, `ProFormList`, `ProFormGroup`, `DialogForm`, `DrawerForm`, `QueryFilter`, and `createProFormField` (the extension factory).
+- Internal-only: `FormItem` (the low-level item used by `ProFormItem`), `useFormCore`, `FormContext` — none of these are publicly exported.
 
 ### Development Workflow
 1. Use `omni new ComponentName -f` to scaffold new components (generates interface, styles, stories, tests, and README)

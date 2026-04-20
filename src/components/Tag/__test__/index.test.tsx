@@ -1,8 +1,13 @@
 import 'jsdom-global/register';
+import fs from 'fs';
+import path from 'path';
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Tag } from '../index';
+
+const readTagStyleSource = () =>
+  fs.readFileSync(path.resolve(__dirname, '../style/Tag.scss'), 'utf8');
 
 const originalConsoleError = console.error;
 console.error = (message, ...optionalParams) => {
@@ -40,6 +45,13 @@ describe('Tag', () => {
 
     rerender(<Tag label="Small" size="small" />);
     expect(getByText('Small')).toHaveClass('om-component-ui-tag-label-small');
+  });
+
+  it('does not override typography token line-heights in tag styles', () => {
+    const stylesSource = readTagStyleSource();
+
+    expect(stylesSource).not.toContain('line-height: 1.33;');
+    expect(stylesSource).not.toContain('line-height: 1.08;');
   });
 
   it('renders with icon', () => {

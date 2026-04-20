@@ -141,10 +141,10 @@ describe('Radio', () => {
     expect(radioRoot).not.toHaveClass('om-component-ui-radio-cell-horizontal');
   });
 
-  it('uses alignment="right" for the default radio layout', () => {
+  it('uses labelPlacement="right" to place the radio dot on the right', () => {
     render(
       <Radio
-        alignment="right"
+        labelPlacement="right"
         label="Aligned right"
       />
     );
@@ -175,6 +175,27 @@ describe('Radio', () => {
     expect(stylesSource).toContain(
       "&-cell-input:checked + .#{theme.$prefix}-#{$component}-cell-panel {\n    background-color: theme.palette(bg, 'default-secondary');",
     );
+  });
+
+  it('uses labelPlacement="right" for the default radio layout', () => {
+    render(
+      <Radio labelPlacement="right" label="Right placed" />
+    );
+
+    const radioRoot = screen.getByText('Right placed').closest('label');
+
+    expect(radioRoot).toHaveClass('om-component-ui-radio-right');
+  });
+
+  it('ignores labelPlacement for the cell variant', () => {
+    render(
+      <Radio variant="cell" labelPlacement="right" alignment="center" label="Cell ignores" />
+    );
+
+    const radioRoot = screen.getByText('Cell ignores').closest('label');
+
+    expect(radioRoot).toHaveClass('om-component-ui-radio-cell-vertical');
+    expect(radioRoot).not.toHaveClass('om-component-ui-radio-right');
   });
 
   it('keeps small horizontal cell typography aligned with the Figma beta radio spec', () => {
@@ -383,33 +404,16 @@ describe('RadioGroup', () => {
     expect(radioRoot).not.toHaveClass('om-component-ui-radio-cell-horizontal');
   });
 
-  it('inherits alignment="right" from the group API for default radios', () => {
+  it('inherits labelPlacement="right" from the group API for default radios', () => {
     render(
-      <RadioGroup
-        defaultValue="global"
-        alignment="right"
-      >
-        <Radio value="global" label="Global account" />
+      <RadioGroup defaultValue="a" labelPlacement="right">
+        <Radio value="a" label="From group" />
       </RadioGroup>
     );
 
-    const radioRoot = screen.getByText('Global account').closest('label');
+    const radioRoot = screen.getByText('From group').closest('label');
 
     expect(radioRoot).toHaveClass('om-component-ui-radio-right');
   });
 
-  it('ignores alignment="right" for the cell variant and keeps left layout', () => {
-    render(
-      <Radio
-        variant="cell"
-        alignment="right"
-        label="Cell right falls back"
-      />
-    );
-
-    const radioRoot = screen.getByText('Cell right falls back').closest('label');
-
-    expect(radioRoot).toHaveClass('om-component-ui-radio-cell-horizontal');
-    expect(radioRoot).not.toHaveClass('om-component-ui-radio-right');
-  });
 });

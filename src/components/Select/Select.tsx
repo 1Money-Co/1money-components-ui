@@ -38,11 +38,7 @@ import SelectFieldShell from './SelectFieldShell';
 import SelectOptionContent from './SelectOptionContent';
 import SelectSearchControl from './SelectSearchControl';
 import SelectValueContent from './SelectValueContent';
-import {
-  SELECT_EMPTY_COLOR,
-  SELECT_EMPTY_SIZE,
-  SELECT_GROUP_LABEL_SIZE,
-} from './constants';
+import { SELECT_TYPOGRAPHY } from './constants';
 import {
   extractOptionText,
   filterOptionGroups,
@@ -283,7 +279,7 @@ export const Select: FC<SelectProps> = (props) => {
       return;
     }
 
-    listRef.current[activeIndex]?.focus();
+    listRef.current[activeIndex]?.focus({ preventScroll: true });
   }, [activeIndex, innerOpen, searchable]);
 
   useEffect(() => {
@@ -293,7 +289,7 @@ export const Select: FC<SelectProps> = (props) => {
 
   useEffect(() => {
     if (innerOpen && searchable) {
-      searchInputRef.current?.focus();
+      searchInputRef.current?.focus({ preventScroll: true });
     }
   }, [innerOpen, searchable]);
 
@@ -335,7 +331,7 @@ export const Select: FC<SelectProps> = (props) => {
     commitChange(option.value, option);
     handleOpenChange(false);
     onBlur?.();
-    triggerRef.current?.focus();
+    triggerRef.current?.focus({ preventScroll: true });
   });
 
   const handleRemoveSelectedValue = useEventCallback((optionValue: SelectOptionValue) => {
@@ -400,21 +396,21 @@ export const Select: FC<SelectProps> = (props) => {
     if (event.key === 'ArrowDown' && firstEnabledIndex >= 0) {
       event.preventDefault();
       setActiveIndex(firstEnabledIndex);
-      listRef.current[firstEnabledIndex]?.focus();
+      listRef.current[firstEnabledIndex]?.focus({ preventScroll: true });
       return;
     }
 
     if (event.key === 'ArrowUp' && lastEnabledIndex !== null) {
       event.preventDefault();
       setActiveIndex(lastEnabledIndex);
-      listRef.current[lastEnabledIndex]?.focus();
+      listRef.current[lastEnabledIndex]?.focus({ preventScroll: true });
       return;
     }
 
     if (event.key === 'Escape') {
       event.preventDefault();
       handleOpenChange(false);
-      triggerRef.current?.focus();
+      triggerRef.current?.focus({ preventScroll: true });
     }
   });
 
@@ -521,7 +517,7 @@ export const Select: FC<SelectProps> = (props) => {
 
       {innerOpen && !disabled && (
         <FloatingPortal>
-          <FloatingFocusManager context={context} modal={false} initialFocus={-1}>
+          <FloatingFocusManager context={context} modal={false} initialFocus={-1} returnFocus={false}>
             <div
               {...getFloatingProps({
                 ref: setFloating,
@@ -543,7 +539,7 @@ export const Select: FC<SelectProps> = (props) => {
               <div className={classes('panel-body')}>
                 {visibleFlatOptions.length === 0 ? (
                   <div className={classes('empty')}>
-                    <TypographyBody size={SELECT_EMPTY_SIZE} color={SELECT_EMPTY_COLOR}>{emptyContent}</TypographyBody>
+                    <TypographyBody size={SELECT_TYPOGRAPHY.empty.size} color={SELECT_TYPOGRAPHY.empty.color}>{emptyContent}</TypographyBody>
                   </div>
                 ) : (
                   (() => {
@@ -553,7 +549,7 @@ export const Select: FC<SelectProps> = (props) => {
                       <div key={group.key} className={classes('group')}>
                         {group.label && (
                           <div className={classes('group-label')}>
-                            <TypographyLabel size={SELECT_GROUP_LABEL_SIZE} strong>{group.label}</TypographyLabel>
+                            <TypographyLabel size={SELECT_TYPOGRAPHY.groupLabel.size} strong>{group.label}</TypographyLabel>
                           </div>
                         )}
                         {group.options.map((option) => {

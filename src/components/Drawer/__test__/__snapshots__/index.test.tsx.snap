@@ -29,17 +29,17 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
         >
           <i
             class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
           >
             <svg
               class="om-component-ui-icons"
               fill="none"
-              height="14"
+              height="20"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="14"
+              width="20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -63,17 +63,17 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
       >
         <i
           class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 14px; --icon-height: 14px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
         >
           <svg
             class="om-component-ui-icons"
             fill="none"
-            height="14"
+            height="20"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="14"
+            width="20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -99,23 +99,23 @@ exports[`Drawer renders the figma-aligned header and footer structure when open 
         style="display: flex; gap: 12px; width: 100%;"
       >
         <button
-          class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-medium"
+          class="om-component-ui-button om-component-ui-button-secondary om-component-ui-button-large"
           style="flex: 1;"
           type="button"
         >
           <span
-            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-strong"
           >
             Cancel
           </span>
         </button>
         <button
-          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-medium"
+          class="om-component-ui-button om-component-ui-button-primary om-component-ui-button-large"
           style="flex: 1;"
           type="button"
         >
           <span
-            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-strong"
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-typography-strong"
           >
             Confirm
           </span>

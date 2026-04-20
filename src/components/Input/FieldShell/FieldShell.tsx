@@ -1,12 +1,14 @@
-import { memo } from 'react';
+import { memo, useId } from 'react';
 import { Icons } from '@/components/Icons';
 import { Skeleton } from '@/components/Skeleton';
+import { Tooltip } from '@/components/Tooltip';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import type { FC, ReactNode } from 'react';
+import type { IconName } from '@/components/Icons';
+import type { FC, MouseEvent, ReactNode } from 'react';
 import type { InputSize, InputStatus } from '../constants';
 import {
-  INPUT_ERROR_MSG_SIZE,
+  INPUT_FEEDBACK_SIZE,
   INPUT_INFO_COLOR,
   INPUT_INFO_SIZE,
   INPUT_LABEL_COLOR,
@@ -23,9 +25,12 @@ export interface FieldShellProps {
   readOnly?: boolean;
   label?: ReactNode;
   info?: ReactNode;
-  errorMsg?: ReactNode;
+  tip?: ReactNode;
+  feedback?: ReactNode;
+  feedbackIcon?: IconName | ReactNode;
   required?: boolean;
   inputId?: string;
+  onControlWrapperClick?: (e: MouseEvent<HTMLDivElement>) => void;
   children: ReactNode;
 }
 
@@ -40,11 +45,15 @@ const FieldShellBase: FC<FieldShellProps> = ({
   readOnly = false,
   label,
   info,
-  errorMsg,
-  required = false,
+  tip,
+  feedback,
+  feedbackIcon,
+  required = true,
   inputId,
+  onControlWrapperClick,
 }) => {
   const classes = classnames(prefixCls);
+  const tipId = useId();
 
   return (
     <div
@@ -59,7 +68,7 @@ const FieldShellBase: FC<FieldShellProps> = ({
         ),
       )}
     >
-      {(label || info) && (
+      {(label || info || tip) && (
         <div className={classes('label-row')}>
           {label && (
             loading
@@ -69,19 +78,29 @@ const FieldShellBase: FC<FieldShellProps> = ({
                   <TypographyLabel as="span" size={INPUT_LABEL_SIZE[size]} color={INPUT_LABEL_COLOR} strong>
                     {label}
                   </TypographyLabel>
-                  {required && <span className={classes('required')}>*</span>}
+                  {!required && <>{' '}<TypographyLabel as="span" className={classes('optional')} size={INPUT_LABEL_SIZE[size]} color="default-tertiary" strong>(Optional)</TypographyLabel></>}
                 </label>
               )
           )}
           {info && <TypographyBody className={classes('info')} size={INPUT_INFO_SIZE} color={INPUT_INFO_COLOR}>{info}</TypographyBody>}
+          {tip && (
+            <>
+              <span data-tooltip-id={tipId} className={classes('tip-trigger')}>
+                <Icons name="info" size={16} />
+              </span>
+              <Tooltip id={tipId} placement="top" body={tip} />
+            </>
+          )}
         </div>
       )}
-      <div className={classes('control-wrapper')}>{children}</div>
-      {errorMsg && (
+      <div className={classes('control-wrapper')} onClick={onControlWrapperClick}>{children}</div>
+      {feedback && (
         <div className={classes('error-msg')} role={status === 'error' || status === 'warning' ? 'alert' : 'status'}>
-          {status === 'error' && <Icons className={classes('error-msg-icon')} name="error" size={16} color="danger" />}
-          <TypographyBody as="span" size={INPUT_ERROR_MSG_SIZE} color={status === 'error' ? 'danger' : undefined}>
-            {errorMsg}
+          {feedbackIcon && (typeof feedbackIcon === 'string'
+            ? <Icons className={classes('error-msg-icon')} name={feedbackIcon as IconName} size={16} color={status === 'error' ? 'danger' : undefined} />
+            : feedbackIcon)}
+          <TypographyBody as="span" size={INPUT_FEEDBACK_SIZE} color={status === 'error' ? 'danger' : undefined}>
+            {feedback}
           </TypographyBody>
         </div>
       )}

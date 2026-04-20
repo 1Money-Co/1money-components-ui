@@ -17,7 +17,7 @@ import {
 import React, { cloneElement, useCallback, useMemo, useRef } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { joinCls } from '@/utils/classnames';
-import type { FC } from 'react';
+import type { CSSProperties, FC } from 'react';
 import type { TriggerAction, TriggerProps } from './interface';
 import './style';
 
@@ -58,7 +58,7 @@ const Trigger: FC<TriggerProps> = ({
   role = 'dialog',
   ref,
 }) => {
-  const arrowRef = useRef<SVGSVGElement>(null);
+  const arrowRef = useRef<Element>(null);
   const triggers = useMemo(() => normalizeTrigger(trigger), [trigger]);
 
   const [innerOpen, setInnerOpen] = useControlledState(defaultOpen, open);
@@ -79,9 +79,9 @@ const Trigger: FC<TriggerProps> = ({
       floatingOffset(offset),
       flip({ padding: 8 }),
       shift({ padding: 8 }),
-      ...(showArrow ? [arrow({ element: arrowRef })] : []),
+      arrow({ element: arrowRef, padding: 8 }),
     ],
-    [offset, showArrow],
+    [offset],
   );
 
   const { refs, floatingStyles, context, placement: resolvedPlacement } = useFloating({
@@ -136,21 +136,38 @@ const Trigger: FC<TriggerProps> = ({
 
   const closePanel = useCallback(() => handleOpenChange(false), [handleOpenChange]);
 
+  const arrowData = context.middlewareData.arrow;
+  const arrowVars = {
+    ...(arrowData?.x != null && { '--arrow-x': `${arrowData.x}px` }),
+    ...(arrowData?.y != null && { '--arrow-y': `${arrowData.y}px` }),
+  } as CSSProperties;
+
   const panel = (
     <div
       ref={refs.setFloating}
-      style={{ ...floatingStyles, ...overlayStyle }}
+      style={{ ...floatingStyles, ...arrowVars, ...overlayStyle }}
       className={joinCls(`${PREFIX}-panel`, overlayClassName)}
       data-placement={resolvedPlacement}
       data-side={placementMeta.side}
       data-align={placementMeta.align}
       {...getFloatingProps()}
     >
-      {showArrow && (
+      {showArrow ? (
         <FloatingArrow
-          ref={arrowRef}
+          ref={arrowRef as React.RefObject<SVGSVGElement | null>}
           context={context}
           className={`${PREFIX}-arrow`}
+        />
+      ) : (
+        <span
+          ref={arrowRef as React.RefObject<HTMLSpanElement | null>}
+          style={{
+            position: 'absolute',
+            width: 0,
+            height: 0,
+            pointerEvents: 'none',
+            visibility: 'hidden',
+          }}
         />
       )}
       {typeof content === 'function'

@@ -12,21 +12,20 @@ $component: 'input';
     min-height: 120px;
     padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
     background-color: theme.palette(bg, 'default-secondary');
-    border: 1px solid theme.palette(border, 'default');
+    border: none;
     border-radius: theme.shape(300);
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default');
     transition:
-      border-color 0.2s ease,
       box-shadow 0.2s ease,
       background-color 0.2s ease;
   }
 
   &-textarea-wrapper:hover {
-    border-color: theme.palette(border, 'default-tertiary');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default-tertiary');
   }
 
   &-textarea-wrapper:focus-within {
-    border-color: theme.palette(border, 'brand');
-    box-shadow: 0 0 0 1px theme.palette(border, 'brand');
+    box-shadow: inset 0 0 0 2px theme.palette(border, 'brand');
   }
 
   &-textarea {
@@ -62,22 +61,21 @@ $component: 'input';
 
   // ── Status ──
   &-error &-textarea-wrapper {
-    border-color: theme.palette(border, 'danger');
-    box-shadow: 0 0 0 1px theme.palette(border, 'danger');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'danger');
   }
 
   &-warning &-textarea-wrapper {
-    border-color: theme.palette(border, 'warning');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'warning');
   }
 
   &-success &-textarea-wrapper {
-    border-color: theme.palette(border, 'positive');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'positive');
   }
 
   // ── Disabled ──
   &-disabled &-textarea-wrapper {
     background-color: theme.palette(bg, 'disabled');
-    border-color: theme.palette(border, 'default');
+    box-shadow: inset 0 0 0 1px theme.palette(border, 'default');
     cursor: not-allowed;
   }
 

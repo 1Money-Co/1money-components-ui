@@ -16,7 +16,7 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = props => {
     className,
     label,
     description,
-    errorMsg,
+    feedback,
     disabled = false,
     accept,
     multiple = false,
@@ -80,11 +80,11 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = props => {
         {buttonLabel}
       </Button>
       {children && <div className={classes('slot')}>{children}</div>}
-      {errorMsg && (
+      {feedback && (
         <div className={classes('error-msg')}>
           <ErrorIcon size={16} color="currentColor" />
           <Typography.Body size="sm" className={classes('error-msg-text')}>
-            {errorMsg}
+            {feedback}
           </Typography.Body>
         </div>
       )}

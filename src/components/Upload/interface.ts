@@ -12,7 +12,7 @@ export interface UploadProps {
   /** Description text below the label */
   description?: ReactNode;
   /** Feedback/error message displayed below the file list */
-  errorMsg?: ReactNode;
+  feedback?: ReactNode;
   /** Whether the upload is disabled */
   disabled?: boolean;
   /** Accept file types (e.g. '.pdf,.png,image/*') */

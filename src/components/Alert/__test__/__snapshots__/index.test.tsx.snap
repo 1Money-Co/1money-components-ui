@@ -9,7 +9,7 @@ exports[`Alert renders all status variants 1`] = `
         class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -68,40 +68,12 @@ exports[`Alert renders all status variants 1`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             info alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
   </body>,
@@ -110,7 +82,7 @@ exports[`Alert renders all status variants 1`] = `
       class="om-component-ui-alert om-component-ui-alert-info"
     >
       <span
-        class="om-component-ui-alert-icon"
+        class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
       >
         <i
           class="om-component-ui-icons-wrapper"
@@ -169,40 +141,12 @@ exports[`Alert renders all status variants 1`] = `
       <div
         class="om-component-ui-alert-content"
       >
-        <div
-          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
         >
           info alert
-        </div>
+        </span>
       </div>
-      <button
-        aria-label="Close alert"
-        class="om-component-ui-alert-close"
-        type="button"
-      >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="currentColor"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
-      </button>
     </div>
   </div>,
   "debug": [Function],
@@ -268,7 +212,7 @@ exports[`Alert renders all status variants 2`] = `
         class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -327,40 +271,12 @@ exports[`Alert renders all status variants 2`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             info alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
     <div>
@@ -368,7 +284,7 @@ exports[`Alert renders all status variants 2`] = `
         class="om-component-ui-alert om-component-ui-alert-success"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -402,40 +318,12 @@ exports[`Alert renders all status variants 2`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             success alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
   </body>,
@@ -444,7 +332,7 @@ exports[`Alert renders all status variants 2`] = `
       class="om-component-ui-alert om-component-ui-alert-success"
     >
       <span
-        class="om-component-ui-alert-icon"
+        class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
       >
         <i
           class="om-component-ui-icons-wrapper"
@@ -478,40 +366,12 @@ exports[`Alert renders all status variants 2`] = `
       <div
         class="om-component-ui-alert-content"
       >
-        <div
-          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
         >
           success alert
-        </div>
+        </span>
       </div>
-      <button
-        aria-label="Close alert"
-        class="om-component-ui-alert-close"
-        type="button"
-      >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="currentColor"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
-      </button>
     </div>
   </div>,
   "debug": [Function],
@@ -577,7 +437,7 @@ exports[`Alert renders all status variants 3`] = `
         class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -636,40 +496,12 @@ exports[`Alert renders all status variants 3`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             info alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
     <div>
@@ -677,7 +509,7 @@ exports[`Alert renders all status variants 3`] = `
         class="om-component-ui-alert om-component-ui-alert-success"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -711,40 +543,12 @@ exports[`Alert renders all status variants 3`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             success alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
     <div>
@@ -752,7 +556,7 @@ exports[`Alert renders all status variants 3`] = `
         class="om-component-ui-alert om-component-ui-alert-warning"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -796,40 +600,12 @@ exports[`Alert renders all status variants 3`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             warning alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
   </body>,
@@ -838,7 +614,7 @@ exports[`Alert renders all status variants 3`] = `
       class="om-component-ui-alert om-component-ui-alert-warning"
     >
       <span
-        class="om-component-ui-alert-icon"
+        class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
       >
         <i
           class="om-component-ui-icons-wrapper"
@@ -882,40 +658,12 @@ exports[`Alert renders all status variants 3`] = `
       <div
         class="om-component-ui-alert-content"
       >
-        <div
-          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
         >
           warning alert
-        </div>
+        </span>
       </div>
-      <button
-        aria-label="Close alert"
-        class="om-component-ui-alert-close"
-        type="button"
-      >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="currentColor"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
-      </button>
     </div>
   </div>,
   "debug": [Function],
@@ -981,7 +729,7 @@ exports[`Alert renders all status variants 4`] = `
         class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -1040,40 +788,12 @@ exports[`Alert renders all status variants 4`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             info alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
     <div>
@@ -1081,7 +801,7 @@ exports[`Alert renders all status variants 4`] = `
         class="om-component-ui-alert om-component-ui-alert-success"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -1115,40 +835,12 @@ exports[`Alert renders all status variants 4`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             success alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
     <div>
@@ -1156,7 +848,7 @@ exports[`Alert renders all status variants 4`] = `
         class="om-component-ui-alert om-component-ui-alert-warning"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -1200,40 +892,12 @@ exports[`Alert renders all status variants 4`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             warning alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
     <div>
@@ -1241,7 +905,7 @@ exports[`Alert renders all status variants 4`] = `
         class="om-component-ui-alert om-component-ui-alert-error"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -1275,40 +939,12 @@ exports[`Alert renders all status variants 4`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             error alert
-          </div>
+          </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
   </body>,
@@ -1317,7 +953,7 @@ exports[`Alert renders all status variants 4`] = `
       class="om-component-ui-alert om-component-ui-alert-error"
     >
       <span
-        class="om-component-ui-alert-icon"
+        class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
       >
         <i
           class="om-component-ui-icons-wrapper"
@@ -1351,40 +987,12 @@ exports[`Alert renders all status variants 4`] = `
       <div
         class="om-component-ui-alert-content"
       >
-        <div
-          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
         >
           error alert
-        </div>
+        </span>
       </div>
-      <button
-        aria-label="Close alert"
-        class="om-component-ui-alert-close"
-        type="button"
-      >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="currentColor"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
-      </button>
     </div>
   </div>,
   "debug": [Function],
@@ -1450,7 +1058,7 @@ exports[`Alert renders correctly 1`] = `
         class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-top"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -1507,7 +1115,7 @@ exports[`Alert renders correctly 1`] = `
           </i>
         </span>
         <div
-          class="om-component-ui-alert-content"
+          class="om-component-ui-alert-content om-component-ui-alert-content-title-body"
         >
           <div
             class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
@@ -1520,34 +1128,6 @@ exports[`Alert renders correctly 1`] = `
             Test body text.
           </span>
         </div>
-        <button
-          aria-label="Close alert"
-          class="om-component-ui-alert-close"
-          type="button"
-        >
-          <i
-            class="om-component-ui-icons-wrapper"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          >
-            <svg
-              class="om-component-ui-icons"
-              fill="currentColor"
-              height="16"
-              preserveAspectRatio="xMidYMid meet"
-              shape-rendering="geometricPrecision"
-              stroke="none"
-              viewBox="0 0 24 24"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </i>
-        </button>
       </div>
     </div>
   </body>,
@@ -1556,7 +1136,7 @@ exports[`Alert renders correctly 1`] = `
       class="om-component-ui-alert om-component-ui-alert-info"
     >
       <span
-        class="om-component-ui-alert-icon"
+        class="om-component-ui-alert-icon om-component-ui-alert-icon-top"
       >
         <i
           class="om-component-ui-icons-wrapper"
@@ -1613,7 +1193,7 @@ exports[`Alert renders correctly 1`] = `
         </i>
       </span>
       <div
-        class="om-component-ui-alert-content"
+        class="om-component-ui-alert-content om-component-ui-alert-content-title-body"
       >
         <div
           class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
@@ -1626,34 +1206,6 @@ exports[`Alert renders correctly 1`] = `
           Test body text.
         </span>
       </div>
-      <button
-        aria-label="Close alert"
-        class="om-component-ui-alert-close"
-        type="button"
-      >
-        <i
-          class="om-component-ui-icons-wrapper"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="currentColor"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M10.5859 12L4.79308 6.20718L6.20729 4.79297L12.0001 10.5858L17.793 4.79297L19.2072 6.20718L13.4143 12L19.2073 17.793L17.7931 19.2072L12.0001 13.4142L6.20718 19.2072L4.79297 17.793L10.5859 12Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
-      </button>
     </div>
   </div>,
   "debug": [Function],
@@ -1719,7 +1271,7 @@ exports[`Alert renders without close button when closable is false 1`] = `
         class="om-component-ui-alert om-component-ui-alert-info"
       >
         <span
-          class="om-component-ui-alert-icon"
+          class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
         >
           <i
             class="om-component-ui-icons-wrapper"
@@ -1778,11 +1330,11 @@ exports[`Alert renders without close button when closable is false 1`] = `
         <div
           class="om-component-ui-alert-content"
         >
-          <div
-            class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+          <span
+            class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
           >
             No close
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -1792,7 +1344,7 @@ exports[`Alert renders without close button when closable is false 1`] = `
       class="om-component-ui-alert om-component-ui-alert-info"
     >
       <span
-        class="om-component-ui-alert-icon"
+        class="om-component-ui-alert-icon om-component-ui-alert-icon-center"
       >
         <i
           class="om-component-ui-icons-wrapper"
@@ -1851,11 +1403,11 @@ exports[`Alert renders without close button when closable is false 1`] = `
       <div
         class="om-component-ui-alert-content"
       >
-        <div
-          class="om-component-ui-typography om-component-ui-typography-title om-component-ui-typography-title-sm om-component-ui-typography-color-default om-component-ui-typography-strong"
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-md om-component-ui-typography-color-default-secondary"
         >
           No close
-        </div>
+        </span>
       </div>
     </div>
   </div>,

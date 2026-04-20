@@ -2,7 +2,7 @@
 
 $component: 'slider';
 $track-height: 8px;
-$filled-track-height: 6px;
+$filled-track-height: 8px;
 $knob-size: 12px;
 
 .#{theme.$prefix}-#{$component} {
@@ -40,7 +40,7 @@ $knob-size: 12px;
     display: flex;
     align-items: center;
     width: 100%;
-    height: $knob-size;
+    height: $track-height;
     cursor: pointer;
   }
 

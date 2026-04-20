@@ -25,7 +25,9 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
     readOnly = false,
     label,
     info,
-    errorMsg,
+    feedback,
+    feedbackIcon,
+    tip,
     required,
     allowClear = false,
     prefix,
@@ -111,7 +113,9 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
       readOnly={readOnly}
       label={label}
       info={info}
-      errorMsg={errorMsg}
+      tip={tip}
+      feedback={feedback}
+      feedbackIcon={feedbackIcon}
       required={required}
       inputId={inputId}
     >

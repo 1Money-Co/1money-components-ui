@@ -98,23 +98,14 @@
       "Bash(grep -nE 'blue-700|grey-300|grey-200|grey-100|grey-400|red-600|grey-900|grey-800|grey-700|grey-500|grey-50\\\\b|^\\\\s*$grey|^\\\\s*$blue|^\\\\s*$red' src/styles/tokens/color/_primitives.scss)",
       "Bash(grep -n \"box-sizing\" /Users/wali/1Money/1money-components-ui/src/styles/_*.scss /Users/wali/1Money/1money-components-ui/src/styles/system/*.scss)",
       "Bash(git mv:*)",
-      "Bash(xargs -I {} ls -la {})",
-      "Bash(mv currency/ACHIcon.svg system/)",
-      "Bash(mv currency/APIKeyIcon.svg system/)",
-      "Bash(mv currency/AutoConversionRulesIcon.svg system/)",
-      "Bash(mv currency/BrokenLinkIcon.svg system/)",
-      "Bash(mv currency/BusinessAccountIcon.svg system/)",
-      "Bash(mkdir -p icons/static)",
-      "Bash(mv assets:*)",
-      "Bash(mv static-icons/*.tsx icons/static/)",
-      "Bash(mv static-icons/index.ts icons/static/)",
-      "Bash(rmdir static-icons:*)",
-      "Bash(mv assets/raw source)",
-      "Bash(rmdir assets:*)",
-      "Bash(mv static/*.tsx .)",
-      "Bash(mv static/index.ts .)",
-      "Bash(rmdir static:*)",
-      "Bash(npx babel:*)"
+      "mcp__figma-remote-mcp__get_metadata",
+      "Bash(grep -B5 -A 20 \"type MiddlewareData\\\\|interface MiddlewareData\" /Users/derrick/Desktop/1money/1money-components-ui/node_modules/.pnpm/@floating-ui+core@*/node_modules/@floating-ui/core/dist/floating-ui.core.d.ts)",
+      "Bash(grep:*)",
+      "mcp__figma-dev-mode-mcp-server__get_variable_defs",
+      "Bash(gh api *)",
+      "Bash(cp /Users/wali/1Money/1money-react-ui/src/components/Loading/lottie-pure.json /Users/wali/1Money/1money-components-ui/src/components/Spinner/lottie-pure.json)",
+      "Bash(cp /Users/wali/1Money/1money-react-ui/src/components/Loading/lottie-pattern.json /Users/wali/1Money/1money-components-ui/src/components/Spinner/lottie-pattern.json)",
+      "mcp__ide__getDiagnostics"
     ]
   }
 }

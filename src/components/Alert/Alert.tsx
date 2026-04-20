@@ -6,6 +6,7 @@ import {
   NotificationInfoIcon,
   NotificationSuccessIcon,
   NotificationWarningIcon,
+  Icons
 } from '@/components/Icons';
 import { TypographyTitle, TypographyBody, TypographyLink } from '@/components/Typography';
 import type { FC, ReactElement } from 'react';
@@ -29,9 +30,10 @@ export const Alert: FC<AlertProps> = props => {
     title,
     body,
     link,
+    action,
     icon,
     showIcon = true,
-    closable = true,
+    closable = false,
     onClose,
     ref: _ref,
     ...rest
@@ -39,6 +41,10 @@ export const Alert: FC<AlertProps> = props => {
 
   const classes = classnames(prefixCls);
   const iconElement = icon ?? STATUS_ICON_MAP[status];
+  const contentSectionCount = [title, body, link].filter(value => value != null).length;
+  const useBodyTypographyForTitle = !!title && !body;
+  const hasTitleAndBody = !!title && !!body;
+  const iconAlignment = link == null && contentSectionCount === 1 && (!!title || !!body) ? 'center' : 'top';
 
   return (
     <div
@@ -50,21 +56,16 @@ export const Alert: FC<AlertProps> = props => {
       )}
     >
       {showIcon && (
-        <span className={classes('icon')}>
+        <span className={classes('icon', classes(`icon-${iconAlignment}`))}>
           {iconElement}
         </span>
       )}
-      <div className={classes('content')}>
-        {title && (
-          typeof title === 'string'
-            ? <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle>
-            : title
-        )}
-        {body && (
-          typeof body === 'string'
-            ? <TypographyBody size="md" color="default-secondary">{body}</TypographyBody>
-            : body
-        )}
+      <div className={classes('content', hasTitleAndBody ? classes('content-title-body') : undefined)}>
+        {title ? useBodyTypographyForTitle
+                ? <TypographyBody size="md" color="default-secondary">{title}</TypographyBody>
+                : <TypographyTitle size="sm" strong color="default">{title}</TypographyTitle> : null}
+        {body ? <TypographyBody size="md" color="default-secondary">{body}</TypographyBody> : null
+        }
         {link && (
           <TypographyLink
             size="md"
@@ -77,15 +78,24 @@ export const Alert: FC<AlertProps> = props => {
           </TypographyLink>
         )}
       </div>
-      {closable && (
-        <button
-          type="button"
-          className={classes('close')}
-          onClick={onClose}
-          aria-label={CLOSE_ALERT_ARIA_LABEL}
-        >
-          <CrossIcon size={16} fill />
-        </button>
+      {(action || closable) && (
+        <div className={classes('right')}>
+          {action && (
+            <div className={classes('action')}>
+              {action}
+            </div>
+          )}
+          {closable && (
+            <button
+              type="button"
+              className={classes('close', classes('close-top'))}
+              onClick={onClose}
+              aria-label={CLOSE_ALERT_ARIA_LABEL}
+            >
+              <Icons name="cross" size={16} fill/>
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

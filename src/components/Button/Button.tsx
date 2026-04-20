@@ -22,6 +22,7 @@ import {
 import type { ButtonSize, ButtonVariant } from './constants';
 import type { ButtonProps } from './interface';
 
+/** Subset of icon element props used when auto-filling defaults on adornment icons. */
 type ButtonIconElementProps = {
   color?: string;
   size?: number | `${number}`;
@@ -29,6 +30,12 @@ type ButtonIconElementProps = {
   height?: number | `${number}`;
 };
 
+/**
+ * Resolve the color/tone class name based on variant.
+ * - Contained buttons: apply the color class directly (e.g. `--primary`).
+ * - Text buttons: always apply the `--text` modifier, and append a
+ *   color-specific modifier only when the color differs from the default.
+ */
 const getToneClassName = (
   classes: ReturnType<typeof classnames>,
   variant: ButtonVariant,
@@ -44,6 +51,7 @@ const getToneClassName = (
   );
 };
 
+/** Build class names for the loading spinner, combining base + size-specific classes. */
 const getLoadingIconClassName = (
   classes: ReturnType<typeof classnames>,
   size: ButtonSize,
@@ -52,6 +60,7 @@ const getLoadingIconClassName = (
   classes(`${BUTTON_SLOT.loadingIcon}-${size}`),
 );
 
+/** Compose the full button class name from variant, color, size, and state modifiers. */
 const getButtonClassName = ({
   classes,
   variant,
@@ -82,6 +91,14 @@ const getButtonClassName = ({
   ),
 );
 
+/**
+ * Auto-fill default `color` and `size` on icon adornments (iconStart / iconEnd).
+ *
+ * - If the icon has no `color`, inherit from the button via `currentColor`.
+ * - If the icon has no explicit dimensions (`size` / `width` / `height`),
+ *   apply the size that corresponds to the current button size.
+ * - Non-element nodes (strings, numbers, null) are returned as-is.
+ */
 const normalizeAdornment = (adornment: ReactNode, size: ButtonSize) => {
   if (!isValidElement(adornment)) {
     return adornment;
@@ -107,6 +124,15 @@ const normalizeAdornment = (adornment: ReactNode, size: ButtonSize) => {
     : adornment;
 };
 
+/**
+ * Core button component.
+ *
+ * Supports two variants (`contained` | `text`), seven color tones, three sizes,
+ * optional start/end icon adornments, a loading state (replaces start icon with
+ * a spinner), and rounded mode.
+ *
+ * Typography is automatically selected per variant + size via `BUTTON_TYPOGRAPHY_MAP`.
+ */
 const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const {
     children,
@@ -124,9 +150,15 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     ...rest
   } = props;
   const classes = classnames(prefixCls);
+
+  // Loading implicitly disables the button to prevent duplicate submissions
   const isDisabled = disabled || loading;
+
+  // Auto-fill color & size on icon adornments so consumers don't have to
   const normalizedIconStart = normalizeAdornment(iconStart, size);
   const normalizedIconEnd = normalizeAdornment(iconEnd, size);
+
+  // When loading, replace the start icon with a spinner
   const startAdornment = loading ? (
     <Spinner
       className={getLoadingIconClassName(classes, size)}
@@ -152,6 +184,8 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
       })}
     >
       {startAdornment && <span className={classes(BUTTON_SLOT.iconStart)}>{startAdornment}</span>}
+
+      {/* Render children with the Typography component mapped to variant + size */}
       {children != null && (() => {
         const typo = BUTTON_TYPOGRAPHY_MAP[variant][size];
         if (typo.variant === 'headline') {
