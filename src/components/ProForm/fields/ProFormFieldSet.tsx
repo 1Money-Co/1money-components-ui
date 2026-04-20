@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import type { FC } from 'react';
-import { FormItem } from '../core';
+import { ProFormItem } from '../ProFormItem';
 import { useProFormContext } from '../context';
 import { default as classnames } from '@/utils/classnames';
 import { CSS_PREFIX } from '../constants';
@@ -51,9 +51,9 @@ const ProFormFieldSetBase: FC<ProFormFieldSetProps> = (props) => {
 
   if (name) {
     return (
-      <FormItem label={label} name={name} rules={rules} required={required} help={help}>
+      <ProFormItem label={label} name={name} rules={rules} required={required} help={help}>
         {content}
-      </FormItem>
+      </ProFormItem>
     );
   }
 

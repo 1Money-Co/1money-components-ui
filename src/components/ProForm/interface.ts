@@ -1,7 +1,6 @@
 import type { ReactNode, FC, ReactElement, MutableRefObject, CSSProperties, FormHTMLAttributes } from 'react';
 import type {
   FormCoreInstance,
-  FormItemProps,
   FormSize,
   LabelAlign,
   ValidateStatus,
@@ -144,8 +143,19 @@ export type ProFormValueType =
   | 'switch'
   | 'tag';
 
-export interface ProFormItemProps extends Omit<FormItemProps, 'validateStatus'> {
+export interface ProFormItemProps {
+  children?: ReactNode;
+  className?: string;
+  prefixCls?: string;
+  label?: ReactNode;
+  name?: string;
+  rules?: Rule[];
+  required?: boolean;
+  help?: ReactNode;
   validateStatus?: ValidateStatus;
+  hasFeedback?: boolean;
+  colon?: boolean;
+  hidden?: boolean;
   /** Transform before submit, registered into ProForm pipeline */
   transform?: ProFormFieldTransformFn;
   /** Convert the displayed value before rendering into children */

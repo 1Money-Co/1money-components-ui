@@ -1,7 +1,17 @@
 import React, { memo, useEffect } from 'react';
 import type { FC, ReactNode } from 'react';
 import { Col } from '@/components/Grid';
-import { FormItem } from './core';
+import { TypographyBody, TypographyLabel } from '@/components/Typography';
+import { default as classnames, joinCls } from '@/utils/classnames';
+import { useFormItem } from './core/useFormItem';
+import {
+  FORM_ERROR_COLOR,
+  FORM_ERROR_SIZE,
+  FORM_HELP_COLOR,
+  FORM_HELP_SIZE,
+  FORM_LABEL_COLOR,
+  FORM_LABEL_SIZE,
+} from './core/constants';
 import { useProFormContext } from './context';
 import { DEFAULT_COL_SPAN } from './constants';
 import { valueEnumToOptions } from './utils';
@@ -46,7 +56,7 @@ function renderByValueType(
 }
 
 // ---------------------------------------------------------------------------
-// ReadonlyChild — rendered inside FormItem when mode === 'read'
+// ReadonlyChild — rendered in the control area when mode === 'read'
 // ---------------------------------------------------------------------------
 interface ReadonlyChildProps {
   name?: string;
@@ -86,7 +96,8 @@ ReadonlyChildBase.displayName = 'ProFormItemReadonly';
 const ReadonlyChild = memo(ReadonlyChildBase);
 
 // ---------------------------------------------------------------------------
-// ConvertValueChild — applies convertValue to the displayed value in edit mode
+// ConvertValueChild — overrides the `value` prop with convertValue(raw) while
+// leaving onChange/onBlur from the outer injection intact.
 // ---------------------------------------------------------------------------
 interface ConvertValueChildProps {
   name: string;
@@ -116,10 +127,9 @@ const ProFormItemBase: FC<ProFormItemProps> = (props) => {
     required,
     help,
     validateStatus,
-    colon,
+    className = '',
+    prefixCls = 'form-item',
     hidden,
-    className,
-    prefixCls,
     transform,
     convertValue,
     valueType,
@@ -134,6 +144,15 @@ const ProFormItemBase: FC<ProFormItemProps> = (props) => {
   const mergedMode = modeProp ?? ctx.mode;
   const isReadonly = mergedMode === 'read';
 
+  const {
+    fieldError,
+    isRequired,
+    size,
+    labelAlign,
+    requiredMark,
+    injectField,
+  } = useFormItem({ name, rules, required, validateStatus });
+
   // Register / unregister transform
   useEffect(() => {
     if (!name || !transform) return;
@@ -145,67 +164,101 @@ const ProFormItemBase: FC<ProFormItemProps> = (props) => {
 
   if (hidden) return null;
 
-  let content: ReactNode;
-
+  let controlChild: ReactNode;
   if (isReadonly) {
-    content = (
-      <FormItem
-        label={label}
+    controlChild = (
+      <ReadonlyChild
         name={name}
-        rules={rules}
-        required={required}
-        help={help}
-        validateStatus={validateStatus}
-        colon={colon}
-        className={className}
-        prefixCls={prefixCls}
-      >
-        <ReadonlyChild
-          name={name}
-          valueType={valueType}
-          valueEnum={valueEnum}
-          convertValue={convertValue}
-          readonlyRender={readonlyRender}
-          emptyText={emptyText}
-        />
-      </FormItem>
+        valueType={valueType}
+        valueEnum={valueEnum}
+        convertValue={convertValue}
+        readonlyRender={readonlyRender}
+        emptyText={emptyText}
+      />
     );
   } else {
-    let childElement: ReactNode = children;
-
-    if (convertValue && name && React.isValidElement(children)) {
-      childElement = (
+    // Inject first so the real field receives value/onChange/onBlur,
+    // then optionally wrap in ConvertValueChild to override the displayed value.
+    const injected = injectField(children);
+    if (convertValue && name && React.isValidElement(injected)) {
+      controlChild = (
         <ConvertValueChild name={name} convertValue={convertValue}>
-          {children as React.ReactElement}
+          {injected as React.ReactElement}
         </ConvertValueChild>
       );
+    } else {
+      controlChild = injected;
     }
-
-    content = (
-      <FormItem
-        label={label}
-        name={name}
-        rules={rules}
-        required={required}
-        help={help}
-        validateStatus={validateStatus}
-        colon={colon}
-        className={className}
-        prefixCls={prefixCls}
-      >
-        {childElement}
-      </FormItem>
-    );
   }
 
-  // Wrap in Col if grid mode is active
+  const classes = classnames(prefixCls);
+
+  const shell = (
+    <div
+      className={classes(
+        undefined,
+        joinCls(size === 'small' && classes('small'), className),
+      )}
+    >
+      {label && (
+        <div
+          className={classes(
+            'label-wrapper',
+            joinCls(
+              classes('label-wrapper-vertical'),
+              labelAlign && classes(`label-wrapper-${labelAlign}`),
+            ),
+          )}
+        >
+          <TypographyLabel
+            as="label"
+            size={FORM_LABEL_SIZE}
+            color={FORM_LABEL_COLOR}
+            className={classes(
+              'label',
+              joinCls(isRequired && requiredMark && classes('label-required')),
+            )}
+          >
+            {label}
+          </TypographyLabel>
+        </div>
+      )}
+
+      <div className={classes('control')}>
+        {controlChild}
+
+        {fieldError && (
+          <TypographyBody
+            as="div"
+            className={classes('error')}
+            size={FORM_ERROR_SIZE}
+            color={FORM_ERROR_COLOR}
+          >
+            {fieldError}
+          </TypographyBody>
+        )}
+
+        {!fieldError && help && (
+          <TypographyBody
+            as="div"
+            className={classes('help')}
+            size={FORM_HELP_SIZE}
+            color={FORM_HELP_COLOR}
+          >
+            {help}
+          </TypographyBody>
+        )}
+      </div>
+    </div>
+  );
+
   if (ctx.grid) {
     const merged = { ...ctx.colProps, ...colProps };
     const { span = DEFAULT_COL_SPAN, sm, md, lg } = merged;
-    return <Col span={span} sm={sm} md={md} lg={lg}>{content}</Col>;
+    return <Col span={span} sm={sm} md={md} lg={lg}>{shell}</Col>;
   }
 
-  return <>{content}</>;
+  return shell;
 };
 
 ProFormItemBase.displayName = 'ProFormItem';

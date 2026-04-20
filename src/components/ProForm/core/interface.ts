@@ -30,21 +30,6 @@ export interface Rule {
   ) => boolean | string | Promise<boolean | string>;
 }
 
-export interface FormItemProps {
-  children?: ReactNode;
-  className?: string;
-  prefixCls?: string;
-  label?: ReactNode;
-  name?: string;
-  rules?: Rule[];
-  required?: boolean;
-  help?: ReactNode;
-  validateStatus?: ValidateStatus;
-  hasFeedback?: boolean;
-  colon?: boolean;
-  hidden?: boolean;
-}
-
 export interface FieldProps {
   name: string;
   value: unknown;
