@@ -89,11 +89,15 @@
       "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
       "examples": [
         {
-          "hash": "30abf912d77f66252047ce0893f2a4f5fa3b159721dfe16d50a2647830d21432",
+          "hash": "fe70357422313c2126f48b89c098c85159c4543c5ef3739330d48f86d8d0a509",
           "source": "canonical"
         },
         {
-          "hash": "eab86171096fa30a5b194ff050489ba0a25826b1f988f0252a189152e933fa4a",
+          "hash": "2a00b4740e301b8a7ac79f978053cc5d0d9e28704a3496719ce12b34448697d2",
+          "source": "readme"
+        },
+        {
+          "hash": "acd535782a8b3c08a8b1bb58612e250607a8c0fae373a31b2d8e0fc704d4721e",
           "source": "readme"
         }
       ]
@@ -117,7 +121,7 @@
       "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
       "examples": [
         {
-          "hash": "30abf912d77f66252047ce0893f2a4f5fa3b159721dfe16d50a2647830d21432",
+          "hash": "fe70357422313c2126f48b89c098c85159c4543c5ef3739330d48f86d8d0a509",
           "source": "canonical"
         }
       ]
@@ -141,7 +145,7 @@
       "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
       "examples": [
         {
-          "hash": "30abf912d77f66252047ce0893f2a4f5fa3b159721dfe16d50a2647830d21432",
+          "hash": "fe70357422313c2126f48b89c098c85159c4543c5ef3739330d48f86d8d0a509",
           "source": "canonical"
         }
       ]
@@ -258,31 +262,35 @@
       "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
       "examples": [
         {
-          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "hash": "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95",
           "source": "canonical"
         },
         {
-          "hash": "752ec16a93165b92775e76c222419854b2c02f0b2d2b4f18480c747a7292afd5",
+          "hash": "8ffb7323c737a0cc1f4c296336b8763bf0acdafb29eb029b4046496aaa1b4d27",
           "source": "readme"
         },
         {
-          "hash": "253e62f3b412854d1f4b7a06665b46def10b7f20d98d2e521f952cc899c3e542",
+          "hash": "05717fb84522993ea86a1295a654c812fe4de71b24eacb8657ec875518efde6a",
+          "source": "readme"
+        },
+        {
+          "hash": "dc01398c0ec62b3b260632c8c528234ca38fcf7b153be444936a2dd5cf7ffcc0",
           "source": "stories"
         },
         {
-          "hash": "f984ff30d979ef179c5bc94db6e9038e1bef53cd0fc53bb48f4d982a0e53487d",
+          "hash": "ede4a5629c02420f621373a9169c9671b906cc09439931df34b222da85911147",
           "source": "stories"
         },
         {
-          "hash": "7c74bbe3e3fc0fbe66c261ca05107645f5c95e75b66b3279b92260ceea793eab",
+          "hash": "605adda93170929ef763469422e3708f248624774e5274b6053c7aa0c53b9680",
           "source": "stories"
         },
         {
-          "hash": "ebee40740b2cf87f66a4a90ab6461ba7191fdc8627f059887e65854db7163ae2",
+          "hash": "0716e5e5fffc542e7b028181c93a5655fb3738281657fc43abb5eb99a95b3e8b",
           "source": "stories"
         },
         {
-          "hash": "775f727b8a4d9c05f8a6cbd0eeb6051bae8acd8096b50e551e7890457f0cf083",
+          "hash": "957f519084a4f84fd6a79517a4f2c6a85245176f268b9c5f6e090ee983e82fa8",
           "source": "stories"
         }
       ]
@@ -307,7 +315,7 @@
       "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
       "examples": [
         {
-          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "hash": "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95",
           "source": "canonical"
         }
       ]
@@ -332,7 +340,7 @@
       "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
       "examples": [
         {
-          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "hash": "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95",
           "source": "canonical"
         }
       ]
@@ -357,7 +365,7 @@
       "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
       "examples": [
         {
-          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "hash": "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95",
           "source": "canonical"
         }
       ]
@@ -456,43 +464,47 @@
       "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';",
       "examples": [
         {
-          "hash": "942458eba5764a5341345ba115c2f10d4252076b7a598340038f7cd09f3cd00c",
+          "hash": "d8541ce54f9d19430978dbd976d464fbc05c5ff5c9d4b33b03a2e25d6b11992c",
           "source": "canonical"
         },
         {
-          "hash": "619ed11a02f63883a4d478eddc0bf21faff75bd57489d884aa87588dec19b121",
+          "hash": "fdf213199dc6788118e3f64a9156e33557e5611b1ca721d8b7c388245959d211",
           "source": "readme"
         },
         {
-          "hash": "98b808cc16ccf95afedb8e9c6273ecee225b0fb9d79eea89b005cf9101b2e129",
+          "hash": "23bda2a849d16045cdaa73e374c204db1099cbca913ff14a7ef5f02f346f50b6",
+          "source": "readme"
+        },
+        {
+          "hash": "dbdf57d8d45ba16d7872023c8baa1986123e9011100cd6332a0023a7d8d2a832",
           "source": "stories"
         },
         {
-          "hash": "891d749f539e373f93d1737e5762adc6958dae7521e56b058cda5cde12bb4196",
+          "hash": "cf7c4b8794bcd349562a79995712162df90283bb284d622f89e02d30e115598d",
           "source": "stories"
         },
         {
-          "hash": "09ceb29bb7ab54aa6897cdc68c12d16f06c63e89556323e91938549528df748f",
+          "hash": "01a336a327f3b1450173b3c03356bd341f077f546ef4a84c6861881c6f62d89e",
           "source": "stories"
         },
         {
-          "hash": "f94e632dc4df873d1e17cf9cc2eb6c2fbcdac7428a67fe75b5a17102ee5d55d5",
+          "hash": "71f7aeb8fd7bb546bc7d562a717683681d8eccf7f2beeee86e3196121d6656f1",
           "source": "stories"
         },
         {
-          "hash": "73011583b06f650b235fb071ba118e455470eb1d514199b7055db06954e32d84",
+          "hash": "6a4d77a29ff76bfcd465b53ac79952fae765bb337ef3ca2affc7781ce487a74f",
           "source": "stories"
         },
         {
-          "hash": "f6ab8a83a6c717b238c049f1b36350daff4abef18550edfb17095082c3cfbc6c",
+          "hash": "b01e2ee6d41091e4a6c12c9a96eb56c7c35c717754ac47bc643756c276654869",
           "source": "stories"
         },
         {
-          "hash": "257365d8c2edf1f7bf7c67368bd0a7787f3147660cfdde6b89a95d7d12fae7d4",
+          "hash": "1e2ce5743dcd5a069489baf67169280a5ebfc7ed959fc8cb1f7f52f846c1b544",
           "source": "stories"
         },
         {
-          "hash": "265bf5e62161fdc48461dc8aeb42726825fed603b83deeaca777067ec369dbcb",
+          "hash": "8d9b4b816f395924fb061a9384e54b2fc8e97a3bfd441367d6c70ff5397f23ec",
           "source": "stories"
         }
       ]
@@ -515,7 +527,7 @@
       "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';",
       "examples": [
         {
-          "hash": "942458eba5764a5341345ba115c2f10d4252076b7a598340038f7cd09f3cd00c",
+          "hash": "d8541ce54f9d19430978dbd976d464fbc05c5ff5c9d4b33b03a2e25d6b11992c",
           "source": "canonical"
         }
       ]
@@ -639,19 +651,23 @@
       "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';",
       "examples": [
         {
-          "hash": "3bb3d4871cc9a145878be35b79081b28979e073c11201f7bfd8ed01939b617f0",
+          "hash": "fe9b007dfbadb99c5e9b23715cac072ae441727d20418766456554881470ea68",
           "source": "canonical"
         },
         {
-          "hash": "3153e51da02f194b4678caa10c7ded050ad1ebc46ae458246aa82d8c4ae60393",
+          "hash": "ce3412158804bef977933a6f68163249822402fcf44facae20470ccfd61de718",
           "source": "readme"
         },
         {
-          "hash": "965e12a8861c34f8ab7a7ad70d06003708b7e06a7889a277b3e408ab26fb7ea6",
+          "hash": "36f868d28259a7ebb3c6decbe9768b0ac838fd1617e57e32bace1c0dde27546d",
           "source": "readme"
         },
         {
-          "hash": "31d55906d24751287c20ba5e6651e071eedd54b77fb56e0620d3442787d493be",
+          "hash": "1d0cc410e4f667fa13d9ad249ca801acda6fd51fc78c87c3b00209163c48df6b",
+          "source": "readme"
+        },
+        {
+          "hash": "7b2c94c513acf5b275219e155daac0f581e31ca51335008c34cfe3aac8e86beb",
           "source": "stories"
         }
       ]
@@ -674,7 +690,7 @@
       "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';",
       "examples": [
         {
-          "hash": "3bb3d4871cc9a145878be35b79081b28979e073c11201f7bfd8ed01939b617f0",
+          "hash": "fe9b007dfbadb99c5e9b23715cac072ae441727d20418766456554881470ea68",
           "source": "canonical"
         }
       ]
@@ -753,11 +769,15 @@
       "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';",
       "examples": [
         {
-          "hash": "719bd32da19525774016bad7af22e81dd9bdbb52605bfd57c84c3013ee0dd51c",
+          "hash": "7e423f9896eb2bcccdb051f9cae6f76f83c431686da59f2d1c5a3d6a8ce51474",
           "source": "canonical"
         },
         {
-          "hash": "f5f428092cb93efc2276016ee770491c6040740c284bdda170b73b0829e26009",
+          "hash": "8a3e06c994d49e66e84658c981c59eb96d6e7a88fc16dbc6a2abf4d76493b94f",
+          "source": "readme"
+        },
+        {
+          "hash": "63dbd5aa5b4f9b648a7f6152b99058966f4b36ade7cece4b750f71e4389a4dea",
           "source": "readme"
         }
       ]
@@ -780,7 +800,7 @@
       "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';",
       "examples": [
         {
-          "hash": "719bd32da19525774016bad7af22e81dd9bdbb52605bfd57c84c3013ee0dd51c",
+          "hash": "7e423f9896eb2bcccdb051f9cae6f76f83c431686da59f2d1c5a3d6a8ce51474",
           "source": "canonical"
         }
       ]
@@ -871,23 +891,27 @@
       "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
       "examples": [
         {
-          "hash": "50a7ec138658e28948fa82413b337f18a6ff9468057e6158739052884ab0fcb0",
+          "hash": "a5ae14150d1724de4984c10921713734e86d15771efe397f3015a01c77d13676",
           "source": "canonical"
         },
         {
-          "hash": "682eb44ed23ec0b9af18b3152ce3b3397c8072e226cf10d5b4378f72c690bd9d",
+          "hash": "2cca976a647db275dfb45ce8bb53bc85d304e49c3d91f76e5987d11e95b604c1",
           "source": "readme"
         },
         {
-          "hash": "045752b4fe0982fb62b587d7da3dc1e261892326efcf76923db7cfe880e3b6c1",
+          "hash": "d9aa8ed0c57561146c619eba9bd5fa468ec9bac579c2ba44822fc35b3c17dcc7",
           "source": "readme"
         },
         {
-          "hash": "ccbd29c2e855c29dd293f326fa459920b044fbc80b8d640329aa9bf1e03d0667",
+          "hash": "df516870a4f3b627969e2e1b0c6fc40fccc4ccb0fb7c04a34e5e169a928de479",
           "source": "readme"
         },
         {
-          "hash": "182aa626d5de129dd383f9d764e2205eb4217a1901de5361dc702264ce8e58c9",
+          "hash": "21eb2cf21cf8e39cfc4a35ce8e3d25f28e8ecc6de0c0dec1707f725f281dc4fa",
+          "source": "readme"
+        },
+        {
+          "hash": "829d1add076b11f67d3d30e761c7861b952e35bb1ae8a1c71c99a97bbf5318a9",
           "source": "stories"
         }
       ]
@@ -910,7 +934,7 @@
       "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
       "examples": [
         {
-          "hash": "50a7ec138658e28948fa82413b337f18a6ff9468057e6158739052884ab0fcb0",
+          "hash": "a5ae14150d1724de4984c10921713734e86d15771efe397f3015a01c77d13676",
           "source": "canonical"
         }
       ]
@@ -1094,19 +1118,23 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         },
         {
-          "hash": "a4ba5052842b21b8c76785891a705b4e1a0c2e8d7dba99add35e44e1a8ed2902",
+          "hash": "e2d97535c3a577c0c337fa59b2a6832e6337e4a07486d72339fb65ecb4899382",
           "source": "readme"
         },
         {
-          "hash": "a871596470254f2d10979720924e06ec2058541e26076f43c8fcfc1cedd0bede",
+          "hash": "838291178b40cf32c5a10bdfadfad93e6a54827006c573ba8a145db2e9bf5697",
           "source": "readme"
         },
         {
-          "hash": "530fbc1a1de23a9601879cc9f338d66077018d257c8af5dd22f25da0809bac85",
+          "hash": "52fff43bfcb2391a44e980e0fff53642d0b10d4dcc439c76c5d150e7209d9cad",
+          "source": "readme"
+        },
+        {
+          "hash": "58bad3562da4a5152857d932ada3b06876ddf701e0bc5b396abc799cfee00ff8",
           "source": "stories"
         }
       ]
@@ -1134,7 +1162,7 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         }
       ]
@@ -1276,7 +1304,7 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         }
       ]
@@ -1304,7 +1332,7 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         }
       ]
@@ -1332,7 +1360,7 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         }
       ]
@@ -1360,7 +1388,7 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         }
       ]
@@ -1388,7 +1416,7 @@
       "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
       "examples": [
         {
-          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "hash": "02eb41ce0715973b9fe2fb88cf59851f0fa8962318df7f86a9405a50cfe907b2",
           "source": "canonical"
         }
       ]
@@ -1521,15 +1549,19 @@
       "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
       "examples": [
         {
-          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "hash": "433e2ddc78741578443b854668e9b0bc02f7196c44580c8b913bf9d7d68c08ae",
           "source": "canonical"
         },
         {
-          "hash": "b14b13b014718a3bcc4360fb50eff7daa19eb2f049f5788a43b3a0bcc5e3b501",
+          "hash": "72e53f1f60724efcfebfca8207585573799139c8895777a6a6d283673008ba74",
           "source": "readme"
         },
         {
-          "hash": "f8b34da19883ff182bcdd68e9979a47bcb02a2d6d4789eefadfa966b93458433",
+          "hash": "bea3fd79a9ce5be5ed4038daa57612f962de2b1b334870a215966790b6a5c1f5",
+          "source": "readme"
+        },
+        {
+          "hash": "e64bbef33f26f6cb756b2904ed6134a86633064c76641e65a06e65ed9fafa302",
           "source": "stories"
         }
       ]
@@ -1555,7 +1587,7 @@
       "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
       "examples": [
         {
-          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "hash": "433e2ddc78741578443b854668e9b0bc02f7196c44580c8b913bf9d7d68c08ae",
           "source": "canonical"
         }
       ]
@@ -1581,7 +1613,7 @@
       "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
       "examples": [
         {
-          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "hash": "433e2ddc78741578443b854668e9b0bc02f7196c44580c8b913bf9d7d68c08ae",
           "source": "canonical"
         }
       ]
@@ -1607,7 +1639,7 @@
       "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
       "examples": [
         {
-          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "hash": "433e2ddc78741578443b854668e9b0bc02f7196c44580c8b913bf9d7d68c08ae",
           "source": "canonical"
         }
       ]
@@ -1633,7 +1665,7 @@
       "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
       "examples": [
         {
-          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "hash": "433e2ddc78741578443b854668e9b0bc02f7196c44580c8b913bf9d7d68c08ae",
           "source": "canonical"
         }
       ]
@@ -1658,7 +1690,7 @@
       "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
       "examples": [
         {
-          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "hash": "88c9a5db9af74e9bf306d1fde453862a643a76dc012d945baefc628eb65abacc",
           "source": "canonical"
         }
       ]
@@ -1753,15 +1785,19 @@
       "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';",
       "examples": [
         {
-          "hash": "0f6be3e65d1d61bbf9610c811d33340236891709b55cc17f39316293fb6ac02b",
+          "hash": "95dc922235c54890ef40e287095692b232702132d592073e3c6b66efd6929f50",
           "source": "canonical"
         },
         {
-          "hash": "127592e8635f4579bed16c1b362b0ab63361a2d8463809f8cd46b3e6ae076843",
+          "hash": "b91a32c9ec2ecd84c681d080f87903691347b1bed2ec950e4e4d52c3df72ebd3",
           "source": "readme"
         },
         {
-          "hash": "d52ad016f235f7f27e7bf83cd82ebd671b21613fbea9374023c25977e9784080",
+          "hash": "b040eead4ef6d0382049572436b1eb5a21c9357a41e519f5204a58fc04e0c1ab",
+          "source": "readme"
+        },
+        {
+          "hash": "144e248f0e0e1f5a681bdd8625add8d71643d3cca3f40bd840d914b057970d9a",
           "source": "stories"
         }
       ]
@@ -1784,7 +1820,7 @@
       "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';",
       "examples": [
         {
-          "hash": "0f6be3e65d1d61bbf9610c811d33340236891709b55cc17f39316293fb6ac02b",
+          "hash": "95dc922235c54890ef40e287095692b232702132d592073e3c6b66efd6929f50",
           "source": "canonical"
         }
       ]
@@ -1856,7 +1892,7 @@
       "canonicalUsage": "import type { CreateProFormFieldConfig } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "5cf521a9acc593841866c16b60a287076098e8381f5a6fa0ac89b2f74f8f15fb",
+          "hash": "a95b0ad034e07b035fd0d4b861b4bb29fe68e7e04c8f0d3541178f4e15b7b0d1",
           "source": "canonical"
         }
       ]
@@ -2110,11 +2146,11 @@
       "canonicalUsage": "<Dialog />",
       "examples": [
         {
-          "hash": "09cd4b9c9d7731a5594c5a7f0ae0a2b70922d7e90b578e33b12b439926977bd3",
+          "hash": "4389223d4dd418331dd628d1bb657512018df7b6124067044b1b577c26853c32",
           "source": "canonical"
         },
         {
-          "hash": "54c726882a82e99de780f9ae13353792f5433ea684bedeacdcb096a74b775f86",
+          "hash": "deac1f8bf34d4c1fa4d9d7bcf9bb8f258a87481df55c9c7d02d45ec6766aef71",
           "source": "stories"
         }
       ]
@@ -2139,7 +2175,7 @@
       "canonicalUsage": "import type { DialogFooterRender } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "f636853da9e8e73f2a3f9da039f84791236f9f95cbbdecba65825536bac29b4f",
+          "hash": "ca3b9b0ee348c09e621b11cf2534f5d42546ed5004f5f00f042b20c9ca6a7548",
           "source": "canonical"
         }
       ]
@@ -2285,7 +2321,7 @@
       "canonicalUsage": "<DialogForm />",
       "examples": [
         {
-          "hash": "21b781266f0edc019e2e4c6e8da4d3d9677765f536f0794a6dd25d773b750a4d",
+          "hash": "5a95c3048a0d4147931cea1f357e39f808578b8e0f072baa127124f6004cef1d",
           "source": "canonical"
         }
       ]
@@ -2357,7 +2393,7 @@
       "canonicalUsage": "import type { DialogFormProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a00b6368694692f3ad61ccd02046d04c81568ac047a2f6256251fe2467b8d117",
+          "hash": "03d4e0cef5922bd9d1c1934b5b1c8af440c30f7e1ae1f7f31d755dd518639b6c",
           "source": "canonical"
         }
       ]
@@ -2382,7 +2418,7 @@
       "canonicalUsage": "import type { DialogProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a4cc0a85821084244adda8df86c69ce9a83c09f6333befb2ba955dfe42d39659",
+          "hash": "d07754a416050437d6b99b5541fa4eb847f75facc92eb9f9427194d138408140",
           "source": "canonical"
         }
       ]
@@ -2407,7 +2443,7 @@
       "canonicalUsage": "import type { DialogSize } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "3bec85aad2b2b2ca779ea9fa9a8136cd46de9ad70ed4ae2ced81c0123cc9e5de",
+          "hash": "3fed6ca7982c867ccd1b2b58023950f8365462d92b44c75722551d4d3127c8bb",
           "source": "canonical"
         }
       ]
@@ -2490,54 +2526,58 @@
       "searchTags": [
         "divider"
       ],
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "canonicalUsage": "<p>Above</p>\n<Divider />\n<p>Below</p>",
       "examples": [
         {
-          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "hash": "b1c6f9400c9b8e40e5ce950447b02ac670b68a1e55242b16a8dc86249f792a7f",
           "source": "canonical"
         },
         {
-          "hash": "11f746d996243f14d1b62b6a0d5aa59fc1020e23273e256f4ec0481d2ce97c88",
+          "hash": "f5d6b11a550669747fb5a248be92fdbc1d02dc42ab2c8700fe44d9e09c3989ae",
           "source": "readme"
         },
         {
-          "hash": "b07c25a0adf922600c585b8338913d512a41c0b1c9f74bfe1966a08f7b79de58",
+          "hash": "c6c6006c18fc013fe133931a21d10e19d9263c424b639dbe5b1038884729bb32",
           "source": "readme"
         },
         {
-          "hash": "01f2ec5bfc5df0ab048466e581008497394274efefa2748c41c077f4ce0d67a5",
+          "hash": "018f2394328d31f76d39fcd543c941becb287828707ce2f98959543360d2a209",
           "source": "readme"
         },
         {
-          "hash": "afcafc9cac1b9eba2cea19136c7aae5a7e2b6e51a6988d200169d13f1dc92484",
+          "hash": "8f2d97b44cca3977d39ba134e5981f875d9e8cf9cff20b301aed559b8870665b",
           "source": "readme"
         },
         {
-          "hash": "d227c54df504a3d9eb79b36fb608cd5d8111a80ccf0baa7a56cd4891000f3d68",
+          "hash": "49ad060bce26c0a2bb20e2d9487869063f8aa30ca5cff68d8bbb108fbeef29a1",
+          "source": "readme"
+        },
+        {
+          "hash": "c4dc11bc9b4b9698e931dc881cc580895c8626b71430d09eec8f7054d49c46f0",
           "source": "stories"
         },
         {
-          "hash": "8a1456a1850cd713d2b865aff7e29facb6a0fdb079c75d5d3c43fc605a28e63f",
+          "hash": "fca476fdc8a8454562178330e2ef42b7cb756bb782574109179b48b0b5f2dfcb",
           "source": "stories"
         },
         {
-          "hash": "243ce692b0fe5babcf7fc5b9175c7d21fbc9897c06eaa6510af2c50dbde3e940",
+          "hash": "43cb69594b17d8f71ddb9912efb8eea26ee52cf45990ef9f7a2212c0694b0811",
           "source": "stories"
         },
         {
-          "hash": "d69206b2b43d10d9ef3ce614c78676bf20ccbacdaa3e2bbc784a5a4b3ebb1d5e",
+          "hash": "22edc8d5014aba685af83f60b94c089e387cc95677d233691190f5e2d031e262",
           "source": "stories"
         },
         {
-          "hash": "990be4b82efa1e2924db501b9977f49c07284e171248ad486de6ab3c18aeec57",
+          "hash": "9f45424f9178a891c69cb91fbb3cdf939868a5fd8c6570516eff0fb74a449cc9",
           "source": "stories"
         },
         {
-          "hash": "55425fb73a2baa8759afc579289c84a980c8485171a5fcfbb6359df29c5c1c9d",
+          "hash": "390cabc2f23e7ce30b17814c2a5b8202b8da33904affa60c9bcf5e26fadd9d2f",
           "source": "stories"
         },
         {
-          "hash": "89528f9d3264485a6740e6504bbab24c3d8b6aa4cf25a5f0b8328599b8fb8087",
+          "hash": "61f7894b78494c7b8069bd9cba419dea3dc5215d42e3f43c87b4951f285b8421",
           "source": "stories"
         }
       ]
@@ -2560,10 +2600,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIVIDER_ORIENTATIONS)[number]",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "canonicalUsage": "<p>Above</p>\n<Divider />\n<p>Below</p>",
       "examples": [
         {
-          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "hash": "b1c6f9400c9b8e40e5ce950447b02ac670b68a1e55242b16a8dc86249f792a7f",
           "source": "canonical"
         }
       ]
@@ -2586,10 +2626,10 @@
       ],
       "searchTags": [],
       "typeText": "interface DividerProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "canonicalUsage": "<p>Above</p>\n<Divider />\n<p>Below</p>",
       "examples": [
         {
-          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "hash": "b1c6f9400c9b8e40e5ce950447b02ac670b68a1e55242b16a8dc86249f792a7f",
           "source": "canonical"
         }
       ]
@@ -2612,10 +2652,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIVIDER_TYPES)[number]",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "canonicalUsage": "<p>Above</p>\n<Divider />\n<p>Below</p>",
       "examples": [
         {
-          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "hash": "b1c6f9400c9b8e40e5ce950447b02ac670b68a1e55242b16a8dc86249f792a7f",
           "source": "canonical"
         }
       ]
@@ -2638,10 +2678,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIVIDER_VARIANTS)[number]",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "canonicalUsage": "<p>Above</p>\n<Divider />\n<p>Below</p>",
       "examples": [
         {
-          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "hash": "b1c6f9400c9b8e40e5ce950447b02ac670b68a1e55242b16a8dc86249f792a7f",
           "source": "canonical"
         }
       ]
@@ -2830,15 +2870,15 @@
       "canonicalUsage": "<Drawer />",
       "examples": [
         {
-          "hash": "229d1a8633f807e996fc7becad59998c81ac20a9fa96299240cc82a3de2ba38e",
+          "hash": "0eccd89d4848e5f239f204a25e0a5afbc08ea70a21eb5403bc608a3da6da85ad",
           "source": "canonical"
         },
         {
-          "hash": "b8f46adff0347582af7bd4f632c11fc1983faac65e91f6b2bf5c827777479d57",
+          "hash": "7fcff23beb3f8649dd3c8e6b827035a4838bd0ceb71aec2a6debfbd16fc7d1f8",
           "source": "stories"
         },
         {
-          "hash": "2d147c37b74dd18fc7bf83277fbebc0491a2e34d14354f3e0c4e2c78c19be975",
+          "hash": "d9882ee38a2bc32f9e2590509a569226bc8b174cfe3c16f5a1bdfbbc7662bf62",
           "source": "stories"
         }
       ]
@@ -2992,7 +3032,7 @@
       "canonicalUsage": "<DrawerForm />",
       "examples": [
         {
-          "hash": "16c870440f83430d06aa78aa61d2bd6aae1048d69212aef1d6fdf4e96aef9f2b",
+          "hash": "9a5aa0a4875e686c1a64a1085ed22b25ebf5849ebf8bf0cd0fb6376c887729ab",
           "source": "canonical"
         }
       ]
@@ -3064,7 +3104,7 @@
       "canonicalUsage": "import type { DrawerFormProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "2204554ab8bca54def2b33269aafdcbf2f44ff67cec3b11f08b16db0f97e5e5d",
+          "hash": "87dd752d00210f310d98413fe703cdc2d1dd610bd62efc974185675ea4f82d78",
           "source": "canonical"
         }
       ]
@@ -3088,7 +3128,7 @@
       "canonicalUsage": "import type { DrawerPlacement } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "3be091a6e70e3cd8ec454cc2e75fe9f7411c1c961da765050c61cb6a10178112",
+          "hash": "77b3bac4d9e36462c300020fa400a7cfe5bc7aa77bd896162f48c5d77a0ada23",
           "source": "canonical"
         }
       ]
@@ -3112,7 +3152,7 @@
       "canonicalUsage": "import type { DrawerProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "31a84e22a5da198582fb98a8b4f8315fc260a1cb8b30f655b82c6226e37026a9",
+          "hash": "87df6d0f746b9be426eb490a25c877d56ac0252bcbdc0d69fa90260397387d4c",
           "source": "canonical"
         }
       ]
@@ -3152,67 +3192,67 @@
       "canonicalUsage": "<Dropdown />",
       "examples": [
         {
-          "hash": "f1d04c79af92d833719f1f7927f6531f0233eb21042446ba7cb7ab2dfd514b78",
+          "hash": "d6d63abfec53aafed291131ef3a163dafcf0b09dbf5655a9457e4a8c5e75868e",
           "source": "canonical"
         },
         {
-          "hash": "ff2f563f71e0ce2247346c1b9bfe6125d3587eb0d87e85aa91f74bcaec346efd",
+          "hash": "49fefb1f1d8145921b4b4e7c674411c0a6ca5a63d9c22a60a5e82735ab251e86",
           "source": "stories"
         },
         {
-          "hash": "f83c15a1e91c920de59f2703db7b14cc2d77105d2ecb6f6a0c3c339daa9ba5ac",
+          "hash": "00374992c219d7042d32ee0297713e87c7da0a14563aa91ec24246b11ddd8462",
           "source": "stories"
         },
         {
-          "hash": "fb0b283fcca0a47146d5126b73ee29d932809e9fbab255c09dd541163e488c44",
+          "hash": "9eae41b47da6d3b07d6bfdb98fe407b6be85aa68db3fe695699cf9588b65eda8",
           "source": "stories"
         },
         {
-          "hash": "6249496d0a28f7486591ed9e2c46830c7f45417297394da18d739d4fcf29da19",
+          "hash": "bda0a33c638ce6212b4a0c6a592ef4de615a792af4360935f5c256a31d3c2bfc",
           "source": "stories"
         },
         {
-          "hash": "ed8dcfd4669b086224c866646624b948306811cf0d102efb9a24dd2a177ea8e9",
+          "hash": "1238535c7f91f78671738663cda3f3ed6984f0c29a539c190b264b03630e6d69",
           "source": "stories"
         },
         {
-          "hash": "13fe3be5ef48afc1b21e0c05781f384c3458e2f2a7d627ad97aa27897364a501",
+          "hash": "c7034bd09dee419c111b7c340fad09a444cfe9e9697b0595059c042314217da5",
           "source": "stories"
         },
         {
-          "hash": "f6a675035a9c1f7c30a7a2355b66e5cc911aa7ed14d5d4d795d35e422092da86",
+          "hash": "35f57c8747980e6bf5b6557fb00fbd1de7494d3164d9b0b0b2697c9badc38482",
           "source": "stories"
         },
         {
-          "hash": "5bbe81058b5f7ae3142b01bf68cd45e0e13be8dc0315aef544c43fa889f114e7",
+          "hash": "e6697016dfdd32f6f999330e42ac897a235b3aca69ce17e3d84e78ced6d9ef67",
           "source": "stories"
         },
         {
-          "hash": "b935fe4fd206e05decab4b92319dbf26ef1ecd3cbaef4824f7e85d84f184596e",
+          "hash": "1ecd90179c2ebd2ed33c0063235f9367b50ed37a7eba1d4c6aa1973033ed554c",
           "source": "stories"
         },
         {
-          "hash": "4d8b973a3f9f5d2d2bdca99620095e183671c6282504e47bb6f019b1996e5769",
+          "hash": "81fa795ca4a1acae4ec31efda3c21167df7e3f24ad1461056a90469ff70b835a",
           "source": "stories"
         },
         {
-          "hash": "c2812c87968648701b8b45209e61288843de208d7ab07ae0aacf8fe2c8c7ed16",
+          "hash": "b401bcf29ce360237f303ffbc81511ca04225c2399c82206a9313ca93d71ee07",
           "source": "stories"
         },
         {
-          "hash": "1e5c224174d2597cf467d2bfcd1da8fa5eb8bc6a90865c4204b72dea481f3321",
+          "hash": "4ae865ab021e175d88a07c485155d3003940a4025b8432040b9ebb3bfc9ac877",
           "source": "stories"
         },
         {
-          "hash": "18562f9a1b0c3c22a4a06d1d3be78ae3cd951ebbae8dbef0d5164e25b398aab4",
+          "hash": "96e3c221e0a0bb936b1030912f88f56c0139a1804d4797492df913b9ec7b3766",
           "source": "stories"
         },
         {
-          "hash": "7e364b57da7fe1e95177c79d7574a1a908de3150d8b844e220121621c15a545a",
+          "hash": "c9809b17f15305dd053e92c369352c1ab74e40750e704156f35c50b22b0fb7af",
           "source": "stories"
         },
         {
-          "hash": "acdd85f50d2b1a70ca643096ddad79d29553effbd4bf9efbddadf753bcee4fc0",
+          "hash": "bda12b1c91d1a7916b63557e18512a55470038d5bedc1baa01461d2d9d13c544",
           "source": "stories"
         }
       ]
@@ -3238,7 +3278,7 @@
       "canonicalUsage": "import type { DropdownContent } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "d228f784a5bcb96e2a34976c8263b09adbabed5671d06cee1b529a080c590811",
+          "hash": "f54ff3b0b6680cdec37c94acb43bf7f58648670a16b6c7be3cd82ca792d177fd",
           "source": "canonical"
         }
       ]
@@ -3264,7 +3304,7 @@
       "canonicalUsage": "import type { DropdownContentContext } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a84df98b01483777e1300092f232925bb735095c141ee8b43f171649abae742a",
+          "hash": "cc02e88440947a6233796037b3d5c91a08dccc0fbd6048c0d19e0c449e82dc73",
           "source": "canonical"
         }
       ]
@@ -3290,7 +3330,7 @@
       "canonicalUsage": "import type { DropdownProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "d7962c51baabf01f9a3edf542b850933511041f7e1ef9f9fdce5ae94097c78e6",
+          "hash": "c539c466c34edf9adf7a91c4b2d933518b120bce2cce74457c78e0579e6f91b5",
           "source": "canonical"
         }
       ]
@@ -3316,7 +3356,7 @@
       "canonicalUsage": "import type { DropdownTrigger } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "1ea1b06d0cb7b76df060c54a46289fc1e007ae1e8c5dce4c3bf315f645fa81a9",
+          "hash": "eded2f3304b55730029801800edc5a3c7449e2643b4b52dbc06d117d3fa78b9c",
           "source": "canonical"
         }
       ]
@@ -3399,15 +3439,19 @@
       "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';",
       "examples": [
         {
-          "hash": "d82a74678c8e5fc273478857f998ace0dbc3d92a5acba59f134a76b62e824724",
+          "hash": "ef6129271a1cc811da6f293b9cb03f5514e410a9c60c0abec3e045e6376745b1",
           "source": "canonical"
         },
         {
-          "hash": "98c349f74dfef31432fc84b3ce6f744fe0d10053c9feb03a5238dd12b0374098",
+          "hash": "d48d8676eb8b36a6ebc4a499db4fc5db1f7cad9d843dab155bcc0e51ae112dd7",
           "source": "readme"
         },
         {
-          "hash": "619bbe388844528779d6a79bfed218f3c6a4371e261cd9b9803d5212a6e86935",
+          "hash": "36cbaf7aab4a01a5e1c94430f29c9f8881ec84e60dac84ca5c2e32cb25e14ae5",
+          "source": "readme"
+        },
+        {
+          "hash": "22701739de59f3ff8757908dd59dec110a126e3b95861d3ad523cb1552deeed7",
           "source": "stories"
         }
       ]
@@ -3430,7 +3474,7 @@
       "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';",
       "examples": [
         {
-          "hash": "d82a74678c8e5fc273478857f998ace0dbc3d92a5acba59f134a76b62e824724",
+          "hash": "ef6129271a1cc811da6f293b9cb03f5514e410a9c60c0abec3e045e6376745b1",
           "source": "canonical"
         }
       ]
@@ -3503,39 +3547,43 @@
       "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';",
       "examples": [
         {
-          "hash": "e6e0522b066d0100b66985ccafb2e4f5c828276ee0b1a7b80123a044d0f871b0",
+          "hash": "8eb6ee9780aed6e852f19eb5e510f31bf0e507d50da449a6da3f1fb8f76b33bc",
           "source": "canonical"
         },
         {
-          "hash": "276d933cdedc1b20cf7ecfe70e4c77f9e380c703bf010e9a9fdfe880b1da5d74",
+          "hash": "9d095c31abb7ac97c40b817bfca40bcb706f8b8572f9a6af7218643f08b7464b",
           "source": "readme"
         },
         {
-          "hash": "e0b47d30ab44de1bc2d7a9ec6882e040d01a98ee46c77efe9c4f3392872a78c1",
+          "hash": "995eb8461d39460977e9818109030cdeb75f213495063aab77b583441e8d6a76",
           "source": "readme"
         },
         {
-          "hash": "043c36d7ef52688e3ac8c323626b68ba111414d18baa6acce01d6421a3b9ee80",
+          "hash": "36235293da09b5cde1912c14c77f599d7ac78dba18bdc80d587926d6f474f656",
+          "source": "readme"
+        },
+        {
+          "hash": "d994495c029f812a3de0502ae8cfe6dd7e8d6a14d695143c5e427eb20b730904",
           "source": "stories"
         },
         {
-          "hash": "1b08398c2e739e78e338644ed273f549a06b4a9af5ecd3ba2f982ba107dac635",
+          "hash": "f65811de7e147a092ae6e528449abcbde02b46201711bbf2cbf88493d3723538",
           "source": "stories"
         },
         {
-          "hash": "48b841f9b98246e47cebe04c995ea22bce70232b07c76d61f3f72f7eb5424043",
+          "hash": "efb94a978c87bf9343e9605b358b08efa2db1f476e21029ee2bda3da4f275448",
           "source": "stories"
         },
         {
-          "hash": "288be61ab26f08730bfeb3e6c5819af6e32c4710e27c25f13aa514222c9444a2",
+          "hash": "ab9c2b8dec3865ef9826586aa69c01790a48073272eb97a2006323577fbf2550",
           "source": "stories"
         },
         {
-          "hash": "543e2e3ae7a1fb4bb1107cdc87de02d2f3b7f3a6b9d73336be568642ff5e6801",
+          "hash": "7880909af758a291affc6ba2a56af087c012f00945684528454d55e9faffbb53",
           "source": "stories"
         },
         {
-          "hash": "9cc3dfb34125e76b4af9b4fc0588fe0a8f4568a9a082471998a9167f72a03fb5",
+          "hash": "7e26a59ffd74e1167b6e8cc158a6b4d57088a2809930de494ce3b85f7c59a718",
           "source": "stories"
         }
       ]
@@ -3558,7 +3606,7 @@
       "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';",
       "examples": [
         {
-          "hash": "e6e0522b066d0100b66985ccafb2e4f5c828276ee0b1a7b80123a044d0f871b0",
+          "hash": "8eb6ee9780aed6e852f19eb5e510f31bf0e507d50da449a6da3f1fb8f76b33bc",
           "source": "canonical"
         }
       ]
@@ -3630,7 +3678,7 @@
       "canonicalUsage": "import type { FormCoreInstance } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0b97e7526ba542ec92ccf0413a257e0f07864c0d008bdad607cd5ef0d45c465c",
+          "hash": "9c4b5f475fd76261b4364f04f169997152a1ceea87575298d7a413fd0a551085",
           "source": "canonical"
         }
       ]
@@ -3702,7 +3750,7 @@
       "canonicalUsage": "import type { FormInstance } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "e99c5e8aa7fd74909517b8a512a3511aaf652cdfe41f43899d0ff6e85eb88386",
+          "hash": "3b0609d66de90d74188d6f4ab20aa01fa0063b08806f15b90448a4dd7ff49fe2",
           "source": "canonical"
         }
       ]
@@ -3774,7 +3822,7 @@
       "canonicalUsage": "import type { FormLayout } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0f3b76336cb07f42a693ebf22be52bee9d836edfe280ecd1b79e06a98c621061",
+          "hash": "487a87a540c310c3a95d1656126aa0686d4ce8932394b10ef7be463bd2139b11",
           "source": "canonical"
         }
       ]
@@ -3846,7 +3894,7 @@
       "canonicalUsage": "import type { FormSize } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "10f4a71a5787fe2b02a3137bc6bf50dd47274d8e54c53f9777437f28f06a5a94",
+          "hash": "4382388bcd674e464f60d818049720fa134a38574be7255cff59425e9d027d63",
           "source": "canonical"
         }
       ]
@@ -3873,39 +3921,43 @@
       "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
       "examples": [
         {
-          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "hash": "88c9a5db9af74e9bf306d1fde453862a643a76dc012d945baefc628eb65abacc",
           "source": "canonical"
         },
         {
-          "hash": "4f40da0dcef8c45780aac535f2f2f60f3ae46930e53e93636b8294a3a6303232",
+          "hash": "e5c65a663400bac3c3f390e36b09d4a78425de95dde7cad603a185c1cc30f68c",
           "source": "readme"
         },
         {
-          "hash": "a470393965edd402f92af9519bd5e9cdce927beb8f691adc923330632265af41",
+          "hash": "94f775f92f27f8bd4a4d9326ff913a157404db31807176b4ef09292284c90d8d",
           "source": "readme"
         },
         {
-          "hash": "4daeeeaae641495c03c9d5704c447156258f6cd802817652bb73db2b2382c5c7",
+          "hash": "6ccfe4f2a1e0923b5c6ee03d7662c164882ad513d3e32a35a1ea7b9500f17169",
+          "source": "readme"
+        },
+        {
+          "hash": "dbe5994cff8f6c4f3635681f94133b647911651dcbd137756971ec6c7ff898f9",
           "source": "stories"
         },
         {
-          "hash": "2e883a337812a592757886ff707775ef107d4916d1032a9fa3360c62319dfe55",
+          "hash": "99531c5452d90fd65cb2b8267d93bd81cafb03cf282005f5232b325f159fa2f7",
           "source": "stories"
         },
         {
-          "hash": "07b5d74fb12ff54bf1272639a98bb083e66893c0cb9859b2dc16efa52b8e65f6",
+          "hash": "06b3a8e6513382a6e7d5bd530b625d83a008bbb52aa5f05cb2812e54e8854b3a",
           "source": "stories"
         },
         {
-          "hash": "2458641e2db8d560c487a28c68eb647773848bb02a1b080aa230edfbc3abff70",
+          "hash": "35d03672d22c429b5728577ce7f8d9a9e1c71faa8b6a6831ec83c20ab0f32541",
           "source": "stories"
         },
         {
-          "hash": "83ecb297cdf8bebbb398836d38b3b98f42dd4d74bc5bf981d53df9f4cc6a78eb",
+          "hash": "0738342c14cdb11218bb04fca3fb2f8adc34b4d7bbe92ca4a57b934569d07089",
           "source": "stories"
         },
         {
-          "hash": "603e1e73c14ccddd765607e3477af1e00d44bf4f1c567f8af7080828c882a804",
+          "hash": "259f23e43a9bab9ac08664151900a9dc9f3cc181adccdacc7a28bd34ab37be7e",
           "source": "stories"
         }
       ]
@@ -3931,7 +3983,7 @@
       "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
       "examples": [
         {
-          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "hash": "88c9a5db9af74e9bf306d1fde453862a643a76dc012d945baefc628eb65abacc",
           "source": "canonical"
         }
       ]
@@ -3957,7 +4009,7 @@
       "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
       "examples": [
         {
-          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "hash": "88c9a5db9af74e9bf306d1fde453862a643a76dc012d945baefc628eb65abacc",
           "source": "canonical"
         }
       ]
@@ -4011,7 +4063,7 @@
       "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4039,7 +4091,7 @@
       "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4067,7 +4119,7 @@
       "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4223,7 +4275,7 @@
       "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4251,7 +4303,7 @@
       "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4282,35 +4334,35 @@
       "memberMap": {},
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "c5260837fe7728fca505a762c48a8ede3b34d472c53b2be29b29a49de267418d",
           "source": "readme"
         },
         {
-          "hash": "835d02297d27d74d7295f23fcbfc95506a623b48aa75eedd09066bc8c065641b",
+          "hash": "4a5e5cef011be8e4312b7e27e13d519193ffe35d681413267098a0f06182c9d9",
           "source": "readme"
         },
         {
-          "hash": "d14a6c8f5f53e17dc0969b92484b9e312a960ec895d6264d90c4db3924559031",
+          "hash": "90952e793cfea81bc8613eaed2e1b60208c06b4e98ce6f0cc5a254619af9e93f",
           "source": "readme"
         },
         {
-          "hash": "44af4fb674a3e61d49ce9e5a88b74de2931e06aad97a61a2f1c32c9e428fc524",
+          "hash": "25c5df1e3c4d654a48016148beb792280ff11859280c9f51c6c226b15ab3becf",
           "source": "stories"
         },
         {
-          "hash": "9446a846b851aac2e08af05446331f4d538e03b5b55b5f41cedfabfc241a56c4",
+          "hash": "a56b698411c5aa0624871fc60a5699dc1b9226f3ce9553b8fc9f1bbe7a3e4be7",
           "source": "stories"
         },
         {
-          "hash": "685082e981a8530b957b6da0d3eebce07b7766f8ce70ec95b697fa5a12543953",
+          "hash": "92d700fd2da1bf06587fe4c86118bff9b3b4b42eb3ec5a4c9a790f7ac8950ff6",
           "source": "stories"
         },
         {
-          "hash": "f28ea8765f5ffeede5e08fcb3e669970881082c4a8d3ca417086152ff4ee2cf3",
+          "hash": "283bf6fd5eff1ebe8a6ed952b6bd855c824f627f386f40f0a520e4ca0814982e",
           "source": "stories"
         },
         {
-          "hash": "a52ea735ddab1f4df1b473b2fce05b9f6abb28e65828026d6d675630a56e8ec8",
+          "hash": "ba061872d363c81e7be320d4e4c26b4ed1989d21480077c3a3055d45d54f1afd",
           "source": "stories"
         }
       ]
@@ -4338,7 +4390,7 @@
       "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4462,47 +4514,47 @@
       },
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "d2edd9eacbc07e5e229da3827b202d5da1fe8f4ca569e59c8162ce3927cbf36e",
           "source": "readme"
         },
         {
-          "hash": "6f35553db545325816e22529b18e912b3f3dcca10bfe138a0df5129040928f1b",
+          "hash": "8217407dd420ce682fb91f9e1bba564e90bed8d67c39533ac62c057b69593987",
           "source": "readme"
         },
         {
-          "hash": "191e5bf56445f5af003d499453ddfef575bb54c90c23eda3e34152a2fc30039b",
+          "hash": "842244e70f89e2aaf6941718de836ab3a6e08d642a4d4bb2e80cee160158470f",
           "source": "stories"
         },
         {
-          "hash": "797aead7be7a662bdf4029c4d0cadea38bd64108f016d616db63817ae1e21d9b",
+          "hash": "231708504f9ec34c52004329a3bb5c026dbda32f45ef5a642b02861df747100a",
           "source": "stories"
         },
         {
-          "hash": "f10738d8b600350d93270e07c46923949a4e6b717e14a854cf3ddad3e2355aac",
+          "hash": "1d55eaab6342218fa931b8a061cfa308bbaa48c4ed6bcd3d40557b5b13b938e9",
           "source": "stories"
         },
         {
-          "hash": "a1783f6f835ccec02625291f09db3e852fb914a692aae4acedd29d39cb052f15",
+          "hash": "af6172fd099200e93181aeb231c5d69c5b4b4d057a1f32935aa2f35ed86ffebe",
           "source": "stories"
         },
         {
-          "hash": "414fbbad57207fc99eb033e1dea7f3d725c89a2c3d328effada9fd107c96a660",
+          "hash": "a823300963fcf8c4ccf8e531c42aa78d7ab59841b405c471d5c0c0d6ac0b9b22",
           "source": "stories"
         },
         {
-          "hash": "b29828cbbdc6e3eb024340bc83a04fb5f445b08752a288644a22249a2f883f42",
+          "hash": "c303f66164ebe41cd2a3afd4f3f393f888ada9d6806d059d56b47f502825f2f7",
           "source": "stories"
         },
         {
-          "hash": "2a4db9fb0ec1d8c7dd9030150a10e27a87a717cfda80216e786eab58b99e188f",
+          "hash": "ce5a29cdd05e46095aa4e0495f15de25d4e29a8772e83863f793f174d89170df",
           "source": "stories"
         },
         {
-          "hash": "ced5f4626f7daeadc008213aee59830b8d2d386e4e51fad830199d215127761a",
+          "hash": "de44f389edfa47e77cf32f1bd6ece4161001640b190878192b1685205bc79377",
           "source": "stories"
         },
         {
-          "hash": "5d9671c5b1630392d5067755686d589bf18b88fcdb17d63e26c09e09136626d6",
+          "hash": "07375b5c56ac79927802e4336d7ae0810a8b408066590d4011ab6dca04412897",
           "source": "stories"
         }
       ]
@@ -4533,7 +4585,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4564,7 +4616,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4595,7 +4647,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4626,7 +4678,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4657,7 +4709,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4688,7 +4740,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4719,7 +4771,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4750,7 +4802,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4781,7 +4833,7 @@
       "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
       "examples": [
         {
-          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "hash": "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f",
           "source": "canonical"
         }
       ]
@@ -4853,7 +4905,7 @@
       "canonicalUsage": "import type { LabelAlign } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "9c58e7a38bc9d547c7ae21ed06286803c8f87fb2ea67379696a308fead4eefcd",
+          "hash": "b5058892460d3456a042642b413b9da4a784488bd7e21f991f40aea1d5d14a93",
           "source": "canonical"
         }
       ]
@@ -4938,31 +4990,35 @@
       "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
       "examples": [
         {
-          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
           "source": "canonical"
         },
         {
-          "hash": "99eeaf95df32da3c97195eb28616d1a5bf9ea8b5d698ec9d1037fe2e8e237f84",
+          "hash": "b5122ab00632d0b9f9f205345094b8cc87d3de0e265bfa06f77f8c0538a72a4a",
           "source": "readme"
         },
         {
-          "hash": "8f5195efcb7c2b1b6063ae7ec7cdc15ccbf346906e542a71da48e199ec250063",
+          "hash": "e45470810804263c8bc829534812b03b22c7885a5d86df48dfecce21f3ab3a2f",
           "source": "readme"
         },
         {
-          "hash": "0f3794214bccd3872abfee6dcce90ff4b3ecc1f7d96b002e83306174fb0d56d6",
+          "hash": "a148c8eb1938e582f665219c3d3266bc21931e8547a0e516ec73f3a420387ec3",
           "source": "readme"
         },
         {
-          "hash": "75314320282beed134267b4fd0e00cc4ac8d098e15b6dafb44b052716aed17f2",
+          "hash": "b53d16f186c5371a04bc88eb4e5f48d69652f711a0b9596a5b520eea56fd12b7",
+          "source": "readme"
+        },
+        {
+          "hash": "21fc19a127fa75a33f2fedc609d8be2d2db4e044ec38917a3b2b7d048b68d7d3",
           "source": "stories"
         },
         {
-          "hash": "d29f2123a0f5561bb83aee2503c2b88a9e91423863d6094c273f174cb9684cf3",
+          "hash": "8bbc2c00d6f26600eaf14a2347cb6396fa9aed93dd50bb9b95614282b0c307ea",
           "source": "stories"
         },
         {
-          "hash": "8dd6e93a14bedec1fc737ddf57ab4cdc317bb17f4c805469caf254b1d6309270",
+          "hash": "49d5f7314ab1ae951fe87a5f276d65d91c81daf6f489b93cffa522dab5fa7054",
           "source": "stories"
         }
       ]
@@ -4987,7 +5043,7 @@
       "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
       "examples": [
         {
-          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
           "source": "canonical"
         }
       ]
@@ -5012,7 +5068,7 @@
       "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
       "examples": [
         {
-          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
           "source": "canonical"
         }
       ]
@@ -5037,7 +5093,7 @@
       "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
       "examples": [
         {
-          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
           "source": "canonical"
         }
       ]
@@ -5097,7 +5153,7 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         }
       ]
@@ -5125,7 +5181,7 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         }
       ]
@@ -5153,7 +5209,7 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         }
       ]
@@ -5279,15 +5335,19 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         },
         {
-          "hash": "5ba3acb2284bc309b706ae3fb4b299eea9a9f3ed437926bdf012d7dcf01ef244",
+          "hash": "e1a8744a63bb83a89bcb9eda48e6f3874777ee0c7821e132cc555d0bf0998f0b",
           "source": "readme"
         },
         {
-          "hash": "04904398e24ebff36de51c9ece0798191037b65116ca8b760eb9ec25cadde15f",
+          "hash": "96f9cfe7a3579cf1c7ff57afe66be83040e23794844ce4d35758cae32e1c7cdb",
+          "source": "readme"
+        },
+        {
+          "hash": "047c2f9b4e0f29aa1bfa1d29f631e05af609d686dc8ddcf1ab8a44f3838c16a5",
           "source": "stories"
         }
       ]
@@ -5315,7 +5375,7 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         }
       ]
@@ -5343,7 +5403,7 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         }
       ]
@@ -5371,7 +5431,7 @@
       "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
           "source": "canonical"
         }
       ]
@@ -5400,7 +5460,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5429,7 +5489,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5458,7 +5518,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5487,7 +5547,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5516,7 +5576,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5545,7 +5605,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5574,7 +5634,7 @@
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -5626,7 +5686,7 @@
       "canonicalUsage": "<Pagination />",
       "examples": [
         {
-          "hash": "e06d5e093ae70c4e9265523aa57af938f488d1a8ae619b68cfded1c55b3454f4",
+          "hash": "c614ee8b96a68d951bd7d9eb5c0f2a5c3be262fa670d2d245894f0a91deb000d",
           "source": "canonical"
         }
       ]
@@ -5656,7 +5716,7 @@
       "canonicalUsage": "import type { PaginationControlItem } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "7dd6feee05bc56c6215e93c177ccdf6f0a7b89d1e5af126e410c84bfb0ff6776",
+          "hash": "528ab6afb943c07fe6e0c68fe3bda683e292529a705bd2d968f4c5dfed7e3a83",
           "source": "canonical"
         }
       ]
@@ -5686,7 +5746,7 @@
       "canonicalUsage": "import type { PaginationEllipsisItem } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "6117f42a82521cd66ff869a6be06bb5f8da7cfdd301d3c3b64078931ae537783",
+          "hash": "5eab08235fada880deb893a45f8e307f765861578cd95522dc38da0053be3353",
           "source": "canonical"
         }
       ]
@@ -5716,7 +5776,7 @@
       "canonicalUsage": "import type { PaginationItem } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "655c30228af159a4c1108a590ba967a3e9e86e610a7e4833ba2450cd9931bc0d",
+          "hash": "0f978c9e8cebacc672d00e70889ae1fb18b0d5a39b29dc3e53b0d53ab04aedf1",
           "source": "canonical"
         }
       ]
@@ -5746,7 +5806,7 @@
       "canonicalUsage": "import type { PaginationPageItem } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0b76daeeaf5ca17e3b647e005ceb4efb34a7af51d84709048d35257458f0ebc8",
+          "hash": "ec48d516a07ba5085b42c5936ddd4094b99978b593ccd77f2840587b3c15fe54",
           "source": "canonical"
         }
       ]
@@ -5776,7 +5836,7 @@
       "canonicalUsage": "import type { PaginationProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "9ec394281ee417fa04ba31e4ffddc669858b9ada0f676848a9a92d37dd72d847",
+          "hash": "eebcc41c1f2c8421eb9925d8e4befdff5d0d9a0ac7ce205ace525ed07ee9f647",
           "source": "canonical"
         }
       ]
@@ -5923,30 +5983,34 @@
       "searchTags": [
         "popover"
       ],
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "canonicalUsage": "<Popconfirm />",
       "examples": [
         {
-          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "hash": "3e868fc7054ec26b6d612e345cd084dcdbb6a51b7d290eae2fa333509e0c9b33",
           "source": "canonical"
         },
         {
-          "hash": "28088e8ea75dc50a3a8d87c0b249093389ede74105e691cd78bfa44e3fb0abc8",
+          "hash": "2179af6a270bc4891095e10b5a182d62e7767a442d309c3641e1cfea330c5d5f",
           "source": "readme"
         },
         {
-          "hash": "aa588643ddba88dc525ebbe1585b3b1b358a49a26c8aa4f2b6e15b48d1e6fea1",
+          "hash": "38d85a62962bcd59b02127b7cf4808c8cb8ffe3d72866928828846cb5adb5e77",
+          "source": "readme"
+        },
+        {
+          "hash": "b85a9a4218f89a3b1cc4d062fb58ddec812f1555b1c52d1a71d3a3131c1c55da",
           "source": "stories"
         },
         {
-          "hash": "02e7e77b886674e36c126851198bcdd0a6360845f3ab293c0f48bb5b4e3e818b",
+          "hash": "d1cd64f002a5ae848ed3cbc7468dc0fdeec83147216a79bfa61857ed1d9fb9b9",
           "source": "stories"
         },
         {
-          "hash": "3f64f4a333829a369cc673fb69d2891f228c0c17d92937edd1974d8aebbc23ca",
+          "hash": "87b1990f73c96b7555165d59c2646f36d1db7d9f27712298b04b46ac63020d03",
           "source": "stories"
         },
         {
-          "hash": "9909d91c063ddc85a089469145e7b0c0035ef7bfc28db40beed6cbb540818f2b",
+          "hash": "effa85b9bec5c09b1096a3dc9f627ae7c6e52a1192e3f25d6c8ccec1fb06ad0f",
           "source": "stories"
         }
       ]
@@ -5969,10 +6033,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PopconfirmActionContext extends TriggerContentContext { ... }",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "canonicalUsage": "import type { PopconfirmActionContext } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "hash": "deb7c1bde978d151f18de91d4197364ea35d0d3f4dd7b0ba705acbf4eaa9eade",
           "source": "canonical"
         }
       ]
@@ -5995,10 +6059,10 @@
       ],
       "searchTags": [],
       "typeText": "TriggerProps['placement']",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "canonicalUsage": "import type { PopconfirmPlacement } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "hash": "f4d026d776aab61228b8c9e5a262948371f2441ac1be1fff0026dd1c3e0659cd",
           "source": "canonical"
         }
       ]
@@ -6021,10 +6085,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PopconfirmProps extends Omit<TriggerProps, 'content' | 'role' | 'showArrow'> { ... }",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "canonicalUsage": "import type { PopconfirmProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "hash": "62215ceb6b1bce283f5b3dce105d70132d7edfe684fc2e00f9c598761ae2abb4",
           "source": "canonical"
         }
       ]
@@ -6047,10 +6111,10 @@
       ],
       "searchTags": [],
       "typeText": "TriggerProps['trigger']",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "canonicalUsage": "import type { PopconfirmTrigger } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "hash": "d91c28bb6a118b26bb8a54276fb59ec8a840474d47297b0ab6537c738cb98876",
           "source": "canonical"
         }
       ]
@@ -6098,7 +6162,7 @@
       "canonicalUsage": "<Portal />",
       "examples": [
         {
-          "hash": "bd576a467c0e8866720f4a492baabe9f23a0d594d13e3b5a397466b0483f17de",
+          "hash": "c145e8864a44d06820814a82b0d0e2e486e772f015830b8cc626831e2e025878",
           "source": "canonical"
         }
       ]
@@ -6122,7 +6186,7 @@
       "canonicalUsage": "import type { PortalContainer } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "6362c54e54ba69b96211bf7c900f8679d1187c701127bb92ab489c8407e83666",
+          "hash": "4bfe9b50aecfd9832aab22cf2c5dc3bea89aeaba7934e60fe4e7a9d8c3ce823b",
           "source": "canonical"
         }
       ]
@@ -6146,7 +6210,7 @@
       "canonicalUsage": "import type { PortalProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "68d3294028f1dd884c3462d6b961110ab759baf2219184ee63d9772b0699580a",
+          "hash": "1856eecdadbccda4468f63edff75ac60c746187efb7df1f7699540bec7ce4929",
           "source": "canonical"
         }
       ]
@@ -6443,147 +6507,147 @@
       },
       "examples": [
         {
-          "hash": "64e59db9eb57ac71aff34a00adcdcdfdc64032520eaf1446ded34efbd7e700b3",
+          "hash": "d9c8c640f134945ee1c690fc09f249d48531b5e05729faa4795d7411a8b3bc4e",
           "source": "stories"
         },
         {
-          "hash": "7621058cfdb0df862cd0b8ab9cc309aa91534ce2f3c031d08cd6a5af48811e01",
+          "hash": "7f54085ee6892564556d190e01d8e809af4cd0841f2c8c6876faeb511fbe8834",
           "source": "stories"
         },
         {
-          "hash": "3af43dbedfae58b802c293a9db693165d45502e18cd5a5ca3871c236dabac6fe",
+          "hash": "f4f6718e815517b85df1ffee8b8b6101efc4f409150c16d25dc6d84726c971be",
           "source": "stories"
         },
         {
-          "hash": "570f60abc5b42491681aa929f6c61a206035bb3a00d37ebf40a291aae36e5390",
+          "hash": "ddba2f9ed531e8d41eb802983744dee6f9a543308278efec1b7cbab638caf0e5",
           "source": "stories"
         },
         {
-          "hash": "d808b44e5ff6fdd9bc453b98d7cf1b4a40dc93d44eca49a085a72f70bbf77308",
+          "hash": "35ef262aacb50e576c661e627da1e7f2a63d545598db02d89b2aca173d0a6129",
           "source": "stories"
         },
         {
-          "hash": "c771aaf036fb9f3f2f04bb927522eb764ef947fac2220a7d7c192592960f601f",
+          "hash": "31dd5c9e926c0deeefba1a4028848b13ee819e42fbdf5ba0438329ffa1907e66",
           "source": "stories"
         },
         {
-          "hash": "fc3ab57e6bab195dc73c6531b0c23a228f4b23877a0f490609c7ac35a6bab2a1",
+          "hash": "42d09791892e2a4de1863d920b4d11b5c83b30770a9775f63645e3291eb98416",
           "source": "stories"
         },
         {
-          "hash": "fa6c471d7ad5956ea5520746d1d8e7498f45a4aaf4060b6fc974bc87c89e0dcf",
+          "hash": "0caa8e66489f540fb7f7969ee8d11091048124739a3d26ddcbc22e6ba567048f",
           "source": "stories"
         },
         {
-          "hash": "b01e433d6e982acd8de93397a8bd7f7c5106356b39edaedd814f3820365940e4",
+          "hash": "74f28ec19da10ee7a3cecb129f444ca1e9b9bfa6a44bda5422d89c70a079ddc3",
           "source": "stories"
         },
         {
-          "hash": "2e77b7251bcfd781b924b8ac3c9f676e0715c8840b5b00489b80f682e5662a9c",
+          "hash": "3c3505571d048f21d338aa69eef9958e1c52c1291853b9b05ab914623319a464",
           "source": "stories"
         },
         {
-          "hash": "6d4d3c04cae237fb9016a7ec30c68bf43f9977d535cc14761aac2bf62eed9cab",
+          "hash": "6f2b7da00479a6033fdaca36f0646a924c61cbf09cd0e07da6948a884af98a61",
           "source": "stories"
         },
         {
-          "hash": "c73741feb499ca3fbcf209701a70c62bf396644b762340624952495e3493a311",
+          "hash": "2747faa4403a689de6d4dcfed855783441d64415a45749a3540e57922479641a",
           "source": "stories"
         },
         {
-          "hash": "d94463e4e9c13c2f05386b24bbbec0b95f170e8565acab266bc29f51439b8b0c",
+          "hash": "bfa365023d672d8f94c08d4bf7dba03404964ed3489949e44748853da10be22b",
           "source": "stories"
         },
         {
-          "hash": "a980234cd211d570909f4025c125d9e3a089f34fc30d0299db1e9af6a93cfbab",
+          "hash": "5694ed3a17a8aaa5d7736cb50c6e16eff3b03b29a74afbbd401544ec9a894672",
           "source": "stories"
         },
         {
-          "hash": "237195d97b238609b1cb1ad8c1fbf84cd47370a328f9382cc8a1a0c5d5e85d2d",
+          "hash": "267f5a3ff897958d20e8cf8872f84ac550344f94b274b43885d55f28b7e9fb62",
           "source": "stories"
         },
         {
-          "hash": "04c7f4bb8c1aff74a38d28dd7b41f76dba8cbc9873796fb817efc90bc2823195",
+          "hash": "1d6e4664da8b92ef6df17dcaa33fbb89d503e9119ff6b26e08b59365bdcf248f",
           "source": "stories"
         },
         {
-          "hash": "0dc3f7d5a3788d99681aa91542e1f51f9d42f93dde345c4d9ee135d2ccaf9ed7",
+          "hash": "feb0c04288ce976b2a2dd118a352d0c9501645b51a4f529bf1cb1d9057ef34f1",
           "source": "stories"
         },
         {
-          "hash": "b78e3ae714509b9cf7fc2de5102dafd9e368b458970238ea6204c9a3f8a6e422",
+          "hash": "69b3c7f7f0c52a2b442c48facf31fa65600796fb8e47401b6b3c432389dbf92d",
           "source": "stories"
         },
         {
-          "hash": "2e8899341b207b4646b855f7c11abfb581f3beebfc6515f2a1124077264ba746",
+          "hash": "0c7c04366337519cd94b38f5358dfa8f9eec80c8f289ba172def5f00e1a89ba3",
           "source": "stories"
         },
         {
-          "hash": "3c829c3a8ffd37889ae83a9d3928e758740bb57b85d81d929a27c62c72ff5f43",
+          "hash": "49dfc73d483629f124012f5f0ce9f22e06b9496d4f80a2c7a2ad32ac3cb8f6c9",
           "source": "stories"
         },
         {
-          "hash": "228b09e8828c646c96530f435327308e00b5a4fd6192afa27528167faa2f47a0",
+          "hash": "25481ee92272cd2b9cdd59f68f847651b99333df541c23495f75abe261b5686c",
           "source": "stories"
         },
         {
-          "hash": "17620272c0c1fe7990c11225c262ad7ef7d92788c4751bc24097e4a05830b3c0",
+          "hash": "fcf58f34ec54a1feebe1b6bcd494ced5bc067fe18fe4faea458801a538a151fb",
           "source": "stories"
         },
         {
-          "hash": "9ea3e2fd4ed32d0485e09a1a266ac4e9471db6d9ad435a2009f72df89c4d77f6",
+          "hash": "f7b16782ec97c865cee1e4efd85132f308a13cf49fb00e7e75113b8db2f00476",
           "source": "stories"
         },
         {
-          "hash": "e00336cfa2a677e249068a89bf5352eb822d6f113f18c3e3d86f5fd7365d4bea",
+          "hash": "45927e79f2361b1e135a1b6aba335d6c44091ecc37424d0dcaf5424bb38149f4",
           "source": "stories"
         },
         {
-          "hash": "6473a7cebbb0cb5cc212ef569cf9d9d9c9f26e2a8e30a59d0066d1947b5e4c53",
+          "hash": "c7dcba25848c3c668f4be990f07f1a6cc8b5b3687bb3533b277bf10074bbbd74",
           "source": "stories"
         },
         {
-          "hash": "a756f7f111f82e9f24e512c687b14729195427851b0587bf7d089cb55e027268",
+          "hash": "2f65549d43490603034b9f30beadb2efd27c2c0f454242a54f434f213d051491",
           "source": "stories"
         },
         {
-          "hash": "f7ddacaa03e9523d4f8b7667dc6600489ee98db0c7d70922b7654feebb92b8e9",
+          "hash": "e590bf2afc81b30b930dada6662ca8d5f1563febfe83f4e804b82bdeaa55d9e3",
           "source": "stories"
         },
         {
-          "hash": "9e17555658b1304f15342a835ea3efeac180f093a07aecdeda4df47e52b44cec",
+          "hash": "d41dbb44d3d8769c1d0adb9e207bae7aeb9410730ab9e50b3897b5913c110ee7",
           "source": "stories"
         },
         {
-          "hash": "ae1208c516b8c8d1d286d8cbc91b28485ee6dbab80d3c62353994ece6e364fc1",
+          "hash": "03fa3fcdf3577c4278551ee032cd36a6b3f43a21aa6c2f807a57da22f9ac48dd",
           "source": "stories"
         },
         {
-          "hash": "ec3ed17878530e684f85b36f958a713b38556e603663dbddc91568b2585f2d99",
+          "hash": "cf77657b10de8590abb4f91c96d5208ef8e88c19ca770632f85ea70ebd3f41f2",
           "source": "stories"
         },
         {
-          "hash": "22ab049f08d98ba89dd47b62a9edd9558c8ed5a36010c27902c227edaee61483",
+          "hash": "4ad4837cde91f1ebd2cad90d6f82683fd94957192e4b88fa46882aac2330b854",
           "source": "stories"
         },
         {
-          "hash": "8e57a668b9cc7783927890017157002d7558f0e34c982bac87e4b1e4f2b4f901",
+          "hash": "5b6b616e8d95d382632b332591de2af84de98f77720ee5b0628d3a44feff076a",
           "source": "stories"
         },
         {
-          "hash": "1f71293353ee47a52cd91ec710455489b8211ae471c82750e829165c7ab0df5b",
+          "hash": "26594eacf431540e6380fac7c7ff44f09d414de2052860d55187217317c0cbb1",
           "source": "stories"
         },
         {
-          "hash": "0321fe24079e3dca37c69a466253c36d46de1c30eb245f4fd4cfa0f476e0300a",
+          "hash": "c3aaf0098db4c77ba5af727f8c2eb70a9969be6ea15dcba309d583137cfe6e21",
           "source": "stories"
         },
         {
-          "hash": "45c0008c455a3203b7bbc3f69dfed583600060c09dd817541687341153b0867e",
+          "hash": "f00e8c206a0704e37e6ae2cd3256fd59d70a1fb49e526ae606d6d9c83b6d2966",
           "source": "stories"
         },
         {
-          "hash": "e2994039dd10e7bf79ba70f8587fcbb179225aea63a261bc0c8d9dedc74c62fc",
+          "hash": "834b1493f597716ffd0faa47a8af73c11fd286bff5048777205a4596bd3e648b",
           "source": "stories"
         }
       ]
@@ -6654,7 +6718,7 @@
       "canonicalUsage": "<ProFormCheckbox />",
       "examples": [
         {
-          "hash": "5419b0497f8d1d6c120e48206a2d701e09df89161e8502f5b02b12c92aba14b2",
+          "hash": "af895efcacf8986532f0595254021a9fc61222edede0123afbd36e0ca9de61bc",
           "source": "canonical"
         }
       ]
@@ -6725,7 +6789,7 @@
       "canonicalUsage": "<ProFormCheckboxGroup />",
       "examples": [
         {
-          "hash": "d90ffbfd4742ec4d5085d2020f097c1fe620b2d9090a738aa20efe0bbeb0017f",
+          "hash": "c4fb3c20755ba50100856ee70fc3b85038d8c04bef80a4aec58734e95995d8a8",
           "source": "canonical"
         }
       ]
@@ -6797,7 +6861,7 @@
       "canonicalUsage": "import type { ProFormColProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b39a953b75868f8f5c2f810aec6914bb083d199aeeee879f8d01e0d04b0e39e9",
+          "hash": "93b1291462e3499dc53cfc59ff3a287c0beb68213b4eb563c88cc64ce2158ba8",
           "source": "canonical"
         }
       ]
@@ -6869,7 +6933,7 @@
       "canonicalUsage": "import type { ProFormContextValue } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0330b72074131e740bf9efc51cfd904e6a5c1ba6b16e6a700cdba56b345fc20e",
+          "hash": "799a697a88c95889b4c090d62789d89c9f7e92453d3a048ccb28e552fbe17b5b",
           "source": "canonical"
         }
       ]
@@ -6943,7 +7007,7 @@
       "canonicalUsage": "<ProFormDatePicker />",
       "examples": [
         {
-          "hash": "878bcf1b2d0ec17f27e3c1fb03ce0f951f108c682c8ff03354ca460c516c20b5",
+          "hash": "546ef2d886471f0e410921f3ca3fa1ec2db5d4bed5ff1902bc190d0d87c75054",
           "source": "canonical"
         }
       ]
@@ -7039,7 +7103,7 @@
       "canonicalUsage": "<ProFormDependency name={[]}>{() => {}}</ProFormDependency>",
       "examples": [
         {
-          "hash": "2550cf01005a349ef7d68f101f726b171fc72a7dd5561553ef1c56934a7bad68",
+          "hash": "c61edd4d5f5113671afbb2b5ce72b88a70f64bf63d8e320cd21c669831574cd1",
           "source": "canonical"
         }
       ]
@@ -7111,7 +7175,7 @@
       "canonicalUsage": "import type { ProFormDependencyProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "ab0fb59c436a904669522929c4feb34c5a35cb825c44f9fbc3c8ab46d9b849f9",
+          "hash": "fee60afafe32035844a3102b3d30152024652c2b12eb46104b0dfb5c8026dc26",
           "source": "canonical"
         }
       ]
@@ -7183,7 +7247,7 @@
       "canonicalUsage": "import type { ProFormFieldConvertValueFn } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "bd8a437f9c43c1c8d40f35232ab52ba5306c4fc2c350ed5039e1b9381f63d80c",
+          "hash": "db1561752135c60ff5a677102a19f86d01a79b50a6824699a9c6fe7a9ead392f",
           "source": "canonical"
         }
       ]
@@ -7255,7 +7319,7 @@
       "canonicalUsage": "import type { ProFormFieldProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "ff89f6d8ccd6b59c6f325cfef65546ea9ac7a11594f4213a78032e71cdae22ec",
+          "hash": "f83a21f43532c533551423571b437ae45b5e8e0ff76b9b783f68587c6b9a7e8d",
           "source": "canonical"
         }
       ]
@@ -7391,7 +7455,7 @@
       "canonicalUsage": "<ProFormFieldSet />",
       "examples": [
         {
-          "hash": "bb6ea69515992555ffeac8904e7bcfc81ef7f692e9aab1e8d30dc504986bb903",
+          "hash": "83f9c4b31401922ddc84d60264badd258d516373ccfc2b81813bf57f5c7a1e5a",
           "source": "canonical"
         }
       ]
@@ -7463,7 +7527,7 @@
       "canonicalUsage": "import type { ProFormFieldSetProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "9b43adb596c57934e45f936783eafa42ebf85deadcecb812006125d26d5f629a",
+          "hash": "2d7f3d765471e161eebea75b1e1a3270b8a6b415b29bbead4e0362770a9eef3b",
           "source": "canonical"
         }
       ]
@@ -7535,7 +7599,7 @@
       "canonicalUsage": "import type { ProFormFieldTransformFn } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b205c58a4199abe725348154bab03a86fe50e5254ef1db8762c016007bb20b34",
+          "hash": "4a0586bd3c33f563c7de439b2edc169e9d921c2f9f7fb0c72e411af2d0637fa5",
           "source": "canonical"
         }
       ]
@@ -7607,7 +7671,7 @@
       "canonicalUsage": "import type { ProFormFormInstance } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "ced7f53f31299a1d0abc9a083ffa420e995b0f8fd25cdfd5e144a2c40ecfba73",
+          "hash": "43e86173eaa57a1ad76a23b43ba3b90b40e118c2d4885e13b759adc68c95f5a8",
           "source": "canonical"
         }
       ]
@@ -7743,7 +7807,7 @@
       "canonicalUsage": "<ProFormGroup />",
       "examples": [
         {
-          "hash": "ee21c49c90694abe0e9ff6ae1bc1cf21c63e5c09e0633579433eb19a588aa90b",
+          "hash": "784dd70341f79c53f5d9474c553dbaa803f65c317904a95d6b511fd57dcff804",
           "source": "canonical"
         }
       ]
@@ -7815,7 +7879,7 @@
       "canonicalUsage": "import type { ProFormGroupProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "c7cbbe084243ca5270de088636c3bf391f168b45f769e0f51ee9ff0e41a7c129",
+          "hash": "421c6af797703e115fd55a10242e5ac801283d4eb80d5409fc997c7d9c730393",
           "source": "canonical"
         }
       ]
@@ -8047,7 +8111,7 @@
       "canonicalUsage": "<ProFormItem />",
       "examples": [
         {
-          "hash": "363f416219a960bdb90b0e4dfed4789764f3e4c5fbf65b53f39c13aa622549f3",
+          "hash": "bea04481c1d6a537bdee648094a468c0153ef005defd5762fd0568a7312f0b71",
           "source": "canonical"
         }
       ]
@@ -8119,7 +8183,7 @@
       "canonicalUsage": "import type { ProFormItemProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "3a8025598a00c83abc4dc56634ab36c82107ac03a3e9f51ee38b5f024cb21433",
+          "hash": "043dd268dff2f5670f3ab2c4c19161fec1e9322d74c3151a062126f0e295a632",
           "source": "canonical"
         }
       ]
@@ -8311,7 +8375,7 @@
       "canonicalUsage": "<ProFormList name=\"name\" />",
       "examples": [
         {
-          "hash": "63fd4727e2cf7105978f1bbe2a1a3007d9e270d161b54b6ac9d36a3ce66d4063",
+          "hash": "85bd84178bbfcd56c92db6d690a33530c91f2485e3d9d27441e33fdf838e377f",
           "source": "canonical"
         }
       ]
@@ -8383,7 +8447,7 @@
       "canonicalUsage": "import type { ProFormListAction } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "e8888083ba522c041aa2bcf3d0eaa0580ad6f6070247fe617345cd5b8567b871",
+          "hash": "711c445955f338d909c2ca767156df860542cbd4c4a2dd6f4962abe54d6905fe",
           "source": "canonical"
         }
       ]
@@ -8455,7 +8519,7 @@
       "canonicalUsage": "import type { ProFormListProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b4b3d1ea0ebbc147d2873a8756216a76d9548003652639bcffebe708ff5d53d4",
+          "hash": "88336a196e8322974055de2b8c590f70ade08e176b0eac3f8cd6b72800b1b63a",
           "source": "canonical"
         }
       ]
@@ -8527,7 +8591,7 @@
       "canonicalUsage": "import type { ProFormMode } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "3facf6674e7710a1a9de9d88f3fbe17c86ed454c852b17339349f2adf1cbc625",
+          "hash": "d4cfa73d1f8594d54e518f6d453f327da0cbfe5696e915132697bab1461257a2",
           "source": "canonical"
         }
       ]
@@ -8598,7 +8662,7 @@
       "canonicalUsage": "<ProFormPassword />",
       "examples": [
         {
-          "hash": "5b2f6a3e8d39c623892770213ba6eb1e2ffcbe6aa46a973721f2b2de3a850c51",
+          "hash": "52b3c46129e939dcab127c033e5069b7027eeec39a253fe8741b74807b6de599",
           "source": "canonical"
         }
       ]
@@ -8670,7 +8734,7 @@
       "canonicalUsage": "import type { ProFormProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "067035dad985ebb4e794dcae50378944f1e33fb3446d06e1efb0edde4d9f9d6a",
+          "hash": "ead69923c50561a8b08e90c7dc7f2b6f0d3e3b1d3aa61f06af6f26303aeacc90",
           "source": "canonical"
         }
       ]
@@ -8741,7 +8805,7 @@
       "canonicalUsage": "<ProFormRadioGroup />",
       "examples": [
         {
-          "hash": "6e8eede2a99b42aa364541e5305755b67261c86fc154394934ea659a79eb2bfa",
+          "hash": "4aa25969f149eda32514cc530fb2b8fceabc54fcbf63b87641b7cfd13f967bda",
           "source": "canonical"
         }
       ]
@@ -8813,7 +8877,7 @@
       "canonicalUsage": "import type { ProFormRequestOption } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "eda0c73b8d900e06ccc4e73b21a35325f71e9431d8e095408de90c4c77c8c2fd",
+          "hash": "dd7a9e1ecc57d2efc005885114cec94320649768480f7dd0006adb2ea5855d5d",
           "source": "canonical"
         }
       ]
@@ -8884,7 +8948,7 @@
       "canonicalUsage": "<ProFormSelect />",
       "examples": [
         {
-          "hash": "0ab4fb399b7211b1fa649f5c3792734e5d05192c6c91f2b3f25483a2a53b8bca",
+          "hash": "9b24b5a45401922ce5317e6b1dcdc28a9caba33fd0c952afb36b62e7cea62ea9",
           "source": "canonical"
         }
       ]
@@ -8955,7 +9019,7 @@
       "canonicalUsage": "<ProFormSlider />",
       "examples": [
         {
-          "hash": "534af98c194ebb382fe87435a753b46dac9bd9a7a393bdc149eebfa58b829052",
+          "hash": "5a9b5ddd9a26199701d3d3f2307a6ad3b964f66d5fdbfd30efdbbf8aba0c2c80",
           "source": "canonical"
         }
       ]
@@ -9026,7 +9090,7 @@
       "canonicalUsage": "<ProFormSwitch />",
       "examples": [
         {
-          "hash": "86c2146fa08dbd8c76689f7c9eaaaafeb247ee67fd64210e92f871e8d0db7d2e",
+          "hash": "87119f77a8e04ec0f07dec55f2ef7985b167400772592d70172ee644167c1ebe",
           "source": "canonical"
         }
       ]
@@ -9097,7 +9161,7 @@
       "canonicalUsage": "<ProFormText />",
       "examples": [
         {
-          "hash": "79d97245312f70b28b35b0ab0f22dee635d990f635a03ff1b2b8dcff9f9c0fe4",
+          "hash": "0f561819e24a9b6521e16b4a9238c0250741795e0996d3dca59f7fb9a111ddf4",
           "source": "canonical"
         }
       ]
@@ -9168,7 +9232,7 @@
       "canonicalUsage": "<ProFormTextArea />",
       "examples": [
         {
-          "hash": "41a69a619062f78a1ea4a9c9f9ff82ee310d0e6f88ac0f1846a9fb9ca42c3e63",
+          "hash": "1549a41755f2d85818188654c648d16f6deea173c67c20999f5d5aa896204817",
           "source": "canonical"
         }
       ]
@@ -9239,7 +9303,7 @@
       "canonicalUsage": "<ProFormUpload />",
       "examples": [
         {
-          "hash": "cf857ca7f03b0b7ab6ab7c4259fbc1ff1c2241720acafde0d35edd74235ba956",
+          "hash": "5ba789cfffb9110e9a147117959a6e59585384a46fa350d42dedc8e0857f1821",
           "source": "canonical"
         }
       ]
@@ -9311,7 +9375,7 @@
       "canonicalUsage": "import type { ProFormValueEnumObj } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "86a25b8c61a097c6be03d98d3c4737cdcd778e2a1dcbde870125a29e8e0a35e2",
+          "hash": "fa1715f659ca9bd453db3ccb6d40b47193e9dc838467b79a6a453d0b8b5aaed5",
           "source": "canonical"
         }
       ]
@@ -9383,7 +9447,7 @@
       "canonicalUsage": "import type { ProFormValueType } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "2d91c217fdc4e6cff8af43944c3ff455fea531edbde54e71fa31d80820f0ffff",
+          "hash": "069beba30456db7a61ea657851e695df2a417f06c69fdf677a0d60c1a7af3de9",
           "source": "canonical"
         }
       ]
@@ -9488,11 +9552,11 @@
       "canonicalUsage": "<Progress percent={0} />",
       "examples": [
         {
-          "hash": "b5bae78d2929631a2ab8e4ef2f16772442302c68046e436a787f2ead622b3d88",
+          "hash": "e37aca8f7c9d9b0e9ebfac3d27da7b71899323685544aefcf84f04338a9232ce",
           "source": "canonical"
         },
         {
-          "hash": "4d0e7a4d36a5041e4c4e6c6d9b1f460375eed71e91dca4682a9de94355e211e7",
+          "hash": "11f60c018746e51bd823c5ce8039341a2200f2e132e62e58f99f23cfe2166cbd",
           "source": "stories"
         }
       ]
@@ -9519,7 +9583,7 @@
       "canonicalUsage": "import type { ProgressColor } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "fc09e08872fa6b4f26666e6c30e05445a018da20adc2432abf042aa18ca0b02c",
+          "hash": "079ea5a6232196a5bc2822e0a2466a32b0fbfa7bfa8b3a800a5e3d65b6226e42",
           "source": "canonical"
         }
       ]
@@ -9546,7 +9610,7 @@
       "canonicalUsage": "import type { ProgressFormatContext } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "02eaafcc7b7653cfd4ddcae94f5834040913fedfebf35d636471506704b8274d",
+          "hash": "57555cab23c1ab39cfa023e9e3f6cec2998ddc9537a47354aa1cf1fd14488461",
           "source": "canonical"
         }
       ]
@@ -9573,7 +9637,7 @@
       "canonicalUsage": "import type { ProgressPlacement } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0a85a7bd8b8aaefb036b1e1f825a0bf4c085c9d0d9e2f0dfc0e7df5546a69950",
+          "hash": "fe831014a074368cace22558725ed6a61ffdfa556cec55c5284d20d0357f8e2e",
           "source": "canonical"
         }
       ]
@@ -9600,7 +9664,7 @@
       "canonicalUsage": "import type { ProgressProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "affb7a082845255c1052b1d3991ef9d2e05dd2ab1056f178b930f9189217a898",
+          "hash": "159060bf345ad56b198657357005740fb6892291717bb99ada373f0a62cdcdc9",
           "source": "canonical"
         }
       ]
@@ -9627,7 +9691,7 @@
       "canonicalUsage": "import type { ProgressState } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "38986e2f621818f6715cce6e31d6f4cbf6792a4d500c0f0912490368f8842035",
+          "hash": "a0db5e8a8634435b7717e8162c8d43cd1a6918c73fb73a44d76d56fa6d532de2",
           "source": "canonical"
         }
       ]
@@ -9765,7 +9829,7 @@
       "canonicalUsage": "<QueryFilter />",
       "examples": [
         {
-          "hash": "506feb296a4411efb3c37c98674e025a8c0b75a433162dd2de7aa444927e2a88",
+          "hash": "25f9f9086f93b5fe128992d1c388b0c9cd77df643010c4c5cc403527a80b7528",
           "source": "canonical"
         }
       ]
@@ -9837,7 +9901,7 @@
       "canonicalUsage": "import type { QueryFilterProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "5ee1801dffe6dbef1f70b88cca70fc38a2daafcfa1895d5bce21bc908e9e949a",
+          "hash": "bec858e374183c180f6a8c8157e1d6204faf444043aa0bfe7145fdff1fb35c29",
           "source": "canonical"
         }
       ]
@@ -9999,95 +10063,99 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         },
         {
-          "hash": "d38404a0563d64907aabd47d421e448a744912932fbd35e92c77eda682b1ccef",
+          "hash": "cc0a911d74a5939f71b3e713aed21e4a2dd1adc41fcc547aa40a60cf82549caa",
           "source": "readme"
         },
         {
-          "hash": "76a69080e6d5f9b7ac563e161d3c8a99c57745d2764ca63e3556eb49a07069c2",
+          "hash": "52e49c0728ddadda69ef98366ad789e66211d87acbb7ca43af959df87ec0767b",
           "source": "readme"
         },
         {
-          "hash": "9d86b96297e4abb840e3c007333dc233ab7246bdc2b24f204fe28a663caaa7ef",
+          "hash": "97d3304eb6ad0bcd991e2dcc8d7d92caa6f844fd15f4fe6aa0b33d374d922ecd",
           "source": "readme"
         },
         {
-          "hash": "37206c7e20fe7e01464aefe7ab33f71986f194c92cb1ef2c1774f737cd87e406",
+          "hash": "01e3e9258a1bda78a667e40406fafe7b7cf89b5e3354d2035d37e360422aab36",
           "source": "readme"
         },
         {
-          "hash": "dedff092ac735a4691d7d06bf848036ed0f30660c6721deff0ac7ff29cdcb81d",
+          "hash": "85a3e1ad39461a191a1fdd7c9e26a2810d6e3f39e4304aad3029d5eec043b3d8",
           "source": "readme"
         },
         {
-          "hash": "108fd5f259c1d372b501cd976ab09f2109a34dcd84354c553b532df8e0c196c8",
+          "hash": "a384708daf54145061d22ec7ae65bd975180650d5364956566a5ba2641f012c5",
           "source": "readme"
         },
         {
-          "hash": "c4886db8c20813bb53d907aa0f9242e31e6c410a171817c11aba0a23b08d0d33",
+          "hash": "00ebb02ec69a1e88dc08dd1c08594a0cab9d86855da2de7eca6b118c6f886dc7",
           "source": "readme"
         },
         {
-          "hash": "09a6c0c349bec1b1ac8a1f96d809636bbfc9925766969f8135d3507841500c02",
+          "hash": "73da19095cdcbe4a8b8d7ec782967002cf9da27f5638d7ec08e376a8d777aeda",
+          "source": "readme"
+        },
+        {
+          "hash": "f2c3b9fe0a35d0f3e87ed98754d67b66bdf140128496a16d3ebc5ba4819068cc",
           "source": "stories"
         },
         {
-          "hash": "289c78dd78322d7a5f02ce53dbc5f40b9eda58e3f3d2b084fe8cb1e0c91aced8",
+          "hash": "9af2306c1aff18816073dccbcebb287dda5cedc961f04ea7a2ad419875c3055b",
           "source": "stories"
         },
         {
-          "hash": "0ee60262deaa996507571f4f2b55ead10361459d309b75ce48135b2bda3ef4e1",
+          "hash": "b0c2a7a4682cc6d39e1a0404cc97bb0a8e70753ca73f95e40a82e692077ed4d4",
           "source": "stories"
         },
         {
-          "hash": "62f812cafa716253163618e5e4902b133a9c79d0715463a3226dc7614b9d5f8f",
+          "hash": "38cc049b002ef2643d573c3ed8ec40bd44f8aadbccbeea471bedd8ace0207adb",
           "source": "stories"
         },
         {
-          "hash": "944272923c2ee72ce64f7479dd0cf8975fc587dbf8c7a3346093ff9d885f0f58",
+          "hash": "a441ef91fd2695501c12b9a749acb9e33886f02b78b6e77d818f5c11c7a23fe7",
           "source": "stories"
         },
         {
-          "hash": "928d7f102c9a5b6ca5c93005c2550100e140ac3aca7ae436726931377c043528",
+          "hash": "fd2a2c6d3a51c13f2b7674054f0afc8f88905362641c5a16d2c84fcaffff1d7a",
           "source": "stories"
         },
         {
-          "hash": "f76af68942b6defde087498880b2d2aa8ff879f12247234c59278c1b4999542f",
+          "hash": "a5a04f0b0f7ad14c2ae616df4f7820ea44171f7317f4ba0ab23f15985159dc24",
           "source": "stories"
         },
         {
-          "hash": "41663cbfb29ce282461ebbfbaf1cbe6dcdabb47f2339f1c2f81c4d8373fa1b25",
+          "hash": "ccaa3cb3e660ea38beaa59a26d94e5aa6bcd8ea3fb8449f82d28e13875c9c05e",
           "source": "stories"
         },
         {
-          "hash": "89ece9bd79564ce35415d2885aadc1b77152e47d385c69ce90bf26fce1e7f013",
+          "hash": "a0079a48172d1c0f7be06f282a42c0f276ba3128f87074785f69d97884b29375",
           "source": "stories"
         },
         {
-          "hash": "ea045eb595d450f3fbee3a0eb9d5e12cc911bb83236161cde412882e819c3a01",
+          "hash": "5f3b6d99f2f042d7c984a9f73cb179167b6c80cfbd3c106d1c96ecc86ba1a888",
           "source": "stories"
         },
         {
-          "hash": "eaa99424f16c4c42f03f1f27ef7c08bb01708da4eaef81bfd224b0c22987717c",
+          "hash": "3c5bbd0e70d50121131f70e69229d2badab6a0c4ce56c9343804fac5db4cc85d",
           "source": "stories"
         },
         {
-          "hash": "e78c6dba63bbdffc781761d2b0c7721496684773a2b53fb5b0293616e67544ac",
+          "hash": "27d6aac7d1c034f300fff363095f94668ca8ac06615c0e779fc6f83aba43ab8e",
           "source": "stories"
         },
         {
-          "hash": "39776becb54b65e6bc441779087d93665cdf7ae2b910e992e64647c5e8323a91",
+          "hash": "1ad3863a7ccae5d72cf0b223899e03501462831ed16ae711d9f497c103c00008",
           "source": "stories"
         },
         {
-          "hash": "9a8a0eb728b4bc82d399de6079d0430c533dc76897285bb104637621d7f4b9f6",
+          "hash": "f4820b22bbba91a3284238e73606be5b7825b28d6c345dcc4dde9b0681f61efd",
           "source": "stories"
         },
         {
-          "hash": "cfbd1bca33469377146f254817a427bd8650fa15c3df7b27829eb26916ad6065",
+          "hash": "5f3c0615ec3a69ebd87d06468b31046b347a1553105db72ec7cc2fca6b04678e",
           "source": "stories"
         }
       ]
@@ -10117,7 +10185,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10147,7 +10215,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10347,7 +10415,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10377,7 +10445,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10407,7 +10475,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10437,7 +10505,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10467,7 +10535,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10497,7 +10565,7 @@
       "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
       "examples": [
         {
-          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "hash": "e8366ffc0f016219e2e3c8525fc51ad1e6b761782aa7021fb8a40588988b1bb9",
           "source": "canonical"
         }
       ]
@@ -10555,27 +10623,27 @@
       "canonicalUsage": "<ResizeObserver>Label</ResizeObserver>",
       "examples": [
         {
-          "hash": "f90a546c0a5b19f700a374f8c0de9d020d0d86482fda3c88eed0b16917bf564e",
+          "hash": "2c58c83426bf77e0fd761deff8e74853f41c3213c0b293c97d142554dca062bc",
           "source": "canonical"
         },
         {
-          "hash": "d2b6ef334d09ba8dfbfcaa666a984b4fed81d7a490b4644d929cdd39a0575458",
+          "hash": "f49c87dfe21fbf4df7cf48ca08171e7695c029a2bb70a176aec70a90274cb24c",
           "source": "stories"
         },
         {
-          "hash": "85547f2e3607a4f8b3f9cf667ef43aa215324ec84ccbc0fb9c1b7c6b64ad2bc2",
+          "hash": "b6bf8d1eebcfbb2bb8d4eef7f3fbb26233d5abe1febad432c6cb4d4af6ad7a79",
           "source": "stories"
         },
         {
-          "hash": "e4301747cc6544d8e3142ef1c0610d7abfca5b940e3c555a42232075c8c5c195",
+          "hash": "c9055581e81ec06997b903da8cf3dc5446cb9767423cb2fd80762ede31063176",
           "source": "stories"
         },
         {
-          "hash": "198a1747993a36392e60ef0e2a8586903d6b5318ca1f06da00ea3868afb45129",
+          "hash": "dd0dc5a0741ff7e4495ca9fb3eb3072f77d4f1b84be6af9dda1675475566cbcf",
           "source": "stories"
         },
         {
-          "hash": "0626a46b610f456123414b45b6898165ecfdab717f7be8763c364869f5a8abfc",
+          "hash": "5c8961675725144291340a7560c3c798389ce24d786783dedd6ffcac93193a0d",
           "source": "stories"
         }
       ]
@@ -10601,7 +10669,7 @@
       "canonicalUsage": "import type { ResizeObserverOnResize } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b210fd37f1100b0418170427f0eb18c9c4253daad1735e6509bd91481a86197b",
+          "hash": "331af5c2212fd55974bf970db262267197fa7ead2695ac5e5ad86d13f1a999d5",
           "source": "canonical"
         }
       ]
@@ -10627,7 +10695,7 @@
       "canonicalUsage": "import type { ResizeObserverProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "d12430351f38211b63676292b659b971e4d16e07f1814f3cde874dcf51438216",
+          "hash": "bd798228effd9ea304dec801de169c61b68aa249974a07c893487d7bb9d57dc0",
           "source": "canonical"
         }
       ]
@@ -10653,7 +10721,7 @@
       "canonicalUsage": "import type { ResizeObserverSizeInfo } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "adc252adb3fef273c5e306d586378a016adae78f590a000760c7e76d3c69def0",
+          "hash": "b669352c8c48a5998e787d52dcf642775655517e1ea3c28da5047402bfb8f815",
           "source": "canonical"
         }
       ]
@@ -10678,7 +10746,7 @@
       "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
       "examples": [
         {
-          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "hash": "88c9a5db9af74e9bf306d1fde453862a643a76dc012d945baefc628eb65abacc",
           "source": "canonical"
         }
       ]
@@ -10750,7 +10818,7 @@
       "canonicalUsage": "import type { Rule } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "dd57a882417100776f66e2b3a621605315e81b30e6e2c7cad27d2680d9ef2874",
+          "hash": "4925f0fa31e738cbe6dcf51caa4529687907afbd4c5d75a2b6babee74973dcb6",
           "source": "canonical"
         }
       ]
@@ -10827,35 +10895,39 @@
       "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';",
       "examples": [
         {
-          "hash": "dce4f4bfc195838aafff4ed0a505d639aaaa5cc09de3d9d390beb5bf2595b241",
+          "hash": "96811d7b0b7448138a55d8b001aae58595a2e5201ba8bc5ef5ca1cf1a79a8524",
           "source": "canonical"
         },
         {
-          "hash": "95261a6b72c04c3ea26624d822d3ef98a93785b72846dd56f935667da5a42744",
+          "hash": "a0eaa77614f8bc2563173aa4c68d578c2a7d2957ec1696516c9656d43737f7e2",
           "source": "readme"
         },
         {
-          "hash": "e3d66f0ccbd0a7ccb0d05047e1e611b0f86000768646f033186b7753a00c0497",
+          "hash": "24d5e46e111c329ee3e4214816d4f82614fd465fefb80ab345960c8ddc0bcef3",
+          "source": "readme"
+        },
+        {
+          "hash": "7374135a0f5702e8c0e689b3ce2576b5c15b47c90d9fffe7c2bcff8693acd9ef",
           "source": "stories"
         },
         {
-          "hash": "cc30bf44aa3e0cdd58a2ca744b94df707b295cfcfa7f25baf9f249dfce903698",
+          "hash": "4946413c8eb03c3d0ed457a33ffdb8dfdef55dfe7f8f8440b878a1ae2be1c46a",
           "source": "stories"
         },
         {
-          "hash": "ab88abaee84074065a72818623b89a3bbff3e9ed3374c180a19a7e4e8804d4c9",
+          "hash": "ca70d69f9d217bc2fb7464ca43a6e4014c47f608128b31fcaef0dce251e15ea4",
           "source": "stories"
         },
         {
-          "hash": "bb24dc50a5bf6e6a1939b18e899761d24886a22c1408686cb00014e59452893d",
+          "hash": "0a72ee3d63ec85bf631eafb8407f424d82c2c3d9da1437fb18801bec174133af",
           "source": "stories"
         },
         {
-          "hash": "ec69d25bc7f9cab68f96168accd32edfbf3b46807b2f5e7969b3b418b670c55d",
+          "hash": "48f6ebde7546d7db844b0cd43bd6e6ec6956746f93c55167fda6a2cd84599a3e",
           "source": "stories"
         },
         {
-          "hash": "b529fd8b9cf18db6c270ca6514c9ab7beb2055de717f11880b4a8023d1ea0fcd",
+          "hash": "5dc10afdccbf1759489ec0ca6e8837d8edd2fdacf6965a82e879ea4b1fe9cfbc",
           "source": "stories"
         }
       ]
@@ -10879,7 +10951,7 @@
       "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';",
       "examples": [
         {
-          "hash": "dce4f4bfc195838aafff4ed0a505d639aaaa5cc09de3d9d390beb5bf2595b241",
+          "hash": "96811d7b0b7448138a55d8b001aae58595a2e5201ba8bc5ef5ca1cf1a79a8524",
           "source": "canonical"
         }
       ]
@@ -10903,7 +10975,7 @@
       "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';",
       "examples": [
         {
-          "hash": "dce4f4bfc195838aafff4ed0a505d639aaaa5cc09de3d9d390beb5bf2595b241",
+          "hash": "96811d7b0b7448138a55d8b001aae58595a2e5201ba8bc5ef5ca1cf1a79a8524",
           "source": "canonical"
         }
       ]
@@ -11260,39 +11332,39 @@
       "canonicalUsage": "<Select />",
       "examples": [
         {
-          "hash": "380a765ee50bbf70c1200eff7ddd80a9e43756cc6666e272306241f4ef8b8f6d",
+          "hash": "25966efe47cbb331081aa62151a5d80e7324bfce0b4a1b82e323559d9349cd54",
           "source": "canonical"
         },
         {
-          "hash": "aa4391aa4b3ea2a3dc26b729da95c20dee995971191316cd1ac996bbe6f07ff6",
+          "hash": "123291e7b1b33126adc91e8204e4002c37c71a74eb5bfca67a4da71b9aec2f6a",
           "source": "stories"
         },
         {
-          "hash": "02e7ee205e5c1f4400f77455033e6f28f31c52eb0c2aef111f2f1dca42c4c852",
+          "hash": "9532a16e360ac90c4955a5d2fb7dbfd364a470857fe111e7c0f76c886afe2153",
           "source": "stories"
         },
         {
-          "hash": "2eed734c74e8348e0fa6c6323191fa5088e495fe08ed081eb78282a6b01e8f1d",
+          "hash": "44c4b25e35236d2eaf4d26824badf330c6495194077c815a662b000591be91be",
           "source": "stories"
         },
         {
-          "hash": "3284a2fef64eaf0e1ffec7a7e01c15cda724f62830d5a4914df39bb4c1ac6a71",
+          "hash": "572f2d8e36841d6c929bf0ee4c11423ef33dc618291ed6bd10d900f09cf64d11",
           "source": "stories"
         },
         {
-          "hash": "9d6c4db0ca67c0a61e385aec75f3d236c7307233bdafc13e84c2e2931d8508e9",
+          "hash": "034773bdaca67ca0d5a236ca92c3d84403ca823cb8249eacea2414545523ab3d",
           "source": "stories"
         },
         {
-          "hash": "9100e9de94ae7d82a8e0bb2b4eb368b8f4b384ec56c2ef26ce85647bf6c33f96",
+          "hash": "e80f4581561ee3095a2839fea6b7193b3e3a682901390a7f6147c36c9a75cc0d",
           "source": "stories"
         },
         {
-          "hash": "d47cf64a718d510f52ea4bab7bb514b2a484c039111ea779779a655cd2d0bf5e",
+          "hash": "7f9b721c6811ebeeeda10ed23eb590ad0f0d00b3e64ce2aedb8a6e3b12179071",
           "source": "stories"
         },
         {
-          "hash": "4912f0f2382c8603966f18e35eb0da61e1fabcd54b84eb1d4c920003269d86c2",
+          "hash": "90bea0eac958ff92526a0901cd2515a8694e96039b3d056e709ede70bd1b4678",
           "source": "stories"
         }
       ]
@@ -11324,7 +11396,7 @@
       "canonicalUsage": "import type { SelectMultipleValue } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "ae5e39c465884ad3ee96d1b1c9d1539c5b2b2cb44562c0c0bf66a543e99516ee",
+          "hash": "fc7f011734a4a3a103721b68af73859114acc940da01099883443728203b2cad",
           "source": "canonical"
         }
       ]
@@ -11356,7 +11428,7 @@
       "canonicalUsage": "import type { SelectOption } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0bf82595fcbc5628580404f6ac531e1126786de5478bef0f4519d89248f95e91",
+          "hash": "ef4db8ac914fd8f1b7ba6beb4ffdee91eb4c6541f40cad46d0d74c3e00a5d0e1",
           "source": "canonical"
         }
       ]
@@ -11388,7 +11460,7 @@
       "canonicalUsage": "import type { SelectOptionValue } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a4f71f3bc93d9434cdb6e746820539591ea333006874f4c99335e99684733f26",
+          "hash": "06fe88ad0e8ab0eb5303e6d550234af6433a3b3e5f18fcddba351e64fab26e13",
           "source": "canonical"
         }
       ]
@@ -11420,7 +11492,7 @@
       "canonicalUsage": "import type { SelectProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "ee544c176f86a4c2f64f890aa1127a50cbd9578b72783bfbd271d85221a4ba76",
+          "hash": "bfef3654ba7e004cca9c6680de5d7039f9de64917fbbcc8e2f2ca84d014a58b2",
           "source": "canonical"
         }
       ]
@@ -11452,7 +11524,7 @@
       "canonicalUsage": "import type { SelectRenderOptionMeta } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "006e31e1aea9cb0872e5234745dfab511ecfeea6628f0243531c022b82b87840",
+          "hash": "cb70ebe2c9a937bb1cd0ba29f708510c4c1e22e8ac2caacd37674882f698a196",
           "source": "canonical"
         }
       ]
@@ -11484,7 +11556,7 @@
       "canonicalUsage": "import type { SelectRenderValueMeta } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "2303a5c6a71284996d0b2aefc5c97e63795d7b4e90692e48919950df2f43295c",
+          "hash": "fd353a0cfce510dee427ac20924a2b4af00ee7928140326c422816b303a11ad9",
           "source": "canonical"
         }
       ]
@@ -11516,7 +11588,7 @@
       "canonicalUsage": "import type { SelectSingleValue } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "ee9d4d9c7ee0fc334eed3f3f6bcb932658ba3eb2ad81859d13d83e6edc382a7c",
+          "hash": "2f6710b655bb5d7c4adb4aa08f77909913d90ba3a32d1fea39ab8604ddc2f8f5",
           "source": "canonical"
         }
       ]
@@ -11548,7 +11620,7 @@
       "canonicalUsage": "import type { SelectSize } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "2d7e38611101e011923b93e2bc92f43011a13ef4e6cec1e784f2a597e7b2eeb0",
+          "hash": "cef06a2fa9ec150e4ab25d3ca42529946e43096750463d7e09e45104bfe938a9",
           "source": "canonical"
         }
       ]
@@ -11580,7 +11652,7 @@
       "canonicalUsage": "import type { SelectStatus } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "64c1cf107d7d53a5e6ad6dd3cad583a884348f12f184b4fa9cdd6dd4c3c33dd7",
+          "hash": "802d7a93824c4a4841c52f2688f4d5b201b3c4f56435625c03ecafb2df0e8db6",
           "source": "canonical"
         }
       ]
@@ -11612,7 +11684,7 @@
       "canonicalUsage": "import type { SelectValue } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b04aa554b1ef13ba430adbdd9ec8948be819a624871175d22101fce21f4b499a",
+          "hash": "d0b89ae2fa1043346a2874d6f6ab1231cc0e830f16e1f70fd5614d322a61b044",
           "source": "canonical"
         }
       ]
@@ -11703,19 +11775,23 @@
       "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';",
       "examples": [
         {
-          "hash": "41730566b1a75571b90474a22068176d054676afcea29a6373a473daa93c35d9",
+          "hash": "60cbcdaca9952007d461beb3b4f61ed1039f1a0faf6382bf593852a3a1e96d74",
           "source": "canonical"
         },
         {
-          "hash": "ef8ce086dd7339b903a5b656d0655b96da7dbdfa1deb2db6756b17912e48d7d7",
+          "hash": "9a6b2f4b0ce1fdea4c73f1f9ea0d1471dc97d3dd7783c798b6b99ddc7f3bf15c",
           "source": "readme"
         },
         {
-          "hash": "6697c08837fecd0a49b22824173263e54faad64df99b76fc81aff1dfea1f42bf",
+          "hash": "f573e24b6bb2a0cf68e3dba916cbc777330e61e503cca982f2c5c5633a8d0b7a",
+          "source": "readme"
+        },
+        {
+          "hash": "002615fee8d755dab7889ab4b878d7d6b4e25024bba2b7cae8f9e4d86fc61cb4",
           "source": "stories"
         },
         {
-          "hash": "62512f1603d627ac49ea21ec47291e8fb80bfa36760551817b01799f59004bac",
+          "hash": "991d316ea63cfd7ffbebf14b3b1e27e44442737febab245a5576b67e01d3af2a",
           "source": "stories"
         }
       ]
@@ -11738,7 +11814,7 @@
       "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';",
       "examples": [
         {
-          "hash": "41730566b1a75571b90474a22068176d054676afcea29a6373a473daa93c35d9",
+          "hash": "60cbcdaca9952007d461beb3b4f61ed1039f1a0faf6382bf593852a3a1e96d74",
           "source": "canonical"
         }
       ]
@@ -11931,15 +12007,19 @@
       "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';",
       "examples": [
         {
-          "hash": "5151e7c70e46cba8d6cc7a3b0af66f52ada4fa426d539cdddffd43622871cd95",
+          "hash": "50164c21b0b9ce491a97b9f31ca0eab4a51ce38d2496720d37242f774f78df20",
           "source": "canonical"
         },
         {
-          "hash": "0ad44348beb71aada6f393329f33307fe6511afd471ef7efa3d66b707b77d4de",
+          "hash": "c6a83d6c798d0d40463dd843e21e8d400034b2e02b102cc4f379e4a07d4b9fe7",
           "source": "readme"
         },
         {
-          "hash": "0983d9d4461b6cb921e768282ab20c7d228fe75faeed46c49dd03c8cdedf3c5a",
+          "hash": "03db5f06b9d053c3b514bf4bd85fdb3c21604f60d3b598d6de714a98a3a17713",
+          "source": "readme"
+        },
+        {
+          "hash": "7e1e1d6bbd91a0fc8b5a8fd8d047345df926d0330af9470a74e3bc6326e04ca1",
           "source": "stories"
         }
       ]
@@ -11962,7 +12042,7 @@
       "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';",
       "examples": [
         {
-          "hash": "5151e7c70e46cba8d6cc7a3b0af66f52ada4fa426d539cdddffd43622871cd95",
+          "hash": "50164c21b0b9ce491a97b9f31ca0eab4a51ce38d2496720d37242f774f78df20",
           "source": "canonical"
         }
       ]
@@ -12035,51 +12115,55 @@
       "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';",
       "examples": [
         {
-          "hash": "32f04d7438f47b6aa1ee4f2d3320dcda8e886dd4ff70180606bc1514971b104f",
+          "hash": "3f7947a62ea88c98ba7ab12c99856262c9bcfbce67805459f690e130f0d6920e",
           "source": "canonical"
         },
         {
-          "hash": "f73e7e356c10515a75db142fc39798205ea134b8e31695a273d8e28d280bdf59",
+          "hash": "5f4e0a0d85f2ecaf7434a70622e83ab0495c984cb44a41abe7be980b68b4274e",
           "source": "readme"
         },
         {
-          "hash": "408b255061d78d5404f4f94cbc15613c1d536cd1f10f1aee06797357b1a2fb28",
+          "hash": "c708d9a68618a957abae65c03f9ebb38fd38b515889a38cdc4abedf031315725",
           "source": "readme"
         },
         {
-          "hash": "930d9377a1bc1d2d347c18561168fa7328f66f844a8247a08330235e71f9e2fe",
+          "hash": "28dcbb40d407a6c3c48dcdb51a06d11466a26d831324f8c583ab6b877bc5eb7d",
           "source": "readme"
         },
         {
-          "hash": "fe73c206f0aebcba1dc4a4f6eb92e1eacfed55f021dd15e3523cdbda1db7f3de",
+          "hash": "aa0e9842f54e521f7ff371e51003e26ed69263bef1d5d37baaa5fd6fa189e32c",
+          "source": "readme"
+        },
+        {
+          "hash": "fbd87569f46a26241c78761898d378521f9b220ad8c158ad1b3f619a9043f07d",
           "source": "stories"
         },
         {
-          "hash": "1bebed39fee0591428a6b1b9cc68677467e7a33cfc851756d240e2812c4b8189",
+          "hash": "c196d3703b8f7605b2cf3ba5d441a3c20a72992b82874261716187376e93e86e",
           "source": "stories"
         },
         {
-          "hash": "a0024fe9ea320865604e9789667d0202051d8702c52e474367a9d166eb0b99fb",
+          "hash": "3b416ca019f27f4a1d80ae5a1bbafa8b6b9d196ebbdbf9df77bbd8d7c4118934",
           "source": "stories"
         },
         {
-          "hash": "f8e54ed14660db5515021d6fa26ec612bbf87633be766d21a69260f333535b2a",
+          "hash": "03ae4647e3bd8aa48fde505061070eb0425296d0b86b97f0b240c36897efc68f",
           "source": "stories"
         },
         {
-          "hash": "47ead0c65ac8c3b846279ca4a9fcd19858e5ec10ebcdcb626f32613f8a871b58",
+          "hash": "359419046d682dfd62714062c25dcec8d14f5e324dc74f77fe952a6dbc601d96",
           "source": "stories"
         },
         {
-          "hash": "cdbfa361d3e58dc9aa83fabc92effb556137d8a23d15f8f9ec61c45532511930",
+          "hash": "45540f738e1068d8a124b639401d1c1ce52ae887afdc2aec99071704644db73a",
           "source": "stories"
         },
         {
-          "hash": "fe341eb57b579a93678984ed2420d6db506c4ac62fb04eddede68b5d391c95c8",
+          "hash": "db11dae227995e92880a75b42e93f034782b06757a643753f468b4e0b598692a",
           "source": "stories"
         },
         {
-          "hash": "ee6f8929fd07172820a76fee2ed193c8ada15076201cad5328c32b0beac039fd",
+          "hash": "76302edb4c36b3507a837c478a5be477379f78f3e0093f51d2c5874f610a1fb5",
           "source": "stories"
         }
       ]
@@ -12102,7 +12186,7 @@
       "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';",
       "examples": [
         {
-          "hash": "32f04d7438f47b6aa1ee4f2d3320dcda8e886dd4ff70180606bc1514971b104f",
+          "hash": "3f7947a62ea88c98ba7ab12c99856262c9bcfbce67805459f690e130f0d6920e",
           "source": "canonical"
         }
       ]
@@ -12171,23 +12255,27 @@
       "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
       "examples": [
         {
-          "hash": "53796e97adf166bb70c2b3609880a16747980e3f8c59df7c480e59c26336e894",
+          "hash": "43cd04ae4cce4b5299321d915077358a92a0a5000ab402da2f9ba9ccac91ef84",
           "source": "canonical"
         },
         {
-          "hash": "5413d51333d6c9b825c7768766caa8e437a871c680256959a30b781f1af1672d",
+          "hash": "6c73541844cb6bb287f5a4f0c9d25be0cbdd0d09518b1abd0c49b8d738ddfaa8",
           "source": "readme"
         },
         {
-          "hash": "808647d81c324baad55f61c8562ed733caaadbab40197e96d9eb279d0e78143a",
+          "hash": "ee2bdbb626c56a393f970bf1d78c39af26d41db0d878c1454242d504dadfb8c5",
           "source": "readme"
         },
         {
-          "hash": "ada70f481c3767a8154a392da046b6648fdd7b5cc35798f54c4ed6af72c7b730",
+          "hash": "49c72f97a10ef34333a88507a7d9e8e5bb582173ce599c9b9a2aae31efedb1e1",
           "source": "readme"
         },
         {
-          "hash": "b8ac646aa0abb229622508538774df1afc82f31105fd258988aafebeba8bded1",
+          "hash": "c5c8294cf8e64c0260dadcf294fe23c8dc5b054d7780988addeb5f5bfa8f6658",
+          "source": "readme"
+        },
+        {
+          "hash": "5545418d49fc7cdc897ea3ab29b0c7e5326b5e6a7321eec41eece864275198a0",
           "source": "stories"
         }
       ]
@@ -12211,7 +12299,7 @@
       "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
       "examples": [
         {
-          "hash": "53796e97adf166bb70c2b3609880a16747980e3f8c59df7c480e59c26336e894",
+          "hash": "43cd04ae4cce4b5299321d915077358a92a0a5000ab402da2f9ba9ccac91ef84",
           "source": "canonical"
         }
       ]
@@ -12235,7 +12323,7 @@
       "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
       "examples": [
         {
-          "hash": "53796e97adf166bb70c2b3609880a16747980e3f8c59df7c480e59c26336e894",
+          "hash": "43cd04ae4cce4b5299321d915077358a92a0a5000ab402da2f9ba9ccac91ef84",
           "source": "canonical"
         }
       ]
@@ -12282,15 +12370,15 @@
       "canonicalUsage": "<Step items={[]} />",
       "examples": [
         {
-          "hash": "4e48840543a859bae919e9c215f1de4cef584fb161834adb048843c3edbcea27",
+          "hash": "97683a3f5c99b99a2b9a054edbee9d66d751fcb9ce9361898434af338708d3c9",
           "source": "canonical"
         },
         {
-          "hash": "6be167264babcbb844c0e055af43ab824d97ffc3393a425537bf30ace4385d01",
+          "hash": "57e5a7e81ccfa1d876cf40e95b6165f9d630fe343bc29dbb15c3fe546e689e62",
           "source": "stories"
         },
         {
-          "hash": "f9028e1b42f4938799ffc5302ed2c901a565b92e015a9f1d86e6aa37769cf5dd",
+          "hash": "8635e5203dcc0ffc85bde3edc3cafc477676635bb31ab8c71a82f13a90c00b5d",
           "source": "stories"
         }
       ]
@@ -12316,7 +12404,7 @@
       "canonicalUsage": "import type { StepItem } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "139015fec5fc7fb670cc0576d9479b586b4a22630669291347d56833321035b9",
+          "hash": "aa54a561acdb2781536fc6d5bf4b05fc2a4ec7cc3a1952f3d8aa3086f866754a",
           "source": "canonical"
         }
       ]
@@ -12342,7 +12430,7 @@
       "canonicalUsage": "import type { StepProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "a43b98404aa6d3cc178bea6dcf1e7fdf602e10a994f4e4b1f3322f7989606817",
+          "hash": "2e38eb2bbde2587fea5af46f3c34d8b7b9a3bc7951fa044bcd363a4ce3812a47",
           "source": "canonical"
         }
       ]
@@ -12368,7 +12456,7 @@
       "canonicalUsage": "import type { StepStatus } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "85915257df0809dc031bdf0b913447c468d3e2305584e7fe3f3e88146afc2d89",
+          "hash": "04e9dc127df402e09fdd97b4e5a8113b98bd6e4cc73a657077883081e9a0b8f2",
           "source": "canonical"
         }
       ]
@@ -12394,7 +12482,7 @@
       "canonicalUsage": "import type { StepTagConfig } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "bbda74565e26930220b274325ab62a69b2d7aa603e77e8cb55374db61ebc5370",
+          "hash": "f02ed49d7825c626c3191734244f3e88dfbf48e8a2720ddd268229fe063b846a",
           "source": "canonical"
         }
       ]
@@ -12466,7 +12554,7 @@
       "canonicalUsage": "import type { SubmitterProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "f2d95277a12f35af59c783af831430752b1d416b0832d0ac6c0a4f2dc181526c",
+          "hash": "f065597d223dc1f13a2322f8264117765b4ffe077f96a1224d73320e187354ec",
           "source": "canonical"
         }
       ]
@@ -12604,35 +12692,39 @@
       "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';",
       "examples": [
         {
-          "hash": "b90ecb23325776c49905641bc4d530ee3c8bb9edc1499a50cec0f8848b048ff3",
+          "hash": "41c91bf415fa7b2b7fcfbba49136e2254bcf778a33e916d12446e042629a0943",
           "source": "canonical"
         },
         {
-          "hash": "7c889960780d1bb8c89782e9e5a9a9c15a27cc6c1b47287402af4a2d4e963f38",
+          "hash": "770c9ef1e8d4b176e14cf2288788ed37782cbbee674dbb3f3017c1714e81a200",
           "source": "readme"
         },
         {
-          "hash": "867ba95078cabfe2583c6111b08afa83cf752de8cc92798aea5e986fa33402b6",
+          "hash": "0df7d43ad53f6a66386ebad5a61eaaf088d0b9200a5fb97e51f6c4964aefd05e",
+          "source": "readme"
+        },
+        {
+          "hash": "3836a143b0bc0c3df0917e6d83e399c700a858b3e0cf7703a8417090067c3088",
           "source": "stories"
         },
         {
-          "hash": "a62749c6bf6ae0ae37d8ccf8598ac34706ec83374e1d6fc0b8079a215f970a5c",
+          "hash": "93d23d9eeea4da875fbe248ae5096c5ebccefaab935749a8067d38b9c0485be9",
           "source": "stories"
         },
         {
-          "hash": "6933391c30713a6f153f00b6b78371d9eff792ea8fc49f27e3a1b6beb75c3a13",
+          "hash": "25d3c27d4d446cfc5d638fc4025c31ea8026f219ad274ed16cbc32bef414ba5c",
           "source": "stories"
         },
         {
-          "hash": "f54db38dffb1be6227af3cbf255c3fdda561ea359d56945b84e87994c5030e58",
+          "hash": "e9f60d4e278ffd41098f4db04f41855ffd8a9cb7a16f51dc8f8e99f4295effaa",
           "source": "stories"
         },
         {
-          "hash": "7f0dc646a2318b7481b1045fbf0541bf980a92ee43deabb9b1f1354ce203daea",
+          "hash": "34536f5f5abc20bc7255387d21700a4725ea8d6f9806b09cb947375f7afde43c",
           "source": "stories"
         },
         {
-          "hash": "ff521bda64792aab4723283f3ca01c3dde02a1b284817b107a8c7f573408f06e",
+          "hash": "ee930a68e587cff54897859095b7846cd2ee864a89a0d0e9fd833dbd1db85b82",
           "source": "stories"
         }
       ]
@@ -12655,7 +12747,7 @@
       "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';",
       "examples": [
         {
-          "hash": "b90ecb23325776c49905641bc4d530ee3c8bb9edc1499a50cec0f8848b048ff3",
+          "hash": "41c91bf415fa7b2b7fcfbba49136e2254bcf778a33e916d12446e042629a0943",
           "source": "canonical"
         }
       ]
@@ -12679,7 +12771,7 @@
       "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';",
       "examples": [
         {
-          "hash": "7a769965048d5fc191bd44af93ca259df9cd9e8ca65e2da9d44435a72352d690",
+          "hash": "0c268f0ec6b90f7352970d3db858c53364c60f2321af3c578568fc93082425bb",
           "source": "canonical"
         }
       ]
@@ -12701,7 +12793,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12732,7 +12824,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12763,7 +12855,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12794,7 +12886,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12825,7 +12917,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12856,7 +12948,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12887,7 +12979,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -12918,7 +13010,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -13002,39 +13094,43 @@
       "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';",
       "examples": [
         {
-          "hash": "7a769965048d5fc191bd44af93ca259df9cd9e8ca65e2da9d44435a72352d690",
+          "hash": "0c268f0ec6b90f7352970d3db858c53364c60f2321af3c578568fc93082425bb",
           "source": "canonical"
         },
         {
-          "hash": "75d47892bcf3c00eea515c704e3bca9daf8cacac47c88adb008f89d848ea8465",
+          "hash": "dda0f285741a298f3e8cd24f768a9faf10789e206854eb6555fc79970dcb9c2d",
           "source": "readme"
         },
         {
-          "hash": "69587b5549065fee55834c9e26afc4a0d877380ff5f273f3fe5c7a542b7b5b31",
+          "hash": "832687bdcc14df6731994d11b086d90daa70e8c701da773ecd71389df82887db",
+          "source": "readme"
+        },
+        {
+          "hash": "5ce7cb216d31f3e8bace6eec75085ae89aa47cfd850b1983e62033e9fc5f6042",
           "source": "stories"
         },
         {
-          "hash": "56da187127a14dabcea3d7e86338360a92a157cfb0e8d6f3bddf4159d6283116",
+          "hash": "466a2cf763ac1374c62583da68c81d15d8aece066ae06417d6a4356855606954",
           "source": "stories"
         },
         {
-          "hash": "bd306cbc9485a4467f268e9969f8a5f0f00429498ccfe78040c56180b634fa9a",
+          "hash": "f5e88271260df2b0e8df1a0b03d96a4c3004f14d0e5aaec8892007d6c41fddb4",
           "source": "stories"
         },
         {
-          "hash": "7bf98b4215d0765b2bbc570bf769752133facd77c2610403084cde351ca5aa91",
+          "hash": "5bbda57b2d06dfefaed853ba5ad655bb306fd8ecfbc92a6a96dee1deffc1af2f",
           "source": "stories"
         },
         {
-          "hash": "b61f06d41d43fd9c2339f17a5b01c6a2352b78df04e1c7af7cd9edd0a3750023",
+          "hash": "3298cc00509da7da73ca2da525874e520a453a289a0c4985f6f11249b5768dba",
           "source": "stories"
         },
         {
-          "hash": "c30f95eaa297f541844c392eb546b9d08570f22a5e42b68a89bd30232659e507",
+          "hash": "88a98229b741820a7e0d61f5e3e8e51340ac8d1cc2eb5332be8189a42f43b6ff",
           "source": "stories"
         },
         {
-          "hash": "0fa2c2f34c85ce5102a3cc057753d15ec01c8c91b5d147d9e5edb05d34148449",
+          "hash": "67584b9b52bd672e0ebac7428297a5655e868141267114cdc9637baff807b308",
           "source": "stories"
         }
       ]
@@ -13058,7 +13154,7 @@
       "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';",
       "examples": [
         {
-          "hash": "7a769965048d5fc191bd44af93ca259df9cd9e8ca65e2da9d44435a72352d690",
+          "hash": "0c268f0ec6b90f7352970d3db858c53364c60f2321af3c578568fc93082425bb",
           "source": "canonical"
         }
       ]
@@ -13149,23 +13245,27 @@
       "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';",
       "examples": [
         {
-          "hash": "46eb2e5e014d9918506f4ed722a17b3bcc515a9952f013765aa23300503f6581",
+          "hash": "8ee4eda344b62edf1015fe21cd52d4f5a5dd71cc3afca58644d9f941978f4f08",
           "source": "canonical"
         },
         {
-          "hash": "ea3c321b74ab772b6f353f61d0c0801ac82412d2304361b9b1427847e614b4b5",
+          "hash": "40a22244886d5bdbd3ed0c2eeccc5859897c73c7f35ce9d0b27a7a9547709f28",
           "source": "readme"
         },
         {
-          "hash": "7619f1805b51e01e25c38390a5ef85970f179beb2103868026216700297af2a5",
+          "hash": "d17ae919d30d1b43236c52018609c72e725c0e22e47938fa2bed04cae70b2542",
+          "source": "readme"
+        },
+        {
+          "hash": "4eb35f906280d6f50e93ee158c0792dc740933db4705b831c71d24aadf3e2de7",
           "source": "stories"
         },
         {
-          "hash": "1368d9a081c161226c0abfd74042767230c6932f91ffaef8f9bc0008e0172021",
+          "hash": "da48319e963f8bce14fd2d0e6276dbdb8273cee567181e50abfb14f902872b76",
           "source": "stories"
         },
         {
-          "hash": "27102a1be34a23388d216bcaea7d4365ba5b1f5ddc311a714e76acab74f9663b",
+          "hash": "c2d0e5c92e119088561656cca130e7fe6d43a492895329f41b30087cb4f987a7",
           "source": "stories"
         }
       ]
@@ -13188,7 +13288,7 @@
       "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';",
       "examples": [
         {
-          "hash": "46eb2e5e014d9918506f4ed722a17b3bcc515a9952f013765aa23300503f6581",
+          "hash": "8ee4eda344b62edf1015fe21cd52d4f5a5dd71cc3afca58644d9f941978f4f08",
           "source": "canonical"
         }
       ]
@@ -13281,47 +13381,51 @@
       "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
       "examples": [
         {
-          "hash": "874c0289a3373dd3d695285aa0f82b8c296344a6523d1eba0f2d8d8843de3f5e",
+          "hash": "323997b5e7fbded862fcafd3b54089dd9dfae28d4b7c04fbe3d26f612a7b2406",
           "source": "canonical"
         },
         {
-          "hash": "fba58aaa98e3848adf8bdb90910fc477e13c5d03dcde7c7b9c0b36b5b9b34e14",
+          "hash": "97c44f1fee50bdc6a2d6a8cb4b7c56c51a2997d2ea78b3647cce7b0c249f6f8c",
           "source": "readme"
         },
         {
-          "hash": "1d6bd2e44c1dc8a7721eb127c8c470e4fc1302c01e53e18a41d5f0c2d83cc793",
+          "hash": "ae23f0d9349157c952b7752e33ea302d85c3d3f09654ece8ddf9107f7b194b68",
+          "source": "readme"
+        },
+        {
+          "hash": "bfcdf99e7f52ffcf1dcf1ecb5cec8abe72003bb0176bb7aa1b8f4bf87df202ed",
           "source": "stories"
         },
         {
-          "hash": "284ea7b22707c78eea4297b37bd7d00f86c317dfa30a18c957ba96b5fceb6e88",
+          "hash": "216b625401b1ee29a2c8f02427f776e18dd670858e53fd87ea414473832ba9c9",
           "source": "stories"
         },
         {
-          "hash": "fb7281ea3d63f2737ff7a0c1891f104414c25e8341d2d8465d27fd8a99d22b69",
+          "hash": "3eeffae8089eb4c5263987d1efdbdb531b44459ca7f63135ee8f3a215faa0928",
           "source": "stories"
         },
         {
-          "hash": "90092f8dd27dd6d5cb148cceba0d8a4f78aad8855a0fce8f703c4bf3cbaf720d",
+          "hash": "4844dfaf4dff931b3d5b14135a788fc632daa05669c14237139b0a15e6d1a793",
           "source": "stories"
         },
         {
-          "hash": "89c9cba267296442885b878c96baaea6e6d068fae0432e39671310e24b5c68ac",
+          "hash": "17aad2a9b23bb7f9a4768f770a9b9b5b06d74dab24c5200037505b0047ec2391",
           "source": "stories"
         },
         {
-          "hash": "1012b70bb6b8eceb019a8f4860fbcf78a388350f7fb6b68822393363514c01c3",
+          "hash": "66d442fc9388c014800dbcc672d9dae750c1529fd05f0b26e8f4dbf091abd20b",
           "source": "stories"
         },
         {
-          "hash": "56f08e9a530d43dc806f65624f55a0ea2fd88e16669a5a9f6e4df7d3d050ddf7",
+          "hash": "f3a91dcc57956f6ad5d0a390fd1f02519474f3ddfd4691ac865e8f7001fa9ef5",
           "source": "stories"
         },
         {
-          "hash": "cb12a617c652a478db85bbaf263b02a88534a23acb58a743641fd2fa7ce95439",
+          "hash": "89acd530e5d3ac4d2f2cdc50085c98fc8d6ee5a3f488a16486455a35460bb354",
           "source": "stories"
         },
         {
-          "hash": "959b3ddd666f44bb3e34080295e77a105a8b1625c2722272128ee20dce9df69f",
+          "hash": "7b215bce46f64784de7156995e907e66d62ce4f4a9b7cb0950fa2f8f78463ad3",
           "source": "stories"
         }
       ]
@@ -13345,7 +13449,7 @@
       "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
       "examples": [
         {
-          "hash": "874c0289a3373dd3d695285aa0f82b8c296344a6523d1eba0f2d8d8843de3f5e",
+          "hash": "323997b5e7fbded862fcafd3b54089dd9dfae28d4b7c04fbe3d26f612a7b2406",
           "source": "canonical"
         }
       ]
@@ -13369,7 +13473,7 @@
       "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
       "examples": [
         {
-          "hash": "874c0289a3373dd3d695285aa0f82b8c296344a6523d1eba0f2d8d8843de3f5e",
+          "hash": "323997b5e7fbded862fcafd3b54089dd9dfae28d4b7c04fbe3d26f612a7b2406",
           "source": "canonical"
         }
       ]
@@ -13508,11 +13612,11 @@
       "canonicalUsage": "<Tour open steps={[]} onClose={() => {}} />",
       "examples": [
         {
-          "hash": "8a039d35bf216ee79ea2b4e32c79e39511af7a973d3b4ca0d847a1f6b1db689b",
+          "hash": "92884b0ad016e0b0699fc547bc92043837674393d2d601ebe0fc0aa31ced6498",
           "source": "canonical"
         },
         {
-          "hash": "83b8b12ee8492b3c257aa3e77d2ad7226d2b0b6140e3f76c6afc21131f8d10c2",
+          "hash": "9856c3fcdf26046e1e631b2aeb36d7da1f1f316ddb5a33f17c71a0434111aea0",
           "source": "stories"
         }
       ]
@@ -13536,7 +13640,7 @@
       "canonicalUsage": "import type { TourProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "96d88abf705996407a6916dfde78f26c8ef79d9227c1e9bc88838abf6b36f8cf",
+          "hash": "f3e3e35db28e26c2e5f1870c2e23d646f593f798d99eda835808ea9652ed85d7",
           "source": "canonical"
         }
       ]
@@ -13560,7 +13664,7 @@
       "canonicalUsage": "import type { TourStep } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "d04ee61a1ef11a50499c998929bb1a6272dd090b1627408144d3ecd5f400c14a",
+          "hash": "7ae894e8181a0534204e98888ca38826cde3925bb26787a732a0829c181669a3",
           "source": "canonical"
         }
       ]
@@ -13580,7 +13684,7 @@
       "canonicalUsage": "Trigger();",
       "examples": [
         {
-          "hash": "074e86d13c7d9a68d5694e79006281c382f549d4365a1cbb4fbd39d95885c401",
+          "hash": "f1fd9c22aed7f64f20f92113407cac7aeb1750a0623e511784dda6813e00b67e",
           "source": "canonical"
         }
       ]
@@ -13607,7 +13711,7 @@
       "canonicalUsage": "import type { TriggerAction } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "6ead2edfd91fca099e695b2beda53aa31150a9db0193fe06e17c49ec64ac671f",
+          "hash": "79d6736104fbd2a0cdb0081045a650f31fb2cdc051f7170c185c73b5a70c2bf0",
           "source": "canonical"
         }
       ]
@@ -13634,7 +13738,7 @@
       "canonicalUsage": "import type { TriggerContent } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "f18e81cff127db918d8c95b366d0f0f91cd4fc43efb3de4ba7a32d79f55b140d",
+          "hash": "0914d8f9442c252fe06be76431695e7673a02bd475b9bad034e5bc5dedf021ff",
           "source": "canonical"
         }
       ]
@@ -13661,7 +13765,7 @@
       "canonicalUsage": "import type { TriggerContentContext } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "9f14763d46414e7c4b8061c3d0fc4394fd7f91192a5ff44fea97349a3fcbc25d",
+          "hash": "182c2782ef8a0d17a1da002048cb2f2ccd2469370cc302d126d075b4394df24b",
           "source": "canonical"
         }
       ]
@@ -13688,7 +13792,7 @@
       "canonicalUsage": "import type { TriggerProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "73e9768b2c51581a73c7e80f9986d540e6dd5c4353209e42a9afad55bc2e1f00",
+          "hash": "49a2e96ec0947afd6fe798ab777749f04241987e5f6c9364ac5fdff699d8aa31",
           "source": "canonical"
         }
       ]
@@ -13715,7 +13819,7 @@
       "canonicalUsage": "import type { TriggerRole } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "0c404970dc61051322fa4f50236e741d1122543aab122bfc2360f4afa49f69ff",
+          "hash": "4db81691f06b6d355c08291c79ad9154135a7851bc1653cf092a6f6ff1766a2a",
           "source": "canonical"
         }
       ]
@@ -13752,55 +13856,59 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         },
         {
-          "hash": "517e4b31f20e36b6d6da699989bc802ee2f310d44a219f1bcdd18b0bd538023f",
+          "hash": "124abe44040ddcd13aa6aad8f0dd237bae86b652e64005957c39324a2182b934",
           "source": "readme"
         },
         {
-          "hash": "074447baa439011627e4d0c7a62d3c9b6add0e410491d80651f2d5bf58bfca00",
+          "hash": "07a4236cc3c96aa1a14a8ab647fef5e00704b05042314ec5815451b3dd3b5ba0",
           "source": "readme"
         },
         {
-          "hash": "801ac9e23e39cb6489cdc14af75c2690301e3b8f6248c6a0c127540525a75362",
+          "hash": "766dd217b19892aada825661298c8a2786c749173f3ec4d4f1f4a8e6aa0c5724",
           "source": "readme"
         },
         {
-          "hash": "ab5c324c61a5f02471bebf0ffc7a02c3fa14d88b86a88748bd4b37d2d68ecb8c",
+          "hash": "2db7958f91085606312d3dea5983e6a87724bdaaaeb755893810034b5be459a2",
+          "source": "readme"
+        },
+        {
+          "hash": "e10bfd381cb38acb38120e8d2efaf6b5cde348cfa810261c23abb94f219581b9",
           "source": "stories"
         },
         {
-          "hash": "a56b51b2ba04e6fe71ad295eb763826caeae786840f044ae8e6bac2ea5496bf1",
+          "hash": "eb427461f9033ecdecd7f9fbecd2c65d93d6a9f081ee8af32cd9665d94095ec9",
           "source": "stories"
         },
         {
-          "hash": "45252867b867d4574c4422b0dc8f81f80681ef9f252bb0dcb5b4111a6828fe0f",
+          "hash": "34e2f9c81f78d36f106c7236b21814e0edbc3300a9f8b86d898f88ce8076b551",
           "source": "stories"
         },
         {
-          "hash": "aa9d3cac92fdf34a0543a349573665ef4d481ab602bced73e02d55c1cde01d0f",
+          "hash": "82ed28632bfdbef8997d2ce35118bfa9620a94a8c2ee8ebf3228c37f66eca988",
           "source": "stories"
         },
         {
-          "hash": "2b3fc3b39c7eb57ee505bdfbba18d6c635035548c1010e23b9c468b5461d9c56",
+          "hash": "701f468e63d72f0fe836f011aae7941f7202835fe80f43ae13f529a130c5a505",
           "source": "stories"
         },
         {
-          "hash": "761ae88c482cfc9b4dff5a70caa5dcd52d278fbebbe3337b8eb6bc608e6b40dd",
+          "hash": "2b97ea480bdd9e78ecabd54bc4c254a48c281f6121a50a054418593c9c9d8f5c",
           "source": "stories"
         },
         {
-          "hash": "d15642e0e0c66cf1892b419ab6a2c46184dc545b03d490568c3e8f3882a4bcbe",
+          "hash": "6478fc80ce583f333fa19561a67d364fae1c84389c5242714d4aa85e16ece19c",
           "source": "stories"
         },
         {
-          "hash": "3765b9b65358e3b9f8a27e2977803b856f24283972aa7cfbb7fd363fd67b44e4",
+          "hash": "a304a3d6b1220502a36e9ed2e198e53f9ce51219f0ff9f64776058c9f3798045",
           "source": "stories"
         },
         {
-          "hash": "3a0d87cad48f2b1f28af7b4b9c2b86fa77b684f5ef53ea871de9a58e6c54e859",
+          "hash": "bfb9824d83e218356e786080a15403f2dfc660af265b41a8eec26863bd40cc53",
           "source": "stories"
         }
       ]
@@ -13836,7 +13944,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -13872,7 +13980,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -13908,7 +14016,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -13944,7 +14052,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -13980,7 +14088,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14016,7 +14124,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14052,7 +14160,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14088,7 +14196,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14124,7 +14232,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14160,7 +14268,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14196,7 +14304,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14232,7 +14340,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14268,7 +14376,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14304,7 +14412,7 @@
       "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
       "examples": [
         {
-          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "hash": "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6",
           "source": "canonical"
         }
       ]
@@ -14420,19 +14528,23 @@
       "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
       "examples": [
         {
-          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "hash": "93b8b9acce6685bc6f00a21f857fc812e41fb754d3e946d7576e2543f056f1c0",
           "source": "canonical"
         },
         {
-          "hash": "477943c67bf232b2b011ce862c736ff9d98749cac72dd25d2f0d6aa4d8800866",
+          "hash": "285dd42c2ca63f8f2eb21d39bf4dd6649d9b1383834a94ba626d242b9acc24a1",
           "source": "readme"
         },
         {
-          "hash": "b85523cf25538996a1c24800f85df79bbdac7764afb70db63c595c9dffcaa1c4",
+          "hash": "f6add1649c4e02d141bd89c9cedf782cf9bf66c617de71226b13802729c7a205",
           "source": "readme"
         },
         {
-          "hash": "26a19b92d9700532c61f4dd281c35829bd6da8aa2bf6c2e0c32a24bd5a9bc8c5",
+          "hash": "56b494b1a04a352e9bedd066d593b090bbc5039fc29319eceb82865d0e8dfb65",
+          "source": "readme"
+        },
+        {
+          "hash": "f7f96c74f982e37eb075e6bd5affd0bbcf3d63faca5bb60a1175fe7725dad87b",
           "source": "stories"
         }
       ]
@@ -14513,7 +14625,7 @@
       "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
       "examples": [
         {
-          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "hash": "93b8b9acce6685bc6f00a21f857fc812e41fb754d3e946d7576e2543f056f1c0",
           "source": "canonical"
         }
       ]
@@ -14538,7 +14650,7 @@
       "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
       "examples": [
         {
-          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "hash": "93b8b9acce6685bc6f00a21f857fc812e41fb754d3e946d7576e2543f056f1c0",
           "source": "canonical"
         }
       ]
@@ -14563,7 +14675,7 @@
       "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
       "examples": [
         {
-          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "hash": "93b8b9acce6685bc6f00a21f857fc812e41fb754d3e946d7576e2543f056f1c0",
           "source": "canonical"
         }
       ]
@@ -14593,7 +14705,7 @@
       "canonicalUsage": "import type { UsePaginationOptions } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b3269e0f2d0e7c661031e42cd9f42fc4b05a8e44adca30ee1d03792ad3147ba6",
+          "hash": "4831602e1843344ccb14281ad853e240d2d5c1c2010be19cf091cacd678e6eda",
           "source": "canonical"
         }
       ]
@@ -14623,7 +14735,7 @@
       "canonicalUsage": "import type { UsePaginationResult } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "77e1cf5867cfc41182bff2220826370fa61748de721d6b2584d7d560bf2c0dd1",
+          "hash": "f7d75c4c5f4f678aa093b1506c43f3b64f084e77935a1995764eafb16f65acb3",
           "source": "canonical"
         }
       ]
@@ -14695,7 +14807,7 @@
       "canonicalUsage": "import type { ValidateStatus } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "8247a9554109513467d80b8a35240fb5a6e9cf779a21f7c4ecff129093c814a5",
+          "hash": "4186c0d2b90dd549d7f6497e4b7fb0b101654305b0e3e128cd0f1d6ca78bfb2a",
           "source": "canonical"
         }
       ]
@@ -14767,7 +14879,7 @@
       "canonicalUsage": "import type { ValidateTrigger } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "9eefa6771fcb27648db4d9fabf1ae917a630d41b3d5a42a117eb37be38b56113",
+          "hash": "0c0afbe2548cd54cf225af79ea0be88e179d1592672834759ce9d5c4dd0d7476",
           "source": "canonical"
         }
       ]
@@ -14791,35 +14903,35 @@
       "canonicalUsage": "<VirtualList />",
       "examples": [
         {
-          "hash": "0e2dec50d70bd70872185f7df956a6ce124bbf924f23c8eabe4982e1ecf26220",
+          "hash": "d04fb66d67c8ae60bbd4a4937cb198b9b91ef7835b27f5766f421c864efdf891",
           "source": "canonical"
         },
         {
-          "hash": "d15d6e83068938c5da737543b9001c84c137c5598ce7e756c465635015da0e9e",
+          "hash": "40b55a924e580ca4161d97e698db47fb342eae5c804b2bfbaab1f5eb64a58e09",
           "source": "stories"
         },
         {
-          "hash": "3a54c632f22536687e4ed9e17f67c16e3a9e77ff29c9bc4a1cd8b9d25a2cea31",
+          "hash": "b10ee9c589c50c54ef2d4a90431dccecd7acbe7e6c56c234cf8b3d476fcd9e00",
           "source": "stories"
         },
         {
-          "hash": "ee6fd2b66f230ba55e81f5d6dd2b5d615ed77a2e3de08d669d2c1e4590a0a165",
+          "hash": "acab0e7cc530a58ffcca4edc686eb0a0b922021deac39c66bbd80ffd9d82ab5f",
           "source": "stories"
         },
         {
-          "hash": "2ab77e81dddcdc2fa37f1d5a5120de36dedd49cb85103c06a1a1dd24f1e72ee0",
+          "hash": "8df6f3452cf569f7cd621f94c1dd995eb5ec459f581e7d193254034e7a6dbbd2",
           "source": "stories"
         },
         {
-          "hash": "ab0403e62c94713de6dd61ca061d9073d56ba263b9f85cf5f9ed1ddbea8b6d90",
+          "hash": "21e145efeaada4cb2c7e716099dd9261f34d38e9df00905994175c1a5e9aabb5",
           "source": "stories"
         },
         {
-          "hash": "1cb015f3e0855e585a043b31ca6ab2548c5deba7b49784597b3a4b370552a0bf",
+          "hash": "7aff0837c66402bc8bfd244cefc96957343db1dc910f9d19c3fd5a4d38936448",
           "source": "stories"
         },
         {
-          "hash": "76c1197c87f2f6999de94820b68014b24f2b901f41f998df8b43844f3b27e871",
+          "hash": "7decc20ca0112ca8b497a08d1131565c7fc9d060ebdee8a34422d6f60b1a5c00",
           "source": "stories"
         }
       ]
@@ -14844,7 +14956,7 @@
       "canonicalUsage": "import type { VirtualListProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "b68195939e77c65de85efdcc7d2b36f70103f455d34c46643c83fef14ee60fc4",
+          "hash": "aeb5b3145a02eaf5de7b756aa71f963aac5ab51ac00f7f76dbc2599ab7634b3a",
           "source": "canonical"
         }
       ]
@@ -14869,7 +14981,7 @@
       "canonicalUsage": "import type { VirtualListRef } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "648f1f281d63968813e49f167b1de1f2ecbe3cf250ef73ea69973602535a80a4",
+          "hash": "b5c565a619ca8c6ea6be3771a025e08245ee1157433a0f25341df72da8c82c84",
           "source": "canonical"
         }
       ]
@@ -14894,7 +15006,7 @@
       "canonicalUsage": "import type { VirtualListScrollInfo } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "925f040e7967cc26171dd00e958183d004efe4b40e569828af4e4aef0f6b6ab5",
+          "hash": "2ab81b696087edd4949bb8a066c36ceb58197f8a8d1e3ab2f387eb6275fe724e",
           "source": "canonical"
         }
       ]
@@ -14916,7 +15028,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -14947,7 +15059,7 @@
       "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
       "examples": [
         {
-          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
           "source": "canonical"
         }
       ]
@@ -15019,7 +15131,7 @@
       "canonicalUsage": "createProFormField(config);",
       "examples": [
         {
-          "hash": "a5842c6108977e26b97ff50bb3f3528512508be353fb80fdbbb6c38bddb09762",
+          "hash": "459fb4fed33834539f12047eb8791c8c459888b43df3cfa51c852237d244b1b1",
           "source": "canonical"
         }
       ]
@@ -15043,15 +15155,12 @@
         "NotificationStaticConfig",
         "NotificationStatus"
       ],
-      "searchTags": [
-        "snackbar",
-        "toast"
-      ],
+      "searchTags": [],
       "signature": "NotificationStaticApi",
       "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
       "examples": [
         {
-          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "hash": "86adb3cfba3b31e2471a79d61a1b957e43bef02210b83c118411573478e7d4d7",
           "source": "canonical"
         }
       ]
@@ -15081,7 +15190,7 @@
       "canonicalUsage": "const result = usePagination(options);",
       "examples": [
         {
-          "hash": "0bd5e17a8fdf9ce2597956d88d3353b55e27bec608882228f3eb3193fa2fb5f1",
+          "hash": "5fe4eaf6d6cc1aae1c57021991c5791efa10197d77e9fee4d8d3ad0301ed09b2",
           "source": "canonical"
         }
       ]
@@ -15107,7 +15216,7 @@
       "canonicalUsage": "const result = useResizeObserver(enabled, getTarget);",
       "examples": [
         {
-          "hash": "51bc3448f5ec4346e48ff64f2148ee1d529f46d1a659ccb9ae24bc9da56aa4e0",
+          "hash": "600b7c61c09e62351c4da01ba0451212e347f76292d57d62d472809568ab33f1",
           "source": "canonical"
         }
       ]
