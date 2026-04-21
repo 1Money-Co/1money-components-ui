@@ -1,6 +1,6 @@
 name: DOCS CICD
 
-on: 
+on:
   workflow_dispatch:
 
   push:

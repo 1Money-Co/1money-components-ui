@@ -105,7 +105,16 @@
       "Bash(gh api *)",
       "Bash(cp /Users/wali/1Money/1money-react-ui/src/components/Loading/lottie-pure.json /Users/wali/1Money/1money-components-ui/src/components/Spinner/lottie-pure.json)",
       "Bash(cp /Users/wali/1Money/1money-react-ui/src/components/Loading/lottie-pattern.json /Users/wali/1Money/1money-components-ui/src/components/Spinner/lottie-pattern.json)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(curl -s \"http://localhost:6205/iframe.html?id=components-proform--all-field-types&viewMode=story\")",
+      "Bash(git checkout *)",
+      "Bash(curl -s \"http://localhost:6205/iframe.html?id=components-proform--default&viewMode=story\")",
+      "Bash(node -e ' *)",
+      "Bash(curl -s \"http://localhost:6205/@fs/Users/derrick/Desktop/1money/1money-components-ui/src/components/ProForm/ProForm.stories.tsx\")",
+      "Bash(curl -s \"http://localhost:6205/@fs/Users/derrick/Desktop/1money/1money-components-ui/src/components/ProForm/ProFormGroup.tsx\")",
+      "Bash(curl -s \"http://localhost:6205/@fs/Users/derrick/Desktop/1money/1money-components-ui/src/components/Typography/index.ts\")",
+      "Bash(curl -s \"http://localhost:6205/@fs/Users/derrick/Desktop/1money/1money-components-ui/src/components/ProForm/index.ts\")",
+      "Bash(curl -s \"http://localhost:6205/@fs/Users/derrick/Desktop/1money/1money-components-ui/src/components/ProForm/ProForm.tsx\")"
     ]
   }
 }
