@@ -544,3 +544,24 @@ function SubmitButton() {
 | Skip effect on initial mount | `useUpdateEffect` |
 | Batch synchronous state updates | `useLayoutState` |
 | Short-lived lock with auto-reset | `useTimeoutLock` |
+
+## MCP Server (for AI assistants)
+
+This package ships an MCP stdio server so AI coding assistants can answer "which 1money component for X, what are its props, how do I import it" without grepping source. It lives under `scripts/mcp-server/` and is exposed via the `1money-ui-mcp` bin entry.
+
+Downstream repos wire it into `.mcp.json` once — they don't install anything globally:
+
+```json
+{
+  "mcpServers": {
+    "1money-ui": {
+      "command": "npx",
+      "args": ["-y", "--package=@1money/component-ui", "1money-ui-mcp"]
+    }
+  }
+}
+```
+
+The server reads three committed artifacts (`index.generated.json`, `examples.generated.json`, `drift.json`). Run `pnpm build:mcp-index` whenever you add or change a component, prop, icon, token, synonym (`scripts/mcp-server/indexer/synonyms.json`), or canonical snippet (`src/components/<Folder>/canonical.md`). The `prebuild` hook runs it before every library build, and CI fails the PR if the committed artifacts drift from source.
+
+See `scripts/mcp-server/README.md` for the full tool reference, consumer config details, and contribution guide (adding synonyms, writing canonical snippets, schema versioning).
