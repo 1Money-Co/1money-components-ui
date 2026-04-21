@@ -33,12 +33,10 @@ test('drift detection returns object with three keys', async () => {
   assert.ok(Array.isArray(drift.suggestedFixes));
 });
 
-test('orphanSubpath contains ./Form (consolidated into ProForm)', async () => {
+test('orphanSubpath does not contain ./Form (removed in Task 11)', async () => {
   const drift = await getDrift();
   const formSubpath = drift.orphanSubpath.find(entry => entry.subpath === './Form');
-  assert.ok(formSubpath, 'should find ./Form in orphanSubpath');
-  assert.equal(formSubpath.target, './es/components/Form/index.js');
-  assert.equal(formSubpath.reason, 'no matching component directory or flat export');
+  assert.equal(formSubpath, undefined, './Form subpath was removed from package.json#exports; drift should be clean');
 });
 
 test('orphanSubpath is sorted ascending by subpath', async () => {
@@ -61,12 +59,12 @@ test('orphanSymbol is sorted ascending by sourceSubpath', async () => {
   }
 });
 
-test('suggestedFixes includes removeSubpath for ./Form', async () => {
+test('suggestedFixes does not include removeSubpath for ./Form (already removed)', async () => {
   const drift = await getDrift();
   const formFix = drift.suggestedFixes.find(
     f => f.kind === 'removeSubpath' && f.subpath === './Form',
   );
-  assert.ok(formFix, 'should find removeSubpath fix for ./Form');
+  assert.equal(formFix, undefined, './Form was removed in Task 11; no fix should be suggested');
 });
 
 test('suggestedFixes is sorted ascending by subpath', async () => {
