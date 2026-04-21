@@ -5,6 +5,7 @@ import { Button } from '@/components/Button';
 import { Checkbox } from '@/components/Checkbox';
 import { Icons } from '@/components/Icons';
 import { Input } from '@/components/Input';
+import { TypographyBody } from '@/components/Typography';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { Placement } from '@floating-ui/react';
 import { joinCls } from '@/utils/classnames';
@@ -242,9 +243,11 @@ function DropdownItem({
         <p style={itemTitleStyle}>{title}</p>
         {subtitle && <p style={itemSubtitleStyle}>{subtitle}</p>}
       </div>
-      {right && <div style={{ flex: 1, textAlign: 'right' }}>{right}</div>}
-      {selected && (
-        <Icons name="check" size={16} color="#131313" />
+      {right && <div style={{ flexShrink: 0, textAlign: 'right' }}>{right}</div>}
+      {selected !== undefined && (
+        <div style={{ flexShrink: 0, width: 16 }}>
+          {selected && <Icons name="check" size={16} color="#131313" />}
+        </div>
       )}
     </button>
   );
@@ -622,14 +625,18 @@ export const MultiSelectWithCheckbox: Story = {
                   style={{
                     padding: '6px 12px',
                     borderRadius: 8,
+                    fontSize: 14,
                     backgroundColor: selected.includes(item) ? '#f8f8f8' : 'transparent',
                   }}
                 >
-                  <Checkbox
-                    label={item}
-                    checked={selected.includes(item)}
-                    onChange={() => toggle(item)}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer' }} onClick={() => toggle(item)}>
+                   <Checkbox
+                      checked={selected.includes(item)}
+                      onChange={() => toggle(item)}
+                   />
+                    <TypographyBody>{item}</TypographyBody>
+                  </div>
+
                 </div>
               ))}
             </div>
@@ -925,9 +932,11 @@ export const AddressHistory: Story = {
                   <div style={{ flexShrink: 0, textAlign: 'right' }}>
                     <p style={itemAmountStyle}>{addr.token}</p>
                   </div>
-                  {selected === addr.id && (
-                    <Icons name="check" size={16} color="#131313" />
-                  )}
+                  <div style={{ flexShrink: 0, width: 16 }}>
+                    {selected === addr.id && (
+                      <Icons name="check" size={16} color="#131313" />
+                    )}
+                  </div>
                 </button>
               ))}
             </div>
