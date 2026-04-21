@@ -40,6 +40,7 @@ const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, '..', '..');
 const indexPath = path.join(__dirname, 'index.generated.json');
 const driftPath = path.join(__dirname, 'drift.json');
+const examplesPath = path.join(__dirname, 'examples.generated.json');
 const pkgPath = path.join(repoRoot, 'package.json');
 
 /**
@@ -107,7 +108,7 @@ const TOOL_CATALOG = [
   {
     name: 'get_examples',
     description:
-      'Fetch curated usage examples for a symbol. V1 returns an empty list; example extraction lands in a follow-up task.',
+      'Fetch curated usage examples for a symbol. Sources: README fenced blocks, Storybook `render` bodies, and canonical snippets. Each entry carries a compilable flag.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -193,14 +194,16 @@ const TOOL_CATALOG = [
 ];
 
 async function loadContext() {
-  const [indexRaw, driftRaw, pkgRaw] = await Promise.all([
+  const [indexRaw, driftRaw, examplesRaw, pkgRaw] = await Promise.all([
     fs.readFile(indexPath, 'utf8'),
     fs.readFile(driftPath, 'utf8'),
+    fs.readFile(examplesPath, 'utf8'),
     fs.readFile(pkgPath, 'utf8')
   ]);
 
   const index = JSON.parse(indexRaw);
   const drift = JSON.parse(driftRaw);
+  const examplesIndex = JSON.parse(examplesRaw);
   const pkg = JSON.parse(pkgRaw);
 
   if (index.schemaVersion !== EXPECTED_SCHEMA_VERSION) {
@@ -211,7 +214,15 @@ async function loadContext() {
     process.exit(1);
   }
 
-  return { index, drift, pkg };
+  if (examplesIndex.schemaVersion !== EXPECTED_SCHEMA_VERSION) {
+    console.error(
+      `[mcp] schemaVersion mismatch in examples.generated.json: expected '${EXPECTED_SCHEMA_VERSION}', got '${examplesIndex.schemaVersion}'. ` +
+        'Regenerate with `pnpm build:mcp-index`.'
+    );
+    process.exit(1);
+  }
+
+  return { index, drift, examplesIndex, pkg };
 }
 
 function toToolResult(value) {

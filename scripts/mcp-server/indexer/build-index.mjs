@@ -6,11 +6,13 @@ import { parseTokens } from './parse-tokens.mjs';
 import { parseIcons } from './parse-icons.mjs';
 import { detectDrift } from './parse-exports.mjs';
 import { generateCanonical } from './generate-canonical.mjs';
+import { parseExamples } from './parse-examples.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..', '..', '..');
 const outputPath = path.join(__dirname, '..', 'index.generated.json');
 const driftPath = path.join(__dirname, '..', 'drift.json');
+const examplesPath = path.join(__dirname, '..', 'examples.generated.json');
 const synonymsPath = path.join(__dirname, 'synonyms.json');
 
 function writeJson(filePath, obj) {
@@ -52,9 +54,18 @@ async function buildIndex() {
       if (canonical) symbol.canonicalUsage = canonical;
     }
 
+    // Examples run AFTER canonicals are merged so parse-examples can pick up
+    // `canonicalUsage` from every symbol.
+    const { examples: exampleBodies, references: exampleRefs } = await parseExamples({
+      repoRoot,
+      symbols,
+    });
+    for (const symbol of symbols) {
+      symbol.examples = exampleRefs[symbol.name] ?? [];
+    }
+
     const index = {
       schemaVersion: '1',
-      generatedAt: new Date().toISOString(),
       symbols,
       tokens,
       icons,
@@ -63,9 +74,16 @@ async function buildIndex() {
       },
     };
 
+    const examplesDoc = {
+      schemaVersion: '1',
+      examples: exampleBodies,
+    };
+
     await writeJson(outputPath, index);
     await writeJson(driftPath, drift);
+    await writeJson(examplesPath, examplesDoc);
 
+    const exampleCount = Object.keys(exampleBodies).length;
     console.log(
       `[mcp-index] wrote ${path.relative(repoRoot, outputPath)} ` +
         `(${symbols.length} symbols, ${tokens.length} tokens, ${icons.length} icons)`,
@@ -73,6 +91,10 @@ async function buildIndex() {
     console.log(
       `[mcp-index] wrote ${path.relative(repoRoot, driftPath)} ` +
         `(${drift.orphanSubpath.length} orphan subpaths, ${drift.orphanSymbol.length} orphan symbols)`,
+    );
+    console.log(
+      `[mcp-index] wrote ${path.relative(repoRoot, examplesPath)} ` +
+        `(${exampleCount} unique examples)`,
     );
     if (canonicalDiagnostics.length > 0) {
       console.log(

@@ -1,6 +1,5 @@
 {
   "schemaVersion": "1",
-  "generatedAt": "2026-04-21T08:11:05.522Z",
   "symbols": [
     {
       "name": "Accordion",
@@ -87,7 +86,17 @@
         "accordion",
         "collapse"
       ],
-      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';"
+      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
+      "examples": [
+        {
+          "hash": "30abf912d77f66252047ce0893f2a4f5fa3b159721dfe16d50a2647830d21432",
+          "source": "canonical"
+        },
+        {
+          "hash": "eab86171096fa30a5b194ff050489ba0a25826b1f988f0252a189152e933fa4a",
+          "source": "readme"
+        }
+      ]
     },
     {
       "name": "AccordionItem",
@@ -105,7 +114,13 @@
       ],
       "searchTags": [],
       "typeText": "interface AccordionItem { ... }",
-      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';"
+      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
+      "examples": [
+        {
+          "hash": "30abf912d77f66252047ce0893f2a4f5fa3b159721dfe16d50a2647830d21432",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "AccordionProps",
@@ -123,7 +138,13 @@
       ],
       "searchTags": [],
       "typeText": "interface AccordionProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
-      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';"
+      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
+      "examples": [
+        {
+          "hash": "30abf912d77f66252047ce0893f2a4f5fa3b159721dfe16d50a2647830d21432",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Alert",
@@ -234,7 +255,37 @@
       "searchTags": [
         "alert"
       ],
-      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
+      "examples": [
+        {
+          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "source": "canonical"
+        },
+        {
+          "hash": "752ec16a93165b92775e76c222419854b2c02f0b2d2b4f18480c747a7292afd5",
+          "source": "readme"
+        },
+        {
+          "hash": "253e62f3b412854d1f4b7a06665b46def10b7f20d98d2e521f952cc899c3e542",
+          "source": "stories"
+        },
+        {
+          "hash": "f984ff30d979ef179c5bc94db6e9038e1bef53cd0fc53bb48f4d982a0e53487d",
+          "source": "stories"
+        },
+        {
+          "hash": "7c74bbe3e3fc0fbe66c261ca05107645f5c95e75b66b3279b92260ceea793eab",
+          "source": "stories"
+        },
+        {
+          "hash": "ebee40740b2cf87f66a4a90ab6461ba7191fdc8627f059887e65854db7163ae2",
+          "source": "stories"
+        },
+        {
+          "hash": "775f727b8a4d9c05f8a6cbd0eeb6051bae8acd8096b50e551e7890457f0cf083",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "AlertLinkConfig",
@@ -253,7 +304,13 @@
       ],
       "searchTags": [],
       "typeText": "interface AlertLinkConfig { ... }",
-      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
+      "examples": [
+        {
+          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "AlertProps",
@@ -272,7 +329,13 @@
       ],
       "searchTags": [],
       "typeText": "interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }",
-      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
+      "examples": [
+        {
+          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "AlertStatus",
@@ -291,7 +354,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof ALERT_STATUSES)[number]",
-      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
+      "examples": [
+        {
+          "hash": "cd661e2897efea5de70d07ee5e3362cdcf9f90d735ac1647f57c29f3a0d4199d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Button",
@@ -384,7 +453,49 @@
       "searchTags": [
         "button"
       ],
-      "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';"
+      "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';",
+      "examples": [
+        {
+          "hash": "942458eba5764a5341345ba115c2f10d4252076b7a598340038f7cd09f3cd00c",
+          "source": "canonical"
+        },
+        {
+          "hash": "619ed11a02f63883a4d478eddc0bf21faff75bd57489d884aa87588dec19b121",
+          "source": "readme"
+        },
+        {
+          "hash": "98b808cc16ccf95afedb8e9c6273ecee225b0fb9d79eea89b005cf9101b2e129",
+          "source": "stories"
+        },
+        {
+          "hash": "891d749f539e373f93d1737e5762adc6958dae7521e56b058cda5cde12bb4196",
+          "source": "stories"
+        },
+        {
+          "hash": "09ceb29bb7ab54aa6897cdc68c12d16f06c63e89556323e91938549528df748f",
+          "source": "stories"
+        },
+        {
+          "hash": "f94e632dc4df873d1e17cf9cc2eb6c2fbcdac7428a67fe75b5a17102ee5d55d5",
+          "source": "stories"
+        },
+        {
+          "hash": "73011583b06f650b235fb071ba118e455470eb1d514199b7055db06954e32d84",
+          "source": "stories"
+        },
+        {
+          "hash": "f6ab8a83a6c717b238c049f1b36350daff4abef18550edfb17095082c3cfbc6c",
+          "source": "stories"
+        },
+        {
+          "hash": "257365d8c2edf1f7bf7c67368bd0a7787f3147660cfdde6b89a95d7d12fae7d4",
+          "source": "stories"
+        },
+        {
+          "hash": "265bf5e62161fdc48461dc8aeb42726825fed603b83deeaca777067ec369dbcb",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "ButtonProps",
@@ -401,7 +512,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color' | 'size'> { ... }",
-      "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';"
+      "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';",
+      "examples": [
+        {
+          "hash": "942458eba5764a5341345ba115c2f10d4252076b7a598340038f7cd09f3cd00c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Calendar",
@@ -519,7 +636,25 @@
         "date input",
         "date picker"
       ],
-      "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';"
+      "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';",
+      "examples": [
+        {
+          "hash": "3bb3d4871cc9a145878be35b79081b28979e073c11201f7bfd8ed01939b617f0",
+          "source": "canonical"
+        },
+        {
+          "hash": "3153e51da02f194b4678caa10c7ded050ad1ebc46ae458246aa82d8c4ae60393",
+          "source": "readme"
+        },
+        {
+          "hash": "965e12a8861c34f8ab7a7ad70d06003708b7e06a7889a277b3e408ab26fb7ea6",
+          "source": "readme"
+        },
+        {
+          "hash": "31d55906d24751287c20ba5e6651e071eedd54b77fb56e0620d3442787d493be",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "CalendarProps",
@@ -536,7 +671,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CalendarProps extends PrimeCalendarProps<CalendarSelectionMode> { ... }",
-      "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';"
+      "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';",
+      "examples": [
+        {
+          "hash": "3bb3d4871cc9a145878be35b79081b28979e073c11201f7bfd8ed01939b617f0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Carousel",
@@ -609,7 +750,17 @@
         "CarouselProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';"
+      "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';",
+      "examples": [
+        {
+          "hash": "719bd32da19525774016bad7af22e81dd9bdbb52605bfd57c84c3013ee0dd51c",
+          "source": "canonical"
+        },
+        {
+          "hash": "f5f428092cb93efc2276016ee770491c6040740c284bdda170b73b0829e26009",
+          "source": "readme"
+        }
+      ]
     },
     {
       "name": "CarouselProps",
@@ -626,7 +777,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CarouselProps { ... }",
-      "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';"
+      "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';",
+      "examples": [
+        {
+          "hash": "719bd32da19525774016bad7af22e81dd9bdbb52605bfd57c84c3013ee0dd51c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Cell",
@@ -711,7 +868,29 @@
       "searchTags": [
         "card"
       ],
-      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';"
+      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
+      "examples": [
+        {
+          "hash": "50a7ec138658e28948fa82413b337f18a6ff9468057e6158739052884ab0fcb0",
+          "source": "canonical"
+        },
+        {
+          "hash": "682eb44ed23ec0b9af18b3152ce3b3397c8072e226cf10d5b4378f72c690bd9d",
+          "source": "readme"
+        },
+        {
+          "hash": "045752b4fe0982fb62b587d7da3dc1e261892326efcf76923db7cfe880e3b6c1",
+          "source": "readme"
+        },
+        {
+          "hash": "ccbd29c2e855c29dd293f326fa459920b044fbc80b8d640329aa9bf1e03d0667",
+          "source": "readme"
+        },
+        {
+          "hash": "182aa626d5de129dd383f9d764e2205eb4217a1901de5361dc702264ce8e58c9",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "CellProps",
@@ -728,7 +907,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CellProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> { ... }",
-      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';"
+      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
+      "examples": [
+        {
+          "hash": "50a7ec138658e28948fa82413b337f18a6ff9468057e6158739052884ab0fcb0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Checkbox",
@@ -906,7 +1091,25 @@
       "searchTags": [
         "checkbox"
       ],
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        },
+        {
+          "hash": "a4ba5052842b21b8c76785891a705b4e1a0c2e8d7dba99add35e44e1a8ed2902",
+          "source": "readme"
+        },
+        {
+          "hash": "a871596470254f2d10979720924e06ec2058541e26076f43c8fcfc1cedd0bede",
+          "source": "readme"
+        },
+        {
+          "hash": "530fbc1a1de23a9601879cc9f338d66077018d257c8af5dd22f25da0809bac85",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "CheckboxChangeEvent",
@@ -928,7 +1131,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CheckboxChangeEvent { ... }",
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CheckboxGroup",
@@ -1064,7 +1273,13 @@
       "searchTags": [
         "checkbox"
       ],
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CheckboxGroupOption",
@@ -1086,7 +1301,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CheckboxGroupOption { ... }",
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CheckboxGroupProps",
@@ -1108,7 +1329,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CheckboxGroupProps { ... }",
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CheckboxProps",
@@ -1130,7 +1357,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CheckboxProps extends NativeCheckboxInputProps { ... }",
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CheckboxValueType",
@@ -1152,7 +1385,13 @@
       ],
       "searchTags": [],
       "typeText": "string | number",
-      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';",
+      "examples": [
+        {
+          "hash": "ba63eccea3322f2c28b57617b58bfa9bc11b7313e86bb67acb8a3c1ee118ae7a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CoachMark",
@@ -1279,7 +1518,21 @@
         "tour",
         "walkthrough"
       ],
-      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
+      "examples": [
+        {
+          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "source": "canonical"
+        },
+        {
+          "hash": "b14b13b014718a3bcc4360fb50eff7daa19eb2f049f5788a43b3a0bcc5e3b501",
+          "source": "readme"
+        },
+        {
+          "hash": "f8b34da19883ff182bcdd68e9979a47bcb02a2d6d4789eefadfa966b93458433",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "CoachMarkLabels",
@@ -1299,7 +1552,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CoachMarkLabels { ... }",
-      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
+      "examples": [
+        {
+          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CoachMarkPlacement",
@@ -1319,7 +1578,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof COACH_MARK_PLACEMENTS)[number]",
-      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
+      "examples": [
+        {
+          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CoachMarkProps",
@@ -1339,7 +1604,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CoachMarkProps { ... }",
-      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
+      "examples": [
+        {
+          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CoachMarkStep",
@@ -1359,7 +1630,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CoachMarkStep { ... }",
-      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';",
+      "examples": [
+        {
+          "hash": "c0916ed54db75bab9c13c450355a57dc56b254bf97abf2fd6149704fc118630d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Col",
@@ -1378,7 +1655,13 @@
         "Row"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
+      "examples": [
+        {
+          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Copy",
@@ -1467,7 +1750,21 @@
         "CopyProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';"
+      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';",
+      "examples": [
+        {
+          "hash": "0f6be3e65d1d61bbf9610c811d33340236891709b55cc17f39316293fb6ac02b",
+          "source": "canonical"
+        },
+        {
+          "hash": "127592e8635f4579bed16c1b362b0ab63361a2d8463809f8cd46b3e6ae076843",
+          "source": "readme"
+        },
+        {
+          "hash": "d52ad016f235f7f27e7bf83cd82ebd671b21613fbea9374023c25977e9784080",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "CopyProps",
@@ -1484,7 +1781,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CopyProps { ... }",
-      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';"
+      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';",
+      "examples": [
+        {
+          "hash": "0f6be3e65d1d61bbf9610c811d33340236891709b55cc17f39316293fb6ac02b",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "CreateProFormFieldConfig",
@@ -1550,7 +1853,13 @@
       ],
       "searchTags": [],
       "typeText": "interface CreateProFormFieldConfig { ... }",
-      "canonicalUsage": "import type { CreateProFormFieldConfig } from '@1money/component-ui';"
+      "canonicalUsage": "import type { CreateProFormFieldConfig } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "5cf521a9acc593841866c16b60a287076098e8381f5a6fa0ac89b2f74f8f15fb",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Dialog",
@@ -1798,7 +2107,17 @@
         "dialog",
         "modal"
       ],
-      "canonicalUsage": "<Dialog />"
+      "canonicalUsage": "<Dialog />",
+      "examples": [
+        {
+          "hash": "09cd4b9c9d7731a5594c5a7f0ae0a2b70922d7e90b578e33b12b439926977bd3",
+          "source": "canonical"
+        },
+        {
+          "hash": "54c726882a82e99de780f9ae13353792f5433ea684bedeacdcb096a74b775f86",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "DialogFooterRender",
@@ -1817,7 +2136,13 @@
       ],
       "searchTags": [],
       "typeText": "(\n  cancelButton: ReactNode,\n  okButton: ReactNode,\n) => ReactNode",
-      "canonicalUsage": "import type { DialogFooterRender } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DialogFooterRender } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "f636853da9e8e73f2a3f9da039f84791236f9f95cbbdecba65825536bac29b4f",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DialogForm",
@@ -1957,7 +2282,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<DialogForm />"
+      "canonicalUsage": "<DialogForm />",
+      "examples": [
+        {
+          "hash": "21b781266f0edc019e2e4c6e8da4d3d9677765f536f0794a6dd25d773b750a4d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DialogFormProps",
@@ -2023,7 +2354,13 @@
       ],
       "searchTags": [],
       "typeText": "interface DialogFormProps extends Omit<ProFormProps, 'title'> { ... }",
-      "canonicalUsage": "import type { DialogFormProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DialogFormProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "a00b6368694692f3ad61ccd02046d04c81568ac047a2f6256251fe2467b8d117",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DialogProps",
@@ -2042,7 +2379,13 @@
       ],
       "searchTags": [],
       "typeText": "interface DialogProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title' | 'onCancel'> { ... }",
-      "canonicalUsage": "import type { DialogProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DialogProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "a4cc0a85821084244adda8df86c69ce9a83c09f6333befb2ba955dfe42d39659",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DialogSize",
@@ -2061,7 +2404,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIALOG_SIZES)[number]",
-      "canonicalUsage": "import type { DialogSize } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DialogSize } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "3bec85aad2b2b2ca779ea9fa9a8136cd46de9ad70ed4ae2ced81c0123cc9e5de",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Divider",
@@ -2141,7 +2490,57 @@
       "searchTags": [
         "divider"
       ],
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "source": "canonical"
+        },
+        {
+          "hash": "11f746d996243f14d1b62b6a0d5aa59fc1020e23273e256f4ec0481d2ce97c88",
+          "source": "readme"
+        },
+        {
+          "hash": "b07c25a0adf922600c585b8338913d512a41c0b1c9f74bfe1966a08f7b79de58",
+          "source": "readme"
+        },
+        {
+          "hash": "01f2ec5bfc5df0ab048466e581008497394274efefa2748c41c077f4ce0d67a5",
+          "source": "readme"
+        },
+        {
+          "hash": "afcafc9cac1b9eba2cea19136c7aae5a7e2b6e51a6988d200169d13f1dc92484",
+          "source": "readme"
+        },
+        {
+          "hash": "d227c54df504a3d9eb79b36fb608cd5d8111a80ccf0baa7a56cd4891000f3d68",
+          "source": "stories"
+        },
+        {
+          "hash": "8a1456a1850cd713d2b865aff7e29facb6a0fdb079c75d5d3c43fc605a28e63f",
+          "source": "stories"
+        },
+        {
+          "hash": "243ce692b0fe5babcf7fc5b9175c7d21fbc9897c06eaa6510af2c50dbde3e940",
+          "source": "stories"
+        },
+        {
+          "hash": "d69206b2b43d10d9ef3ce614c78676bf20ccbacdaa3e2bbc784a5a4b3ebb1d5e",
+          "source": "stories"
+        },
+        {
+          "hash": "990be4b82efa1e2924db501b9977f49c07284e171248ad486de6ab3c18aeec57",
+          "source": "stories"
+        },
+        {
+          "hash": "55425fb73a2baa8759afc579289c84a980c8485171a5fcfbb6359df29c5c1c9d",
+          "source": "stories"
+        },
+        {
+          "hash": "89528f9d3264485a6740e6504bbab24c3d8b6aa4cf25a5f0b8328599b8fb8087",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "DividerOrientation",
@@ -2161,7 +2560,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIVIDER_ORIENTATIONS)[number]",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DividerProps",
@@ -2181,7 +2586,13 @@
       ],
       "searchTags": [],
       "typeText": "interface DividerProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DividerType",
@@ -2201,7 +2612,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIVIDER_TYPES)[number]",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DividerVariant",
@@ -2221,7 +2638,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIVIDER_VARIANTS)[number]",
-      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "149ff1493142d868c107755710964566f68b224d15e4cf9ba6f6d2a825930397",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Drawer",
@@ -2404,7 +2827,21 @@
         "drawer",
         "side panel"
       ],
-      "canonicalUsage": "<Drawer />"
+      "canonicalUsage": "<Drawer />",
+      "examples": [
+        {
+          "hash": "229d1a8633f807e996fc7becad59998c81ac20a9fa96299240cc82a3de2ba38e",
+          "source": "canonical"
+        },
+        {
+          "hash": "b8f46adff0347582af7bd4f632c11fc1983faac65e91f6b2bf5c827777479d57",
+          "source": "stories"
+        },
+        {
+          "hash": "2d147c37b74dd18fc7bf83277fbebc0491a2e34d14354f3e0c4e2c78c19be975",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "DrawerForm",
@@ -2552,7 +2989,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<DrawerForm />"
+      "canonicalUsage": "<DrawerForm />",
+      "examples": [
+        {
+          "hash": "16c870440f83430d06aa78aa61d2bd6aae1048d69212aef1d6fdf4e96aef9f2b",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DrawerFormProps",
@@ -2618,7 +3061,13 @@
       ],
       "searchTags": [],
       "typeText": "interface DrawerFormProps extends Omit<ProFormProps, 'title'> { ... }",
-      "canonicalUsage": "import type { DrawerFormProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DrawerFormProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "2204554ab8bca54def2b33269aafdcbf2f44ff67cec3b11f08b16db0f97e5e5d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DrawerPlacement",
@@ -2636,7 +3085,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DRAWER_PLACEMENTS)[number]",
-      "canonicalUsage": "import type { DrawerPlacement } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DrawerPlacement } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "3be091a6e70e3cd8ec454cc2e75fe9f7411c1c961da765050c61cb6a10178112",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DrawerProps",
@@ -2654,7 +3109,13 @@
       ],
       "searchTags": [],
       "typeText": "interface DrawerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title'> { ... }",
-      "canonicalUsage": "import type { DrawerProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DrawerProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "31a84e22a5da198582fb98a8b4f8315fc260a1cb8b30f655b82c6226e37026a9",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Dropdown",
@@ -2688,7 +3149,73 @@
         "dropdown menu",
         "menu"
       ],
-      "canonicalUsage": "<Dropdown />"
+      "canonicalUsage": "<Dropdown />",
+      "examples": [
+        {
+          "hash": "f1d04c79af92d833719f1f7927f6531f0233eb21042446ba7cb7ab2dfd514b78",
+          "source": "canonical"
+        },
+        {
+          "hash": "ff2f563f71e0ce2247346c1b9bfe6125d3587eb0d87e85aa91f74bcaec346efd",
+          "source": "stories"
+        },
+        {
+          "hash": "f83c15a1e91c920de59f2703db7b14cc2d77105d2ecb6f6a0c3c339daa9ba5ac",
+          "source": "stories"
+        },
+        {
+          "hash": "fb0b283fcca0a47146d5126b73ee29d932809e9fbab255c09dd541163e488c44",
+          "source": "stories"
+        },
+        {
+          "hash": "6249496d0a28f7486591ed9e2c46830c7f45417297394da18d739d4fcf29da19",
+          "source": "stories"
+        },
+        {
+          "hash": "ed8dcfd4669b086224c866646624b948306811cf0d102efb9a24dd2a177ea8e9",
+          "source": "stories"
+        },
+        {
+          "hash": "13fe3be5ef48afc1b21e0c05781f384c3458e2f2a7d627ad97aa27897364a501",
+          "source": "stories"
+        },
+        {
+          "hash": "f6a675035a9c1f7c30a7a2355b66e5cc911aa7ed14d5d4d795d35e422092da86",
+          "source": "stories"
+        },
+        {
+          "hash": "5bbe81058b5f7ae3142b01bf68cd45e0e13be8dc0315aef544c43fa889f114e7",
+          "source": "stories"
+        },
+        {
+          "hash": "b935fe4fd206e05decab4b92319dbf26ef1ecd3cbaef4824f7e85d84f184596e",
+          "source": "stories"
+        },
+        {
+          "hash": "eeb6065546d0e83ad6463bb319b3635507190fa9d0de1d527416421758a0da84",
+          "source": "stories"
+        },
+        {
+          "hash": "c2812c87968648701b8b45209e61288843de208d7ab07ae0aacf8fe2c8c7ed16",
+          "source": "stories"
+        },
+        {
+          "hash": "1e5c224174d2597cf467d2bfcd1da8fa5eb8bc6a90865c4204b72dea481f3321",
+          "source": "stories"
+        },
+        {
+          "hash": "18562f9a1b0c3c22a4a06d1d3be78ae3cd951ebbae8dbef0d5164e25b398aab4",
+          "source": "stories"
+        },
+        {
+          "hash": "7e364b57da7fe1e95177c79d7574a1a908de3150d8b844e220121621c15a545a",
+          "source": "stories"
+        },
+        {
+          "hash": "be1f35fe897e08b91d5b1762cd2b2102d7558c50bdb4e14638c3fa5162ce55d2",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "DropdownContent",
@@ -2708,7 +3235,13 @@
       ],
       "searchTags": [],
       "typeText": "TriggerProps['content']",
-      "canonicalUsage": "import type { DropdownContent } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DropdownContent } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "d228f784a5bcb96e2a34976c8263b09adbabed5671d06cee1b529a080c590811",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DropdownContentContext",
@@ -2728,7 +3261,13 @@
       ],
       "searchTags": [],
       "typeText": "TriggerContentContext",
-      "canonicalUsage": "import type { DropdownContentContext } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DropdownContentContext } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "a84df98b01483777e1300092f232925bb735095c141ee8b43f171649abae742a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DropdownProps",
@@ -2748,7 +3287,13 @@
       ],
       "searchTags": [],
       "typeText": "interface DropdownProps extends Omit<TriggerProps, 'trigger'> { ... }",
-      "canonicalUsage": "import type { DropdownProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DropdownProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "d7962c51baabf01f9a3edf542b850933511041f7e1ef9f9fdce5ae94097c78e6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "DropdownTrigger",
@@ -2768,7 +3313,13 @@
       ],
       "searchTags": [],
       "typeText": "'click' | 'hover'",
-      "canonicalUsage": "import type { DropdownTrigger } from '@1money/component-ui';"
+      "canonicalUsage": "import type { DropdownTrigger } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "1ea1b06d0cb7b76df060c54a46289fc1e007ae1e8c5dce4c3bf315f645fa81a9",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Empty",
@@ -2845,7 +3396,21 @@
       "searchTags": [
         "empty"
       ],
-      "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';"
+      "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';",
+      "examples": [
+        {
+          "hash": "d82a74678c8e5fc273478857f998ace0dbc3d92a5acba59f134a76b62e824724",
+          "source": "canonical"
+        },
+        {
+          "hash": "98c349f74dfef31432fc84b3ce6f744fe0d10053c9feb03a5238dd12b0374098",
+          "source": "readme"
+        },
+        {
+          "hash": "619bbe388844528779d6a79bfed218f3c6a4371e261cd9b9803d5212a6e86935",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "EmptyProps",
@@ -2862,7 +3427,13 @@
       ],
       "searchTags": [],
       "typeText": "interface EmptyProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }",
-      "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';"
+      "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';",
+      "examples": [
+        {
+          "hash": "d82a74678c8e5fc273478857f998ace0dbc3d92a5acba59f134a76b62e824724",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Flex",
@@ -2929,7 +3500,45 @@
         "FlexProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';"
+      "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';",
+      "examples": [
+        {
+          "hash": "e6e0522b066d0100b66985ccafb2e4f5c828276ee0b1a7b80123a044d0f871b0",
+          "source": "canonical"
+        },
+        {
+          "hash": "276d933cdedc1b20cf7ecfe70e4c77f9e380c703bf010e9a9fdfe880b1da5d74",
+          "source": "readme"
+        },
+        {
+          "hash": "e0b47d30ab44de1bc2d7a9ec6882e040d01a98ee46c77efe9c4f3392872a78c1",
+          "source": "readme"
+        },
+        {
+          "hash": "043c36d7ef52688e3ac8c323626b68ba111414d18baa6acce01d6421a3b9ee80",
+          "source": "stories"
+        },
+        {
+          "hash": "1b08398c2e739e78e338644ed273f549a06b4a9af5ecd3ba2f982ba107dac635",
+          "source": "stories"
+        },
+        {
+          "hash": "48b841f9b98246e47cebe04c995ea22bce70232b07c76d61f3f72f7eb5424043",
+          "source": "stories"
+        },
+        {
+          "hash": "288be61ab26f08730bfeb3e6c5819af6e32c4710e27c25f13aa514222c9444a2",
+          "source": "stories"
+        },
+        {
+          "hash": "543e2e3ae7a1fb4bb1107cdc87de02d2f3b7f3a6b9d73336be568642ff5e6801",
+          "source": "stories"
+        },
+        {
+          "hash": "9cc3dfb34125e76b4af9b4fc0588fe0a8f4568a9a082471998a9167f72a03fb5",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "FlexProps",
@@ -2946,7 +3555,13 @@
       ],
       "searchTags": [],
       "typeText": "interface FlexProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';"
+      "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';",
+      "examples": [
+        {
+          "hash": "e6e0522b066d0100b66985ccafb2e4f5c828276ee0b1a7b80123a044d0f871b0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "FormCoreInstance",
@@ -3012,7 +3627,13 @@
       ],
       "searchTags": [],
       "typeText": "interface FormCoreInstance { ... }",
-      "canonicalUsage": "import type { FormCoreInstance } from '@1money/component-ui';"
+      "canonicalUsage": "import type { FormCoreInstance } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0b97e7526ba542ec92ccf0413a257e0f07864c0d008bdad607cd5ef0d45c465c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "FormInstance",
@@ -3078,7 +3699,13 @@
       ],
       "searchTags": [],
       "typeText": "interface FormInstance { ... }",
-      "canonicalUsage": "import type { FormInstance } from '@1money/component-ui';"
+      "canonicalUsage": "import type { FormInstance } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "e99c5e8aa7fd74909517b8a512a3511aaf652cdfe41f43899d0ff6e85eb88386",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "FormLayout",
@@ -3144,7 +3771,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof FORM_LAYOUTS)[number]",
-      "canonicalUsage": "import type { FormLayout } from '@1money/component-ui';"
+      "canonicalUsage": "import type { FormLayout } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0f3b76336cb07f42a693ebf22be52bee9d836edfe280ecd1b79e06a98c621061",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "FormSize",
@@ -3210,7 +3843,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof FORM_SIZES)[number]",
-      "canonicalUsage": "import type { FormSize } from '@1money/component-ui';"
+      "canonicalUsage": "import type { FormSize } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "10f4a71a5787fe2b02a3137bc6bf50dd47274d8e54c53f9777437f28f06a5a94",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Grid",
@@ -3231,7 +3870,45 @@
       "searchTags": [
         "grid"
       ],
-      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
+      "examples": [
+        {
+          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "source": "canonical"
+        },
+        {
+          "hash": "4f40da0dcef8c45780aac535f2f2f60f3ae46930e53e93636b8294a3a6303232",
+          "source": "readme"
+        },
+        {
+          "hash": "a470393965edd402f92af9519bd5e9cdce927beb8f691adc923330632265af41",
+          "source": "readme"
+        },
+        {
+          "hash": "4daeeeaae641495c03c9d5704c447156258f6cd802817652bb73db2b2382c5c7",
+          "source": "stories"
+        },
+        {
+          "hash": "2e883a337812a592757886ff707775ef107d4916d1032a9fa3360c62319dfe55",
+          "source": "stories"
+        },
+        {
+          "hash": "07b5d74fb12ff54bf1272639a98bb083e66893c0cb9859b2dc16efa52b8e65f6",
+          "source": "stories"
+        },
+        {
+          "hash": "2458641e2db8d560c487a28c68eb647773848bb02a1b080aa230edfbc3abff70",
+          "source": "stories"
+        },
+        {
+          "hash": "83ecb297cdf8bebbb398836d38b3b98f42dd4d74bc5bf981d53df9f4cc6a78eb",
+          "source": "stories"
+        },
+        {
+          "hash": "603e1e73c14ccddd765607e3477af1e00d44bf4f1c567f8af7080828c882a804",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "GridColProps",
@@ -3251,7 +3928,13 @@
       ],
       "searchTags": [],
       "typeText": "interface GridColProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
+      "examples": [
+        {
+          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "GridRowProps",
@@ -3271,7 +3954,13 @@
       ],
       "searchTags": [],
       "typeText": "interface GridRowProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
+      "examples": [
+        {
+          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "IconHover",
@@ -3319,7 +4008,13 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "IconHoverProps",
@@ -3341,7 +4036,13 @@
       ],
       "searchTags": [],
       "typeText": "interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'prefix'> { ... }",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "IconName",
@@ -3363,7 +4064,13 @@
       ],
       "searchTags": [],
       "typeText": "keyof typeof IconList",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "IconWrapper",
@@ -3513,7 +4220,13 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "IconWrapperProps",
@@ -3535,7 +4248,13 @@
       ],
       "searchTags": [],
       "typeText": "interface IconWrapperProps { ... }",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Icons",
@@ -3560,7 +4279,41 @@
       "searchTags": [
         "icon"
       ],
-      "memberMap": {}
+      "memberMap": {},
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "readme"
+        },
+        {
+          "hash": "835d02297d27d74d7295f23fcbfc95506a623b48aa75eedd09066bc8c065641b",
+          "source": "readme"
+        },
+        {
+          "hash": "d14a6c8f5f53e17dc0969b92484b9e312a960ec895d6264d90c4db3924559031",
+          "source": "readme"
+        },
+        {
+          "hash": "44af4fb674a3e61d49ce9e5a88b74de2931e06aad97a61a2f1c32c9e428fc524",
+          "source": "stories"
+        },
+        {
+          "hash": "9446a846b851aac2e08af05446331f4d538e03b5b55b5f41cedfabfc241a56c4",
+          "source": "stories"
+        },
+        {
+          "hash": "685082e981a8530b957b6da0d3eebce07b7766f8ce70ec95b697fa5a12543953",
+          "source": "stories"
+        },
+        {
+          "hash": "f28ea8765f5ffeede5e08fcb3e669970881082c4a8d3ca417086152ff4ee2cf3",
+          "source": "stories"
+        },
+        {
+          "hash": "a52ea735ddab1f4df1b473b2fce05b9f6abb28e65828026d6d675630a56e8ec8",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "IconsProps",
@@ -3582,7 +4335,13 @@
       ],
       "searchTags": [],
       "typeText": "interface IconsProps extends IconWrapperProps { ... }",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "examples": [
+        {
+          "hash": "3e37d6dfdc436f070852a6c3bab37723fdc11481c115ea8775de818b03d21922",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Input",
@@ -3700,7 +4459,53 @@
         "Trade": "$local:InputTrade",
         "Amount": "$local:InputAmount",
         "Mask": "$local:InputMask"
-      }
+      },
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "readme"
+        },
+        {
+          "hash": "6f35553db545325816e22529b18e912b3f3dcca10bfe138a0df5129040928f1b",
+          "source": "readme"
+        },
+        {
+          "hash": "191e5bf56445f5af003d499453ddfef575bb54c90c23eda3e34152a2fc30039b",
+          "source": "stories"
+        },
+        {
+          "hash": "797aead7be7a662bdf4029c4d0cadea38bd64108f016d616db63817ae1e21d9b",
+          "source": "stories"
+        },
+        {
+          "hash": "f10738d8b600350d93270e07c46923949a4e6b717e14a854cf3ddad3e2355aac",
+          "source": "stories"
+        },
+        {
+          "hash": "a1783f6f835ccec02625291f09db3e852fb914a692aae4acedd29d39cb052f15",
+          "source": "stories"
+        },
+        {
+          "hash": "414fbbad57207fc99eb033e1dea7f3d725c89a2c3d328effada9fd107c96a660",
+          "source": "stories"
+        },
+        {
+          "hash": "b29828cbbdc6e3eb024340bc83a04fb5f445b08752a288644a22249a2f883f42",
+          "source": "stories"
+        },
+        {
+          "hash": "2a4db9fb0ec1d8c7dd9030150a10e27a87a717cfda80216e786eab58b99e188f",
+          "source": "stories"
+        },
+        {
+          "hash": "ced5f4626f7daeadc008213aee59830b8d2d386e4e51fad830199d215127761a",
+          "source": "stories"
+        },
+        {
+          "hash": "5d9671c5b1630392d5067755686d589bf18b88fcdb17d63e26c09e09136626d6",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "InputAmountProps",
@@ -3725,7 +4530,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputAmountProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange' | 'min' | 'max'>, Omit<InputBaseProps, 'allowClear'> { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputOTPProps",
@@ -3750,7 +4561,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputOTPProps extends Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputPasswordProps",
@@ -3775,7 +4592,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputPasswordProps extends Omit<InputProps, 'type' | 'allowClear'> { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputProps",
@@ -3800,7 +4623,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange'>, InputBaseProps { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputSearchProps",
@@ -3825,7 +4654,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputSearchProps extends InputProps { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputSize",
@@ -3850,7 +4685,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof INPUT_SIZES)[number]",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputStatus",
@@ -3875,7 +4716,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof INPUT_STATUSES)[number]",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputTextAreaProps",
@@ -3900,7 +4747,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputTextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange' | 'prefix'>, Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "InputTradeProps",
@@ -3925,7 +4778,13 @@
       ],
       "searchTags": [],
       "typeText": "interface InputTradeProps { ... }",
-      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
+      "examples": [
+        {
+          "hash": "c181357800a1cd235e61a551bcf4e6b3185af6d4667a57f33ee6ec0371ac49d3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "LabelAlign",
@@ -3991,7 +4850,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof LABEL_ALIGNS)[number]",
-      "canonicalUsage": "import type { LabelAlign } from '@1money/component-ui';"
+      "canonicalUsage": "import type { LabelAlign } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "9c58e7a38bc9d547c7ae21ed06286803c8f87fb2ea67379696a308fead4eefcd",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Link",
@@ -4070,7 +4935,37 @@
       "searchTags": [
         "link"
       ],
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "examples": [
+        {
+          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "source": "canonical"
+        },
+        {
+          "hash": "99eeaf95df32da3c97195eb28616d1a5bf9ea8b5d698ec9d1037fe2e8e237f84",
+          "source": "readme"
+        },
+        {
+          "hash": "8f5195efcb7c2b1b6063ae7ec7cdc15ccbf346906e542a71da48e199ec250063",
+          "source": "readme"
+        },
+        {
+          "hash": "0f3794214bccd3872abfee6dcce90ff4b3ecc1f7d96b002e83306174fb0d56d6",
+          "source": "readme"
+        },
+        {
+          "hash": "75314320282beed134267b4fd0e00cc4ac8d098e15b6dafb44b052716aed17f2",
+          "source": "stories"
+        },
+        {
+          "hash": "d29f2123a0f5561bb83aee2503c2b88a9e91423863d6094c273f174cb9684cf3",
+          "source": "stories"
+        },
+        {
+          "hash": "8dd6e93a14bedec1fc737ddf57ab4cdc317bb17f4c805469caf254b1d6309270",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "LinkColor",
@@ -4089,7 +4984,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof LINK_COLORS)[number]",
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "examples": [
+        {
+          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "LinkProps",
@@ -4108,7 +5009,13 @@
       ],
       "searchTags": [],
       "typeText": "interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> { ... }",
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "examples": [
+        {
+          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "LinkSize",
@@ -4127,7 +5034,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof LINK_SIZES)[number]",
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "examples": [
+        {
+          "hash": "de2a683815441e132599bd64ff5379ff553cba5d7b9ef9dd3ddce67c921960d5",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Nav",
@@ -4181,7 +5094,13 @@
         "NavigationProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NavItem",
@@ -4203,7 +5122,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NavItem { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NavProps",
@@ -4225,7 +5150,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NavProps { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Navigation",
@@ -4345,7 +5276,21 @@
       "searchTags": [
         "menu"
       ],
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        },
+        {
+          "hash": "5ba3acb2284bc309b706ae3fb4b299eea9a9f3ed437926bdf012d7dcf01ef244",
+          "source": "readme"
+        },
+        {
+          "hash": "04904398e24ebff36de51c9ece0798191037b65116ca8b760eb9ec25cadde15f",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "NavigationHandlers",
@@ -4367,7 +5312,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NavigationHandlers { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NavigationItem",
@@ -4389,7 +5340,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NavigationItem { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NavigationProps",
@@ -4411,7 +5368,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NavigationProps { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "a0e5620b4eee0c0b806d1e5b36d7bdf527ee2714928007a6647f0bf53e322a50",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationKey",
@@ -4434,7 +5397,13 @@
       ],
       "searchTags": [],
       "typeText": "string | number",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationLinkConfig",
@@ -4457,7 +5426,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NotificationLinkConfig { ... }",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationOpenConfig",
@@ -4480,7 +5455,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NotificationOpenConfig extends Omit<NotificationProps, 'prefixCls' | 'ref' | 'onClose'> { ... }",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationPlacement",
@@ -4503,7 +5484,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof NOTIFICATION_PLACEMENTS)[number]",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationStaticApi",
@@ -4526,7 +5513,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NotificationStaticApi { ... }",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationStaticConfig",
@@ -4549,7 +5542,13 @@
       ],
       "searchTags": [],
       "typeText": "interface NotificationStaticConfig { ... }",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "NotificationStatus",
@@ -4572,7 +5571,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof NOTIFICATION_STATUSES)[number]",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Pagination",
@@ -4618,7 +5623,13 @@
         "pager",
         "pagination"
       ],
-      "canonicalUsage": "<Pagination />"
+      "canonicalUsage": "<Pagination />",
+      "examples": [
+        {
+          "hash": "e06d5e093ae70c4e9265523aa57af938f488d1a8ae619b68cfded1c55b3454f4",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PaginationControlItem",
@@ -4642,7 +5653,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationControlItem extends PaginationItemBase { ... }",
-      "canonicalUsage": "import type { PaginationControlItem } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PaginationControlItem } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "7dd6feee05bc56c6215e93c177ccdf6f0a7b89d1e5af126e410c84bfb0ff6776",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PaginationEllipsisItem",
@@ -4666,7 +5683,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationEllipsisItem extends PaginationItemBase { ... }",
-      "canonicalUsage": "import type { PaginationEllipsisItem } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PaginationEllipsisItem } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "6117f42a82521cd66ff869a6be06bb5f8da7cfdd301d3c3b64078931ae537783",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PaginationItem",
@@ -4690,7 +5713,13 @@
       ],
       "searchTags": [],
       "typeText": "| PaginationPageItem\n  | PaginationControlItem\n  | PaginationEllipsisItem",
-      "canonicalUsage": "import type { PaginationItem } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PaginationItem } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "655c30228af159a4c1108a590ba967a3e9e86e610a7e4833ba2450cd9931bc0d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PaginationPageItem",
@@ -4714,7 +5743,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationPageItem extends PaginationItemBase { ... }",
-      "canonicalUsage": "import type { PaginationPageItem } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PaginationPageItem } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0b76daeeaf5ca17e3b647e005ceb4efb34a7af51d84709048d35257458f0ebc8",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PaginationProps",
@@ -4738,7 +5773,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationProps extends Omit<HTMLAttributes<HTMLElement>, 'onChange'>, UsePaginationOptions { ... }",
-      "canonicalUsage": "import type { PaginationProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PaginationProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "9ec394281ee417fa04ba31e4ffddc669858b9ada0f676848a9a92d37dd72d847",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Popconfirm",
@@ -4882,7 +5923,33 @@
       "searchTags": [
         "popover"
       ],
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "examples": [
+        {
+          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "source": "canonical"
+        },
+        {
+          "hash": "28088e8ea75dc50a3a8d87c0b249093389ede74105e691cd78bfa44e3fb0abc8",
+          "source": "readme"
+        },
+        {
+          "hash": "aa588643ddba88dc525ebbe1585b3b1b358a49a26c8aa4f2b6e15b48d1e6fea1",
+          "source": "stories"
+        },
+        {
+          "hash": "02e7e77b886674e36c126851198bcdd0a6360845f3ab293c0f48bb5b4e3e818b",
+          "source": "stories"
+        },
+        {
+          "hash": "3f64f4a333829a369cc673fb69d2891f228c0c17d92937edd1974d8aebbc23ca",
+          "source": "stories"
+        },
+        {
+          "hash": "9909d91c063ddc85a089469145e7b0c0035ef7bfc28db40beed6cbb540818f2b",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "PopconfirmActionContext",
@@ -4902,7 +5969,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PopconfirmActionContext extends TriggerContentContext { ... }",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "examples": [
+        {
+          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PopconfirmPlacement",
@@ -4922,7 +5995,13 @@
       ],
       "searchTags": [],
       "typeText": "TriggerProps['placement']",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "examples": [
+        {
+          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PopconfirmProps",
@@ -4942,7 +6021,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PopconfirmProps extends Omit<TriggerProps, 'content' | 'role' | 'showArrow'> { ... }",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "examples": [
+        {
+          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PopconfirmTrigger",
@@ -4962,7 +6047,13 @@
       ],
       "searchTags": [],
       "typeText": "TriggerProps['trigger']",
-      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
+      "examples": [
+        {
+          "hash": "a719fb8882318900d55547f280add8dd00bba10609ad3aa81908fbb60e8ce4ca",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Portal",
@@ -5004,7 +6095,13 @@
         "PortalProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "<Portal />"
+      "canonicalUsage": "<Portal />",
+      "examples": [
+        {
+          "hash": "bd576a467c0e8866720f4a492baabe9f23a0d594d13e3b5a397466b0483f17de",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PortalContainer",
@@ -5022,7 +6119,13 @@
       ],
       "searchTags": [],
       "typeText": "Element | (() => Element | null) | null",
-      "canonicalUsage": "import type { PortalContainer } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PortalContainer } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "6362c54e54ba69b96211bf7c900f8679d1187c701127bb92ab489c8407e83666",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "PortalProps",
@@ -5040,7 +6143,13 @@
       ],
       "searchTags": [],
       "typeText": "interface PortalProps { ... }",
-      "canonicalUsage": "import type { PortalProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { PortalProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "68d3294028f1dd884c3462d6b961110ab759baf2219184ee63d9772b0699580a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProForm",
@@ -5331,7 +6440,153 @@
         "Slider": "ProFormSlider",
         "DatePicker": "ProFormDatePicker",
         "Upload": "ProFormUpload"
-      }
+      },
+      "examples": [
+        {
+          "hash": "64e59db9eb57ac71aff34a00adcdcdfdc64032520eaf1446ded34efbd7e700b3",
+          "source": "stories"
+        },
+        {
+          "hash": "0daac8e13cd1d8ce49bb46b62d3fca69bbf04775dee3b1b44dbef882ee999dfc",
+          "source": "stories"
+        },
+        {
+          "hash": "3af43dbedfae58b802c293a9db693165d45502e18cd5a5ca3871c236dabac6fe",
+          "source": "stories"
+        },
+        {
+          "hash": "570f60abc5b42491681aa929f6c61a206035bb3a00d37ebf40a291aae36e5390",
+          "source": "stories"
+        },
+        {
+          "hash": "d808b44e5ff6fdd9bc453b98d7cf1b4a40dc93d44eca49a085a72f70bbf77308",
+          "source": "stories"
+        },
+        {
+          "hash": "c771aaf036fb9f3f2f04bb927522eb764ef947fac2220a7d7c192592960f601f",
+          "source": "stories"
+        },
+        {
+          "hash": "fc3ab57e6bab195dc73c6531b0c23a228f4b23877a0f490609c7ac35a6bab2a1",
+          "source": "stories"
+        },
+        {
+          "hash": "fa6c471d7ad5956ea5520746d1d8e7498f45a4aaf4060b6fc974bc87c89e0dcf",
+          "source": "stories"
+        },
+        {
+          "hash": "b01e433d6e982acd8de93397a8bd7f7c5106356b39edaedd814f3820365940e4",
+          "source": "stories"
+        },
+        {
+          "hash": "2e77b7251bcfd781b924b8ac3c9f676e0715c8840b5b00489b80f682e5662a9c",
+          "source": "stories"
+        },
+        {
+          "hash": "6d4d3c04cae237fb9016a7ec30c68bf43f9977d535cc14761aac2bf62eed9cab",
+          "source": "stories"
+        },
+        {
+          "hash": "c73741feb499ca3fbcf209701a70c62bf396644b762340624952495e3493a311",
+          "source": "stories"
+        },
+        {
+          "hash": "d94463e4e9c13c2f05386b24bbbec0b95f170e8565acab266bc29f51439b8b0c",
+          "source": "stories"
+        },
+        {
+          "hash": "a980234cd211d570909f4025c125d9e3a089f34fc30d0299db1e9af6a93cfbab",
+          "source": "stories"
+        },
+        {
+          "hash": "237195d97b238609b1cb1ad8c1fbf84cd47370a328f9382cc8a1a0c5d5e85d2d",
+          "source": "stories"
+        },
+        {
+          "hash": "04c7f4bb8c1aff74a38d28dd7b41f76dba8cbc9873796fb817efc90bc2823195",
+          "source": "stories"
+        },
+        {
+          "hash": "0dc3f7d5a3788d99681aa91542e1f51f9d42f93dde345c4d9ee135d2ccaf9ed7",
+          "source": "stories"
+        },
+        {
+          "hash": "b78e3ae714509b9cf7fc2de5102dafd9e368b458970238ea6204c9a3f8a6e422",
+          "source": "stories"
+        },
+        {
+          "hash": "2e8899341b207b4646b855f7c11abfb581f3beebfc6515f2a1124077264ba746",
+          "source": "stories"
+        },
+        {
+          "hash": "3c829c3a8ffd37889ae83a9d3928e758740bb57b85d81d929a27c62c72ff5f43",
+          "source": "stories"
+        },
+        {
+          "hash": "228b09e8828c646c96530f435327308e00b5a4fd6192afa27528167faa2f47a0",
+          "source": "stories"
+        },
+        {
+          "hash": "17620272c0c1fe7990c11225c262ad7ef7d92788c4751bc24097e4a05830b3c0",
+          "source": "stories"
+        },
+        {
+          "hash": "9ea3e2fd4ed32d0485e09a1a266ac4e9471db6d9ad435a2009f72df89c4d77f6",
+          "source": "stories"
+        },
+        {
+          "hash": "e00336cfa2a677e249068a89bf5352eb822d6f113f18c3e3d86f5fd7365d4bea",
+          "source": "stories"
+        },
+        {
+          "hash": "6473a7cebbb0cb5cc212ef569cf9d9d9c9f26e2a8e30a59d0066d1947b5e4c53",
+          "source": "stories"
+        },
+        {
+          "hash": "a756f7f111f82e9f24e512c687b14729195427851b0587bf7d089cb55e027268",
+          "source": "stories"
+        },
+        {
+          "hash": "f7ddacaa03e9523d4f8b7667dc6600489ee98db0c7d70922b7654feebb92b8e9",
+          "source": "stories"
+        },
+        {
+          "hash": "9e17555658b1304f15342a835ea3efeac180f093a07aecdeda4df47e52b44cec",
+          "source": "stories"
+        },
+        {
+          "hash": "ae1208c516b8c8d1d286d8cbc91b28485ee6dbab80d3c62353994ece6e364fc1",
+          "source": "stories"
+        },
+        {
+          "hash": "ec3ed17878530e684f85b36f958a713b38556e603663dbddc91568b2585f2d99",
+          "source": "stories"
+        },
+        {
+          "hash": "22ab049f08d98ba89dd47b62a9edd9558c8ed5a36010c27902c227edaee61483",
+          "source": "stories"
+        },
+        {
+          "hash": "8e57a668b9cc7783927890017157002d7558f0e34c982bac87e4b1e4f2b4f901",
+          "source": "stories"
+        },
+        {
+          "hash": "1f71293353ee47a52cd91ec710455489b8211ae471c82750e829165c7ab0df5b",
+          "source": "stories"
+        },
+        {
+          "hash": "0321fe24079e3dca37c69a466253c36d46de1c30eb245f4fd4cfa0f476e0300a",
+          "source": "stories"
+        },
+        {
+          "hash": "45c0008c455a3203b7bbc3f69dfed583600060c09dd817541687341153b0867e",
+          "source": "stories"
+        },
+        {
+          "hash": "e2994039dd10e7bf79ba70f8587fcbb179225aea63a261bc0c8d9dedc74c62fc",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "ProFormCheckbox",
@@ -5396,7 +6651,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormCheckbox />"
+      "canonicalUsage": "<ProFormCheckbox />",
+      "examples": [
+        {
+          "hash": "5419b0497f8d1d6c120e48206a2d701e09df89161e8502f5b02b12c92aba14b2",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormCheckboxGroup",
@@ -5461,7 +6722,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormCheckboxGroup />"
+      "canonicalUsage": "<ProFormCheckboxGroup />",
+      "examples": [
+        {
+          "hash": "d90ffbfd4742ec4d5085d2020f097c1fe620b2d9090a738aa20efe0bbeb0017f",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormColProps",
@@ -5527,7 +6794,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormColProps { ... }",
-      "canonicalUsage": "import type { ProFormColProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormColProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b39a953b75868f8f5c2f810aec6914bb083d199aeeee879f8d01e0d04b0e39e9",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormContextValue",
@@ -5593,7 +6866,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormContextValue { ... }",
-      "canonicalUsage": "import type { ProFormContextValue } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormContextValue } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0330b72074131e740bf9efc51cfd904e6a5c1ba6b16e6a700cdba56b345fc20e",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormDatePicker",
@@ -5661,7 +6940,13 @@
         "date input",
         "date picker"
       ],
-      "canonicalUsage": "<ProFormDatePicker />"
+      "canonicalUsage": "<ProFormDatePicker />",
+      "examples": [
+        {
+          "hash": "878bcf1b2d0ec17f27e3c1fb03ce0f951f108c682c8ff03354ca460c516c20b5",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormDependency",
@@ -5751,7 +7036,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormDependency name={[]}>{() => {}}</ProFormDependency>"
+      "canonicalUsage": "<ProFormDependency name={[]}>{() => {}}</ProFormDependency>",
+      "examples": [
+        {
+          "hash": "2550cf01005a349ef7d68f101f726b171fc72a7dd5561553ef1c56934a7bad68",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormDependencyProps",
@@ -5817,7 +7108,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormDependencyProps { ... }",
-      "canonicalUsage": "import type { ProFormDependencyProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormDependencyProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "ab0fb59c436a904669522929c4feb34c5a35cb825c44f9fbc3c8ab46d9b849f9",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormFieldConvertValueFn",
@@ -5883,7 +7180,13 @@
       ],
       "searchTags": [],
       "typeText": "(\n  value: unknown,\n  name: string,\n) => unknown",
-      "canonicalUsage": "import type { ProFormFieldConvertValueFn } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormFieldConvertValueFn } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "bd8a437f9c43c1c8d40f35232ab52ba5306c4fc2c350ed5039e1b9381f63d80c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormFieldProps",
@@ -5949,7 +7252,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormFieldProps { ... }",
-      "canonicalUsage": "import type { ProFormFieldProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormFieldProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "ff89f6d8ccd6b59c6f325cfef65546ea9ac7a11594f4213a78032e71cdae22ec",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormFieldSet",
@@ -6079,7 +7388,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormFieldSet />"
+      "canonicalUsage": "<ProFormFieldSet />",
+      "examples": [
+        {
+          "hash": "bb6ea69515992555ffeac8904e7bcfc81ef7f692e9aab1e8d30dc504986bb903",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormFieldSetProps",
@@ -6145,7 +7460,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormFieldSetProps { ... }",
-      "canonicalUsage": "import type { ProFormFieldSetProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormFieldSetProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "9b43adb596c57934e45f936783eafa42ebf85deadcecb812006125d26d5f629a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormFieldTransformFn",
@@ -6211,7 +7532,13 @@
       ],
       "searchTags": [],
       "typeText": "(\n  value: unknown,\n  name: string,\n  allValues: Record<string, unknown>,\n) => unknown",
-      "canonicalUsage": "import type { ProFormFieldTransformFn } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormFieldTransformFn } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b205c58a4199abe725348154bab03a86fe50e5254ef1db8762c016007bb20b34",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormFormInstance",
@@ -6277,7 +7604,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormFormInstance extends FormCoreInstance { ... }",
-      "canonicalUsage": "import type { ProFormFormInstance } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormFormInstance } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "ced7f53f31299a1d0abc9a083ffa420e995b0f8fd25cdfd5e144a2c40ecfba73",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormGroup",
@@ -6407,7 +7740,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormGroup />"
+      "canonicalUsage": "<ProFormGroup />",
+      "examples": [
+        {
+          "hash": "ee21c49c90694abe0e9ff6ae1bc1cf21c63e5c09e0633579433eb19a588aa90b",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormGroupProps",
@@ -6473,7 +7812,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormGroupProps { ... }",
-      "canonicalUsage": "import type { ProFormGroupProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormGroupProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "c7cbbe084243ca5270de088636c3bf391f168b45f769e0f51ee9ff0e41a7c129",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormItem",
@@ -6699,7 +8044,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormItem />"
+      "canonicalUsage": "<ProFormItem />",
+      "examples": [
+        {
+          "hash": "363f416219a960bdb90b0e4dfed4789764f3e4c5fbf65b53f39c13aa622549f3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormItemProps",
@@ -6765,7 +8116,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormItemProps { ... }",
-      "canonicalUsage": "import type { ProFormItemProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormItemProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "3a8025598a00c83abc4dc56634ab36c82107ac03a3e9f51ee38b5f024cb21433",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormList",
@@ -6951,7 +8308,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormList name=\"name\" />"
+      "canonicalUsage": "<ProFormList name=\"name\" />",
+      "examples": [
+        {
+          "hash": "63fd4727e2cf7105978f1bbe2a1a3007d9e270d161b54b6ac9d36a3ce66d4063",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormListAction",
@@ -7017,7 +8380,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormListAction { ... }",
-      "canonicalUsage": "import type { ProFormListAction } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormListAction } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "e8888083ba522c041aa2bcf3d0eaa0580ad6f6070247fe617345cd5b8567b871",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormListProps",
@@ -7083,7 +8452,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormListProps { ... }",
-      "canonicalUsage": "import type { ProFormListProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormListProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b4b3d1ea0ebbc147d2873a8756216a76d9548003652639bcffebe708ff5d53d4",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormMode",
@@ -7149,7 +8524,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROFORM_MODES)[number]",
-      "canonicalUsage": "import type { ProFormMode } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormMode } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "3facf6674e7710a1a9de9d88f3fbe17c86ed454c852b17339349f2adf1cbc625",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormPassword",
@@ -7214,7 +8595,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormPassword />"
+      "canonicalUsage": "<ProFormPassword />",
+      "examples": [
+        {
+          "hash": "5b2f6a3e8d39c623892770213ba6eb1e2ffcbe6aa46a973721f2b2de3a850c51",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormProps",
@@ -7280,7 +8667,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormProps extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'onReset'> { ... }",
-      "canonicalUsage": "import type { ProFormProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "067035dad985ebb4e794dcae50378944f1e33fb3446d06e1efb0edde4d9f9d6a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormRadioGroup",
@@ -7345,7 +8738,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormRadioGroup />"
+      "canonicalUsage": "<ProFormRadioGroup />",
+      "examples": [
+        {
+          "hash": "6e8eede2a99b42aa364541e5305755b67261c86fc154394934ea659a79eb2bfa",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormRequestOption",
@@ -7411,7 +8810,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormRequestOption { ... }",
-      "canonicalUsage": "import type { ProFormRequestOption } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormRequestOption } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "eda0c73b8d900e06ccc4e73b21a35325f71e9431d8e095408de90c4c77c8c2fd",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormSelect",
@@ -7476,7 +8881,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormSelect />"
+      "canonicalUsage": "<ProFormSelect />",
+      "examples": [
+        {
+          "hash": "0ab4fb399b7211b1fa649f5c3792734e5d05192c6c91f2b3f25483a2a53b8bca",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormSlider",
@@ -7541,7 +8952,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormSlider />"
+      "canonicalUsage": "<ProFormSlider />",
+      "examples": [
+        {
+          "hash": "534af98c194ebb382fe87435a753b46dac9bd9a7a393bdc149eebfa58b829052",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormSwitch",
@@ -7606,7 +9023,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormSwitch />"
+      "canonicalUsage": "<ProFormSwitch />",
+      "examples": [
+        {
+          "hash": "86c2146fa08dbd8c76689f7c9eaaaafeb247ee67fd64210e92f871e8d0db7d2e",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormText",
@@ -7671,7 +9094,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormText />"
+      "canonicalUsage": "<ProFormText />",
+      "examples": [
+        {
+          "hash": "79d97245312f70b28b35b0ab0f22dee635d990f635a03ff1b2b8dcff9f9c0fe4",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormTextArea",
@@ -7736,7 +9165,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormTextArea />"
+      "canonicalUsage": "<ProFormTextArea />",
+      "examples": [
+        {
+          "hash": "41a69a619062f78a1ea4a9c9f9ff82ee310d0e6f88ac0f1846a9fb9ca42c3e63",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormUpload",
@@ -7801,7 +9236,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormUpload />"
+      "canonicalUsage": "<ProFormUpload />",
+      "examples": [
+        {
+          "hash": "cf857ca7f03b0b7ab6ab7c4259fbc1ff1c2241720acafde0d35edd74235ba956",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormValueEnumObj",
@@ -7867,7 +9308,13 @@
       ],
       "searchTags": [],
       "typeText": "Record<\n  string | number,\n  string | { text: string; disabled?: boolean }\n>",
-      "canonicalUsage": "import type { ProFormValueEnumObj } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormValueEnumObj } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "86a25b8c61a097c6be03d98d3c4737cdcd778e2a1dcbde870125a29e8e0a35e2",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProFormValueType",
@@ -7933,7 +9380,13 @@
       ],
       "searchTags": [],
       "typeText": "| 'text'\n  | 'password'\n  | 'digit'\n  | 'date'\n  | 'dateTime'\n  | 'select'\n  | 'radio'\n  | 'switch'\n  | 'tag'",
-      "canonicalUsage": "import type { ProFormValueType } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProFormValueType } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "2d91c217fdc4e6cff8af43944c3ff455fea531edbde54e71fa31d80820f0ffff",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Progress",
@@ -8032,7 +9485,17 @@
         "progress",
         "progress bar"
       ],
-      "canonicalUsage": "<Progress percent={0} />"
+      "canonicalUsage": "<Progress percent={0} />",
+      "examples": [
+        {
+          "hash": "b5bae78d2929631a2ab8e4ef2f16772442302c68046e436a787f2ead622b3d88",
+          "source": "canonical"
+        },
+        {
+          "hash": "4d0e7a4d36a5041e4c4e6c6d9b1f460375eed71e91dca4682a9de94355e211e7",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "ProgressColor",
@@ -8053,7 +9516,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROGRESS_COLORS)[number]",
-      "canonicalUsage": "import type { ProgressColor } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProgressColor } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "fc09e08872fa6b4f26666e6c30e05445a018da20adc2432abf042aa18ca0b02c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProgressFormatContext",
@@ -8074,7 +9543,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProgressFormatContext { ... }",
-      "canonicalUsage": "import type { ProgressFormatContext } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProgressFormatContext } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "02eaafcc7b7653cfd4ddcae94f5834040913fedfebf35d636471506704b8274d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProgressPlacement",
@@ -8095,7 +9570,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROGRESS_PLACEMENTS)[number]",
-      "canonicalUsage": "import type { ProgressPlacement } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProgressPlacement } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0a85a7bd8b8aaefb036b1e1f825a0bf4c085c9d0d9e2f0dfc0e7df5546a69950",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProgressProps",
@@ -8116,7 +9597,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ProgressProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import type { ProgressProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProgressProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "affb7a082845255c1052b1d3991ef9d2e05dd2ab1056f178b930f9189217a898",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ProgressState",
@@ -8137,7 +9624,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROGRESS_STATES)[number]",
-      "canonicalUsage": "import type { ProgressState } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ProgressState } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "38986e2f621818f6715cce6e31d6f4cbf6792a4d500c0f0912490368f8842035",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "QueryFilter",
@@ -8269,7 +9762,13 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<QueryFilter />"
+      "canonicalUsage": "<QueryFilter />",
+      "examples": [
+        {
+          "hash": "506feb296a4411efb3c37c98674e025a8c0b75a433162dd2de7aa444927e2a88",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "QueryFilterProps",
@@ -8335,7 +9834,13 @@
       ],
       "searchTags": [],
       "typeText": "interface QueryFilterProps extends ProFormProps { ... }",
-      "canonicalUsage": "import type { QueryFilterProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { QueryFilterProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "5ee1801dffe6dbef1f70b88cca70fc38a2daafcfa1895d5bce21bc908e9e949a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Radio",
@@ -8491,7 +9996,101 @@
       "searchTags": [
         "radio"
       ],
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        },
+        {
+          "hash": "d38404a0563d64907aabd47d421e448a744912932fbd35e92c77eda682b1ccef",
+          "source": "readme"
+        },
+        {
+          "hash": "76a69080e6d5f9b7ac563e161d3c8a99c57745d2764ca63e3556eb49a07069c2",
+          "source": "readme"
+        },
+        {
+          "hash": "9d86b96297e4abb840e3c007333dc233ab7246bdc2b24f204fe28a663caaa7ef",
+          "source": "readme"
+        },
+        {
+          "hash": "37206c7e20fe7e01464aefe7ab33f71986f194c92cb1ef2c1774f737cd87e406",
+          "source": "readme"
+        },
+        {
+          "hash": "dedff092ac735a4691d7d06bf848036ed0f30660c6721deff0ac7ff29cdcb81d",
+          "source": "readme"
+        },
+        {
+          "hash": "108fd5f259c1d372b501cd976ab09f2109a34dcd84354c553b532df8e0c196c8",
+          "source": "readme"
+        },
+        {
+          "hash": "c4886db8c20813bb53d907aa0f9242e31e6c410a171817c11aba0a23b08d0d33",
+          "source": "readme"
+        },
+        {
+          "hash": "09a6c0c349bec1b1ac8a1f96d809636bbfc9925766969f8135d3507841500c02",
+          "source": "stories"
+        },
+        {
+          "hash": "289c78dd78322d7a5f02ce53dbc5f40b9eda58e3f3d2b084fe8cb1e0c91aced8",
+          "source": "stories"
+        },
+        {
+          "hash": "0ee60262deaa996507571f4f2b55ead10361459d309b75ce48135b2bda3ef4e1",
+          "source": "stories"
+        },
+        {
+          "hash": "62f812cafa716253163618e5e4902b133a9c79d0715463a3226dc7614b9d5f8f",
+          "source": "stories"
+        },
+        {
+          "hash": "944272923c2ee72ce64f7479dd0cf8975fc587dbf8c7a3346093ff9d885f0f58",
+          "source": "stories"
+        },
+        {
+          "hash": "928d7f102c9a5b6ca5c93005c2550100e140ac3aca7ae436726931377c043528",
+          "source": "stories"
+        },
+        {
+          "hash": "f76af68942b6defde087498880b2d2aa8ff879f12247234c59278c1b4999542f",
+          "source": "stories"
+        },
+        {
+          "hash": "41663cbfb29ce282461ebbfbaf1cbe6dcdabb47f2339f1c2f81c4d8373fa1b25",
+          "source": "stories"
+        },
+        {
+          "hash": "89ece9bd79564ce35415d2885aadc1b77152e47d385c69ce90bf26fce1e7f013",
+          "source": "stories"
+        },
+        {
+          "hash": "ea045eb595d450f3fbee3a0eb9d5e12cc911bb83236161cde412882e819c3a01",
+          "source": "stories"
+        },
+        {
+          "hash": "eaa99424f16c4c42f03f1f27ef7c08bb01708da4eaef81bfd224b0c22987717c",
+          "source": "stories"
+        },
+        {
+          "hash": "e78c6dba63bbdffc781761d2b0c7721496684773a2b53fb5b0293616e67544ac",
+          "source": "stories"
+        },
+        {
+          "hash": "39776becb54b65e6bc441779087d93665cdf7ae2b910e992e64647c5e8323a91",
+          "source": "stories"
+        },
+        {
+          "hash": "9a8a0eb728b4bc82d399de6079d0430c533dc76897285bb104637621d7f4b9f6",
+          "source": "stories"
+        },
+        {
+          "hash": "cfbd1bca33469377146f254817a427bd8650fa15c3df7b27829eb26916ad6065",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "RadioAlignment",
@@ -8515,7 +10114,13 @@
       ],
       "searchTags": [],
       "typeText": "'left' | 'center'",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioChangeEvent",
@@ -8539,7 +10144,13 @@
       ],
       "searchTags": [],
       "typeText": "interface RadioChangeEvent { ... }",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioGroup",
@@ -8733,7 +10344,13 @@
       "searchTags": [
         "radio"
       ],
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioGroupDirection",
@@ -8757,7 +10374,13 @@
       ],
       "searchTags": [],
       "typeText": "'vertical' | 'horizontal'",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioGroupProps",
@@ -8781,7 +10404,13 @@
       ],
       "searchTags": [],
       "typeText": "interface RadioGroupProps { ... }",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioOptionItem",
@@ -8805,7 +10434,13 @@
       ],
       "searchTags": [],
       "typeText": "interface RadioOptionItem { ... }",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioProps",
@@ -8829,7 +10464,13 @@
       ],
       "searchTags": [],
       "typeText": "interface RadioProps extends NativeRadioInputProps { ... }",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "RadioValueType",
@@ -8853,7 +10494,13 @@
       ],
       "searchTags": [],
       "typeText": "string | number",
-      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';",
+      "examples": [
+        {
+          "hash": "313363d73caa1720be911481f367f2a4fbbb1859ffaee46be74013368eacc435",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ResizeObserver",
@@ -8905,7 +10552,33 @@
         "useResizeObserver"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ResizeObserver>Label</ResizeObserver>"
+      "canonicalUsage": "<ResizeObserver>Label</ResizeObserver>",
+      "examples": [
+        {
+          "hash": "f90a546c0a5b19f700a374f8c0de9d020d0d86482fda3c88eed0b16917bf564e",
+          "source": "canonical"
+        },
+        {
+          "hash": "d2b6ef334d09ba8dfbfcaa666a984b4fed81d7a490b4644d929cdd39a0575458",
+          "source": "stories"
+        },
+        {
+          "hash": "85547f2e3607a4f8b3f9cf667ef43aa215324ec84ccbc0fb9c1b7c6b64ad2bc2",
+          "source": "stories"
+        },
+        {
+          "hash": "e4301747cc6544d8e3142ef1c0610d7abfca5b940e3c555a42232075c8c5c195",
+          "source": "stories"
+        },
+        {
+          "hash": "198a1747993a36392e60ef0e2a8586903d6b5318ca1f06da00ea3868afb45129",
+          "source": "stories"
+        },
+        {
+          "hash": "0626a46b610f456123414b45b6898165ecfdab717f7be8763c364869f5a8abfc",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "ResizeObserverOnResize",
@@ -8925,7 +10598,13 @@
       ],
       "searchTags": [],
       "typeText": "(size: SizeInfo, element: HTMLElement) => void",
-      "canonicalUsage": "import type { ResizeObserverOnResize } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ResizeObserverOnResize } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b210fd37f1100b0418170427f0eb18c9c4253daad1735e6509bd91481a86197b",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ResizeObserverProps",
@@ -8945,7 +10624,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ResizeObserverProps { ... }",
-      "canonicalUsage": "import type { ResizeObserverProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ResizeObserverProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "d12430351f38211b63676292b659b971e4d16e07f1814f3cde874dcf51438216",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ResizeObserverSizeInfo",
@@ -8965,7 +10650,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SizeInfo { ... }",
-      "canonicalUsage": "import type { ResizeObserverSizeInfo } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ResizeObserverSizeInfo } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "adc252adb3fef273c5e306d586378a016adae78f590a000760c7e76d3c69def0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Row",
@@ -8984,7 +10675,13 @@
         "GridRowProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';",
+      "examples": [
+        {
+          "hash": "e8c7f428d87a0d93c3e05ddc5ff8c7f828201f65301de765dc6ae2cacb965617",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Rule",
@@ -9050,7 +10747,13 @@
       ],
       "searchTags": [],
       "typeText": "interface Rule { ... }",
-      "canonicalUsage": "import type { Rule } from '@1money/component-ui';"
+      "canonicalUsage": "import type { Rule } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "dd57a882417100776f66e2b3a621605315e81b30e6e2c7cad27d2680d9ef2874",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Segment",
@@ -9121,7 +10824,41 @@
         "segment",
         "segmented"
       ],
-      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';"
+      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';",
+      "examples": [
+        {
+          "hash": "dce4f4bfc195838aafff4ed0a505d639aaaa5cc09de3d9d390beb5bf2595b241",
+          "source": "canonical"
+        },
+        {
+          "hash": "95261a6b72c04c3ea26624d822d3ef98a93785b72846dd56f935667da5a42744",
+          "source": "readme"
+        },
+        {
+          "hash": "e3d66f0ccbd0a7ccb0d05047e1e611b0f86000768646f033186b7753a00c0497",
+          "source": "stories"
+        },
+        {
+          "hash": "cc30bf44aa3e0cdd58a2ca744b94df707b295cfcfa7f25baf9f249dfce903698",
+          "source": "stories"
+        },
+        {
+          "hash": "ab88abaee84074065a72818623b89a3bbff3e9ed3374c180a19a7e4e8804d4c9",
+          "source": "stories"
+        },
+        {
+          "hash": "bb24dc50a5bf6e6a1939b18e899761d24886a22c1408686cb00014e59452893d",
+          "source": "stories"
+        },
+        {
+          "hash": "ec69d25bc7f9cab68f96168accd32edfbf3b46807b2f5e7969b3b418b670c55d",
+          "source": "stories"
+        },
+        {
+          "hash": "b529fd8b9cf18db6c270ca6514c9ab7beb2055de717f11880b4a8023d1ea0fcd",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SegmentItem",
@@ -9139,7 +10876,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SegmentItem { ... }",
-      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';"
+      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';",
+      "examples": [
+        {
+          "hash": "dce4f4bfc195838aafff4ed0a505d639aaaa5cc09de3d9d390beb5bf2595b241",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SegmentProps",
@@ -9157,7 +10900,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SegmentProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'defaultValue'> { ... }",
-      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';"
+      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';",
+      "examples": [
+        {
+          "hash": "dce4f4bfc195838aafff4ed0a505d639aaaa5cc09de3d9d390beb5bf2595b241",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Select",
@@ -9508,7 +11257,45 @@
         "dropdown",
         "select"
       ],
-      "canonicalUsage": "<Select />"
+      "canonicalUsage": "<Select />",
+      "examples": [
+        {
+          "hash": "380a765ee50bbf70c1200eff7ddd80a9e43756cc6666e272306241f4ef8b8f6d",
+          "source": "canonical"
+        },
+        {
+          "hash": "aa4391aa4b3ea2a3dc26b729da95c20dee995971191316cd1ac996bbe6f07ff6",
+          "source": "stories"
+        },
+        {
+          "hash": "02e7ee205e5c1f4400f77455033e6f28f31c52eb0c2aef111f2f1dca42c4c852",
+          "source": "stories"
+        },
+        {
+          "hash": "2eed734c74e8348e0fa6c6323191fa5088e495fe08ed081eb78282a6b01e8f1d",
+          "source": "stories"
+        },
+        {
+          "hash": "3284a2fef64eaf0e1ffec7a7e01c15cda724f62830d5a4914df39bb4c1ac6a71",
+          "source": "stories"
+        },
+        {
+          "hash": "9d6c4db0ca67c0a61e385aec75f3d236c7307233bdafc13e84c2e2931d8508e9",
+          "source": "stories"
+        },
+        {
+          "hash": "9100e9de94ae7d82a8e0bb2b4eb368b8f4b384ec56c2ef26ce85647bf6c33f96",
+          "source": "stories"
+        },
+        {
+          "hash": "d47cf64a718d510f52ea4bab7bb514b2a484c039111ea779779a655cd2d0bf5e",
+          "source": "stories"
+        },
+        {
+          "hash": "4912f0f2382c8603966f18e35eb0da61e1fabcd54b84eb1d4c920003269d86c2",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SelectMultipleValue",
@@ -9534,7 +11321,13 @@
       ],
       "searchTags": [],
       "typeText": "SelectOptionValue[]",
-      "canonicalUsage": "import type { SelectMultipleValue } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectMultipleValue } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "ae5e39c465884ad3ee96d1b1c9d1539c5b2b2cb44562c0c0bf66a543e99516ee",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectOption",
@@ -9560,7 +11353,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectOption { ... }",
-      "canonicalUsage": "import type { SelectOption } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectOption } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0bf82595fcbc5628580404f6ac531e1126786de5478bef0f4519d89248f95e91",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectOptionValue",
@@ -9586,7 +11385,13 @@
       ],
       "searchTags": [],
       "typeText": "string | number",
-      "canonicalUsage": "import type { SelectOptionValue } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectOptionValue } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "a4f71f3bc93d9434cdb6e746820539591ea333006874f4c99335e99684733f26",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectProps",
@@ -9612,7 +11417,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectProps extends Omit<HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'onBlur' | 'onChange' | 'prefix'> { ... }",
-      "canonicalUsage": "import type { SelectProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "ee544c176f86a4c2f64f890aa1127a50cbd9578b72783bfbd271d85221a4ba76",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectRenderOptionMeta",
@@ -9638,7 +11449,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectRenderOptionMeta { ... }",
-      "canonicalUsage": "import type { SelectRenderOptionMeta } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectRenderOptionMeta } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "006e31e1aea9cb0872e5234745dfab511ecfeea6628f0243531c022b82b87840",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectRenderValueMeta",
@@ -9664,7 +11481,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectRenderValueMeta { ... }",
-      "canonicalUsage": "import type { SelectRenderValueMeta } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectRenderValueMeta } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "2303a5c6a71284996d0b2aefc5c97e63795d7b4e90692e48919950df2f43295c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectSingleValue",
@@ -9690,7 +11513,13 @@
       ],
       "searchTags": [],
       "typeText": "SelectOptionValue | null | undefined",
-      "canonicalUsage": "import type { SelectSingleValue } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectSingleValue } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "ee9d4d9c7ee0fc334eed3f3f6bcb932658ba3eb2ad81859d13d83e6edc382a7c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectSize",
@@ -9716,7 +11545,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof SELECT_SIZES)[number]",
-      "canonicalUsage": "import type { SelectSize } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectSize } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "2d7e38611101e011923b93e2bc92f43011a13ef4e6cec1e784f2a597e7b2eeb0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectStatus",
@@ -9742,7 +11577,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof SELECT_STATUSES)[number]",
-      "canonicalUsage": "import type { SelectStatus } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectStatus } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "64c1cf107d7d53a5e6ad6dd3cad583a884348f12f184b4fa9cdd6dd4c3c33dd7",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SelectValue",
@@ -9768,7 +11609,13 @@
       ],
       "searchTags": [],
       "typeText": "SelectSingleValue | SelectMultipleValue",
-      "canonicalUsage": "import type { SelectValue } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SelectValue } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b04aa554b1ef13ba430adbdd9ec8948be819a624871175d22101fce21f4b499a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Skeleton",
@@ -9853,7 +11700,25 @@
       "searchTags": [
         "skeleton"
       ],
-      "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';"
+      "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';",
+      "examples": [
+        {
+          "hash": "41730566b1a75571b90474a22068176d054676afcea29a6373a473daa93c35d9",
+          "source": "canonical"
+        },
+        {
+          "hash": "ef8ce086dd7339b903a5b656d0655b96da7dbdfa1deb2db6756b17912e48d7d7",
+          "source": "readme"
+        },
+        {
+          "hash": "6697c08837fecd0a49b22824173263e54faad64df99b76fc81aff1dfea1f42bf",
+          "source": "stories"
+        },
+        {
+          "hash": "62512f1603d627ac49ea21ec47291e8fb80bfa36760551817b01799f59004bac",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SkeletonProps",
@@ -9870,7 +11735,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SkeletonProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> { ... }",
-      "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';"
+      "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';",
+      "examples": [
+        {
+          "hash": "41730566b1a75571b90474a22068176d054676afcea29a6373a473daa93c35d9",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Slider",
@@ -10057,7 +11928,21 @@
       "searchTags": [
         "slider"
       ],
-      "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';"
+      "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';",
+      "examples": [
+        {
+          "hash": "5151e7c70e46cba8d6cc7a3b0af66f52ada4fa426d539cdddffd43622871cd95",
+          "source": "canonical"
+        },
+        {
+          "hash": "0ad44348beb71aada6f393329f33307fe6511afd471ef7efa3d66b707b77d4de",
+          "source": "readme"
+        },
+        {
+          "hash": "0983d9d4461b6cb921e768282ab20c7d228fe75faeed46c49dd03c8cdedf3c5a",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SliderProps",
@@ -10074,7 +11959,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SliderProps { ... }",
-      "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';"
+      "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';",
+      "examples": [
+        {
+          "hash": "5151e7c70e46cba8d6cc7a3b0af66f52ada4fa426d539cdddffd43622871cd95",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Space",
@@ -10141,7 +12032,57 @@
         "SpaceProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';"
+      "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';",
+      "examples": [
+        {
+          "hash": "32f04d7438f47b6aa1ee4f2d3320dcda8e886dd4ff70180606bc1514971b104f",
+          "source": "canonical"
+        },
+        {
+          "hash": "f73e7e356c10515a75db142fc39798205ea134b8e31695a273d8e28d280bdf59",
+          "source": "readme"
+        },
+        {
+          "hash": "408b255061d78d5404f4f94cbc15613c1d536cd1f10f1aee06797357b1a2fb28",
+          "source": "readme"
+        },
+        {
+          "hash": "930d9377a1bc1d2d347c18561168fa7328f66f844a8247a08330235e71f9e2fe",
+          "source": "readme"
+        },
+        {
+          "hash": "fe73c206f0aebcba1dc4a4f6eb92e1eacfed55f021dd15e3523cdbda1db7f3de",
+          "source": "stories"
+        },
+        {
+          "hash": "1bebed39fee0591428a6b1b9cc68677467e7a33cfc851756d240e2812c4b8189",
+          "source": "stories"
+        },
+        {
+          "hash": "a0024fe9ea320865604e9789667d0202051d8702c52e474367a9d166eb0b99fb",
+          "source": "stories"
+        },
+        {
+          "hash": "f8e54ed14660db5515021d6fa26ec612bbf87633be766d21a69260f333535b2a",
+          "source": "stories"
+        },
+        {
+          "hash": "47ead0c65ac8c3b846279ca4a9fcd19858e5ec10ebcdcb626f32613f8a871b58",
+          "source": "stories"
+        },
+        {
+          "hash": "cdbfa361d3e58dc9aa83fabc92effb556137d8a23d15f8f9ec61c45532511930",
+          "source": "stories"
+        },
+        {
+          "hash": "fe341eb57b579a93678984ed2420d6db506c4ac62fb04eddede68b5d391c95c8",
+          "source": "stories"
+        },
+        {
+          "hash": "ee6f8929fd07172820a76fee2ed193c8ada15076201cad5328c32b0beac039fd",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SpaceProps",
@@ -10158,7 +12099,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SpaceProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';"
+      "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';",
+      "examples": [
+        {
+          "hash": "32f04d7438f47b6aa1ee4f2d3320dcda8e886dd4ff70180606bc1514971b104f",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Spinner",
@@ -10221,7 +12168,29 @@
         "loading",
         "spinner"
       ],
-      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';"
+      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
+      "examples": [
+        {
+          "hash": "53796e97adf166bb70c2b3609880a16747980e3f8c59df7c480e59c26336e894",
+          "source": "canonical"
+        },
+        {
+          "hash": "5413d51333d6c9b825c7768766caa8e437a871c680256959a30b781f1af1672d",
+          "source": "readme"
+        },
+        {
+          "hash": "808647d81c324baad55f61c8562ed733caaadbab40197e96d9eb279d0e78143a",
+          "source": "readme"
+        },
+        {
+          "hash": "ada70f481c3767a8154a392da046b6648fdd7b5cc35798f54c4ed6af72c7b730",
+          "source": "readme"
+        },
+        {
+          "hash": "b8ac646aa0abb229622508538774df1afc82f31105fd258988aafebeba8bded1",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SpinnerProps",
@@ -10239,7 +12208,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SpinnerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }",
-      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';"
+      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
+      "examples": [
+        {
+          "hash": "53796e97adf166bb70c2b3609880a16747980e3f8c59df7c480e59c26336e894",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SpinnerType",
@@ -10257,7 +12232,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof SPINNER_TYPES)[number]",
-      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';"
+      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
+      "examples": [
+        {
+          "hash": "53796e97adf166bb70c2b3609880a16747980e3f8c59df7c480e59c26336e894",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Step",
@@ -10298,7 +12279,21 @@
         "step",
         "stepper"
       ],
-      "canonicalUsage": "<Step items={[]} />"
+      "canonicalUsage": "<Step items={[]} />",
+      "examples": [
+        {
+          "hash": "4e48840543a859bae919e9c215f1de4cef584fb161834adb048843c3edbcea27",
+          "source": "canonical"
+        },
+        {
+          "hash": "6be167264babcbb844c0e055af43ab824d97ffc3393a425537bf30ace4385d01",
+          "source": "stories"
+        },
+        {
+          "hash": "f9028e1b42f4938799ffc5302ed2c901a565b92e015a9f1d86e6aa37769cf5dd",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "StepItem",
@@ -10318,7 +12313,13 @@
       ],
       "searchTags": [],
       "typeText": "interface StepItem { ... }",
-      "canonicalUsage": "import type { StepItem } from '@1money/component-ui';"
+      "canonicalUsage": "import type { StepItem } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "139015fec5fc7fb670cc0576d9479b586b4a22630669291347d56833321035b9",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "StepProps",
@@ -10338,7 +12339,13 @@
       ],
       "searchTags": [],
       "typeText": "interface StepProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import type { StepProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { StepProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "a43b98404aa6d3cc178bea6dcf1e7fdf602e10a994f4e4b1f3322f7989606817",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "StepStatus",
@@ -10358,7 +12365,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof STEP_STATUSES)[number]",
-      "canonicalUsage": "import type { StepStatus } from '@1money/component-ui';"
+      "canonicalUsage": "import type { StepStatus } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "85915257df0809dc031bdf0b913447c468d3e2305584e7fe3f3e88146afc2d89",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "StepTagConfig",
@@ -10378,7 +12391,13 @@
       ],
       "searchTags": [],
       "typeText": "interface StepTagConfig { ... }",
-      "canonicalUsage": "import type { StepTagConfig } from '@1money/component-ui';"
+      "canonicalUsage": "import type { StepTagConfig } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "bbda74565e26930220b274325ab62a69b2d7aa603e77e8cb55374db61ebc5370",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "SubmitterProps",
@@ -10444,7 +12463,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SubmitterProps { ... }",
-      "canonicalUsage": "import type { SubmitterProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { SubmitterProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "f2d95277a12f35af59c783af831430752b1d416b0832d0ac6c0a4f2dc181526c",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Switch",
@@ -10576,7 +12601,41 @@
         "switch",
         "toggle"
       ],
-      "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';"
+      "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';",
+      "examples": [
+        {
+          "hash": "b90ecb23325776c49905641bc4d530ee3c8bb9edc1499a50cec0f8848b048ff3",
+          "source": "canonical"
+        },
+        {
+          "hash": "7c889960780d1bb8c89782e9e5a9a9c15a27cc6c1b47287402af4a2d4e963f38",
+          "source": "readme"
+        },
+        {
+          "hash": "867ba95078cabfe2583c6111b08afa83cf752de8cc92798aea5e986fa33402b6",
+          "source": "stories"
+        },
+        {
+          "hash": "a62749c6bf6ae0ae37d8ccf8598ac34706ec83374e1d6fc0b8079a215f970a5c",
+          "source": "stories"
+        },
+        {
+          "hash": "6933391c30713a6f153f00b6b78371d9eff792ea8fc49f27e3a1b6beb75c3a13",
+          "source": "stories"
+        },
+        {
+          "hash": "f54db38dffb1be6227af3cbf255c3fdda561ea359d56945b84e87994c5030e58",
+          "source": "stories"
+        },
+        {
+          "hash": "7f0dc646a2318b7481b1045fbf0541bf980a92ee43deabb9b1f1354ce203daea",
+          "source": "stories"
+        },
+        {
+          "hash": "ff521bda64792aab4723283f3ca01c3dde02a1b284817b107a8c7f573408f06e",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "SwitchProps",
@@ -10593,7 +12652,13 @@
       ],
       "searchTags": [],
       "typeText": "interface SwitchProps { ... }",
-      "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';"
+      "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';",
+      "examples": [
+        {
+          "hash": "b90ecb23325776c49905641bc4d530ee3c8bb9edc1499a50cec0f8848b048ff3",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TabItem",
@@ -10611,7 +12676,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TabItem { ... }",
-      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';"
+      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';",
+      "examples": [
+        {
+          "hash": "7a769965048d5fc191bd44af93ca259df9cd9e8ca65e2da9d44435a72352d690",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Table",
@@ -10627,7 +12698,13 @@
       "searchTags": [
         "table"
       ],
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TableChangeMeta",
@@ -10652,7 +12729,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TableChangeMeta { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TableColumn",
@@ -10677,7 +12760,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TableColumn { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TableExpandableConfig",
@@ -10702,7 +12791,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TableExpandableConfig { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TablePaginationConfig",
@@ -10727,7 +12822,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TablePaginationConfig { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TableProps",
@@ -10752,7 +12853,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TableProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TableRef",
@@ -10777,7 +12884,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TableRef { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TableRowSelection",
@@ -10802,7 +12915,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TableRowSelection { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Tabs",
@@ -10880,7 +12999,45 @@
       "searchTags": [
         "tab"
       ],
-      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';"
+      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';",
+      "examples": [
+        {
+          "hash": "7a769965048d5fc191bd44af93ca259df9cd9e8ca65e2da9d44435a72352d690",
+          "source": "canonical"
+        },
+        {
+          "hash": "75d47892bcf3c00eea515c704e3bca9daf8cacac47c88adb008f89d848ea8465",
+          "source": "readme"
+        },
+        {
+          "hash": "69587b5549065fee55834c9e26afc4a0d877380ff5f273f3fe5c7a542b7b5b31",
+          "source": "stories"
+        },
+        {
+          "hash": "56da187127a14dabcea3d7e86338360a92a157cfb0e8d6f3bddf4159d6283116",
+          "source": "stories"
+        },
+        {
+          "hash": "bd306cbc9485a4467f268e9969f8a5f0f00429498ccfe78040c56180b634fa9a",
+          "source": "stories"
+        },
+        {
+          "hash": "7bf98b4215d0765b2bbc570bf769752133facd77c2610403084cde351ca5aa91",
+          "source": "stories"
+        },
+        {
+          "hash": "b61f06d41d43fd9c2339f17a5b01c6a2352b78df04e1c7af7cd9edd0a3750023",
+          "source": "stories"
+        },
+        {
+          "hash": "c30f95eaa297f541844c392eb546b9d08570f22a5e42b68a89bd30232659e507",
+          "source": "stories"
+        },
+        {
+          "hash": "0fa2c2f34c85ce5102a3cc057753d15ec01c8c91b5d147d9e5edb05d34148449",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "TabsProps",
@@ -10898,7 +13055,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TabsProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
-      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';"
+      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';",
+      "examples": [
+        {
+          "hash": "7a769965048d5fc191bd44af93ca259df9cd9e8ca65e2da9d44435a72352d690",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Tag",
@@ -10983,7 +13146,29 @@
       "searchTags": [
         "tag"
       ],
-      "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';"
+      "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';",
+      "examples": [
+        {
+          "hash": "46eb2e5e014d9918506f4ed722a17b3bcc515a9952f013765aa23300503f6581",
+          "source": "canonical"
+        },
+        {
+          "hash": "ea3c321b74ab772b6f353f61d0c0801ac82412d2304361b9b1427847e614b4b5",
+          "source": "readme"
+        },
+        {
+          "hash": "7619f1805b51e01e25c38390a5ef85970f179beb2103868026216700297af2a5",
+          "source": "stories"
+        },
+        {
+          "hash": "1368d9a081c161226c0abfd74042767230c6932f91ffaef8f9bc0008e0172021",
+          "source": "stories"
+        },
+        {
+          "hash": "27102a1be34a23388d216bcaea7d4365ba5b1f5ddc311a714e76acab74f9663b",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "TagProps",
@@ -11000,7 +13185,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TagProps extends Omit<HTMLAttributes<HTMLSpanElement>, 'color'> { ... }",
-      "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';"
+      "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';",
+      "examples": [
+        {
+          "hash": "46eb2e5e014d9918506f4ed722a17b3bcc515a9952f013765aa23300503f6581",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Tooltip",
@@ -11087,7 +13278,53 @@
         "popover",
         "tooltip"
       ],
-      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';"
+      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
+      "examples": [
+        {
+          "hash": "874c0289a3373dd3d695285aa0f82b8c296344a6523d1eba0f2d8d8843de3f5e",
+          "source": "canonical"
+        },
+        {
+          "hash": "fba58aaa98e3848adf8bdb90910fc477e13c5d03dcde7c7b9c0b36b5b9b34e14",
+          "source": "readme"
+        },
+        {
+          "hash": "1d6bd2e44c1dc8a7721eb127c8c470e4fc1302c01e53e18a41d5f0c2d83cc793",
+          "source": "stories"
+        },
+        {
+          "hash": "284ea7b22707c78eea4297b37bd7d00f86c317dfa30a18c957ba96b5fceb6e88",
+          "source": "stories"
+        },
+        {
+          "hash": "fb7281ea3d63f2737ff7a0c1891f104414c25e8341d2d8465d27fd8a99d22b69",
+          "source": "stories"
+        },
+        {
+          "hash": "90092f8dd27dd6d5cb148cceba0d8a4f78aad8855a0fce8f703c4bf3cbaf720d",
+          "source": "stories"
+        },
+        {
+          "hash": "89c9cba267296442885b878c96baaea6e6d068fae0432e39671310e24b5c68ac",
+          "source": "stories"
+        },
+        {
+          "hash": "1012b70bb6b8eceb019a8f4860fbcf78a388350f7fb6b68822393363514c01c3",
+          "source": "stories"
+        },
+        {
+          "hash": "56f08e9a530d43dc806f65624f55a0ea2fd88e16669a5a9f6e4df7d3d050ddf7",
+          "source": "stories"
+        },
+        {
+          "hash": "cb12a617c652a478db85bbaf263b02a88534a23acb58a743641fd2fa7ce95439",
+          "source": "stories"
+        },
+        {
+          "hash": "959b3ddd666f44bb3e34080295e77a105a8b1625c2722272128ee20dce9df69f",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "TooltipPlacement",
@@ -11105,7 +13342,13 @@
       ],
       "searchTags": [],
       "typeText": "| 'top'\n  | 'top-start'\n  | 'top-end'\n  | 'bottom'\n  | 'bottom-start'\n  | 'bottom-end'\n  | 'left'\n  | 'left-start'\n  | 'left-end'\n  | 'right'\n  | 'right-start'\n  | 'right-end'",
-      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';"
+      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
+      "examples": [
+        {
+          "hash": "874c0289a3373dd3d695285aa0f82b8c296344a6523d1eba0f2d8d8843de3f5e",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TooltipProps",
@@ -11123,7 +13366,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TooltipProps extends Omit<ITooltip, 'place' | 'noArrow' | 'children' | 'isOpen' | 'setIsOpen'> { ... }",
-      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';"
+      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
+      "examples": [
+        {
+          "hash": "874c0289a3373dd3d695285aa0f82b8c296344a6523d1eba0f2d8d8843de3f5e",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Tour",
@@ -11256,7 +13505,17 @@
         "tour",
         "walkthrough"
       ],
-      "canonicalUsage": "<Tour open steps={[]} onClose={() => {}} />"
+      "canonicalUsage": "<Tour open steps={[]} onClose={() => {}} />",
+      "examples": [
+        {
+          "hash": "8a039d35bf216ee79ea2b4e32c79e39511af7a973d3b4ca0d847a1f6b1db689b",
+          "source": "canonical"
+        },
+        {
+          "hash": "83b8b12ee8492b3c257aa3e77d2ad7226d2b0b6140e3f76c6afc21131f8d10c2",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "TourProps",
@@ -11274,7 +13533,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TourProps { ... }",
-      "canonicalUsage": "import type { TourProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TourProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "96d88abf705996407a6916dfde78f26c8ef79d9227c1e9bc88838abf6b36f8cf",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TourStep",
@@ -11292,7 +13557,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TourStep { ... }",
-      "canonicalUsage": "import type { TourStep } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TourStep } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "d04ee61a1ef11a50499c998929bb1a6272dd090b1627408144d3ecd5f400c14a",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Trigger",
@@ -11306,7 +13577,13 @@
       "extends": [],
       "relatedSymbols": [],
       "searchTags": [],
-      "canonicalUsage": "Trigger();"
+      "canonicalUsage": "Trigger();",
+      "examples": [
+        {
+          "hash": "074e86d13c7d9a68d5694e79006281c382f549d4365a1cbb4fbd39d95885c401",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TriggerAction",
@@ -11327,7 +13604,13 @@
       ],
       "searchTags": [],
       "typeText": "'click' | 'hover' | 'focus'",
-      "canonicalUsage": "import type { TriggerAction } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TriggerAction } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "6ead2edfd91fca099e695b2beda53aa31150a9db0193fe06e17c49ec64ac671f",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TriggerContent",
@@ -11348,7 +13631,13 @@
       ],
       "searchTags": [],
       "typeText": "| ReactNode\n  | ((context: TriggerContentContext) => ReactNode)",
-      "canonicalUsage": "import type { TriggerContent } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TriggerContent } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "f18e81cff127db918d8c95b366d0f0f91cd4fc43efb3de4ba7a32d79f55b140d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TriggerContentContext",
@@ -11369,7 +13658,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TriggerContentContext { ... }",
-      "canonicalUsage": "import type { TriggerContentContext } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TriggerContentContext } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "9f14763d46414e7c4b8061c3d0fc4394fd7f91192a5ff44fea97349a3fcbc25d",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TriggerProps",
@@ -11390,7 +13685,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TriggerProps { ... }",
-      "canonicalUsage": "import type { TriggerProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TriggerProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "73e9768b2c51581a73c7e80f9986d540e6dd5c4353209e42a9afad55bc2e1f00",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TriggerRole",
@@ -11411,7 +13712,13 @@
       ],
       "searchTags": [],
       "typeText": "'dialog' | 'tooltip' | 'menu' | 'alertdialog' | 'listbox'",
-      "canonicalUsage": "import type { TriggerRole } from '@1money/component-ui';"
+      "canonicalUsage": "import type { TriggerRole } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "0c404970dc61051322fa4f50236e741d1122543aab122bfc2360f4afa49f69ff",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Typography",
@@ -11442,7 +13749,61 @@
       "searchTags": [
         "typography"
       ],
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        },
+        {
+          "hash": "517e4b31f20e36b6d6da699989bc802ee2f310d44a219f1bcdd18b0bd538023f",
+          "source": "readme"
+        },
+        {
+          "hash": "074447baa439011627e4d0c7a62d3c9b6add0e410491d80651f2d5bf58bfca00",
+          "source": "readme"
+        },
+        {
+          "hash": "801ac9e23e39cb6489cdc14af75c2690301e3b8f6248c6a0c127540525a75362",
+          "source": "readme"
+        },
+        {
+          "hash": "ab5c324c61a5f02471bebf0ffc7a02c3fa14d88b86a88748bd4b37d2d68ecb8c",
+          "source": "stories"
+        },
+        {
+          "hash": "a56b51b2ba04e6fe71ad295eb763826caeae786840f044ae8e6bac2ea5496bf1",
+          "source": "stories"
+        },
+        {
+          "hash": "45252867b867d4574c4422b0dc8f81f80681ef9f252bb0dcb5b4111a6828fe0f",
+          "source": "stories"
+        },
+        {
+          "hash": "aa9d3cac92fdf34a0543a349573665ef4d481ab602bced73e02d55c1cde01d0f",
+          "source": "stories"
+        },
+        {
+          "hash": "2b3fc3b39c7eb57ee505bdfbba18d6c635035548c1010e23b9c468b5461d9c56",
+          "source": "stories"
+        },
+        {
+          "hash": "761ae88c482cfc9b4dff5a70caa5dcd52d278fbebbe3337b8eb6bc608e6b40dd",
+          "source": "stories"
+        },
+        {
+          "hash": "d15642e0e0c66cf1892b419ab6a2c46184dc545b03d490568c3e8f3882a4bcbe",
+          "source": "stories"
+        },
+        {
+          "hash": "3765b9b65358e3b9f8a27e2977803b856f24283972aa7cfbb7fd363fd67b44e4",
+          "source": "stories"
+        },
+        {
+          "hash": "3a0d87cad48f2b1f28af7b4b9c2b86fa77b684f5ef53ea871de9a58e6c54e859",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "TypographyBodyProps",
@@ -11472,7 +13833,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyBodyProps extends BaseHTMLProps, TypographyStrongProps { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyBodySize",
@@ -11502,7 +13869,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof TYPOGRAPHY_BODY_SIZES)[number]",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyCopyableConfig",
@@ -11532,7 +13905,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyCopyableConfig { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyDisplayProps",
@@ -11562,7 +13941,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyDisplayProps extends BaseHTMLProps, TypographyCommonProps { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyDisplaySize",
@@ -11592,7 +13977,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof TYPOGRAPHY_DISPLAY_SIZES)[number]",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyEllipsisConfig",
@@ -11622,7 +14013,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyEllipsisConfig { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyHeadlineProps",
@@ -11652,7 +14049,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyHeadlineProps extends BaseHTMLProps, TypographyCommonProps { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyHeadlineSize",
@@ -11682,7 +14085,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof TYPOGRAPHY_HEADLINE_SIZES)[number]",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyLabelProps",
@@ -11712,7 +14121,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyLabelProps extends BaseHTMLProps, TypographyStrongProps { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyLabelSize",
@@ -11742,7 +14157,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof TYPOGRAPHY_LABEL_SIZES)[number]",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyLinkProps",
@@ -11772,7 +14193,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children' | 'color'>, TypographyCommonProps { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyLinkSize",
@@ -11802,7 +14229,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof TYPOGRAPHY_LINK_SIZES)[number]",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyTitleProps",
@@ -11832,7 +14265,13 @@
       ],
       "searchTags": [],
       "typeText": "interface TypographyTitleProps extends BaseHTMLProps, TypographyStrongProps { ... }",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "TypographyTitleSize",
@@ -11862,7 +14301,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof TYPOGRAPHY_TITLE_SIZES)[number]",
-      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';",
+      "examples": [
+        {
+          "hash": "12825b770a65fb63d8246d6dc52e3046ff76e190e6e7d5272538a4bcec2331ab",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "Upload",
@@ -11972,7 +14417,25 @@
         "file input",
         "upload"
       ],
-      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
+      "examples": [
+        {
+          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "source": "canonical"
+        },
+        {
+          "hash": "477943c67bf232b2b011ce862c736ff9d98749cac72dd25d2f0d6aa4d8800866",
+          "source": "readme"
+        },
+        {
+          "hash": "b85523cf25538996a1c24800f85df79bbdac7764afb70db63c595c9dffcaa1c4",
+          "source": "readme"
+        },
+        {
+          "hash": "26a19b92d9700532c61f4dd281c35829bd6da8aa2bf6c2e0c32a24bd5a9bc8c5",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "UploadFileBar",
@@ -12047,7 +14510,13 @@
         "UploadProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
+      "examples": [
+        {
+          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "UploadFileBarProps",
@@ -12066,7 +14535,13 @@
       ],
       "searchTags": [],
       "typeText": "interface UploadFileBarProps { ... }",
-      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
+      "examples": [
+        {
+          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "UploadProps",
@@ -12085,7 +14560,13 @@
       ],
       "searchTags": [],
       "typeText": "interface UploadProps { ... }",
-      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';",
+      "examples": [
+        {
+          "hash": "749b2435f11f6128024da7aba76fcb76766e7f8235cb7163c7f679302c017478",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "UsePaginationOptions",
@@ -12109,7 +14590,13 @@
       ],
       "searchTags": [],
       "typeText": "interface UsePaginationOptions { ... }",
-      "canonicalUsage": "import type { UsePaginationOptions } from '@1money/component-ui';"
+      "canonicalUsage": "import type { UsePaginationOptions } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b3269e0f2d0e7c661031e42cd9f42fc4b05a8e44adca30ee1d03792ad3147ba6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "UsePaginationResult",
@@ -12133,7 +14620,13 @@
       ],
       "searchTags": [],
       "typeText": "interface UsePaginationResult { ... }",
-      "canonicalUsage": "import type { UsePaginationResult } from '@1money/component-ui';"
+      "canonicalUsage": "import type { UsePaginationResult } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "77e1cf5867cfc41182bff2220826370fa61748de721d6b2584d7d560bf2c0dd1",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ValidateStatus",
@@ -12199,7 +14692,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof VALIDATE_STATUSES)[number]",
-      "canonicalUsage": "import type { ValidateStatus } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ValidateStatus } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "8247a9554109513467d80b8a35240fb5a6e9cf779a21f7c4ecff129093c814a5",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "ValidateTrigger",
@@ -12265,7 +14764,13 @@
       ],
       "searchTags": [],
       "typeText": "(typeof VALIDATE_TRIGGERS)[number]",
-      "canonicalUsage": "import type { ValidateTrigger } from '@1money/component-ui';"
+      "canonicalUsage": "import type { ValidateTrigger } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "9eefa6771fcb27648db4d9fabf1ae917a630d41b3d5a42a117eb37be38b56113",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "VirtualList",
@@ -12283,7 +14788,41 @@
         "VirtualListScrollInfo"
       ],
       "searchTags": [],
-      "canonicalUsage": "<VirtualList />"
+      "canonicalUsage": "<VirtualList />",
+      "examples": [
+        {
+          "hash": "0e2dec50d70bd70872185f7df956a6ce124bbf924f23c8eabe4982e1ecf26220",
+          "source": "canonical"
+        },
+        {
+          "hash": "d15d6e83068938c5da737543b9001c84c137c5598ce7e756c465635015da0e9e",
+          "source": "stories"
+        },
+        {
+          "hash": "3a54c632f22536687e4ed9e17f67c16e3a9e77ff29c9bc4a1cd8b9d25a2cea31",
+          "source": "stories"
+        },
+        {
+          "hash": "ee6fd2b66f230ba55e81f5d6dd2b5d615ed77a2e3de08d669d2c1e4590a0a165",
+          "source": "stories"
+        },
+        {
+          "hash": "2ab77e81dddcdc2fa37f1d5a5120de36dedd49cb85103c06a1a1dd24f1e72ee0",
+          "source": "stories"
+        },
+        {
+          "hash": "ab0403e62c94713de6dd61ca061d9073d56ba263b9f85cf5f9ed1ddbea8b6d90",
+          "source": "stories"
+        },
+        {
+          "hash": "1cb015f3e0855e585a043b31ca6ab2548c5deba7b49784597b3a4b370552a0bf",
+          "source": "stories"
+        },
+        {
+          "hash": "76c1197c87f2f6999de94820b68014b24f2b901f41f998df8b43844f3b27e871",
+          "source": "stories"
+        }
+      ]
     },
     {
       "name": "VirtualListProps",
@@ -12302,7 +14841,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ListProps extends Omit<React.HTMLAttributes<any>, 'children'> { ... }",
-      "canonicalUsage": "import type { VirtualListProps } from '@1money/component-ui';"
+      "canonicalUsage": "import type { VirtualListProps } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "b68195939e77c65de85efdcc7d2b36f70103f455d34c46643c83fef14ee60fc4",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "VirtualListRef",
@@ -12321,7 +14866,13 @@
       ],
       "searchTags": [],
       "typeText": "{\n  nativeElement: HTMLDivElement;\n  scrollTo: ScrollTo;\n  getScrollInfo: () => ScrollInfo;\n}",
-      "canonicalUsage": "import type { VirtualListRef } from '@1money/component-ui';"
+      "canonicalUsage": "import type { VirtualListRef } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "648f1f281d63968813e49f167b1de1f2ecbe3cf250ef73ea69973602535a80a4",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "VirtualListScrollInfo",
@@ -12340,7 +14891,13 @@
       ],
       "searchTags": [],
       "typeText": "interface ScrollInfo { ... }",
-      "canonicalUsage": "import type { VirtualListScrollInfo } from '@1money/component-ui';"
+      "canonicalUsage": "import type { VirtualListScrollInfo } from '@1money/component-ui';",
+      "examples": [
+        {
+          "hash": "925f040e7967cc26171dd00e958183d004efe4b40e569828af4e4aef0f6b6ab5",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "VirtualTable",
@@ -12356,7 +14913,13 @@
       "searchTags": [
         "table"
       ],
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "VirtualTableProps",
@@ -12381,7 +14944,13 @@
       ],
       "searchTags": [],
       "typeText": "interface VirtualTableProps extends Omit<TableProps<T>, 'scroll'> { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "examples": [
+        {
+          "hash": "c0664392fe872361367426922616a5b0ccbab84e30ba3cf9d0d5194568cea5c0",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "createProFormField",
@@ -12447,7 +15016,13 @@
       ],
       "searchTags": [],
       "signature": "(config: CreateProFormFieldConfig<FieldProps>): FC<ProFormFieldProps<FieldProps>>",
-      "canonicalUsage": "createProFormField(config);"
+      "canonicalUsage": "createProFormField(config);",
+      "examples": [
+        {
+          "hash": "a5842c6108977e26b97ff50bb3f3528512508be353fb80fdbbb6c38bddb09762",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "notification",
@@ -12473,7 +15048,13 @@
         "toast"
       ],
       "signature": "NotificationStaticApi",
-      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';",
+      "examples": [
+        {
+          "hash": "c6db863710c8ccb0d08715387f2fe78d39c0c721e17d485827de1637262b76c6",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "usePagination",
@@ -12497,7 +15078,13 @@
       ],
       "searchTags": [],
       "signature": "(options: UsePaginationOptions): UsePaginationResult",
-      "canonicalUsage": "const result = usePagination(options);"
+      "canonicalUsage": "const result = usePagination(options);",
+      "examples": [
+        {
+          "hash": "0bd5e17a8fdf9ce2597956d88d3353b55e27bec608882228f3eb3193fa2fb5f1",
+          "source": "canonical"
+        }
+      ]
     },
     {
       "name": "useResizeObserver",
@@ -12517,7 +15104,13 @@
       ],
       "searchTags": [],
       "signature": "(enabled: boolean, getTarget: HTMLElement | (() => HTMLElement), onDelayResize?: OnResize, onSyncResize?: OnResize)",
-      "canonicalUsage": "const result = useResizeObserver(enabled, getTarget);"
+      "canonicalUsage": "const result = useResizeObserver(enabled, getTarget);",
+      "examples": [
+        {
+          "hash": "51bc3448f5ec4346e48ff64f2148ee1d529f46d1a659ccb9ae24bc9da56aa4e0",
+          "source": "canonical"
+        }
+      ]
     }
   ],
   "tokens": [
