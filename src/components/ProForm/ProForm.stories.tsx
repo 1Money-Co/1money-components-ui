@@ -52,6 +52,11 @@ const meta: Meta<typeof ProForm> = {
     grid: { control: 'boolean' },
     disabled: { control: 'boolean' },
   },
+  parameters: {
+    docs: {
+      source: { type: 'code' },
+    },
+  },
   args: {
     readonly: false,
     loading: false,
@@ -102,6 +107,7 @@ export const AllFieldTypes: Story = {
       {...args}
       initialValues={{
         text: 'Hello',
+        textWithButton: '',
         password: 'secret123',
         textarea: 'Multi-line\ncontent',
         agree: true,
@@ -114,6 +120,18 @@ export const AllFieldTypes: Story = {
       onFinish={(values) => alert(JSON.stringify(values, null, 2))}
     >
       <ProFormText name="text" label="Text Input" placeholder="Type here..." />
+      <ProFormText
+        name="textWithButton"
+        label="Text with Button"
+        placeholder="Enter verification code"
+        fieldProps={{
+          suffix: (
+            <Button color="primary" size="small" style={{ marginRight: -4 }}>
+              Send Code
+            </Button>
+          ),
+        }}
+      />
       <ProFormPassword name="password" label="Password" placeholder="Password" />
       <ProFormTextArea name="textarea" label="Text Area" placeholder="Enter long text" />
       <ProFormCheckbox name="agree" label="I agree to the terms" />
