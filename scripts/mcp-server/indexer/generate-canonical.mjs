@@ -29,6 +29,17 @@ const SKELETON_PROP_LIMIT = 3;
 const TRUNCATION_NOTE = '{/* ...more required props */}';
 
 const FENCED_BLOCK_RE = /^```(?:jsx|tsx|js|javascript|ts|typescript)?\s*\r?\n([\s\S]*?)^```/m;
+const FENCED_BLOCK_RE_G = /^```(?:jsx|tsx|js|javascript|ts|typescript)?\s*\r?\n([\s\S]*?)^```/gm;
+
+/**
+ * A block is "import-only" when every non-blank line is an import or export
+ * statement — those are not usable as standalone component snippets.
+ */
+function isImportOnly(body) {
+  const lines = body.split(/\r?\n/u).map(l => l.trim()).filter(Boolean);
+  if (lines.length === 0) return true;
+  return lines.every(l => /^(import|export)\b/u.test(l));
+}
 
 /**
  * Read a file, returning null if it does not exist. Other errors bubble up.
@@ -51,6 +62,32 @@ export function extractFirstFencedBlock(markdown) {
   const match = markdown.match(FENCED_BLOCK_RE);
   if (!match) return null;
   return match[1].replace(/\s+$/u, '');
+}
+
+/**
+ * Extract all fenced code blocks from Markdown content, in document order.
+ * Returns trimmed bodies; empty list if none found.
+ */
+export function extractAllFencedBlocks(markdown) {
+  if (!markdown) return [];
+  const blocks = [];
+  for (const match of markdown.matchAll(FENCED_BLOCK_RE_G)) {
+    const body = match[1].replace(/\s+$/u, '');
+    if (body.length > 0) blocks.push(body);
+  }
+  return blocks;
+}
+
+/**
+ * Pick the first fenced block that looks like a usable usage snippet — i.e.,
+ * NOT a pure import/export listing. Falls back to the first block if every
+ * block is import-only.
+ */
+export function pickUsageFencedBlock(markdown) {
+  const blocks = extractAllFencedBlocks(markdown);
+  if (blocks.length === 0) return null;
+  const firstUsage = blocks.find(b => !isImportOnly(b));
+  return firstUsage ?? null;
 }
 
 /**
@@ -166,12 +203,17 @@ export function buildComponentSkeleton(symbol) {
     return snippet.length <= MAX_SNIPPET_LENGTH ? snippet : null;
   }
 
-  // Produce the skeleton using up to SKELETON_PROP_LIMIT props first,
-  // then fall back to the full set if that somehow fits better.
-  const candidates = [
-    { props: requiredProps.slice(0, SKELETON_PROP_LIMIT), truncated: requiredProps.length > SKELETON_PROP_LIMIT },
-    { props: requiredProps, truncated: false },
-  ];
+  // Always truncate to SKELETON_PROP_LIMIT when more required props exist so
+  // the snippet stays scannable and signals "more to discover" via the note.
+  // The full-props skeleton is only used as a fallback if the truncated form
+  // somehow fails (e.g., blown budget from attribute expansion).
+  const candidates =
+    requiredProps.length > SKELETON_PROP_LIMIT
+      ? [
+          { props: requiredProps.slice(0, SKELETON_PROP_LIMIT), truncated: true },
+          { props: requiredProps, truncated: false },
+        ]
+      : [{ props: requiredProps, truncated: false }];
 
   for (const candidate of candidates) {
     const rendered = renderSkeleton(tag, candidate.props, candidate.truncated);
@@ -242,6 +284,29 @@ function renderSkeleton(tag, props, truncated) {
 }
 
 /**
+ * Split a parameter list on commas that sit at the outermost bracket depth
+ * so nested types like `(a: Array<B, C>, cb: (x: D) => E)` stay intact.
+ */
+function splitTopLevelParams(paramsText) {
+  const params = [];
+  let depth = 0;
+  let start = 0;
+  for (let i = 0; i < paramsText.length; i += 1) {
+    const ch = paramsText[i];
+    if (ch === '(' || ch === '<' || ch === '[' || ch === '{') {
+      depth += 1;
+    } else if (ch === ')' || ch === '>' || ch === ']' || ch === '}') {
+      depth = Math.max(0, depth - 1);
+    } else if (ch === ',' && depth === 0) {
+      params.push(paramsText.slice(start, i));
+      start = i + 1;
+    }
+  }
+  params.push(paramsText.slice(start));
+  return params;
+}
+
+/**
  * Build a skeleton for a hook or function symbol from its signature, if any.
  * Returns a string snippet or null if we cannot produce one.
  */
@@ -267,8 +332,7 @@ export function buildCallableSkeleton(symbol) {
 
   const paramsText = paramMatch[1].trim();
   const placeholders = paramsText
-    ? paramsText
-        .split(',')
+    ? splitTopLevelParams(paramsText)
         .map(p => p.trim())
         .filter(Boolean)
         // Only keep required params (no `?` and no `=`).
@@ -336,7 +400,7 @@ async function resolveReadmeCanonical(repoRoot, owningFolder) {
   const readmePath = path.join(repoRoot, owningFolder, 'README.md');
   const content = await readIfExists(readmePath);
   if (!content) return null;
-  const block = extractFirstFencedBlock(content);
+  const block = pickUsageFencedBlock(content);
   if (!block) return null;
   if (block.length > MAX_SNIPPET_LENGTH) return null;
   return block;

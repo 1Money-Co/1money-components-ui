@@ -65,7 +65,7 @@ function resolveDotted(inputName, byName) {
 
 function hintForMissing(name) {
   if (/^Icons\.[A-Z]/.test(name)) {
-    return 'Icon names are string keys, not exported symbols. Use `<Icons name="chevron-down" />` and call `list_icons` for names.';
+    return 'Icon names are string keys, not exported symbols. Use `<Icons name="chevronDown" />` (camelCase) and call `list_icons` for names.';
   }
   if (/^use[A-Z]/.test(name)) {
     return 'This hook may live in `@1money/hooks`, not `@1money/component-ui`. Check that package.';

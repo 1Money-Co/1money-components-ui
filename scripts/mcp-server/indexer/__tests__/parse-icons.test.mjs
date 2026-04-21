@@ -73,18 +73,18 @@ test('icon list contains expected icon names', async () => {
   ];
 
   for (const expected of expectedIcons) {
-    // Allow some flexibility — if exact match not found, log but don't fail hard
-    // since we're spot-checking, not exhaustive validation.
-    const found = iconNames.includes(expected);
-    if (!found && expected === 'close') {
-      // 'close' might be 'cross' — check for that as alternative
+    if (expected === 'close') {
+      // The library standardized on 'cross' — accept either so the spot-check
+      // survives a future rename.
       assert.ok(
-        iconNames.includes('cross'),
-        `Expected icon "${expected}" or "cross" in icon list`,
+        iconNames.includes('close') || iconNames.includes('cross'),
+        `Expected icon "close" or "cross" in icon list`,
       );
-    } else if (found || expected === 'close') {
-      // Pass — either found exact, or we found 'cross' as fallback
-      assert.ok(true);
+    } else {
+      assert.ok(
+        iconNames.includes(expected),
+        `Expected icon "${expected}" in icon list`,
+      );
     }
   }
 });

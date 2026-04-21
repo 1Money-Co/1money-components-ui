@@ -11,6 +11,7 @@
 const VALID_INCLUDES = ['props', 'examples', 'members', 'notes', 'related'];
 const DEFAULT_INCLUDE = ['props', 'members'];
 const LOCAL_PREFIX = '$local:';
+const EXAMPLES_LIMIT = 3;
 
 const ICONS_DOTTED = /^Icons\.[A-Z][A-Za-z0-9]*$/;
 const HOOK_PREFIX = /^use[A-Z]/;
@@ -68,7 +69,7 @@ function notExported(inputName, hint) {
 
 function buildHintForMissing(name) {
   if (ICONS_DOTTED.test(name)) {
-    return 'Icon names are string keys, not exported symbols. Use `<Icons name="chevron-down" />` and call `list_icons` to discover available names.';
+    return 'Icon names are string keys, not exported symbols. Use `<Icons name="chevronDown" />` (camelCase) and call `list_icons` to discover available names.';
   }
   if (HOOK_PREFIX.test(name)) {
     return 'This hook may live in `@1money/hooks`, not `@1money/component-ui`. Check that package.';
@@ -111,7 +112,26 @@ function buildCanonicalUsage(sym) {
   return `import { ${sym.name} } from '@1money/component-ui';`;
 }
 
-function buildRecord(sym, inputName, { ownerLookup, include }) {
+function hydrateExamples(sym, examplesIndex) {
+  if (!examplesIndex || typeof examplesIndex.examples !== 'object') return [];
+  const refs = Array.isArray(sym.examples) ? sym.examples : [];
+  const hydrated = [];
+  for (const ref of refs) {
+    if (!ref || typeof ref.hash !== 'string') continue;
+    const body = examplesIndex.examples[ref.hash];
+    if (!body) continue;
+    hydrated.push({
+      title: body.title,
+      code: body.code,
+      source: body.source,
+      compilable: body.compilable,
+    });
+    if (hydrated.length >= EXAMPLES_LIMIT) break;
+  }
+  return hydrated;
+}
+
+function buildRecord(sym, inputName, { ownerLookup, include, examplesIndex }) {
   const ownerRef = ownerLookup.get(sym.name);
   const imports = buildImports(
     sym,
@@ -146,6 +166,9 @@ function buildRecord(sym, inputName, { ownerLookup, include }) {
   if (include.includes('related')) {
     // already included as relatedSymbols; include relatedTypes passthrough
     record.relatedTypes = Array.isArray(sym.relatedTypes) ? sym.relatedTypes : [];
+  }
+  if (include.includes('examples')) {
+    record.examples = hydrateExamples(sym, examplesIndex);
   }
 
   return record;
@@ -182,14 +205,15 @@ function resolveDotted(inputName, byName) {
 
 export default function getSymbol(input, ctx) {
   const { name, include } = validateInput(input);
-  const { index } = ctx;
+  const { index, examplesIndex } = ctx;
   const { byName, ownerLookup } = buildLookups(index);
+  const recordCtx = { ownerLookup, include, examplesIndex };
 
   // Step 1: dotted-path attempt.
   if (name.includes('.')) {
     const dotted = resolveDotted(name, byName);
     if (dotted && dotted.__sym) {
-      return buildRecord(dotted.__sym, name, { ownerLookup, include });
+      return buildRecord(dotted.__sym, name, recordCtx);
     }
     if (dotted && dotted.kind === 'not_exported') {
       return dotted;
@@ -201,7 +225,7 @@ export default function getSymbol(input, ctx) {
   // Step 2: flat lookup.
   const flat = byName.get(name);
   if (flat) {
-    return buildRecord(flat, name, { ownerLookup, include });
+    return buildRecord(flat, name, recordCtx);
   }
 
   return notExported(name, buildHintForMissing(name));

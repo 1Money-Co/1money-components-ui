@@ -83,7 +83,7 @@ export default function resolveImport(input, ctx) {
   if (ICONS_DOTTED.test(symbol)) {
     return notFound(
       symbol,
-      'Icons.<Name> is not a valid import; icons are string keys — use list_icons to discover names and `<Icons name="chevron-down" />`.'
+      'Icons.<Name> is not a valid import; icons are string keys — use list_icons to discover names and `<Icons name="chevronDown" />` (camelCase).'
     );
   }
 

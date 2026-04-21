@@ -123,7 +123,7 @@ symbols — you cannot `import { ChevronDown }`.
 
 ```jsonc
 // input:  { "query": "chevron", "limit": 2 }
-// output: { "total": 8, "icons": [{ "name": "chevron-down" }, { "name": "chevron-left" }] }
+// output: { "total": 8, "icons": [{ "name": "chevronDown" }, { "name": "chevronLeft" }] }
 ```
 
 ### `get_token`

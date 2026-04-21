@@ -48,8 +48,18 @@ async function readIfExists(filePath) {
   }
 }
 
-function hashCode(code) {
-  return crypto.createHash('sha256').update(code, 'utf8').digest('hex');
+/**
+ * Content hash keyed by (source, code) so the same snippet surfacing as both
+ * e.g. `canonical` and `stories` is stored as two separate bodies with
+ * source-appropriate metadata. Keeping source in the hash means refs can
+ * always round-trip to a body whose `source`/`title`/`compilable` match the
+ * context they were collected in.
+ */
+function hashCode(code, source) {
+  return crypto
+    .createHash('sha256')
+    .update(`${source}\n${code}`, 'utf8')
+    .digest('hex');
 }
 
 /** Convert PascalCase / camelCase to Title Case. */
@@ -334,7 +344,7 @@ export async function parseExamples({ repoRoot, symbols }) {
   }
 
   function registerExample(entry, symbolNames) {
-    const hash = hashCode(entry.code);
+    const hash = hashCode(entry.code, entry.source);
     if (!examples[hash]) {
       examples[hash] = {
         title: entry.title,

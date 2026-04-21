@@ -154,7 +154,9 @@ export async function detectDrift({ repoRoot }) {
     if (candidates.length === 0) continue;
 
     // Check if ANY candidate exists in package.json#exports
-    const hasExportSubpath = candidates.some(candidate => exportsMap.hasOwnProperty(candidate));
+    const hasExportSubpath = candidates.some(candidate =>
+      Object.prototype.hasOwnProperty.call(exportsMap, candidate),
+    );
 
     if (!hasExportSubpath) {
       // Verify the source directory actually exists (only flag real orphans)
@@ -181,7 +183,7 @@ export async function detectDrift({ repoRoot }) {
   const suggestedFixes = [];
 
   // Fix orphan subpaths by removing them
-  for (const { subpath, target } of orphanSubpath) {
+  for (const { subpath } of orphanSubpath) {
     suggestedFixes.push({
       kind: 'removeSubpath',
       subpath,
