@@ -1,0 +1,17 @@
+{
+  "orphanSubpath": [
+    {
+      "subpath": "./Form",
+      "target": "./es/components/Form/index.js",
+      "reason": "no matching component directory or flat export"
+    }
+  ],
+  "orphanSymbol": [],
+  "suggestedFixes": [
+    {
+      "kind": "removeSubpath",
+      "subpath": "./Form",
+      "note": "Form module has been consolidated into ProForm; subpath is orphaned."
+    }
+  ]
+}

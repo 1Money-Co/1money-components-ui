@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1",
-  "generatedAt": "2026-04-21T07:09:37.069Z",
+  "generatedAt": "2026-04-21T08:11:05.522Z",
   "symbols": [
     {
       "name": "Accordion",
@@ -83,7 +83,11 @@
         "AccordionItem",
         "AccordionProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "accordion",
+        "collapse"
+      ],
+      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';"
     },
     {
       "name": "AccordionItem",
@@ -100,7 +104,8 @@
         "AccordionProps"
       ],
       "searchTags": [],
-      "typeText": "interface AccordionItem { ... }"
+      "typeText": "interface AccordionItem { ... }",
+      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';"
     },
     {
       "name": "AccordionProps",
@@ -117,7 +122,8 @@
         "AccordionItem"
       ],
       "searchTags": [],
-      "typeText": "interface AccordionProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }"
+      "typeText": "interface AccordionProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
+      "canonicalUsage": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';"
     },
     {
       "name": "Alert",
@@ -225,7 +231,10 @@
         "AlertProps",
         "AlertStatus"
       ],
-      "searchTags": []
+      "searchTags": [
+        "alert"
+      ],
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
     },
     {
       "name": "AlertLinkConfig",
@@ -243,7 +252,8 @@
         "AlertStatus"
       ],
       "searchTags": [],
-      "typeText": "interface AlertLinkConfig { ... }"
+      "typeText": "interface AlertLinkConfig { ... }",
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
     },
     {
       "name": "AlertProps",
@@ -261,7 +271,8 @@
         "AlertStatus"
       ],
       "searchTags": [],
-      "typeText": "interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }"
+      "typeText": "interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }",
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
     },
     {
       "name": "AlertStatus",
@@ -279,7 +290,8 @@
         "AlertProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof ALERT_STATUSES)[number]"
+      "typeText": "(typeof ALERT_STATUSES)[number]",
+      "canonicalUsage": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';"
     },
     {
       "name": "Button",
@@ -369,7 +381,10 @@
       "relatedSymbols": [
         "ButtonProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "button"
+      ],
+      "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';"
     },
     {
       "name": "ButtonProps",
@@ -385,7 +400,8 @@
         "Button"
       ],
       "searchTags": [],
-      "typeText": "interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color' | 'size'> { ... }"
+      "typeText": "interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color' | 'size'> { ... }",
+      "canonicalUsage": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';"
     },
     {
       "name": "Calendar",
@@ -499,7 +515,11 @@
       "relatedSymbols": [
         "CalendarProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "date input",
+        "date picker"
+      ],
+      "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';"
     },
     {
       "name": "CalendarProps",
@@ -515,7 +535,8 @@
         "Calendar"
       ],
       "searchTags": [],
-      "typeText": "interface CalendarProps extends PrimeCalendarProps<CalendarSelectionMode> { ... }"
+      "typeText": "interface CalendarProps extends PrimeCalendarProps<CalendarSelectionMode> { ... }",
+      "canonicalUsage": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';"
     },
     {
       "name": "Carousel",
@@ -587,7 +608,8 @@
       "relatedSymbols": [
         "CarouselProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';"
     },
     {
       "name": "CarouselProps",
@@ -603,7 +625,8 @@
         "Carousel"
       ],
       "searchTags": [],
-      "typeText": "interface CarouselProps { ... }"
+      "typeText": "interface CarouselProps { ... }",
+      "canonicalUsage": "import { Carousel } from '@1money/components-ui';\n// or\nimport { Carousel } from '@1money/components-ui/Carousel';"
     },
     {
       "name": "Cell",
@@ -685,7 +708,10 @@
       "relatedSymbols": [
         "CellProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "card"
+      ],
+      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';"
     },
     {
       "name": "CellProps",
@@ -701,7 +727,8 @@
         "Cell"
       ],
       "searchTags": [],
-      "typeText": "interface CellProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> { ... }"
+      "typeText": "interface CellProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> { ... }",
+      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';"
     },
     {
       "name": "Checkbox",
@@ -876,7 +903,10 @@
         "CheckboxProps",
         "CheckboxValueType"
       ],
-      "searchTags": []
+      "searchTags": [
+        "checkbox"
+      ],
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CheckboxChangeEvent",
@@ -897,7 +927,8 @@
         "CheckboxValueType"
       ],
       "searchTags": [],
-      "typeText": "interface CheckboxChangeEvent { ... }"
+      "typeText": "interface CheckboxChangeEvent { ... }",
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CheckboxGroup",
@@ -1030,7 +1061,10 @@
         "CheckboxProps",
         "CheckboxValueType"
       ],
-      "searchTags": []
+      "searchTags": [
+        "checkbox"
+      ],
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CheckboxGroupOption",
@@ -1051,7 +1085,8 @@
         "CheckboxValueType"
       ],
       "searchTags": [],
-      "typeText": "interface CheckboxGroupOption { ... }"
+      "typeText": "interface CheckboxGroupOption { ... }",
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CheckboxGroupProps",
@@ -1072,7 +1107,8 @@
         "CheckboxValueType"
       ],
       "searchTags": [],
-      "typeText": "interface CheckboxGroupProps { ... }"
+      "typeText": "interface CheckboxGroupProps { ... }",
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CheckboxProps",
@@ -1093,7 +1129,8 @@
         "CheckboxValueType"
       ],
       "searchTags": [],
-      "typeText": "interface CheckboxProps extends NativeCheckboxInputProps { ... }"
+      "typeText": "interface CheckboxProps extends NativeCheckboxInputProps { ... }",
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CheckboxValueType",
@@ -1114,7 +1151,8 @@
         "CheckboxProps"
       ],
       "searchTags": [],
-      "typeText": "string | number"
+      "typeText": "string | number",
+      "canonicalUsage": "import { Checkbox } from '@1money/components-ui';\n// or\nimport { Checkbox } from '@1money/components-ui/Checkbox';"
     },
     {
       "name": "CoachMark",
@@ -1237,7 +1275,11 @@
         "CoachMarkProps",
         "CoachMarkStep"
       ],
-      "searchTags": []
+      "searchTags": [
+        "tour",
+        "walkthrough"
+      ],
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
     },
     {
       "name": "CoachMarkLabels",
@@ -1256,7 +1298,8 @@
         "CoachMarkStep"
       ],
       "searchTags": [],
-      "typeText": "interface CoachMarkLabels { ... }"
+      "typeText": "interface CoachMarkLabels { ... }",
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
     },
     {
       "name": "CoachMarkPlacement",
@@ -1275,7 +1318,8 @@
         "CoachMarkStep"
       ],
       "searchTags": [],
-      "typeText": "(typeof COACH_MARK_PLACEMENTS)[number]"
+      "typeText": "(typeof COACH_MARK_PLACEMENTS)[number]",
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
     },
     {
       "name": "CoachMarkProps",
@@ -1294,7 +1338,8 @@
         "CoachMarkStep"
       ],
       "searchTags": [],
-      "typeText": "interface CoachMarkProps { ... }"
+      "typeText": "interface CoachMarkProps { ... }",
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
     },
     {
       "name": "CoachMarkStep",
@@ -1313,7 +1358,8 @@
         "CoachMarkProps"
       ],
       "searchTags": [],
-      "typeText": "interface CoachMarkStep { ... }"
+      "typeText": "interface CoachMarkStep { ... }",
+      "canonicalUsage": "import { CoachMark } from '@1money/components-ui';\n// or\nimport { CoachMark } from '@1money/components-ui/CoachMark';"
     },
     {
       "name": "Col",
@@ -1331,7 +1377,8 @@
         "GridRowProps",
         "Row"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
     },
     {
       "name": "Copy",
@@ -1419,7 +1466,8 @@
       "relatedSymbols": [
         "CopyProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';"
     },
     {
       "name": "CopyProps",
@@ -1435,7 +1483,8 @@
         "Copy"
       ],
       "searchTags": [],
-      "typeText": "interface CopyProps { ... }"
+      "typeText": "interface CopyProps { ... }",
+      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';"
     },
     {
       "name": "CreateProFormFieldConfig",
@@ -1500,7 +1549,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface CreateProFormFieldConfig { ... }"
+      "typeText": "interface CreateProFormFieldConfig { ... }",
+      "canonicalUsage": "import type { CreateProFormFieldConfig } from '@1money/component-ui';"
     },
     {
       "name": "Dialog",
@@ -1744,7 +1794,11 @@
         "DialogProps",
         "DialogSize"
       ],
-      "searchTags": []
+      "searchTags": [
+        "dialog",
+        "modal"
+      ],
+      "canonicalUsage": "<Dialog />"
     },
     {
       "name": "DialogFooterRender",
@@ -1762,7 +1816,8 @@
         "DialogSize"
       ],
       "searchTags": [],
-      "typeText": "(\n  cancelButton: ReactNode,\n  okButton: ReactNode,\n) => ReactNode"
+      "typeText": "(\n  cancelButton: ReactNode,\n  okButton: ReactNode,\n) => ReactNode",
+      "canonicalUsage": "import type { DialogFooterRender } from '@1money/component-ui';"
     },
     {
       "name": "DialogForm",
@@ -1901,7 +1956,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<DialogForm />"
     },
     {
       "name": "DialogFormProps",
@@ -1966,7 +2022,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface DialogFormProps extends Omit<ProFormProps, 'title'> { ... }"
+      "typeText": "interface DialogFormProps extends Omit<ProFormProps, 'title'> { ... }",
+      "canonicalUsage": "import type { DialogFormProps } from '@1money/component-ui';"
     },
     {
       "name": "DialogProps",
@@ -1984,7 +2041,8 @@
         "DialogSize"
       ],
       "searchTags": [],
-      "typeText": "interface DialogProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title' | 'onCancel'> { ... }"
+      "typeText": "interface DialogProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title' | 'onCancel'> { ... }",
+      "canonicalUsage": "import type { DialogProps } from '@1money/component-ui';"
     },
     {
       "name": "DialogSize",
@@ -2002,7 +2060,8 @@
         "DialogProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof DIALOG_SIZES)[number]"
+      "typeText": "(typeof DIALOG_SIZES)[number]",
+      "canonicalUsage": "import type { DialogSize } from '@1money/component-ui';"
     },
     {
       "name": "Divider",
@@ -2079,7 +2138,10 @@
         "DividerType",
         "DividerVariant"
       ],
-      "searchTags": []
+      "searchTags": [
+        "divider"
+      ],
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
     },
     {
       "name": "DividerOrientation",
@@ -2098,7 +2160,8 @@
         "DividerVariant"
       ],
       "searchTags": [],
-      "typeText": "(typeof DIVIDER_ORIENTATIONS)[number]"
+      "typeText": "(typeof DIVIDER_ORIENTATIONS)[number]",
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
     },
     {
       "name": "DividerProps",
@@ -2117,7 +2180,8 @@
         "DividerVariant"
       ],
       "searchTags": [],
-      "typeText": "interface DividerProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface DividerProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
     },
     {
       "name": "DividerType",
@@ -2136,7 +2200,8 @@
         "DividerVariant"
       ],
       "searchTags": [],
-      "typeText": "(typeof DIVIDER_TYPES)[number]"
+      "typeText": "(typeof DIVIDER_TYPES)[number]",
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
     },
     {
       "name": "DividerVariant",
@@ -2155,7 +2220,8 @@
         "DividerType"
       ],
       "searchTags": [],
-      "typeText": "(typeof DIVIDER_VARIANTS)[number]"
+      "typeText": "(typeof DIVIDER_VARIANTS)[number]",
+      "canonicalUsage": "import { Divider } from '@1money/components-ui';"
     },
     {
       "name": "Drawer",
@@ -2334,7 +2400,11 @@
         "DrawerPlacement",
         "DrawerProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "drawer",
+        "side panel"
+      ],
+      "canonicalUsage": "<Drawer />"
     },
     {
       "name": "DrawerForm",
@@ -2481,7 +2551,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<DrawerForm />"
     },
     {
       "name": "DrawerFormProps",
@@ -2546,7 +2617,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface DrawerFormProps extends Omit<ProFormProps, 'title'> { ... }"
+      "typeText": "interface DrawerFormProps extends Omit<ProFormProps, 'title'> { ... }",
+      "canonicalUsage": "import type { DrawerFormProps } from '@1money/component-ui';"
     },
     {
       "name": "DrawerPlacement",
@@ -2563,7 +2635,8 @@
         "DrawerProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof DRAWER_PLACEMENTS)[number]"
+      "typeText": "(typeof DRAWER_PLACEMENTS)[number]",
+      "canonicalUsage": "import type { DrawerPlacement } from '@1money/component-ui';"
     },
     {
       "name": "DrawerProps",
@@ -2580,7 +2653,8 @@
         "DrawerPlacement"
       ],
       "searchTags": [],
-      "typeText": "interface DrawerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title'> { ... }"
+      "typeText": "interface DrawerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title'> { ... }",
+      "canonicalUsage": "import type { DrawerProps } from '@1money/component-ui';"
     },
     {
       "name": "Dropdown",
@@ -2609,7 +2683,12 @@
         "DropdownProps",
         "DropdownTrigger"
       ],
-      "searchTags": []
+      "searchTags": [
+        "dropdown",
+        "dropdown menu",
+        "menu"
+      ],
+      "canonicalUsage": "<Dropdown />"
     },
     {
       "name": "DropdownContent",
@@ -2628,7 +2707,8 @@
         "DropdownTrigger"
       ],
       "searchTags": [],
-      "typeText": "TriggerProps['content']"
+      "typeText": "TriggerProps['content']",
+      "canonicalUsage": "import type { DropdownContent } from '@1money/component-ui';"
     },
     {
       "name": "DropdownContentContext",
@@ -2647,7 +2727,8 @@
         "DropdownTrigger"
       ],
       "searchTags": [],
-      "typeText": "TriggerContentContext"
+      "typeText": "TriggerContentContext",
+      "canonicalUsage": "import type { DropdownContentContext } from '@1money/component-ui';"
     },
     {
       "name": "DropdownProps",
@@ -2666,7 +2747,8 @@
         "DropdownTrigger"
       ],
       "searchTags": [],
-      "typeText": "interface DropdownProps extends Omit<TriggerProps, 'trigger'> { ... }"
+      "typeText": "interface DropdownProps extends Omit<TriggerProps, 'trigger'> { ... }",
+      "canonicalUsage": "import type { DropdownProps } from '@1money/component-ui';"
     },
     {
       "name": "DropdownTrigger",
@@ -2685,7 +2767,8 @@
         "DropdownProps"
       ],
       "searchTags": [],
-      "typeText": "'click' | 'hover'"
+      "typeText": "'click' | 'hover'",
+      "canonicalUsage": "import type { DropdownTrigger } from '@1money/component-ui';"
     },
     {
       "name": "Empty",
@@ -2759,7 +2842,10 @@
       "relatedSymbols": [
         "EmptyProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "empty"
+      ],
+      "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';"
     },
     {
       "name": "EmptyProps",
@@ -2775,7 +2861,8 @@
         "Empty"
       ],
       "searchTags": [],
-      "typeText": "interface EmptyProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }"
+      "typeText": "interface EmptyProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }",
+      "canonicalUsage": "import { Empty } from '@1money/components-ui';\n// or\nimport { Empty } from '@1money/components-ui/Empty';"
     },
     {
       "name": "Flex",
@@ -2841,7 +2928,8 @@
       "relatedSymbols": [
         "FlexProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';"
     },
     {
       "name": "FlexProps",
@@ -2857,7 +2945,8 @@
         "Flex"
       ],
       "searchTags": [],
-      "typeText": "interface FlexProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface FlexProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';"
     },
     {
       "name": "FormCoreInstance",
@@ -2922,7 +3011,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface FormCoreInstance { ... }"
+      "typeText": "interface FormCoreInstance { ... }",
+      "canonicalUsage": "import type { FormCoreInstance } from '@1money/component-ui';"
     },
     {
       "name": "FormInstance",
@@ -2987,7 +3077,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface FormInstance { ... }"
+      "typeText": "interface FormInstance { ... }",
+      "canonicalUsage": "import type { FormInstance } from '@1money/component-ui';"
     },
     {
       "name": "FormLayout",
@@ -3052,7 +3143,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(typeof FORM_LAYOUTS)[number]"
+      "typeText": "(typeof FORM_LAYOUTS)[number]",
+      "canonicalUsage": "import type { FormLayout } from '@1money/component-ui';"
     },
     {
       "name": "FormSize",
@@ -3117,7 +3209,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(typeof FORM_SIZES)[number]"
+      "typeText": "(typeof FORM_SIZES)[number]",
+      "canonicalUsage": "import type { FormSize } from '@1money/component-ui';"
     },
     {
       "name": "Grid",
@@ -3135,7 +3228,10 @@
         "GridRowProps",
         "Row"
       ],
-      "searchTags": []
+      "searchTags": [
+        "grid"
+      ],
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
     },
     {
       "name": "GridColProps",
@@ -3154,7 +3250,8 @@
         "Row"
       ],
       "searchTags": [],
-      "typeText": "interface GridColProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface GridColProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
     },
     {
       "name": "GridRowProps",
@@ -3173,7 +3270,8 @@
         "Row"
       ],
       "searchTags": [],
-      "typeText": "interface GridRowProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface GridRowProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
     },
     {
       "name": "IconHover",
@@ -3220,7 +3318,8 @@
         "Icons",
         "IconsProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
     },
     {
       "name": "IconHoverProps",
@@ -3241,7 +3340,8 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "typeText": "interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'prefix'> { ... }"
+      "typeText": "interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'prefix'> { ... }",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
     },
     {
       "name": "IconName",
@@ -3262,7 +3362,8 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "typeText": "keyof typeof IconList"
+      "typeText": "keyof typeof IconList",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
     },
     {
       "name": "IconWrapper",
@@ -3411,7 +3512,8 @@
         "Icons",
         "IconsProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
     },
     {
       "name": "IconWrapperProps",
@@ -3432,7 +3534,8 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "typeText": "interface IconWrapperProps { ... }"
+      "typeText": "interface IconWrapperProps { ... }",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
     },
     {
       "name": "Icons",
@@ -3454,7 +3557,9 @@
         "IconWrapperProps",
         "IconsProps"
       ],
-      "searchTags": [],
+      "searchTags": [
+        "icon"
+      ],
       "memberMap": {}
     },
     {
@@ -3476,7 +3581,8 @@
         "Icons"
       ],
       "searchTags": [],
-      "typeText": "interface IconsProps extends IconWrapperProps { ... }"
+      "typeText": "interface IconsProps extends IconWrapperProps { ... }",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';"
     },
     {
       "name": "Input",
@@ -3583,7 +3689,9 @@
         "InputTextAreaProps",
         "InputTradeProps"
       ],
-      "searchTags": [],
+      "searchTags": [
+        "input"
+      ],
       "memberMap": {
         "Password": "$local:InputPassword",
         "Search": "$local:InputSearch",
@@ -3616,7 +3724,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputAmountProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange' | 'min' | 'max'>, Omit<InputBaseProps, 'allowClear'> { ... }"
+      "typeText": "interface InputAmountProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange' | 'min' | 'max'>, Omit<InputBaseProps, 'allowClear'> { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputOTPProps",
@@ -3640,7 +3749,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputOTPProps extends Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> { ... }"
+      "typeText": "interface InputOTPProps extends Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputPasswordProps",
@@ -3664,7 +3774,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputPasswordProps extends Omit<InputProps, 'type' | 'allowClear'> { ... }"
+      "typeText": "interface InputPasswordProps extends Omit<InputProps, 'type' | 'allowClear'> { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputProps",
@@ -3688,7 +3799,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange'>, InputBaseProps { ... }"
+      "typeText": "interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size' | 'onChange'>, InputBaseProps { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputSearchProps",
@@ -3712,7 +3824,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputSearchProps extends InputProps { ... }"
+      "typeText": "interface InputSearchProps extends InputProps { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputSize",
@@ -3736,7 +3849,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof INPUT_SIZES)[number]"
+      "typeText": "(typeof INPUT_SIZES)[number]",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputStatus",
@@ -3760,7 +3874,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof INPUT_STATUSES)[number]"
+      "typeText": "(typeof INPUT_STATUSES)[number]",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputTextAreaProps",
@@ -3784,7 +3899,8 @@
         "InputTradeProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputTextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange' | 'prefix'>, Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> { ... }"
+      "typeText": "interface InputTextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange' | 'prefix'>, Omit<InputBaseProps, 'allowClear' | 'prefix' | 'suffix'> { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "InputTradeProps",
@@ -3808,7 +3924,8 @@
         "InputTextAreaProps"
       ],
       "searchTags": [],
-      "typeText": "interface InputTradeProps { ... }"
+      "typeText": "interface InputTradeProps { ... }",
+      "canonicalUsage": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';"
     },
     {
       "name": "LabelAlign",
@@ -3873,7 +3990,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(typeof LABEL_ALIGNS)[number]"
+      "typeText": "(typeof LABEL_ALIGNS)[number]",
+      "canonicalUsage": "import type { LabelAlign } from '@1money/component-ui';"
     },
     {
       "name": "Link",
@@ -3949,7 +4067,10 @@
         "LinkProps",
         "LinkSize"
       ],
-      "searchTags": []
+      "searchTags": [
+        "link"
+      ],
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
     },
     {
       "name": "LinkColor",
@@ -3967,7 +4088,8 @@
         "LinkSize"
       ],
       "searchTags": [],
-      "typeText": "(typeof LINK_COLORS)[number]"
+      "typeText": "(typeof LINK_COLORS)[number]",
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
     },
     {
       "name": "LinkProps",
@@ -3985,7 +4107,8 @@
         "LinkSize"
       ],
       "searchTags": [],
-      "typeText": "interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> { ... }"
+      "typeText": "interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> { ... }",
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
     },
     {
       "name": "LinkSize",
@@ -4003,7 +4126,8 @@
         "LinkProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof LINK_SIZES)[number]"
+      "typeText": "(typeof LINK_SIZES)[number]",
+      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';"
     },
     {
       "name": "Nav",
@@ -4056,7 +4180,8 @@
         "NavigationItem",
         "NavigationProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "NavItem",
@@ -4077,7 +4202,8 @@
         "NavigationProps"
       ],
       "searchTags": [],
-      "typeText": "interface NavItem { ... }"
+      "typeText": "interface NavItem { ... }",
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "NavProps",
@@ -4098,7 +4224,8 @@
         "NavigationProps"
       ],
       "searchTags": [],
-      "typeText": "interface NavProps { ... }"
+      "typeText": "interface NavProps { ... }",
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "Navigation",
@@ -4215,7 +4342,10 @@
         "NavigationItem",
         "NavigationProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "menu"
+      ],
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "NavigationHandlers",
@@ -4236,7 +4366,8 @@
         "NavigationProps"
       ],
       "searchTags": [],
-      "typeText": "interface NavigationHandlers { ... }"
+      "typeText": "interface NavigationHandlers { ... }",
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "NavigationItem",
@@ -4257,7 +4388,8 @@
         "NavigationProps"
       ],
       "searchTags": [],
-      "typeText": "interface NavigationItem { ... }"
+      "typeText": "interface NavigationItem { ... }",
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "NavigationProps",
@@ -4278,7 +4410,8 @@
         "NavigationItem"
       ],
       "searchTags": [],
-      "typeText": "interface NavigationProps { ... }"
+      "typeText": "interface NavigationProps { ... }",
+      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';"
     },
     {
       "name": "NotificationKey",
@@ -4300,7 +4433,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "string | number"
+      "typeText": "string | number",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "NotificationLinkConfig",
@@ -4322,7 +4456,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "interface NotificationLinkConfig { ... }"
+      "typeText": "interface NotificationLinkConfig { ... }",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "NotificationOpenConfig",
@@ -4344,7 +4479,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "interface NotificationOpenConfig extends Omit<NotificationProps, 'prefixCls' | 'ref' | 'onClose'> { ... }"
+      "typeText": "interface NotificationOpenConfig extends Omit<NotificationProps, 'prefixCls' | 'ref' | 'onClose'> { ... }",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "NotificationPlacement",
@@ -4366,7 +4502,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "(typeof NOTIFICATION_PLACEMENTS)[number]"
+      "typeText": "(typeof NOTIFICATION_PLACEMENTS)[number]",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "NotificationStaticApi",
@@ -4388,7 +4525,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "interface NotificationStaticApi { ... }"
+      "typeText": "interface NotificationStaticApi { ... }",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "NotificationStaticConfig",
@@ -4410,7 +4548,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "interface NotificationStaticConfig { ... }"
+      "typeText": "interface NotificationStaticConfig { ... }",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "NotificationStatus",
@@ -4432,7 +4571,8 @@
         "notification"
       ],
       "searchTags": [],
-      "typeText": "(typeof NOTIFICATION_STATUSES)[number]"
+      "typeText": "(typeof NOTIFICATION_STATUSES)[number]",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "Pagination",
@@ -4474,7 +4614,11 @@
         "UsePaginationResult",
         "usePagination"
       ],
-      "searchTags": []
+      "searchTags": [
+        "pager",
+        "pagination"
+      ],
+      "canonicalUsage": "<Pagination />"
     },
     {
       "name": "PaginationControlItem",
@@ -4497,7 +4641,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "interface PaginationControlItem extends PaginationItemBase { ... }"
+      "typeText": "interface PaginationControlItem extends PaginationItemBase { ... }",
+      "canonicalUsage": "import type { PaginationControlItem } from '@1money/component-ui';"
     },
     {
       "name": "PaginationEllipsisItem",
@@ -4520,7 +4665,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "interface PaginationEllipsisItem extends PaginationItemBase { ... }"
+      "typeText": "interface PaginationEllipsisItem extends PaginationItemBase { ... }",
+      "canonicalUsage": "import type { PaginationEllipsisItem } from '@1money/component-ui';"
     },
     {
       "name": "PaginationItem",
@@ -4543,7 +4689,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "| PaginationPageItem\n  | PaginationControlItem\n  | PaginationEllipsisItem"
+      "typeText": "| PaginationPageItem\n  | PaginationControlItem\n  | PaginationEllipsisItem",
+      "canonicalUsage": "import type { PaginationItem } from '@1money/component-ui';"
     },
     {
       "name": "PaginationPageItem",
@@ -4566,7 +4713,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "interface PaginationPageItem extends PaginationItemBase { ... }"
+      "typeText": "interface PaginationPageItem extends PaginationItemBase { ... }",
+      "canonicalUsage": "import type { PaginationPageItem } from '@1money/component-ui';"
     },
     {
       "name": "PaginationProps",
@@ -4589,7 +4737,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "interface PaginationProps extends Omit<HTMLAttributes<HTMLElement>, 'onChange'>, UsePaginationOptions { ... }"
+      "typeText": "interface PaginationProps extends Omit<HTMLAttributes<HTMLElement>, 'onChange'>, UsePaginationOptions { ... }",
+      "canonicalUsage": "import type { PaginationProps } from '@1money/component-ui';"
     },
     {
       "name": "Popconfirm",
@@ -4730,7 +4879,10 @@
         "PopconfirmProps",
         "PopconfirmTrigger"
       ],
-      "searchTags": []
+      "searchTags": [
+        "popover"
+      ],
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
     },
     {
       "name": "PopconfirmActionContext",
@@ -4749,7 +4901,8 @@
         "PopconfirmTrigger"
       ],
       "searchTags": [],
-      "typeText": "interface PopconfirmActionContext extends TriggerContentContext { ... }"
+      "typeText": "interface PopconfirmActionContext extends TriggerContentContext { ... }",
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
     },
     {
       "name": "PopconfirmPlacement",
@@ -4768,7 +4921,8 @@
         "PopconfirmTrigger"
       ],
       "searchTags": [],
-      "typeText": "TriggerProps['placement']"
+      "typeText": "TriggerProps['placement']",
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
     },
     {
       "name": "PopconfirmProps",
@@ -4787,7 +4941,8 @@
         "PopconfirmTrigger"
       ],
       "searchTags": [],
-      "typeText": "interface PopconfirmProps extends Omit<TriggerProps, 'content' | 'role' | 'showArrow'> { ... }"
+      "typeText": "interface PopconfirmProps extends Omit<TriggerProps, 'content' | 'role' | 'showArrow'> { ... }",
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
     },
     {
       "name": "PopconfirmTrigger",
@@ -4806,7 +4961,8 @@
         "PopconfirmProps"
       ],
       "searchTags": [],
-      "typeText": "TriggerProps['trigger']"
+      "typeText": "TriggerProps['trigger']",
+      "canonicalUsage": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';"
     },
     {
       "name": "Portal",
@@ -4847,7 +5003,8 @@
         "PortalContainer",
         "PortalProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<Portal />"
     },
     {
       "name": "PortalContainer",
@@ -4864,7 +5021,8 @@
         "PortalProps"
       ],
       "searchTags": [],
-      "typeText": "Element | (() => Element | null) | null"
+      "typeText": "Element | (() => Element | null) | null",
+      "canonicalUsage": "import type { PortalContainer } from '@1money/component-ui';"
     },
     {
       "name": "PortalProps",
@@ -4881,7 +5039,8 @@
         "PortalContainer"
       ],
       "searchTags": [],
-      "typeText": "interface PortalProps { ... }"
+      "typeText": "interface PortalProps { ... }",
+      "canonicalUsage": "import type { PortalProps } from '@1money/component-ui';"
     },
     {
       "name": "ProForm",
@@ -5148,7 +5307,9 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": [],
+      "searchTags": [
+        "form"
+      ],
       "memberMap": {
         "Item": "ProFormItem",
         "useForm": "$local:useForm",
@@ -5234,7 +5395,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormCheckbox />"
     },
     {
       "name": "ProFormCheckboxGroup",
@@ -5298,7 +5460,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormCheckboxGroup />"
     },
     {
       "name": "ProFormColProps",
@@ -5363,7 +5526,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormColProps { ... }"
+      "typeText": "interface ProFormColProps { ... }",
+      "canonicalUsage": "import type { ProFormColProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormContextValue",
@@ -5428,7 +5592,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormContextValue { ... }"
+      "typeText": "interface ProFormContextValue { ... }",
+      "canonicalUsage": "import type { ProFormContextValue } from '@1money/component-ui';"
     },
     {
       "name": "ProFormDatePicker",
@@ -5492,7 +5657,11 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [
+        "date input",
+        "date picker"
+      ],
+      "canonicalUsage": "<ProFormDatePicker />"
     },
     {
       "name": "ProFormDependency",
@@ -5581,7 +5750,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormDependency name={[]}>{() => {}}</ProFormDependency>"
     },
     {
       "name": "ProFormDependencyProps",
@@ -5646,7 +5816,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormDependencyProps { ... }"
+      "typeText": "interface ProFormDependencyProps { ... }",
+      "canonicalUsage": "import type { ProFormDependencyProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormFieldConvertValueFn",
@@ -5711,7 +5882,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(\n  value: unknown,\n  name: string,\n) => unknown"
+      "typeText": "(\n  value: unknown,\n  name: string,\n) => unknown",
+      "canonicalUsage": "import type { ProFormFieldConvertValueFn } from '@1money/component-ui';"
     },
     {
       "name": "ProFormFieldProps",
@@ -5776,7 +5948,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormFieldProps { ... }"
+      "typeText": "interface ProFormFieldProps { ... }",
+      "canonicalUsage": "import type { ProFormFieldProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormFieldSet",
@@ -5905,7 +6078,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormFieldSet />"
     },
     {
       "name": "ProFormFieldSetProps",
@@ -5970,7 +6144,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormFieldSetProps { ... }"
+      "typeText": "interface ProFormFieldSetProps { ... }",
+      "canonicalUsage": "import type { ProFormFieldSetProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormFieldTransformFn",
@@ -6035,7 +6210,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(\n  value: unknown,\n  name: string,\n  allValues: Record<string, unknown>,\n) => unknown"
+      "typeText": "(\n  value: unknown,\n  name: string,\n  allValues: Record<string, unknown>,\n) => unknown",
+      "canonicalUsage": "import type { ProFormFieldTransformFn } from '@1money/component-ui';"
     },
     {
       "name": "ProFormFormInstance",
@@ -6100,7 +6276,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormFormInstance extends FormCoreInstance { ... }"
+      "typeText": "interface ProFormFormInstance extends FormCoreInstance { ... }",
+      "canonicalUsage": "import type { ProFormFormInstance } from '@1money/component-ui';"
     },
     {
       "name": "ProFormGroup",
@@ -6229,7 +6406,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormGroup />"
     },
     {
       "name": "ProFormGroupProps",
@@ -6294,7 +6472,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormGroupProps { ... }"
+      "typeText": "interface ProFormGroupProps { ... }",
+      "canonicalUsage": "import type { ProFormGroupProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormItem",
@@ -6519,7 +6698,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormItem />"
     },
     {
       "name": "ProFormItemProps",
@@ -6584,7 +6764,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormItemProps { ... }"
+      "typeText": "interface ProFormItemProps { ... }",
+      "canonicalUsage": "import type { ProFormItemProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormList",
@@ -6769,7 +6950,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormList name=\"name\" />"
     },
     {
       "name": "ProFormListAction",
@@ -6834,7 +7016,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormListAction { ... }"
+      "typeText": "interface ProFormListAction { ... }",
+      "canonicalUsage": "import type { ProFormListAction } from '@1money/component-ui';"
     },
     {
       "name": "ProFormListProps",
@@ -6899,7 +7082,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormListProps { ... }"
+      "typeText": "interface ProFormListProps { ... }",
+      "canonicalUsage": "import type { ProFormListProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormMode",
@@ -6964,7 +7148,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(typeof PROFORM_MODES)[number]"
+      "typeText": "(typeof PROFORM_MODES)[number]",
+      "canonicalUsage": "import type { ProFormMode } from '@1money/component-ui';"
     },
     {
       "name": "ProFormPassword",
@@ -7028,7 +7213,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormPassword />"
     },
     {
       "name": "ProFormProps",
@@ -7093,7 +7279,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormProps extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'onReset'> { ... }"
+      "typeText": "interface ProFormProps extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'onReset'> { ... }",
+      "canonicalUsage": "import type { ProFormProps } from '@1money/component-ui';"
     },
     {
       "name": "ProFormRadioGroup",
@@ -7157,7 +7344,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormRadioGroup />"
     },
     {
       "name": "ProFormRequestOption",
@@ -7222,7 +7410,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface ProFormRequestOption { ... }"
+      "typeText": "interface ProFormRequestOption { ... }",
+      "canonicalUsage": "import type { ProFormRequestOption } from '@1money/component-ui';"
     },
     {
       "name": "ProFormSelect",
@@ -7286,7 +7475,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormSelect />"
     },
     {
       "name": "ProFormSlider",
@@ -7350,7 +7540,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormSlider />"
     },
     {
       "name": "ProFormSwitch",
@@ -7414,7 +7605,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormSwitch />"
     },
     {
       "name": "ProFormText",
@@ -7478,7 +7670,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormText />"
     },
     {
       "name": "ProFormTextArea",
@@ -7542,7 +7735,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormTextArea />"
     },
     {
       "name": "ProFormUpload",
@@ -7606,7 +7800,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ProFormUpload />"
     },
     {
       "name": "ProFormValueEnumObj",
@@ -7671,7 +7866,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "Record<\n  string | number,\n  string | { text: string; disabled?: boolean }\n>"
+      "typeText": "Record<\n  string | number,\n  string | { text: string; disabled?: boolean }\n>",
+      "canonicalUsage": "import type { ProFormValueEnumObj } from '@1money/component-ui';"
     },
     {
       "name": "ProFormValueType",
@@ -7736,7 +7932,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "| 'text'\n  | 'password'\n  | 'digit'\n  | 'date'\n  | 'dateTime'\n  | 'select'\n  | 'radio'\n  | 'switch'\n  | 'tag'"
+      "typeText": "| 'text'\n  | 'password'\n  | 'digit'\n  | 'date'\n  | 'dateTime'\n  | 'select'\n  | 'radio'\n  | 'switch'\n  | 'tag'",
+      "canonicalUsage": "import type { ProFormValueType } from '@1money/component-ui';"
     },
     {
       "name": "Progress",
@@ -7830,7 +8027,12 @@
         "ProgressProps",
         "ProgressState"
       ],
-      "searchTags": []
+      "searchTags": [
+        "loading",
+        "progress",
+        "progress bar"
+      ],
+      "canonicalUsage": "<Progress percent={0} />"
     },
     {
       "name": "ProgressColor",
@@ -7850,7 +8052,8 @@
         "ProgressState"
       ],
       "searchTags": [],
-      "typeText": "(typeof PROGRESS_COLORS)[number]"
+      "typeText": "(typeof PROGRESS_COLORS)[number]",
+      "canonicalUsage": "import type { ProgressColor } from '@1money/component-ui';"
     },
     {
       "name": "ProgressFormatContext",
@@ -7870,7 +8073,8 @@
         "ProgressState"
       ],
       "searchTags": [],
-      "typeText": "interface ProgressFormatContext { ... }"
+      "typeText": "interface ProgressFormatContext { ... }",
+      "canonicalUsage": "import type { ProgressFormatContext } from '@1money/component-ui';"
     },
     {
       "name": "ProgressPlacement",
@@ -7890,7 +8094,8 @@
         "ProgressState"
       ],
       "searchTags": [],
-      "typeText": "(typeof PROGRESS_PLACEMENTS)[number]"
+      "typeText": "(typeof PROGRESS_PLACEMENTS)[number]",
+      "canonicalUsage": "import type { ProgressPlacement } from '@1money/component-ui';"
     },
     {
       "name": "ProgressProps",
@@ -7910,7 +8115,8 @@
         "ProgressState"
       ],
       "searchTags": [],
-      "typeText": "interface ProgressProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface ProgressProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import type { ProgressProps } from '@1money/component-ui';"
     },
     {
       "name": "ProgressState",
@@ -7930,7 +8136,8 @@
         "ProgressProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof PROGRESS_STATES)[number]"
+      "typeText": "(typeof PROGRESS_STATES)[number]",
+      "canonicalUsage": "import type { ProgressState } from '@1money/component-ui';"
     },
     {
       "name": "QueryFilter",
@@ -8061,7 +8268,8 @@
         "ValidateTrigger",
         "createProFormField"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<QueryFilter />"
     },
     {
       "name": "QueryFilterProps",
@@ -8126,7 +8334,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface QueryFilterProps extends ProFormProps { ... }"
+      "typeText": "interface QueryFilterProps extends ProFormProps { ... }",
+      "canonicalUsage": "import type { QueryFilterProps } from '@1money/component-ui';"
     },
     {
       "name": "Radio",
@@ -8279,7 +8488,10 @@
         "RadioProps",
         "RadioValueType"
       ],
-      "searchTags": []
+      "searchTags": [
+        "radio"
+      ],
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioAlignment",
@@ -8302,7 +8514,8 @@
         "RadioValueType"
       ],
       "searchTags": [],
-      "typeText": "'left' | 'center'"
+      "typeText": "'left' | 'center'",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioChangeEvent",
@@ -8325,7 +8538,8 @@
         "RadioValueType"
       ],
       "searchTags": [],
-      "typeText": "interface RadioChangeEvent { ... }"
+      "typeText": "interface RadioChangeEvent { ... }",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioGroup",
@@ -8516,7 +8730,10 @@
         "RadioProps",
         "RadioValueType"
       ],
-      "searchTags": []
+      "searchTags": [
+        "radio"
+      ],
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioGroupDirection",
@@ -8539,7 +8756,8 @@
         "RadioValueType"
       ],
       "searchTags": [],
-      "typeText": "'vertical' | 'horizontal'"
+      "typeText": "'vertical' | 'horizontal'",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioGroupProps",
@@ -8562,7 +8780,8 @@
         "RadioValueType"
       ],
       "searchTags": [],
-      "typeText": "interface RadioGroupProps { ... }"
+      "typeText": "interface RadioGroupProps { ... }",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioOptionItem",
@@ -8585,7 +8804,8 @@
         "RadioValueType"
       ],
       "searchTags": [],
-      "typeText": "interface RadioOptionItem { ... }"
+      "typeText": "interface RadioOptionItem { ... }",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioProps",
@@ -8608,7 +8828,8 @@
         "RadioValueType"
       ],
       "searchTags": [],
-      "typeText": "interface RadioProps extends NativeRadioInputProps { ... }"
+      "typeText": "interface RadioProps extends NativeRadioInputProps { ... }",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "RadioValueType",
@@ -8631,7 +8852,8 @@
         "RadioProps"
       ],
       "searchTags": [],
-      "typeText": "string | number"
+      "typeText": "string | number",
+      "canonicalUsage": "import { Radio, RadioGroup } from '@1money/components-ui';\n// or tree-shakeable\nimport { Radio, RadioGroup } from '@1money/components-ui/Radio';"
     },
     {
       "name": "ResizeObserver",
@@ -8682,7 +8904,8 @@
         "ResizeObserverSizeInfo",
         "useResizeObserver"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<ResizeObserver>Label</ResizeObserver>"
     },
     {
       "name": "ResizeObserverOnResize",
@@ -8701,7 +8924,8 @@
         "useResizeObserver"
       ],
       "searchTags": [],
-      "typeText": "(size: SizeInfo, element: HTMLElement) => void"
+      "typeText": "(size: SizeInfo, element: HTMLElement) => void",
+      "canonicalUsage": "import type { ResizeObserverOnResize } from '@1money/component-ui';"
     },
     {
       "name": "ResizeObserverProps",
@@ -8720,7 +8944,8 @@
         "useResizeObserver"
       ],
       "searchTags": [],
-      "typeText": "interface ResizeObserverProps { ... }"
+      "typeText": "interface ResizeObserverProps { ... }",
+      "canonicalUsage": "import type { ResizeObserverProps } from '@1money/component-ui';"
     },
     {
       "name": "ResizeObserverSizeInfo",
@@ -8739,7 +8964,8 @@
         "useResizeObserver"
       ],
       "searchTags": [],
-      "typeText": "interface SizeInfo { ... }"
+      "typeText": "interface SizeInfo { ... }",
+      "canonicalUsage": "import type { ResizeObserverSizeInfo } from '@1money/component-ui';"
     },
     {
       "name": "Row",
@@ -8757,7 +8983,8 @@
         "GridColProps",
         "GridRowProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Grid, Row, Col } from '@1money/components-ui';\n// or\nimport { Grid, Row, Col } from '@1money/components-ui/Grid';\nimport { GRID_ALIGN, GRID_JUSTIFY } from '@1money/components-ui/Grid';"
     },
     {
       "name": "Rule",
@@ -8822,7 +9049,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface Rule { ... }"
+      "typeText": "interface Rule { ... }",
+      "canonicalUsage": "import type { Rule } from '@1money/component-ui';"
     },
     {
       "name": "Segment",
@@ -8889,7 +9117,11 @@
         "SegmentItem",
         "SegmentProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "segment",
+        "segmented"
+      ],
+      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';"
     },
     {
       "name": "SegmentItem",
@@ -8906,7 +9138,8 @@
         "SegmentProps"
       ],
       "searchTags": [],
-      "typeText": "interface SegmentItem { ... }"
+      "typeText": "interface SegmentItem { ... }",
+      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';"
     },
     {
       "name": "SegmentProps",
@@ -8923,7 +9156,8 @@
         "SegmentItem"
       ],
       "searchTags": [],
-      "typeText": "interface SegmentProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'defaultValue'> { ... }"
+      "typeText": "interface SegmentProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'defaultValue'> { ... }",
+      "canonicalUsage": "import { Segment } from '@1money/components-ui';\n// or\nimport { Segment } from '@1money/components-ui/Segment';"
     },
     {
       "name": "Select",
@@ -9270,7 +9504,11 @@
         "SelectStatus",
         "SelectValue"
       ],
-      "searchTags": []
+      "searchTags": [
+        "dropdown",
+        "select"
+      ],
+      "canonicalUsage": "<Select />"
     },
     {
       "name": "SelectMultipleValue",
@@ -9295,7 +9533,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "SelectOptionValue[]"
+      "typeText": "SelectOptionValue[]",
+      "canonicalUsage": "import type { SelectMultipleValue } from '@1money/component-ui';"
     },
     {
       "name": "SelectOption",
@@ -9320,7 +9559,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "interface SelectOption { ... }"
+      "typeText": "interface SelectOption { ... }",
+      "canonicalUsage": "import type { SelectOption } from '@1money/component-ui';"
     },
     {
       "name": "SelectOptionValue",
@@ -9345,7 +9585,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "string | number"
+      "typeText": "string | number",
+      "canonicalUsage": "import type { SelectOptionValue } from '@1money/component-ui';"
     },
     {
       "name": "SelectProps",
@@ -9370,7 +9611,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "interface SelectProps extends Omit<HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'onBlur' | 'onChange' | 'prefix'> { ... }"
+      "typeText": "interface SelectProps extends Omit<HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'onBlur' | 'onChange' | 'prefix'> { ... }",
+      "canonicalUsage": "import type { SelectProps } from '@1money/component-ui';"
     },
     {
       "name": "SelectRenderOptionMeta",
@@ -9395,7 +9637,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "interface SelectRenderOptionMeta { ... }"
+      "typeText": "interface SelectRenderOptionMeta { ... }",
+      "canonicalUsage": "import type { SelectRenderOptionMeta } from '@1money/component-ui';"
     },
     {
       "name": "SelectRenderValueMeta",
@@ -9420,7 +9663,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "interface SelectRenderValueMeta { ... }"
+      "typeText": "interface SelectRenderValueMeta { ... }",
+      "canonicalUsage": "import type { SelectRenderValueMeta } from '@1money/component-ui';"
     },
     {
       "name": "SelectSingleValue",
@@ -9445,7 +9689,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "SelectOptionValue | null | undefined"
+      "typeText": "SelectOptionValue | null | undefined",
+      "canonicalUsage": "import type { SelectSingleValue } from '@1money/component-ui';"
     },
     {
       "name": "SelectSize",
@@ -9470,7 +9715,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "(typeof SELECT_SIZES)[number]"
+      "typeText": "(typeof SELECT_SIZES)[number]",
+      "canonicalUsage": "import type { SelectSize } from '@1money/component-ui';"
     },
     {
       "name": "SelectStatus",
@@ -9495,7 +9741,8 @@
         "SelectValue"
       ],
       "searchTags": [],
-      "typeText": "(typeof SELECT_STATUSES)[number]"
+      "typeText": "(typeof SELECT_STATUSES)[number]",
+      "canonicalUsage": "import type { SelectStatus } from '@1money/component-ui';"
     },
     {
       "name": "SelectValue",
@@ -9520,7 +9767,8 @@
         "SelectStatus"
       ],
       "searchTags": [],
-      "typeText": "SelectSingleValue | SelectMultipleValue"
+      "typeText": "SelectSingleValue | SelectMultipleValue",
+      "canonicalUsage": "import type { SelectValue } from '@1money/component-ui';"
     },
     {
       "name": "Skeleton",
@@ -9602,7 +9850,10 @@
       "relatedSymbols": [
         "SkeletonProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "skeleton"
+      ],
+      "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';"
     },
     {
       "name": "SkeletonProps",
@@ -9618,7 +9869,8 @@
         "Skeleton"
       ],
       "searchTags": [],
-      "typeText": "interface SkeletonProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> { ... }"
+      "typeText": "interface SkeletonProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> { ... }",
+      "canonicalUsage": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';"
     },
     {
       "name": "Slider",
@@ -9802,7 +10054,10 @@
       "relatedSymbols": [
         "SliderProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "slider"
+      ],
+      "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';"
     },
     {
       "name": "SliderProps",
@@ -9818,7 +10073,8 @@
         "Slider"
       ],
       "searchTags": [],
-      "typeText": "interface SliderProps { ... }"
+      "typeText": "interface SliderProps { ... }",
+      "canonicalUsage": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';"
     },
     {
       "name": "Space",
@@ -9884,7 +10140,8 @@
       "relatedSymbols": [
         "SpaceProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';"
     },
     {
       "name": "SpaceProps",
@@ -9900,7 +10157,8 @@
         "Space"
       ],
       "searchTags": [],
-      "typeText": "interface SpaceProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface SpaceProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';"
     },
     {
       "name": "Spinner",
@@ -9959,7 +10217,11 @@
         "SpinnerProps",
         "SpinnerType"
       ],
-      "searchTags": []
+      "searchTags": [
+        "loading",
+        "spinner"
+      ],
+      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';"
     },
     {
       "name": "SpinnerProps",
@@ -9976,7 +10238,8 @@
         "SpinnerType"
       ],
       "searchTags": [],
-      "typeText": "interface SpinnerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }"
+      "typeText": "interface SpinnerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> { ... }",
+      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';"
     },
     {
       "name": "SpinnerType",
@@ -9993,7 +10256,8 @@
         "SpinnerProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof SPINNER_TYPES)[number]"
+      "typeText": "(typeof SPINNER_TYPES)[number]",
+      "canonicalUsage": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';"
     },
     {
       "name": "Step",
@@ -10030,7 +10294,11 @@
         "StepStatus",
         "StepTagConfig"
       ],
-      "searchTags": []
+      "searchTags": [
+        "step",
+        "stepper"
+      ],
+      "canonicalUsage": "<Step items={[]} />"
     },
     {
       "name": "StepItem",
@@ -10049,7 +10317,8 @@
         "StepTagConfig"
       ],
       "searchTags": [],
-      "typeText": "interface StepItem { ... }"
+      "typeText": "interface StepItem { ... }",
+      "canonicalUsage": "import type { StepItem } from '@1money/component-ui';"
     },
     {
       "name": "StepProps",
@@ -10068,7 +10337,8 @@
         "StepTagConfig"
       ],
       "searchTags": [],
-      "typeText": "interface StepProps extends HTMLAttributes<HTMLDivElement> { ... }"
+      "typeText": "interface StepProps extends HTMLAttributes<HTMLDivElement> { ... }",
+      "canonicalUsage": "import type { StepProps } from '@1money/component-ui';"
     },
     {
       "name": "StepStatus",
@@ -10087,7 +10357,8 @@
         "StepTagConfig"
       ],
       "searchTags": [],
-      "typeText": "(typeof STEP_STATUSES)[number]"
+      "typeText": "(typeof STEP_STATUSES)[number]",
+      "canonicalUsage": "import type { StepStatus } from '@1money/component-ui';"
     },
     {
       "name": "StepTagConfig",
@@ -10106,7 +10377,8 @@
         "StepStatus"
       ],
       "searchTags": [],
-      "typeText": "interface StepTagConfig { ... }"
+      "typeText": "interface StepTagConfig { ... }",
+      "canonicalUsage": "import type { StepTagConfig } from '@1money/component-ui';"
     },
     {
       "name": "SubmitterProps",
@@ -10171,7 +10443,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "interface SubmitterProps { ... }"
+      "typeText": "interface SubmitterProps { ... }",
+      "canonicalUsage": "import type { SubmitterProps } from '@1money/component-ui';"
     },
     {
       "name": "Switch",
@@ -10299,7 +10572,11 @@
       "relatedSymbols": [
         "SwitchProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "switch",
+        "toggle"
+      ],
+      "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';"
     },
     {
       "name": "SwitchProps",
@@ -10315,7 +10592,8 @@
         "Switch"
       ],
       "searchTags": [],
-      "typeText": "interface SwitchProps { ... }"
+      "typeText": "interface SwitchProps { ... }",
+      "canonicalUsage": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';"
     },
     {
       "name": "TabItem",
@@ -10332,7 +10610,8 @@
         "TabsProps"
       ],
       "searchTags": [],
-      "typeText": "interface TabItem { ... }"
+      "typeText": "interface TabItem { ... }",
+      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';"
     },
     {
       "name": "Table",
@@ -10345,7 +10624,10 @@
       "props": [],
       "extends": [],
       "relatedSymbols": [],
-      "searchTags": []
+      "searchTags": [
+        "table"
+      ],
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TableChangeMeta",
@@ -10369,7 +10651,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TableChangeMeta { ... }"
+      "typeText": "interface TableChangeMeta { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TableColumn",
@@ -10393,7 +10676,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TableColumn { ... }"
+      "typeText": "interface TableColumn { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TableExpandableConfig",
@@ -10417,7 +10701,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TableExpandableConfig { ... }"
+      "typeText": "interface TableExpandableConfig { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TablePaginationConfig",
@@ -10441,7 +10726,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TablePaginationConfig { ... }"
+      "typeText": "interface TablePaginationConfig { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TableProps",
@@ -10465,7 +10751,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TableProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }"
+      "typeText": "interface TableProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TableRef",
@@ -10489,7 +10776,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TableRef { ... }"
+      "typeText": "interface TableRef { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "TableRowSelection",
@@ -10513,7 +10801,8 @@
         "VirtualTableProps"
       ],
       "searchTags": [],
-      "typeText": "interface TableRowSelection { ... }"
+      "typeText": "interface TableRowSelection { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "Tabs",
@@ -10588,7 +10877,10 @@
         "TabItem",
         "TabsProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "tab"
+      ],
+      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';"
     },
     {
       "name": "TabsProps",
@@ -10605,7 +10897,8 @@
         "Tabs"
       ],
       "searchTags": [],
-      "typeText": "interface TabsProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }"
+      "typeText": "interface TabsProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
+      "canonicalUsage": "import { Tabs } from '@1money/components-ui';\n// or\nimport { Tabs } from '@1money/components-ui/Tabs';"
     },
     {
       "name": "Tag",
@@ -10687,7 +10980,10 @@
       "relatedSymbols": [
         "TagProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "tag"
+      ],
+      "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';"
     },
     {
       "name": "TagProps",
@@ -10703,7 +10999,8 @@
         "Tag"
       ],
       "searchTags": [],
-      "typeText": "interface TagProps extends Omit<HTMLAttributes<HTMLSpanElement>, 'color'> { ... }"
+      "typeText": "interface TagProps extends Omit<HTMLAttributes<HTMLSpanElement>, 'color'> { ... }",
+      "canonicalUsage": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';"
     },
     {
       "name": "Tooltip",
@@ -10786,7 +11083,11 @@
         "TooltipPlacement",
         "TooltipProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "popover",
+        "tooltip"
+      ],
+      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';"
     },
     {
       "name": "TooltipPlacement",
@@ -10803,7 +11104,8 @@
         "TooltipProps"
       ],
       "searchTags": [],
-      "typeText": "| 'top'\n  | 'top-start'\n  | 'top-end'\n  | 'bottom'\n  | 'bottom-start'\n  | 'bottom-end'\n  | 'left'\n  | 'left-start'\n  | 'left-end'\n  | 'right'\n  | 'right-start'\n  | 'right-end'"
+      "typeText": "| 'top'\n  | 'top-start'\n  | 'top-end'\n  | 'bottom'\n  | 'bottom-start'\n  | 'bottom-end'\n  | 'left'\n  | 'left-start'\n  | 'left-end'\n  | 'right'\n  | 'right-start'\n  | 'right-end'",
+      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';"
     },
     {
       "name": "TooltipProps",
@@ -10820,7 +11122,8 @@
         "TooltipPlacement"
       ],
       "searchTags": [],
-      "typeText": "interface TooltipProps extends Omit<ITooltip, 'place' | 'noArrow' | 'children' | 'isOpen' | 'setIsOpen'> { ... }"
+      "typeText": "interface TooltipProps extends Omit<ITooltip, 'place' | 'noArrow' | 'children' | 'isOpen' | 'setIsOpen'> { ... }",
+      "canonicalUsage": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';"
     },
     {
       "name": "Tour",
@@ -10949,7 +11252,11 @@
         "TourProps",
         "TourStep"
       ],
-      "searchTags": []
+      "searchTags": [
+        "tour",
+        "walkthrough"
+      ],
+      "canonicalUsage": "<Tour open steps={[]} onClose={() => {}} />"
     },
     {
       "name": "TourProps",
@@ -10966,7 +11273,8 @@
         "TourStep"
       ],
       "searchTags": [],
-      "typeText": "interface TourProps { ... }"
+      "typeText": "interface TourProps { ... }",
+      "canonicalUsage": "import type { TourProps } from '@1money/component-ui';"
     },
     {
       "name": "TourStep",
@@ -10983,7 +11291,8 @@
         "TourProps"
       ],
       "searchTags": [],
-      "typeText": "interface TourStep { ... }"
+      "typeText": "interface TourStep { ... }",
+      "canonicalUsage": "import type { TourStep } from '@1money/component-ui';"
     },
     {
       "name": "Trigger",
@@ -10996,7 +11305,8 @@
       "props": [],
       "extends": [],
       "relatedSymbols": [],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "Trigger();"
     },
     {
       "name": "TriggerAction",
@@ -11016,7 +11326,8 @@
         "TriggerRole"
       ],
       "searchTags": [],
-      "typeText": "'click' | 'hover' | 'focus'"
+      "typeText": "'click' | 'hover' | 'focus'",
+      "canonicalUsage": "import type { TriggerAction } from '@1money/component-ui';"
     },
     {
       "name": "TriggerContent",
@@ -11036,7 +11347,8 @@
         "TriggerRole"
       ],
       "searchTags": [],
-      "typeText": "| ReactNode\n  | ((context: TriggerContentContext) => ReactNode)"
+      "typeText": "| ReactNode\n  | ((context: TriggerContentContext) => ReactNode)",
+      "canonicalUsage": "import type { TriggerContent } from '@1money/component-ui';"
     },
     {
       "name": "TriggerContentContext",
@@ -11056,7 +11368,8 @@
         "TriggerRole"
       ],
       "searchTags": [],
-      "typeText": "interface TriggerContentContext { ... }"
+      "typeText": "interface TriggerContentContext { ... }",
+      "canonicalUsage": "import type { TriggerContentContext } from '@1money/component-ui';"
     },
     {
       "name": "TriggerProps",
@@ -11076,7 +11389,8 @@
         "TriggerRole"
       ],
       "searchTags": [],
-      "typeText": "interface TriggerProps { ... }"
+      "typeText": "interface TriggerProps { ... }",
+      "canonicalUsage": "import type { TriggerProps } from '@1money/component-ui';"
     },
     {
       "name": "TriggerRole",
@@ -11096,7 +11410,8 @@
         "TriggerProps"
       ],
       "searchTags": [],
-      "typeText": "'dialog' | 'tooltip' | 'menu' | 'alertdialog' | 'listbox'"
+      "typeText": "'dialog' | 'tooltip' | 'menu' | 'alertdialog' | 'listbox'",
+      "canonicalUsage": "import type { TriggerRole } from '@1money/component-ui';"
     },
     {
       "name": "Typography",
@@ -11124,7 +11439,10 @@
         "TypographyTitleProps",
         "TypographyTitleSize"
       ],
-      "searchTags": []
+      "searchTags": [
+        "typography"
+      ],
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyBodyProps",
@@ -11153,7 +11471,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyBodyProps extends BaseHTMLProps, TypographyStrongProps { ... }"
+      "typeText": "interface TypographyBodyProps extends BaseHTMLProps, TypographyStrongProps { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyBodySize",
@@ -11182,7 +11501,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "(typeof TYPOGRAPHY_BODY_SIZES)[number]"
+      "typeText": "(typeof TYPOGRAPHY_BODY_SIZES)[number]",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyCopyableConfig",
@@ -11211,7 +11531,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyCopyableConfig { ... }"
+      "typeText": "interface TypographyCopyableConfig { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyDisplayProps",
@@ -11240,7 +11561,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyDisplayProps extends BaseHTMLProps, TypographyCommonProps { ... }"
+      "typeText": "interface TypographyDisplayProps extends BaseHTMLProps, TypographyCommonProps { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyDisplaySize",
@@ -11269,7 +11591,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "(typeof TYPOGRAPHY_DISPLAY_SIZES)[number]"
+      "typeText": "(typeof TYPOGRAPHY_DISPLAY_SIZES)[number]",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyEllipsisConfig",
@@ -11298,7 +11621,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyEllipsisConfig { ... }"
+      "typeText": "interface TypographyEllipsisConfig { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyHeadlineProps",
@@ -11327,7 +11651,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyHeadlineProps extends BaseHTMLProps, TypographyCommonProps { ... }"
+      "typeText": "interface TypographyHeadlineProps extends BaseHTMLProps, TypographyCommonProps { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyHeadlineSize",
@@ -11356,7 +11681,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "(typeof TYPOGRAPHY_HEADLINE_SIZES)[number]"
+      "typeText": "(typeof TYPOGRAPHY_HEADLINE_SIZES)[number]",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyLabelProps",
@@ -11385,7 +11711,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyLabelProps extends BaseHTMLProps, TypographyStrongProps { ... }"
+      "typeText": "interface TypographyLabelProps extends BaseHTMLProps, TypographyStrongProps { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyLabelSize",
@@ -11414,7 +11741,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "(typeof TYPOGRAPHY_LABEL_SIZES)[number]"
+      "typeText": "(typeof TYPOGRAPHY_LABEL_SIZES)[number]",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyLinkProps",
@@ -11443,7 +11771,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children' | 'color'>, TypographyCommonProps { ... }"
+      "typeText": "interface TypographyLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children' | 'color'>, TypographyCommonProps { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyLinkSize",
@@ -11472,7 +11801,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "(typeof TYPOGRAPHY_LINK_SIZES)[number]"
+      "typeText": "(typeof TYPOGRAPHY_LINK_SIZES)[number]",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyTitleProps",
@@ -11501,7 +11831,8 @@
         "TypographyTitleSize"
       ],
       "searchTags": [],
-      "typeText": "interface TypographyTitleProps extends BaseHTMLProps, TypographyStrongProps { ... }"
+      "typeText": "interface TypographyTitleProps extends BaseHTMLProps, TypographyStrongProps { ... }",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "TypographyTitleSize",
@@ -11530,7 +11861,8 @@
         "TypographyTitleProps"
       ],
       "searchTags": [],
-      "typeText": "(typeof TYPOGRAPHY_TITLE_SIZES)[number]"
+      "typeText": "(typeof TYPOGRAPHY_TITLE_SIZES)[number]",
+      "canonicalUsage": "import { Typography } from '@1money/components-ui';\n// or\nimport { Typography } from '@1money/components-ui/Typography';"
     },
     {
       "name": "Upload",
@@ -11636,7 +11968,11 @@
         "UploadFileBarProps",
         "UploadProps"
       ],
-      "searchTags": []
+      "searchTags": [
+        "file input",
+        "upload"
+      ],
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
     },
     {
       "name": "UploadFileBar",
@@ -11710,7 +12046,8 @@
         "UploadFileBarProps",
         "UploadProps"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
     },
     {
       "name": "UploadFileBarProps",
@@ -11728,7 +12065,8 @@
         "UploadProps"
       ],
       "searchTags": [],
-      "typeText": "interface UploadFileBarProps { ... }"
+      "typeText": "interface UploadFileBarProps { ... }",
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
     },
     {
       "name": "UploadProps",
@@ -11746,7 +12084,8 @@
         "UploadFileBarProps"
       ],
       "searchTags": [],
-      "typeText": "interface UploadProps { ... }"
+      "typeText": "interface UploadProps { ... }",
+      "canonicalUsage": "import { Upload, UploadFileBar } from '@1money/components-ui';\n// or\nimport { Upload, UploadFileBar } from '@1money/components-ui/Upload';"
     },
     {
       "name": "UsePaginationOptions",
@@ -11769,7 +12108,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "interface UsePaginationOptions { ... }"
+      "typeText": "interface UsePaginationOptions { ... }",
+      "canonicalUsage": "import type { UsePaginationOptions } from '@1money/component-ui';"
     },
     {
       "name": "UsePaginationResult",
@@ -11792,7 +12132,8 @@
         "usePagination"
       ],
       "searchTags": [],
-      "typeText": "interface UsePaginationResult { ... }"
+      "typeText": "interface UsePaginationResult { ... }",
+      "canonicalUsage": "import type { UsePaginationResult } from '@1money/component-ui';"
     },
     {
       "name": "ValidateStatus",
@@ -11857,7 +12198,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(typeof VALIDATE_STATUSES)[number]"
+      "typeText": "(typeof VALIDATE_STATUSES)[number]",
+      "canonicalUsage": "import type { ValidateStatus } from '@1money/component-ui';"
     },
     {
       "name": "ValidateTrigger",
@@ -11922,7 +12264,8 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "typeText": "(typeof VALIDATE_TRIGGERS)[number]"
+      "typeText": "(typeof VALIDATE_TRIGGERS)[number]",
+      "canonicalUsage": "import type { ValidateTrigger } from '@1money/component-ui';"
     },
     {
       "name": "VirtualList",
@@ -11939,7 +12282,8 @@
         "VirtualListRef",
         "VirtualListScrollInfo"
       ],
-      "searchTags": []
+      "searchTags": [],
+      "canonicalUsage": "<VirtualList />"
     },
     {
       "name": "VirtualListProps",
@@ -11957,7 +12301,8 @@
         "VirtualListScrollInfo"
       ],
       "searchTags": [],
-      "typeText": "interface ListProps extends Omit<React.HTMLAttributes<any>, 'children'> { ... }"
+      "typeText": "interface ListProps extends Omit<React.HTMLAttributes<any>, 'children'> { ... }",
+      "canonicalUsage": "import type { VirtualListProps } from '@1money/component-ui';"
     },
     {
       "name": "VirtualListRef",
@@ -11975,7 +12320,8 @@
         "VirtualListScrollInfo"
       ],
       "searchTags": [],
-      "typeText": "{\n  nativeElement: HTMLDivElement;\n  scrollTo: ScrollTo;\n  getScrollInfo: () => ScrollInfo;\n}"
+      "typeText": "{\n  nativeElement: HTMLDivElement;\n  scrollTo: ScrollTo;\n  getScrollInfo: () => ScrollInfo;\n}",
+      "canonicalUsage": "import type { VirtualListRef } from '@1money/component-ui';"
     },
     {
       "name": "VirtualListScrollInfo",
@@ -11993,7 +12339,8 @@
         "VirtualListRef"
       ],
       "searchTags": [],
-      "typeText": "interface ScrollInfo { ... }"
+      "typeText": "interface ScrollInfo { ... }",
+      "canonicalUsage": "import type { VirtualListScrollInfo } from '@1money/component-ui';"
     },
     {
       "name": "VirtualTable",
@@ -12006,7 +12353,10 @@
       "props": [],
       "extends": [],
       "relatedSymbols": [],
-      "searchTags": []
+      "searchTags": [
+        "table"
+      ],
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "VirtualTableProps",
@@ -12030,7 +12380,8 @@
         "VirtualTable"
       ],
       "searchTags": [],
-      "typeText": "interface VirtualTableProps extends Omit<TableProps<T>, 'scroll'> { ... }"
+      "typeText": "interface VirtualTableProps extends Omit<TableProps<T>, 'scroll'> { ... }",
+      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />"
     },
     {
       "name": "createProFormField",
@@ -12095,7 +12446,8 @@
         "ValidateTrigger"
       ],
       "searchTags": [],
-      "signature": "(config: CreateProFormFieldConfig<FieldProps>): FC<ProFormFieldProps<FieldProps>>"
+      "signature": "(config: CreateProFormFieldConfig<FieldProps>): FC<ProFormFieldProps<FieldProps>>",
+      "canonicalUsage": "createProFormField(config);"
     },
     {
       "name": "notification",
@@ -12116,8 +12468,12 @@
         "NotificationStaticConfig",
         "NotificationStatus"
       ],
-      "searchTags": [],
-      "signature": "NotificationStaticApi"
+      "searchTags": [
+        "snackbar",
+        "toast"
+      ],
+      "signature": "NotificationStaticApi",
+      "canonicalUsage": "import { notification } from '@1money/components-ui';\n// or\nimport notification from '@1money/components-ui/Notification';"
     },
     {
       "name": "usePagination",
@@ -12140,7 +12496,8 @@
         "UsePaginationResult"
       ],
       "searchTags": [],
-      "signature": "(options: UsePaginationOptions): UsePaginationResult"
+      "signature": "(options: UsePaginationOptions): UsePaginationResult",
+      "canonicalUsage": "const result = usePagination(options);"
     },
     {
       "name": "useResizeObserver",
@@ -12159,7 +12516,2881 @@
         "ResizeObserverSizeInfo"
       ],
       "searchTags": [],
-      "signature": "(enabled: boolean, getTarget: HTMLElement | (() => HTMLElement), onDelayResize?: OnResize, onSyncResize?: OnResize)"
+      "signature": "(enabled: boolean, getTarget: HTMLElement | (() => HTMLElement), onDelayResize?: OnResize, onSyncResize?: OnResize)",
+      "canonicalUsage": "const result = useResizeObserver(enabled, getTarget);"
     }
-  ]
+  ],
+  "tokens": [
+    {
+      "name": "breakpoint-lg",
+      "scss": "$om-breakpoints['lg']",
+      "cssVar": "--om-breakpoint-lg",
+      "value": "1280px",
+      "resolved": "1280px",
+      "kind": "breakpoint",
+      "layer": "primitive"
+    },
+    {
+      "name": "breakpoint-md",
+      "scss": "$om-breakpoints['md']",
+      "cssVar": "--om-breakpoint-md",
+      "value": "1024px",
+      "resolved": "1024px",
+      "kind": "breakpoint",
+      "layer": "primitive"
+    },
+    {
+      "name": "breakpoint-sm",
+      "scss": "$om-breakpoints['sm']",
+      "cssVar": "--om-breakpoint-sm",
+      "value": "768px",
+      "resolved": "768px",
+      "kind": "breakpoint",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-breakpoint-step",
+      "scss": "$om-breakpoint-step",
+      "cssVar": "--om-breakpoint-om-breakpoint-step",
+      "value": "1px",
+      "resolved": "1px",
+      "kind": "breakpoint",
+      "layer": "primitive"
+    },
+    {
+      "name": "black",
+      "scss": "$black",
+      "cssVar": "--om-color-black",
+      "value": "#000",
+      "resolved": "#000",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-100",
+      "scss": "$blue-100",
+      "cssVar": "--om-color-blue-100",
+      "value": "#dde6f4",
+      "resolved": "#dde6f4",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-200",
+      "scss": "$blue-200",
+      "cssVar": "--om-color-blue-200",
+      "value": "#c1d0eb",
+      "resolved": "#c1d0eb",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-300",
+      "scss": "$blue-300",
+      "cssVar": "--om-color-blue-300",
+      "value": "#a4bbe1",
+      "resolved": "#a4bbe1",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-50",
+      "scss": "$blue-50",
+      "cssVar": "--om-color-blue-50",
+      "value": "#edf2f9",
+      "resolved": "#edf2f9",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-700",
+      "scss": "$blue-700",
+      "cssVar": "--om-color-blue-700",
+      "value": "#073387",
+      "resolved": "#073387",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-800",
+      "scss": "$blue-800",
+      "cssVar": "--om-color-blue-800",
+      "value": "#052561",
+      "resolved": "#052561",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "blue-900",
+      "scss": "$blue-900",
+      "cssVar": "--om-color-blue-900",
+      "value": "#03163a",
+      "resolved": "#03163a",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "green-700",
+      "scss": "$green-700",
+      "cssVar": "--om-color-green-700",
+      "value": "#1f5800",
+      "resolved": "#1f5800",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "green-800",
+      "scss": "$green-800",
+      "cssVar": "--om-color-green-800",
+      "value": "#1b4404",
+      "resolved": "#1b4404",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "green-900",
+      "scss": "$green-900",
+      "cssVar": "--om-color-green-900",
+      "value": "#003104",
+      "resolved": "#003104",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-100",
+      "scss": "$grey-100",
+      "cssVar": "--om-color-grey-100",
+      "value": "#f0f0f0",
+      "resolved": "#f0f0f0",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-200",
+      "scss": "$grey-200",
+      "cssVar": "--om-color-grey-200",
+      "value": "#e3e4e4",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-300",
+      "scss": "$grey-300",
+      "cssVar": "--om-color-grey-300",
+      "value": "#d1d2d2",
+      "resolved": "#d1d2d2",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-400",
+      "scss": "$grey-400",
+      "cssVar": "--om-color-grey-400",
+      "value": "#bbbdc1",
+      "resolved": "#bbbdc1",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-50",
+      "scss": "$grey-50",
+      "cssVar": "--om-color-grey-50",
+      "value": "#f8f8f8",
+      "resolved": "#f8f8f8",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-500",
+      "scss": "$grey-500",
+      "cssVar": "--om-color-grey-500",
+      "value": "#9fa3a3",
+      "resolved": "#9fa3a3",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-700",
+      "scss": "$grey-700",
+      "cssVar": "--om-color-grey-700",
+      "value": "#646465",
+      "resolved": "#646465",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-800",
+      "scss": "$grey-800",
+      "cssVar": "--om-color-grey-800",
+      "value": "#404042",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "grey-900",
+      "scss": "$grey-900",
+      "cssVar": "--om-color-grey-900",
+      "value": "#131313",
+      "resolved": "#131313",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "red-600",
+      "scss": "$red-600",
+      "cssVar": "--om-color-red-600",
+      "value": "#ae0000",
+      "resolved": "#ae0000",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "red-700",
+      "scss": "$red-700",
+      "cssVar": "--om-color-red-700",
+      "value": "#920000",
+      "resolved": "#920000",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "red-800",
+      "scss": "$red-800",
+      "cssVar": "--om-color-red-800",
+      "value": "#780000",
+      "resolved": "#780000",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "white",
+      "scss": "$white",
+      "cssVar": "--om-color-white",
+      "value": "#fff",
+      "resolved": "#fff",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "yellow-300",
+      "scss": "$yellow-300",
+      "cssVar": "--om-color-yellow-300",
+      "value": "#ffa000",
+      "resolved": "#ffa000",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "yellow-400",
+      "scss": "$yellow-400",
+      "cssVar": "--om-color-yellow-400",
+      "value": "#ffb300",
+      "resolved": "#ffb300",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "yellow-500",
+      "scss": "$yellow-500",
+      "cssVar": "--om-color-yellow-500",
+      "value": "#f4c600",
+      "resolved": "#f4c600",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "yellow-700",
+      "scss": "$yellow-700",
+      "cssVar": "--om-color-yellow-700",
+      "value": "#db8600",
+      "resolved": "#db8600",
+      "kind": "color",
+      "layer": "primitive"
+    },
+    {
+      "name": "bg-brand",
+      "scss": "$om-bg-scale['brand']",
+      "cssVar": "--om-color-bg-brand",
+      "value": "p.$blue-700",
+      "resolved": "#073387",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-brand-hover",
+      "scss": "$om-bg-scale['brand-hover']",
+      "cssVar": "--om-color-bg-brand-hover",
+      "value": "p.$blue-800",
+      "resolved": "#052561",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-brand-secondary",
+      "scss": "$om-bg-scale['brand-secondary']",
+      "cssVar": "--om-color-bg-brand-secondary",
+      "value": "p.$blue-100",
+      "resolved": "#dde6f4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-brand-secondary-hover",
+      "scss": "$om-bg-scale['brand-secondary-hover']",
+      "cssVar": "--om-color-bg-brand-secondary-hover",
+      "value": "p.$blue-200",
+      "resolved": "#c1d0eb",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-brand-tertiary",
+      "scss": "$om-bg-scale['brand-tertiary']",
+      "cssVar": "--om-color-bg-brand-tertiary",
+      "value": "p.$blue-50",
+      "resolved": "#edf2f9",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-brand-tertiary-hover",
+      "scss": "$om-bg-scale['brand-tertiary-hover']",
+      "cssVar": "--om-color-bg-brand-tertiary-hover",
+      "value": "p.$blue-100",
+      "resolved": "#dde6f4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-danger",
+      "scss": "$om-bg-scale['danger']",
+      "cssVar": "--om-color-bg-danger",
+      "value": "p.$red-600",
+      "resolved": "#ae0000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-danger-hover",
+      "scss": "$om-bg-scale['danger-hover']",
+      "cssVar": "--om-color-bg-danger-hover",
+      "value": "p.$red-700",
+      "resolved": "#920000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-danger-secondary",
+      "scss": "$om-bg-scale['danger-secondary']",
+      "cssVar": "--om-color-bg-danger-secondary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-danger-secondary-hover",
+      "scss": "$om-bg-scale['danger-secondary-hover']",
+      "cssVar": "--om-color-bg-danger-secondary-hover",
+      "value": "rgba(p.$red-600, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-danger-tertiary",
+      "scss": "$om-bg-scale['danger-tertiary']",
+      "cssVar": "--om-color-bg-danger-tertiary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-danger-tertiary-hover",
+      "scss": "$om-bg-scale['danger-tertiary-hover']",
+      "cssVar": "--om-color-bg-danger-tertiary-hover",
+      "value": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-default",
+      "scss": "$om-bg-scale['default']",
+      "cssVar": "--om-color-bg-default",
+      "value": "p.$white",
+      "resolved": "#fff",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-default-hover",
+      "scss": "$om-bg-scale['default-hover']",
+      "cssVar": "--om-color-bg-default-hover",
+      "value": "p.$grey-100",
+      "resolved": "#f0f0f0",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-default-secondary",
+      "scss": "$om-bg-scale['default-secondary']",
+      "cssVar": "--om-color-bg-default-secondary",
+      "value": "p.$grey-50",
+      "resolved": "#f8f8f8",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-default-secondary-hover",
+      "scss": "$om-bg-scale['default-secondary-hover']",
+      "cssVar": "--om-color-bg-default-secondary-hover",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-default-tertiary",
+      "scss": "$om-bg-scale['default-tertiary']",
+      "cssVar": "--om-color-bg-default-tertiary",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-default-tertiary-hover",
+      "scss": "$om-bg-scale['default-tertiary-hover']",
+      "cssVar": "--om-color-bg-default-tertiary-hover",
+      "value": "p.$grey-300",
+      "resolved": "#d1d2d2",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-disabled",
+      "scss": "$om-bg-scale['disabled']",
+      "cssVar": "--om-color-bg-disabled",
+      "value": "p.$grey-100",
+      "resolved": "#f0f0f0",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-disabled-black",
+      "scss": "$om-bg-scale['disabled-black']",
+      "cssVar": "--om-color-bg-disabled-black",
+      "value": "rgba(p.$black, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$black, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-disabled-brand",
+      "scss": "$om-bg-scale['disabled-brand']",
+      "cssVar": "--om-color-bg-disabled-brand",
+      "value": "p.$blue-300",
+      "resolved": "#a4bbe1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-neutral",
+      "scss": "$om-bg-scale['neutral']",
+      "cssVar": "--om-color-bg-neutral",
+      "value": "p.$grey-900",
+      "resolved": "#131313",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-neutral-hover",
+      "scss": "$om-bg-scale['neutral-hover']",
+      "cssVar": "--om-color-bg-neutral-hover",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-neutral-secondary",
+      "scss": "$om-bg-scale['neutral-secondary']",
+      "cssVar": "--om-color-bg-neutral-secondary",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-neutral-secondary-hover",
+      "scss": "$om-bg-scale['neutral-secondary-hover']",
+      "cssVar": "--om-color-bg-neutral-secondary-hover",
+      "value": "p.$grey-300",
+      "resolved": "#d1d2d2",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-neutral-tertiary",
+      "scss": "$om-bg-scale['neutral-tertiary']",
+      "cssVar": "--om-color-bg-neutral-tertiary",
+      "value": "p.$grey-100",
+      "resolved": "#f0f0f0",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-neutral-tertiary-hover",
+      "scss": "$om-bg-scale['neutral-tertiary-hover']",
+      "cssVar": "--om-color-bg-neutral-tertiary-hover",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-positive",
+      "scss": "$om-bg-scale['positive']",
+      "cssVar": "--om-color-bg-positive",
+      "value": "p.$green-700",
+      "resolved": "#1f5800",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-positive-hover",
+      "scss": "$om-bg-scale['positive-hover']",
+      "cssVar": "--om-color-bg-positive-hover",
+      "value": "p.$green-800",
+      "resolved": "#1b4404",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-positive-secondary",
+      "scss": "$om-bg-scale['positive-secondary']",
+      "cssVar": "--om-color-bg-positive-secondary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-positive-secondary-hover",
+      "scss": "$om-bg-scale['positive-secondary-hover']",
+      "cssVar": "--om-color-bg-positive-secondary-hover",
+      "value": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-positive-tertiary",
+      "scss": "$om-bg-scale['positive-tertiary']",
+      "cssVar": "--om-color-bg-positive-tertiary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-positive-tertiary-hover",
+      "scss": "$om-bg-scale['positive-tertiary-hover']",
+      "cssVar": "--om-color-bg-positive-tertiary-hover",
+      "value": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-scrim-dark",
+      "scss": "$om-bg-scale['scrim-dark']",
+      "cssVar": "--om-color-bg-scrim-dark",
+      "value": "rgba(p.$black, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$black, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-scrim-light",
+      "scss": "$om-bg-scale['scrim-light']",
+      "cssVar": "--om-color-bg-scrim-light",
+      "value": "rgba(p.$white, opacity.om-opacity('strong'))",
+      "resolved": "rgba(p.$white, opacity.om-opacity('strong'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-warning",
+      "scss": "$om-bg-scale['warning']",
+      "cssVar": "--om-color-bg-warning",
+      "value": "p.$yellow-500",
+      "resolved": "#f4c600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-warning-hover",
+      "scss": "$om-bg-scale['warning-hover']",
+      "cssVar": "--om-color-bg-warning-hover",
+      "value": "p.$yellow-400",
+      "resolved": "#ffb300",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-warning-secondary",
+      "scss": "$om-bg-scale['warning-secondary']",
+      "cssVar": "--om-color-bg-warning-secondary",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-warning-secondary-hover",
+      "scss": "$om-bg-scale['warning-secondary-hover']",
+      "cssVar": "--om-color-bg-warning-secondary-hover",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-warning-tertiary",
+      "scss": "$om-bg-scale['warning-tertiary']",
+      "cssVar": "--om-color-bg-warning-tertiary",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "bg-warning-tertiary-hover",
+      "scss": "$om-bg-scale['warning-tertiary-hover']",
+      "cssVar": "--om-color-bg-warning-tertiary-hover",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-brand",
+      "scss": "$om-border-scale['brand']",
+      "cssVar": "--om-color-border-brand",
+      "value": "p.$blue-700",
+      "resolved": "#073387",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-brand-secondary",
+      "scss": "$om-border-scale['brand-secondary']",
+      "cssVar": "--om-color-border-brand-secondary",
+      "value": "p.$blue-300",
+      "resolved": "#a4bbe1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-brand-tertiary",
+      "scss": "$om-border-scale['brand-tertiary']",
+      "cssVar": "--om-color-border-brand-tertiary",
+      "value": "p.$blue-100",
+      "resolved": "#dde6f4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-danger",
+      "scss": "$om-border-scale['danger']",
+      "cssVar": "--om-color-border-danger",
+      "value": "p.$red-600",
+      "resolved": "#ae0000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-danger-secondary",
+      "scss": "$om-border-scale['danger-secondary']",
+      "cssVar": "--om-color-border-danger-secondary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-danger-tertiary",
+      "scss": "$om-border-scale['danger-tertiary']",
+      "cssVar": "--om-color-border-danger-tertiary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-default",
+      "scss": "$om-border-scale['default']",
+      "cssVar": "--om-color-border-default",
+      "value": "p.$grey-300",
+      "resolved": "#d1d2d2",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-default-secondary",
+      "scss": "$om-border-scale['default-secondary']",
+      "cssVar": "--om-color-border-default-secondary",
+      "value": "p.$grey-500",
+      "resolved": "#9fa3a3",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-default-tertiary",
+      "scss": "$om-border-scale['default-tertiary']",
+      "cssVar": "--om-color-border-default-tertiary",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-disabled",
+      "scss": "$om-border-scale['disabled']",
+      "cssVar": "--om-color-border-disabled",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-neutral",
+      "scss": "$om-border-scale['neutral']",
+      "cssVar": "--om-color-border-neutral",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-neutral-secondary",
+      "scss": "$om-border-scale['neutral-secondary']",
+      "cssVar": "--om-color-border-neutral-secondary",
+      "value": "p.$grey-100",
+      "resolved": "#f0f0f0",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-neutral-tertiary",
+      "scss": "$om-border-scale['neutral-tertiary']",
+      "cssVar": "--om-color-border-neutral-tertiary",
+      "value": "p.$grey-50",
+      "resolved": "#f8f8f8",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-positive",
+      "scss": "$om-border-scale['positive']",
+      "cssVar": "--om-color-border-positive",
+      "value": "p.$green-700",
+      "resolved": "#1f5800",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-positive-secondary",
+      "scss": "$om-border-scale['positive-secondary']",
+      "cssVar": "--om-color-border-positive-secondary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-positive-tertiary",
+      "scss": "$om-border-scale['positive-tertiary']",
+      "cssVar": "--om-color-border-positive-tertiary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-warning",
+      "scss": "$om-border-scale['warning']",
+      "cssVar": "--om-color-border-warning",
+      "value": "p.$yellow-700",
+      "resolved": "#db8600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-warning-secondary",
+      "scss": "$om-border-scale['warning-secondary']",
+      "cssVar": "--om-color-border-warning-secondary",
+      "value": "p.$yellow-500",
+      "resolved": "#f4c600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "border-warning-tertiary",
+      "scss": "$om-border-scale['warning-tertiary']",
+      "cssVar": "--om-color-border-warning-tertiary",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-brand",
+      "scss": "$om-icon-scale['brand']",
+      "cssVar": "--om-color-icon-brand",
+      "value": "p.$blue-700",
+      "resolved": "#073387",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-brand-secondary",
+      "scss": "$om-icon-scale['brand-secondary']",
+      "cssVar": "--om-color-icon-brand-secondary",
+      "value": "p.$blue-300",
+      "resolved": "#a4bbe1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-brand-tertiary",
+      "scss": "$om-icon-scale['brand-tertiary']",
+      "cssVar": "--om-color-icon-brand-tertiary",
+      "value": "p.$blue-200",
+      "resolved": "#c1d0eb",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-danger",
+      "scss": "$om-icon-scale['danger']",
+      "cssVar": "--om-color-icon-danger",
+      "value": "p.$red-600",
+      "resolved": "#ae0000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-danger-secondary",
+      "scss": "$om-icon-scale['danger-secondary']",
+      "cssVar": "--om-color-icon-danger-secondary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-danger-tertiary",
+      "scss": "$om-icon-scale['danger-tertiary']",
+      "cssVar": "--om-color-icon-danger-tertiary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-default",
+      "scss": "$om-icon-scale['default']",
+      "cssVar": "--om-color-icon-default",
+      "value": "p.$grey-900",
+      "resolved": "#131313",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-default-secondary",
+      "scss": "$om-icon-scale['default-secondary']",
+      "cssVar": "--om-color-icon-default-secondary",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-default-tertiary",
+      "scss": "$om-icon-scale['default-tertiary']",
+      "cssVar": "--om-color-icon-default-tertiary",
+      "value": "p.$grey-700",
+      "resolved": "#646465",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-disabled",
+      "scss": "$om-icon-scale['disabled']",
+      "cssVar": "--om-color-icon-disabled",
+      "value": "p.$grey-300",
+      "resolved": "#d1d2d2",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-neutral",
+      "scss": "$om-icon-scale['neutral']",
+      "cssVar": "--om-color-icon-neutral",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-neutral-secondary",
+      "scss": "$om-icon-scale['neutral-secondary']",
+      "cssVar": "--om-color-icon-neutral-secondary",
+      "value": "p.$grey-500",
+      "resolved": "#9fa3a3",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-neutral-tertiary",
+      "scss": "$om-icon-scale['neutral-tertiary']",
+      "cssVar": "--om-color-icon-neutral-tertiary",
+      "value": "p.$grey-400",
+      "resolved": "#bbbdc1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-brand",
+      "scss": "$om-icon-scale['on-brand']",
+      "cssVar": "--om-color-icon-on-brand",
+      "value": "p.$blue-100",
+      "resolved": "#dde6f4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-brand-secondary",
+      "scss": "$om-icon-scale['on-brand-secondary']",
+      "cssVar": "--om-color-icon-on-brand-secondary",
+      "value": "p.$blue-800",
+      "resolved": "#052561",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-brand-tertiary",
+      "scss": "$om-icon-scale['on-brand-tertiary']",
+      "cssVar": "--om-color-icon-on-brand-tertiary",
+      "value": "p.$blue-900",
+      "resolved": "#03163a",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-danger",
+      "scss": "$om-icon-scale['on-danger']",
+      "cssVar": "--om-color-icon-on-danger",
+      "value": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-danger-secondary",
+      "scss": "$om-icon-scale['on-danger-secondary']",
+      "cssVar": "--om-color-icon-on-danger-secondary",
+      "value": "p.$red-700",
+      "resolved": "#920000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-danger-tertiary",
+      "scss": "$om-icon-scale['on-danger-tertiary']",
+      "cssVar": "--om-color-icon-on-danger-tertiary",
+      "value": "p.$red-800",
+      "resolved": "#780000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-disabled",
+      "scss": "$om-icon-scale['on-disabled']",
+      "cssVar": "--om-color-icon-on-disabled",
+      "value": "p.$grey-400",
+      "resolved": "#bbbdc1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-neutral",
+      "scss": "$om-icon-scale['on-neutral']",
+      "cssVar": "--om-color-icon-on-neutral",
+      "value": "p.$white",
+      "resolved": "#fff",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-neutral-secondary",
+      "scss": "$om-icon-scale['on-neutral-secondary']",
+      "cssVar": "--om-color-icon-on-neutral-secondary",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-neutral-tertiary",
+      "scss": "$om-icon-scale['on-neutral-tertiary']",
+      "cssVar": "--om-color-icon-on-neutral-tertiary",
+      "value": "p.$grey-700",
+      "resolved": "#646465",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-positive",
+      "scss": "$om-icon-scale['on-positive']",
+      "cssVar": "--om-color-icon-on-positive",
+      "value": "rgba(p.$green-700, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-positive-secondary",
+      "scss": "$om-icon-scale['on-positive-secondary']",
+      "cssVar": "--om-color-icon-on-positive-secondary",
+      "value": "p.$green-800",
+      "resolved": "#1b4404",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-positive-tertiary",
+      "scss": "$om-icon-scale['on-positive-tertiary']",
+      "cssVar": "--om-color-icon-on-positive-tertiary",
+      "value": "p.$green-900",
+      "resolved": "#003104",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-warning",
+      "scss": "$om-icon-scale['on-warning']",
+      "cssVar": "--om-color-icon-on-warning",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-warning-secondary",
+      "scss": "$om-icon-scale['on-warning-secondary']",
+      "cssVar": "--om-color-icon-on-warning-secondary",
+      "value": "p.$yellow-300",
+      "resolved": "#ffa000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-on-warning-tertiary",
+      "scss": "$om-icon-scale['on-warning-tertiary']",
+      "cssVar": "--om-color-icon-on-warning-tertiary",
+      "value": "p.$yellow-700",
+      "resolved": "#db8600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-positive",
+      "scss": "$om-icon-scale['positive']",
+      "cssVar": "--om-color-icon-positive",
+      "value": "p.$green-700",
+      "resolved": "#1f5800",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-positive-secondary",
+      "scss": "$om-icon-scale['positive-secondary']",
+      "cssVar": "--om-color-icon-positive-secondary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-positive-tertiary",
+      "scss": "$om-icon-scale['positive-tertiary']",
+      "cssVar": "--om-color-icon-positive-tertiary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-warning",
+      "scss": "$om-icon-scale['warning']",
+      "cssVar": "--om-color-icon-warning",
+      "value": "p.$yellow-700",
+      "resolved": "#db8600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-warning-secondary",
+      "scss": "$om-icon-scale['warning-secondary']",
+      "cssVar": "--om-color-icon-warning-secondary",
+      "value": "p.$yellow-500",
+      "resolved": "#f4c600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "icon-warning-tertiary",
+      "scss": "$om-icon-scale['warning-tertiary']",
+      "cssVar": "--om-color-icon-warning-tertiary",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-brand",
+      "scss": "$om-text-scale['brand']",
+      "cssVar": "--om-color-text-brand",
+      "value": "p.$blue-700",
+      "resolved": "#073387",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-brand-secondary",
+      "scss": "$om-text-scale['brand-secondary']",
+      "cssVar": "--om-color-text-brand-secondary",
+      "value": "p.$blue-300",
+      "resolved": "#a4bbe1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-brand-tertiary",
+      "scss": "$om-text-scale['brand-tertiary']",
+      "cssVar": "--om-color-text-brand-tertiary",
+      "value": "p.$blue-200",
+      "resolved": "#c1d0eb",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-danger",
+      "scss": "$om-text-scale['danger']",
+      "cssVar": "--om-color-text-danger",
+      "value": "p.$red-600",
+      "resolved": "#ae0000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-danger-secondary",
+      "scss": "$om-text-scale['danger-secondary']",
+      "cssVar": "--om-color-text-danger-secondary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-danger-tertiary",
+      "scss": "$om-text-scale['danger-tertiary']",
+      "cssVar": "--om-color-text-danger-tertiary",
+      "value": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-default",
+      "scss": "$om-text-scale['default']",
+      "cssVar": "--om-color-text-default",
+      "value": "p.$grey-900",
+      "resolved": "#131313",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-default-secondary",
+      "scss": "$om-text-scale['default-secondary']",
+      "cssVar": "--om-color-text-default-secondary",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-default-tertiary",
+      "scss": "$om-text-scale['default-tertiary']",
+      "cssVar": "--om-color-text-default-tertiary",
+      "value": "p.$grey-700",
+      "resolved": "#646465",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-disabled",
+      "scss": "$om-text-scale['disabled']",
+      "cssVar": "--om-color-text-disabled",
+      "value": "p.$grey-400",
+      "resolved": "#bbbdc1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-disabled-black",
+      "scss": "$om-text-scale['disabled-black']",
+      "cssVar": "--om-color-text-disabled-black",
+      "value": "p.$grey-400",
+      "resolved": "#bbbdc1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-disabled-white",
+      "scss": "$om-text-scale['disabled-white']",
+      "cssVar": "--om-color-text-disabled-white",
+      "value": "p.$grey-50",
+      "resolved": "#f8f8f8",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-neutral",
+      "scss": "$om-text-scale['neutral']",
+      "cssVar": "--om-color-text-neutral",
+      "value": "p.$grey-800",
+      "resolved": "#404042",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-neutral-secondary",
+      "scss": "$om-text-scale['neutral-secondary']",
+      "cssVar": "--om-color-text-neutral-secondary",
+      "value": "p.$grey-500",
+      "resolved": "#9fa3a3",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-neutral-tertiary",
+      "scss": "$om-text-scale['neutral-tertiary']",
+      "cssVar": "--om-color-text-neutral-tertiary",
+      "value": "p.$grey-400",
+      "resolved": "#bbbdc1",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-brand",
+      "scss": "$om-text-scale['on-brand']",
+      "cssVar": "--om-color-text-on-brand",
+      "value": "p.$blue-100",
+      "resolved": "#dde6f4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-brand-secondary",
+      "scss": "$om-text-scale['on-brand-secondary']",
+      "cssVar": "--om-color-text-on-brand-secondary",
+      "value": "p.$blue-800",
+      "resolved": "#052561",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-brand-tertiary",
+      "scss": "$om-text-scale['on-brand-tertiary']",
+      "cssVar": "--om-color-text-on-brand-tertiary",
+      "value": "p.$blue-900",
+      "resolved": "#03163a",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-danger",
+      "scss": "$om-text-scale['on-danger']",
+      "cssVar": "--om-color-text-on-danger",
+      "value": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$red-600, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-danger-secondary",
+      "scss": "$om-text-scale['on-danger-secondary']",
+      "cssVar": "--om-color-text-on-danger-secondary",
+      "value": "p.$red-700",
+      "resolved": "#920000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-danger-tertiary",
+      "scss": "$om-text-scale['on-danger-tertiary']",
+      "cssVar": "--om-color-text-on-danger-tertiary",
+      "value": "p.$red-800",
+      "resolved": "#780000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-neutral",
+      "scss": "$om-text-scale['on-neutral']",
+      "cssVar": "--om-color-text-on-neutral",
+      "value": "p.$white",
+      "resolved": "#fff",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-neutral-secondary",
+      "scss": "$om-text-scale['on-neutral-secondary']",
+      "cssVar": "--om-color-text-on-neutral-secondary",
+      "value": "p.$grey-300",
+      "resolved": "#d1d2d2",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-neutral-tertiary",
+      "scss": "$om-text-scale['on-neutral-tertiary']",
+      "cssVar": "--om-color-text-on-neutral-tertiary",
+      "value": "p.$grey-200",
+      "resolved": "#e3e4e4",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-positive",
+      "scss": "$om-text-scale['on-positive']",
+      "cssVar": "--om-color-text-on-positive",
+      "value": "rgba(p.$green-700, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-positive-secondary",
+      "scss": "$om-text-scale['on-positive-secondary']",
+      "cssVar": "--om-color-text-on-positive-secondary",
+      "value": "p.$green-800",
+      "resolved": "#1b4404",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-positive-tertiary",
+      "scss": "$om-text-scale['on-positive-tertiary']",
+      "cssVar": "--om-color-text-on-positive-tertiary",
+      "value": "p.$green-900",
+      "resolved": "#003104",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-warning",
+      "scss": "$om-text-scale['on-warning']",
+      "cssVar": "--om-color-text-on-warning",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('subtle'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('subtle'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-warning-secondary",
+      "scss": "$om-text-scale['on-warning-secondary']",
+      "cssVar": "--om-color-text-on-warning-secondary",
+      "value": "p.$yellow-300",
+      "resolved": "#ffa000",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-on-warning-tertiary",
+      "scss": "$om-text-scale['on-warning-tertiary']",
+      "cssVar": "--om-color-text-on-warning-tertiary",
+      "value": "p.$yellow-700",
+      "resolved": "#db8600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-positive",
+      "scss": "$om-text-scale['positive']",
+      "cssVar": "--om-color-text-positive",
+      "value": "p.$green-700",
+      "resolved": "#1f5800",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-positive-secondary",
+      "scss": "$om-text-scale['positive-secondary']",
+      "cssVar": "--om-color-text-positive-secondary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-positive-tertiary",
+      "scss": "$om-text-scale['positive-tertiary']",
+      "cssVar": "--om-color-text-positive-tertiary",
+      "value": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$green-700, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-warning",
+      "scss": "$om-text-scale['warning']",
+      "cssVar": "--om-color-text-warning",
+      "value": "p.$yellow-700",
+      "resolved": "#db8600",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-warning-secondary",
+      "scss": "$om-text-scale['warning-secondary']",
+      "cssVar": "--om-color-text-warning-secondary",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('medium'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('medium'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "text-warning-tertiary",
+      "scss": "$om-text-scale['warning-tertiary']",
+      "cssVar": "--om-color-text-warning-tertiary",
+      "value": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "resolved": "rgba(p.$yellow-500, opacity.om-opacity('light'))",
+      "kind": "color",
+      "layer": "semantic"
+    },
+    {
+      "name": "opacity-disabled",
+      "scss": "$om-opacity-scale['disabled']",
+      "cssVar": "--om-opacity-disabled",
+      "value": "0.5",
+      "resolved": "0.5",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-disabled-heavy",
+      "scss": "$om-opacity-scale['disabled-heavy']",
+      "cssVar": "--om-opacity-disabled-heavy",
+      "value": "0.6",
+      "resolved": "0.6",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-disabled-light",
+      "scss": "$om-opacity-scale['disabled-light']",
+      "cssVar": "--om-opacity-disabled-light",
+      "value": "0.3",
+      "resolved": "0.3",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-light",
+      "scss": "$om-opacity-scale['light']",
+      "cssVar": "--om-opacity-light",
+      "value": "0.1",
+      "resolved": "0.1",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-medium",
+      "scss": "$om-opacity-scale['medium']",
+      "cssVar": "--om-opacity-medium",
+      "value": "0.2",
+      "resolved": "0.2",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-overlay",
+      "scss": "$om-opacity-scale['overlay']",
+      "cssVar": "--om-opacity-overlay",
+      "value": "0.4",
+      "resolved": "0.4",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-strong",
+      "scss": "$om-opacity-scale['strong']",
+      "cssVar": "--om-opacity-strong",
+      "value": "0.8",
+      "resolved": "0.8",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "opacity-subtle",
+      "scss": "$om-opacity-scale['subtle']",
+      "cssVar": "--om-opacity-subtle",
+      "value": "0.05",
+      "resolved": "0.05",
+      "kind": "opacity",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-0",
+      "scss": "$om-radius-scale['0']",
+      "cssVar": "--om-radius-0",
+      "value": "0",
+      "resolved": "0",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-100",
+      "scss": "$om-radius-scale['100']",
+      "cssVar": "--om-radius-100",
+      "value": "4px",
+      "resolved": "4px",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-200",
+      "scss": "$om-radius-scale['200']",
+      "cssVar": "--om-radius-200",
+      "value": "8px",
+      "resolved": "8px",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-300",
+      "scss": "$om-radius-scale['300']",
+      "cssVar": "--om-radius-300",
+      "value": "12px",
+      "resolved": "12px",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-400",
+      "scss": "$om-radius-scale['400']",
+      "cssVar": "--om-radius-400",
+      "value": "16px",
+      "resolved": "16px",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-600",
+      "scss": "$om-radius-scale['600']",
+      "cssVar": "--om-radius-600",
+      "value": "24px",
+      "resolved": "24px",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "radius-full",
+      "scss": "$om-radius-scale['full']",
+      "cssVar": "--om-radius-full",
+      "value": "9999px",
+      "resolved": "9999px",
+      "kind": "radius",
+      "layer": "primitive"
+    },
+    {
+      "name": "shadow-0",
+      "scss": "$om-shadow-scale['0']",
+      "cssVar": "--om-shadow-0",
+      "value": "none",
+      "resolved": "none",
+      "kind": "shadow",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-2xl",
+      "scss": "$om-component-height-scale['2xl']",
+      "cssVar": "--om-sizing-2xl",
+      "value": "52px",
+      "resolved": "52px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-3xl",
+      "scss": "$om-component-height-scale['3xl']",
+      "cssVar": "--om-sizing-3xl",
+      "value": "56px",
+      "resolved": "56px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-lg",
+      "scss": "$om-component-height-scale['lg']",
+      "cssVar": "--om-sizing-lg",
+      "value": "44px",
+      "resolved": "44px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-md",
+      "scss": "$om-component-height-scale['md']",
+      "cssVar": "--om-sizing-md",
+      "value": "40px",
+      "resolved": "40px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-sm",
+      "scss": "$om-component-height-scale['sm']",
+      "cssVar": "--om-sizing-sm",
+      "value": "32px",
+      "resolved": "32px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-xl",
+      "scss": "$om-component-height-scale['xl']",
+      "cssVar": "--om-sizing-xl",
+      "value": "48px",
+      "resolved": "48px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-xs",
+      "scss": "$om-component-height-scale['xs']",
+      "cssVar": "--om-sizing-xs",
+      "value": "24px",
+      "resolved": "24px",
+      "kind": "sizing",
+      "layer": "primitive"
+    },
+    {
+      "name": "sizing-100",
+      "scss": "$om-sizing-scale['100']",
+      "cssVar": "--om-sizing-sizing-100",
+      "value": "100%",
+      "resolved": "100%",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "sizing-25",
+      "scss": "$om-sizing-scale['25']",
+      "cssVar": "--om-sizing-sizing-25",
+      "value": "25%",
+      "resolved": "25%",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "sizing-33",
+      "scss": "$om-sizing-scale['33']",
+      "cssVar": "--om-sizing-sizing-33",
+      "value": "33.333%",
+      "resolved": "33.333%",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "sizing-50",
+      "scss": "$om-sizing-scale['50']",
+      "cssVar": "--om-sizing-sizing-50",
+      "value": "50%",
+      "resolved": "50%",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "sizing-66",
+      "scss": "$om-sizing-scale['66']",
+      "cssVar": "--om-sizing-sizing-66",
+      "value": "66.667%",
+      "resolved": "66.667%",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "sizing-75",
+      "scss": "$om-sizing-scale['75']",
+      "cssVar": "--om-sizing-sizing-75",
+      "value": "75%",
+      "resolved": "75%",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "sizing-auto",
+      "scss": "$om-sizing-scale['auto']",
+      "cssVar": "--om-sizing-sizing-auto",
+      "value": "auto",
+      "resolved": "auto",
+      "kind": "sizing",
+      "layer": "semantic"
+    },
+    {
+      "name": "om-sys-spacing-unit",
+      "scss": "$om-sys-spacing-unit",
+      "cssVar": "--om-spacing-om-sys-spacing-unit",
+      "value": "4px",
+      "resolved": "4px",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-0",
+      "scss": "$om-spacing-scale['0']",
+      "cssVar": "--om-spacing-0",
+      "value": "0",
+      "resolved": "0",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-050",
+      "scss": "$om-spacing-scale['050']",
+      "cssVar": "--om-spacing-050",
+      "value": "0.5",
+      "resolved": "0.5",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-100",
+      "scss": "$om-spacing-scale['100']",
+      "cssVar": "--om-spacing-100",
+      "value": "1",
+      "resolved": "1",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-1000",
+      "scss": "$om-spacing-scale['1000']",
+      "cssVar": "--om-spacing-1000",
+      "value": "10",
+      "resolved": "10",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-1200",
+      "scss": "$om-spacing-scale['1200']",
+      "cssVar": "--om-spacing-1200",
+      "value": "12",
+      "resolved": "12",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-1400",
+      "scss": "$om-spacing-scale['1400']",
+      "cssVar": "--om-spacing-1400",
+      "value": "14",
+      "resolved": "14",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-1600",
+      "scss": "$om-spacing-scale['1600']",
+      "cssVar": "--om-spacing-1600",
+      "value": "16",
+      "resolved": "16",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-200",
+      "scss": "$om-spacing-scale['200']",
+      "cssVar": "--om-spacing-200",
+      "value": "2",
+      "resolved": "2",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-2000",
+      "scss": "$om-spacing-scale['2000']",
+      "cssVar": "--om-spacing-2000",
+      "value": "20",
+      "resolved": "20",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-2400",
+      "scss": "$om-spacing-scale['2400']",
+      "cssVar": "--om-spacing-2400",
+      "value": "24",
+      "resolved": "24",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-300",
+      "scss": "$om-spacing-scale['300']",
+      "cssVar": "--om-spacing-300",
+      "value": "3",
+      "resolved": "3",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-3200",
+      "scss": "$om-spacing-scale['3200']",
+      "cssVar": "--om-spacing-3200",
+      "value": "32",
+      "resolved": "32",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-400",
+      "scss": "$om-spacing-scale['400']",
+      "cssVar": "--om-spacing-400",
+      "value": "4",
+      "resolved": "4",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-4000",
+      "scss": "$om-spacing-scale['4000']",
+      "cssVar": "--om-spacing-4000",
+      "value": "40",
+      "resolved": "40",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-500",
+      "scss": "$om-spacing-scale['500']",
+      "cssVar": "--om-spacing-500",
+      "value": "5",
+      "resolved": "5",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-600",
+      "scss": "$om-spacing-scale['600']",
+      "cssVar": "--om-spacing-600",
+      "value": "6",
+      "resolved": "6",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "spacing-800",
+      "scss": "$om-spacing-scale['800']",
+      "cssVar": "--om-spacing-800",
+      "value": "8",
+      "resolved": "8",
+      "kind": "spacing",
+      "layer": "primitive"
+    },
+    {
+      "name": "component-padding-050",
+      "scss": "$om-component-padding-scale['050']",
+      "cssVar": "--om-spacing-component-padding-050",
+      "value": "$om-spacing-scale['050']",
+      "resolved": "0.5",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "component-padding-100",
+      "scss": "$om-component-padding-scale['100']",
+      "cssVar": "--om-spacing-component-padding-100",
+      "value": "$om-spacing-scale['100']",
+      "resolved": "1",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "component-padding-200",
+      "scss": "$om-component-padding-scale['200']",
+      "cssVar": "--om-spacing-component-padding-200",
+      "value": "$om-spacing-scale['200']",
+      "resolved": "2",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "component-padding-300",
+      "scss": "$om-component-padding-scale['300']",
+      "cssVar": "--om-spacing-component-padding-300",
+      "value": "$om-spacing-scale['300']",
+      "resolved": "3",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "component-padding-400",
+      "scss": "$om-component-padding-scale['400']",
+      "cssVar": "--om-spacing-component-padding-400",
+      "value": "$om-spacing-scale['400']",
+      "resolved": "4",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "component-padding-600",
+      "scss": "$om-component-padding-scale['600']",
+      "cssVar": "--om-spacing-component-padding-600",
+      "value": "$om-spacing-scale['600']",
+      "resolved": "6",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "component-padding-800",
+      "scss": "$om-component-padding-scale['800']",
+      "cssVar": "--om-spacing-component-padding-800",
+      "value": "$om-spacing-scale['800']",
+      "resolved": "8",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-050",
+      "scss": "$om-gap-scale['050']",
+      "cssVar": "--om-spacing-gap-050",
+      "value": "$om-spacing-scale['050']",
+      "resolved": "0.5",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-100",
+      "scss": "$om-gap-scale['100']",
+      "cssVar": "--om-spacing-gap-100",
+      "value": "$om-spacing-scale['100']",
+      "resolved": "1",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-1600",
+      "scss": "$om-gap-scale['1600']",
+      "cssVar": "--om-spacing-gap-1600",
+      "value": "$om-spacing-scale['1600']",
+      "resolved": "16",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-200",
+      "scss": "$om-gap-scale['200']",
+      "cssVar": "--om-spacing-gap-200",
+      "value": "$om-spacing-scale['200']",
+      "resolved": "2",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-300",
+      "scss": "$om-gap-scale['300']",
+      "cssVar": "--om-spacing-gap-300",
+      "value": "$om-spacing-scale['300']",
+      "resolved": "3",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-400",
+      "scss": "$om-gap-scale['400']",
+      "cssVar": "--om-spacing-gap-400",
+      "value": "$om-spacing-scale['400']",
+      "resolved": "4",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "gap-600",
+      "scss": "$om-gap-scale['600']",
+      "cssVar": "--om-spacing-gap-600",
+      "value": "$om-spacing-scale['600']",
+      "resolved": "6",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "section-padding-1600",
+      "scss": "$om-section-padding-scale['1600']",
+      "cssVar": "--om-spacing-section-padding-1600",
+      "value": "$om-spacing-scale['1600']",
+      "resolved": "16",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "section-padding-2400",
+      "scss": "$om-section-padding-scale['2400']",
+      "cssVar": "--om-spacing-section-padding-2400",
+      "value": "$om-spacing-scale['2400']",
+      "resolved": "24",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "section-padding-4000",
+      "scss": "$om-section-padding-scale['4000']",
+      "cssVar": "--om-spacing-section-padding-4000",
+      "value": "$om-spacing-scale['4000']",
+      "resolved": "40",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "section-padding-800",
+      "scss": "$om-section-padding-scale['800']",
+      "cssVar": "--om-spacing-section-padding-800",
+      "value": "$om-spacing-scale['800']",
+      "resolved": "8",
+      "kind": "spacing",
+      "layer": "semantic"
+    },
+    {
+      "name": "om-font-body",
+      "scss": "$om-font-body",
+      "cssVar": "--om-typography-om-font-body",
+      "value": "var(--font-inter), Inter, sans-serif",
+      "resolved": "var(--font-inter), Inter, sans-serif",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-font-display",
+      "scss": "$om-font-display",
+      "cssVar": "--om-typography-om-font-display",
+      "value": "var(--font-aeonik), Aeonik, sans-serif",
+      "resolved": "var(--font-aeonik), Aeonik, sans-serif",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-font-weight-bold",
+      "scss": "$om-font-weight-bold",
+      "cssVar": "--om-typography-om-font-weight-bold",
+      "value": "700",
+      "resolved": "700",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-font-weight-medium",
+      "scss": "$om-font-weight-medium",
+      "cssVar": "--om-typography-om-font-weight-medium",
+      "value": "500",
+      "resolved": "500",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-font-weight-regular",
+      "scss": "$om-font-weight-regular",
+      "cssVar": "--om-typography-om-font-weight-regular",
+      "value": "400",
+      "resolved": "400",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-font-weight-semibold",
+      "scss": "$om-font-weight-semibold",
+      "cssVar": "--om-typography-om-font-weight-semibold",
+      "value": "600",
+      "resolved": "600",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-text-color-default",
+      "scss": "$om-text-color-default",
+      "cssVar": "--om-typography-om-text-color-default",
+      "value": "color.$grey-900",
+      "resolved": "color.$grey-900",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-tracking-none",
+      "scss": "$om-tracking-none",
+      "cssVar": "--om-typography-om-tracking-none",
+      "value": "0",
+      "resolved": "0",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "om-tracking-tight",
+      "scss": "$om-tracking-tight",
+      "cssVar": "--om-typography-om-tracking-tight",
+      "value": "-0.25px",
+      "resolved": "-0.25px",
+      "kind": "typography",
+      "layer": "primitive"
+    },
+    {
+      "name": "typography-body-lg",
+      "scss": "$om-typography-body['lg']",
+      "cssVar": "--om-typography-typography-body-lg",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-regular,\n    font-size: 16px,\n    line-height: 22px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-medium),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-regular,\n    font-size: 16px,\n    line-height: 22px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-medium),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-body-md",
+      "scss": "$om-typography-body['md']",
+      "cssVar": "--om-typography-typography-body-md",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-regular,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-medium),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-regular,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-medium),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-body-sm",
+      "scss": "$om-typography-body['sm']",
+      "cssVar": "--om-typography-typography-body-sm",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-regular,\n    font-size: 12px,\n    line-height: 16px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-medium),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-regular,\n    font-size: 12px,\n    line-height: 16px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-medium),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-categories-body",
+      "scss": "$om-typography-categories['body']",
+      "cssVar": "--om-typography-typography-categories-body",
+      "value": "$om-typography-body",
+      "resolved": "$om-typography-body",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-categories-display",
+      "scss": "$om-typography-categories['display']",
+      "cssVar": "--om-typography-typography-categories-display",
+      "value": "$om-typography-display",
+      "resolved": "$om-typography-display",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-categories-headline",
+      "scss": "$om-typography-categories['headline']",
+      "cssVar": "--om-typography-typography-categories-headline",
+      "value": "$om-typography-headline",
+      "resolved": "$om-typography-headline",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-categories-label",
+      "scss": "$om-typography-categories['label']",
+      "cssVar": "--om-typography-typography-categories-label",
+      "value": "$om-typography-label",
+      "resolved": "$om-typography-label",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-categories-link",
+      "scss": "$om-typography-categories['link']",
+      "cssVar": "--om-typography-typography-categories-link",
+      "value": "$om-typography-link",
+      "resolved": "$om-typography-link",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-categories-title",
+      "scss": "$om-typography-categories['title']",
+      "cssVar": "--om-typography-typography-categories-title",
+      "value": "$om-typography-title",
+      "resolved": "$om-typography-title",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-display-lg",
+      "scss": "$om-typography-display['lg']",
+      "cssVar": "--om-typography-typography-display-lg",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 64px,\n    line-height: 90px,\n    letter-spacing: $om-tracking-tight,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 64px,\n    line-height: 90px,\n    letter-spacing: $om-tracking-tight,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-display-md",
+      "scss": "$om-typography-display['md']",
+      "cssVar": "--om-typography-typography-display-md",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 52px,\n    line-height: 72px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 52px,\n    line-height: 72px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-display-sm",
+      "scss": "$om-typography-display['sm']",
+      "cssVar": "--om-typography-typography-display-sm",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 46px,\n    line-height: 64px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 46px,\n    line-height: 64px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-display-xl",
+      "scss": "$om-typography-display['xl']",
+      "cssVar": "--om-typography-typography-display-xl",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 76px,\n    line-height: 106px,\n    letter-spacing: $om-tracking-tight,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 76px,\n    line-height: 106px,\n    letter-spacing: $om-tracking-tight,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-display-xs",
+      "scss": "$om-typography-display['xs']",
+      "cssVar": "--om-typography-typography-display-xs",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 36px,\n    line-height: 50px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 36px,\n    line-height: 50px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-headline-lg",
+      "scss": "$om-typography-headline['lg']",
+      "cssVar": "--om-typography-typography-headline-lg",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 32px,\n    line-height: 44px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 32px,\n    line-height: 44px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-headline-md",
+      "scss": "$om-typography-headline['md']",
+      "cssVar": "--om-typography-typography-headline-md",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 28px,\n    line-height: 40px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 28px,\n    line-height: 40px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-headline-sm",
+      "scss": "$om-typography-headline['sm']",
+      "cssVar": "--om-typography-typography-headline-sm",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 24px,\n    line-height: 34px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 24px,\n    line-height: 34px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-headline-xs",
+      "scss": "$om-typography-headline['xs']",
+      "cssVar": "--om-typography-typography-headline-xs",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-label-lg",
+      "scss": "$om-typography-label['lg']",
+      "cssVar": "--om-typography-typography-label-lg",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 22px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 22px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-label-md",
+      "scss": "$om-typography-label['md']",
+      "cssVar": "--om-typography-typography-label-md",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-label-sm",
+      "scss": "$om-typography-label['sm']",
+      "cssVar": "--om-typography-typography-label-sm",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 12px,\n    line-height: 16px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 12px,\n    line-height: 16px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-label-xl",
+      "scss": "$om-typography-label['xl']",
+      "cssVar": "--om-typography-typography-label-xl",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-label-xs",
+      "scss": "$om-typography-label['xs']",
+      "cssVar": "--om-typography-typography-label-xs",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 10px,\n    line-height: 14px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 10px,\n    line-height: 14px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-semibold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-link-md",
+      "scss": "$om-typography-link['md']",
+      "cssVar": "--om-typography-typography-link-md",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    text-decoration: underline,\n    text-decoration-skip-ink: none,\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    text-decoration: underline,\n    text-decoration-skip-ink: none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-link-sm",
+      "scss": "$om-typography-link['sm']",
+      "cssVar": "--om-typography-typography-link-sm",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 12px,\n    line-height: 16px,\n    letter-spacing: $om-tracking-none,\n    text-decoration: underline,\n    text-decoration-skip-ink: none,\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 12px,\n    line-height: 16px,\n    letter-spacing: $om-tracking-none,\n    text-decoration: underline,\n    text-decoration-skip-ink: none,\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-title-lg",
+      "scss": "$om-typography-title['lg']",
+      "cssVar": "--om-typography-typography-title-lg",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-title-md",
+      "scss": "$om-typography-title['md']",
+      "cssVar": "--om-typography-typography-title-md",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 22px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 22px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    },
+    {
+      "name": "typography-title-sm",
+      "scss": "$om-typography-title['sm']",
+      "cssVar": "--om-typography-typography-title-sm",
+      "value": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "resolved": "(\n    font-family: $om-font-body,\n    font-weight: $om-font-weight-medium,\n    font-size: 14px,\n    line-height: 20px,\n    letter-spacing: $om-tracking-none,\n    strong: (font-weight: $om-font-weight-bold),\n  )",
+      "kind": "typography",
+      "layer": "semantic"
+    }
+  ],
+  "icons": [
+    {
+      "name": "account"
+    },
+    {
+      "name": "accountLocked"
+    },
+    {
+      "name": "accountdLocked"
+    },
+    {
+      "name": "ach"
+    },
+    {
+      "name": "add"
+    },
+    {
+      "name": "addressBook"
+    },
+    {
+      "name": "apiKey"
+    },
+    {
+      "name": "apple"
+    },
+    {
+      "name": "arrowDown"
+    },
+    {
+      "name": "arrowLeft"
+    },
+    {
+      "name": "arrowRight"
+    },
+    {
+      "name": "arrowUp"
+    },
+    {
+      "name": "autoConversionRules"
+    },
+    {
+      "name": "bank"
+    },
+    {
+      "name": "brokenLink"
+    },
+    {
+      "name": "burnToken"
+    },
+    {
+      "name": "businessAccount"
+    },
+    {
+      "name": "calendar"
+    },
+    {
+      "name": "card"
+    },
+    {
+      "name": "chat"
+    },
+    {
+      "name": "check"
+    },
+    {
+      "name": "chevronDown"
+    },
+    {
+      "name": "chevronLeft"
+    },
+    {
+      "name": "chevronRight"
+    },
+    {
+      "name": "chevronUp"
+    },
+    {
+      "name": "clock"
+    },
+    {
+      "name": "cny"
+    },
+    {
+      "name": "coin"
+    },
+    {
+      "name": "coins"
+    },
+    {
+      "name": "collapse"
+    },
+    {
+      "name": "company"
+    },
+    {
+      "name": "conversion"
+    },
+    {
+      "name": "convert"
+    },
+    {
+      "name": "copy"
+    },
+    {
+      "name": "cross"
+    },
+    {
+      "name": "dashboard"
+    },
+    {
+      "name": "deposit"
+    },
+    {
+      "name": "depositFiatCrypto"
+    },
+    {
+      "name": "desktop"
+    },
+    {
+      "name": "devices"
+    },
+    {
+      "name": "digitalAsset"
+    },
+    {
+      "name": "dislike"
+    },
+    {
+      "name": "document"
+    },
+    {
+      "name": "earn"
+    },
+    {
+      "name": "editFile"
+    },
+    {
+      "name": "email"
+    },
+    {
+      "name": "error"
+    },
+    {
+      "name": "eur"
+    },
+    {
+      "name": "expand"
+    },
+    {
+      "name": "extend"
+    },
+    {
+      "name": "fail"
+    },
+    {
+      "name": "favorite"
+    },
+    {
+      "name": "fees"
+    },
+    {
+      "name": "fiat"
+    },
+    {
+      "name": "filter"
+    },
+    {
+      "name": "gbp"
+    },
+    {
+      "name": "gift"
+    },
+    {
+      "name": "google"
+    },
+    {
+      "name": "help"
+    },
+    {
+      "name": "hideBalance"
+    },
+    {
+      "name": "home"
+    },
+    {
+      "name": "hub"
+    },
+    {
+      "name": "iconPix"
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "illus2FA"
+    },
+    {
+      "name": "illusAddAccount"
+    },
+    {
+      "name": "illusChecked"
+    },
+    {
+      "name": "illusEmailError"
+    },
+    {
+      "name": "illusError"
+    },
+    {
+      "name": "illusID"
+    },
+    {
+      "name": "illusLinkExpired"
+    },
+    {
+      "name": "illusLocked"
+    },
+    {
+      "name": "illusPasskey"
+    },
+    {
+      "name": "illusPending"
+    },
+    {
+      "name": "illusRegionNotSupported"
+    },
+    {
+      "name": "illusVerification"
+    },
+    {
+      "name": "images"
+    },
+    {
+      "name": "individualAccount"
+    },
+    {
+      "name": "info"
+    },
+    {
+      "name": "jpy"
+    },
+    {
+      "name": "language"
+    },
+    {
+      "name": "like"
+    },
+    {
+      "name": "link"
+    },
+    {
+      "name": "linkedBankAccounts"
+    },
+    {
+      "name": "linkedIn"
+    },
+    {
+      "name": "location"
+    },
+    {
+      "name": "logo"
+    },
+    {
+      "name": "logoBeta"
+    },
+    {
+      "name": "logoBg"
+    },
+    {
+      "name": "logoNetwork"
+    },
+    {
+      "name": "logoWithBeta"
+    },
+    {
+      "name": "logoWithWords"
+    },
+    {
+      "name": "logoWord"
+    },
+    {
+      "name": "logout"
+    },
+    {
+      "name": "maintenance"
+    },
+    {
+      "name": "menuDeposit"
+    },
+    {
+      "name": "mintToken"
+    },
+    {
+      "name": "minus"
+    },
+    {
+      "name": "mobile"
+    },
+    {
+      "name": "money"
+    },
+    {
+      "name": "more"
+    },
+    {
+      "name": "noApiKeys"
+    },
+    {
+      "name": "notificationError"
+    },
+    {
+      "name": "notificationInfo"
+    },
+    {
+      "name": "notificationSuccess"
+    },
+    {
+      "name": "notificationWarning"
+    },
+    {
+      "name": "notifications"
+    },
+    {
+      "name": "parties"
+    },
+    {
+      "name": "passkey"
+    },
+    {
+      "name": "pause"
+    },
+    {
+      "name": "pending"
+    },
+    {
+      "name": "personalSettings"
+    },
+    {
+      "name": "pix"
+    },
+    {
+      "name": "portfolio"
+    },
+    {
+      "name": "privacy"
+    },
+    {
+      "name": "products"
+    },
+    {
+      "name": "profile"
+    },
+    {
+      "name": "refresh"
+    },
+    {
+      "name": "remove"
+    },
+    {
+      "name": "rewards"
+    },
+    {
+      "name": "save"
+    },
+    {
+      "name": "scan"
+    },
+    {
+      "name": "search"
+    },
+    {
+      "name": "security"
+    },
+    {
+      "name": "security2"
+    },
+    {
+      "name": "securityCheck"
+    },
+    {
+      "name": "send"
+    },
+    {
+      "name": "sendCrypto"
+    },
+    {
+      "name": "settings"
+    },
+    {
+      "name": "share"
+    },
+    {
+      "name": "sort"
+    },
+    {
+      "name": "spinner"
+    },
+    {
+      "name": "statusFail"
+    },
+    {
+      "name": "statusSuccess"
+    },
+    {
+      "name": "success"
+    },
+    {
+      "name": "support"
+    },
+    {
+      "name": "swap"
+    },
+    {
+      "name": "swift"
+    },
+    {
+      "name": "systemCollapse"
+    },
+    {
+      "name": "systemSecurity"
+    },
+    {
+      "name": "time"
+    },
+    {
+      "name": "transactions"
+    },
+    {
+      "name": "transfer"
+    },
+    {
+      "name": "transferHistory"
+    },
+    {
+      "name": "twitter"
+    },
+    {
+      "name": "upload"
+    },
+    {
+      "name": "usd"
+    },
+    {
+      "name": "viewBalance"
+    },
+    {
+      "name": "wallet"
+    },
+    {
+      "name": "wire"
+    },
+    {
+      "name": "withdraw"
+    },
+    {
+      "name": "withdrawFiatCrypto"
+    },
+    {
+      "name": "withdrawal"
+    }
+  ],
+  "diagnostics": {
+    "canonical": [
+      {
+        "symbolName": "Icons",
+        "reason": "module has no canonical.md; manual curation required"
+      },
+      {
+        "symbolName": "Input",
+        "reason": "module has no canonical.md; manual curation required"
+      },
+      {
+        "symbolName": "ProForm",
+        "reason": "module has no canonical.md; manual curation required"
+      }
+    ]
+  }
 }
