@@ -125,7 +125,7 @@
       "Bash(mkdir mcp-smoke *)",
       "Bash(git check-ignore *)",
       "Bash(npm whoami *)",
-      "Bash(npm config *)"
+      "Bash(npm config *)",
       "Bash(curl -s \"http://localhost:6205/iframe.html?id=components-proform--all-field-types&viewMode=story\")",
       "Bash(git checkout *)",
       "Bash(curl -s \"http://localhost:6205/iframe.html?id=components-proform--default&viewMode=story\")",
