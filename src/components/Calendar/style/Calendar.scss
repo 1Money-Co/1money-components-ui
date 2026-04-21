@@ -171,10 +171,22 @@ $cell-size: theme.sizing(component-height, 'md');
 
             &:first-child {
               border-radius: theme.shape('full') 0 0 theme.shape('full');
+
+              &.#{theme.$prefix}-#{$component}-p-end{
+                &::after{
+                  background-color:#fff;
+                }
+              }
             }
 
             &:last-child {
               border-radius: 0 theme.shape('full') theme.shape('full') 0;
+
+              &.#{theme.$prefix}-#{$component}-p-start{
+                &::after {
+                  background-color: #fff;
+                }
+              }
             }
           }
 
