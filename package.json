@@ -260,6 +260,7 @@
     "dev": "omni dev",
     "dev:mcp": "node scripts/mcp-server/index.mjs",
     "build:mcp-index": "node scripts/mcp-server/indexer/build-index.mjs",
+    "test:mcp-index": "node --test scripts/mcp-server/indexer/__tests__/*.test.mjs",
     "test": "jest --passWithNoTests",
     "test:snapshot": "jest --updateSnapshot",
     "lint": "npm run lint:prettier && npm run lint:es && npm run lint:style",

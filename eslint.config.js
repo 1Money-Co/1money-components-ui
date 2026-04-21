@@ -24,6 +24,22 @@ module.exports = [
   js.configs.recommended,
   {
     files: [
+      'scripts/**/*.mjs',
+      'scripts/**/*.js'
+    ],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      'no-console': ['off']
+    }
+  },
+  {
+    files: [
       '**/*.d.ts'
     ],
     languageOptions: {
