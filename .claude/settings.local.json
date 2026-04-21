@@ -105,7 +105,27 @@
       "Bash(gh api *)",
       "Bash(cp /Users/wali/1Money/1money-react-ui/src/components/Loading/lottie-pure.json /Users/wali/1Money/1money-components-ui/src/components/Spinner/lottie-pure.json)",
       "Bash(cp /Users/wali/1Money/1money-react-ui/src/components/Loading/lottie-pattern.json /Users/wali/1Money/1money-components-ui/src/components/Spinner/lottie-pattern.json)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(codex --version)",
+      "Bash(codex exec --sandbox read-only ' *)",
+      "Bash(ps -p 96584 -o pid,stat,etime,command)",
+      "Bash(ps -p 96584 -o pid,stat,etime)",
+      "Bash(kill 96584)",
+      "Bash(pkill -f \"codex exec\")",
+      "Bash(codex exec *)",
+      "Bash(codex login *)",
+      "Bash(node *)",
+      "Bash(awk NR==1 || NR==400 || NR==500 || NR==600 || NR==700 || NR==800 {print NR\": \"$0} *)",
+      "Bash(git checkout *)",
+      "Bash(git reset *)",
+      "Bash(chmod +x /Users/wali/1Money/1money-components-ui/scripts/mcp-server/bin.mjs)",
+      "Bash(xargs ls *)",
+      "Bash(tar -xzf 1money-component-ui-0.0.21.tgz)",
+      "Bash(rm -rf mcp-smoke)",
+      "Bash(mkdir mcp-smoke *)",
+      "Bash(git check-ignore *)",
+      "Bash(npm whoami *)",
+      "Bash(npm config *)"
     ]
   }
 }
