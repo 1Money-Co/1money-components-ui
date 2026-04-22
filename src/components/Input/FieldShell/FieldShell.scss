@@ -21,7 +21,7 @@ $component: 'input';
   }
 
   &-optional {
-    font-style: italic;
+    margin-inline-start: theme.spacing(gap, 100);
   }
 
   &-tip-trigger {
