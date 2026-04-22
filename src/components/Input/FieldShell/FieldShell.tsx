@@ -78,7 +78,18 @@ const FieldShellBase: FC<FieldShellProps> = ({
                   <TypographyLabel as="span" size={INPUT_LABEL_SIZE[size]} color={INPUT_LABEL_COLOR} strong>
                     {label}
                   </TypographyLabel>
-                  {!required && <>{' '}<TypographyLabel as="span" className={classes('optional')} size={INPUT_LABEL_SIZE[size]} color="default-tertiary" strong>(Optional)</TypographyLabel></>}
+                  {!required && (
+                    <TypographyLabel
+                      as="span"
+                      italic
+                      strong
+                      className={classes('optional')}
+                      size={INPUT_LABEL_SIZE[size]}
+                      color="default-tertiary"
+                    >
+                      (Optional)
+                    </TypographyLabel>
+                  )}
                 </label>
               )
           )}
