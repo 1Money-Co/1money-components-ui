@@ -1219,6 +1219,12 @@
       "source": "canonical",
       "compilable": true
     },
+    "7a3a92935f0b863855900ffe5295cb58ad8e6a2f83cdf8ae82ea0a93ff8b829b": {
+      "title": "Description And Feedback",
+      "code": "<ProForm\n      {...args}\n      initialValues={{ username: '', email: '', bio: '', agree: false }}\n      onFinish={(values) => alert(JSON.stringify(values, null, 2))}\n    >\n      <ProFormText\n        name=\"username\"\n        label=\"Username\"\n        description=\"Only letters, numbers, and underscores. 3-20 characters.\"\n        placeholder=\"Enter username\"\n        feedback=\"This will be your public display name.\"\n        rules={[\n          { required: true, message: 'Username is required' },\n          { min: 3, message: 'At least 3 characters' },\n        ]}\n      />\n      <ProFormText\n        name=\"email\"\n        label=\"Email\"\n        description=\"We'll never share your email with anyone else.\"\n        placeholder=\"Enter email\"\n        rules={[\n          { required: true, message: 'Email is required' },\n          { type: 'email', message: 'Invalid email format' },\n        ]}\n      />\n      <ProFormTextArea\n        name=\"bio\"\n        label=\"Bio\"\n        description=\"Markdown is supported. Max 500 characters.\"\n        placeholder=\"Tell us about yourself\"\n      />\n      <ProFormPassword\n        name=\"password\"\n        label=\"Password\"\n        description=\"Must contain at least 8 characters, one uppercase and one number.\"\n        rules={[{ required: true, message: 'Password is required' }]}\n      />\n      <ProFormCheckbox\n        name=\"agree\"\n        label=\"I accept the terms\"\n        feedback=\"You must agree before submitting.\"\n      />\n    </ProForm>",
+      "source": "stories",
+      "compilable": false
+    },
     "7ae894e8181a0534204e98888ca38826cde3925bb26787a732a0829c181669a3": {
       "title": "Canonical usage",
       "code": "import type { TourStep } from '@1money/component-ui';",
