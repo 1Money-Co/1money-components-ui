@@ -44,7 +44,7 @@ $form: 'form';
 }
 
 .#{theme.$prefix}-#{$form}-item-error {
-  margin-top: theme.spacing(gap, '050');
+  margin-top: 8px;
 }
 
 .#{theme.$prefix}-#{$form}-item-feedback {
