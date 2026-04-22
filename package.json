@@ -1,9 +1,25 @@
 {
   "name": "@1money/component-ui",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "React Components based on primereact for 1money front-end projects",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "bin": {
+    "1money-ui-mcp": "scripts/mcp-server/bin.mjs"
+  },
+  "files": [
+    "es/",
+    "lib/",
+    "scripts/mcp-server/bin.mjs",
+    "scripts/mcp-server/index.mjs",
+    "scripts/mcp-server/index.d.mts",
+    "scripts/mcp-server/index.generated.json",
+    "scripts/mcp-server/examples.generated.json",
+    "scripts/mcp-server/drift.json",
+    "scripts/mcp-server/tools/*.mjs",
+    "README.md",
+    "LICENSE"
+  ],
   "exports": {
     ".": {
       "types": "./es/index.d.ts",
@@ -93,11 +109,6 @@
       "types": "./es/components/Flex/index.d.ts",
       "import": "./es/components/Flex/index.js",
       "require": "./lib/components/Flex/index.js"
-    },
-    "./Form": {
-      "types": "./es/components/Form/index.d.ts",
-      "import": "./es/components/Form/index.js",
-      "require": "./lib/components/Form/index.js"
     },
     "./Grid": {
       "types": "./es/components/Grid/index.d.ts",
@@ -258,7 +269,10 @@
   "scripts": {
     "start": "omni dev",
     "dev": "omni dev",
-    "dev:mcp": "node scripts/mcp-server/index.mjs",
+    "dev:mcp": "node scripts/mcp-server/bin.mjs",
+    "mcp:check": "node scripts/mcp-server/bin.mjs --selftest",
+    "build:mcp-index": "node scripts/mcp-server/indexer/build-index.mjs",
+    "test:mcp-index": "node --test scripts/mcp-server/indexer/__tests__/*.test.mjs scripts/mcp-server/tools/__tests__/*.test.mjs",
     "test": "jest --passWithNoTests",
     "test:snapshot": "jest --updateSnapshot",
     "lint": "npm run lint:prettier && npm run lint:es && npm run lint:style",
@@ -271,6 +285,7 @@
     "lint:style_fix": "stylelint \"src/**/*.{css,less,scss,sass}\" --fix --allow-empty-input",
     "lint:commit": "commitlint -e $HUSKY_GIT_PARAMS",
     "new": "omni new",
+    "prebuild": "pnpm build:mcp-index",
     "build": "omni build",
     "build:demo": "storybook build -c .storybook -o dist-story",
     "release": "omni release",
@@ -305,6 +320,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@floating-ui/react": "^0.27.19",
+    "@modelcontextprotocol/sdk": "^1.25.0",
     "bignumber.js": "^9.3.0",
     "classnames": "~2.2.6",
     "clsx": "^2.1.1",
@@ -332,7 +348,6 @@
     "@chromatic-com/storybook": "^1.9.0",
     "@commitlint/cli": "8.3.5",
     "@eslint/js": "^9.24.0",
-    "@modelcontextprotocol/sdk": "^1.25.0",
     "@omni-door/cli": "^3.2.2",
     "@storybook/addon-actions": "^8.6.12",
     "@storybook/addon-console": "^3.0.0",

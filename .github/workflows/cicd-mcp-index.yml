@@ -1,0 +1,54 @@
+name: MCP Index Drift Check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  mcp-index-drift-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Restore node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./pnpm-lock.yaml') }}
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.16'
+
+      - run: npm install --global pnpm@10
+      - run: pnpm i --frozen-lockfile
+
+      - name: Build MCP index
+        run: pnpm build:mcp-index
+
+      - name: Assert drift.json is empty
+        run: |
+          node -e "const d=require('./scripts/mcp-server/drift.json'); if(d.orphanSubpath.length||d.orphanSymbol.length){console.error('drift.json non-empty:',JSON.stringify(d,null,2));process.exit(1)}"
+
+      - name: Assert generated files are up to date
+        run: |
+          echo "If this step fails, run 'pnpm build:mcp-index' locally and commit the updated files."
+          git diff --exit-code scripts/mcp-server/index.generated.json scripts/mcp-server/examples.generated.json scripts/mcp-server/drift.json
+
+      - name: Run MCP index tests
+        run: pnpm test:mcp-index
+
+      - name: Verify MCP server boots
+        run: pnpm mcp:check
