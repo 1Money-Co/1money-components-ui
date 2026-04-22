@@ -18,9 +18,16 @@ import {
   ProFormUpload,
   ProFormFieldSet,
 } from './fields';
-import { useForm } from './core/hooks/useForm';
+import { useForm as useFormInternal } from './core/hooks/useForm';
+import type { FormInstance, UseFormConfig } from './core/interface';
 import { useProFormContext, useFormInstance } from './context';
 import './style';
+
+/** Public hook — returns [FormInstance] for backward compatibility */
+const useForm = (config?: UseFormConfig): [FormInstance] => {
+  const { formInstance } = useFormInternal(config);
+  return [formInstance];
+};
 
 // Compose ProForm with static sub-components and hooks
 const ProForm = Object.assign(ProFormBase, {
@@ -116,4 +123,7 @@ export type {
   FormLayout,
   FormSize,
   LabelAlign,
+  UseFormConfig,
+  UseFormReturn,
+  UseFormInternals,
 } from './core/interface';

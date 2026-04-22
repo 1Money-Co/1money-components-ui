@@ -25,6 +25,7 @@ export interface UseFormItemOptions {
 export interface UseFormItemReturn {
   fieldValue: unknown;
   fieldError: string | undefined;
+  fieldValidating: boolean;
   validateStatus: ValidateStatus | undefined;
   isRequired: boolean;
   size: FormSize;
@@ -40,8 +41,10 @@ export function useFormItem(options: UseFormItemOptions): UseFormItemReturn {
   const {
     values,
     errors,
+    validating,
     setFieldValue,
     validateField,
+    validateFieldAsync,
     registerField,
     unregisterField,
     size,
@@ -59,11 +62,18 @@ export function useFormItem(options: UseFormItemOptions): UseFormItemReturn {
         ? getNestedValue(errors as Record<string, unknown>, name)
         : errors[name]) as string | undefined)
     : undefined;
+  const fieldValidating = name ? (validating[name] || false) : false;
   const finalStatus = validateStatus || (fieldError ? 'error' : undefined);
 
   const runValidate = useEventCallback((value: unknown) => {
     if (name && rules.length > 0) return validateField(name, rules, value);
     return true;
+  });
+
+  const runValidateAsync = useEventCallback(async (value: unknown) => {
+    if (name && rules.length > 0) {
+      await validateFieldAsync(name, value, rules);
+    }
   });
 
   const handleChange = useEventCallback((value: unknown) => {
@@ -74,7 +84,7 @@ export function useFormItem(options: UseFormItemOptions): UseFormItemReturn {
   });
 
   const handleBlur = useEventCallback(() => {
-    if (validateTrigger === 'onBlur') runValidate(fieldValue);
+    if (validateTrigger === 'onBlur') runValidateAsync(fieldValue);
   });
 
   useEffect(() => {
@@ -143,6 +153,7 @@ export function useFormItem(options: UseFormItemOptions): UseFormItemReturn {
   return {
     fieldValue,
     fieldError,
+    fieldValidating,
     validateStatus: finalStatus,
     isRequired,
     size,

@@ -20,7 +20,7 @@ export const FORM_ITEM_SPACING: Record<FormSize, string> = {
 
 export const FORM_LABEL_SIZE: TypographyLabelSize = 'lg';
 export const FORM_LABEL_COLOR: TypographyColor = 'default';
-export const FORM_ERROR_SIZE: TypographyBodySize = 'md';
+export const FORM_ERROR_SIZE: TypographyBodySize = 'sm';
 export const FORM_ERROR_COLOR: TypographyColor = 'danger';
 export const FORM_DESCRIPTION_SIZE: TypographyBodySize = 'md';
 export const FORM_DESCRIPTION_COLOR: TypographyColor = 'default-tertiary';
