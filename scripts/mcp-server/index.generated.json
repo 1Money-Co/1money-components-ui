@@ -6539,6 +6539,10 @@
           "source": "stories"
         },
         {
+          "hash": "7a3a92935f0b863855900ffe5295cb58ad8e6a2f83cdf8ae82ea0a93ff8b829b",
+          "source": "stories"
+        },
+        {
           "hash": "74f28ec19da10ee7a3cecb129f444ca1e9b9bfa6a44bda5422d89c70a079ddc3",
           "source": "stories"
         },
@@ -7366,7 +7370,15 @@
           "inheritedFrom": null
         },
         {
-          "name": "help",
+          "name": "description",
+          "type": "ReactNode",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "feedback",
           "type": "ReactNode",
           "optional": true,
           "default": null,
@@ -7950,7 +7962,15 @@
           "inheritedFrom": null
         },
         {
-          "name": "help",
+          "name": "description",
+          "type": "ReactNode",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "feedback",
           "type": "ReactNode",
           "optional": true,
           "default": null,

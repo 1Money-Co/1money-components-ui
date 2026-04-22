@@ -106,7 +106,8 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   label?: ReactNode;
   rules?: Rule[];
   required?: boolean;
-  help?: ReactNode;
+  description?: ReactNode;
+  feedback?: ReactNode;
   validateStatus?: string;
   labelCol?: { span?: number; offset?: number };
   wrapperCol?: { span?: number; offset?: number };
@@ -151,7 +152,8 @@ export interface ProFormItemProps {
   name?: string;
   rules?: Rule[];
   required?: boolean;
-  help?: ReactNode;
+  description?: ReactNode;
+  feedback?: ReactNode;
   validateStatus?: ValidateStatus;
   hasFeedback?: boolean;
   colon?: boolean;
@@ -286,7 +288,8 @@ export interface ProFormFieldSetProps {
   label?: ReactNode;
   rules?: Rule[];
   required?: boolean;
-  help?: ReactNode;
+  description?: ReactNode;
+  feedback?: ReactNode;
   gap?: number;
   style?: CSSProperties;
   children?: ReactNode;
