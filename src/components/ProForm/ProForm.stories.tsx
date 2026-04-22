@@ -272,6 +272,57 @@ export const NoSubmitter: Story = {
   ),
 };
 
+// ─── Description & Feedback ─────────────────────────────────
+
+export const DescriptionAndFeedback: Story = {
+  render: (args) => (
+    <ProForm
+      {...args}
+      initialValues={{ username: '', email: '', bio: '', agree: false }}
+      onFinish={(values) => alert(JSON.stringify(values, null, 2))}
+    >
+      <ProFormText
+        name="username"
+        label="Username"
+        description="Only letters, numbers, and underscores. 3-20 characters."
+        placeholder="Enter username"
+        feedback="This will be your public display name."
+        rules={[
+          { required: true, message: 'Username is required' },
+          { min: 3, message: 'At least 3 characters' },
+        ]}
+      />
+      <ProFormText
+        name="email"
+        label="Email"
+        description="We'll never share your email with anyone else."
+        placeholder="Enter email"
+        rules={[
+          { required: true, message: 'Email is required' },
+          { type: 'email', message: 'Invalid email format' },
+        ]}
+      />
+      <ProFormTextArea
+        name="bio"
+        label="Bio"
+        description="Markdown is supported. Max 500 characters."
+        placeholder="Tell us about yourself"
+      />
+      <ProFormPassword
+        name="password"
+        label="Password"
+        description="Must contain at least 8 characters, one uppercase and one number."
+        rules={[{ required: true, message: 'Password is required' }]}
+      />
+      <ProFormCheckbox
+        name="agree"
+        label="I accept the terms"
+        feedback="You must agree before submitting."
+      />
+    </ProForm>
+  ),
+};
+
 // ─── Validation ──────────────────────────────────────────────
 
 export const Validation: Story = {

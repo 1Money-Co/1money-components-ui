@@ -29,14 +29,6 @@ $form: 'form';
 .#{theme.$prefix}-#{$form}-item-label {
   display: inline;
   padding: 0;
-
-  &-required {
-    &::before {
-      margin-right: theme.spacing(gap, '050');
-      color: theme.palette(text, 'danger');
-      content: '*';
-    }
-  }
 }
 
 .#{theme.$prefix}-#{$form}-item-label-wrapper-left {
@@ -47,12 +39,16 @@ $form: 'form';
   text-align: right;
 }
 
+.#{theme.$prefix}-#{$form}-item-description {
+  margin-bottom: 8px;
+}
+
 .#{theme.$prefix}-#{$form}-item-error {
   margin-top: theme.spacing(gap, '050');
 }
 
-.#{theme.$prefix}-#{$form}-item-help {
-  margin-top: theme.spacing(gap, '050');
+.#{theme.$prefix}-#{$form}-item-feedback {
+  margin-top: 8px;
 }
 
 // ===========================================================================

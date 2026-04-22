@@ -24,9 +24,10 @@ export function createProFormField<FieldProps extends object>(
     const {
       name,
       label,
+      description,
       rules,
       required,
-      help,
+      feedback,
       validateStatus,
       colon,
       readonly,
@@ -122,9 +123,10 @@ export function createProFormField<FieldProps extends object>(
       <ProFormItem
         name={name}
         label={label}
+        description={description}
         rules={rules}
         required={required}
-        help={help}
+        feedback={feedback}
         validateStatus={validateStatus as ValidateStatus | undefined}
         colon={colon}
         hidden={hidden}
