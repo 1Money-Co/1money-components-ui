@@ -1,5 +1,6 @@
 import type React from 'react';
 import type { CSSProperties, HTMLAttributes, Key, ReactNode } from 'react';
+import type { EmptyProps } from '@/components/Empty';
 
 export type TableSize = 'large' | 'small';
 export type TableVariant = 'fill' | 'stroke';
@@ -175,7 +176,7 @@ export interface TableProps<T> extends Omit<HTMLAttributes<HTMLDivElement>, 'onC
   childrenColumnName?: string;
   indentSize?: number;
   loading?: boolean;
-  empty?: ReactNode;
+  empty?: EmptyProps | ReactNode;
   showHeader?: boolean;
   tableLayout?: TableLayout;
   components?: TableComponents<T>;
