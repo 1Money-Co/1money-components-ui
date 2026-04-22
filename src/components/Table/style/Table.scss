@@ -40,6 +40,7 @@ $component: 'om-component-ui-table';
   &-tbody > tr > td {
     position: relative;
     padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+    color: theme.palette(text, 'default');
     vertical-align: middle;
     overflow-wrap: break-word;
     border-bottom: 1px solid theme.palette(border, 'neutral');
@@ -167,6 +168,7 @@ $component: 'om-component-ui-table';
 
     .#{$component}-cell {
       padding: theme.spacing(component-padding, 300) theme.spacing(component-padding, 400);
+      color: theme.palette(text, 'default');
       overflow-wrap: break-word;
       border-bottom: 1px solid theme.palette(border, 'neutral');
 

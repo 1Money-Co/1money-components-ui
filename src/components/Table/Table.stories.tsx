@@ -1201,25 +1201,10 @@ export const EmptyState: Story = {
   args: {
     dataSource: [],
     pagination: false,
+    empty: { icon: 'transactions', description: 'No record found' },
   },
 };
 
-export const CustomEmptyState: Story = {
-  args: {
-    dataSource: [],
-    pagination: false,
-    empty: (
-      <div style={{ padding: 40, textAlign: 'center' }}>
-        <TypographyTitle size="sm" strong>
-          No wallets found
-        </TypographyTitle>
-        <TypographyBody size="md" color="default-tertiary">
-          Try changing filters or connect a new account to populate the table.
-        </TypographyBody>
-      </div>
-    ),
-  },
-};
 
 export const Variants: Story = {
   render: (args) => (
