@@ -134,6 +134,44 @@ export interface FormCoreContextShape {
   validateTrigger: ValidateTrigger;
 }
 
+// ---------------------------------------------------------------------------
+// useForm config and return types
+// ---------------------------------------------------------------------------
+
+/** Config for useForm — accepts all UseFormCoreConfig fields */
+export type UseFormConfig = UseFormCoreConfig;
+
+/** Internal state exposed by useForm for ProForm integration */
+export interface UseFormInternals {
+  values: Record<string, unknown>;
+  errors: Record<string, string>;
+  touched: Record<string, boolean>;
+  validating: Record<string, boolean>;
+  fieldRules: Record<string, Rule[]>;
+  setFieldValue: (name: string, value: unknown) => void;
+  setFieldError: (name: string, error: string | null) => void;
+  validateField: (name: string, rules: Rule[], providedValue?: unknown) => boolean;
+  validateFieldAsync: (
+    name: string,
+    value: unknown,
+    rules: Rule[],
+  ) => Promise<{ isValid: boolean; error: string | null }>;
+  registerField: (name: string, rules: Rule[]) => void;
+  unregisterField: (name: string) => void;
+  handleSubmit: (e?: React.FormEvent) => void;
+  handleReset: (e?: React.FormEvent) => void;
+}
+
+/** Return type for useForm */
+export interface UseFormReturn {
+  formInstance: FormInstance;
+  internals: UseFormInternals;
+}
+
+// ---------------------------------------------------------------------------
+// useFormCore return type
+// ---------------------------------------------------------------------------
+
 export interface UseFormCoreReturn {
   values: Record<string, unknown>;
   errors: Record<string, string>;

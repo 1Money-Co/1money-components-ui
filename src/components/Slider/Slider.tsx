@@ -122,4 +122,6 @@ export const Slider: FC<SliderProps> = props => {
   );
 };
 
+Slider.displayName = 'Slider';
+
 export default memo(Slider);

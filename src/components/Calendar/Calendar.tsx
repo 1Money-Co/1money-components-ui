@@ -163,4 +163,6 @@ export const Calendar: FC<CalendarProps> = props => {
   );
 };
 
+Calendar.displayName = 'Calendar';
+
 export default memo(Calendar);

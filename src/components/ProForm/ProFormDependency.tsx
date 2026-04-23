@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import React, { memo, useMemo } from 'react';
 import type { FC } from 'react';
 import { useProFormContext, useFormListContext } from './context';
 import { getNestedValue } from './utils';
@@ -38,16 +38,29 @@ const ProFormDependencyBase: FC<ProFormDependencyProps> = ({
   // Fallback form instance for standalone usage (outside ProForm)
   const fallbackInstance = useMemo<ProFormFormInstance>(
     () => ({
-      submit: () => ({ success: false }),
+      submit: async () => undefined,
       resetFields: () => {},
       getFieldValue: (n: string) =>
         n.includes('.') ? getNestedValue(values, n) : values[n],
       getFieldsValue: () => values,
       setFieldsValue: () => {},
       setFieldValue: () => {},
-      validateFields: () => false,
+      validateFields: async () => values,
+      getFieldError: () => undefined,
+      getFieldsError: () => ({}),
+      isFieldTouched: () => false,
+      isFieldsTouched: () => false,
+      isFieldValidating: () => false,
+      setFieldError: () => {},
+      setFieldsError: () => {},
+      setFieldTouched: () => {},
+      setFieldsTouched: () => {},
+      defineField: () => (() => null) as React.FC,
+      registerField: () => {},
+      unregisterField: () => {},
       getFieldsFormatValue: () => values,
-      validateFieldsReturnFormatValue: () => ({ success: false }),
+      validateFieldsReturnFormatValue: async () => ({ success: false }),
+      submitForm: async () => {},
     }),
     [values],
   );

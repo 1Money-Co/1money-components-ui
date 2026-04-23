@@ -1,26 +1,45 @@
-import React, { useState, useMemo, useCallback, useEffect, memo, Fragment } from 'react';
+import { useState, useMemo, useCallback, useEffect, memo, Fragment } from 'react';
+import type { FormEvent } from 'react';
+import React from 'react';
 import { useEventCallback, useMemoizedFn, useSafeState } from '@1money/hooks';
 import { useFormCore } from './useFormCore';
 import type {
   Rule,
   FormInstance,
-  UseFormOptions,
+  UseFormConfig,
+  UseFormReturn,
+  UseFormInternals,
   FieldOptions,
   FieldProps,
   FieldComponentProps,
 } from '../interface';
 
-export const useForm = (
-  initialValues: Record<string, unknown> = {},
-  options: UseFormOptions = {},
-): [FormInstance] => {
-  const { onValuesChange, validateTrigger = 'onChange' } = options;
+// ---------------------------------------------------------------------------
+// Helpers – resolve nested paths
+// ---------------------------------------------------------------------------
+function resolveValue(values: Record<string, unknown>, name: string): unknown {
+  if (!name.includes('.')) return values[name];
+  const keys = name.split('.');
+  let current: unknown = values;
+  for (const key of keys) {
+    if (current === null || current === undefined || typeof current !== 'object') return undefined;
+    current = (current as Record<string, unknown>)[key];
+  }
+  return current;
+}
 
-  const formCore = useFormCore({
-    initialValues,
-    onValuesChange,
-    validateTrigger,
-  });
+// ---------------------------------------------------------------------------
+// useForm
+// ---------------------------------------------------------------------------
+export const useForm = (config: UseFormConfig = {}): UseFormReturn => {
+  const {
+    onFinish,
+    onFinishFailed,
+    onReset,
+    validateTrigger = 'onChange',
+  } = config;
+
+  const formCore = useFormCore(config);
 
   const [validating, setValidating] = useSafeState<Record<string, boolean>>({});
   const [extraTouched, setExtraTouched] = useState<Record<string, boolean>>({});
@@ -30,6 +49,9 @@ export const useForm = (
     [formCore.touched, extraTouched],
   );
 
+  // ---------------------------------------------------------------------------
+  // Async field validation – each rule is processed exactly once
+  // ---------------------------------------------------------------------------
   const validateFieldAsync = useMemoizedFn(
     async (
       name: string,
@@ -41,47 +63,52 @@ export const useForm = (
       setValidating((prev) => ({ ...prev, [name]: true }));
 
       try {
-        const basicValid = formCore.validateField(name, rules, value);
-        if (!basicValid) {
-          return { isValid: false, error: formCore.errors[name] || null };
-        }
-
         for (const rule of rules) {
-          if (rule.validator && typeof rule.validator === 'function') {
-            try {
-              const result = await Promise.resolve(
-                rule.validator(value, formCore.values as Record<string, unknown>),
-              );
-              if (result !== true && result !== undefined) {
-                const error =
-                  typeof result === 'string' ? result : 'Validation failed';
-                formCore.setFieldError(name, error);
-                return { isValid: false, error };
-              }
-            } catch (err) {
-              const errorMessage =
-                err instanceof Error ? err.message : 'Validation error';
-              formCore.setFieldError(name, errorMessage);
-              return { isValid: false, error: errorMessage };
-            }
+          // required
+          if (
+            rule.required &&
+            (value === undefined || value === null || value === '')
+          ) {
+            const error = rule.message || `${name} is required`;
+            formCore.setFieldError(name, error);
+            return { isValid: false, error };
           }
 
+          // min
+          if (rule.min && typeof value === 'string' && value.length < rule.min) {
+            const error =
+              rule.message || `${name} must be at least ${rule.min} characters`;
+            formCore.setFieldError(name, error);
+            return { isValid: false, error };
+          }
+
+          // max
+          if (rule.max && typeof value === 'string' && value.length > rule.max) {
+            const error =
+              rule.message || `${name} must be no more than ${rule.max} characters`;
+            formCore.setFieldError(name, error);
+            return { isValid: false, error };
+          }
+
+          // pattern
+          if (rule.pattern && typeof value === 'string' && !rule.pattern.test(value)) {
+            const error = rule.message || `${name} format is invalid`;
+            formCore.setFieldError(name, error);
+            return { isValid: false, error };
+          }
+
+          // enum
           if (rule.enum && Array.isArray(rule.enum) && value) {
             if (!rule.enum.includes(value)) {
               const error =
-                rule.message ||
-                `${name} must be one of ${rule.enum.join(', ')}`;
+                rule.message || `${name} must be one of ${rule.enum.join(', ')}`;
               formCore.setFieldError(name, error);
               return { isValid: false, error };
             }
           }
 
-          if (
-            rule.type === 'number' &&
-            value !== undefined &&
-            value !== null &&
-            value !== ''
-          ) {
+          // type checks
+          if (rule.type === 'number' && value !== undefined && value !== null && value !== '') {
             if (typeof value !== 'number' || isNaN(value)) {
               const error = rule.message || `${name} must be a number`;
               formCore.setFieldError(name, error);
@@ -107,6 +134,26 @@ export const useForm = (
               return { isValid: false, error };
             }
           }
+
+          // custom validator (sync or async) — executed exactly once
+          if (rule.validator && typeof rule.validator === 'function') {
+            try {
+              const result = await Promise.resolve(
+                rule.validator(value, formCore.values as Record<string, unknown>),
+              );
+              if (result !== true && result !== undefined) {
+                const error =
+                  typeof result === 'string' ? result : 'Validation failed';
+                formCore.setFieldError(name, error);
+                return { isValid: false, error };
+              }
+            } catch (err) {
+              const errorMessage =
+                err instanceof Error ? err.message : 'Validation error';
+              formCore.setFieldError(name, errorMessage);
+              return { isValid: false, error: errorMessage };
+            }
+          }
         }
 
         if (formCore.errors[name]) {
@@ -123,15 +170,21 @@ export const useForm = (
     },
   );
 
+  // ---------------------------------------------------------------------------
+  // Async field blur handler
+  // ---------------------------------------------------------------------------
   const handleFieldBlur = useEventCallback(async (name: string) => {
     setExtraTouched((prev) => ({ ...prev, [name]: true }));
 
     const rules = formCore.fieldRules[name];
     if (rules && validateTrigger === 'onBlur') {
-      await validateFieldAsync(name, formCore.values[name], rules);
+      await validateFieldAsync(name, resolveValue(formCore.values, name), rules);
     }
   });
 
+  // ---------------------------------------------------------------------------
+  // Validate all fields async
+  // ---------------------------------------------------------------------------
   const validateFieldsAsync = useMemoizedFn(
     async (nameList?: string[]): Promise<Record<string, unknown>> => {
       const fieldsToValidate = nameList || Object.keys(formCore.fieldRules);
@@ -143,7 +196,7 @@ export const useForm = (
         if (rules) {
           const { isValid, error } = await validateFieldAsync(
             name,
-            formCore.values[name],
+            resolveValue(formCore.values, name),
             rules,
           );
           if (!isValid && error) {
@@ -167,7 +220,7 @@ export const useForm = (
 
       if (nameList) {
         return nameList.reduce<Record<string, unknown>>((acc, name) => {
-          acc[name] = formCore.values[name];
+          acc[name] = resolveValue(formCore.values, name);
           return acc;
         }, {});
       }
@@ -176,6 +229,9 @@ export const useForm = (
     },
   );
 
+  // ---------------------------------------------------------------------------
+  // defineField – used by standalone (non-ProForm) consumers
+  // ---------------------------------------------------------------------------
   const defineField = useCallback(
     (name: string, fieldOptions: FieldOptions = {}): React.FC<FieldComponentProps> => {
       const { rules = [] } = fieldOptions;
@@ -296,6 +352,34 @@ export const useForm = (
     ],
   );
 
+  // ---------------------------------------------------------------------------
+  // handleSubmit / handleReset – for <form> event handlers
+  // ---------------------------------------------------------------------------
+  const handleSubmit = useEventCallback(async (e?: FormEvent) => {
+    e?.preventDefault();
+    try {
+      const validatedValues = await validateFieldsAsync();
+      onFinish?.(validatedValues);
+    } catch (err) {
+      const typed = err as Error & {
+        values: Record<string, unknown>;
+        errors: Record<string, string>;
+      };
+      onFinishFailed?.({ values: typed.values, errors: typed.errors });
+    }
+  });
+
+  const handleReset = useEventCallback((e?: FormEvent) => {
+    e?.preventDefault();
+    formCore.resetFields();
+    setExtraTouched({});
+    setValidating({});
+    onReset?.();
+  });
+
+  // ---------------------------------------------------------------------------
+  // FormInstance – enhanced API for consumers
+  // ---------------------------------------------------------------------------
   const formInstance: FormInstance = useMemo(
     () => ({
       ...formCore.formInstance,
@@ -345,7 +429,7 @@ export const useForm = (
         } else {
           const resetValues: Record<string, unknown> = {};
           fields.forEach((field) => {
-            resetValues[field] = initialValues[field];
+            resetValues[field] = (config.initialValues ?? {})[field];
           });
           formCore.setFieldsValue(resetValues);
 
@@ -393,12 +477,48 @@ export const useForm = (
       validating,
       validateFieldsAsync,
       defineField,
-      initialValues,
+      config.initialValues,
       setValidating,
     ],
   );
 
-  return [formInstance];
+  // ---------------------------------------------------------------------------
+  // Internals – exposed for ProForm integration
+  // ---------------------------------------------------------------------------
+  const internals: UseFormInternals = useMemo(
+    () => ({
+      values: formCore.values,
+      errors: formCore.errors,
+      touched: allTouched,
+      validating,
+      fieldRules: formCore.fieldRules,
+      setFieldValue: formCore.setFieldValue,
+      setFieldError: formCore.setFieldError,
+      validateField: formCore.validateField,
+      validateFieldAsync,
+      registerField: formCore.registerField,
+      unregisterField: formCore.unregisterField,
+      handleSubmit,
+      handleReset,
+    }),
+    [
+      formCore.values,
+      formCore.errors,
+      allTouched,
+      validating,
+      formCore.fieldRules,
+      formCore.setFieldValue,
+      formCore.setFieldError,
+      formCore.validateField,
+      validateFieldAsync,
+      formCore.registerField,
+      formCore.unregisterField,
+      handleSubmit,
+      handleReset,
+    ],
+  );
+
+  return { formInstance, internals };
 };
 
 export default useForm;

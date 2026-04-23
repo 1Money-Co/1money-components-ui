@@ -141,4 +141,9 @@ export const InputTrade: FC<InputTradeProps> = (props) => {
   );
 };
 
-export default memo(InputTrade);
+InputTrade.displayName = 'InputTrade';
+
+const MemoizedInputTrade = memo(InputTrade);
+MemoizedInputTrade.displayName = 'InputTrade';
+
+export default MemoizedInputTrade;

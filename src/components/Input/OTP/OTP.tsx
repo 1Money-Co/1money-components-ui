@@ -151,4 +151,9 @@ export const InputOTP: FC<InputOTPProps> = (props) => {
   );
 };
 
-export default memo(InputOTP);
+InputOTP.displayName = 'InputOTP';
+
+const MemoizedInputOTP = memo(InputOTP);
+MemoizedInputOTP.displayName = 'InputOTP';
+
+export default MemoizedInputOTP;

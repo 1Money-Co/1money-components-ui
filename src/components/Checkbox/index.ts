@@ -7,6 +7,8 @@ export interface CheckboxComponent extends NamedExoticComponent<CheckboxProps> {
   Group: NamedExoticComponent<CheckboxGroupProps>;
 }
 
+CheckboxBase.displayName = 'Checkbox';
+
 export const Checkbox = Object.assign(CheckboxBase, {
   Group: CheckboxGroup,
 }) as CheckboxComponent;

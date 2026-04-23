@@ -27,9 +27,9 @@ const SubmitterBase: FC<SubmitterInternalProps> = (props) => {
 
   const form = useFormInstance();
 
-  const handleSubmit = useMemoizedFn(() => {
+  const handleSubmit = useMemoizedFn(async () => {
     onSubmit?.();
-    form.submit();
+    await form.submitForm();
   });
 
   const handleReset = useMemoizedFn(() => {
