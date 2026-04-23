@@ -157,6 +157,12 @@
       "source": "stories",
       "compilable": true
     },
+    "0b707df089538a3a4f0f7d9fbe136625806044098f7d3f4e2ed84889b27634ef": {
+      "title": "Import",
+      "code": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "source": "readme",
+      "compilable": true
+    },
     "0c0afbe2548cd54cf225af79ea0be88e179d1592672834759ce9d5c4dd0d7476": {
       "title": "Canonical usage",
       "code": "import type { ValidateTrigger } from '@1money/component-ui';",
@@ -583,6 +589,12 @@
       "source": "readme",
       "compilable": true
     },
+    "371e24636c998f789b2003ee3f8097874e1ad9274d29b7fc059202d33c4ed68e": {
+      "title": "Preferred Usage",
+      "code": "// Static JSX: preferred\n<CrossIcon size={16} />\n<LogoWithWords width={132} height={24} logoColor=\"#073387\" wordColor=\"#131313\" />\n\n// Dynamic runtime dispatch\n<Icon name=\"cross\" size={16} />\n\n// Backward-compatible wrapper\n<Icons name=\"depositFiatCrypto\" size={16} />",
+      "source": "readme",
+      "compilable": true
+    },
     "3836a143b0bc0c3df0917e6d83e399c700a858b3e0cf7703a8417090067c3088": {
       "title": "Default",
       "code": "<Switch {...args} label=\"Label\" />",
@@ -833,12 +845,6 @@
       "title": "Canonical usage",
       "code": "import type { ProFormFieldTransformFn } from '@1money/component-ui';",
       "source": "canonical",
-      "compilable": true
-    },
-    "4a5e5cef011be8e4312b7e27e13d519193ffe35d681413267098a0f06182c9d9": {
-      "title": "Basic Usage",
-      "code": "// Basic icon (default 24px, color #131313)\n<Icons name=\"arrowRight\" />\nimport { Icons, IconWrapper, Logo } from '@1money/components-ui';\n\n// Custom size and color\n<Icons name=\"settings\" size={32} color=\"#3D73F2\" />\n\n// With explicit width/height\n<Icons name=\"search\" width={20} height={20} />\n\n// Icon with hover container\n<IconHover>\n  <Icons name=\"more\" />\n</IconHover>\n\n// Disabled hover container\n<IconHover disabled>\n  <Icons name=\"settings\" />\n</IconHover>\n\n// Logo\n<Icons name=\"logo\" size={40} />",
-      "source": "readme",
       "compilable": true
     },
     "4aa25969f149eda32514cc530fb2b8fceabc54fcbf63b87641b7cfd13f967bda": {
@@ -1134,12 +1140,6 @@
       "code": "<Button {...args} iconStart={<Icons name=\"add\" />}>\n      Icon Start\n    </Button>",
       "source": "stories",
       "compilable": false
-    },
-    "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5": {
-      "title": "Canonical usage",
-      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "72e53f1f60724efcfebfca8207585573799139c8895777a6a6d283673008ba74": {
       "title": "Import",
@@ -1474,12 +1474,6 @@
     "8ffb7323c737a0cc1f4c296336b8763bf0acdafb29eb029b4046496aaa1b4d27": {
       "title": "Import",
       "code": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
-      "source": "readme",
-      "compilable": true
-    },
-    "90952e793cfea81bc8613eaed2e1b60208c06b4e98ce6f0cc5a254619af9e93f": {
-      "title": "Illustrations",
-      "code": "// Old (still works)\nimport { Deprecated } from '@1money/components-ui';\n<Deprecated name=\"old-icon-name\" />\n\n// New (recommended)\nimport { Icons } from '@1money/components-ui';\n<Icons name=\"new-icon-name\" />",
       "source": "readme",
       "compilable": true
     },
@@ -1987,12 +1981,6 @@
       "source": "canonical",
       "compilable": true
     },
-    "c5260837fe7728fca505a762c48a8ede3b34d472c53b2be29b29a49de267418d": {
-      "title": "Import",
-      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
-      "source": "readme",
-      "compilable": true
-    },
     "c539c466c34edf9adf7a91c4b2d933518b120bce2cce74457c78e0579e6f91b5": {
       "title": "Canonical usage",
       "code": "import type { DropdownProps } from '@1money/component-ui';",
@@ -2092,6 +2080,12 @@
     "ccaa3cb3e660ea38beaa59a26d94e5aa6bcd8ea3fb8449f82d28e13875c9c05e": {
       "title": "Group Disabled",
       "code": "<RadioGroup value=\"a\" disabled>\n      <Radio value=\"a\" label=\"Option A\" />\n      <Radio value=\"b\" label=\"Option B\" />\n      <Radio value=\"c\" label=\"Option C\" />\n    </RadioGroup>",
+      "source": "stories",
+      "compilable": true
+    },
+    "cd8832b40b359a75929b8e7f17192a66cbf85c7fdc424c4d1b3fd2cb736bb5ce": {
+      "title": "Entry Points",
+      "code": "<div style={{ display: 'grid', gap: 16 }}>\n      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>\n        <CrossIcon size={20} />\n        <Icon name=\"cross\" size={20} />\n        <Icons name=\"depositFiatCrypto\" size={20} />\n      </div>\n      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>\n        <LogoWithWords width={132} height={24} logoColor=\"#073387\" wordColor=\"#131313\" />\n        <IconHover>\n          <CrossIcon size={16} />\n        </IconHover>\n      </div>\n    </div>",
       "source": "stories",
       "compilable": true
     },
@@ -2392,6 +2386,12 @@
     "ec48d516a07ba5085b42c5936ddd4094b99978b593ccd77f2840587b3c15fe54": {
       "title": "Canonical usage",
       "code": "import type { PaginationPageItem } from '@1money/component-ui';",
+      "source": "canonical",
+      "compilable": true
+    },
+    "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525": {
+      "title": "Canonical usage",
+      "code": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
       "source": "canonical",
       "compilable": true
     },
