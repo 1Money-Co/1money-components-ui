@@ -2,7 +2,7 @@ import React, { memo, useRef } from 'react';
 import { useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Button } from '@/components/Button';
-import { Icons } from '@/components/Icons';
+import { ErrorIcon, UploadIcon } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import type { FC, PropsWithChildren } from 'react';
 import type { UploadProps } from './interface';
@@ -74,7 +74,7 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = props => {
         size="small"
         color="primary"
         disabled={disabled}
-        iconStart={<Icons name="upload" size={16} />}
+        iconStart={<UploadIcon size={16} />}
         onClick={handleClick}
       >
         {buttonLabel}
@@ -82,7 +82,7 @@ export const Upload: FC<PropsWithChildren<UploadProps>> = props => {
       {children && <div className={classes('slot')}>{children}</div>}
       {feedback && (
         <div className={classes('error-msg')}>
-          <Icons name="error" size={16} color="currentColor" />
+          <ErrorIcon size={16} color="currentColor" />
           <Typography.Body size="sm" className={classes('error-msg-text')}>
             {feedback}
           </Typography.Body>

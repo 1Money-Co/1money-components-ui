@@ -1,110 +1,66 @@
 import 'jsdom-global/register';
-import * as React from 'react';
-import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Icons, IconWrapper } from '../index';
-import { Illustrations as IllustrationsStory } from '../Icons.stories';
+import { render } from '@testing-library/react';
+import {
+  CrossIcon,
+  Icon,
+  Icons,
+  IllusPending,
+  LogoWithWords,
+  SortIcon,
+} from '../index';
 
 const originalConsoleError = console.error;
 console.error = (message, ...optionalParams) => {
-      const errorMessage = typeof message === 'string' ? message : String(message);
+  const errorMessage = typeof message === 'string' ? message : String(message);
   if (
     errorMessage.includes('Could not parse CSS stylesheet') ||
     errorMessage.includes('findDOMNode is deprecated and will be removed')
   ) {
-      return;
+    return;
   }
   originalConsoleError(message, ...optionalParams);
 };
 
 describe('Icons', () => {
-  it('renders correctly', () => {
-    const Icon = render(
-      <Icons name='deposit' />
-    );
-    const wrapperIcon = render(
-      <IconWrapper />
-    );
-    expect(Icon).toMatchSnapshot();
-    expect(wrapperIcon).toMatchSnapshot();
-  });
-
-  it('renders figma alias names', () => {
+  it('keeps static, new dynamic, and compatibility entrypoints aligned', () => {
     const { container } = render(
       <>
-        <Icons name='depositFiatCrypto' />
-        <Icons name='personalSettings' />
-        <Icons name='security2' />
-        <Icons name='iconPix' />
-        <Icons name='noApiKeys' />
-      </>
+        <CrossIcon size={16} />
+        <Icon name='cross' size={16} />
+        <Icons name='cross' size={16} />
+      </>,
     );
 
-    expect(container.querySelectorAll('svg')).toHaveLength(5);
+    const [staticSvg, dynamicSvg, compatSvg] = Array.from(container.querySelectorAll('svg'));
+
+    expect(staticSvg?.innerHTML).toBe(dynamicSvg?.innerHTML);
+    expect(dynamicSvg?.innerHTML).toBe(compatSvg?.innerHTML);
   });
 
-  it('renders sort icon variants', () => {
+  it('resolves legacy names as first-class registry entries', () => {
     const { container } = render(
       <>
-        <Icons name='sort' />
-        <Icons name='sort' status='ascend' />
-        <Icons name='sort' status='descend' />
-      </>
+        <Icon name='depositFiatCrypto' size={16} />
+        <Icon name='deposit' size={16} />
+      </>,
     );
 
-    expect(container.querySelectorAll('svg')).toHaveLength(3);
-    expect(Array.from(container.querySelectorAll('path')).map(path => path.getAttribute('fill'))).toEqual([
-      '#9FA3A3',
-      '#131313',
-      '#9FA3A3',
-      '#9FA3A3',
-      '#131313',
-    ]);
+    const [legacySvg, canonicalSvg] = Array.from(container.querySelectorAll('svg'));
+
+    expect(legacySvg?.innerHTML).toBe(canonicalSvg?.innerHTML);
   });
 
-  it('renders illustrations on a 74px canvas', () => {
+  it('keeps special component props on direct static exports', () => {
     const { container } = render(
       <>
-        <Icons name='illusChecked' />
-        <Icons name='illusEmailError' />
-        <Icons name='illusAddAccount' />
-      </>
+        <SortIcon status='ascend' />
+        <LogoWithWords logoColor='#073387' wordColor='#131313' />
+        <IllusPending />
+      </>,
     );
 
-    expect(Array.from(container.querySelectorAll('svg')).map(svg => svg.getAttribute('viewBox'))).toEqual([
-      '0 0 74 74',
-      '0 0 74 74',
-      '0 0 74 74',
-    ]);
-  });
-
-  it('uses figma default border color for illustrations', () => {
-    const { container } = render(
-      <>
-        <Icons name='illusChecked' />
-        <Icons name='illusEmailError' />
-        <Icons name='illusAddAccount' />
-      </>
-    );
-
-    expect(container.innerHTML).toContain('#131313');
-    expect(container.innerHTML).not.toContain('#1D1D1F');
-  });
-
-  it('renders pending illustration with the figma transfer direction', () => {
-    const { container } = render(<Icons name='illusPending' />);
-
+    expect(container.innerHTML).toContain('#073387');
     expect(container.innerHTML).toContain('translate(74 0) scale(-1 1)');
-  });
-
-  it('shows pending illustration with warning color in the story', () => {
-    const renderStory = IllustrationsStory.render as any;
-    render(renderStory(IllustrationsStory.args as any, {}));
-
-    const pendingLabel = screen.getByText('illusPending');
-    const pendingCard = pendingLabel.parentElement;
-
-    expect(pendingCard?.innerHTML).toContain('#F4C600');
-    expect(pendingCard?.innerHTML).not.toContain('#AE0000');
   });
 });

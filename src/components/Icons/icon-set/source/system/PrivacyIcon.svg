@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d='M1.5 11.5H22.5' stroke-width='2' />
+<path d='M6 11L8 3L8.11943 3.02986C10.6673 3.66682 13.3327 3.66682 15.8806 3.02986L16 3L18 11' stroke-width='2' />
+<circle cx='7' cy='18' r='3' stroke-width='2' />
+<path d='M1.5 18H4' stroke-width='2' />
+<path d='M10 18H14' stroke-width='2' />
+<path d='M20 18H22.5' stroke-width='2' />
+<circle cx='17' cy='18' r='3' stroke-width='2' />
+</svg>

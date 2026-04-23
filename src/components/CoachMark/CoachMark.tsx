@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import { Icons } from '@/components/Icons';
+import { CrossIcon } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import { Carousel } from '@/components/Carousel';
 import type { CSSProperties, FC } from 'react';
@@ -154,7 +154,7 @@ const CoachMarkInner: FC<CoachMarkProps> = props => {
           aria-label={labels.dismiss}
           onClick={onDismiss}
         >
-          <Icons name="cross" size={24} color="currentColor" />
+          <CrossIcon size={24} color="currentColor" />
         </button>
       )}
     </div>

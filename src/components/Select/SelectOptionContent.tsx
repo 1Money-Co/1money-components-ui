@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Icons } from '@/components/Icons';
+import { CheckIcon } from '@/components/Icons';
 import { TypographyBody } from '@/components/Typography';
 import type { ClassNamesFn } from '@/utils/classnames';
 import type { FC } from 'react';
@@ -25,7 +25,7 @@ const SelectOptionContentBase: FC<SelectOptionContentProps> = ({
       )}
     </span>
     <span className={classes('option-check')}>
-      {selected && <Icons name="check" size={16} color="currentColor" />}
+      {selected && <CheckIcon size={16} color="currentColor" />}
     </span>
   </>
 );

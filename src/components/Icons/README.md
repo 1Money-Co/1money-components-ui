@@ -1,123 +1,83 @@
 # Icons
 
-A comprehensive icon system providing access to custom SVG icons, logos, illustrations, and deprecated icons with consistent styling.
+`Icons` now exposes three entrypoints with different jobs:
 
-## Components
-
-- **Icons**: Main icon component for displaying any icon by name.
-- **IconWrapper**: SVG wrapper providing consistent sizing and color.
-- **IconHover**: Hover-effect container for icon buttons.
+- Static components first: use `CrossIcon`, `SearchIcon`, `LogoWithWords`, `IllusPending` when the icon is known at author time.
+- Dynamic rendering: use `Icon` when the icon name comes from config or runtime state.
+- Compatibility: keep `Icons` for existing callsites and alias-driven consumers.
 
 ## Import
 
 ```tsx
-import { Icons, IconWrapper, IconHover } from '@1money/components-ui';
-// or
-import { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';
+import {
+  CrossIcon,
+  Icon,
+  Icons,
+  IconHover,
+  IconWrapper,
+  LogoWithWords,
+} from '@1money/components-ui';
 
-// Type import
-import type { IconName } from '@1money/components-ui';
+import type { IconName, IconsProps } from '@1money/components-ui';
 ```
 
-## Basic Usage
+## Preferred Usage
 
 ```tsx
-// Basic icon (default 24px, color #131313)
-<Icons name="arrowRight" />
-import { Icons, IconWrapper, Logo } from '@1money/components-ui';
+// Static JSX: preferred
+<CrossIcon size={16} />
+<LogoWithWords width={132} height={24} logoColor="#073387" wordColor="#131313" />
 
-// Custom size and color
-<Icons name="settings" size={32} color="#3D73F2" />
+// Dynamic runtime dispatch
+<Icon name="cross" size={16} />
 
-// With explicit width/height
-<Icons name="search" width={20} height={20} />
-
-// Icon with hover container
-<IconHover>
-  <Icons name="more" />
-</IconHover>
-
-// Disabled hover container
-<IconHover disabled>
-  <Icons name="settings" />
-</IconHover>
-
-// Logo
-<Icons name="logo" size={40} />
+// Backward-compatible wrapper
+<Icons name="depositFiatCrypto" size={16} />
 ```
 
-## Icons Props
+## Props
 
-`IconsProps` extends `IconWrapperProps` with an additional `name` prop.
+`IconProps` and `IconsProps` extend `IconWrapperProps` and add `name: IconName`.
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `name` | `IconName` | — | Icon name from the available icon set |
-| `size` | `number \| \`${number}\`` | `24` | Icon size in pixels (sets both width and height) |
-| `width` | `number \| \`${number}\`` | — | Override width independently |
-| `height` | `number \| \`${number}\`` | — | Override height independently |
-| `color` | `string` | `'#131313'` | Icon color (CSS color value) |
-| `fill` | `boolean` | — | Set SVG fill to `currentColor` |
-| `stroke` | `boolean` | — | Set SVG stroke to `currentColor` |
-| `viewBox` | `string` | `'0 0 24 24'` | SVG viewBox attribute |
-| `id` | `string` | — | HTML id attribute |
-| `className` | `string` | `''` | CSS class on the SVG element |
-| `wrapperCls` | `string` | `''` | CSS class on the wrapper `<i>` element |
-| `style` | `CSSProperties` | — | Inline styles on the wrapper |
-| `ariaLabel` | `string` | — | Accessibility label |
-| `tabIndex` | `number` | — | Tab index for keyboard navigation |
-| `onClick` | `(e: MouseEvent<HTMLElement>) => any` | — | Click handler |
-| `onKeyDown` | `(e: KeyboardEvent<HTMLElement>) => any` | — | Key down handler |
-| `prefixCls` | `string` | `'icons'` | CSS class prefix |
+Shared wrapper props:
 
-## IconHover Props
+| Prop | Type | Default |
+|------|------|---------|
+| `size` | `number \| \`${number}\`` | `24` |
+| `width` | `number \| \`${number}\`` | — |
+| `height` | `number \| \`${number}\`` | — |
+| `color` | `string` | `'currentColor'` |
+| `fill` | `boolean` | — |
+| `stroke` | `boolean` | — |
+| `className` | `string` | `''` |
+| `wrapperCls` | `string` | `''` |
+| `prefixCls` | `string` | `'icons'` |
+| `ariaLabel` | `string` | — |
+| `tabIndex` | `number` | — |
+| `onClick` | `(e) => unknown` | — |
+| `onKeyDown` | `(e) => unknown` | — |
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `disabled` | `boolean` | — | Disables hover effect and adds reduced opacity |
-| `prefixCls` | `string` | `'icons-hover'` | CSS class prefix |
-| `className` | `string` | — | Additional CSS classes |
+Special direct exports keep their specific props:
 
-Also accepts all standard HTML div attributes.
+- `SortIcon` keeps `status` and `inactiveColor`
+- `StatusSuccessIcon` / `StatusFailIcon` keep `innerColor`
+- `LogoWithWords` / `LogoWithBeta` keep logo-specific color and layout props
+- Illustration components keep `borderColor` / `gradientColor`
 
-## Available Icon Names
+## Names
 
-All icon names use **camelCase**. The `IconName` type provides full autocompletion.
+`IconName` still includes the existing canonical names and legacy aliases such as:
 
-### Functional Icons
+- `cross`
+- `search`
+- `upload`
+- `notificationInfo`
+- `logoWithWords`
+- `illusPending`
+- `depositFiatCrypto`
 
-`arrowUp`, `arrowDown`, `arrowLeft`, `arrowRight`, `add`, `minus`, `cross`, `more`, `chevronDown`, `chevronUp`, `chevronLeft`, `chevronRight`, `collapse`, `extend`, `spinner`, `check`, `remove`, `pix`
+## Notes
 
-### System Icons
-
-`info`, `notifications`, `favorite`, `transferHistory`, `support`, `help`, `language`, `share`, `products`, `hub`, `systemSecurity`, `fees`, `settings`, `id`, `viewBalance`, `hideBalance`, `privacy`, `card`, `coin`, `wallet`, `email`, `rewards`, `time`, `location`, `calendar`, `securityCheck`, `devices`, `images`, `bank`, `coins`, `earn`, `scan`, `search`, `maintenance`, `editFile`, `document`, `upload`, `gift`, `filter`, `expand`, `systemCollapse`, `refresh`, `transfer`, `link`, `save`, `like`, `dislike`, `copy`, `mobile`, `chat`, `swap`, `clock`, `desktop`, `ach`, `businessAccount`, `individualAccount`, `apiKey`, `brokenLink`, `autoConversionRules`
-
-### Menu Icons
-
-`dashboard`, `digitalAsset`, `addressBook`, `linkedBankAccounts`, `wire`, `swift`, `account`, `profile`, `security`, `logout`, `portfolio`, `home`, `convert`, `withdraw`, `send`, `menuDeposit`, `company`, `parties`, `transactions`, `fiat`, `money`, `sendCrypto`
-
-### Primary Icons
-
-`deposit`, `withdrawal`, `conversion`, `mintToken`, `burnToken`, `accountLocked`, `pending`, `success`, `fail`, `error`
-
-### Status Icons
-
-`statusSuccess`, `statusFail` (these accept an additional `innerColor` prop)
-
-### Logo Icons
-
-`logo`, `logoWord`, `logoNetwork`, `logoWithWords`, `logoBg`, `logoBeta`, `logoWithBeta`
-
-### Illustrations
-
-`illusChecked`, `illusEmailError`, `illusLinkExpired`, `illus2FA`, `illusLocked`, `illusError`, `illusRegionNotSupported`, `illusID`, `illusVerification`, `illusPending`, `illusPasskey`, `illusAddAccount`
-
-```tsx
-// Old (still works)
-import { Deprecated } from '@1money/components-ui';
-<Deprecated name="old-icon-name" />
-
-// New (recommended)
-import { Icons } from '@1money/components-ui';
-<Icons name="new-icon-name" />
-```
+- The dynamic registry stays compatible with existing alias names.
+- Selected standard icons are now backed by direct source-level `.svg` component imports.
+- Logos, illustrations, and special runtime icons remain hand-authored TSX components.

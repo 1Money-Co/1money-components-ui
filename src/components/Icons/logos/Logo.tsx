@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 import { default as classnames, joinCls } from '@/utils/classnames';
-import IconWrapper from './Wrapper';
+import IconWrapper from '../primitives';
 /* import types */
 import type { FC, CSSProperties } from 'react';
-import type { IconWrapperProps } from './interface';
+import type { IconWrapperProps } from '../primitives';
 
 export const Logo: FC<IconWrapperProps> = (props) => <IconWrapper viewBox="0 0 248 248" {...props}>
   <path d="M157.276 114.325C174.548 103.32 186.004 83.9979 186.004 62C186.004 27.7583 158.246 0 124.004 0C95.6448 0 71.7327 19.0401 64.3538 45.0343C88.5333 45.7406 109.988 57.3119 124.004 75.0356C125.875 77.4013 127.613 79.8767 129.208 82.4504C134.087 90.3248 137.62 99.1203 139.487 108.516C145.711 109.752 151.672 111.72 157.276 114.325Z" />

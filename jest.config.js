@@ -24,7 +24,8 @@ module.exports = {
   testEnvironment: 'jsdom',
 
   transform: {
-    '^.+.(tsx|ts)?$': 'ts-jest'
+    '^.+\\.svg$': '<rootDir>/test/svgr-jest-transformer.js',
+    '^.+\\.(tsx|ts)$': 'ts-jest'
   },
 
   moduleNameMapper: {

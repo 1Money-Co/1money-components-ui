@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Button } from '@/components/Button';
-import { Icons } from '@/components/Icons';
+import { Icons, ErrorIcon } from '@/components/Icons';
 import { Typography } from '@/components/Typography';
 import type { FC } from 'react';
 import type { UploadFileBarProps } from './interface';
@@ -56,7 +56,7 @@ export const UploadFileBar: FC<UploadFileBarProps> = props => {
         {message && (
           <div className={classes('message')}>
             {status === FILE_STATUS_ERROR && (
-              <Icons name="error" size={16} />
+              <ErrorIcon size={16} />
             )}
             <Typography.Body size="sm">{message}</Typography.Body>
           </div>

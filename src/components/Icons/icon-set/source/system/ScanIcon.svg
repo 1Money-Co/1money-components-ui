@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d='M8 2H4C2.89543 2 2 2.89543 2 4V8' stroke-width='2' />
+<path d='M16 2H20C21.1046 2 22 2.89543 22 4V8' stroke-width='2' />
+<path d='M8 22H4C2.89543 22 2 21.1046 2 20V16' stroke-width='2' />
+<path d='M16 22H20C21.1046 22 22 21.1046 22 20V16' stroke-width='2' />
+<path fill-rule='evenodd' clip-rule='evenodd' d='M5.75 7V17H7.75V7H5.75ZM9.25 7V17H11.25V7H9.25ZM12.75 17V7H14.75V17H12.75ZM16.25 7V17H18.25V7H16.25Z' />
+</svg>

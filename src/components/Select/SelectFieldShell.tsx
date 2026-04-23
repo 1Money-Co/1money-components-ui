@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Icons } from '@/components/Icons';
+import { ErrorIcon } from '@/components/Icons';
 import { TypographyBody, TypographyLabel } from '@/components/Typography';
 import { joinCls } from '@/utils/classnames';
 import type { ClassNamesFn } from '@/utils/classnames';
@@ -93,7 +93,7 @@ const SelectFieldShellBase: FC<SelectFieldShellProps> = ({
         >
           {status === 'error' && (
             <span className={classes('feedback-icon')}>
-              <Icons name="error" size={16} color="currentColor" />
+              <ErrorIcon size={16} color="currentColor" />
             </span>
           )}
           <TypographyBody size={SELECT_TYPOGRAPHY.feedback.size}>{feedback}</TypographyBody>
