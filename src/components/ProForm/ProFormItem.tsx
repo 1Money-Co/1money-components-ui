@@ -7,8 +7,10 @@ import { useFormItem } from './core/useFormItem';
 import {
   FORM_ERROR_COLOR,
   FORM_ERROR_SIZE,
-  FORM_HELP_COLOR,
-  FORM_HELP_SIZE,
+  FORM_DESCRIPTION_COLOR,
+  FORM_DESCRIPTION_SIZE,
+  FORM_FEEDBACK_COLOR,
+  FORM_FEEDBACK_SIZE,
   FORM_LABEL_COLOR,
   FORM_LABEL_SIZE,
 } from './core/constants';
@@ -123,9 +125,10 @@ const ProFormItemBase: FC<ProFormItemProps> = (props) => {
     children,
     name,
     label,
+    description,
     rules,
     required,
-    help,
+    feedback,
     validateStatus,
     className = '',
     prefixCls = 'form-item',
@@ -214,13 +217,20 @@ const ProFormItemBase: FC<ProFormItemProps> = (props) => {
             as="label"
             size={FORM_LABEL_SIZE}
             color={FORM_LABEL_COLOR}
-            className={classes(
-              'label',
-              joinCls(isRequired && requiredMark && classes('label-required')),
-            )}
+            className={classes('label')}
           >
             {label}
           </TypographyLabel>
+          {description && (
+            <TypographyBody
+              as="div"
+              className={classes('description')}
+              size={FORM_DESCRIPTION_SIZE}
+              color={FORM_DESCRIPTION_COLOR}
+            >
+              {description}
+            </TypographyBody>
+          )}
         </div>
       )}
 
@@ -238,14 +248,14 @@ const ProFormItemBase: FC<ProFormItemProps> = (props) => {
           </TypographyBody>
         )}
 
-        {!fieldError && help && (
+        {!fieldError && feedback && (
           <TypographyBody
             as="div"
-            className={classes('help')}
-            size={FORM_HELP_SIZE}
-            color={FORM_HELP_COLOR}
+            className={classes('feedback')}
+            size={FORM_FEEDBACK_SIZE}
+            color={FORM_FEEDBACK_COLOR}
           >
-            {help}
+            {feedback}
           </TypographyBody>
         )}
       </div>

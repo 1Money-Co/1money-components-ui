@@ -12,9 +12,10 @@ const ProFormFieldSetBase: FC<ProFormFieldSetProps> = (props) => {
   const {
     name,
     label,
+    description,
     rules,
     required,
-    help,
+    feedback,
     gap = 8,
     style,
     children,
@@ -51,7 +52,7 @@ const ProFormFieldSetBase: FC<ProFormFieldSetProps> = (props) => {
 
   if (name) {
     return (
-      <ProFormItem label={label} name={name} rules={rules} required={required} help={help}>
+      <ProFormItem label={label} description={description} name={name} rules={rules} required={required} feedback={feedback}>
         {content}
       </ProFormItem>
     );

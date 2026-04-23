@@ -144,4 +144,6 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
   );
 };
 
+Checkbox.displayName = 'Checkbox';
+
 export default memo(Checkbox);

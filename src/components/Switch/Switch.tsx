@@ -101,4 +101,6 @@ export const Switch: FC<SwitchProps> = props => {
   );
 };
 
+Switch.displayName = 'Switch';
+
 export default memo(Switch);

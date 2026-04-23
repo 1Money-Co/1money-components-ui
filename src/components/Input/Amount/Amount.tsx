@@ -194,4 +194,9 @@ export const InputAmount: FC<InputAmountProps> = (props) => {
   );
 };
 
-export default memo(InputAmount);
+InputAmount.displayName = 'InputAmount';
+
+const MemoizedInputAmount = memo(InputAmount);
+MemoizedInputAmount.displayName = 'InputAmount';
+
+export default MemoizedInputAmount;

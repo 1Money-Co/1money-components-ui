@@ -157,7 +157,7 @@ export const useFormCore = (config: UseFormCoreConfig = {}): UseFormCoreReturn =
         if (rule.validator && typeof rule.validator === 'function') {
           try {
             const result = rule.validator(value, values as Record<string, unknown>);
-            if (result !== true && typeof result !== 'object') {
+            if (result !== true) {
               setFieldError(
                 name,
                 typeof result === 'string' ? result : 'Validation failed',
@@ -241,7 +241,7 @@ export const useFormCore = (config: UseFormCoreConfig = {}): UseFormCoreReturn =
         if (rule.validator && typeof rule.validator === 'function') {
           try {
             const result = rule.validator(value, values as Record<string, unknown>);
-            if (result !== true && typeof result !== 'object') {
+            if (result !== true) {
               newErrors[fieldName] =
                 typeof result === 'string' ? result : 'Validation failed';
               hasErrors = true;

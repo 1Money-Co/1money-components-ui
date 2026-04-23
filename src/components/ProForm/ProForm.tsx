@@ -1,9 +1,9 @@
-import { memo, useEffect, useMemo, useRef, Fragment } from 'react';
+import React, { memo, useEffect, useMemo, useRef, Fragment } from 'react';
 import type { FC } from 'react';
-import { useLatest, useSafeState, useMemoizedFn } from '@1money/hooks';
+import { useLatest, useSafeState, useMemoizedFn, useEventCallback } from '@1money/hooks';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { Row } from '@/components/Grid';
-import { useFormCore } from './core/hooks/useFormCore';
+import { useForm } from './core/hooks/useForm';
 import { ProFormContext } from './context';
 import { Submitter } from './Submitter';
 import { CSS_PREFIX } from './constants';
@@ -51,7 +51,8 @@ const ProFormBase: FC<ProFormProps> = (props) => {
   const mode = modeProp ?? (readonly ? 'read' : 'edit');
 
   const [requestLoading, setRequestLoading] = useSafeState(false);
-  const isLoading = loading || requestLoading;
+  const [submitting, setSubmitting] = useSafeState(false);
+  const isLoading = loading || requestLoading || submitting;
 
   // ── Transform registry ──
   const transformKeyRef = useRef<Record<string, ProFormFieldTransformFn>>({});
@@ -72,20 +73,9 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     return result;
   });
 
-  const handleFinish = useMemoizedFn((values: Record<string, unknown>) => {
-    onFinishRef.current?.(applyPipeline(values));
-  });
-
-  // ── Core form engine ──
-  const {
-    coreContextShape,
-    formInstance: coreInstance,
-    handleSubmit,
-    handleReset,
-  } = useFormCore({
+  // ── Form engine (useForm with async validation) ──
+  const { formInstance, internals } = useForm({
     initialValues,
-    onFinish: handleFinish,
-    onFinishFailed,
     onValuesChange,
     onReset,
     size,
@@ -96,18 +86,41 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     validateTrigger,
   });
 
-  // ── ProForm instance: superset of FormCoreInstance ──
+  // ── Async submit with transform pipeline ──
+  const wrappedHandleSubmit = useEventCallback(async (e?: React.FormEvent) => {
+    e?.preventDefault();
+    setSubmitting(true);
+    try {
+      const validatedValues = await formInstance.validateFields();
+      const pipelined = applyPipeline(validatedValues);
+      await onFinishRef.current?.(pipelined);
+    } catch (err) {
+      const typed = err as Error & {
+        values: Record<string, unknown>;
+        errors: Record<string, string>;
+      };
+      onFinishFailed?.({ values: typed.values, errors: typed.errors });
+    } finally {
+      setSubmitting(false);
+    }
+  });
+
+  // ── ProForm instance: superset of FormInstance ──
   const proFormFormInstance = useMemo<ProFormFormInstance>(
     () => ({
-      ...coreInstance,
-      getFieldsFormatValue: () => applyPipeline(coreInstance.getFieldsValue()),
-      validateFieldsReturnFormatValue: () => {
-        const isValid = coreInstance.validateFields();
-        if (!isValid) return { success: false };
-        return { success: true, values: applyPipeline(coreInstance.getFieldsValue()) };
+      ...formInstance,
+      getFieldsFormatValue: () => applyPipeline(formInstance.getFieldsValue()),
+      validateFieldsReturnFormatValue: async () => {
+        try {
+          const vals = await formInstance.validateFields();
+          return { success: true, values: applyPipeline(vals) };
+        } catch {
+          return { success: false };
+        }
       },
+      submitForm: wrappedHandleSubmit,
     }),
-    [coreInstance, applyPipeline],
+    [formInstance, applyPipeline, wrappedHandleSubmit],
   );
 
   // ── Sync to formRef prop ──
@@ -134,7 +147,7 @@ const ProFormBase: FC<ProFormProps> = (props) => {
       try {
         const data = await requestFn(params);
         if (data && typeof data === 'object') {
-          coreInstance.setFieldsValue(data as Record<string, unknown>);
+          formInstance.setFieldsValue(data as Record<string, unknown>);
         }
       } finally {
         setRequestLoading(false);
@@ -144,13 +157,29 @@ const ProFormBase: FC<ProFormProps> = (props) => {
     if (requestRef.current) {
       fetchData();
     }
-  }, [serializedParams, params, requestRef, setRequestLoading, coreInstance]);
+  }, [serializedParams, params, requestRef, setRequestLoading, formInstance]);
 
   // ── Merged context ──
   const contextValue = useMemo<ProFormContextValue>(
     () => ({
-      ...coreContextShape,
+      values: internals.values,
+      errors: internals.errors,
+      touched: internals.touched,
+      validating: internals.validating,
       formInstance: proFormFormInstance,
+      setFieldValue: internals.setFieldValue,
+      setFieldError: internals.setFieldError,
+      validateField: internals.validateField,
+      validateFieldAsync: internals.validateFieldAsync,
+      registerField: internals.registerField,
+      unregisterField: internals.unregisterField,
+      size,
+      labelAlign,
+      disabled: disabled || isLoading,
+      colon,
+      requiredMark,
+      validateTrigger,
+      // ProForm specifics
       readonly,
       mode,
       grid,
@@ -159,8 +188,15 @@ const ProFormBase: FC<ProFormProps> = (props) => {
       unregisterTransform,
     }),
     [
-      coreContextShape,
+      internals,
       proFormFormInstance,
+      size,
+      labelAlign,
+      disabled,
+      isLoading,
+      colon,
+      requiredMark,
+      validateTrigger,
       readonly,
       mode,
       grid,
@@ -186,8 +222,8 @@ const ProFormBase: FC<ProFormProps> = (props) => {
       <form
         {...rest}
         className={formClasses(undefined, joinCls(classes(), className))}
-        onSubmit={handleSubmit}
-        onReset={handleReset}
+        onSubmit={wrappedHandleSubmit}
+        onReset={internals.handleReset}
       >
         <WrapperComponent {...wrapperProps}>{children}</WrapperComponent>
         {submitterNode}

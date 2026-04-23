@@ -18,22 +18,35 @@ export const FORM_ITEM_SPACING: Record<FormSize, string> = {
   small: '200',
 };
 
-export const FORM_LABEL_SIZE: TypographyLabelSize = 'md';
+export const FORM_LABEL_SIZE: TypographyLabelSize = 'lg';
 export const FORM_LABEL_COLOR: TypographyColor = 'default';
 export const FORM_ERROR_SIZE: TypographyBodySize = 'sm';
 export const FORM_ERROR_COLOR: TypographyColor = 'danger';
-export const FORM_HELP_SIZE: TypographyBodySize = 'sm';
-export const FORM_HELP_COLOR: TypographyColor = 'default-tertiary';
+export const FORM_DESCRIPTION_SIZE: TypographyBodySize = 'md';
+export const FORM_DESCRIPTION_COLOR: TypographyColor = 'default-tertiary';
+export const FORM_FEEDBACK_SIZE: TypographyBodySize = 'sm';
+export const FORM_FEEDBACK_COLOR: TypographyColor = 'default-tertiary';
 
 export const FORM_COMPONENT_NAMES = [
   'Input',
   'InputNumber',
+  'InputPassword',
+  'InputTextArea',
+  'InputSearch',
+  'InputOTP',
+  'InputTrade',
+  'InputAmount',
+  'InputMask',
   'Select',
   'BaseSelect',
   'DatePicker',
   'TimePicker',
+  'Calendar',
   'Checkbox',
+  'CheckboxGroup',
   'Radio',
+  'RadioGroup',
   'Switch',
+  'Slider',
   'TextArea',
 ] as const;

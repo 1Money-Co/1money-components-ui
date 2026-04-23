@@ -81,4 +81,9 @@ export const InputTextArea: FC<InputTextAreaProps> = (props) => {
   );
 };
 
-export default memo(InputTextArea);
+InputTextArea.displayName = 'InputTextArea';
+
+const MemoizedInputTextArea = memo(InputTextArea);
+MemoizedInputTextArea.displayName = 'InputTextArea';
+
+export default MemoizedInputTextArea;

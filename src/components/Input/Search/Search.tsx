@@ -121,4 +121,9 @@ export const InputSearch: FC<InputSearchProps> = (props) => {
   );
 };
 
-export default memo(InputSearch);
+InputSearch.displayName = 'InputSearch';
+
+const MemoizedInputSearch = memo(InputSearch);
+MemoizedInputSearch.displayName = 'InputSearch';
+
+export default MemoizedInputSearch;

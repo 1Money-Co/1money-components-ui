@@ -334,4 +334,9 @@ export const InputMask: FC<InputMaskProps> = (props) => {
   );
 };
 
-export default memo(InputMask);
+InputMask.displayName = 'InputMask';
+
+const MemoizedInputMask = memo(InputMask);
+MemoizedInputMask.displayName = 'InputMask';
+
+export default MemoizedInputMask;

@@ -1,6 +1,6 @@
 import type { ReactNode, FC, ReactElement, MutableRefObject, CSSProperties, FormHTMLAttributes } from 'react';
 import type {
-  FormCoreInstance,
+  FormInstance,
   FormSize,
   LabelAlign,
   ValidateStatus,
@@ -55,15 +55,16 @@ export interface ProFormRequestOption {
 }
 
 // ---------------------------------------------------------------------------
-// ProFormFormInstance — superset of FormCoreInstance with format helpers
+// ProFormFormInstance — superset of FormInstance with format helpers
 // ---------------------------------------------------------------------------
-export interface ProFormFormInstance extends FormCoreInstance {
+export interface ProFormFormInstance extends FormInstance {
   getFieldsFormatValue: () => Record<string, unknown>;
-  validateFieldsReturnFormatValue: () => {
+  validateFieldsReturnFormatValue: () => Promise<{
     success: boolean;
     values?: Record<string, unknown>;
     errors?: Record<string, string>;
-  };
+  }>;
+  submitForm: () => Promise<void>;
 }
 
 // ---------------------------------------------------------------------------
@@ -71,14 +72,20 @@ export interface ProFormFormInstance extends FormCoreInstance {
 // Includes core form state + ProForm-specific fields.
 // ---------------------------------------------------------------------------
 export interface ProFormContextValue {
-  // ── Core form state (from useFormCore) ──
+  // ── Core form state (from useForm) ──
   values: Record<string, unknown>;
   errors: Record<string, string>;
   touched: Record<string, boolean>;
+  validating: Record<string, boolean>;
   formInstance: ProFormFormInstance;
   setFieldValue: (name: string, value: unknown) => void;
   setFieldError: (name: string, error: string | null) => void;
   validateField: (name: string, rules: Rule[], providedValue?: unknown) => boolean;
+  validateFieldAsync: (
+    name: string,
+    value: unknown,
+    rules: Rule[],
+  ) => Promise<{ isValid: boolean; error: string | null }>;
   registerField: (name: string, rules: Rule[]) => void;
   unregisterField: (name: string) => void;
   size: FormSize;
@@ -106,7 +113,8 @@ export interface ProFormFieldProps<FieldProps = Record<string, unknown>> {
   label?: ReactNode;
   rules?: Rule[];
   required?: boolean;
-  help?: ReactNode;
+  description?: ReactNode;
+  feedback?: ReactNode;
   validateStatus?: string;
   labelCol?: { span?: number; offset?: number };
   wrapperCol?: { span?: number; offset?: number };
@@ -151,7 +159,8 @@ export interface ProFormItemProps {
   name?: string;
   rules?: Rule[];
   required?: boolean;
-  help?: ReactNode;
+  description?: ReactNode;
+  feedback?: ReactNode;
   validateStatus?: ValidateStatus;
   hasFeedback?: boolean;
   colon?: boolean;
@@ -181,7 +190,7 @@ export interface SubmitterProps {
   submitText?: ReactNode;
   resetText?: ReactNode;
   render?: (
-    props: { form: FormCoreInstance; submit: () => void; reset: () => void },
+    props: { form: ProFormFormInstance; submit: () => void; reset: () => void },
     dom: ReactElement[],
   ) => ReactNode;
   onSubmit?: () => void;
@@ -286,7 +295,8 @@ export interface ProFormFieldSetProps {
   label?: ReactNode;
   rules?: Rule[];
   required?: boolean;
-  help?: ReactNode;
+  description?: ReactNode;
+  feedback?: ReactNode;
   gap?: number;
   style?: CSSProperties;
   children?: ReactNode;
