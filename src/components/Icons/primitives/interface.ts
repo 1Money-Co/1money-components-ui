@@ -16,8 +16,8 @@ export interface IconWrapperProps {
   ariaLabel?: string;
   tabIndex?: number;
   svgComponent?: ComponentType<SVGProps<SVGSVGElement>>;
-  onClick?: (e: MouseEvent<HTMLElement>) => unknown;
-  onKeyDown?: (e: KeyboardEvent<HTMLElement>) => unknown;
+  onClick?: (e: MouseEvent<HTMLElement>) => any;
+  onKeyDown?: (e: KeyboardEvent<HTMLElement>) => any;
 }
 
 export interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'prefix'> {

@@ -125,7 +125,10 @@
       "Bash(mkdir mcp-smoke *)",
       "Bash(git check-ignore *)",
       "Bash(npm whoami *)",
-      "Bash(npm config *)"
+      "Bash(npm config *)",
+      "Bash(awk '/const IconList = \\\\{/,/\\\\} as const/')",
+      "Bash(awk -F: '{print $1}')",
+      "Bash(awk -F: '{gsub\\(/^ +/,\"\",$1\\); print $1}')"
     ]
   }
 }
