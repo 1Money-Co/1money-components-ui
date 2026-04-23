@@ -145,6 +145,7 @@ const InputBase: FC<InputProps> = (props) => {
 };
 
 const MemoizedInput = memo(InputBase);
+MemoizedInput.displayName = 'Input';
 
 export const Input = Object.assign(MemoizedInput, {
   Password: InputPassword,

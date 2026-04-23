@@ -166,4 +166,6 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = (props) => {
   );
 };
 
+CheckboxGroup.displayName = 'CheckboxGroup';
+
 export default memo(CheckboxGroup);

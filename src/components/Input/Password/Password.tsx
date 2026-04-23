@@ -99,4 +99,9 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
   );
 };
 
-export default memo(InputPassword);
+InputPassword.displayName = 'InputPassword';
+
+const MemoizedInputPassword = memo(InputPassword);
+MemoizedInputPassword.displayName = 'InputPassword';
+
+export default MemoizedInputPassword;

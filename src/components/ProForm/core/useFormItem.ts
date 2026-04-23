@@ -107,10 +107,16 @@ export function useFormItem(options: UseFormItemOptions): UseFormItemReturn {
 
     if (!isFormComponent) return child;
 
+    const TEXT_LIKE_NAMES = [
+      'Input', 'InputPassword', 'InputTextArea', 'InputSearch',
+      'InputOTP', 'InputTrade', 'InputAmount', 'InputMask',
+      'TextArea', 'InputNumber',
+    ];
+
     let safeValue = fieldValue;
     if (safeValue === null || safeValue === undefined) {
       if (
-        ['Input', 'TextArea', 'InputNumber'].includes(displayName || '') ||
+        TEXT_LIKE_NAMES.includes(displayName || '') ||
         childProps.placeholder !== undefined
       ) {
         safeValue = '';
@@ -118,7 +124,7 @@ export function useFormItem(options: UseFormItemOptions): UseFormItemReturn {
         safeValue = false;
       }
     } else if (
-      ['Input', 'TextArea'].includes(displayName || '') &&
+      TEXT_LIKE_NAMES.includes(displayName || '') &&
       typeof safeValue !== 'string' &&
       typeof safeValue !== 'number'
     ) {
