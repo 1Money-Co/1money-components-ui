@@ -15,16 +15,15 @@ import { Icons, IconWrapper, IconHover } from '@1money/components-ui';
 // or
 import { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';
 
-// Type import
-import type { IconName } from '@1money/components-ui';
+// Type imports
+import type { IconName, SortIconStatus } from '@1money/components-ui';
 ```
 
 ## Basic Usage
 
 ```tsx
-// Basic icon (default 24px, color #131313)
+// Basic icon (default 24px, inherits currentColor)
 <Icons name="arrowRight" />
-import { Icons, IconWrapper, Logo } from '@1money/components-ui';
 
 // Custom size and color
 <Icons name="settings" size={32} color="#3D73F2" />
@@ -56,7 +55,7 @@ import { Icons, IconWrapper, Logo } from '@1money/components-ui';
 | `size` | `number \| \`${number}\`` | `24` | Icon size in pixels (sets both width and height) |
 | `width` | `number \| \`${number}\`` | — | Override width independently |
 | `height` | `number \| \`${number}\`` | — | Override height independently |
-| `color` | `string` | `'#131313'` | Icon color (CSS color value) |
+| `color` | `string` | `'currentColor'` | Icon color (CSS color value) |
 | `fill` | `boolean` | — | Set SVG fill to `currentColor` |
 | `stroke` | `boolean` | — | Set SVG stroke to `currentColor` |
 | `viewBox` | `string` | `'0 0 24 24'` | SVG viewBox attribute |
@@ -80,13 +79,60 @@ import { Icons, IconWrapper, Logo } from '@1money/components-ui';
 
 Also accepts all standard HTML div attributes.
 
+## Special Icon Props
+
+### Status Icons (`statusSuccess`, `statusFail`)
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `innerColor` | `string` | — | Color for the inner part of the status icon |
+
+### Sort Icon (`sort`)
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `status` | `SortIconStatus` | — | Sort direction state |
+| `inactiveColor` | `string` | — | Color for the inactive arrow |
+
+### LogoWithWords (`logoWithWords`)
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `logoColor` | `string` | — | Override color for the logo mark |
+| `logoCls` | `string` | — | CSS class for the logo mark |
+| `wordColor` | `string` | — | Override color for the wordmark |
+| `wordCls` | `string` | — | CSS class for the wordmark |
+| `networkLogo` | `boolean` | — | Show the "NETWORK" wordmark alongside |
+| `networkColor` | `string` | — | Override color for the network wordmark |
+| `networkCls` | `string` | — | CSS class for the network wordmark |
+
+### LogoWithBeta (`logoWithBeta`)
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `logoColor` | `string` | — | Override color for the logo mark |
+| `logoCls` | `string` | — | CSS class for the logo mark |
+| `wordColor` | `string` | — | Override color for the wordmark |
+| `wordCls` | `string` | — | CSS class for the wordmark |
+| `betaColor` | `string` | — | Override color for the beta badge |
+| `betaCls` | `string` | — | CSS class for the beta badge |
+
+### Illustrations (`illus*` icons)
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `borderColor` | `string` | `'#131313'` | Stroke/border color of the illustration |
+| `gradientColor` | `string \| [string, string]` | `['#B9CCE4', 'white']` | Gradient fill — a single color or `[start, end]` tuple |
+
+Some illustrations also accept `color` to override the accent circle (defaults to `#AE0000` for error-themed, `#F4C600` for pending-themed).
+
 ## Available Icon Names
 
 All icon names use **camelCase**. The `IconName` type provides full autocompletion.
 
 ### Functional Icons
 
-`arrowUp`, `arrowDown`, `arrowLeft`, `arrowRight`, `add`, `minus`, `cross`, `more`, `chevronDown`, `chevronUp`, `chevronLeft`, `chevronRight`, `collapse`, `extend`, `spinner`, `check`, `remove`, `pix`
+`arrowUp`, `arrowDown`, `arrowLeft`, `arrowRight`, `add`, `minus`, `cross`, `more`, `chevronDown`, `chevronUp`, `chevronLeft`, `chevronRight`, `sort`, `collapse`, `extend`, `spinner`, `check`, `remove`, `pix`
 
 ### System Icons
 
@@ -104,6 +150,18 @@ All icon names use **camelCase**. The `IconName` type provides full autocompleti
 
 `statusSuccess`, `statusFail` (these accept an additional `innerColor` prop)
 
+### Currency Icons
+
+`usd`, `eur`, `gbp`, `jpy`, `cny`
+
+### Social Icons
+
+`google`, `apple`, `twitter`, `linkedIn`, `passkey`
+
+### Notification Icons
+
+`notificationInfo`, `notificationWarning`, `notificationSuccess`, `notificationError`
+
 ### Logo Icons
 
 `logo`, `logoWord`, `logoNetwork`, `logoWithWords`, `logoBg`, `logoBeta`, `logoWithBeta`
@@ -112,12 +170,24 @@ All icon names use **camelCase**. The `IconName` type provides full autocompleti
 
 `illusChecked`, `illusEmailError`, `illusLinkExpired`, `illus2FA`, `illusLocked`, `illusError`, `illusRegionNotSupported`, `illusID`, `illusVerification`, `illusPending`, `illusPasskey`, `illusAddAccount`
 
-```tsx
-// Old (still works)
-import { Deprecated } from '@1money/components-ui';
-<Deprecated name="old-icon-name" />
+### Figma Aliases
 
-// New (recommended)
-import { Icons } from '@1money/components-ui';
-<Icons name="new-icon-name" />
-```
+These are convenience aliases that map to existing icons for Figma design-token parity:
+
+| Alias | Maps to |
+|-------|---------|
+| `depositFiatCrypto` | `deposit` |
+| `withdrawFiatCrypto` | `withdrawal` |
+| `accountdLocked` | `accountLocked` |
+| `personalSettings` | `account` |
+| `security2` | `systemSecurity` |
+| `iconPix` | `pix` |
+| `noApiKeys` | `brokenLink` |
+
+### Other
+
+`pause`
+
+## Color Inheritance
+
+The `IconWrapper` uses `currentColor` as the default color and injects a runtime CSS rule so that SVG child elements without explicit `fill` or `stroke` attributes automatically inherit `currentColor`. This means icons follow the parent element's text color by default — set `color` on the parent or pass the `color` prop to override.

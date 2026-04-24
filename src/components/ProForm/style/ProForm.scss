@@ -39,16 +39,18 @@ $form: 'form';
   text-align: right;
 }
 
-.#{theme.$prefix}-#{$form}-item-description {
-  margin-bottom: 8px;
-}
+.#{theme.$prefix}-#{$form}-item {
+  .#{theme.$prefix}-#{$form}-item-description {
+    margin-bottom: 8px;
+  }
 
-.#{theme.$prefix}-#{$form}-item-error {
-  margin-top: 8px;
-}
+  .#{theme.$prefix}-#{$form}-item-error {
+    margin-top: 8px;
+  }
 
-.#{theme.$prefix}-#{$form}-item-feedback {
-  margin-top: 8px;
+  .#{theme.$prefix}-#{$form}-item-feedback {
+    margin-top: 8px;
+  }
 }
 
 // ===========================================================================
