@@ -43,10 +43,13 @@ Shared wrapper props:
 
 | Prop | Type | Default |
 |------|------|---------|
+| `id` | `string` | — |
+| `style` | `CSSProperties` | — |
 | `size` | `number \| \`${number}\`` | `24` |
 | `width` | `number \| \`${number}\`` | — |
 | `height` | `number \| \`${number}\`` | — |
 | `color` | `string` | `'currentColor'` |
+| `viewBox` | `string` | — |
 | `fill` | `boolean` | — |
 | `stroke` | `boolean` | — |
 | `className` | `string` | `''` |
@@ -54,8 +57,9 @@ Shared wrapper props:
 | `prefixCls` | `string` | `'icons'` |
 | `ariaLabel` | `string` | — |
 | `tabIndex` | `number` | — |
-| `onClick` | `(e) => unknown` | — |
-| `onKeyDown` | `(e) => unknown` | — |
+| `svgComponent` | `ComponentType<SVGProps<SVGSVGElement>>` | — |
+| `onClick` | `(e: MouseEvent<HTMLElement>) => any` | — |
+| `onKeyDown` | `(e: KeyboardEvent<HTMLElement>) => any` | — |
 
 Special direct exports keep their specific props:
 
@@ -66,7 +70,7 @@ Special direct exports keep their specific props:
 
 ## Names
 
-`IconName` still includes the existing canonical names and legacy aliases such as:
+`IconName` includes canonical names such as:
 
 - `cross`
 - `search`
@@ -78,6 +82,5 @@ Special direct exports keep their specific props:
 
 ## Notes
 
-- The dynamic registry stays compatible with existing alias names.
 - Selected standard icons are now backed by direct source-level `.svg` component imports.
 - Logos, illustrations, and special runtime icons remain hand-authored TSX components.

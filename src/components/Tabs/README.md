@@ -31,6 +31,8 @@ import { Tabs } from '@1money/components-ui/Tabs';
 | `items` | `TabItem[]` | — | Tab items configuration (required) |
 | `activeKey` | `string` | — | Active tab key (controlled mode) |
 | `defaultActiveKey` | `string` | First item key | Default active tab key (uncontrolled mode) |
+| `animated` | `boolean` | `true` | Whether to animate the indicator transition |
+| `fullWidth` | `boolean` | `false` | Whether the tab bar extends full width with a bottom border |
 | `onChange` | `(key: string) => void` | — | Callback when active tab changes |
 | `prefixCls` | `string` | `'tabs'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |

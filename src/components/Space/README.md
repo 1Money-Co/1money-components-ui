@@ -37,7 +37,7 @@ import { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/
 |------|------|---------|-------------|
 | `align` | `'start' \| 'end' \| 'center' \| 'baseline'` | — | Align items |
 | `direction` | `'horizontal' \| 'vertical'` | `'horizontal'` | Spacing direction |
-| `size` | `'small' \| 'middle' \| 'large' \| number \| [SpaceSize, SpaceSize]` | `'small'` | Gap size |
+| `size` | `'small' \| 'middle' \| 'large' \| number \| [SpaceSize, SpaceSize]` | `'small'` (8px) | Gap size; when omitted, resolves to `'small'` (8px) internally |
 | `split` | `ReactNode` | — | Insert split element between items |
 | `wrap` | `boolean` | `false` | Auto wrap when horizontal |
 | `prefixCls` | `string` | `'space'` | CSS class prefix |

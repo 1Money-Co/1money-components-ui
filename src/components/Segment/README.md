@@ -31,6 +31,7 @@ import { Segment } from '@1money/components-ui/Segment';
 | `items` | `SegmentItem[]` | — | Segment options (required) |
 | `value` | `string` | — | Selected value (controlled mode) |
 | `defaultValue` | `string` | First item value | Default selected value (uncontrolled mode) |
+| `animated` | `boolean` | `true` | Whether to animate the sliding indicator transition |
 | `onChange` | `(value: string) => void` | — | Callback when selection changes |
 | `prefixCls` | `string` | `'segment'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |

@@ -42,6 +42,10 @@ import '@1money/components-ui/index.css';
 | `closeOnConfirm` | `boolean` | `true` | Closes the panel automatically after the primary action unless prevented. |
 | `onCancel` | `(event, context) => void` | `undefined` | Called when the secondary action is clicked. Call `event.preventDefault()` to keep the panel open. |
 | `onConfirm` | `(event, context) => void` | `undefined` | Called when the primary action is clicked. Call `event.preventDefault()` to keep the panel open. |
+| `className` | `string` | `undefined` | Class name applied to the Popconfirm card. |
+| `prefixCls` | `string` | `'popconfirm'` | CSS class prefix used to generate internal BEM-style classes. |
 | `trigger` | `TriggerAction \| TriggerAction[]` | `'click'` | Trigger mode forwarded to `Trigger`. |
 | `placement` | `Placement` | `'top'` | Floating placement forwarded to `Trigger`. |
 | `offset` | `number` | `8` | Distance between the trigger anchor and the floating card. |
+
+All other props from `TriggerProps` are also accepted, excluding `content` and `role`, which are managed internally.

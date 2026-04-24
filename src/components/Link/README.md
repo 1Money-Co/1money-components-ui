@@ -5,9 +5,9 @@ Inline text hyperlink with three color variants and two sizes. Wraps a native `<
 ## Import
 
 ```tsx
-import { Link } from '@1money/component-ui';
+import { Link } from '@1money/components-ui';
 // or
-import { Link } from '@1money/component-ui/Link';
+import { Link } from '@1money/components-ui/Link';
 ```
 
 ## Usage
@@ -42,6 +42,7 @@ External (auto `rel="noopener noreferrer"` when `target="_blank"`):
 | `href` | `string` | — | Target URL |
 | `target` | `'_blank' \| '_self' \| ...` | — | Anchor target |
 | `rel` | `string` | auto `'noopener noreferrer'` when `target="_blank"` | Anchor rel attribute |
+| `children` | `ReactNode` | — | Link content |
 | `onClick` | `(e: MouseEvent) => void` | — | Click handler (suppressed when disabled) |
 | `prefixCls` | `string` | `'link'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
