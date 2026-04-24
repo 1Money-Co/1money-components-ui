@@ -163,6 +163,12 @@
       "source": "stories",
       "compilable": false
     },
+    "121fd04bd739e98c6ccc312a1be13069715c343ad66bcbd8e3b076ee2611f60a": {
+      "title": "Canonical usage",
+      "code": "import type { IconsProps } from '@1money/component-ui';",
+      "source": "canonical",
+      "compilable": true
+    },
     "123291e7b1b33126adc91e8204e4002c37c71a74eb5bfca67a4da71b9aec2f6a": {
       "title": "Default",
       "code": "{\n    const [value, setValue] = useState<string | number | undefined>('btc');\n\n    return (\n      <Select\n        {...args}\n        value={value}\n        onChange={(nextValue, option) => {\n          setValue(nextValue as string | number | undefined);\n          args.onChange?.(nextValue, option);\n        }}\n      />\n    );\n  }",
@@ -251,6 +257,12 @@
       "title": "Import",
       "code": "import { Popconfirm } from '@1money/components-ui';\nimport '@1money/components-ui/index.css';",
       "source": "readme",
+      "compilable": true
+    },
+    "21cf92888ecabc84d2f36ba71a1b5a30b1fc75a963b72b6bd4ad911c20be6142": {
+      "title": "Canonical usage",
+      "code": "import type { IconName } from '@1money/component-ui';",
+      "source": "canonical",
       "compilable": true
     },
     "21e145efeaada4cb2c7e716099dd9261f34d38e9df00905994175c1a5e9aabb5": {
@@ -541,6 +553,12 @@
       "source": "stories",
       "compilable": false
     },
+    "3c554437f7534e672da53194827c88c647b2091520a4db816184c1ffdc84c59a": {
+      "title": "Canonical usage",
+      "code": "import type { IconWrapperProps } from '@1money/component-ui';",
+      "source": "canonical",
+      "compilable": true
+    },
     "3c5bbd0e70d50121131f70e69229d2badab6a0c4ce56c9343804fac5db4cc85d": {
       "title": "Cell Centered",
       "code": "<div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', flexWrap: 'wrap' }}>\n      <Radio\n        checked\n        variant=\"cell\"\n        size=\"large\"\n        alignment=\"center\"\n        icon=\"language\"\n        tag=\"Tag\"\n        label=\"Global account\"\n        description=\"International transfers\"\n        style={{ width: 200 }}\n      />\n      <Radio\n        checked\n        variant=\"cell\"\n        size=\"medium\"\n        alignment=\"center\"\n        icon=\"usd\"\n        label=\"USD1\"\n        style={{ width: 200 }}\n      />\n      <Radio\n        checked\n        variant=\"cell\"\n        size=\"small\"\n        alignment=\"center\"\n        icon=\"usd\"\n        label=\"USD1\"\n        style={{ width: 200 }}\n      />\n    </div>",
@@ -679,12 +697,6 @@
       "source": "stories",
       "compilable": false
     },
-    "4a5e5cef011be8e4312b7e27e13d519193ffe35d681413267098a0f06182c9d9": {
-      "title": "Basic Usage",
-      "code": "// Basic icon (default 24px, color #131313)\n<Icons name=\"arrowRight\" />\nimport { Icons, IconWrapper, Logo } from '@1money/components-ui';\n\n// Custom size and color\n<Icons name=\"settings\" size={32} color=\"#3D73F2\" />\n\n// With explicit width/height\n<Icons name=\"search\" width={20} height={20} />\n\n// Icon with hover container\n<IconHover>\n  <Icons name=\"more\" />\n</IconHover>\n\n// Disabled hover container\n<IconHover disabled>\n  <Icons name=\"settings\" />\n</IconHover>\n\n// Logo\n<Icons name=\"logo\" size={40} />",
-      "source": "readme",
-      "compilable": true
-    },
     "4ad4837cde91f1ebd2cad90d6f82683fd94957192e4b88fa46882aac2330b854": {
       "title": "Group Collapsible",
       "code": "<ProForm\n      {...args}\n      initialValues={{ name: 'Alice', bio: '', theme: 'light' }}\n      onFinish={(values) => alert(JSON.stringify(values, null, 2))}\n    >\n      <ProForm.Group title=\"Basic Info\" collapsible>\n        <ProFormText name=\"name\" label=\"Name\" rules={[{ required: true }]} />\n        <ProFormText name=\"bio\" label=\"Bio\" />\n      </ProForm.Group>\n      <ProForm.Group title=\"Preferences\" collapsible defaultCollapsed>\n        <ProFormText name=\"theme\" label=\"Theme\" />\n        <ProFormSwitch name=\"notifications\" label=\"Notifications\" />\n      </ProForm.Group>\n    </ProForm>",
@@ -721,6 +733,12 @@
       "source": "stories",
       "compilable": false
     },
+    "4f5fdd8a79c7852bdaed287804732ad6fa022ac45f139a22e6e5b025cba9e945": {
+      "title": "Basic Usage",
+      "code": "// Basic icon (default 24px, inherits currentColor)\n<Icons name=\"arrowRight\" />\n\n// Custom size and color\n<Icons name=\"settings\" size={32} color=\"#3D73F2\" />\n\n// With explicit width/height\n<Icons name=\"search\" width={20} height={20} />\n\n// Icon with hover container\n<IconHover>\n  <Icons name=\"more\" />\n</IconHover>\n\n// Disabled hover container\n<IconHover disabled>\n  <Icons name=\"settings\" />\n</IconHover>\n\n// Logo\n<Icons name=\"logo\" size={40} />",
+      "source": "readme",
+      "compilable": true
+    },
     "50164c21b0b9ce491a97b9f31ca0eab4a51ce38d2496720d37242f774f78df20": {
       "title": "Canonical usage",
       "code": "import { Slider } from '@1money/components-ui';\n// or\nimport { Slider } from '@1money/components-ui/Slider';",
@@ -737,6 +755,12 @@
       "title": "CheckboxGroup",
       "code": "import { Checkbox, CheckboxGroup } from '@1money/components-ui';\n// or\nimport { Checkbox, CheckboxGroup } from '@1money/components-ui/Checkbox';\n\n<CheckboxGroup\n  name=\"fruits\"\n  options={[\n    { label: 'Apple', value: 'apple' },\n    { label: 'Pear', value: 'pear' },\n  ]}\n  value={selectedValues}\n  onChange={setSelectedValues}\n/>\n\n<Checkbox.Group defaultValue={['alpha']}>\n  <Checkbox value=\"alpha\" label=\"Alpha\" />\n  <Checkbox value=\"beta\" label=\"Beta\" />\n</Checkbox.Group>",
       "source": "readme",
+      "compilable": true
+    },
+    "5366737d28dd367f234fcb03fbbe9b966ae9baf9f4d4d05ad628e2c16c5a4e3c": {
+      "title": "Canonical usage",
+      "code": "<IconWrapper />",
+      "source": "canonical",
       "compilable": true
     },
     "5545418d49fc7cdc897ea3ab29b0c7e5326b5e6a7321eec41eece864275198a0": {
@@ -919,6 +943,12 @@
       "source": "readme",
       "compilable": true
     },
+    "6d1aac6219f8d395eb9f6c5c13da9f51970c30059c74d6faeb7ddc895bc2af19": {
+      "title": "Canonical usage",
+      "code": "import type { IconHoverProps } from '@1money/component-ui';",
+      "source": "canonical",
+      "compilable": true
+    },
     "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0": {
       "title": "Canonical usage",
       "code": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
@@ -954,12 +984,6 @@
       "code": "<Button {...args} iconStart={<Icons name=\"add\" />}>\n      Icon Start\n    </Button>",
       "source": "stories",
       "compilable": false
-    },
-    "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5": {
-      "title": "Canonical usage",
-      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "72e53f1f60724efcfebfca8207585573799139c8895777a6a6d283673008ba74": {
       "title": "Import",
@@ -1141,6 +1165,12 @@
       "source": "readme",
       "compilable": true
     },
+    "8388c821f8c88d4cf800ec2b679c5ace3c46d929a152100c4d4f4eb52400039d": {
+      "title": "Import",
+      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type imports\nimport type { IconName, SortIconStatus } from '@1money/components-ui';",
+      "source": "readme",
+      "compilable": true
+    },
     "83a7f14ec7ad74308dcc340c21d3a1bd3bfae1a54793a236229c65619188361f": {
       "title": "Canonical usage",
       "code": "import { Input } from '@1money/components-ui';\n// or\nimport { Input } from '@1money/components-ui/Input';",
@@ -1240,12 +1270,6 @@
     "8ffb7323c737a0cc1f4c296336b8763bf0acdafb29eb029b4046496aaa1b4d27": {
       "title": "Import",
       "code": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
-      "source": "readme",
-      "compilable": true
-    },
-    "90952e793cfea81bc8613eaed2e1b60208c06b4e98ce6f0cc5a254619af9e93f": {
-      "title": "Illustrations",
-      "code": "// Old (still works)\nimport { Deprecated } from '@1money/components-ui';\n<Deprecated name=\"old-icon-name\" />\n\n// New (recommended)\nimport { Icons } from '@1money/components-ui';\n<Icons name=\"new-icon-name\" />",
       "source": "readme",
       "compilable": true
     },
@@ -1663,12 +1687,6 @@
       "source": "stories",
       "compilable": true
     },
-    "c5260837fe7728fca505a762c48a8ede3b34d472c53b2be29b29a49de267418d": {
-      "title": "Import",
-      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
-      "source": "readme",
-      "compilable": true
-    },
     "c53ede8df4b95ea3a84f4272cdde631bf1281322de0a44bfa5d9f4ac16ed9618": {
       "title": "Canonical usage",
       "code": "import { Portal } from '@1money/components-ui';\n// or\nimport { Portal } from '@1money/components-ui/Portal';",
@@ -1954,6 +1972,12 @@
     "e12204d81d25fedea606df0af41590ad6f951ad6a9c87fbb04b46d113a83c01c": {
       "title": "Canonical usage",
       "code": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
+      "source": "canonical",
+      "compilable": true
+    },
+    "e1bc6906c5f00092c88e4e750bb2591d4397c214fe2ba32646792273d03f9942": {
+      "title": "Canonical usage",
+      "code": "<IconHover />",
       "source": "canonical",
       "compilable": true
     },

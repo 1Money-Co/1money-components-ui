@@ -4084,10 +4084,10 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "canonicalUsage": "<IconHover />",
       "examples": [
         {
-          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
+          "hash": "e1bc6906c5f00092c88e4e750bb2591d4397c214fe2ba32646792273d03f9942",
           "source": "canonical"
         }
       ]
@@ -4112,10 +4112,10 @@
       ],
       "searchTags": [],
       "typeText": "interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'prefix'> { ... }",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "canonicalUsage": "import type { IconHoverProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
+          "hash": "6d1aac6219f8d395eb9f6c5c13da9f51970c30059c74d6faeb7ddc895bc2af19",
           "source": "canonical"
         }
       ]
@@ -4140,10 +4140,10 @@
       ],
       "searchTags": [],
       "typeText": "keyof typeof IconList",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "canonicalUsage": "import type { IconName } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
+          "hash": "21cf92888ecabc84d2f36ba71a1b5a30b1fc75a963b72b6bd4ad911c20be6142",
           "source": "canonical"
         }
       ]
@@ -4296,10 +4296,10 @@
         "IconsProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "canonicalUsage": "<IconWrapper />",
       "examples": [
         {
-          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
+          "hash": "5366737d28dd367f234fcb03fbbe9b966ae9baf9f4d4d05ad628e2c16c5a4e3c",
           "source": "canonical"
         }
       ]
@@ -4324,10 +4324,10 @@
       ],
       "searchTags": [],
       "typeText": "interface IconWrapperProps { ... }",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "canonicalUsage": "import type { IconWrapperProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
+          "hash": "3c554437f7534e672da53194827c88c647b2091520a4db816184c1ffdc84c59a",
           "source": "canonical"
         }
       ]
@@ -4358,15 +4358,11 @@
       "memberMap": {},
       "examples": [
         {
-          "hash": "c5260837fe7728fca505a762c48a8ede3b34d472c53b2be29b29a49de267418d",
+          "hash": "8388c821f8c88d4cf800ec2b679c5ace3c46d929a152100c4d4f4eb52400039d",
           "source": "readme"
         },
         {
-          "hash": "4a5e5cef011be8e4312b7e27e13d519193ffe35d681413267098a0f06182c9d9",
-          "source": "readme"
-        },
-        {
-          "hash": "90952e793cfea81bc8613eaed2e1b60208c06b4e98ce6f0cc5a254619af9e93f",
+          "hash": "4f5fdd8a79c7852bdaed287804732ad6fa022ac45f139a22e6e5b025cba9e945",
           "source": "readme"
         },
         {
@@ -4411,10 +4407,10 @@
       ],
       "searchTags": [],
       "typeText": "interface IconsProps extends IconWrapperProps { ... }",
-      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "canonicalUsage": "import type { IconsProps } from '@1money/component-ui';",
       "examples": [
         {
-          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
+          "hash": "121fd04bd739e98c6ccc312a1be13069715c343ad66bcbd8e3b076ee2611f60a",
           "source": "canonical"
         }
       ]
