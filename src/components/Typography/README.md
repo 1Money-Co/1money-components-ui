@@ -54,6 +54,7 @@ import { Typography } from '@1money/components-ui/Typography';
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `size` | category-specific union | — | Required size token for the selected semantic category |
+| `color` | `TypographyColor` | — | Semantic text color token (e.g. `'default'`, `'disabled'`, `'brand'`, `'positive'`, `'danger'`, `'warning'`, `'neutral'`, and their `-secondary` / `-tertiary` / `on-*` variants) |
 | `children` | `ReactNode` | — | Typography content |
 | `as` | category-specific tag union | category-specific tag | Override the rendered semantic tag for `Display`, `Headline`, `Title`, `Body`, and `Label` |
 | `prefixCls` | `string` | `'typography'` | CSS class prefix |

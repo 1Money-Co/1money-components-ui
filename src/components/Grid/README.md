@@ -5,16 +5,16 @@ A responsive 12-column layout system, built with flexbox and consistent gutters.
 ## Features
 
 - 12-column grid with spans and offsets
-- Responsive breakpoints (sm/md/lg, desktop-first with max-width)
+- Responsive breakpoints (sm/md/lg, mobile-first with min-width)
 - Horizontal and vertical gutters
 - Row alignment and justification helpers
 - Optional flex-based columns
 
 ## Breakpoints
 
-- `sm`: max-width 767.98px
-- `md`: max-width 1023.98px
-- `lg`: max-width 1279.98px
+- `sm`: min-width 768px
+- `md`: min-width 1024px
+- `lg`: min-width 1280px
 
 ## Import
 
@@ -46,7 +46,7 @@ const SPAN_HALF = 6;
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `gutter` | `number \| string \| [number \| string, number \| string] \| { sm?; md?; lg? } \| [{ sm?; md?; lg? }, { sm?; md?; lg? }]` | `0` | Horizontal gutter (use array for [horizontal, vertical]) |
+| `gutter` | `number \| string \| [number \| string, number \| string] \| { sm?; md?; lg? } \| [{ sm?; md?; lg? }, { sm?; md?; lg? }]` | `[0, 0]` | Horizontal gutter (use array for [horizontal, vertical]) |
 | `align` | `'top' \| 'middle' \| 'bottom' \| 'stretch'` | — | Vertical alignment |
 | `justify` | `'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly' \| { sm?; md?; lg? }` | — | Horizontal alignment |
 | `wrap` | `boolean` | `true` | Toggle flex wrapping |
@@ -64,7 +64,7 @@ Also accepts all standard HTML div attributes.
 | `push` | `number` | — | Move column right by cells |
 | `pull` | `number` | — | Move column left by cells |
 | `flex` | `number \| string` | — | Flex value (e.g. `1`, `'auto'`, `'100px'`) |
-| `sm/md/lg` | `number \| { span?; offset?; order?; pull?; push?; flex? }` | — | Desktop-first responsive size config (max-width) |
+| `sm/md/lg` | `number \| { span?; offset?; order?; pull?; push?; flex? }` | — | Mobile-first responsive size config (min-width) |
 | `prefixCls` | `string` | `'grid-col'` | CSS class prefix |
 
 Also accepts all standard HTML div attributes.

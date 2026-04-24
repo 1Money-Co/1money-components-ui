@@ -36,8 +36,8 @@ import {
   Checkbox,
   CheckboxGroup,
   Grid,
-  Notification,
   Icons,
+  notification,
   Tag,
   Tooltip,
 } from '@1money/components-ui';
@@ -68,11 +68,20 @@ export function Example() {
       </button>
       <Tooltip anchorSelect="#help-trigger" body="More details" />
 
-      <Notification
-        status="success"
-        title="Saved"
-        body="Settings were updated."
-      />
+      {/*
+        notification is a static API. Call it from event handlers,
+        effects, or other client-side actions.
+      */}
+      <Button
+        onClick={() =>
+          notification.success({
+            title: 'Saved',
+            body: 'Settings were updated.',
+          })
+        }
+      >
+        Show notification
+      </Button>
     </>
   );
 }
@@ -89,19 +98,58 @@ import { Spinner } from '@1money/components-ui/Spinner';
 
 The current source tree includes these component modules:
 
+- `Accordion`
+- `Alert`
 - `Button`
+- `Calendar`
+- `Carousel`
+- `Cell`
 - `Checkbox`
 - `CheckboxGroup`
+- `CoachMark`
+- `Copy`
+- `Dialog`
+- `Divider`
+- `Drawer`
+- `Dropdown`
+- `Empty`
 - `Flex`
 - `Grid`
 - `Icons`
+- `Input`
+- `Link`
+- `Navigation`
+- `Nav`
 - `Notification`
+- `Pagination`
+- `Popconfirm`
+- `Portal`
+- `ProForm`
+- `Progress`
+- `Radio`
+- `RadioGroup`
+- `ResizeObserver`
+- `Segment`
+- `Select`
+- `Skeleton`
+- `Slider`
 - `Space`
 - `Spinner`
+- `Step`
+- `Switch`
+- `Table`
+- `VirtualTable`
+- `Tabs`
 - `Tag`
 - `Tooltip`
+- `Tour`
+- `Trigger`
+- `Typography`
+- `Upload`
+- `UploadFileBar`
+- `VirtualList`
 
-The package manifest also defines additional subpath exports for published builds.
+The package manifest also defines matching subpath exports for published builds.
 
 ## Styling
 

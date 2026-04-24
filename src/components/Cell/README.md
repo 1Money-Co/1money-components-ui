@@ -5,9 +5,9 @@ Interactive action row component for settings-style or navigation-style lists.
 ## Import
 
 ```tsx
-import { Cell } from '@1money/component-ui';
+import { Cell } from '@1money/components-ui';
 // or
-import { Cell } from '@1money/component-ui/Cell';
+import { Cell } from '@1money/components-ui/Cell';
 ```
 
 ## Usage

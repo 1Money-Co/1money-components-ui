@@ -33,5 +33,9 @@ import { Switch } from '@1money/components-ui/Switch';
 | `description` | `ReactNode` | — | Description text below the label |
 | `labelPlacement` | `'left' \| 'right'` | `'left'` | Label position relative to switch |
 | `onChange` | `(checked: boolean) => void` | — | Callback on state change |
+| `id` | `string` | — | ID forwarded to the underlying `<input>` element |
+| `name` | `string` | — | Name forwarded to the underlying `<input>` element |
+| `aria-label` | `string` | — | Accessible label for the switch |
+| `aria-labelledby` | `string` | — | ID of an element that labels the switch |
 | `prefixCls` | `string` | `'switch'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |

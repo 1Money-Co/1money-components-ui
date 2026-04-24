@@ -1,6 +1,6 @@
 # Upload
 
-A file upload component wrapping PrimeReact's FileUpload with custom styling. Includes an `UploadFileBar` sub-component for displaying uploaded file status.
+A file upload component built with a plain `<input type="file">` and a custom `Button`. Includes an `UploadFileBar` sub-component for displaying uploaded file status.
 
 ## Import
 
@@ -14,10 +14,33 @@ import { Upload, UploadFileBar } from '@1money/components-ui/Upload';
 
 ```tsx
 <Upload
-  mode="basic"
-  chooseOptions={{ label: 'Upload file', icon: () => <></> }}
-  onUpload={(e) => console.log(e.files)}
+  label="Attach document"
+  description="PDF or PNG, up to 10 MB"
+  buttonLabel="Upload file"
+  accept=".pdf,.png"
+  onSelect={(files) => console.log(files)}
 />
+```
+
+### With file list
+
+```tsx
+const [files, setFiles] = useState<File[]>([]);
+
+<Upload
+  label="Attachments"
+  onSelect={(fileList) => {
+    if (fileList) setFiles(Array.from(fileList));
+  }}
+>
+  {files.map((file) => (
+    <UploadFileBar
+      key={file.name}
+      fileName={file.name}
+      onRemove={() => setFiles((prev) => prev.filter((f) => f !== file))}
+    />
+  ))}
+</Upload>
 ```
 
 ### File Bar
@@ -31,18 +54,27 @@ import { Upload, UploadFileBar } from '@1money/components-ui/Upload';
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `btnSize` | `'small' \| 'medium' \| 'large'` | `'medium'` | Button size variant |
+| `label` | `ReactNode` | — | Label text displayed above the upload button |
+| `description` | `ReactNode` | — | Description text shown below the label |
+| `feedback` | `ReactNode` | — | Feedback/error message displayed below the file list |
+| `disabled` | `boolean` | `false` | Disables the upload button and file input |
+| `accept` | `string` | — | Accepted file types (e.g. `'.pdf,.png,image/*'`) |
+| `multiple` | `boolean` | `false` | Allow multiple file selection |
+| `buttonLabel` | `string` | `'Upload file'` | Label text rendered inside the upload button |
+| `onSelect` | `(files: FileList \| null) => void` | — | Callback invoked when files are selected |
+| `children` | `ReactNode` | — | Slot rendered below the button (e.g. `UploadFileBar` list) |
 | `prefixCls` | `string` | `'upload'` | CSS class prefix |
 | `className` | `string` | — | Additional CSS classes |
-
-All other props are forwarded to PrimeReact's `FileUpload` component.
+| `ref` | `RefObject<HTMLDivElement \| null>` | — | Ref forwarded to the wrapper `<div>` |
 
 ## UploadFileBar Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `fileName` | `string` | — | Name of the uploaded file |
-| `status` | `0 \| 1` | `0` | File status (0 = success, 1 = error) |
-| `message` | `string` | — | Error/helper message |
-| `onRemove` | `() => void` | — | Remove button callback |
+| `fileName` | `string` | — | Name of the uploaded file **(required)** |
+| `status` | `0 \| 1` | `0` | File status: `0` = success, `1` = error |
+| `message` | `string` | — | Error or helper message shown below the file name |
+| `onRemove` | `() => void` | — | Callback invoked when the remove button is clicked |
+| `className` | `string` | — | Additional CSS classes |
 | `prefixCls` | `string` | `'upload-file-bar'` | CSS class prefix |
+| `ref` | `RefObject<HTMLDivElement \| null>` | — | Ref forwarded to the wrapper `<div>` |

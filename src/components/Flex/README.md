@@ -38,7 +38,7 @@ import { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY } from '@1money/components-ui/Flex';
 | `wrap` | `boolean \| 'nowrap' \| 'wrap' \| 'wrap-reverse'` | — | Flex wrapping |
 | `align` | `'start' \| 'end' \| 'center' \| 'baseline' \| 'stretch'` | — | Align items |
 | `justify` | `'start' \| 'end' \| 'center' \| 'space-around' \| 'space-between' \| 'space-evenly'` | — | Justify content |
-| `gap` | `'small' \| 'middle' \| 'large' \| number` | `0` | Gap between items |
+| `gap` | `'small' \| 'middle' \| 'large' \| number` | — | Gap between items; defaults to `0` internally when not provided |
 | `prefixCls` | `string` | `'flex'` | CSS class prefix |
 
 This component also accepts all standard HTML div attributes.

@@ -36,8 +36,9 @@ import { Button } from '@1money/components-ui/Button';
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
+| `variant` | `'contained' \| 'text'` | `'contained'` | Visual style variant — filled or text-only |
 | `color` | `'primary' \| 'secondary' \| 'grey' \| 'black' \| 'white' \| 'danger' \| 'warning'` | `'primary'` | Color variant |
-| `size` | `'large' \| 'medium' \| 'small'` | `'medium'` | Size variant |
+| `size` | `'large' \| 'medium' \| 'small'` | `'large'` | Size variant |
 | `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Native button type |
 | `rounded` | `boolean` | `false` | Applies a pill-shaped border radius |
 | `iconStart` | `ReactNode` | — | Leading icon slot |

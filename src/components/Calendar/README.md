@@ -45,7 +45,11 @@ import { Calendar } from '@1money/components-ui/Calendar';
 | `defaultValue` | `Date \| Date[] \| null` | — | Default value (uncontrolled) |
 | `value` | `Date \| Date[] \| null` | — | Controlled value |
 | `contentWidth` | `CSSProperties['width']` | — | Custom calendar content width |
+| `placeholder` | `string` | `'MM/DD/YYYY'` | Input placeholder text |
 | `prefixCls` | `string` | `'calendar'` | CSS class prefix |
-| `className` | `string` | — | Additional CSS classes |
+| `wrapperCls` | `string` | — | Additional CSS class for the wrapper element |
+| `labelCls` | `string` | — | Additional CSS class for the label element |
+| `messageCls` | `string` | — | Additional CSS class for the message element |
+| `className` | `string` | — | Additional CSS classes for the inner input element |
 
 All other props are forwarded to PrimeReact's `Calendar` component.

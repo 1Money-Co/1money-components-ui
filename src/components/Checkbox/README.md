@@ -33,6 +33,13 @@ import { Checkbox } from '@1money/components-ui/Checkbox';
 | `description` | `ReactNode` | — | Description text displayed below the label |
 | `labelPlacement` | `'left' \| 'right'` | `'left'` | Placement of the label relative to the checkbox |
 | `onChange` | `(event: CheckboxChangeEvent) => void` | — | Callback when checked state changes |
+| `value` | `string \| number` | — | Value of the checkbox, used by `CheckboxGroup` to track selection |
+| `name` | `string` | — | Native name attribute passed to the underlying input |
+| `required` | `boolean` | `false` | Marks the checkbox as required |
+| `title` | `string` | — | Native title attribute for the element |
+| `aria-label` | `string` | — | Accessible label for the checkbox |
+| `aria-labelledby` | `string` | — | ID of an element that labels the checkbox |
+| `style` | `CSSProperties` | — | Inline styles applied to the root element |
 | `ref` | `RefObject<HTMLLabelElement \| null>` | — | Ref to the root label element |
 | `prefixCls` | `string` | `'checkbox'` | CSS class prefix |
 | `className` | `string` | `''` | Additional CSS classes |
@@ -74,5 +81,8 @@ Selected values are returned in declaration order, and `options` items can defin
 | `disabled` | `boolean` | `false` | Disables the entire group |
 | `direction` | `'horizontal' \| 'vertical'` | `'horizontal'` | Layout direction for the group |
 | `children` | `ReactNode` | — | Direct `Checkbox` children controlled by the group |
+| `title` | `string` | — | Native title attribute for the group element |
+| `aria-label` | `string` | — | Accessible label for the group |
+| `aria-labelledby` | `string` | — | ID of an element that labels the group |
 | `className` | `string` | `''` | Additional CSS classes |
 | `prefixCls` | `string` | `'checkbox-group'` | CSS class prefix |

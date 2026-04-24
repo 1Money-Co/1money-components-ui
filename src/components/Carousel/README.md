@@ -1,6 +1,6 @@
 # Carousel
 
-A diamond-shaped dot indicator for step navigation. Used as a sub-component inside Coach Mark, onboarding flows, and similar multi-step UIs.
+Dot indicator for step/slide navigation. Used as a sub-component inside Coach Mark, onboarding flows, and similar multi-step UIs.
 
 ## Import
 

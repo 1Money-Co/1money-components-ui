@@ -1,6 +1,6 @@
 # Spinner
 
-A loading spinner component used to indicate loading states and provide visual feedback to users.
+A loading spinner component used to indicate loading states and provide visual feedback to users. Supports three visual variants: a simple CSS ring (`default`), an animated Lottie logo (`brand`), and the same logo on a gradient circle background (`brand-bg`).
 
 ## Import
 
@@ -13,50 +13,46 @@ import { Spinner } from '@1money/components-ui/Spinner';
 ## Usage
 
 ```tsx
-// Basic spinner
+// Default ring spinner
 <Spinner />
 
 // Custom size
-<Spinner style={{ width: '20px', height: '20px' }} />
+<Spinner size={48} />
 
-// Custom animation duration
-<Spinner animationDuration="1s" />
+// Brand Lottie spinner
+<Spinner type="brand" />
 
-// Custom stroke width
-<Spinner strokeWidth="3" />
+// Brand spinner with title and body text
+<Spinner type="brand" title="Loading" body="Please wait a moment" />
 
-// Custom fill
-<Spinner style={{ width: '60px', height: '60px' }} fill="#E8F5E8" />
+// Brand spinner with gradient background
+<Spinner type="brand-bg" size={64} title="Setting up your account" />
 ```
 
 ## Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `prefixCls` | `string` | `'spinner'` | CSS class prefix |
+| `type` | `'default' \| 'brand' \| 'brand-bg'` | `'default'` | Spinner variant. `'default'` renders an animated CSS ring; `'brand'` renders an animated Lottie logo; `'brand-bg'` renders the logo centred on a gradient circle. |
+| `size` | `number` | `32` | Diameter in pixels. For `'brand-bg'` the logo is scaled to two-thirds of this value. |
+| `title` | `string` | — | Title text rendered below the animation. Only displayed for `'brand'` and `'brand-bg'` types. |
+| `body` | `string` | — | Body text rendered below the title. Only displayed for `'brand'` and `'brand-bg'` types. |
+| `prefixCls` | `string` | `'spinner'` | CSS class prefix used for BEM class generation. |
+| `className` | `string` | — | Additional CSS classes applied to the root element. |
+| `style` | `CSSProperties` | — | Inline styles applied to the root element (`'default'` type only). |
 
-### Inherited Props
-
-This component accepts these additional props:
-
-| Prop | Type | Description |
-|------|------|-------------|
-| `style` | `CSSProperties` | Inline styles (use `width`/`height` to control size) |
-| `className` | `string` | Additional CSS classes |
-| `strokeWidth` | `string` | Width of the spinner stroke |
-| `fill` | `string` | Fill color for the spinner background |
-| `animationDuration` | `string` | Duration of the spin animation (default `'2s'`) |
+All other standard `HTMLDivElement` attributes (except `title`) are forwarded to the root `<div>`.
 
 ## Examples
 
-### Inline Loading
+### Inline Button Loading
 
 ```tsx
 <button disabled={loading}>
   {loading ? (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <Spinner style={{ width: '16px', height: '16px' }} />
-      <span>Loading...</span>
+      <Spinner size={16} />
+      <span>Submitting…</span>
     </div>
   ) : (
     'Submit'
@@ -67,17 +63,34 @@ This component accepts these additional props:
 ### Page Loading Overlay
 
 ```tsx
-const PageLoader = ({ isLoading }) => {
+const PageLoader = ({ isLoading }: { isLoading: boolean }) => {
   if (!isLoading) return null;
 
   return (
     <div className="page-loader-overlay">
-      <Spinner
-        style={{ width: '50px', height: '50px' }}
-        strokeWidth="3"
-      />
-      <p>Loading your data...</p>
+      <Spinner size={48} />
     </div>
   );
 };
+```
+
+### Brand Spinner with Message
+
+```tsx
+<Spinner
+  type="brand"
+  size={56}
+  title="Hang tight"
+  body="We're processing your request"
+/>
+```
+
+### Brand Spinner on Gradient Background
+
+```tsx
+<Spinner
+  type="brand-bg"
+  size={80}
+  title="Setting up your account"
+/>
 ```
