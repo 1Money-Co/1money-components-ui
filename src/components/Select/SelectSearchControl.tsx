@@ -1,5 +1,5 @@
 import { forwardRef, memo } from 'react';
-import { SearchIcon } from '@/components/Icons';
+import { Icons } from '@/components/Icons';
 import type { ClassNamesFn } from '@/utils/classnames';
 import type {
   ChangeEvent,
@@ -30,7 +30,7 @@ const SelectSearchControlBase = forwardRef<HTMLInputElement, SelectSearchControl
   ) => (
     <div className={classes('search')}>
       <span className={classes('search-icon')}>
-        <SearchIcon size={20} color="currentColor" />
+        <Icons name="search" size={20} color="currentColor" />
       </span>
       <input
         ref={ref}

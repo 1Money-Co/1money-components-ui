@@ -1,6 +1,6 @@
 import { memo, useId, useState } from 'react';
 import { useControlledState, useEventCallback } from '@1money/hooks';
-import { HideBalanceIcon, ViewBalanceIcon } from '@/components/Icons';
+import { Icons } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import { FieldShell } from '../FieldShell';
 import { useSyncRef } from '../useSyncRef';
@@ -15,8 +15,8 @@ export const InputPassword: FC<InputPasswordProps> = (props) => {
     status = 'default',
     disabled = false,
     visibilityToggle = true,
-    showIcon = <HideBalanceIcon size={16} />,
-    hideIcon = <ViewBalanceIcon size={16} />,
+    showIcon = <Icons name="hideBalance" size={16} />,
+    hideIcon = <Icons name="viewBalance" size={16} />,
     label,
     info,
     feedback,

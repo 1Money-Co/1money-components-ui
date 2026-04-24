@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icons renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <i
+        class="om-component-ui-icons-wrapper"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
+      >
+        <svg
+          class="om-component-ui-icons"
+          fill="none"
+          height="24"
+          preserveAspectRatio="xMidYMid meet"
+          shape-rendering="geometricPrecision"
+          stroke="none"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="Deposit Fiat Crypto"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M11 1V11.0711L7.96447 8.03553L6.55025 9.44975L11.2929 14.1924L12 14.8995L12.7071 14.1924L17.4497 9.44975L16.0355 8.03553L13 11.0711V1H11ZM16.5 18V16H7.5V18H16.5ZM3 12C3 9.05657 4.41194 6.4432 6.5997 4.79949L5.39835 3.20051C2.72943 5.20572 1 8.40104 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 8.40104 21.2706 5.20572 18.6017 3.20051L17.4003 4.79949C19.5881 6.4432 21 9.05657 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+              fill-rule="evenodd"
+              id="Union"
+            />
+          </g>
+        </svg>
+      </i>
+    </div>
+    <div>
+      <i
+        class="om-component-ui-icons-wrapper"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
+      >
+        <svg
+          class="om-component-ui-icons"
+          fill="none"
+          height="24"
+          preserveAspectRatio="xMidYMid meet"
+          shape-rendering="geometricPrecision"
+          stroke="none"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </i>
+    </div>
+  </body>,
+  "container": <div>
+    <i
+      class="om-component-ui-icons-wrapper"
+      style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
+    >
+      <svg
+        class="om-component-ui-icons"
+        fill="none"
+        height="24"
+        preserveAspectRatio="xMidYMid meet"
+        shape-rendering="geometricPrecision"
+        stroke="none"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          id="Deposit Fiat Crypto"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M11 1V11.0711L7.96447 8.03553L6.55025 9.44975L11.2929 14.1924L12 14.8995L12.7071 14.1924L17.4497 9.44975L16.0355 8.03553L13 11.0711V1H11ZM16.5 18V16H7.5V18H16.5ZM3 12C3 9.05657 4.41194 6.4432 6.5997 4.79949L5.39835 3.20051C2.72943 5.20572 1 8.40104 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 8.40104 21.2706 5.20572 18.6017 3.20051L17.4003 4.79949C19.5881 6.4432 21 9.05657 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+            fill-rule="evenodd"
+            id="Union"
+          />
+        </g>
+      </svg>
+    </i>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Icons renders correctly 2`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <i
+        class="om-component-ui-icons-wrapper"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
+      >
+        <svg
+          class="om-component-ui-icons"
+          fill="none"
+          height="24"
+          preserveAspectRatio="xMidYMid meet"
+          shape-rendering="geometricPrecision"
+          stroke="none"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            id="Deposit Fiat Crypto"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M11 1V11.0711L7.96447 8.03553L6.55025 9.44975L11.2929 14.1924L12 14.8995L12.7071 14.1924L17.4497 9.44975L16.0355 8.03553L13 11.0711V1H11ZM16.5 18V16H7.5V18H16.5ZM3 12C3 9.05657 4.41194 6.4432 6.5997 4.79949L5.39835 3.20051C2.72943 5.20572 1 8.40104 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 8.40104 21.2706 5.20572 18.6017 3.20051L17.4003 4.79949C19.5881 6.4432 21 9.05657 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+              fill-rule="evenodd"
+              id="Union"
+            />
+          </g>
+        </svg>
+      </i>
+    </div>
+    <div>
+      <i
+        class="om-component-ui-icons-wrapper"
+        style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
+      >
+        <svg
+          class="om-component-ui-icons"
+          fill="none"
+          height="24"
+          preserveAspectRatio="xMidYMid meet"
+          shape-rendering="geometricPrecision"
+          stroke="none"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </i>
+    </div>
+  </body>,
+  "container": <div>
+    <i
+      class="om-component-ui-icons-wrapper"
+      style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 24px; --icon-height: 24px;"
+    >
+      <svg
+        class="om-component-ui-icons"
+        fill="none"
+        height="24"
+        preserveAspectRatio="xMidYMid meet"
+        shape-rendering="geometricPrecision"
+        stroke="none"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </i>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -270,7 +270,7 @@
           "source": "readme"
         },
         {
-          "hash": "05717fb84522993ea86a1295a654c812fe4de71b24eacb8657ec875518efde6a",
+          "hash": "bad68aaa47c4d8c9f976f817b5edbef7ff8573f469f9a1bc5bc53482ff65b38e",
           "source": "readme"
         },
         {
@@ -366,73 +366,6 @@
       "examples": [
         {
           "hash": "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "ArrowLeftIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/functional.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
           "source": "canonical"
         }
       ]
@@ -763,74 +696,6 @@
       ]
     },
     {
-      "name": "CanonicalIconName",
-      "kind": "type",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/types.ts",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "typeText": "(typeof canonicalIconNames)[number]",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "Carousel",
       "kind": "component",
       "category": "display",
@@ -1023,14 +888,14 @@
       "searchTags": [
         "card"
       ],
-      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
+      "canonicalUsage": "import { Cell } from '@1money/components-ui';\n// or\nimport { Cell } from '@1money/components-ui/Cell';",
       "examples": [
         {
-          "hash": "a5ae14150d1724de4984c10921713734e86d15771efe397f3015a01c77d13676",
+          "hash": "c87555ab10e8a41bf2ce44d458d0c8d8df9f58151f64bb7a4c1edcec5ae0dbcd",
           "source": "canonical"
         },
         {
-          "hash": "2cca976a647db275dfb45ce8bb53bc85d304e49c3d91f76e5987d11e95b604c1",
+          "hash": "c37dda6e47f4681c24203fbf4f154801673c331d4394707e6c12c5b07eb3953b",
           "source": "readme"
         },
         {
@@ -1066,77 +931,10 @@
       ],
       "searchTags": [],
       "typeText": "interface CellProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> { ... }",
-      "canonicalUsage": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
+      "canonicalUsage": "import { Cell } from '@1money/components-ui';\n// or\nimport { Cell } from '@1money/components-ui/Cell';",
       "examples": [
         {
-          "hash": "a5ae14150d1724de4984c10921713734e86d15771efe397f3015a01c77d13676",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "CheckIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/functional.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "c87555ab10e8a41bf2ce44d458d0c8d8df9f58151f64bb7a4c1edcec5ae0dbcd",
           "source": "canonical"
         }
       ]
@@ -1624,140 +1422,6 @@
       ]
     },
     {
-      "name": "ChevronLeftIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/functional.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "ChevronRightIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/functional.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "CoachMark",
       "kind": "component",
       "category": "overlay",
@@ -1893,7 +1557,7 @@
           "source": "readme"
         },
         {
-          "hash": "bea3fd79a9ce5be5ed4038daa57612f962de2b1b334870a215966790b6a5c1f5",
+          "hash": "fc9a7422a1bd65a99442277ecc3a078de35b6d7347c17ebe9cd83cdf379e54a7",
           "source": "readme"
         },
         {
@@ -2225,77 +1889,10 @@
       ],
       "searchTags": [],
       "typeText": "interface CreateProFormFieldConfig { ... }",
-      "canonicalUsage": "import type { CreateProFormFieldConfig } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "a95b0ad034e07b035fd0d4b861b4bb29fe68e7e04c8f0d3541178f4e15b7b0d1",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "CrossIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/functional.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -2546,11 +2143,19 @@
         "dialog",
         "modal"
       ],
-      "canonicalUsage": "<Dialog />",
+      "canonicalUsage": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
       "examples": [
         {
-          "hash": "4389223d4dd418331dd628d1bb657512018df7b6124067044b1b577c26853c32",
+          "hash": "e12204d81d25fedea606df0af41590ad6f951ad6a9c87fbb04b46d113a83c01c",
           "source": "canonical"
+        },
+        {
+          "hash": "faa015d00f4f1ec9d43a4988251943c30d43285aadf14ee9d2c82d7fa4b0024f",
+          "source": "readme"
+        },
+        {
+          "hash": "341d33a3398e2a18e0d6bd76c9602a448d9a775132d0ccb1e3591038cec0fa5c",
+          "source": "readme"
         },
         {
           "hash": "deac1f8bf34d4c1fa4d9d7bcf9bb8f258a87481df55c9c7d02d45ec6766aef71",
@@ -2575,10 +2180,10 @@
       ],
       "searchTags": [],
       "typeText": "(\n  cancelButton: ReactNode,\n  okButton: ReactNode,\n) => ReactNode",
-      "canonicalUsage": "import type { DialogFooterRender } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
       "examples": [
         {
-          "hash": "ca3b9b0ee348c09e621b11cf2534f5d42546ed5004f5f00f042b20c9ca6a7548",
+          "hash": "e12204d81d25fedea606df0af41590ad6f951ad6a9c87fbb04b46d113a83c01c",
           "source": "canonical"
         }
       ]
@@ -2721,10 +2326,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<DialogForm />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "5a95c3048a0d4147931cea1f357e39f808578b8e0f072baa127124f6004cef1d",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -2793,10 +2398,10 @@
       ],
       "searchTags": [],
       "typeText": "interface DialogFormProps extends Omit<ProFormProps, 'title'> { ... }",
-      "canonicalUsage": "import type { DialogFormProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "03d4e0cef5922bd9d1c1934b5b1c8af440c30f7e1ae1f7f31d755dd518639b6c",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -2818,10 +2423,10 @@
       ],
       "searchTags": [],
       "typeText": "interface DialogProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title' | 'onCancel'> { ... }",
-      "canonicalUsage": "import type { DialogProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
       "examples": [
         {
-          "hash": "d07754a416050437d6b99b5541fa4eb847f75facc92eb9f9427194d138408140",
+          "hash": "e12204d81d25fedea606df0af41590ad6f951ad6a9c87fbb04b46d113a83c01c",
           "source": "canonical"
         }
       ]
@@ -2843,10 +2448,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DIALOG_SIZES)[number]",
-      "canonicalUsage": "import type { DialogSize } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
       "examples": [
         {
-          "hash": "3fed6ca7982c867ccd1b2b58023950f8365462d92b44c75722551d4d3127c8bb",
+          "hash": "e12204d81d25fedea606df0af41590ad6f951ad6a9c87fbb04b46d113a83c01c",
           "source": "canonical"
         }
       ]
@@ -3270,11 +2875,19 @@
         "drawer",
         "side panel"
       ],
-      "canonicalUsage": "<Drawer />",
+      "canonicalUsage": "import { Drawer } from '@1money/components-ui';\n// or\nimport { Drawer } from '@1money/components-ui/Drawer';",
       "examples": [
         {
-          "hash": "0eccd89d4848e5f239f204a25e0a5afbc08ea70a21eb5403bc608a3da6da85ad",
+          "hash": "cb112d23d742e359bb073b630230b53ccd7362c90ce29f033223143742f4687a",
           "source": "canonical"
+        },
+        {
+          "hash": "4cc41ff919669138b7ad66655a256cd5a3885bd739764784d8a5de068b87beb3",
+          "source": "readme"
+        },
+        {
+          "hash": "71d241ed07b5a8c1aaa432bcff2fb9f72af207e1c7f5aa4023ac2359f926be9e",
+          "source": "readme"
         },
         {
           "hash": "7fcff23beb3f8649dd3c8e6b827035a4838bd0ceb71aec2a6debfbd16fc7d1f8",
@@ -3432,10 +3045,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<DrawerForm />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "9a5aa0a4875e686c1a64a1085ed22b25ebf5849ebf8bf0cd0fb6376c887729ab",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -3504,10 +3117,10 @@
       ],
       "searchTags": [],
       "typeText": "interface DrawerFormProps extends Omit<ProFormProps, 'title'> { ... }",
-      "canonicalUsage": "import type { DrawerFormProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "87dd752d00210f310d98413fe703cdc2d1dd610bd62efc974185675ea4f82d78",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -3528,10 +3141,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof DRAWER_PLACEMENTS)[number]",
-      "canonicalUsage": "import type { DrawerPlacement } from '@1money/component-ui';",
+      "canonicalUsage": "import { Drawer } from '@1money/components-ui';\n// or\nimport { Drawer } from '@1money/components-ui/Drawer';",
       "examples": [
         {
-          "hash": "77b3bac4d9e36462c300020fa400a7cfe5bc7aa77bd896162f48c5d77a0ada23",
+          "hash": "cb112d23d742e359bb073b630230b53ccd7362c90ce29f033223143742f4687a",
           "source": "canonical"
         }
       ]
@@ -3552,10 +3165,10 @@
       ],
       "searchTags": [],
       "typeText": "interface DrawerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'title'> { ... }",
-      "canonicalUsage": "import type { DrawerProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Drawer } from '@1money/components-ui';\n// or\nimport { Drawer } from '@1money/components-ui/Drawer';",
       "examples": [
         {
-          "hash": "87df6d0f746b9be426eb490a25c877d56ac0252bcbdc0d69fa90260397387d4c",
+          "hash": "cb112d23d742e359bb073b630230b53ccd7362c90ce29f033223143742f4687a",
           "source": "canonical"
         }
       ]
@@ -3592,11 +3205,19 @@
         "dropdown menu",
         "menu"
       ],
-      "canonicalUsage": "<Dropdown />",
+      "canonicalUsage": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
       "examples": [
         {
-          "hash": "d6d63abfec53aafed291131ef3a163dafcf0b09dbf5655a9457e4a8c5e75868e",
+          "hash": "d2d7be30524d06f99a66b1ee9375fa33501fcff7421d697bce934b4c6a79e4c1",
           "source": "canonical"
+        },
+        {
+          "hash": "ffcdb76bb3216c346fc3ce624448bb8e51a3677f3fd96c8ed18c264f52ed6e31",
+          "source": "readme"
+        },
+        {
+          "hash": "59a4bace5950d3f3aaef19cc61af7ddab1440a4220c81a0f60b0276728d5ab88",
+          "source": "readme"
         },
         {
           "hash": "49fefb1f1d8145921b4b4e7c674411c0a6ca5a63d9c22a60a5e82735ab251e86",
@@ -3678,10 +3299,10 @@
       ],
       "searchTags": [],
       "typeText": "TriggerProps['content']",
-      "canonicalUsage": "import type { DropdownContent } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
       "examples": [
         {
-          "hash": "f54ff3b0b6680cdec37c94acb43bf7f58648670a16b6c7be3cd82ca792d177fd",
+          "hash": "d2d7be30524d06f99a66b1ee9375fa33501fcff7421d697bce934b4c6a79e4c1",
           "source": "canonical"
         }
       ]
@@ -3704,10 +3325,10 @@
       ],
       "searchTags": [],
       "typeText": "TriggerContentContext",
-      "canonicalUsage": "import type { DropdownContentContext } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
       "examples": [
         {
-          "hash": "cc02e88440947a6233796037b3d5c91a08dccc0fbd6048c0d19e0c449e82dc73",
+          "hash": "d2d7be30524d06f99a66b1ee9375fa33501fcff7421d697bce934b4c6a79e4c1",
           "source": "canonical"
         }
       ]
@@ -3730,10 +3351,10 @@
       ],
       "searchTags": [],
       "typeText": "interface DropdownProps extends Omit<TriggerProps, 'trigger'> { ... }",
-      "canonicalUsage": "import type { DropdownProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
       "examples": [
         {
-          "hash": "c539c466c34edf9adf7a91c4b2d933518b120bce2cce74457c78e0579e6f91b5",
+          "hash": "d2d7be30524d06f99a66b1ee9375fa33501fcff7421d697bce934b4c6a79e4c1",
           "source": "canonical"
         }
       ]
@@ -3756,10 +3377,10 @@
       ],
       "searchTags": [],
       "typeText": "'click' | 'hover'",
-      "canonicalUsage": "import type { DropdownTrigger } from '@1money/component-ui';",
+      "canonicalUsage": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
       "examples": [
         {
-          "hash": "eded2f3304b55730029801800edc5a3c7449e2643b4b52dbc06d117d3fa78b9c",
+          "hash": "d2d7be30524d06f99a66b1ee9375fa33501fcff7421d697bce934b4c6a79e4c1",
           "source": "canonical"
         }
       ]
@@ -3878,73 +3499,6 @@
       "examples": [
         {
           "hash": "ef6129271a1cc811da6f293b9cb03f5514e410a9c60c0abec3e045e6376745b1",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "ErrorIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/primary.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
           "source": "canonical"
         }
       ]
@@ -4145,10 +3699,10 @@
       ],
       "searchTags": [],
       "typeText": "interface FormCoreInstance { ... }",
-      "canonicalUsage": "import type { FormCoreInstance } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "9c4b5f475fd76261b4364f04f169997152a1ceea87575298d7a413fd0a551085",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -4217,10 +3771,10 @@
       ],
       "searchTags": [],
       "typeText": "interface FormInstance { ... }",
-      "canonicalUsage": "import type { FormInstance } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "3b0609d66de90d74188d6f4ab20aa01fa0063b08806f15b90448a4dd7ff49fe2",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -4289,10 +3843,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof FORM_LAYOUTS)[number]",
-      "canonicalUsage": "import type { FormLayout } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "487a87a540c310c3a95d1656126aa0686d4ce8932394b10ef7be463bd2139b11",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -4361,10 +3915,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof FORM_SIZES)[number]",
-      "canonicalUsage": "import type { FormSize } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "4382388bcd674e464f60d818049720fa134a38574be7255cff59425e9d027d63",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -4485,213 +4039,55 @@
       ]
     },
     {
-      "name": "HideBalanceIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/system.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "Icon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/Icon.tsx",
-      "props": [
-        {
-          "name": "name",
-          "type": "IconName",
-          "optional": false,
-          "default": null,
-          "description": "",
-          "inheritedFrom": null
-        }
-      ],
-      "extends": [
-        "BaseIconProps"
-      ],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "IconHover",
       "kind": "component",
       "category": "display",
       "summary": "",
       "importPath": "@1money/component-ui",
       "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/primitives/IconHover.tsx",
-      "props": [],
-      "extends": [],
+      "sourceFile": "src/components/Icons/Wrapper.tsx",
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "prefixCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        }
+      ],
+      "extends": [
+        "Omit<HTMLAttributes<HTMLDivElement>, 'prefix'>"
+      ],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHoverProps",
         "IconName",
-        "IconProps",
         "IconWrapper",
         "IconWrapperProps",
         "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "IconsProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4703,63 +4099,23 @@
       "summary": "",
       "importPath": "@1money/component-ui",
       "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/primitives/interface.ts",
+      "sourceFile": "src/components/Icons/interface.ts",
       "props": [],
       "extends": [],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHover",
         "IconName",
-        "IconProps",
         "IconWrapper",
         "IconWrapperProps",
         "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "IconsProps"
       ],
       "searchTags": [],
       "typeText": "interface IconHoverProps extends Omit<HTMLAttributes<HTMLDivElement>, 'prefix'> { ... }",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4771,131 +4127,23 @@
       "summary": "",
       "importPath": "@1money/component-ui",
       "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/types.ts",
+      "sourceFile": "src/components/Icons/Icons.tsx",
       "props": [],
       "extends": [],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHover",
         "IconHoverProps",
-        "IconProps",
         "IconWrapper",
         "IconWrapperProps",
         "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "IconsProps"
       ],
       "searchTags": [],
-      "typeText": "CanonicalIconName",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "typeText": "keyof typeof IconList",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IconProps",
-      "kind": "type",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/interface.ts",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "typeText": "interface IconProps extends BaseIconProps { ... }",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4907,62 +4155,151 @@
       "summary": "",
       "importPath": "@1money/component-ui",
       "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/primitives/IconWrapper.tsx",
-      "props": [],
+      "sourceFile": "src/components/Icons/Wrapper.tsx",
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "style",
+          "type": "CSSProperties",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "wrapperCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "prefixCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "size",
+          "type": "number | `${number}`",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "width",
+          "type": "number | `${number}`",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "height",
+          "type": "number | `${number}`",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "viewBox",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "fill",
+          "type": "boolean",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "stroke",
+          "type": "boolean",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "ariaLabel",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "tabIndex",
+          "type": "number",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "onClick",
+          "type": "(e: MouseEvent<HTMLElement>) => any",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        },
+        {
+          "name": "onKeyDown",
+          "type": "(e: KeyboardEvent<HTMLElement>) => any",
+          "optional": true,
+          "default": null,
+          "description": "",
+          "inheritedFrom": null
+        }
+      ],
       "extends": [],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHover",
         "IconHoverProps",
         "IconName",
-        "IconProps",
         "IconWrapperProps",
         "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "IconsProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -4974,63 +4311,23 @@
       "summary": "",
       "importPath": "@1money/component-ui",
       "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/primitives/interface.ts",
+      "sourceFile": "src/components/Icons/interface.ts",
       "props": [],
       "extends": [],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHover",
         "IconHoverProps",
         "IconName",
-        "IconProps",
         "IconWrapper",
         "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "IconsProps"
       ],
       "searchTags": [],
       "typeText": "interface IconWrapperProps { ... }",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -5045,55 +4342,15 @@
       "sourceFile": "src/components/Icons/Icons.tsx",
       "props": [],
       "extends": [
-        "IconProps"
+        "IconWrapperProps"
       ],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHover",
         "IconHoverProps",
         "IconName",
-        "IconProps",
         "IconWrapper",
         "IconWrapperProps",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "IconsProps"
       ],
       "searchTags": [
         "icon"
@@ -5101,16 +4358,16 @@
       "memberMap": {},
       "examples": [
         {
-          "hash": "0b707df089538a3a4f0f7d9fbe136625806044098f7d3f4e2ed84889b27634ef",
+          "hash": "c5260837fe7728fca505a762c48a8ede3b34d472c53b2be29b29a49de267418d",
           "source": "readme"
         },
         {
-          "hash": "371e24636c998f789b2003ee3f8097874e1ad9274d29b7fc059202d33c4ed68e",
+          "hash": "4a5e5cef011be8e4312b7e27e13d519193ffe35d681413267098a0f06182c9d9",
           "source": "readme"
         },
         {
-          "hash": "cd8832b40b359a75929b8e7f17192a66cbf85c7fdc424c4d1b3fd2cb736bb5ce",
-          "source": "stories"
+          "hash": "90952e793cfea81bc8613eaed2e1b60208c06b4e98ce6f0cc5a254619af9e93f",
+          "source": "readme"
         },
         {
           "hash": "25c5df1e3c4d654a48016148beb792280ff11859280c9f51c6c226b15ab3becf",
@@ -5145,863 +4402,19 @@
       "props": [],
       "extends": [],
       "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
         "IconHover",
         "IconHoverProps",
         "IconName",
-        "IconProps",
         "IconWrapper",
         "IconWrapperProps",
-        "Icons",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
+        "Icons"
       ],
       "searchTags": [],
-      "typeText": "interface IconsProps extends IconProps { ... }",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
+      "typeText": "interface IconsProps extends IconWrapperProps { ... }",
+      "canonicalUsage": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "examples": [
         {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "Illus2FA",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusAddAccount",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusChecked",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusEmailError",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusError",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusID",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusLinkExpired",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusLocked",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusPasskey",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusPending",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusRegionNotSupported",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "IllusVerification",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/illustrations/Illustrations.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5",
           "source": "canonical"
         }
       ]
@@ -6129,7 +4542,7 @@
           "source": "readme"
         },
         {
-          "hash": "8217407dd420ce682fb91f9e1bba564e90bed8d67c39533ac62c057b69593987",
+          "hash": "398c56e66e36d3ab3b61b257b2bc0522eb642f46f8bcb939b5c59ff543449dc7",
           "source": "readme"
         },
         {
@@ -6513,10 +4926,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof LABEL_ALIGNS)[number]",
-      "canonicalUsage": "import type { LabelAlign } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "b5058892460d3456a042642b413b9da4a784488bd7e21f991f40aea1d5d14a93",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -6598,14 +5011,14 @@
       "searchTags": [
         "link"
       ],
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "canonicalUsage": "import { Link } from '@1money/components-ui';\n// or\nimport { Link } from '@1money/components-ui/Link';",
       "examples": [
         {
-          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
+          "hash": "6c0a39263e45288c6f9a62e5fb3169389da1c8d69bd0092467335b58cf40b2ab",
           "source": "canonical"
         },
         {
-          "hash": "b5122ab00632d0b9f9f205345094b8cc87d3de0e265bfa06f77f8c0538a72a4a",
+          "hash": "08d86e1e9a9ccea86e7168af88595e9da0ef259cf44907a5be70520cdb1e4a4a",
           "source": "readme"
         },
         {
@@ -6651,10 +5064,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof LINK_COLORS)[number]",
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "canonicalUsage": "import { Link } from '@1money/components-ui';\n// or\nimport { Link } from '@1money/components-ui/Link';",
       "examples": [
         {
-          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
+          "hash": "6c0a39263e45288c6f9a62e5fb3169389da1c8d69bd0092467335b58cf40b2ab",
           "source": "canonical"
         }
       ]
@@ -6676,10 +5089,10 @@
       ],
       "searchTags": [],
       "typeText": "interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> { ... }",
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "canonicalUsage": "import { Link } from '@1money/components-ui';\n// or\nimport { Link } from '@1money/components-ui/Link';",
       "examples": [
         {
-          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
+          "hash": "6c0a39263e45288c6f9a62e5fb3169389da1c8d69bd0092467335b58cf40b2ab",
           "source": "canonical"
         }
       ]
@@ -6701,479 +5114,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof LINK_SIZES)[number]",
-      "canonicalUsage": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
+      "canonicalUsage": "import { Link } from '@1money/components-ui';\n// or\nimport { Link } from '@1money/components-ui/Link';",
       "examples": [
         {
-          "hash": "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "Logo",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "LogoBeta",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "LogoBg",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "LogoNetwork",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "LogoWithBeta",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "LogoWithWords",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "LogoWord",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/logos/Logo.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "6c0a39263e45288c6f9a62e5fb3169389da1c8d69bd0092467335b58cf40b2ab",
           "source": "canonical"
         }
       ]
@@ -7230,10 +5174,10 @@
         "NavigationProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         }
       ]
@@ -7258,10 +5202,10 @@
       ],
       "searchTags": [],
       "typeText": "interface NavItem { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         }
       ]
@@ -7286,10 +5230,10 @@
       ],
       "searchTags": [],
       "typeText": "interface NavProps { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         }
       ]
@@ -7412,18 +5356,22 @@
       "searchTags": [
         "menu"
       ],
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         },
         {
-          "hash": "e1a8744a63bb83a89bcb9eda48e6f3874777ee0c7821e132cc555d0bf0998f0b",
+          "hash": "af64339337cb6c9e4dfce14392faeb67ee7ab5b4fd60c434ee58ce8db56705c2",
           "source": "readme"
         },
         {
-          "hash": "96f9cfe7a3579cf1c7ff57afe66be83040e23794844ce4d35758cae32e1c7cdb",
+          "hash": "8129a087395157c8e93b214d9f280f542658a37d2d8aa6ea5e2561bf7d128925",
+          "source": "readme"
+        },
+        {
+          "hash": "c7adce2c978836debb618dc91c44c12df9f50836e6ff9994fe3822dd48caef5a",
           "source": "readme"
         },
         {
@@ -7452,10 +5400,10 @@
       ],
       "searchTags": [],
       "typeText": "interface NavigationHandlers { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         }
       ]
@@ -7480,10 +5428,10 @@
       ],
       "searchTags": [],
       "typeText": "interface NavigationItem { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         }
       ]
@@ -7508,144 +5456,10 @@
       ],
       "searchTags": [],
       "typeText": "interface NavigationProps { ... }",
-      "canonicalUsage": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
-          "hash": "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "NotificationErrorIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/notification.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "NotificationInfoIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/notification.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
           "source": "canonical"
         }
       ]
@@ -7854,140 +5668,6 @@
       ]
     },
     {
-      "name": "NotificationSuccessIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/notification.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "NotificationWarningIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/notification.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "Pagination",
       "kind": "component",
       "category": "navigation",
@@ -8031,11 +5711,19 @@
         "pager",
         "pagination"
       ],
-      "canonicalUsage": "<Pagination />",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "c614ee8b96a68d951bd7d9eb5c0f2a5c3be262fa670d2d245894f0a91deb000d",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
+        },
+        {
+          "hash": "65c3343037038d0c10d4369de3281ebadf175b42ba5afe9bf9ae5c490d587003",
+          "source": "readme"
+        },
+        {
+          "hash": "79558ccf329b5a0a64542b9d04634e06f6c86aacf2756dd972da85a7a6d9dda7",
+          "source": "readme"
         }
       ]
     },
@@ -8061,10 +5749,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationControlItem extends PaginationItemBase { ... }",
-      "canonicalUsage": "import type { PaginationControlItem } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "528ab6afb943c07fe6e0c68fe3bda683e292529a705bd2d968f4c5dfed7e3a83",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -8091,10 +5779,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationEllipsisItem extends PaginationItemBase { ... }",
-      "canonicalUsage": "import type { PaginationEllipsisItem } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "5eab08235fada880deb893a45f8e307f765861578cd95522dc38da0053be3353",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -8121,10 +5809,10 @@
       ],
       "searchTags": [],
       "typeText": "| PaginationPageItem\n  | PaginationControlItem\n  | PaginationEllipsisItem",
-      "canonicalUsage": "import type { PaginationItem } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "0f978c9e8cebacc672d00e70889ae1fb18b0d5a39b29dc3e53b0d53ab04aedf1",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -8151,10 +5839,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationPageItem extends PaginationItemBase { ... }",
-      "canonicalUsage": "import type { PaginationPageItem } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "ec48d516a07ba5085b42c5936ddd4094b99978b593ccd77f2840587b3c15fe54",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -8181,10 +5869,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PaginationProps extends Omit<HTMLAttributes<HTMLElement>, 'onChange'>, UsePaginationOptions { ... }",
-      "canonicalUsage": "import type { PaginationProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "eebcc41c1f2c8421eb9925d8e4befdff5d0d9a0ac7ce205ace525ed07ee9f647",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -8507,11 +6195,19 @@
         "PortalProps"
       ],
       "searchTags": [],
-      "canonicalUsage": "<Portal />",
+      "canonicalUsage": "import { Portal } from '@1money/components-ui';\n// or\nimport { Portal } from '@1money/components-ui/Portal';",
       "examples": [
         {
-          "hash": "c145e8864a44d06820814a82b0d0e2e486e772f015830b8cc626831e2e025878",
+          "hash": "c53ede8df4b95ea3a84f4272cdde631bf1281322de0a44bfa5d9f4ac16ed9618",
           "source": "canonical"
+        },
+        {
+          "hash": "9c99f80f5636ab539416d2c5c60a083a9d43acd5938644b959803204f9470ac1",
+          "source": "readme"
+        },
+        {
+          "hash": "c1047979ec6d13e1fe99d24583dd1657985cf01fbfbda4dbeeb51919a33a743d",
+          "source": "readme"
         }
       ]
     },
@@ -8531,10 +6227,10 @@
       ],
       "searchTags": [],
       "typeText": "Element | (() => Element | null) | null",
-      "canonicalUsage": "import type { PortalContainer } from '@1money/component-ui';",
+      "canonicalUsage": "import { Portal } from '@1money/components-ui';\n// or\nimport { Portal } from '@1money/components-ui/Portal';",
       "examples": [
         {
-          "hash": "4bfe9b50aecfd9832aab22cf2c5dc3bea89aeaba7934e60fe4e7a9d8c3ce823b",
+          "hash": "c53ede8df4b95ea3a84f4272cdde631bf1281322de0a44bfa5d9f4ac16ed9618",
           "source": "canonical"
         }
       ]
@@ -8555,10 +6251,10 @@
       ],
       "searchTags": [],
       "typeText": "interface PortalProps { ... }",
-      "canonicalUsage": "import type { PortalProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Portal } from '@1money/components-ui';\n// or\nimport { Portal } from '@1money/components-ui/Portal';",
       "examples": [
         {
-          "hash": "1856eecdadbccda4468f63edff75ac60c746187efb7df1f7699540bec7ce4929",
+          "hash": "c53ede8df4b95ea3a84f4272cdde631bf1281322de0a44bfa5d9f4ac16ed9618",
           "source": "canonical"
         }
       ]
@@ -8855,6 +6551,14 @@
       },
       "examples": [
         {
+          "hash": "29e2310b26c2aecedef7a08fdce046f6fada2887312516d227bf0467d9691185",
+          "source": "readme"
+        },
+        {
+          "hash": "e95a0d0355599d90e5a8f3e2157c5f59f2ee97f9c77cde6b856ca73e439ba89d",
+          "source": "readme"
+        },
+        {
           "hash": "d9c8c640f134945ee1c690fc09f249d48531b5e05729faa4795d7411a8b3bc4e",
           "source": "stories"
         },
@@ -9067,10 +6771,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormCheckbox />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "af895efcacf8986532f0595254021a9fc61222edede0123afbd36e0ca9de61bc",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9138,10 +6842,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormCheckboxGroup />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "c4fb3c20755ba50100856ee70fc3b85038d8c04bef80a4aec58734e95995d8a8",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9210,10 +6914,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormColProps { ... }",
-      "canonicalUsage": "import type { ProFormColProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "93b1291462e3499dc53cfc59ff3a287c0beb68213b4eb563c88cc64ce2158ba8",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9282,10 +6986,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormContextValue { ... }",
-      "canonicalUsage": "import type { ProFormContextValue } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "799a697a88c95889b4c090d62789d89c9f7e92453d3a048ccb28e552fbe17b5b",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9356,10 +7060,10 @@
         "date input",
         "date picker"
       ],
-      "canonicalUsage": "<ProFormDatePicker />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "546ef2d886471f0e410921f3ca3fa1ec2db5d4bed5ff1902bc190d0d87c75054",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9452,10 +7156,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormDependency name={[]}>{() => {}}</ProFormDependency>",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "c61edd4d5f5113671afbb2b5ce72b88a70f64bf63d8e320cd21c669831574cd1",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9524,10 +7228,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormDependencyProps { ... }",
-      "canonicalUsage": "import type { ProFormDependencyProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "fee60afafe32035844a3102b3d30152024652c2b12eb46104b0dfb5c8026dc26",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9596,10 +7300,10 @@
       ],
       "searchTags": [],
       "typeText": "(\n  value: unknown,\n  name: string,\n) => unknown",
-      "canonicalUsage": "import type { ProFormFieldConvertValueFn } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "db1561752135c60ff5a677102a19f86d01a79b50a6824699a9c6fe7a9ead392f",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9668,10 +7372,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormFieldProps { ... }",
-      "canonicalUsage": "import type { ProFormFieldProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "f83a21f43532c533551423571b437ae45b5e8e0ff76b9b783f68587c6b9a7e8d",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9812,10 +7516,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormFieldSet />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "83f9c4b31401922ddc84d60264badd258d516373ccfc2b81813bf57f5c7a1e5a",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9884,10 +7588,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormFieldSetProps { ... }",
-      "canonicalUsage": "import type { ProFormFieldSetProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "2d7f3d765471e161eebea75b1e1a3270b8a6b415b29bbead4e0362770a9eef3b",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -9956,10 +7660,10 @@
       ],
       "searchTags": [],
       "typeText": "(\n  value: unknown,\n  name: string,\n  allValues: Record<string, unknown>,\n) => unknown",
-      "canonicalUsage": "import type { ProFormFieldTransformFn } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "4a0586bd3c33f563c7de439b2edc169e9d921c2f9f7fb0c72e411af2d0637fa5",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10028,10 +7732,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormFormInstance extends FormInstance { ... }",
-      "canonicalUsage": "import type { ProFormFormInstance } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "43e86173eaa57a1ad76a23b43ba3b90b40e118c2d4885e13b759adc68c95f5a8",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10164,10 +7868,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormGroup />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "784dd70341f79c53f5d9474c553dbaa803f65c317904a95d6b511fd57dcff804",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10236,10 +7940,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormGroupProps { ... }",
-      "canonicalUsage": "import type { ProFormGroupProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "421c6af797703e115fd55a10242e5ac801283d4eb80d5409fc997c7d9c730393",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10476,10 +8180,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormItem />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "bea04481c1d6a537bdee648094a468c0153ef005defd5762fd0568a7312f0b71",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10548,10 +8252,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormItemProps { ... }",
-      "canonicalUsage": "import type { ProFormItemProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "043dd268dff2f5670f3ab2c4c19161fec1e9322d74c3151a062126f0e295a632",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10740,10 +8444,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormList name=\"name\" />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "85bd84178bbfcd56c92db6d690a33530c91f2485e3d9d27441e33fdf838e377f",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10812,10 +8516,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormListAction { ... }",
-      "canonicalUsage": "import type { ProFormListAction } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "711c445955f338d909c2ca767156df860542cbd4c4a2dd6f4962abe54d6905fe",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10884,10 +8588,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormListProps { ... }",
-      "canonicalUsage": "import type { ProFormListProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "88336a196e8322974055de2b8c590f70ade08e176b0eac3f8cd6b72800b1b63a",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -10956,10 +8660,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROFORM_MODES)[number]",
-      "canonicalUsage": "import type { ProFormMode } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "d4cfa73d1f8594d54e518f6d453f327da0cbfe5696e915132697bab1461257a2",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11027,10 +8731,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormPassword />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "52b3c46129e939dcab127c033e5069b7027eeec39a253fe8741b74807b6de599",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11099,10 +8803,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormProps extends Omit<FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'onReset'> { ... }",
-      "canonicalUsage": "import type { ProFormProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "ead69923c50561a8b08e90c7dc7f2b6f0d3e3b1d3aa61f06af6f26303aeacc90",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11170,10 +8874,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormRadioGroup />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "4aa25969f149eda32514cc530fb2b8fceabc54fcbf63b87641b7cfd13f967bda",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11242,10 +8946,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProFormRequestOption { ... }",
-      "canonicalUsage": "import type { ProFormRequestOption } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "dd7a9e1ecc57d2efc005885114cec94320649768480f7dd0006adb2ea5855d5d",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11313,10 +9017,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormSelect />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "9b24b5a45401922ce5317e6b1dcdc28a9caba33fd0c952afb36b62e7cea62ea9",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11384,10 +9088,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormSlider />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "5a9b5ddd9a26199701d3d3f2307a6ad3b964f66d5fdbfd30efdbbf8aba0c2c80",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11455,10 +9159,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormSwitch />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "87119f77a8e04ec0f07dec55f2ef7985b167400772592d70172ee644167c1ebe",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11526,10 +9230,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormText />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "0f561819e24a9b6521e16b4a9238c0250741795e0996d3dca59f7fb9a111ddf4",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11597,10 +9301,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormTextArea />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "1549a41755f2d85818188654c648d16f6deea173c67c20999f5d5aa896204817",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11668,10 +9372,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ProFormUpload />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "5ba789cfffb9110e9a147117959a6e59585384a46fa350d42dedc8e0857f1821",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11740,10 +9444,10 @@
       ],
       "searchTags": [],
       "typeText": "Record<\n  string | number,\n  string | { text: string; disabled?: boolean }\n>",
-      "canonicalUsage": "import type { ProFormValueEnumObj } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "fa1715f659ca9bd453db3ccb6d40b47193e9dc838467b79a6a453d0b8b5aaed5",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11812,10 +9516,10 @@
       ],
       "searchTags": [],
       "typeText": "| 'text'\n  | 'password'\n  | 'digit'\n  | 'date'\n  | 'dateTime'\n  | 'select'\n  | 'radio'\n  | 'switch'\n  | 'tag'",
-      "canonicalUsage": "import type { ProFormValueType } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "069beba30456db7a61ea657851e695df2a417f06c69fdf677a0d60c1a7af3de9",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -11917,11 +9621,19 @@
         "progress",
         "progress bar"
       ],
-      "canonicalUsage": "<Progress percent={0} />",
+      "canonicalUsage": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "examples": [
         {
-          "hash": "e37aca8f7c9d9b0e9ebfac3d27da7b71899323685544aefcf84f04338a9232ce",
+          "hash": "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b",
           "source": "canonical"
+        },
+        {
+          "hash": "aa61ebf1b90fbb562c6110d57bc34506cb6448c179bb745b3c3106a7f6cc9e74",
+          "source": "readme"
+        },
+        {
+          "hash": "49816d6fc0869e92e95bd824c8fbdeda626454b12a4f44f0b0aa6da23976ea1e",
+          "source": "readme"
         },
         {
           "hash": "11f60c018746e51bd823c5ce8039341a2200f2e132e62e58f99f23cfe2166cbd",
@@ -11948,10 +9660,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROGRESS_COLORS)[number]",
-      "canonicalUsage": "import type { ProgressColor } from '@1money/component-ui';",
+      "canonicalUsage": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "examples": [
         {
-          "hash": "079ea5a6232196a5bc2822e0a2466a32b0fbfa7bfa8b3a800a5e3d65b6226e42",
+          "hash": "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b",
           "source": "canonical"
         }
       ]
@@ -11975,10 +9687,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProgressFormatContext { ... }",
-      "canonicalUsage": "import type { ProgressFormatContext } from '@1money/component-ui';",
+      "canonicalUsage": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "examples": [
         {
-          "hash": "57555cab23c1ab39cfa023e9e3f6cec2998ddc9537a47354aa1cf1fd14488461",
+          "hash": "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b",
           "source": "canonical"
         }
       ]
@@ -12002,10 +9714,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROGRESS_PLACEMENTS)[number]",
-      "canonicalUsage": "import type { ProgressPlacement } from '@1money/component-ui';",
+      "canonicalUsage": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "examples": [
         {
-          "hash": "fe831014a074368cace22558725ed6a61ffdfa556cec55c5284d20d0357f8e2e",
+          "hash": "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b",
           "source": "canonical"
         }
       ]
@@ -12029,10 +9741,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ProgressProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import type { ProgressProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "examples": [
         {
-          "hash": "159060bf345ad56b198657357005740fb6892291717bb99ada373f0a62cdcdc9",
+          "hash": "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b",
           "source": "canonical"
         }
       ]
@@ -12056,10 +9768,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof PROGRESS_STATES)[number]",
-      "canonicalUsage": "import type { ProgressState } from '@1money/component-ui';",
+      "canonicalUsage": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "examples": [
         {
-          "hash": "a0db5e8a8634435b7717e8162c8d43cd1a6918c73fb73a44d76d56fa6d532de2",
+          "hash": "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b",
           "source": "canonical"
         }
       ]
@@ -12194,10 +9906,10 @@
         "createProFormField"
       ],
       "searchTags": [],
-      "canonicalUsage": "<QueryFilter />",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "25f9f9086f93b5fe128992d1c388b0c9cd77df643010c4c5cc403527a80b7528",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -12266,10 +9978,10 @@
       ],
       "searchTags": [],
       "typeText": "interface QueryFilterProps extends ProFormProps { ... }",
-      "canonicalUsage": "import type { QueryFilterProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "bec858e374183c180f6a8c8157e1d6204faf444043aa0bfe7145fdff1fb35c29",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -12988,11 +10700,19 @@
         "useResizeObserver"
       ],
       "searchTags": [],
-      "canonicalUsage": "<ResizeObserver>Label</ResizeObserver>",
+      "canonicalUsage": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "examples": [
         {
-          "hash": "2c58c83426bf77e0fd761deff8e74853f41c3213c0b293c97d142554dca062bc",
+          "hash": "d7d5f601f2bc6d68fdd1f9092792a1ead79d09392794c0de5c6a6f08ae2fcd2b",
           "source": "canonical"
+        },
+        {
+          "hash": "9d9e13198adcfe9df9f475bcf7d1fcef492fbd98892daaddb28d65ca2e213a74",
+          "source": "readme"
+        },
+        {
+          "hash": "28a4918e2bb83aaa273cf3846c84c67dca51a5280decbef71e82f997dda9baac",
+          "source": "readme"
         },
         {
           "hash": "f49c87dfe21fbf4df7cf48ca08171e7695c029a2bb70a176aec70a90274cb24c",
@@ -13034,10 +10754,10 @@
       ],
       "searchTags": [],
       "typeText": "(size: SizeInfo, element: HTMLElement) => void",
-      "canonicalUsage": "import type { ResizeObserverOnResize } from '@1money/component-ui';",
+      "canonicalUsage": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "examples": [
         {
-          "hash": "331af5c2212fd55974bf970db262267197fa7ead2695ac5e5ad86d13f1a999d5",
+          "hash": "d7d5f601f2bc6d68fdd1f9092792a1ead79d09392794c0de5c6a6f08ae2fcd2b",
           "source": "canonical"
         }
       ]
@@ -13060,10 +10780,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ResizeObserverProps { ... }",
-      "canonicalUsage": "import type { ResizeObserverProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "examples": [
         {
-          "hash": "bd798228effd9ea304dec801de169c61b68aa249974a07c893487d7bb9d57dc0",
+          "hash": "d7d5f601f2bc6d68fdd1f9092792a1ead79d09392794c0de5c6a6f08ae2fcd2b",
           "source": "canonical"
         }
       ]
@@ -13086,10 +10806,10 @@
       ],
       "searchTags": [],
       "typeText": "interface SizeInfo { ... }",
-      "canonicalUsage": "import type { ResizeObserverSizeInfo } from '@1money/component-ui';",
+      "canonicalUsage": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "examples": [
         {
-          "hash": "b669352c8c48a5998e787d52dcf642775655517e1ea3c28da5047402bfb8f815",
+          "hash": "d7d5f601f2bc6d68fdd1f9092792a1ead79d09392794c0de5c6a6f08ae2fcd2b",
           "source": "canonical"
         }
       ]
@@ -13183,77 +10903,10 @@
       ],
       "searchTags": [],
       "typeText": "interface Rule { ... }",
-      "canonicalUsage": "import type { Rule } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "4925f0fa31e738cbe6dcf51caa4529687907afbd4c5d75a2b6babee74973dcb6",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "SearchIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/system.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -13764,11 +11417,19 @@
         "dropdown",
         "select"
       ],
-      "canonicalUsage": "<Select />",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "25966efe47cbb331081aa62151a5d80e7324bfce0b4a1b82e323559d9349cd54",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
+        },
+        {
+          "hash": "dd93657d7534b2334888be68dade1a1eb682df7f98475406bbe3c8f36ca64ba0",
+          "source": "readme"
+        },
+        {
+          "hash": "b5ac338b8dae79ebaa6977ba835eec80689422de45f275287959a9a88f1ecce7",
+          "source": "readme"
         },
         {
           "hash": "123291e7b1b33126adc91e8204e4002c37c71a74eb5bfca67a4da71b9aec2f6a",
@@ -13828,10 +11489,10 @@
       ],
       "searchTags": [],
       "typeText": "SelectOptionValue[]",
-      "canonicalUsage": "import type { SelectMultipleValue } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "fc7f011734a4a3a103721b68af73859114acc940da01099883443728203b2cad",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -13860,10 +11521,10 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectOption { ... }",
-      "canonicalUsage": "import type { SelectOption } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "ef4db8ac914fd8f1b7ba6beb4ffdee91eb4c6541f40cad46d0d74c3e00a5d0e1",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -13892,10 +11553,10 @@
       ],
       "searchTags": [],
       "typeText": "string | number",
-      "canonicalUsage": "import type { SelectOptionValue } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "06fe88ad0e8ab0eb5303e6d550234af6433a3b3e5f18fcddba351e64fab26e13",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -13924,10 +11585,10 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectProps extends Omit<HTMLAttributes<HTMLDivElement>, 'defaultValue' | 'onBlur' | 'onChange' | 'prefix'> { ... }",
-      "canonicalUsage": "import type { SelectProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "bfef3654ba7e004cca9c6680de5d7039f9de64917fbbcc8e2f2ca84d014a58b2",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -13956,10 +11617,10 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectRenderOptionMeta { ... }",
-      "canonicalUsage": "import type { SelectRenderOptionMeta } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "cb70ebe2c9a937bb1cd0ba29f708510c4c1e22e8ac2caacd37674882f698a196",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -13988,10 +11649,10 @@
       ],
       "searchTags": [],
       "typeText": "interface SelectRenderValueMeta { ... }",
-      "canonicalUsage": "import type { SelectRenderValueMeta } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "fd353a0cfce510dee427ac20924a2b4af00ee7928140326c422816b303a11ad9",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -14020,10 +11681,10 @@
       ],
       "searchTags": [],
       "typeText": "SelectOptionValue | null | undefined",
-      "canonicalUsage": "import type { SelectSingleValue } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "2f6710b655bb5d7c4adb4aa08f77909913d90ba3a32d1fea39ab8604ddc2f8f5",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -14052,10 +11713,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof SELECT_SIZES)[number]",
-      "canonicalUsage": "import type { SelectSize } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "cef06a2fa9ec150e4ab25d3ca42529946e43096750463d7e09e45104bfe938a9",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -14084,10 +11745,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof SELECT_STATUSES)[number]",
-      "canonicalUsage": "import type { SelectStatus } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "802d7a93824c4a4841c52f2688f4d5b201b3c4f56435625c03ecafb2df0e8db6",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -14116,10 +11777,10 @@
       ],
       "searchTags": [],
       "typeText": "SelectSingleValue | SelectMultipleValue",
-      "canonicalUsage": "import type { SelectValue } from '@1money/component-ui';",
+      "canonicalUsage": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
       "examples": [
         {
-          "hash": "d0b89ae2fa1043346a2874d6f6ab1231cc0e830f16e1f70fd5614d322a61b044",
+          "hash": "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0",
           "source": "canonical"
         }
       ]
@@ -14483,141 +12144,6 @@
       ]
     },
     {
-      "name": "SortIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/dynamic.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "SortIconStatus",
-      "kind": "type",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/dynamic.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "typeText": "(typeof SORT_ICON_STATUSES)[number]",
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "Space",
       "kind": "component",
       "category": "layout",
@@ -14833,15 +12359,23 @@
           "source": "readme"
         },
         {
-          "hash": "ee2bdbb626c56a393f970bf1d78c39af26d41db0d878c1454242d504dadfb8c5",
+          "hash": "17d01f6082f650280e29a5b298a6dbc9c559c171c16751739adb36ea024afcfe",
           "source": "readme"
         },
         {
-          "hash": "49c72f97a10ef34333a88507a7d9e8e5bb582173ce599c9b9a2aae31efedb1e1",
+          "hash": "4d9f3593600e6013d369532a23201039bffa9c7463d467180f93c3e95fc48c1b",
           "source": "readme"
         },
         {
-          "hash": "c5c8294cf8e64c0260dadcf294fe23c8dc5b054d7780988addeb5f5bfa8f6658",
+          "hash": "7fa92e052831cae87c3f0b935466ebe2f827bd696b626583810266f584e63167",
+          "source": "readme"
+        },
+        {
+          "hash": "1f944ea3bc1de41179d6d298524b5c3604ace798b878bacd31dc65416b264e80",
+          "source": "readme"
+        },
+        {
+          "hash": "c2ed4afd7f4c04998bfad81cb58b67b4a475835fbd8784a832e1a785e11eb50e",
           "source": "readme"
         },
         {
@@ -14899,140 +12433,6 @@
       ]
     },
     {
-      "name": "StatusFailIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/dynamic.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusSuccessIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "StatusSuccessIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/dynamic.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "UploadIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "Step",
       "kind": "component",
       "category": "navigation",
@@ -15071,11 +12471,19 @@
         "step",
         "stepper"
       ],
-      "canonicalUsage": "<Step items={[]} />",
+      "canonicalUsage": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
       "examples": [
         {
-          "hash": "97683a3f5c99b99a2b9a054edbee9d66d751fcb9ce9361898434af338708d3c9",
+          "hash": "d928a76793b3297d721487249b48aafd40ba72f0698c1706a33e4291c542d9ba",
           "source": "canonical"
+        },
+        {
+          "hash": "f7c2c0a63e93844f526a49d62cfd4f5ced951213730b19e88cb69c559c39a367",
+          "source": "readme"
+        },
+        {
+          "hash": "e3b3197749176ad9a73173f5d1928f15b52b030d41a28e61ef40deaabbc9a554",
+          "source": "readme"
         },
         {
           "hash": "57e5a7e81ccfa1d876cf40e95b6165f9d630fe343bc29dbb15c3fe546e689e62",
@@ -15105,10 +12513,10 @@
       ],
       "searchTags": [],
       "typeText": "interface StepItem { ... }",
-      "canonicalUsage": "import type { StepItem } from '@1money/component-ui';",
+      "canonicalUsage": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
       "examples": [
         {
-          "hash": "aa54a561acdb2781536fc6d5bf4b05fc2a4ec7cc3a1952f3d8aa3086f866754a",
+          "hash": "d928a76793b3297d721487249b48aafd40ba72f0698c1706a33e4291c542d9ba",
           "source": "canonical"
         }
       ]
@@ -15131,10 +12539,10 @@
       ],
       "searchTags": [],
       "typeText": "interface StepProps extends HTMLAttributes<HTMLDivElement> { ... }",
-      "canonicalUsage": "import type { StepProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
       "examples": [
         {
-          "hash": "2e38eb2bbde2587fea5af46f3c34d8b7b9a3bc7951fa044bcd363a4ce3812a47",
+          "hash": "d928a76793b3297d721487249b48aafd40ba72f0698c1706a33e4291c542d9ba",
           "source": "canonical"
         }
       ]
@@ -15157,10 +12565,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof STEP_STATUSES)[number]",
-      "canonicalUsage": "import type { StepStatus } from '@1money/component-ui';",
+      "canonicalUsage": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
       "examples": [
         {
-          "hash": "04e9dc127df402e09fdd97b4e5a8113b98bd6e4cc73a657077883081e9a0b8f2",
+          "hash": "d928a76793b3297d721487249b48aafd40ba72f0698c1706a33e4291c542d9ba",
           "source": "canonical"
         }
       ]
@@ -15183,10 +12591,10 @@
       ],
       "searchTags": [],
       "typeText": "interface StepTagConfig { ... }",
-      "canonicalUsage": "import type { StepTagConfig } from '@1money/component-ui';",
+      "canonicalUsage": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
       "examples": [
         {
-          "hash": "f02ed49d7825c626c3191734244f3e88dfbf48e8a2720ddd268229fe063b846a",
+          "hash": "d928a76793b3297d721487249b48aafd40ba72f0698c1706a33e4291c542d9ba",
           "source": "canonical"
         }
       ]
@@ -15255,10 +12663,10 @@
       ],
       "searchTags": [],
       "typeText": "interface SubmitterProps { ... }",
-      "canonicalUsage": "import type { SubmitterProps } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "f065597d223dc1f13a2322f8264117765b4ffe077f96a1224d73320e187354ec",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -15494,10 +12902,10 @@
       "searchTags": [
         "table"
       ],
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15525,10 +12933,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TableChangeMeta { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15556,10 +12964,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TableColumn { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15587,10 +12995,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TableExpandableConfig { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15618,10 +13026,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TablePaginationConfig { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15649,10 +13057,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TableProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15680,10 +13088,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TableRef { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -15711,10 +13119,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TableRowSelection { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -16313,11 +13721,19 @@
         "tour",
         "walkthrough"
       ],
-      "canonicalUsage": "<Tour open steps={[]} onClose={() => {}} />",
+      "canonicalUsage": "import { Tour } from '@1money/components-ui';\n// or\nimport { Tour } from '@1money/components-ui/Tour';",
       "examples": [
         {
-          "hash": "92884b0ad016e0b0699fc547bc92043837674393d2d601ebe0fc0aa31ced6498",
+          "hash": "29a8d3d4fdc2b1b61574ec8e8a8a2ffb57226781120cdc378f8d179d101a0032",
           "source": "canonical"
+        },
+        {
+          "hash": "36b6b20f42395f39098061f501edd80895fcbc554523f70a876a7e3a2be50f6f",
+          "source": "readme"
+        },
+        {
+          "hash": "981f2b8a3640a8ce952c89b517bddfce5736957f28636f94c17265c8ed5b575e",
+          "source": "readme"
         },
         {
           "hash": "9856c3fcdf26046e1e631b2aeb36d7da1f1f316ddb5a33f17c71a0434111aea0",
@@ -16341,10 +13757,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TourProps { ... }",
-      "canonicalUsage": "import type { TourProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Tour } from '@1money/components-ui';\n// or\nimport { Tour } from '@1money/components-ui/Tour';",
       "examples": [
         {
-          "hash": "f3e3e35db28e26c2e5f1870c2e23d646f593f798d99eda835808ea9652ed85d7",
+          "hash": "29a8d3d4fdc2b1b61574ec8e8a8a2ffb57226781120cdc378f8d179d101a0032",
           "source": "canonical"
         }
       ]
@@ -16365,10 +13781,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TourStep { ... }",
-      "canonicalUsage": "import type { TourStep } from '@1money/component-ui';",
+      "canonicalUsage": "import { Tour } from '@1money/components-ui';\n// or\nimport { Tour } from '@1money/components-ui/Tour';",
       "examples": [
         {
-          "hash": "7ae894e8181a0534204e98888ca38826cde3925bb26787a732a0829c181669a3",
+          "hash": "29a8d3d4fdc2b1b61574ec8e8a8a2ffb57226781120cdc378f8d179d101a0032",
           "source": "canonical"
         }
       ]
@@ -16385,10 +13801,10 @@
       "extends": [],
       "relatedSymbols": [],
       "searchTags": [],
-      "canonicalUsage": "Trigger();",
+      "canonicalUsage": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "examples": [
         {
-          "hash": "f1fd9c22aed7f64f20f92113407cac7aeb1750a0623e511784dda6813e00b67e",
+          "hash": "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0",
           "source": "canonical"
         }
       ]
@@ -16412,10 +13828,10 @@
       ],
       "searchTags": [],
       "typeText": "'click' | 'hover' | 'focus'",
-      "canonicalUsage": "import type { TriggerAction } from '@1money/component-ui';",
+      "canonicalUsage": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "examples": [
         {
-          "hash": "79d6736104fbd2a0cdb0081045a650f31fb2cdc051f7170c185c73b5a70c2bf0",
+          "hash": "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0",
           "source": "canonical"
         }
       ]
@@ -16439,10 +13855,10 @@
       ],
       "searchTags": [],
       "typeText": "| ReactNode\n  | ((context: TriggerContentContext) => ReactNode)",
-      "canonicalUsage": "import type { TriggerContent } from '@1money/component-ui';",
+      "canonicalUsage": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "examples": [
         {
-          "hash": "0914d8f9442c252fe06be76431695e7673a02bd475b9bad034e5bc5dedf021ff",
+          "hash": "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0",
           "source": "canonical"
         }
       ]
@@ -16466,10 +13882,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TriggerContentContext { ... }",
-      "canonicalUsage": "import type { TriggerContentContext } from '@1money/component-ui';",
+      "canonicalUsage": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "examples": [
         {
-          "hash": "182c2782ef8a0d17a1da002048cb2f2ccd2469370cc302d126d075b4394df24b",
+          "hash": "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0",
           "source": "canonical"
         }
       ]
@@ -16493,10 +13909,10 @@
       ],
       "searchTags": [],
       "typeText": "interface TriggerProps { ... }",
-      "canonicalUsage": "import type { TriggerProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "examples": [
         {
-          "hash": "49a2e96ec0947afd6fe798ab777749f04241987e5f6c9364ac5fdff699d8aa31",
+          "hash": "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0",
           "source": "canonical"
         }
       ]
@@ -16520,10 +13936,10 @@
       ],
       "searchTags": [],
       "typeText": "'dialog' | 'tooltip' | 'menu' | 'alertdialog' | 'listbox'",
-      "canonicalUsage": "import type { TriggerRole } from '@1money/component-ui';",
+      "canonicalUsage": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "examples": [
         {
-          "hash": "4db81691f06b6d355c08291c79ad9154135a7851bc1653cf092a6f6ff1766a2a",
+          "hash": "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0",
           "source": "canonical"
         }
       ]
@@ -17240,7 +14656,11 @@
           "source": "readme"
         },
         {
-          "hash": "f6add1649c4e02d141bd89c9cedf782cf9bf66c617de71226b13802729c7a205",
+          "hash": "b14da4d622a544459d2811d8e446450f5581cecc1aa78d0da413b1bbaba9df9d",
+          "source": "readme"
+        },
+        {
+          "hash": "74d07705c09b8ab5e12d5fb5cdcae6d3bbc2c3517d298289faa91e00deb2ff9a",
           "source": "readme"
         },
         {
@@ -17360,73 +14780,6 @@
       ]
     },
     {
-      "name": "UploadIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/system.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "ViewBalanceIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
       "name": "UploadProps",
       "kind": "type",
       "category": "input",
@@ -17473,10 +14826,10 @@
       ],
       "searchTags": [],
       "typeText": "interface UsePaginationOptions { ... }",
-      "canonicalUsage": "import type { UsePaginationOptions } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "4831602e1843344ccb14281ad853e240d2d5c1c2010be19cf091cacd678e6eda",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -17503,10 +14856,10 @@
       ],
       "searchTags": [],
       "typeText": "interface UsePaginationResult { ... }",
-      "canonicalUsage": "import type { UsePaginationResult } from '@1money/component-ui';",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "f7d75c4c5f4f678aa093b1506c43f3b64f084e77935a1995764eafb16f65acb3",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -17575,10 +14928,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof VALIDATE_STATUSES)[number]",
-      "canonicalUsage": "import type { ValidateStatus } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "4186c0d2b90dd549d7f6497e4b7fb0b101654305b0e3e128cd0f1d6ca78bfb2a",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -17647,77 +15000,10 @@
       ],
       "searchTags": [],
       "typeText": "(typeof VALIDATE_TRIGGERS)[number]",
-      "canonicalUsage": "import type { ValidateTrigger } from '@1money/component-ui';",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "0c0afbe2548cd54cf225af79ea0be88e179d1592672834759ce9d5c4dd0d7476",
-          "source": "canonical"
-        }
-      ]
-    },
-    {
-      "name": "ViewBalanceIcon",
-      "kind": "component",
-      "category": "display",
-      "summary": "",
-      "importPath": "@1money/component-ui",
-      "subpathImport": "@1money/component-ui/Icons",
-      "sourceFile": "src/components/Icons/icon-set/system.tsx",
-      "props": [],
-      "extends": [],
-      "relatedSymbols": [
-        "ArrowLeftIcon",
-        "CanonicalIconName",
-        "CheckIcon",
-        "ChevronLeftIcon",
-        "ChevronRightIcon",
-        "CrossIcon",
-        "ErrorIcon",
-        "HideBalanceIcon",
-        "Icon",
-        "IconHover",
-        "IconHoverProps",
-        "IconName",
-        "IconProps",
-        "IconWrapper",
-        "IconWrapperProps",
-        "Icons",
-        "IconsProps",
-        "Illus2FA",
-        "IllusAddAccount",
-        "IllusChecked",
-        "IllusEmailError",
-        "IllusError",
-        "IllusID",
-        "IllusLinkExpired",
-        "IllusLocked",
-        "IllusPasskey",
-        "IllusPending",
-        "IllusRegionNotSupported",
-        "IllusVerification",
-        "Logo",
-        "LogoBeta",
-        "LogoBg",
-        "LogoNetwork",
-        "LogoWithBeta",
-        "LogoWithWords",
-        "LogoWord",
-        "NotificationErrorIcon",
-        "NotificationInfoIcon",
-        "NotificationSuccessIcon",
-        "NotificationWarningIcon",
-        "SearchIcon",
-        "SortIcon",
-        "SortIconStatus",
-        "StatusFailIcon",
-        "StatusSuccessIcon",
-        "UploadIcon"
-      ],
-      "searchTags": [],
-      "canonicalUsage": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "examples": [
-        {
-          "hash": "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -17738,11 +15024,19 @@
         "VirtualListScrollInfo"
       ],
       "searchTags": [],
-      "canonicalUsage": "<VirtualList />",
+      "canonicalUsage": "import { VirtualList } from '@1money/components-ui';\n// or\nimport { VirtualList } from '@1money/components-ui/VirtualList';",
       "examples": [
         {
-          "hash": "d04fb66d67c8ae60bbd4a4937cb198b9b91ef7835b27f5766f421c864efdf891",
+          "hash": "226ab361064aae3c8c8f47bb5d32f8dd315bb5427d7c7a1e8cf5d4f10a0d325c",
           "source": "canonical"
+        },
+        {
+          "hash": "5c2d27af4dbbbbbab8df84b3717712bc8ef7522b3f93eb8d20540a1db723e8e9",
+          "source": "readme"
+        },
+        {
+          "hash": "09067b9f75756404a5faa16038cb05754515fa2db3b4df4eb1afdc37fbedc9ba",
+          "source": "readme"
         },
         {
           "hash": "40b55a924e580ca4161d97e698db47fb342eae5c804b2bfbaab1f5eb64a58e09",
@@ -17791,10 +15085,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ListProps extends Omit<React.HTMLAttributes<any>, 'children'> { ... }",
-      "canonicalUsage": "import type { VirtualListProps } from '@1money/component-ui';",
+      "canonicalUsage": "import { VirtualList } from '@1money/components-ui';\n// or\nimport { VirtualList } from '@1money/components-ui/VirtualList';",
       "examples": [
         {
-          "hash": "aeb5b3145a02eaf5de7b756aa71f963aac5ab51ac00f7f76dbc2599ab7634b3a",
+          "hash": "226ab361064aae3c8c8f47bb5d32f8dd315bb5427d7c7a1e8cf5d4f10a0d325c",
           "source": "canonical"
         }
       ]
@@ -17816,10 +15110,10 @@
       ],
       "searchTags": [],
       "typeText": "{\n  nativeElement: HTMLDivElement;\n  scrollTo: ScrollTo;\n  getScrollInfo: () => ScrollInfo;\n}",
-      "canonicalUsage": "import type { VirtualListRef } from '@1money/component-ui';",
+      "canonicalUsage": "import { VirtualList } from '@1money/components-ui';\n// or\nimport { VirtualList } from '@1money/components-ui/VirtualList';",
       "examples": [
         {
-          "hash": "b5c565a619ca8c6ea6be3771a025e08245ee1157433a0f25341df72da8c82c84",
+          "hash": "226ab361064aae3c8c8f47bb5d32f8dd315bb5427d7c7a1e8cf5d4f10a0d325c",
           "source": "canonical"
         }
       ]
@@ -17841,10 +15135,10 @@
       ],
       "searchTags": [],
       "typeText": "interface ScrollInfo { ... }",
-      "canonicalUsage": "import type { VirtualListScrollInfo } from '@1money/component-ui';",
+      "canonicalUsage": "import { VirtualList } from '@1money/components-ui';\n// or\nimport { VirtualList } from '@1money/components-ui/VirtualList';",
       "examples": [
         {
-          "hash": "2ab81b696087edd4949bb8a066c36ceb58197f8a8d1e3ab2f387eb6275fe724e",
+          "hash": "226ab361064aae3c8c8f47bb5d32f8dd315bb5427d7c7a1e8cf5d4f10a0d325c",
           "source": "canonical"
         }
       ]
@@ -17863,10 +15157,10 @@
       "searchTags": [
         "table"
       ],
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -17894,10 +15188,10 @@
       ],
       "searchTags": [],
       "typeText": "interface VirtualTableProps extends Omit<TableProps<T>, 'scroll'> { ... }",
-      "canonicalUsage": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
+      "canonicalUsage": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "examples": [
         {
-          "hash": "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656",
+          "hash": "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049",
           "source": "canonical"
         }
       ]
@@ -17966,10 +15260,10 @@
       ],
       "searchTags": [],
       "signature": "(config: CreateProFormFieldConfig<FieldProps>): FC<ProFormFieldProps<FieldProps>>",
-      "canonicalUsage": "createProFormField(config);",
+      "canonicalUsage": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "examples": [
         {
-          "hash": "459fb4fed33834539f12047eb8791c8c459888b43df3cfa51c852237d244b1b1",
+          "hash": "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af",
           "source": "canonical"
         }
       ]
@@ -18025,10 +15319,10 @@
       ],
       "searchTags": [],
       "signature": "(options: UsePaginationOptions): UsePaginationResult",
-      "canonicalUsage": "const result = usePagination(options);",
+      "canonicalUsage": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "examples": [
         {
-          "hash": "5fe4eaf6d6cc1aae1c57021991c5791efa10197d77e9fee4d8d3ad0301ed09b2",
+          "hash": "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b",
           "source": "canonical"
         }
       ]
@@ -18051,10 +15345,10 @@
       ],
       "searchTags": [],
       "signature": "(enabled: boolean, getTarget: HTMLElement | (() => HTMLElement), onDelayResize?: OnResize, onSyncResize?: OnResize)",
-      "canonicalUsage": "const result = useResizeObserver(enabled, getTarget);",
+      "canonicalUsage": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "examples": [
         {
-          "hash": "600b7c61c09e62351c4da01ba0451212e347f76292d57d62d472809568ab33f1",
+          "hash": "d7d5f601f2bc6d68fdd1f9092792a1ead79d09392794c0de5c6a6f08ae2fcd2b",
           "source": "canonical"
         }
       ]

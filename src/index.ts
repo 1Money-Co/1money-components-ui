@@ -11,48 +11,7 @@ export { Divider } from './components/Divider';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
 export { Grid, Row, Col } from './components/Grid';
-export {
-  ArrowLeftIcon,
-  CheckIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  CrossIcon,
-  ErrorIcon,
-  HideBalanceIcon,
-  Icon,
-  Icons,
-  IconHover,
-  IconWrapper,
-  Illus2FA,
-  IllusAddAccount,
-  IllusChecked,
-  IllusEmailError,
-  IllusError,
-  IllusID,
-  IllusLinkExpired,
-  IllusLocked,
-  IllusPasskey,
-  IllusPending,
-  IllusRegionNotSupported,
-  IllusVerification,
-  Logo,
-  LogoBg,
-  LogoBeta,
-  LogoNetwork,
-  LogoWithBeta,
-  LogoWithWords,
-  LogoWord,
-  NotificationErrorIcon,
-  NotificationInfoIcon,
-  NotificationSuccessIcon,
-  NotificationWarningIcon,
-  SearchIcon,
-  SortIcon,
-  StatusFailIcon,
-  StatusSuccessIcon,
-  UploadIcon,
-  ViewBalanceIcon,
-} from './components/Icons';
+export { Icons, IconWrapper, IconHover } from './components/Icons';
 export { Input } from './components/Input';
 export { Drawer } from './components/Drawer';
 export { Dropdown } from './components/Dropdown';
@@ -140,15 +99,7 @@ export type {
   Rule,
 } from './components/ProForm';
 export type { GridRowProps, GridColProps } from './components/Grid';
-export type {
-  CanonicalIconName,
-  IconName,
-  IconProps,
-  IconsProps,
-  IconWrapperProps,
-  IconHoverProps,
-  SortIconStatus,
-} from './components/Icons';
+export type { IconName, IconsProps, IconWrapperProps, IconHoverProps } from './components/Icons';
 export type {
   InputProps,
   InputPasswordProps,

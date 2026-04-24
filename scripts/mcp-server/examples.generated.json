@@ -55,12 +55,6 @@
       "source": "stories",
       "compilable": true
     },
-    "03d4e0cef5922bd9d1c1934b5b1c8af440c30f7e1ae1f7f31d755dd518639b6c": {
-      "title": "Canonical usage",
-      "code": "import type { DialogFormProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "03db5f06b9d053c3b514bf4bd85fdb3c21604f60d3b598d6de714a98a3a17713": {
       "title": "Usage",
       "code": "<Slider\n  label=\"Price\"\n  description=\"Set your budget\"\n  valuePrefix=\"$\"\n  defaultValue={40}\n  min={0}\n  max={100}\n  onChange={(value) => console.log(value)}\n/>",
@@ -73,9 +67,9 @@
       "source": "stories",
       "compilable": false
     },
-    "043dd268dff2f5670f3ab2c4c19161fec1e9322d74c3151a062126f0e295a632": {
+    "0438a4317a7d7a552850cb51936a9650a74930e6c8b9e8a6f8c36de31ab885a0": {
       "title": "Canonical usage",
-      "code": "import type { ProFormItemProps } from '@1money/component-ui';",
+      "code": "import { Trigger } from '@1money/components-ui';\n// or\nimport { Trigger } from '@1money/components-ui/Trigger';",
       "source": "canonical",
       "compilable": true
     },
@@ -85,34 +79,10 @@
       "source": "stories",
       "compilable": true
     },
-    "04e9dc127df402e09fdd97b4e5a8113b98bd6e4cc73a657077883081e9a0b8f2": {
-      "title": "Canonical usage",
-      "code": "import type { StepStatus } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "05717fb84522993ea86a1295a654c812fe4de71b24eacb8657ec875518efde6a": {
-      "title": "Usage",
-      "code": "<Alert\n  status=\"info\"\n  title=\"Information\"\n  body=\"This is an informational message.\"\n  link={{ label: 'Learn more', href: '/docs' }}\n  onClose={() => console.log('closed')}\n/>",
-      "source": "readme",
-      "compilable": true
-    },
-    "069beba30456db7a61ea657851e695df2a417f06c69fdf677a0d60c1a7af3de9": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormValueType } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "06b3a8e6513382a6e7d5bd530b625d83a008bbb52aa5f05cb2812e54e8854b3a": {
       "title": "Api Examples",
       "code": "<div style={DEMO_SECTION_STYLE}>\n      <Row\n        gutter={GRID_GUTTER_SPACED}\n        align={GRID_ALIGN.middle}\n        justify={GRID_JUSTIFY.spaceBetween}\n        wrap={WRAP_DISABLED}\n        prefixCls={GRID_ROW_PREFIX}\n      >\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}><div style={DEMO_BOX_STYLE}>Span</div></Col>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}><div style={DEMO_BOX_STYLE}>Span</div></Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_COMPACT} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_QUARTER} offset={OFFSET_SMALL} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Offset</div>\n        </Col>\n        <Col span={SPAN_QUARTER} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Offset</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_COMPACT} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_QUARTER} push={PUSH_SMALL} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Push</div>\n        </Col>\n        <Col span={SPAN_QUARTER} pull={PULL_SMALL} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Pull</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_RESPONSIVE} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Responsive Gutter</div>\n        </Col>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Responsive Gutter</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_REM} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>String Gutter</div>\n        </Col>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>String Gutter</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_COMPACT} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_QUARTER} order={ORDER_LAST} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Order</div>\n        </Col>\n        <Col span={SPAN_QUARTER} order={ORDER_FIRST} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Order</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_COMPACT} prefixCls={GRID_ROW_PREFIX}>\n        <Col flex={FLEX_ONE} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Flex 1</div>\n        </Col>\n        <Col flex={FLEX_TWO} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Flex 2</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_SPACED} wrap={WRAP_ENABLED} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_BASE} sm={SPAN_SM} md={{ span: SPAN_MD, offset: OFFSET_SMALL }} lg={SPAN_LG} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Responsive</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_SPACED} justify={JUSTIFY_RESPONSIVE} prefixCls={GRID_ROW_PREFIX}>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Justify Responsive</div>\n        </Col>\n        <Col span={SPAN_HALF} prefixCls={GRID_COL_PREFIX}>\n          <div style={DEMO_BOX_STYLE}>Justify Responsive</div>\n        </Col>\n      </Row>\n\n    </div>",
       "source": "stories",
-      "compilable": true
-    },
-    "06fe88ad0e8ab0eb5303e6d550234af6433a3b3e5f18fcddba351e64fab26e13": {
-      "title": "Canonical usage",
-      "code": "import type { SelectOptionValue } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "0716e5e5fffc542e7b028181c93a5655fb3738281657fc43abb5eb99a95b3e8b": {
@@ -133,40 +103,34 @@
       "source": "stories",
       "compilable": true
     },
-    "079ea5a6232196a5bc2822e0a2466a32b0fbfa7bfa8b3a800a5e3d65b6226e42": {
-      "title": "Canonical usage",
-      "code": "import type { ProgressColor } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "07a4236cc3c96aa1a14a8ab647fef5e00704b05042314ec5815451b3dd3b5ba0": {
       "title": "Usage",
       "code": "<Typography.Display size=\"lg\">Account Overview</Typography.Display>\n\n<Typography.Headline size=\"md\">Settlement Timeline</Typography.Headline>\n\n<Typography.Title size=\"sm\" strong>\n  Customer Details\n</Typography.Title>\n\n<Typography.Body size=\"md\" as=\"p\">\n  Semantic body copy keeps product text aligned with the shared typography scale.\n</Typography.Body>\n\n<Typography.Body size=\"md\" ellipsis={{ tooltip: true }} copyable>\n  0x814f0d3a9b2c7e1f5d6a8b4c3e2f1a0d9c8b7a6f749f\n</Typography.Body>\n\n<Typography.Label size=\"sm\" htmlFor=\"email\">\n  Email\n</Typography.Label>\n\n<Typography.Link size=\"md\" href=\"https://ant.design/components/typography/\" target=\"_blank\">\n  Typography reference\n</Typography.Link>",
       "source": "readme",
       "compilable": true
     },
-    "0914d8f9442c252fe06be76431695e7673a02bd475b9bad034e5bc5dedf021ff": {
+    "08af6791ed777b4f8ea419b22b1309470e98f6762ccd1ac6fc23e09d6676587b": {
       "title": "Canonical usage",
-      "code": "import type { TriggerContent } from '@1money/component-ui';",
+      "code": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
       "source": "canonical",
+      "compilable": true
+    },
+    "08d86e1e9a9ccea86e7168af88595e9da0ef259cf44907a5be70520cdb1e4a4a": {
+      "title": "Import",
+      "code": "import { Link } from '@1money/components-ui';\n// or\nimport { Link } from '@1money/components-ui/Link';",
+      "source": "readme",
+      "compilable": true
+    },
+    "09067b9f75756404a5faa16038cb05754515fa2db3b4df4eb1afdc37fbedc9ba": {
+      "title": "Usage",
+      "code": "<VirtualList\n  data={items}\n  height={300}\n  itemHeight={32}\n  itemKey=\"id\"\n>\n  {(item, index, { style }) => (\n    <div style={style}>{item.label}</div>\n  )}\n</VirtualList>",
+      "source": "readme",
       "compilable": true
     },
     "0a72ee3d63ec85bf631eafb8407f424d82c2c3d9da1437fb18801bec174133af": {
       "title": "Five Items",
       "code": "<Segment\n      items={[\n        { value: 'tab1', label: 'Label' },\n        { value: 'tab2', label: 'Label' },\n        { value: 'tab3', label: 'Label' },\n        { value: 'tab4', label: 'Label' },\n        { value: 'tab5', label: 'Label' },\n      ]}\n    />",
       "source": "stories",
-      "compilable": true
-    },
-    "0b707df089538a3a4f0f7d9fbe136625806044098f7d3f4e2ed84889b27634ef": {
-      "title": "Import",
-      "code": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "source": "readme",
-      "compilable": true
-    },
-    "0c0afbe2548cd54cf225af79ea0be88e179d1592672834759ce9d5c4dd0d7476": {
-      "title": "Canonical usage",
-      "code": "import type { ValidateTrigger } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "0c268f0ec6b90f7352970d3db858c53364c60f2321af3c578568fc93082425bb": {
@@ -191,24 +155,6 @@
       "title": "Usage",
       "code": "<Switch label=\"Notifications\" onChange={(checked) => console.log(checked)} />\n\n<Switch\n  label=\"Dark Mode\"\n  description=\"Enable dark theme across the app\"\n  defaultChecked\n/>",
       "source": "readme",
-      "compilable": true
-    },
-    "0eccd89d4848e5f239f204a25e0a5afbc08ea70a21eb5403bc608a3da6da85ad": {
-      "title": "Canonical usage",
-      "code": "<Drawer />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "0f561819e24a9b6521e16b4a9238c0250741795e0996d3dca59f7fb9a111ddf4": {
-      "title": "Canonical usage",
-      "code": "<ProFormText />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "0f978c9e8cebacc672d00e70889ae1fb18b0d5a39b29dc3e53b0d53ab04aedf1": {
-      "title": "Canonical usage",
-      "code": "import type { PaginationItem } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "11f60c018746e51bd823c5ce8039341a2200f2e132e62e58f99f23cfe2166cbd": {
@@ -241,34 +187,16 @@
       "source": "stories",
       "compilable": false
     },
-    "1549a41755f2d85818188654c648d16f6deea173c67c20999f5d5aa896204817": {
-      "title": "Canonical usage",
-      "code": "<ProFormTextArea />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "159060bf345ad56b198657357005740fb6892291717bb99ada373f0a62cdcdc9": {
-      "title": "Canonical usage",
-      "code": "import type { ProgressProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "17aad2a9b23bb7f9a4768f770a9b9b5b06d74dab24c5200037505b0047ec2391": {
       "title": "Controlled",
       "code": "{\n    const [open, setOpen] = useState(false);\n    return (\n      <div style={ANCHOR_WRAPPER_STYLE}>\n        <button id=\"tooltip-controlled\">Anchor</button>\n        <div style={CONTROL_ROW_STYLE}>\n          <button onClick={() => setOpen(true)}>Open</button>\n          <button onClick={() => setOpen(false)}>Close</button>\n          <button onClick={() => setOpen((v) => !v)}>Toggle</button>\n        </div>\n        <Tooltip\n          anchorSelect=\"#tooltip-controlled\"\n          title=\"Controlled\"\n          body=\"This tooltip is controlled externally.\"\n          open={open}\n          onOpenChange={setOpen}\n        />\n      </div>\n    );\n  }",
       "source": "stories",
       "compilable": true
     },
-    "182c2782ef8a0d17a1da002048cb2f2ccd2469370cc302d126d075b4394df24b": {
-      "title": "Canonical usage",
-      "code": "import type { TriggerContentContext } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "1856eecdadbccda4468f63edff75ac60c746187efb7df1f7699540bec7ce4929": {
-      "title": "Canonical usage",
-      "code": "import type { PortalProps } from '@1money/component-ui';",
-      "source": "canonical",
+    "17d01f6082f650280e29a5b298a6dbc9c559c171c16751739adb36ea024afcfe": {
+      "title": "Usage",
+      "code": "// Default ring spinner\n<Spinner />\n\n// Custom size\n<Spinner size={48} />\n\n// Brand Lottie spinner\n<Spinner type=\"brand\" />\n\n// Brand spinner with title and body text\n<Spinner type=\"brand\" title=\"Loading\" body=\"Please wait a moment\" />\n\n// Brand spinner with gradient background\n<Spinner type=\"brand-bg\" size={64} title=\"Setting up your account\" />",
+      "source": "readme",
       "compilable": true
     },
     "1ad3863a7ccae5d72cf0b223899e03501462831ed16ae711d9f497c103c00008": {
@@ -301,17 +229,17 @@
       "source": "stories",
       "compilable": false
     },
-    "1eb0a331971caa6d8ea905cd7fb9c8e846ff5dbc535c68ea157133495806f4e7": {
-      "title": "Canonical usage",
-      "code": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
-      "source": "canonical",
-      "compilable": true
-    },
     "1ecd90179c2ebd2ed33c0063235f9367b50ed37a7eba1d4c6aa1973033ed554c": {
       "title": "Multi Select",
       "code": "{\n    const [selected, setSelected] = useState<string[]>(['Apple', 'Cherry', 'Fig']);\n\n    const toggle = (item: string) => {\n      setSelected((prev) =>\n        prev.includes(item) ? prev.filter((v) => v !== item) : [...prev, item],\n      );\n    };\n\n    return (\n      <Dropdown\n        {...args}\n        overlayStyle={{ minWidth: 260 }}\n        content={\n          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>\n            {selected.length > 0 && (\n              <div style={selectedBarStyle}>\n                <span style={{ fontSize: 14, fontWeight: 500, color: '#131313' }}>\n                  {selected.length} selected\n                </span>\n                <button\n                  type=\"button\"\n                  style={clearAllBtnStyle}\n                  onClick={() => setSelected([])}\n                >\n                  <Icons name=\"cross\" size={16} color=\"#ae0000\" />\n                  Clear all\n                </button>\n              </div>\n            )}\n            <div style={{ display: 'flex', flexDirection: 'column' }}>\n              {SIMPLE_ITEMS.map((item) => (\n                <DropdownItem\n                  key={item}\n                  title={item}\n                  selected={selected.includes(item)}\n                  onClick={() => toggle(item)}\n                />\n              ))}\n            </div>\n          </div>\n        }\n      >\n        <Button>\n          {selected.length > 0 ? `${selected.length} selected` : 'Select items'}\n        </Button>\n      </Dropdown>\n    );\n  }",
       "source": "stories",
       "compilable": false
+    },
+    "1f944ea3bc1de41179d6d298524b5c3604ace798b878bacd31dc65416b264e80": {
+      "title": "Brand Spinner with Message",
+      "code": "<Spinner\n  type=\"brand\"\n  size={56}\n  title=\"Hang tight\"\n  body=\"We're processing your request\"\n/>",
+      "source": "readme",
+      "compilable": true
     },
     "216b625401b1ee29a2c8f02427f776e18dd670858e53fd87ea414473832ba9c9": {
       "title": "With Title",
@@ -342,6 +270,12 @@
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>\n      {LINK_COLORS.map((color) => (\n        <div key={color}>\n          <h3 style={{ marginBottom: 12, textTransform: 'capitalize' }}>{color}</h3>\n          {LINK_SIZES.map((size) => (\n            <div\n              key={`${color}-${size}`}\n              style={{\n                display: 'flex',\n                gap: 48,\n                alignItems: 'center',\n                marginBottom: 8,\n              }}\n            >\n              <span style={{ width: 64, fontSize: 12, textTransform: 'capitalize' }}>{size}</span>\n              {STATES.map((state) => (\n                <div\n                  key={`${color}-${size}-${state}`}\n                  style={{ display: 'flex', flexDirection: 'column', gap: 4 }}\n                >\n                  <span style={{ fontSize: 10, color: '#888', textTransform: 'capitalize' }}>\n                    {state}\n                  </span>\n                  <Link\n                    {...args}\n                    color={color}\n                    size={size}\n                    disabled={state === 'disabled'}\n                  >\n                    Link\n                  </Link>\n                </div>\n              ))}\n            </div>\n          ))}\n        </div>\n      ))}\n    </div>",
       "source": "stories",
       "compilable": false
+    },
+    "226ab361064aae3c8c8f47bb5d32f8dd315bb5427d7c7a1e8cf5d4f10a0d325c": {
+      "title": "Canonical usage",
+      "code": "import { VirtualList } from '@1money/components-ui';\n// or\nimport { VirtualList } from '@1money/components-ui/VirtualList';",
+      "source": "canonical",
+      "compilable": true
     },
     "22701739de59f3ff8757908dd59dec110a126e3b95861d3ad523cb1552deeed7": {
       "title": "All Variants",
@@ -379,12 +313,6 @@
       "source": "stories",
       "compilable": false
     },
-    "25966efe47cbb331081aa62151a5d80e7324bfce0b4a1b82e323559d9349cd54": {
-      "title": "Canonical usage",
-      "code": "<Select />",
-      "source": "canonical",
-      "compilable": true
-    },
     "259f23e43a9bab9ac08664151900a9dc9f3cc181adccdacc7a28bd34ab37be7e": {
       "title": "Form Layout Patterns",
       "code": "<div style={DEMO_PAGE_STYLE}>\n      <Row gutter={GRID_GUTTER_SPACED}>\n        <Col span={12}>\n          <div style={DEMO_HEADER_BLOCK_STYLE}>Form Header</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_SPACED}>\n        <Col span={12} md={3}>\n          <div style={DEMO_FORM_LABEL_STYLE}>Label: Company Name</div>\n        </Col>\n        <Col span={12} md={9}>\n          <div style={DEMO_FORM_FIELD_STYLE}>Input Field (span 9)</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_SPACED}>\n        <Col span={12} md={3}>\n          <div style={DEMO_FORM_LABEL_STYLE}>Label: Email</div>\n        </Col>\n        <Col span={12} md={9}>\n          <div style={DEMO_FORM_FIELD_STYLE}>Input Field (span 9)</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_SPACED}>\n        <Col span={12} md={{ span: 9, offset: 3 }}>\n          <div style={DEMO_FORM_FIELD_STYLE}>Inline Help / Validation Message (offset 3)</div>\n        </Col>\n      </Row>\n\n      <Row gutter={GRID_GUTTER_SPACED}>\n        <Col span={12} md={{ span: 9, offset: 3 }}>\n          <Row gutter={GRID_GUTTER_COMPACT} justify={GRID_JUSTIFY.end}>\n            <Col span={6} md={4} lg={3}>\n              <div style={DEMO_FORM_ACTION_STYLE}>Secondary Action</div>\n            </Col>\n            <Col span={6} md={4} lg={3}>\n              <div style={DEMO_FORM_ACTION_STYLE}>Primary Action</div>\n            </Col>\n          </Row>\n        </Col>\n      </Row>\n    </div>",
@@ -402,12 +330,6 @@
       "code": "<Switch {...args} label=\"Label\" defaultChecked />",
       "source": "stories",
       "compilable": false
-    },
-    "25f9f9086f93b5fe128992d1c388b0c9cd77df643010c4c5cc403527a80b7528": {
-      "title": "Canonical usage",
-      "code": "<QueryFilter />",
-      "source": "canonical",
-      "compilable": true
     },
     "26594eacf431540e6380fac7c7ff44f09d414de2052860d55187217317c0cbb1": {
       "title": "Field Set",
@@ -445,9 +367,27 @@
       "source": "readme",
       "compilable": true
     },
+    "28a4918e2bb83aaa273cf3846c84c67dca51a5280decbef71e82f997dda9baac": {
+      "title": "Usage",
+      "code": "<ResizeObserver\n  onResize={(size, element) => {\n    console.log(size.width, element);\n  }}\n>\n  <div>Measured content</div>\n</ResizeObserver>",
+      "source": "readme",
+      "compilable": true
+    },
     "28dcbb40d407a6c3c48dcdb51a06d11466a26d831324f8c583ab6b877bc5eb7d": {
       "title": "Vertical Layout",
       "code": "<Space direction={SPACE_DIRECTION.vertical} size={SPACE_SIZE.large}>\n  <div>Top</div>\n  <div>Bottom</div>\n</Space>",
+      "source": "readme",
+      "compilable": true
+    },
+    "29a8d3d4fdc2b1b61574ec8e8a8a2ffb57226781120cdc378f8d179d101a0032": {
+      "title": "Canonical usage",
+      "code": "import { Tour } from '@1money/components-ui';\n// or\nimport { Tour } from '@1money/components-ui/Tour';",
+      "source": "canonical",
+      "compilable": true
+    },
+    "29e2310b26c2aecedef7a08fdce046f6fada2887312516d227bf0467d9691185": {
+      "title": "Import",
+      "code": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "source": "readme",
       "compilable": true
     },
@@ -457,34 +397,10 @@
       "source": "readme",
       "compilable": true
     },
-    "2ab81b696087edd4949bb8a066c36ceb58197f8a8d1e3ab2f387eb6275fe724e": {
-      "title": "Canonical usage",
-      "code": "import type { VirtualListScrollInfo } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "2b97ea480bdd9e78ecabd54bc4c254a48c281f6121a50a054418593c9c9d8f5c": {
       "title": "Middle Ellipsis",
       "code": "<div style={{ ...STORY_LAYOUT_STYLE, maxWidth: 480 }}>\n      <div style={ROW_STYLE}>\n        <Typography.Label size=\"md\" color=\"default-secondary\">Sender ID</Typography.Label>\n        <div style={CONSTRAINED_STYLE}>\n          <Typography.Body size=\"md\" ellipsis={{ tooltip: true }} copyable>\n            {SENDER_ID}\n          </Typography.Body>\n        </div>\n      </div>\n      <div style={ROW_STYLE}>\n        <Typography.Label size=\"md\" color=\"default-secondary\">Recipient name</Typography.Label>\n        <Typography.Body size=\"md\">Apextech LLC</Typography.Body>\n      </div>\n      <div style={ROW_STYLE}>\n        <Typography.Label size=\"md\" color=\"default-secondary\">Recipient ID</Typography.Label>\n        <div style={CONSTRAINED_STYLE}>\n          <Typography.Body size=\"md\" ellipsis={{ tooltip: true }} copyable>\n            {RECIPIENT_ID}\n          </Typography.Body>\n        </div>\n      </div>\n    </div>",
       "source": "stories",
-      "compilable": true
-    },
-    "2c58c83426bf77e0fd761deff8e74853f41c3213c0b293c97d142554dca062bc": {
-      "title": "Canonical usage",
-      "code": "<ResizeObserver>Label</ResizeObserver>",
-      "source": "canonical",
-      "compilable": true
-    },
-    "2cca976a647db275dfb45ce8bb53bc85d304e49c3d91f76e5987d11e95b604c1": {
-      "title": "Import",
-      "code": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
-      "source": "readme",
-      "compilable": true
-    },
-    "2d7f3d765471e161eebea75b1e1a3270b8a6b415b29bbead4e0362770a9eef3b": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormFieldSetProps } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "2db7958f91085606312d3dea5983e6a87724bdaaaeb755893810034b5be459a2": {
@@ -493,23 +409,11 @@
       "source": "readme",
       "compilable": true
     },
-    "2e38eb2bbde2587fea5af46f3c34d8b7b9a3bc7951fa044bcd363a4ce3812a47": {
-      "title": "Canonical usage",
-      "code": "import type { StepProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "2f65549d43490603034b9f30beadb2efd27c2c0f454242a54f434f213d051491": {
       "title": "Omit Nil",
       "code": "<ProForm\n      {...args}\n      omitNil\n      initialValues={{ name: '', email: '', note: null }}\n      onFinish={(values) => {\n        alert('Nil values stripped:\\n' + JSON.stringify(values, null, 2));\n      }}\n    >\n      <ProFormText name=\"name\" label=\"Name (leave empty to omit)\" />\n      <ProFormText name=\"email\" label=\"Email (leave empty to omit)\" />\n      <ProFormText name=\"note\" label=\"Note (null → omitted)\" />\n    </ProForm>",
       "source": "stories",
       "compilable": false
-    },
-    "2f6710b655bb5d7c4adb4aa08f77909913d90ba3a32d1fea39ab8604ddc2f8f5": {
-      "title": "Canonical usage",
-      "code": "import type { SelectSingleValue } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "31dd5c9e926c0deeefba1a4028848b13ee819e42fbdf5ba0438329ffa1907e66": {
       "title": "Width Presets",
@@ -529,10 +433,10 @@
       "source": "stories",
       "compilable": true
     },
-    "331af5c2212fd55974bf970db262267197fa7ead2695ac5e5ad86d13f1a999d5": {
-      "title": "Canonical usage",
-      "code": "import type { ResizeObserverOnResize } from '@1money/component-ui';",
-      "source": "canonical",
+    "341d33a3398e2a18e0d6bd76c9602a448d9a775132d0ccb1e3591038cec0fa5c": {
+      "title": "Usage",
+      "code": "<Dialog\n  open={open}\n  title=\"Confirm transfer\"\n  description=\"Review the details before submitting.\"\n  onCancel={() => setOpen(false)}\n  onOk={handleSubmit}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "34536f5f5abc20bc7255387d21700a4725ea8d6f9806b09cb947375f7afde43c": {
@@ -577,6 +481,12 @@
       "source": "readme",
       "compilable": true
     },
+    "36b6b20f42395f39098061f501edd80895fcbc554523f70a876a7e3a2be50f6f": {
+      "title": "Import",
+      "code": "import { Tour } from '@1money/components-ui';\n// or\nimport { Tour } from '@1money/components-ui/Tour';",
+      "source": "readme",
+      "compilable": true
+    },
     "36cbaf7aab4a01a5e1c94430f29c9f8881ec84e60dac84ca5c2e32cb25e14ae5": {
       "title": "Usage",
       "code": "// Basic usage with icon name\n<Empty\n  icon=\"transactions\"\n  title=\"No record found\"\n  description=\"Try adjusting your filters to find the record you are looking for\"\n/>\n\n// With custom icon component\n<Empty\n  icon={<MyCustomIcon />}\n  description=\"No data available\"\n/>\n\n// With action button\n<Empty\n  variant=\"stroke\"\n  icon=\"bank\"\n  description=\"You don't have any bank accounts linked\"\n  action={<Button>Add new bank account</Button>}\n/>",
@@ -586,12 +496,6 @@
     "36f868d28259a7ebb3c6decbe9768b0ac838fd1617e57e32bace1c0dde27546d": {
       "title": "Usage",
       "code": "<Calendar\n  label=\"Date of Birth\"\n  required\n  placeholder=\"MM/DD/YYYY\"\n  onChange={(e) => console.log(e.value)}\n/>",
-      "source": "readme",
-      "compilable": true
-    },
-    "371e24636c998f789b2003ee3f8097874e1ad9274d29b7fc059202d33c4ed68e": {
-      "title": "Preferred Usage",
-      "code": "// Static JSX: preferred\n<CrossIcon size={16} />\n<LogoWithWords width={132} height={24} logoColor=\"#073387\" wordColor=\"#131313\" />\n\n// Dynamic runtime dispatch\n<Icon name=\"cross\" size={16} />\n\n// Backward-compatible wrapper\n<Icons name=\"depositFiatCrypto\" size={16} />",
       "source": "readme",
       "compilable": true
     },
@@ -619,10 +523,10 @@
       "source": "stories",
       "compilable": true
     },
-    "3b0609d66de90d74188d6f4ab20aa01fa0063b08806f15b90448a4dd7ff49fe2": {
-      "title": "Canonical usage",
-      "code": "import type { FormInstance } from '@1money/component-ui';",
-      "source": "canonical",
+    "398c56e66e36d3ab3b61b257b2bc0522eb642f46f8bcb939b5c59ff543449dc7": {
+      "title": "Usage",
+      "code": "<Input label=\"Amount\" placeholder=\"Value\" />\n\n<Input.Password label=\"Password\" />\n\n<Input.Search label=\"Search\" onSearch={(value) => console.log(value)} />\n\n<Input.TextArea label=\"Memo\" rows={4} />\n\n<Input.OTP length={6} />\n\n<Input.Trade currencySymbol=\"$\" currencyUnit=\"USD\" />\n\n<Input.Amount currencyLabel=\"USDC\" />\n\n<Input.Mask mask=\"999-99-9999\" />",
+      "source": "readme",
       "compilable": true
     },
     "3b416ca019f27f4a1d80ae5a1bbafa8b6b9d196ebbdbf9df77bbd8d7c4118934": {
@@ -661,12 +565,6 @@
       "source": "canonical",
       "compilable": true
     },
-    "3fed6ca7982c867ccd1b2b58023950f8365462d92b44c75722551d4d3127c8bb": {
-      "title": "Canonical usage",
-      "code": "import type { DialogSize } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "40a22244886d5bdbd3ed0c2eeccc5859897c73c7f35ce9d0b27a7a9547709f28": {
       "title": "Import",
       "code": "import { Tag } from '@1money/components-ui';\n// or\nimport { Tag } from '@1money/components-ui/Tag';",
@@ -679,21 +577,9 @@
       "source": "stories",
       "compilable": true
     },
-    "4186c0d2b90dd549d7f6497e4b7fb0b101654305b0e3e128cd0f1d6ca78bfb2a": {
-      "title": "Canonical usage",
-      "code": "import type { ValidateStatus } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "41c91bf415fa7b2b7fcfbba49136e2254bcf778a33e916d12446e042629a0943": {
       "title": "Canonical usage",
       "code": "import { Switch } from '@1money/components-ui';\n// or\nimport { Switch } from '@1money/components-ui/Switch';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "421c6af797703e115fd55a10242e5ac801283d4eb80d5409fc997c7d9c730393": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormGroupProps } from '@1money/component-ui';",
       "source": "canonical",
       "compilable": true
     },
@@ -709,18 +595,6 @@
       "source": "canonical",
       "compilable": true
     },
-    "4382388bcd674e464f60d818049720fa134a38574be7255cff59425e9d027d63": {
-      "title": "Canonical usage",
-      "code": "import type { FormSize } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "4389223d4dd418331dd628d1bb657512018df7b6124067044b1b577c26853c32": {
-      "title": "Canonical usage",
-      "code": "<Dialog />",
-      "source": "canonical",
-      "compilable": true
-    },
     "43cb69594b17d8f71ddb9912efb8eea26ee52cf45990ef9f7a2212c0694b0811": {
       "title": "Dashed",
       "code": "<div>\n      <p>Lorem ipsum dolor sit amet.</p>\n      <Divider variant=\"dashed\" />\n      <p>Lorem ipsum dolor sit amet.</p>\n      <Divider variant=\"dashed\">Dashed</Divider>\n      <p>Lorem ipsum dolor sit amet.</p>\n    </div>",
@@ -730,12 +604,6 @@
     "43cd04ae4cce4b5299321d915077358a92a0a5000ab402da2f9ba9ccac91ef84": {
       "title": "Canonical usage",
       "code": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "43e86173eaa57a1ad76a23b43ba3b90b40e118c2d4885e13b759adc68c95f5a8": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormFormInstance } from '@1money/component-ui';",
       "source": "canonical",
       "compilable": true
     },
@@ -757,22 +625,10 @@
       "source": "stories",
       "compilable": false
     },
-    "459fb4fed33834539f12047eb8791c8c459888b43df3cfa51c852237d244b1b1": {
-      "title": "Canonical usage",
-      "code": "createProFormField(config);",
-      "source": "canonical",
-      "compilable": true
-    },
     "466a2cf763ac1374c62583da68c81d15d8aece066ae06417d6a4356855606954": {
       "title": "With Badges",
       "code": "<Tabs\n      items={[\n        { key: 'tab1', label: 'Overview', badge: 5 },\n        { key: 'tab2', label: 'Transactions', badge: 12 },\n        { key: 'tab3', label: 'Analytics' },\n        { key: 'tab4', label: 'Settings', badge: 3 },\n      ]}\n    />",
       "source": "stories",
-      "compilable": true
-    },
-    "4831602e1843344ccb14281ad853e240d2d5c1c2010be19cf091cacd678e6eda": {
-      "title": "Canonical usage",
-      "code": "import type { UsePaginationOptions } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "4844dfaf4dff931b3d5b14135a788fc632daa05669c14237139b0a15e6d1a793": {
@@ -781,22 +637,10 @@
       "source": "stories",
       "compilable": false
     },
-    "487a87a540c310c3a95d1656126aa0686d4ce8932394b10ef7be463bd2139b11": {
-      "title": "Canonical usage",
-      "code": "import type { FormLayout } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "48f6ebde7546d7db844b0cd43bd6e6ec6956746f93c55167fda6a2cd84599a3e": {
       "title": "No Animation",
       "code": "<Segment items={DEFAULT_ITEMS} animated={false} />",
       "source": "stories",
-      "compilable": true
-    },
-    "4925f0fa31e738cbe6dcf51caa4529687907afbd4c5d75a2b6babee74973dcb6": {
-      "title": "Canonical usage",
-      "code": "import type { Rule } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "4946413c8eb03c3d0ed457a33ffdb8dfdef55dfe7f8f8440b878a1ae2be1c46a": {
@@ -805,21 +649,15 @@
       "source": "stories",
       "compilable": true
     },
-    "49a2e96ec0947afd6fe798ab777749f04241987e5f6c9364ac5fdff699d8aa31": {
-      "title": "Canonical usage",
-      "code": "import type { TriggerProps } from '@1money/component-ui';",
-      "source": "canonical",
+    "49816d6fc0869e92e95bd824c8fbdeda626454b12a4f44f0b0aa6da23976ea1e": {
+      "title": "Usage",
+      "code": "{/* Basic usage */}\n<Progress percent={40} />\n\n{/* Explicit state */}\n<Progress percent={100} state=\"success\" />\n<Progress percent={60} state=\"error\" feedback=\"Upload failed. Please try again.\" />\n\n{/* White color variant (e.g. on a dark background) */}\n<Progress percent={70} color=\"white\" />\n\n{/* Custom info formatter */}\n<Progress\n  percent={55}\n  format={(percent) => `${percent} of 100 steps complete`}\n/>\n\n{/* Info row on the right */}\n<Progress percent={30} placement=\"right\" />\n\n{/* Hide info row */}\n<Progress percent={50} showInfo={false} />",
+      "source": "readme",
       "compilable": true
     },
     "49ad060bce26c0a2bb20e2d9487869063f8aa30ca5cff68d8bbb108fbeef29a1": {
       "title": "Dashed / Dotted",
       "code": "<Divider variant=\"dashed\" />\n<Divider variant=\"dotted\">Dotted</Divider>",
-      "source": "readme",
-      "compilable": true
-    },
-    "49c72f97a10ef34333a88507a7d9e8e5bb582173ce599c9b9a2aae31efedb1e1": {
-      "title": "Inline Loading",
-      "code": "<button disabled={loading}>\n  {loading ? (\n    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>\n      <Spinner style={{ width: '16px', height: '16px' }} />\n      <span>Loading...</span>\n    </div>\n  ) : (\n    'Submit'\n  )}\n</button>",
       "source": "readme",
       "compilable": true
     },
@@ -841,16 +679,10 @@
       "source": "stories",
       "compilable": false
     },
-    "4a0586bd3c33f563c7de439b2edc169e9d921c2f9f7fb0c72e411af2d0637fa5": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormFieldTransformFn } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "4aa25969f149eda32514cc530fb2b8fceabc54fcbf63b87641b7cfd13f967bda": {
-      "title": "Canonical usage",
-      "code": "<ProFormRadioGroup />",
-      "source": "canonical",
+    "4a5e5cef011be8e4312b7e27e13d519193ffe35d681413267098a0f06182c9d9": {
+      "title": "Basic Usage",
+      "code": "// Basic icon (default 24px, color #131313)\n<Icons name=\"arrowRight\" />\nimport { Icons, IconWrapper, Logo } from '@1money/components-ui';\n\n// Custom size and color\n<Icons name=\"settings\" size={32} color=\"#3D73F2\" />\n\n// With explicit width/height\n<Icons name=\"search\" width={20} height={20} />\n\n// Icon with hover container\n<IconHover>\n  <Icons name=\"more\" />\n</IconHover>\n\n// Disabled hover container\n<IconHover disabled>\n  <Icons name=\"settings\" />\n</IconHover>\n\n// Logo\n<Icons name=\"logo\" size={40} />",
+      "source": "readme",
       "compilable": true
     },
     "4ad4837cde91f1ebd2cad90d6f82683fd94957192e4b88fa46882aac2330b854": {
@@ -865,15 +697,21 @@
       "source": "stories",
       "compilable": false
     },
-    "4bfe9b50aecfd9832aab22cf2c5dc3bea89aeaba7934e60fe4e7a9d8c3ce823b": {
-      "title": "Canonical usage",
-      "code": "import type { PortalContainer } from '@1money/component-ui';",
-      "source": "canonical",
+    "4cc41ff919669138b7ad66655a256cd5a3885bd739764784d8a5de068b87beb3": {
+      "title": "Import",
+      "code": "import { Drawer } from '@1money/components-ui';\n// or\nimport { Drawer } from '@1money/components-ui/Drawer';",
+      "source": "readme",
       "compilable": true
     },
-    "4db81691f06b6d355c08291c79ad9154135a7851bc1653cf092a6f6ff1766a2a": {
+    "4d9f3593600e6013d369532a23201039bffa9c7463d467180f93c3e95fc48c1b": {
+      "title": "Inline Button Loading",
+      "code": "<button disabled={loading}>\n  {loading ? (\n    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>\n      <Spinner size={16} />\n      <span>Submitting…</span>\n    </div>\n  ) : (\n    'Submit'\n  )}\n</button>",
+      "source": "readme",
+      "compilable": true
+    },
+    "4e47a5538f745fc8cf26d22a91bc3e95fda46600baf715b49e208804b00e3049": {
       "title": "Canonical usage",
-      "code": "import type { TriggerRole } from '@1money/component-ui';",
+      "code": "import { Table, VirtualTable } from '@1money/components-ui';\n// or\nimport { Table, VirtualTable } from '@1money/components-ui/Table';",
       "source": "canonical",
       "compilable": true
     },
@@ -889,18 +727,6 @@
       "source": "canonical",
       "compilable": true
     },
-    "528ab6afb943c07fe6e0c68fe3bda683e292529a705bd2d968f4c5dfed7e3a83": {
-      "title": "Canonical usage",
-      "code": "import type { PaginationControlItem } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "52b3c46129e939dcab127c033e5069b7027eeec39a253fe8741b74807b6de599": {
-      "title": "Canonical usage",
-      "code": "<ProFormPassword />",
-      "source": "canonical",
-      "compilable": true
-    },
     "52e49c0728ddadda69ef98366ad789e66211d87acbb7ca43af959df87ec0767b": {
       "title": "Event Shape",
       "code": "type RadioChangeEvent = {\n  nativeEvent: Event;\n  preventDefault: () => void;\n  stopPropagation: () => void;\n  target: {\n    checked: boolean;\n    disabled: boolean;\n    id?: string;\n    name?: string;\n    type: 'radio';\n    value?: string | number;\n  };\n};",
@@ -911,12 +737,6 @@
       "title": "CheckboxGroup",
       "code": "import { Checkbox, CheckboxGroup } from '@1money/components-ui';\n// or\nimport { Checkbox, CheckboxGroup } from '@1money/components-ui/Checkbox';\n\n<CheckboxGroup\n  name=\"fruits\"\n  options={[\n    { label: 'Apple', value: 'apple' },\n    { label: 'Pear', value: 'pear' },\n  ]}\n  value={selectedValues}\n  onChange={setSelectedValues}\n/>\n\n<Checkbox.Group defaultValue={['alpha']}>\n  <Checkbox value=\"alpha\" label=\"Alpha\" />\n  <Checkbox value=\"beta\" label=\"Beta\" />\n</Checkbox.Group>",
       "source": "readme",
-      "compilable": true
-    },
-    "546ef2d886471f0e410921f3ca3fa1ec2db5d4bed5ff1902bc190d0d87c75054": {
-      "title": "Canonical usage",
-      "code": "<ProFormDatePicker />",
-      "source": "canonical",
       "compilable": true
     },
     "5545418d49fc7cdc897ea3ab29b0c7e5326b5e6a7321eec41eece864275198a0": {
@@ -943,12 +763,6 @@
       "source": "stories",
       "compilable": false
     },
-    "57555cab23c1ab39cfa023e9e3f6cec2998ddc9537a47354aa1cf1fd14488461": {
-      "title": "Canonical usage",
-      "code": "import type { ProgressFormatContext } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "57e5a7e81ccfa1d876cf40e95b6165f9d630fe343bc29dbb15c3fe546e689e62": {
       "title": "Default",
       "code": "<div style={wrapperStyle}>\n      <Step {...args} />\n    </div>",
@@ -961,16 +775,10 @@
       "source": "stories",
       "compilable": false
     },
-    "5a95c3048a0d4147931cea1f357e39f808578b8e0f072baa127124f6004cef1d": {
-      "title": "Canonical usage",
-      "code": "<DialogForm />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "5a9b5ddd9a26199701d3d3f2307a6ad3b964f66d5fdbfd30efdbbf8aba0c2c80": {
-      "title": "Canonical usage",
-      "code": "<ProFormSlider />",
-      "source": "canonical",
+    "59a4bace5950d3f3aaef19cc61af7ddab1440a4220c81a0f60b0276728d5ab88": {
+      "title": "Usage",
+      "code": "<Dropdown\n  content={({ close }) => (\n    <button type=\"button\" onClick={close}>\n      Close\n    </button>\n  )}\n  placement=\"bottom-start\"\n>\n  <Button>Open menu</Button>\n</Dropdown>",
+      "source": "readme",
       "compilable": true
     },
     "5b6b616e8d95d382632b332591de2af84de98f77720ee5b0628d3a44feff076a": {
@@ -979,16 +787,16 @@
       "source": "stories",
       "compilable": false
     },
-    "5ba789cfffb9110e9a147117959a6e59585384a46fa350d42dedc8e0857f1821": {
-      "title": "Canonical usage",
-      "code": "<ProFormUpload />",
-      "source": "canonical",
-      "compilable": true
-    },
     "5bbda57b2d06dfefaed853ba5ad655bb306fd8ecfbc92a6a96dee1deffc1af2f": {
       "title": "With Content",
       "code": "<Tabs\n      defaultActiveKey=\"tab1\"\n      items={[\n        { key: 'tab1', label: 'Overview', children: <div>Overview content goes here</div> },\n        { key: 'tab2', label: 'Transactions', children: <div>Transactions content goes here</div> },\n        { key: 'tab3', label: 'Analytics', children: <div>Analytics content goes here</div> },\n      ]}\n    />",
       "source": "stories",
+      "compilable": true
+    },
+    "5c2d27af4dbbbbbab8df84b3717712bc8ef7522b3f93eb8d20540a1db723e8e9": {
+      "title": "Import",
+      "code": "import { VirtualList } from '@1money/components-ui';\n// or\nimport { VirtualList } from '@1money/components-ui/VirtualList';",
+      "source": "readme",
       "compilable": true
     },
     "5c8961675725144291340a7560c3c798389ce24d786783dedd6ffcac93193a0d": {
@@ -1009,12 +817,6 @@
       "source": "stories",
       "compilable": true
     },
-    "5eab08235fada880deb893a45f8e307f765861578cd95522dc38da0053be3353": {
-      "title": "Canonical usage",
-      "code": "import type { PaginationEllipsisItem } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "5f3b6d99f2f042d7c984a9f73cb179167b6c80cfbd3c106d1c96ecc86ba1a888": {
       "title": "Cell States",
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n      <Radio\n        checked\n        variant=\"cell\"\n        size=\"large\"\n        alignment=\"left\"\n        icon=\"swift\"\n        label=\"Checked\"\n        description=\"Primary selection\"\n        style={{ width: 300 }}\n      />\n      <Radio\n        checked\n        variant=\"cell\"\n        size=\"medium\"\n        alignment=\"left\"\n        icon=\"swift\"\n        label=\"Medium\"\n        style={{ width: 180 }}\n      />\n      <Radio\n        checked\n        variant=\"cell\"\n        size=\"small\"\n        alignment=\"left\"\n        icon=\"swift\"\n        label=\"Small\"\n        style={{ width: 180 }}\n      />\n      <Radio\n        checked\n        disabled\n        variant=\"cell\"\n        size=\"large\"\n        alignment=\"left\"\n        icon=\"swift\"\n        label=\"Disabled checked\"\n        description=\"Disabled state\"\n        style={{ width: 300 }}\n      />\n    </div>",
@@ -1031,18 +833,6 @@
       "title": "Import",
       "code": "import { Space } from '@1money/components-ui';\n// or\nimport { Space } from '@1money/components-ui/Space';\nimport { SPACE_ALIGN, SPACE_DIRECTION, SPACE_SIZE } from '@1money/components-ui/Space';",
       "source": "readme",
-      "compilable": true
-    },
-    "5fe4eaf6d6cc1aae1c57021991c5791efa10197d77e9fee4d8d3ad0301ed09b2": {
-      "title": "Canonical usage",
-      "code": "const result = usePagination(options);",
-      "source": "canonical",
-      "compilable": true
-    },
-    "600b7c61c09e62351c4da01ba0451212e347f76292d57d62d472809568ab33f1": {
-      "title": "Canonical usage",
-      "code": "const result = useResizeObserver(enabled, getTarget);",
-      "source": "canonical",
       "compilable": true
     },
     "605adda93170929ef763469422e3708f248624774e5274b6053c7aa0c53b9680": {
@@ -1081,6 +871,12 @@
       "source": "stories",
       "compilable": true
     },
+    "65c3343037038d0c10d4369de3281ebadf175b42ba5afe9bf9ae5c490d587003": {
+      "title": "Import",
+      "code": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
+      "source": "readme",
+      "compilable": true
+    },
     "66d442fc9388c014800dbcc672d9dae750c1529fd05f0b26e8f4dbf091abd20b": {
       "title": "Visual Spec",
       "code": "<div style={PREVIEW_GRID_STYLE}>\n      <TooltipPreviewCard label=\"Title + body / left aligned\" title=\"Title\" body=\"Body text\" />\n      <TooltipPreviewCard label=\"Minimum width 48px\" body=\"Hi\" />\n      <TooltipPreviewCard label=\"Maximum width 400px on web\" title=\"Long title\" body={LONG_BODY} />\n    </div>",
@@ -1105,6 +901,12 @@
       "source": "stories",
       "compilable": false
     },
+    "6c0a39263e45288c6f9a62e5fb3169389da1c8d69bd0092467335b58cf40b2ab": {
+      "title": "Canonical usage",
+      "code": "import { Link } from '@1money/components-ui';\n// or\nimport { Link } from '@1money/components-ui/Link';",
+      "source": "canonical",
+      "compilable": true
+    },
     "6c73541844cb6bb287f5a4f0c9d25be0cbdd0d09518b1abd0c49b8d738ddfaa8": {
       "title": "Import",
       "code": "import { Spinner } from '@1money/components-ui';\n// or\nimport { Spinner } from '@1money/components-ui/Spinner';",
@@ -1115,6 +917,18 @@
       "title": "Responsive Usage",
       "code": "const GRID_GUTTER = { sm: 8, md: 16, lg: 24 };\nconst SPAN_BASE = 12;\nconst SPAN_SM = 6;\nconst SPAN_MD = 4;\nconst OFFSET_MD = 2;\nconst SPAN_LARGE = 3;\n\nimport { GRID_JUSTIFY } from '@1money/components-ui/Grid';\n\nconst GRID_JUSTIFY_RESPONSIVE = {\n  sm: GRID_JUSTIFY.start,\n  md: GRID_JUSTIFY.spaceBetween,\n  lg: GRID_JUSTIFY.end\n};\nconst PUSH_COL = 1;\nconst PULL_COL = 1;\n\n<Grid gutter={GRID_GUTTER}>\n  <Grid.Col span={SPAN_BASE} sm={SPAN_SM} md={{ span: SPAN_MD, offset: OFFSET_MD }} lg={SPAN_LARGE} />\n</Grid>\n\n<Grid gutter={GRID_GUTTER} justify={GRID_JUSTIFY_RESPONSIVE}>\n  <Grid.Col span={SPAN_BASE} sm={SPAN_SM} md={{ span: SPAN_MD, offset: OFFSET_MD }} lg={SPAN_LARGE} />\n  <Grid.Col span={SPAN_BASE} push={PUSH_COL} pull={PULL_COL} />\n</Grid>",
       "source": "readme",
+      "compilable": true
+    },
+    "6dadb9a4d982338ee8398025f4cea4aa2ed33dba5303e56b6a65b1f23cb93bf0": {
+      "title": "Canonical usage",
+      "code": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
+      "source": "canonical",
+      "compilable": true
+    },
+    "6e80043b40836c60acfd06f4f79316dc3655e1d82fbc77f8f04b8126862001af": {
+      "title": "Canonical usage",
+      "code": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
+      "source": "canonical",
       "compilable": true
     },
     "6f2b7da00479a6033fdaca36f0646a924c61cbf09cd0e07da6948a884af98a61": {
@@ -1129,10 +943,10 @@
       "source": "stories",
       "compilable": true
     },
-    "711c445955f338d909c2ca767156df860542cbd4c4a2dd6f4962abe54d6905fe": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormListAction } from '@1money/component-ui';",
-      "source": "canonical",
+    "71d241ed07b5a8c1aaa432bcff2fb9f72af207e1c7f5aa4023ac2359f926be9e": {
+      "title": "Usage",
+      "code": "<Drawer\n  open={open}\n  title=\"Transfer details\"\n  placement=\"right\"\n  onClose={() => setOpen(false)}\n  footer={<Button onClick={() => setOpen(false)}>Done</Button>}\n>\n  Drawer content\n</Drawer>",
+      "source": "readme",
       "compilable": true
     },
     "71f7aeb8fd7bb546bc7d562a717683681d8eccf7f2beeee86e3196121d6656f1": {
@@ -1140,6 +954,12 @@
       "code": "<Button {...args} iconStart={<Icons name=\"add\" />}>\n      Icon Start\n    </Button>",
       "source": "stories",
       "compilable": false
+    },
+    "724f2c2f5081ae9ec1b8b50f385cd5773c50b6ba6c8a9835738b3cd5184d59e5": {
+      "title": "Canonical usage",
+      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
+      "source": "canonical",
+      "compilable": true
     },
     "72e53f1f60724efcfebfca8207585573799139c8895777a6a6d283673008ba74": {
       "title": "Import",
@@ -1156,6 +976,12 @@
     "73da19095cdcbe4a8b8d7ec782967002cf9da27f5638d7ec08e376a8d777aeda": {
       "title": "Controlled and Uncontrolled",
       "code": "// Standalone controlled\n<Radio\n  label=\"Controlled\"\n  checked={value}\n  onChange={(event) => setValue(event.target.checked)}\n/>\n\n// Standalone uncontrolled\n<Radio label=\"Uncontrolled\" defaultChecked />\n\n// Group controlled\n<RadioGroup value={selected} onChange={handleChange}>\n  <Radio value=\"a\" label=\"Option A\" />\n  <Radio value=\"b\" label=\"Option B\" />\n</RadioGroup>\n\n// Group uncontrolled\n<RadioGroup defaultValue=\"a\">\n  <Radio value=\"a\" label=\"Option A\" />\n  <Radio value=\"b\" label=\"Option B\" />\n</RadioGroup>",
+      "source": "readme",
+      "compilable": true
+    },
+    "74d07705c09b8ab5e12d5fb5cdcae6d3bbc2c3517d298289faa91e00deb2ff9a": {
+      "title": "With file list",
+      "code": "const [files, setFiles] = useState<File[]>([]);\n\n<Upload\n  label=\"Attachments\"\n  onSelect={(fileList) => {\n    if (fileList) setFiles(Array.from(fileList));\n  }}\n>\n  {files.map((file) => (\n    <UploadFileBar\n      key={file.name}\n      fileName={file.name}\n      onRemove={() => setFiles((prev) => prev.filter((f) => f !== file))}\n    />\n  ))}\n</Upload>",
       "source": "readme",
       "compilable": true
     },
@@ -1189,34 +1015,16 @@
       "source": "readme",
       "compilable": true
     },
-    "77b3bac4d9e36462c300020fa400a7cfe5bc7aa77bd896162f48c5d77a0ada23": {
-      "title": "Canonical usage",
-      "code": "import type { DrawerPlacement } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "784dd70341f79c53f5d9474c553dbaa803f65c317904a95d6b511fd57dcff804": {
-      "title": "Canonical usage",
-      "code": "<ProFormGroup />",
-      "source": "canonical",
-      "compilable": true
-    },
     "7880909af758a291affc6ba2a56af087c012f00945684528454d55e9faffbb53": {
       "title": "Sidebar Content Layout",
       "code": "<div style={DEMO_PAGE_STYLE}>\n      <Flex gap={GAP_MIDDLE} align={FLEX_ALIGN.start} justify={FLEX_JUSTIFY.start} wrap={WRAP_DISABLED}>\n        <Flex vertical gap={GAP_SMALL} style={{ ...DEMO_PANEL_STYLE, minWidth: 220 }}>\n          <div style={DEMO_ITEM_STYLE}>Menu Group A</div>\n          <div style={DEMO_ITEM_STYLE}>Menu Group B</div>\n          <div style={DEMO_ITEM_STYLE}>Menu Group C</div>\n        </Flex>\n\n        <Flex vertical gap={GAP_MIDDLE} style={{ ...DEMO_PANEL_STYLE, flex: 1 }}>\n          <Flex align={FLEX_ALIGN.center} justify={FLEX_JUSTIFY.spaceBetween}>\n            <div style={DEMO_ITEM_STYLE}>Page Title</div>\n            <Flex gap={GAP_SMALL}>\n              <div style={DEMO_ITEM_STYLE}>Export</div>\n              <div style={DEMO_ITEM_STYLE}>Create</div>\n            </Flex>\n          </Flex>\n          <div style={DEMO_PANEL_STYLE}>Main Content</div>\n          <Flex align={FLEX_ALIGN.center} justify={FLEX_JUSTIFY.end} gap={GAP_SMALL}>\n            <div style={DEMO_ITEM_STYLE}>Cancel</div>\n            <div style={DEMO_ITEM_STYLE}>Save</div>\n          </Flex>\n        </Flex>\n      </Flex>\n    </div>",
       "source": "stories",
       "compilable": true
     },
-    "799a697a88c95889b4c090d62789d89c9f7e92453d3a048ccb28e552fbe17b5b": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormContextValue } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "79d6736104fbd2a0cdb0081045a650f31fb2cdc051f7170c185c73b5a70c2bf0": {
-      "title": "Canonical usage",
-      "code": "import type { TriggerAction } from '@1money/component-ui';",
-      "source": "canonical",
+    "79558ccf329b5a0a64542b9d04634e06f6c86aacf2756dd972da85a7a6d9dda7": {
+      "title": "Usage",
+      "code": "<Pagination\n  total={125}\n  pageSize={10}\n  defaultCurrent={1}\n  onChange={(page, pageSize) => console.log(page, pageSize)}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "7a3a92935f0b863855900ffe5295cb58ad8e6a2f83cdf8ae82ea0a93ff8b829b": {
@@ -1224,12 +1032,6 @@
       "code": "<ProForm\n      {...args}\n      initialValues={{ username: '', email: '', bio: '', agree: false }}\n      onFinish={(values) => alert(JSON.stringify(values, null, 2))}\n    >\n      <ProFormText\n        name=\"username\"\n        label=\"Username\"\n        description=\"Only letters, numbers, and underscores. 3-20 characters.\"\n        placeholder=\"Enter username\"\n        feedback=\"This will be your public display name.\"\n        rules={[\n          { required: true, message: 'Username is required' },\n          { min: 3, message: 'At least 3 characters' },\n        ]}\n      />\n      <ProFormText\n        name=\"email\"\n        label=\"Email\"\n        description=\"We'll never share your email with anyone else.\"\n        placeholder=\"Enter email\"\n        rules={[\n          { required: true, message: 'Email is required' },\n          { type: 'email', message: 'Invalid email format' },\n        ]}\n      />\n      <ProFormTextArea\n        name=\"bio\"\n        label=\"Bio\"\n        description=\"Markdown is supported. Max 500 characters.\"\n        placeholder=\"Tell us about yourself\"\n      />\n      <ProFormPassword\n        name=\"password\"\n        label=\"Password\"\n        description=\"Must contain at least 8 characters, one uppercase and one number.\"\n        rules={[{ required: true, message: 'Password is required' }]}\n      />\n      <ProFormCheckbox\n        name=\"agree\"\n        label=\"I accept the terms\"\n        feedback=\"You must agree before submitting.\"\n      />\n    </ProForm>",
       "source": "stories",
       "compilable": false
-    },
-    "7ae894e8181a0534204e98888ca38826cde3925bb26787a732a0829c181669a3": {
-      "title": "Canonical usage",
-      "code": "import type { TourStep } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "7aff0837c66402bc8bfd244cefc96957343db1dc910f9d19c3fd5a4d38936448": {
       "title": "Horizontal Scroll",
@@ -1285,16 +1087,22 @@
       "source": "stories",
       "compilable": false
     },
+    "7fa92e052831cae87c3f0b935466ebe2f827bd696b626583810266f584e63167": {
+      "title": "Page Loading Overlay",
+      "code": "const PageLoader = ({ isLoading }: { isLoading: boolean }) => {\n  if (!isLoading) return null;\n\n  return (\n    <div className=\"page-loader-overlay\">\n      <Spinner size={48} />\n    </div>\n  );\n};",
+      "source": "readme",
+      "compilable": true
+    },
     "7fcff23beb3f8649dd3c8e6b827035a4838bd0ceb71aec2a6debfbd16fc7d1f8": {
       "title": "Basic",
       "code": "<DrawerLauncher {...args} />",
       "source": "stories",
       "compilable": false
     },
-    "802d7a93824c4a4841c52f2688f4d5b201b3c4f56435625c03ecafb2df0e8db6": {
-      "title": "Canonical usage",
-      "code": "import type { SelectStatus } from '@1money/component-ui';",
-      "source": "canonical",
+    "8129a087395157c8e93b214d9f280f542658a37d2d8aa6ea5e2561bf7d128925": {
+      "title": "Navigation (sidebar with collapse)",
+      "code": "import { useRef } from 'react';\nimport type { NavigationHandlers } from '@1money/components-ui';\n\nconst ref = useRef<NavigationHandlers>(null);\n\n<Navigation\n  ref={ref}\n  items={[\n    { key: 'home', label: 'Home', icon: 'home', active: true },\n    { key: 'portfolio', label: 'Portfolio', icon: 'portfolio' },\n    {\n      key: 'transactions',\n      label: 'Transactions',\n      icon: 'transactions',\n      children: [\n        { key: 'deposits', label: 'Deposits' },\n        { key: 'withdrawals', label: 'Withdrawals' },\n      ],\n    },\n  ]}\n  collapsible\n  onCollapse={(collapsed) => console.log(collapsed)}\n  selector={<CompanySelector />}\n>\n  {/* rendered at the bottom of the sidebar */}\n  <SettingsLink />\n</Navigation>\n\n// Imperative control\nref.current?.toggle();\nref.current?.collapse(true);",
+      "source": "readme",
       "compilable": true
     },
     "81fa795ca4a1acae4ec31efda3c21167df7e3f24ad1461056a90469ff70b835a": {
@@ -1302,12 +1110,6 @@
       "code": "{\n    const [selected, setSelected] = useState<string[]>(['Banana', 'Date']);\n\n    const toggle = (item: string) => {\n      setSelected((prev) =>\n        prev.includes(item) ? prev.filter((v) => v !== item) : [...prev, item],\n      );\n    };\n\n    return (\n      <Dropdown\n        {...args}\n        overlayStyle={{ minWidth: 260 }}\n        content={\n          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>\n            {selected.length > 0 && (\n              <div style={selectedBarStyle}>\n                <span style={{ fontSize: 14, fontWeight: 500, color: '#131313' }}>\n                  {selected.length} selected\n                </span>\n                <button\n                  type=\"button\"\n                  style={clearAllBtnStyle}\n                  onClick={() => setSelected([])}\n                >\n                  <Icons name=\"cross\" size={16} color=\"#ae0000\" />\n                  Clear all\n                </button>\n              </div>\n            )}\n            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>\n              {SIMPLE_ITEMS.map((item) => (\n                <div\n                  key={item}\n                  style={{\n                    padding: '6px 12px',\n                    borderRadius: 8,\n                    fontSize: 14,\n                    backgroundColor: selected.includes(item) ? '#f8f8f8' : 'transparent',\n                  }}\n                >\n                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer' }} onClick={() => toggle(item)}>\n                   <Checkbox\n                      checked={selected.includes(item)}\n                      onChange={() => toggle(item)}\n                   />\n                    <TypographyBody>{item}</TypographyBody>\n                  </div>\n\n                </div>\n              ))}\n            </div>\n          </div>\n        }\n      >\n        <Button>\n          {selected.length > 0 ? `${selected.length} selected` : 'Select items'}\n        </Button>\n      </Dropdown>\n    );\n  }",
       "source": "stories",
       "compilable": false
-    },
-    "8217407dd420ce682fb91f9e1bba564e90bed8d67c39533ac62c057b69593987": {
-      "title": "Usage",
-      "code": "<Input label=\"Amount\" placeholder=\"Value\" />\n\n<Input.Password label=\"Password\" />\n\n<Input.Search label=\"Search\" onSearch={(value) => console.log(value)} />\n\n<Input.TextArea label=\"Memo\" rows={4} />\n\n<Input.OTP length={6} />",
-      "source": "readme",
-      "compilable": true
     },
     "829d1add076b11f67d3d30e761c7861b952e35bb1ae8a1c71c99a97bbf5318a9": {
       "title": "All States",
@@ -1345,12 +1147,6 @@
       "source": "canonical",
       "compilable": true
     },
-    "83f9c4b31401922ddc84d60264badd258d516373ccfc2b81813bf57f5c7a1e5a": {
-      "title": "Canonical usage",
-      "code": "<ProFormFieldSet />",
-      "source": "canonical",
-      "compilable": true
-    },
     "842244e70f89e2aaf6941718de836ab3a6e08d642a4d4bb2e80cee160158470f": {
       "title": "Default",
       "code": "{\n    const sizes = ['large', 'small'] as const;\n    const statuses = ['default', 'error'] as const;\n    const valueTypes = ['Placeholder', 'Filled'] as const;\n\n    return (\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>\n        {sizes.map((size) => (\n          <div key={size}>\n            <h3 style={{ margin: '0 0 16px', textTransform: 'capitalize' }}>{size}</h3>\n            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>\n              {statuses.map((status) =>\n                valueTypes.map((vt) => (\n                  <div key={`${status}-${vt}`} style={{ width: 310 }}>\n                    <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>\n                      {status} / {vt}\n                    </p>\n                    <Input\n                      size={size}\n                      status={status}\n                      label=\"Label\"\n                      feedback=\"Feedback\"\n                      feedbackIcon={status === 'error' ? <Icons name=\"error\" size={16} /> : <Icons name=\"info\" size={16} />}\n                      placeholder=\"Value\"\n                      allowClear\n                      defaultValue={vt === 'Filled' ? 'Input value' : undefined}\n                    />\n                  </div>\n                )),\n              )}\n              {/* Read-Only */}\n              {valueTypes.map((vt) => (\n                <div key={`readonly-${vt}`} style={{ width: 310 }}>\n                  <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>\n                    read-only / {vt}\n                  </p>\n                  <Input\n                    size={size}\n                    readOnly\n                    label=\"Label\"\n                    feedback=\"Feedback\"\n                    feedbackIcon={<Icons name=\"info\" size={16} />}\n                    placeholder=\"Value\"\n                    defaultValue={vt === 'Filled' ? 'Read-only value' : undefined}\n                  />\n                </div>\n              ))}\n              {/* Disabled */}\n              {valueTypes.map((vt) => (\n                <div key={`disabled-${vt}`} style={{ width: 310 }}>\n                  <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>\n                    disabled / {vt}\n                  </p>\n                  <Input\n                    size={size}\n                    disabled\n                    label=\"Label\"\n                    feedback=\"Feedback\"\n                    feedbackIcon={<Icons name=\"info\" size={16} />}\n                    placeholder=\"Value\"\n                    defaultValue={vt === 'Filled' ? 'Disabled value' : undefined}\n                  />\n                </div>\n              ))}\n            </div>\n          </div>\n        ))}\n\n        {/* ── With Prefix / Suffix ── */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>With Prefix / Suffix</h3>\n          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Prefix + Suffix</p>\n              <Input\n                label=\"Label\"\n                defaultValue=\"100\"\n                prefix={<span>USD</span>}\n                suffix={<span>Max</span>}\n                allowClear\n              />\n            </div>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Prefix only</p>\n              <Input\n                label=\"Label\"\n                placeholder=\"Enter amount\"\n                prefix={<span>$</span>}\n                allowClear\n              />\n            </div>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Suffix only</p>\n              <Input\n                label=\"Label\"\n                placeholder=\"Enter email\"\n                suffix={<span>@gmail.com</span>}\n              />\n            </div>\n          </div>\n        </div>\n\n        {/* ── Required / Info ── */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>Required / Info</h3>\n          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Required</p>\n              <Input\n                label=\"Label\"\n                required\n                placeholder=\"Required field\"\n              />\n            </div>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Optional (required=false)</p>\n              <Input\n                label=\"Label\"\n                required={false}\n                placeholder=\"Optional field\"\n              />\n            </div>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>With Info</p>\n              <Input\n                label=\"Label\"\n                info=\"Optional hint\"\n                placeholder=\"Value\"\n              />\n            </div>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>With Tip</p>\n              <Input\n                label=\"Label\"\n                tip=\"This is a helpful tooltip\"\n                placeholder=\"Value\"\n              />\n            </div>\n            <div style={{ width: 310 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>Optional + Info + Tip</p>\n              <Input\n                label=\"Label\"\n                required={false}\n                info=\"Optional hint\"\n                tip=\"This is a helpful tooltip\"\n                placeholder=\"Value\"\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n    );\n  }",
@@ -1361,12 +1157,6 @@
       "title": "RadioGroup With Options",
       "code": "const [selected, setSelected] = useState<string | number>('email');\n\n<RadioGroup\n  value={selected}\n  onChange={(event) => {\n    if (event.target.value !== undefined) {\n      setSelected(event.target.value);\n    }\n  }}\n  options={[\n    { value: 'email', label: 'Email', description: 'Receive via email' },\n    { value: 'sms', label: 'SMS', description: 'Receive via text message' },\n    { value: 'push', label: 'Push', description: 'Receive on your device' },\n  ]}\n/>",
       "source": "readme",
-      "compilable": true
-    },
-    "85bd84178bbfcd56c92db6d690a33530c91f2485e3d9d27441e33fdf838e377f": {
-      "title": "Canonical usage",
-      "code": "<ProFormList name=\"name\" />",
-      "source": "canonical",
       "compilable": true
     },
     "8635e5203dcc0ffc85bde3edc3cafc477676635bb31ab8c71a82f13a90c00b5d": {
@@ -1381,35 +1171,11 @@
       "source": "canonical",
       "compilable": true
     },
-    "87119f77a8e04ec0f07dec55f2ef7985b167400772592d70172ee644167c1ebe": {
-      "title": "Canonical usage",
-      "code": "<ProFormSwitch />",
-      "source": "canonical",
-      "compilable": true
-    },
     "87b1990f73c96b7555165d59c2646f36d1db7d9f27712298b04b46ac63020d03": {
       "title": "Controlled",
       "code": "{\n    const [open, setOpen] = useState(false);\n\n    return (\n      <div style={POPCONFIRM_STORY_STYLE.controlledWrapper}>\n        <Popconfirm\n          {...args}\n          open={open}\n          onOpenChange={(nextOpen) => {\n            setOpen(nextOpen);\n            args.onOpenChange?.(nextOpen);\n          }}\n          onCancel={(event, context) => {\n            args.onCancel?.(event, context);\n            setOpen(false);\n          }}\n          onConfirm={(event, context) => {\n            args.onConfirm?.(event, context);\n            setOpen(false);\n          }}\n        >\n          <Button>{POPCONFIRM_DEMO_COPY.controlledTriggerText}</Button>\n        </Popconfirm>\n        <Button\n          size={BUTTON_SIZE.small}\n          color={BUTTON_COLOR.grey}\n          onClick={() => setOpen((prev) => !prev)}\n        >\n          {POPCONFIRM_DEMO_COPY.toggleText}: {open\n            ? POPCONFIRM_DEMO_COPY.openStateText\n            : POPCONFIRM_DEMO_COPY.closedStateText}\n        </Button>\n      </div>\n    );\n  }",
       "source": "stories",
       "compilable": false
-    },
-    "87dd752d00210f310d98413fe703cdc2d1dd610bd62efc974185675ea4f82d78": {
-      "title": "Canonical usage",
-      "code": "import type { DrawerFormProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "87df6d0f746b9be426eb490a25c877d56ac0252bcbdc0d69fa90260397387d4c": {
-      "title": "Canonical usage",
-      "code": "import type { DrawerProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "88336a196e8322974055de2b8c590f70ade08e176b0eac3f8cd6b72800b1b63a": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormListProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "88a98229b741820a7e0d61f5e3e8e51340ac8d1cc2eb5332be8189a42f43b6ff": {
       "title": "No Animation",
@@ -1477,17 +1243,17 @@
       "source": "readme",
       "compilable": true
     },
+    "90952e793cfea81bc8613eaed2e1b60208c06b4e98ce6f0cc5a254619af9e93f": {
+      "title": "Illustrations",
+      "code": "// Old (still works)\nimport { Deprecated } from '@1money/components-ui';\n<Deprecated name=\"old-icon-name\" />\n\n// New (recommended)\nimport { Icons } from '@1money/components-ui';\n<Icons name=\"new-icon-name\" />",
+      "source": "readme",
+      "compilable": true
+    },
     "90bea0eac958ff92526a0901cd2515a8694e96039b3d056e709ede70bd1b4678": {
       "title": "Search Only Filtered",
       "code": "{\n    const [value, setValue] = useState<string | number | undefined>(undefined);\n    const [searchValue, setSearchValue] = useState('');\n\n    const trimmed = searchValue.trim().toLowerCase();\n    const filteredOptions = trimmed\n      ? ASSET_OPTIONS.filter((option) => {\n          const label = String(option.label).toLowerCase();\n          const description = String(option.description ?? '').toLowerCase();\n          const optionValue = String(option.value).toLowerCase();\n          return (\n            label.includes(trimmed) ||\n            description.includes(trimmed) ||\n            optionValue.includes(trimmed)\n          );\n        })\n      : [];\n\n    return (\n      <div style={storyContainerStyle}>\n        <Select\n          {...args}\n          value={value}\n          options={filteredOptions}\n          searchValue={searchValue}\n          emptyContent={trimmed ? 'No matches' : 'Type to search assets'}\n          onSearchChange={(next) => {\n            setSearchValue(next);\n            args.onSearchChange?.(next);\n          }}\n          onChange={(nextValue, option) => {\n            setValue(nextValue as string | number | undefined);\n            args.onChange?.(nextValue, option);\n          }}\n        />\n      </div>\n    );\n  }",
       "source": "stories",
       "compilable": false
-    },
-    "92884b0ad016e0b0699fc547bc92043837674393d2d601ebe0fc0aa31ced6498": {
-      "title": "Canonical usage",
-      "code": "<Tour open steps={[]} onClose={() => {}} />",
-      "source": "canonical",
-      "compilable": true
     },
     "92d700fd2da1bf06587fe4c86118bff9b3b4b42eb3ec5a4c9a790f7ac8950ff6": {
       "title": "Illustrations",
@@ -1498,12 +1264,6 @@
     "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95": {
       "title": "Canonical usage",
       "code": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "93b1291462e3499dc53cfc59ff3a287c0beb68213b4eb563c88cc64ce2158ba8": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormColProps } from '@1money/component-ui';",
       "source": "canonical",
       "compilable": true
     },
@@ -1555,18 +1315,6 @@
       "source": "stories",
       "compilable": false
     },
-    "96f9cfe7a3579cf1c7ff57afe66be83040e23794844ce4d35758cae32e1c7cdb": {
-      "title": "Usage",
-      "code": "<Navigation\n  items={[\n    { key: 'home', label: 'Home', icon: 'home', active: true },\n    { key: 'portfolio', label: 'Portfolio', icon: 'portfolio' },\n    { key: 'transactions', label: 'Transactions', icon: 'transactions', children: [\n      { key: 'deposits', label: 'Deposits' },\n      { key: 'withdrawals', label: 'Withdrawals' },\n    ]},\n  ]}\n  collapsible\n  onCollapse={(collapsed) => console.log(collapsed)}\n/>",
-      "source": "readme",
-      "compilable": true
-    },
-    "97683a3f5c99b99a2b9a054edbee9d66d751fcb9ce9361898434af338708d3c9": {
-      "title": "Canonical usage",
-      "code": "<Step items={[]} />",
-      "source": "canonical",
-      "compilable": true
-    },
     "97c44f1fee50bdc6a2d6a8cb4b7c56c51a2997d2ea78b3647cce7b0c249f6f8c": {
       "title": "Import",
       "code": "import { Tooltip } from '@1money/components-ui';\n// or\nimport { Tooltip } from '@1money/components-ui/Tooltip';",
@@ -1576,6 +1324,12 @@
     "97d3304eb6ad0bcd991e2dcc8d7d92caa6f844fd15f4fe6aa0b33d374d922ecd": {
       "title": "Basic Usage",
       "code": "<Radio\n  label=\"Accept terms\"\n  checked={isChecked}\n  onChange={(event) => setIsChecked(event.target.checked)}\n/>",
+      "source": "readme",
+      "compilable": true
+    },
+    "981f2b8a3640a8ce952c89b517bddfce5736957f28636f94c17265c8ed5b575e": {
+      "title": "Usage",
+      "code": "<Tour\n  open={open}\n  onClose={() => setOpen(false)}\n  steps={[\n    {\n      target: '#dashboard-card',\n      placement: 'bottom',\n      heading: 'Dashboard',\n      body: 'Track your account activity here.',\n    },\n  ]}\n/>",
       "source": "readme",
       "compilable": true
     },
@@ -1603,12 +1357,6 @@
       "source": "readme",
       "compilable": true
     },
-    "9a5aa0a4875e686c1a64a1085ed22b25ebf5849ebf8bf0cd0fb6376c887729ab": {
-      "title": "Canonical usage",
-      "code": "<DrawerForm />",
-      "source": "canonical",
-      "compilable": true
-    },
     "9a6b2f4b0ce1fdea4c73f1f9ea0d1471dc97d3dd7783c798b6b99ddc7f3bf15c": {
       "title": "Import",
       "code": "import { Skeleton } from '@1money/components-ui';\n// or\nimport { Skeleton } from '@1money/components-ui/Skeleton';",
@@ -1621,21 +1369,21 @@
       "source": "stories",
       "compilable": true
     },
-    "9b24b5a45401922ce5317e6b1dcdc28a9caba33fd0c952afb36b62e7cea62ea9": {
-      "title": "Canonical usage",
-      "code": "<ProFormSelect />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "9c4b5f475fd76261b4364f04f169997152a1ceea87575298d7a413fd0a551085": {
-      "title": "Canonical usage",
-      "code": "import type { FormCoreInstance } from '@1money/component-ui';",
-      "source": "canonical",
+    "9c99f80f5636ab539416d2c5c60a083a9d43acd5938644b959803204f9470ac1": {
+      "title": "Import",
+      "code": "import { Portal } from '@1money/components-ui';\n// or\nimport { Portal } from '@1money/components-ui/Portal';",
+      "source": "readme",
       "compilable": true
     },
     "9d095c31abb7ac97c40b817bfca40bcb706f8b8572f9a6af7218643f08b7464b": {
       "title": "Import",
       "code": "import { Flex } from '@1money/components-ui';\n// or\nimport { Flex } from '@1money/components-ui/Flex';\nimport { FLEX_ALIGN, FLEX_GAP, FLEX_JUSTIFY, FLEX_WRAP } from '@1money/components-ui/Flex';",
+      "source": "readme",
+      "compilable": true
+    },
+    "9d9e13198adcfe9df9f475bcf7d1fcef492fbd98892daaddb28d65ca2e213a74": {
+      "title": "Import",
+      "code": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "source": "readme",
       "compilable": true
     },
@@ -1655,12 +1403,6 @@
       "title": "Group Label Placement Right",
       "code": "{\n    const [value, setValue] = React.useState<string | number>('a');\n    const handleChange = (event: RadioChangeEvent) => {\n      if (event.target.value !== undefined) {\n        setValue(event.target.value);\n      }\n    };\n\n    return (\n      <RadioGroup value={value} onChange={handleChange} labelPlacement=\"right\">\n        <Radio value=\"a\" label=\"Option A\" description=\"Description A\" />\n        <Radio value=\"b\" label=\"Option B\" description=\"Description B\" />\n      </RadioGroup>\n    );\n  }",
       "source": "stories",
-      "compilable": true
-    },
-    "a0db5e8a8634435b7717e8162c8d43cd1a6918c73fb73a44d76d56fa6d532de2": {
-      "title": "Canonical usage",
-      "code": "import type { ProgressState } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "a0eaa77614f8bc2563173aa4c68d578c2a7d2957ec1696516c9656d43737f7e2": {
@@ -1705,22 +1447,10 @@
       "source": "stories",
       "compilable": true
     },
-    "a5ae14150d1724de4984c10921713734e86d15771efe397f3015a01c77d13676": {
-      "title": "Canonical usage",
-      "code": "import { Cell } from '@1money/component-ui';\n// or\nimport { Cell } from '@1money/component-ui/Cell';",
-      "source": "canonical",
-      "compilable": true
-    },
     "a823300963fcf8c4ccf8e531c42aa78d7ab59841b405c471d5c0c0d6ac0b9b22": {
       "title": "Text Area",
       "code": "{\n    const states = ['default', 'error'] as const;\n    const valueTypes = ['Placeholder', 'Filled'] as const;\n\n    return (\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>\n        {/* ── Large ── */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>Large</h3>\n          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>\n            {states.map((status) =>\n              valueTypes.map((vt) => (\n                <div key={`${status}-${vt}`} style={{ width: 400 }}>\n                  <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>\n                    {status} / {vt}\n                  </p>\n                  <Input.TextArea\n                    label=\"Label\"\n                    feedback=\"Feedback\"\n                    feedbackIcon={status === 'error' ? <Icons name=\"error\" size={16} /> : <Icons name=\"info\" size={16} />}\n                    status={status}\n                    placeholder=\"Value\"\n                    defaultValue={vt === 'Filled' ? 'Longer memo value that spans multiple lines to demonstrate the filled state of the textarea component' : undefined}\n                    rows={4}\n                    showCount\n                    maxLength={250}\n                  />\n                </div>\n              )),\n            )}\n            {/* Disabled */}\n            {valueTypes.map((vt) => (\n              <div key={`disabled-${vt}`} style={{ width: 400 }}>\n                <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>\n                  disabled / {vt}\n                </p>\n                <Input.TextArea\n                  label=\"Label\"\n                  feedback=\"Feedback\"\n                  feedbackIcon={<Icons name=\"info\" size={16} />}\n                  disabled\n                  placeholder=\"Value\"\n                  defaultValue={vt === 'Filled' ? 'Disabled filled value' : undefined}\n                  rows={4}\n                  showCount\n                  maxLength={250}\n                />\n              </div>\n            ))}\n          </div>\n        </div>\n\n        {/* ── Small ── */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>Small</h3>\n          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>\n            <div style={{ width: 400 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Placeholder</p>\n              <Input.TextArea\n                size=\"small\"\n                label=\"Label\"\n                feedback=\"Feedback\"\n                feedbackIcon={<Icons name=\"info\" size={16} />}\n                placeholder=\"Value\"\n                rows={3}\n                showCount\n                maxLength={250}\n              />\n            </div>\n            <div style={{ width: 400 }}>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Filled</p>\n              <Input.TextArea\n                size=\"small\"\n                label=\"Label\"\n                feedback=\"Feedback\"\n                feedbackIcon={<Icons name=\"info\" size={16} />}\n                placeholder=\"Value\"\n                defaultValue=\"Small filled value\"\n                rows={3}\n                showCount\n                maxLength={250}\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n    );\n  }",
       "source": "stories",
-      "compilable": true
-    },
-    "a95b0ad034e07b035fd0d4b861b4bb29fe68e7e04c8f0d3541178f4e15b7b0d1": {
-      "title": "Canonical usage",
-      "code": "import type { CreateProFormFieldConfig } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "aa0e9842f54e521f7ff371e51003e26ed69263bef1d5d37baaa5fd6fa189e32c": {
@@ -1729,10 +1459,10 @@
       "source": "readme",
       "compilable": true
     },
-    "aa54a561acdb2781536fc6d5bf4b05fc2a4ec7cc3a1952f3d8aa3086f866754a": {
-      "title": "Canonical usage",
-      "code": "import type { StepItem } from '@1money/component-ui';",
-      "source": "canonical",
+    "aa61ebf1b90fbb562c6110d57bc34506cb6448c179bb745b3c3106a7f6cc9e74": {
+      "title": "Import",
+      "code": "import { Progress } from '@1money/components-ui';\n// or\nimport { Progress } from '@1money/components-ui/Progress';",
+      "source": "readme",
       "compilable": true
     },
     "ab9c2b8dec3865ef9826586aa69c01790a48073272eb97a2006323577fbf2550": {
@@ -1759,22 +1489,16 @@
       "source": "readme",
       "compilable": true
     },
-    "aeb5b3145a02eaf5de7b756aa71f963aac5ab51ac00f7f76dbc2599ab7634b3a": {
-      "title": "Canonical usage",
-      "code": "import type { VirtualListProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "af6172fd099200e93181aeb231c5d69c5b4b4d057a1f32935aa2f35ed86ffebe": {
       "title": "Search",
       "code": "{\n    const onSearch = fn();\n    const sizes = ['large', 'small'] as const;\n    const columns = [\n      { label: 'Default', props: {} },\n      { label: 'Disabled', props: { disabled: true } },\n    ];\n\n    return (\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>\n        {sizes.map((size) => (\n          <div key={size}>\n            <h3 style={{ margin: '0 0 16px', textTransform: 'capitalize' }}>{size}</h3>\n            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>\n              {/* Placeholder row */}\n              <div>\n                <p style={{ margin: '0 0 8px', color: '#666', fontSize: 13 }}>Placeholder</p>\n                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>\n                  {columns.map((col) => (\n                    <div key={col.label} style={{ width: 310 }}>\n                      <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>{col.label}</p>\n                      <Input.Search\n                        size={size}\n                        placeholder=\"Search\"\n                        onSearch={onSearch}\n                        {...col.props}\n                      />\n                    </div>\n                  ))}\n                </div>\n              </div>\n              {/* Filled row */}\n              <div>\n                <p style={{ margin: '0 0 8px', color: '#666', fontSize: 13 }}>Filled</p>\n                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>\n                  {columns.map((col) => (\n                    <div key={col.label} style={{ width: 310 }}>\n                      <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>{col.label}</p>\n                      <Input.Search\n                        size={size}\n                        placeholder=\"Search\"\n                        defaultValue=\"Search\"\n                        allowClear\n                        onSearch={onSearch}\n                        {...col.props}\n                      />\n                    </div>\n                  ))}\n                </div>\n              </div>\n            </div>\n          </div>\n        ))}\n        {/* Loading */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>Loading</h3>\n          <div style={{ display: 'flex', gap: 16 }}>\n            <div style={{ width: 310 }}>\n              <Input.Search\n                placeholder=\"Search\"\n                defaultValue=\"Search\"\n                loading\n                onSearch={onSearch}\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n    );\n  }",
       "source": "stories",
       "compilable": false
     },
-    "af895efcacf8986532f0595254021a9fc61222edede0123afbd36e0ca9de61bc": {
-      "title": "Canonical usage",
-      "code": "<ProFormCheckbox />",
-      "source": "canonical",
+    "af64339337cb6c9e4dfce14392faeb67ee7ab5b4fd60c434ee58ce8db56705c2": {
+      "title": "Import",
+      "code": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
+      "source": "readme",
       "compilable": true
     },
     "b01e2ee6d41091e4a6c12c9a96eb56c7c35c717754ac47bc643756c276654869": {
@@ -1801,6 +1525,12 @@
       "source": "stories",
       "compilable": true
     },
+    "b14da4d622a544459d2811d8e446450f5581cecc1aa78d0da413b1bbaba9df9d": {
+      "title": "Usage",
+      "code": "<Upload\n  label=\"Attach document\"\n  description=\"PDF or PNG, up to 10 MB\"\n  buttonLabel=\"Upload file\"\n  accept=\".pdf,.png\"\n  onSelect={(files) => console.log(files)}\n/>",
+      "source": "readme",
+      "compilable": true
+    },
     "b1c6f9400c9b8e40e5ce950447b02ac670b68a1e55242b16a8dc86249f792a7f": {
       "title": "Canonical usage",
       "code": "<p>Above</p>\n<Divider />\n<p>Below</p>",
@@ -1813,46 +1543,16 @@
       "source": "stories",
       "compilable": false
     },
-    "b5058892460d3456a042642b413b9da4a784488bd7e21f991f40aea1d5d14a93": {
-      "title": "Canonical usage",
-      "code": "import type { LabelAlign } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "b5122ab00632d0b9f9f205345094b8cc87d3de0e265bfa06f77f8c0538a72a4a": {
-      "title": "Import",
-      "code": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
-      "source": "readme",
-      "compilable": true
-    },
     "b53d16f186c5371a04bc88eb4e5f48d69652f711a0b9596a5b520eea56fd12b7": {
       "title": "Usage",
       "code": "<Link href=\"https://docs.1money.com\" target=\"_blank\">\n  Documentation\n</Link>",
       "source": "readme",
       "compilable": true
     },
-    "b544632e1c68a8027a7dc14c2772e211df6fcaa76bf806baaff18f201ed75656": {
-      "title": "Canonical usage",
-      "code": "<Table rowKey=\"id\" columns={columns} dataSource={rows} />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "b5c565a619ca8c6ea6be3771a025e08245ee1157433a0f25341df72da8c82c84": {
-      "title": "Canonical usage",
-      "code": "import type { VirtualListRef } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "b5cf05bb6a8f45cfcd470fe1172b358fbd92178d3eece19d966999aa3f077105": {
-      "title": "Canonical usage",
-      "code": "import { Link } from '@1money/component-ui';\n// or\nimport { Link } from '@1money/component-ui/Link';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "b669352c8c48a5998e787d52dcf642775655517e1ea3c28da5047402bfb8f815": {
-      "title": "Canonical usage",
-      "code": "import type { ResizeObserverSizeInfo } from '@1money/component-ui';",
-      "source": "canonical",
+    "b5ac338b8dae79ebaa6977ba835eec80689422de45f275287959a9a88f1ecce7": {
+      "title": "Usage",
+      "code": "<Select\n  label=\"Currency\"\n  placeholder=\"Select currency\"\n  options={[\n    { label: 'USD', value: 'USD' },\n    { label: 'EUR', value: 'EUR', disabled: true },\n  ]}\n  onChange={(value, option) => console.log(value, option)}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "b6bf8d1eebcfbb2bb8d4eef7f3fbb26233d5abe1febad432c6cb4d4af6ad7a79": {
@@ -1879,10 +1579,10 @@
       "source": "stories",
       "compilable": false
     },
-    "bd798228effd9ea304dec801de169c61b68aa249974a07c893487d7bb9d57dc0": {
-      "title": "Canonical usage",
-      "code": "import type { ResizeObserverProps } from '@1money/component-ui';",
-      "source": "canonical",
+    "bad68aaa47c4d8c9f976f817b5edbef7ff8573f469f9a1bc5bc53482ff65b38e": {
+      "title": "Usage",
+      "code": "<Alert\n  status=\"info\"\n  title=\"Information\"\n  body=\"This is an informational message.\"\n  link={{ label: 'Learn more', href: '/docs' }}\n  closable\n  onClose={() => console.log('closed')}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "bda0a33c638ce6212b4a0c6a592ef4de615a792af4360935f5c256a31d3c2bfc": {
@@ -1896,24 +1596,6 @@
       "code": "{\n    const [selected, setSelected] = useState('1');\n\n    return (\n      <Dropdown\n        {...args}\n        overlayStyle={{ minWidth: 420 }}\n        content={({ close }) => (\n          <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>\n            {/* Title */}\n            <p style={panelTitleStyle}>Address History</p>\n\n            {/* Address list */}\n            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>\n              {ADDRESSES.map((addr) => (\n                <button\n                  key={addr.id}\n                  type=\"button\"\n                  style={selected === addr.id ? addressItemSelectedStyle : addressItemStyle}\n                  onClick={() => {\n                    setSelected(addr.id);\n                    close();\n                  }}\n                >\n                  <div style={{ flex: 1, minWidth: 0 }}>\n                    <p style={itemTitleStyle}>{addr.label}</p>\n                    <p style={{ ...itemSubtitleStyle, wordBreak: 'break-all' }}>\n                      {addr.address}\n                    </p>\n                  </div>\n                  <div style={{ flexShrink: 0, textAlign: 'right' }}>\n                    <p style={itemAmountStyle}>{addr.token}</p>\n                  </div>\n                  <div style={{ flexShrink: 0, width: 16 }}>\n                    {selected === addr.id && (\n                      <Icons name=\"check\" size={16} color=\"#131313\" />\n                    )}\n                  </div>\n                </button>\n              ))}\n            </div>\n\n            {/* Footer action */}\n            <div style={panelFooterStyle}>\n              <button\n                type=\"button\"\n                style={{\n                  ...footerBtnStyle,\n                  backgroundColor: '#dde6f4',\n                  color: '#073387',\n                }}\n              >\n                <Icons name=\"add\" size={16} color=\"#073387\" />\n                New address\n              </button>\n            </div>\n          </div>\n        )}\n      >\n        <Button>Select Address</Button>\n      </Dropdown>\n    );\n  }",
       "source": "stories",
       "compilable": false
-    },
-    "bea04481c1d6a537bdee648094a468c0153ef005defd5762fd0568a7312f0b71": {
-      "title": "Canonical usage",
-      "code": "<ProFormItem />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "bea3fd79a9ce5be5ed4038daa57612f962de2b1b334870a215966790b6a5c1f5": {
-      "title": "Usage",
-      "code": "<CoachMark\n  heading=\"Welcome to Dashboard\"\n  body=\"Here you can see an overview of your finances.\"\n  steps={4}\n  defaultActiveStep={0}\n  placement=\"top\"\n  icon={<Icons name=\"dashboard\" size={24} />}\n  onFinish={() => console.log('Tour complete')}\n  onDismiss={() => console.log('Tour dismissed')}\n/>",
-      "source": "readme",
-      "compilable": true
-    },
-    "bec858e374183c180f6a8c8157e1d6204faf444043aa0bfe7145fdff1fb35c29": {
-      "title": "Canonical usage",
-      "code": "import type { QueryFilterProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "bfa365023d672d8f94c08d4bf7dba03404964ed3489949e44748853da10be22b": {
       "title": "Dialog Form Story",
@@ -1933,16 +1615,10 @@
       "source": "stories",
       "compilable": false
     },
-    "bfef3654ba7e004cca9c6680de5d7039f9de64917fbbcc8e2f2ca84d014a58b2": {
-      "title": "Canonical usage",
-      "code": "import type { SelectProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "c145e8864a44d06820814a82b0d0e2e486e772f015830b8cc626831e2e025878": {
-      "title": "Canonical usage",
-      "code": "<Portal />",
-      "source": "canonical",
+    "c1047979ec6d13e1fe99d24583dd1657985cf01fbfbda4dbeeb51919a33a743d": {
+      "title": "Usage",
+      "code": "<Portal>\n  <div>Rendered in document.body</div>\n</Portal>\n\n<Portal disablePortal>\n  <div>Rendered in place</div>\n</Portal>",
+      "source": "readme",
       "compilable": true
     },
     "c196d3703b8f7605b2cf3ba5d441a3c20a72992b82874261716187376e93e86e": {
@@ -1957,11 +1633,23 @@
       "source": "stories",
       "compilable": false
     },
+    "c2ed4afd7f4c04998bfad81cb58b67b4a475835fbd8784a832e1a785e11eb50e": {
+      "title": "Brand Spinner on Gradient Background",
+      "code": "<Spinner\n  type=\"brand-bg\"\n  size={80}\n  title=\"Setting up your account\"\n/>",
+      "source": "readme",
+      "compilable": true
+    },
     "c303f66164ebe41cd2a3afd4f3f393f888ada9d6806d059d56b47f502825f2f7": {
       "title": "OTP",
       "code": "{\n    const onComplete = fn();\n    const onChange = fn();\n\n    return (\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>\n        {/* ── Large ── */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>Large</h3>\n          <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Empty</p>\n              <Input.OTP\n                label=\"Verification Code\"\n                feedback=\"Feedback\"\n                feedbackIcon={<Icons name=\"info\" size={16} />}\n                length={6}\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Partial</p>\n              <Input.OTP\n                label=\"Verification Code\"\n                feedback=\"Feedback\"\n                feedbackIcon={<Icons name=\"info\" size={16} />}\n                length={6}\n                defaultValue=\"123\"\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>error</p>\n              <Input.OTP\n                label=\"Verification Code\"\n                status=\"error\"\n                feedback=\"Invalid code\"\n                feedbackIcon={<Icons name=\"error\" size={16} />}\n                length={6}\n                defaultValue=\"999999\"\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>disabled</p>\n              <Input.OTP\n                label=\"Verification Code\"\n                disabled\n                length={6}\n                defaultValue=\"123456\"\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>mask (password style)</p>\n              <Input.OTP\n                label=\"PIN Code\"\n                length={6}\n                defaultValue=\"1234\"\n                mask\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n          </div>\n        </div>\n\n        {/* ── Small ── */}\n        <div>\n          <h3 style={{ margin: '0 0 16px' }}>Small</h3>\n          <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>default / Empty</p>\n              <Input.OTP\n                size=\"small\"\n                label=\"Code\"\n                length={6}\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n            <div>\n              <p style={{ margin: '0 0 4px', fontSize: 12, color: '#999' }}>4-digit code</p>\n              <Input.OTP\n                size=\"small\"\n                label=\"PIN\"\n                length={4}\n                defaultValue=\"12\"\n                onComplete={onComplete}\n                onChange={onChange}\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n    );\n  }",
       "source": "stories",
       "compilable": false
+    },
+    "c37dda6e47f4681c24203fbf4f154801673c331d4394707e6c12c5b07eb3953b": {
+      "title": "Import",
+      "code": "import { Cell } from '@1money/components-ui';\n// or\nimport { Cell } from '@1money/components-ui/Cell';",
+      "source": "readme",
+      "compilable": true
     },
     "c3aaf0098db4c77ba5af727f8c2eb70a9969be6ea15dcba309d583137cfe6e21": {
       "title": "Nested List",
@@ -1975,33 +1663,15 @@
       "source": "stories",
       "compilable": true
     },
-    "c4fb3c20755ba50100856ee70fc3b85038d8c04bef80a4aec58734e95995d8a8": {
-      "title": "Canonical usage",
-      "code": "<ProFormCheckboxGroup />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "c539c466c34edf9adf7a91c4b2d933518b120bce2cce74457c78e0579e6f91b5": {
-      "title": "Canonical usage",
-      "code": "import type { DropdownProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "c5c8294cf8e64c0260dadcf294fe23c8dc5b054d7780988addeb5f5bfa8f6658": {
-      "title": "Page Loading Overlay",
-      "code": "const PageLoader = ({ isLoading }) => {\n  if (!isLoading) return null;\n\n  return (\n    <div className=\"page-loader-overlay\">\n      <Spinner\n        style={{ width: '50px', height: '50px' }}\n        strokeWidth=\"3\"\n      />\n      <p>Loading your data...</p>\n    </div>\n  );\n};",
+    "c5260837fe7728fca505a762c48a8ede3b34d472c53b2be29b29a49de267418d": {
+      "title": "Import",
+      "code": "import { Icons, IconWrapper, IconHover } from '@1money/components-ui';\n// or\nimport { Icons, IconWrapper, IconHover } from '@1money/components-ui/Icons';\n\n// Type import\nimport type { IconName } from '@1money/components-ui';",
       "source": "readme",
       "compilable": true
     },
-    "c614ee8b96a68d951bd7d9eb5c0f2a5c3be262fa670d2d245894f0a91deb000d": {
+    "c53ede8df4b95ea3a84f4272cdde631bf1281322de0a44bfa5d9f4ac16ed9618": {
       "title": "Canonical usage",
-      "code": "<Pagination />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "c61edd4d5f5113671afbb2b5ce72b88a70f64bf63d8e320cd21c669831574cd1": {
-      "title": "Canonical usage",
-      "code": "<ProFormDependency name={[]}>{() => {}}</ProFormDependency>",
+      "code": "import { Portal } from '@1money/components-ui';\n// or\nimport { Portal } from '@1money/components-ui/Portal';",
       "source": "canonical",
       "compilable": true
     },
@@ -2029,11 +1699,23 @@
       "source": "readme",
       "compilable": true
     },
+    "c7adce2c978836debb618dc91c44c12df9f50836e6ff9994fe3822dd48caef5a": {
+      "title": "Nav (flat / grouped navigation)",
+      "code": "<Nav\n  items={[\n    {\n      key: 'group-accounts',\n      label: 'Accounts',\n      icon: 'wallet',\n      children: [\n        { key: 'checking', label: 'Checking', active: true },\n        { key: 'savings', label: 'Savings' },\n      ],\n    },\n    { key: 'settings', label: 'Settings' },\n  ]}\n/>",
+      "source": "readme",
+      "compilable": true
+    },
     "c7dcba25848c3c668f4be990f07f1a6cc8b5b3687bb3533b277bf10074bbbd74": {
       "title": "Mode Update",
       "code": "<ProForm\n      {...args}\n      mode=\"update\"\n      initialValues={{ id: 'USR-001', name: 'Alice', email: 'alice@example.com' }}\n      onFinish={(values) => alert(JSON.stringify(values, null, 2))}\n    >\n      <ProFormText name=\"id\" label=\"ID\" mode=\"read\" />\n      <ProFormText name=\"name\" label=\"Name\" rules={[{ required: true }]} />\n      <ProFormText name=\"email\" label=\"Email\" />\n    </ProForm>",
       "source": "stories",
       "compilable": false
+    },
+    "c87555ab10e8a41bf2ce44d458d0c8d8df9f58151f64bb7a4c1edcec5ae0dbcd": {
+      "title": "Canonical usage",
+      "code": "import { Cell } from '@1money/components-ui';\n// or\nimport { Cell } from '@1money/components-ui/Cell';",
+      "source": "canonical",
+      "compilable": true
     },
     "c9055581e81ec06997b903da8cf3dc5446cb9767423cb2fd80762ede31063176": {
       "title": "Disabled",
@@ -2047,27 +1729,15 @@
       "source": "stories",
       "compilable": false
     },
-    "ca3b9b0ee348c09e621b11cf2534f5d42546ed5004f5f00f042b20c9ca6a7548": {
-      "title": "Canonical usage",
-      "code": "import type { DialogFooterRender } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "ca70d69f9d217bc2fb7464ca43a6e4014c47f608128b31fcaef0dce251e15ea4": {
       "title": "With Disabled",
       "code": "<Segment\n      items={[\n        { value: 'tab1', label: 'Overview' },\n        { value: 'tab2', label: 'Transactions' },\n        { value: 'tab3', label: 'Analytics', disabled: true },\n        { value: 'tab4', label: 'Settings' },\n      ]}\n    />",
       "source": "stories",
       "compilable": true
     },
-    "cb70ebe2c9a937bb1cd0ba29f708510c4c1e22e8ac2caacd37674882f698a196": {
+    "cb112d23d742e359bb073b630230b53ccd7362c90ce29f033223143742f4687a": {
       "title": "Canonical usage",
-      "code": "import type { SelectRenderOptionMeta } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "cc02e88440947a6233796037b3d5c91a08dccc0fbd6048c0d19e0c449e82dc73": {
-      "title": "Canonical usage",
-      "code": "import type { DropdownContentContext } from '@1money/component-ui';",
+      "code": "import { Drawer } from '@1money/components-ui';\n// or\nimport { Drawer } from '@1money/components-ui/Drawer';",
       "source": "canonical",
       "compilable": true
     },
@@ -2083,12 +1753,6 @@
       "source": "stories",
       "compilable": true
     },
-    "cd8832b40b359a75929b8e7f17192a66cbf85c7fdc424c4d1b3fd2cb736bb5ce": {
-      "title": "Entry Points",
-      "code": "<div style={{ display: 'grid', gap: 16 }}>\n      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>\n        <CrossIcon size={20} />\n        <Icon name=\"cross\" size={20} />\n        <Icons name=\"depositFiatCrypto\" size={20} />\n      </div>\n      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>\n        <LogoWithWords width={132} height={24} logoColor=\"#073387\" wordColor=\"#131313\" />\n        <IconHover>\n          <CrossIcon size={16} />\n        </IconHover>\n      </div>\n    </div>",
-      "source": "stories",
-      "compilable": true
-    },
     "ce3412158804bef977933a6f68163249822402fcf44facae20470ccfd61de718": {
       "title": "Import",
       "code": "import { Calendar } from '@1money/components-ui';\n// or\nimport { Calendar } from '@1money/components-ui/Calendar';",
@@ -2100,12 +1764,6 @@
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 32, maxWidth: 660 }}>\n      <div>\n        <h3 style={{ margin: '0 0 8px' }}>Default (Placeholder)</h3>\n        <Input.Trade\n          currencySymbol=\"$\"\n          currencyUnit=\"USD\"\n          showMax\n          onMax={fn()}\n          onSwap={fn()}\n          exchangeText=\"0 USDT\"\n        />\n      </div>\n      <div>\n        <h3 style={{ margin: '0 0 8px' }}>Default (Filled)</h3>\n        <Input.Trade\n          currencySymbol=\"$\"\n          currencyUnit=\"USD\"\n          defaultValue=\"123,456,789\"\n          showMax\n          onMax={fn()}\n          onSwap={fn()}\n          exchangeText=\"123,456,789 USDT\"\n        />\n      </div>\n      <div>\n        <h3 style={{ margin: '0 0 8px' }}>Error</h3>\n        <Input.Trade\n          currencySymbol=\"$\"\n          currencyUnit=\"USD\"\n          defaultValue=\"123,456,789\"\n          status=\"error\"\n          showMax\n          onMax={fn()}\n          onSwap={fn()}\n          exchangeText=\"123,456,789 USDT\"\n          feedback=\"Insufficient balance\"\n        />\n      </div>\n      <div>\n        <h3 style={{ margin: '0 0 8px' }}>Disabled</h3>\n        <Input.Trade\n          currencySymbol=\"$\"\n          currencyUnit=\"USD\"\n          defaultValue=\"123,456,789\"\n          disabled\n          showMax\n          onSwap={fn()}\n          exchangeText=\"123,456,789 USDT\"\n        />\n      </div>\n    </div>",
       "source": "stories",
       "compilable": false
-    },
-    "cef06a2fa9ec150e4ab25d3ca42529946e43096750463d7e09e45104bfe938a9": {
-      "title": "Canonical usage",
-      "code": "import type { SelectSize } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "cf77657b10de8590abb4f91c96d5208ef8e88c19ca770632f85ea70ebd3f41f2": {
       "title": "Debounce Field",
@@ -2119,24 +1777,6 @@
       "source": "stories",
       "compilable": false
     },
-    "d04fb66d67c8ae60bbd4a4937cb198b9b91ef7835b27f5766f421c864efdf891": {
-      "title": "Canonical usage",
-      "code": "<VirtualList />",
-      "source": "canonical",
-      "compilable": true
-    },
-    "d07754a416050437d6b99b5541fa4eb847f75facc92eb9f9427194d138408140": {
-      "title": "Canonical usage",
-      "code": "import type { DialogProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "d0b89ae2fa1043346a2874d6f6ab1231cc0e830f16e1f70fd5614d322a61b044": {
-      "title": "Canonical usage",
-      "code": "import type { SelectValue } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "d17ae919d30d1b43236c52018609c72e725c0e22e47938fa2bed04cae70b2542": {
       "title": "Usage",
       "code": "<Tag label=\"Active\" color=\"success\" />\n<Tag label=\"Warning\" color=\"warning\" icon=\"add\" removable onRemove={() => {}} />\n<Tag label=\"Medium\" size=\"medium\" color=\"recommended\" />\n<Tag label=\"Small\" size=\"small\" color=\"negative\" />",
@@ -2148,6 +1788,12 @@
       "code": "<div style={POPCONFIRM_STORY_STYLE.placementsWrapper}>\n      {POPCONFIRM_PLACEMENTS.map((placement) => (\n        <Popconfirm\n          {...args}\n          key={placement}\n          placement={placement}\n          title={placement}\n          body={POPCONFIRM_DEMO_COPY.placementBody}\n        >\n          <Button size={BUTTON_SIZE.small} color={BUTTON_COLOR.grey}>\n            {placement}\n          </Button>\n        </Popconfirm>\n      ))}\n    </div>",
       "source": "stories",
       "compilable": false
+    },
+    "d2d7be30524d06f99a66b1ee9375fa33501fcff7421d697bce934b4c6a79e4c1": {
+      "title": "Canonical usage",
+      "code": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
+      "source": "canonical",
+      "compilable": true
     },
     "d2edd9eacbc07e5e229da3827b202d5da1fe8f4ca569e59c8162ce3927cbf36e": {
       "title": "Import",
@@ -2167,15 +1813,9 @@
       "source": "readme",
       "compilable": true
     },
-    "d4cfa73d1f8594d54e518f6d453f327da0cbfe5696e915132697bab1461257a2": {
+    "d7d5f601f2bc6d68fdd1f9092792a1ead79d09392794c0de5c6a6f08ae2fcd2b": {
       "title": "Canonical usage",
-      "code": "import type { ProFormMode } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "d6d63abfec53aafed291131ef3a163dafcf0b09dbf5655a9457e4a8c5e75868e": {
-      "title": "Canonical usage",
-      "code": "<Dropdown />",
+      "code": "import { ResizeObserver, useResizeObserver } from '@1money/components-ui';\n// or\nimport { ResizeObserver, useResizeObserver } from '@1money/components-ui/ResizeObserver';",
       "source": "canonical",
       "compilable": true
     },
@@ -2188,6 +1828,12 @@
     "d91c28bb6a118b26bb8a54276fb59ec8a840474d47297b0ab6537c738cb98876": {
       "title": "Canonical usage",
       "code": "import type { PopconfirmTrigger } from '@1money/component-ui';",
+      "source": "canonical",
+      "compilable": true
+    },
+    "d928a76793b3297d721487249b48aafd40ba72f0698c1706a33e4291c542d9ba": {
+      "title": "Canonical usage",
+      "code": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
       "source": "canonical",
       "compilable": true
     },
@@ -2227,9 +1873,9 @@
       "source": "stories",
       "compilable": true
     },
-    "db1561752135c60ff5a677102a19f86d01a79b50a6824699a9c6fe7a9ead392f": {
+    "dba235303ebe08452940ff868113324fc00c1a8ed5461ca69aaf6113382b9f6b": {
       "title": "Canonical usage",
-      "code": "import type { ProFormFieldConvertValueFn } from '@1money/component-ui';",
+      "code": "import { Pagination, usePagination } from '@1money/components-ui';\n// or\nimport { Pagination, usePagination } from '@1money/components-ui/Pagination';",
       "source": "canonical",
       "compilable": true
     },
@@ -2257,10 +1903,10 @@
       "source": "stories",
       "compilable": true
     },
-    "dd7a9e1ecc57d2efc005885114cec94320649768480f7dd0006adb2ea5855d5d": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormRequestOption } from '@1money/component-ui';",
-      "source": "canonical",
+    "dd93657d7534b2334888be68dade1a1eb682df7f98475406bbe3c8f36ca64ba0": {
+      "title": "Import",
+      "code": "import { Select } from '@1money/components-ui';\n// or\nimport { Select } from '@1money/components-ui/Select';",
+      "source": "readme",
       "compilable": true
     },
     "dda0f285741a298f3e8cd24f768a9faf10789e206854eb6555fc79970dcb9c2d": {
@@ -2305,10 +1951,16 @@
       "source": "stories",
       "compilable": false
     },
-    "e1a8744a63bb83a89bcb9eda48e6f3874777ee0c7821e132cc555d0bf0998f0b": {
-      "title": "Import",
-      "code": "import { Navigation } from '@1money/components-ui';\n// or\nimport { Navigation } from '@1money/components-ui/Navigation';",
-      "source": "readme",
+    "e12204d81d25fedea606df0af41590ad6f951ad6a9c87fbb04b46d113a83c01c": {
+      "title": "Canonical usage",
+      "code": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
+      "source": "canonical",
+      "compilable": true
+    },
+    "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276": {
+      "title": "Canonical usage",
+      "code": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
+      "source": "canonical",
       "compilable": true
     },
     "e2d97535c3a577c0c337fa59b2a6832e6337e4a07486d72339fb65ecb4899382": {
@@ -2317,10 +1969,10 @@
       "source": "readme",
       "compilable": true
     },
-    "e37aca8f7c9d9b0e9ebfac3d27da7b71899323685544aefcf84f04338a9232ce": {
-      "title": "Canonical usage",
-      "code": "<Progress percent={0} />",
-      "source": "canonical",
+    "e3b3197749176ad9a73173f5d1928f15b52b030d41a28e61ef40deaabbc9a554": {
+      "title": "Usage",
+      "code": "<Step\n  items={[\n    { key: 'start', title: 'Start', description: 'Create the request', status: 'completed' },\n    { key: 'review', title: 'Review', tag: { label: 'Pending' } },\n    { key: 'done', title: 'Complete' },\n  ]}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "e45470810804263c8bc829534812b03b22c7885a5d86df48dfecce21f3ab3a2f": {
@@ -2365,34 +2017,22 @@
       "source": "canonical",
       "compilable": true
     },
+    "e95a0d0355599d90e5a8f3e2157c5f59f2ee97f9c77cde6b856ca73e439ba89d": {
+      "title": "Usage",
+      "code": "<ProForm\n  initialValues={{ name: '' }}\n  onFinish={(values) => console.log(values)}\n>\n  <ProForm.Text\n    name=\"name\"\n    label=\"Name\"\n    rules={[{ required: true, message: 'Name is required' }]}\n  />\n  <ProForm.Select\n    name=\"currency\"\n    label=\"Currency\"\n    fieldProps={{ options: [{ label: 'USD', value: 'USD' }] }}\n  />\n</ProForm>",
+      "source": "readme",
+      "compilable": true
+    },
     "e9f60d4e278ffd41098f4db04f41855ffd8a9cb7a16f51dc8f8e99f4295effaa": {
       "title": "Disabled",
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>\n      <Switch {...args} label=\"Unchecked disabled\" disabled />\n      <Switch {...args} label=\"Checked disabled\" disabled defaultChecked />\n    </div>",
       "source": "stories",
       "compilable": false
     },
-    "ead69923c50561a8b08e90c7dc7f2b6f0d3e3b1d3aa61f06af6f26303aeacc90": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "eb427461f9033ecdecd7f9fbecd2c65d93d6a9f081ee8af32cd9665d94095ec9": {
       "title": "Semantic Scale",
       "code": "<div style={STORY_LAYOUT_STYLE}>\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_DISPLAY_SIZES.map(size => (\n          <Typography.Display key={size} size={size}>\n            Display {size}\n          </Typography.Display>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_HEADLINE_SIZES.map(size => (\n          <Typography.Headline key={size} size={size}>\n            Headline {size}\n          </Typography.Headline>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_TITLE_SIZES.map(size => (\n          <Typography.Title key={size} size={size}>\n            Title {size}\n          </Typography.Title>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_BODY_SIZES.map(size => (\n          <Typography.Body key={size} size={size}>\n            Body {size} brings readable, content-first copy into forms, lists, and dense product surfaces.\n          </Typography.Body>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_LABEL_SIZES.map(size => (\n          <Typography.Label key={size} size={size}>\n            Label {size}\n          </Typography.Label>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_LINK_SIZES.map(size => (\n          <Typography.Link key={size} size={size} href=\"https://ant.design/components/typography/\" target=\"_blank\">\n            Link {size}\n          </Typography.Link>\n        ))}\n      </div>\n    </div>",
       "source": "stories",
-      "compilable": true
-    },
-    "ec48d516a07ba5085b42c5936ddd4094b99978b593ccd77f2840587b3c15fe54": {
-      "title": "Canonical usage",
-      "code": "import type { PaginationPageItem } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "ed5d62cfe73db00a5d655c4947110558ed0c81b0173fdfa5086ec53117f33525": {
-      "title": "Canonical usage",
-      "code": "import {\n  CrossIcon,\n  Icon,\n  Icons,\n  IconHover,\n  IconWrapper,\n  LogoWithWords,\n} from '@1money/components-ui';\n\nimport type { IconName, IconsProps } from '@1money/components-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "ede4a5629c02420f621373a9169c9671b906cc09439931df34b222da85911147": {
@@ -2401,35 +2041,11 @@
       "source": "stories",
       "compilable": false
     },
-    "eded2f3304b55730029801800edc5a3c7449e2643b4b52dbc06d117d3fa78b9c": {
-      "title": "Canonical usage",
-      "code": "import type { DropdownTrigger } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "ee2bdbb626c56a393f970bf1d78c39af26d41db0d878c1454242d504dadfb8c5": {
-      "title": "Usage",
-      "code": "// Basic spinner\n<Spinner />\n\n// Custom size\n<Spinner style={{ width: '20px', height: '20px' }} />\n\n// Custom animation duration\n<Spinner animationDuration=\"1s\" />\n\n// Custom stroke width\n<Spinner strokeWidth=\"3\" />\n\n// Custom fill\n<Spinner style={{ width: '60px', height: '60px' }} fill=\"#E8F5E8\" />",
-      "source": "readme",
-      "compilable": true
-    },
     "ee930a68e587cff54897859095b7846cd2ee864a89a0d0e9fd833dbd1db85b82": {
       "title": "All Variants",
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>\n      <div>\n        <h3 style={{ marginBottom: 12 }}>Label Left (Default)</h3>\n        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>\n          <Switch {...args} label=\"Label\" description=\"Description\" />\n          <Switch {...args} label=\"Label\" description=\"Description\" defaultChecked />\n          <Switch {...args} label=\"Label\" description=\"Description\" disabled />\n          <Switch {...args} label=\"Label\" description=\"Description\" disabled defaultChecked />\n        </div>\n      </div>\n      <div>\n        <h3 style={{ marginBottom: 12 }}>Label Right</h3>\n        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>\n          <Switch {...args} label=\"Label\" description=\"Description\" labelPlacement=\"right\" />\n          <Switch {...args} label=\"Label\" description=\"Description\" labelPlacement=\"right\" defaultChecked />\n          <Switch {...args} label=\"Label\" description=\"Description\" labelPlacement=\"right\" disabled />\n          <Switch {...args} label=\"Label\" description=\"Description\" labelPlacement=\"right\" disabled defaultChecked />\n        </div>\n      </div>\n    </div>",
       "source": "stories",
       "compilable": false
-    },
-    "eebcc41c1f2c8421eb9925d8e4befdff5d0d9a0ac7ce205ace525ed07ee9f647": {
-      "title": "Canonical usage",
-      "code": "import type { PaginationProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "ef4db8ac914fd8f1b7ba6beb4ffdee91eb4c6541f40cad46d0d74c3e00a5d0e1": {
-      "title": "Canonical usage",
-      "code": "import type { SelectOption } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
     },
     "ef6129271a1cc811da6f293b9cb03f5514e410a9c60c0abec3e045e6376745b1": {
       "title": "Canonical usage",
@@ -2455,24 +2071,6 @@
       "source": "stories",
       "compilable": false
     },
-    "f02ed49d7825c626c3191734244f3e88dfbf48e8a2720ddd268229fe063b846a": {
-      "title": "Canonical usage",
-      "code": "import type { StepTagConfig } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "f065597d223dc1f13a2322f8264117765b4ffe077f96a1224d73320e187354ec": {
-      "title": "Canonical usage",
-      "code": "import type { SubmitterProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "f1fd9c22aed7f64f20f92113407cac7aeb1750a0623e511784dda6813e00b67e": {
-      "title": "Canonical usage",
-      "code": "Trigger();",
-      "source": "canonical",
-      "compilable": true
-    },
     "f2c3b9fe0a35d0f3e87ed98754d67b66bdf140128496a16d3ebc5ba4819068cc": {
       "title": "All Variants",
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>\n      <div>\n        <h3 style={{ marginBottom: 12 }}>Default</h3>\n        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n          <Radio label=\"Unchecked\" />\n          <Radio label=\"Checked\" checked />\n          <Radio label=\"Disabled unchecked\" disabled />\n          <Radio label=\"Disabled checked\" checked disabled />\n        </div>\n      </div>\n      <div>\n        <h3 style={{ marginBottom: 12 }}>With Description</h3>\n        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n          <Radio label=\"Unchecked\" description=\"Helper text\" />\n          <Radio label=\"Checked\" description=\"Helper text\" checked />\n          <Radio\n            label=\"Disabled unchecked\"\n            description=\"Helper text\"\n            disabled\n          />\n          <Radio\n            label=\"Disabled checked\"\n            description=\"Helper text\"\n            checked\n            disabled\n          />\n        </div>\n      </div>\n      <div>\n        <h3 style={{ marginBottom: 12 }}>Label Placement: Right</h3>\n        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n          <Radio label=\"Unchecked\" labelPlacement=\"right\" />\n          <Radio label=\"Checked\" labelPlacement=\"right\" checked />\n          <Radio\n            label=\"With description\"\n            description=\"Helper text\"\n            labelPlacement=\"right\"\n          />\n        </div>\n      </div>\n      <div>\n        <h3 style={{ marginBottom: 12 }}>Cell</h3>\n        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n          <Radio\n            checked\n            variant=\"cell\"\n            size=\"large\"\n            alignment=\"left\"\n            icon=\"swift\"\n            label=\"Wire transfer\"\n            description=\"Receive via SWIFT\"\n            style={{ width: 320 }}\n          />\n          <Radio\n            variant=\"cell\"\n            size=\"medium\"\n            alignment=\"left\"\n            icon=\"usd\"\n            label=\"USD1\"\n            style={{ width: 180 }}\n          />\n          <Radio\n            checked\n            variant=\"cell\"\n            size=\"large\"\n            alignment=\"center\"\n            icon=\"language\"\n            tag=\"Popular\"\n            label=\"Global account\"\n            description=\"Use for international settlement\"\n            style={{ width: 220 }}\n          />\n        </div>\n      </div>\n    </div>",
@@ -2483,12 +2081,6 @@
       "title": "H5 Width Spec",
       "code": "<TooltipPreviewCard\n      label=\"Maximum width 300px on H5\"\n      title=\"Long title\"\n      body={LONG_BODY}\n    />",
       "source": "stories",
-      "compilable": true
-    },
-    "f3e3e35db28e26c2e5f1870c2e23d646f593f798d99eda835808ea9652ed85d7": {
-      "title": "Canonical usage",
-      "code": "import type { TourProps } from '@1money/component-ui';",
-      "source": "canonical",
       "compilable": true
     },
     "f4820b22bbba91a3284238e73606be5b7825b28d6c345dcc4dde9b0681f61efd": {
@@ -2515,12 +2107,6 @@
       "source": "stories",
       "compilable": false
     },
-    "f54ff3b0b6680cdec37c94acb43bf7f58648670a16b6c7be3cd82ca792d177fd": {
-      "title": "Canonical usage",
-      "code": "import type { DropdownContent } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "f573e24b6bb2a0cf68e3dba916cbc777330e61e503cca982f2c5c5633a8d0b7a": {
       "title": "Usage",
       "code": "// Rectangle (default)\n<Skeleton />\n<Skeleton width=\"10rem\" />\n<Skeleton width=\"10rem\" height=\"4rem\" />\n\n// Rounded\n<Skeleton borderRadius=\"16px\" />\n\n// Square\n<Skeleton size=\"3rem\" />\n\n// Circle\n<Skeleton shape=\"circle\" size=\"4rem\" />\n\n// No animation\n<Skeleton animation=\"none\" />",
@@ -2545,22 +2131,16 @@
       "source": "stories",
       "compilable": true
     },
-    "f6add1649c4e02d141bd89c9cedf782cf9bf66c617de71226b13802729c7a205": {
-      "title": "Usage",
-      "code": "<Upload\n  mode=\"basic\"\n  chooseOptions={{ label: 'Upload file', icon: () => <></> }}\n  onUpload={(e) => console.log(e.files)}\n/>",
-      "source": "readme",
-      "compilable": true
-    },
     "f7b16782ec97c865cee1e4efd85132f308a13cf49fb00e7e75113b8db2f00476": {
       "title": "Mode Edit",
       "code": "<ProForm\n      {...args}\n      mode=\"edit\"\n      initialValues={{ name: '', email: '' }}\n      onFinish={(values) => alert(JSON.stringify(values, null, 2))}\n    >\n      <ProFormText name=\"name\" label=\"Name\" rules={[{ required: true }]} />\n      <ProFormText name=\"email\" label=\"Email\" />\n    </ProForm>",
       "source": "stories",
       "compilable": false
     },
-    "f7d75c4c5f4f678aa093b1506c43f3b64f084e77935a1995764eafb16f65acb3": {
-      "title": "Canonical usage",
-      "code": "import type { UsePaginationResult } from '@1money/component-ui';",
-      "source": "canonical",
+    "f7c2c0a63e93844f526a49d62cfd4f5ced951213730b19e88cb69c559c39a367": {
+      "title": "Import",
+      "code": "import { Step } from '@1money/components-ui';\n// or\nimport { Step } from '@1money/components-ui/Step';",
+      "source": "readme",
       "compilable": true
     },
     "f7f96c74f982e37eb075e6bd5affd0bbcf3d63faca5bb60a1175fe7725dad87b": {
@@ -2569,16 +2149,10 @@
       "source": "stories",
       "compilable": false
     },
-    "f83a21f43532c533551423571b437ae45b5e8e0ff76b9b783f68587c6b9a7e8d": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormFieldProps } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "fa1715f659ca9bd453db3ccb6d40b47193e9dc838467b79a6a453d0b8b5aaed5": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormValueEnumObj } from '@1money/component-ui';",
-      "source": "canonical",
+    "faa015d00f4f1ec9d43a4988251943c30d43285aadf14ee9d2c82d7fa4b0024f": {
+      "title": "Import",
+      "code": "import { Dialog } from '@1money/components-ui';\n// or\nimport { Dialog } from '@1money/components-ui/Dialog';",
+      "source": "readme",
       "compilable": true
     },
     "fbd87569f46a26241c78761898d378521f9b220ad8c158ad1b3f619a9043f07d": {
@@ -2587,10 +2161,10 @@
       "source": "stories",
       "compilable": false
     },
-    "fc7f011734a4a3a103721b68af73859114acc940da01099883443728203b2cad": {
-      "title": "Canonical usage",
-      "code": "import type { SelectMultipleValue } from '@1money/component-ui';",
-      "source": "canonical",
+    "fc9a7422a1bd65a99442277ecc3a078de35b6d7347c17ebe9cd83cdf379e54a7": {
+      "title": "Usage",
+      "code": "const steps = [\n  {\n    icon: <Icons name=\"dashboard\" size={24} />,\n    heading: 'Welcome to Dashboard',\n    body: 'Here you can see an overview of your finances.',\n  },\n  {\n    heading: 'Track Your Spending',\n    body: 'Use the charts to monitor transactions by category.',\n  },\n  {\n    heading: \"You're all set!\",\n    body: 'Explore the rest of the app at your own pace.',\n  },\n];\n\n<CoachMark\n  steps={steps}\n  defaultActiveStep={0}\n  placement=\"top\"\n  onFinish={() => console.log('Tour complete')}\n  onDismiss={() => console.log('Tour dismissed')}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "fca476fdc8a8454562178330e2ef42b7cb756bb782574109179b48b0b5f2dfcb": {
@@ -2611,12 +2185,6 @@
       "source": "stories",
       "compilable": true
     },
-    "fd353a0cfce510dee427ac20924a2b4af00ee7928140326c422816b303a11ad9": {
-      "title": "Canonical usage",
-      "code": "import type { SelectRenderValueMeta } from '@1money/component-ui';",
-      "source": "canonical",
-      "compilable": true
-    },
     "fdf213199dc6788118e3f64a9156e33557e5611b1ca721d8b7c388245959d211": {
       "title": "Import",
       "code": "import { Button } from '@1money/components-ui';\n// or\nimport { Button } from '@1money/components-ui/Button';",
@@ -2626,12 +2194,6 @@
     "fe70357422313c2126f48b89c098c85159c4543c5ef3739330d48f86d8d0a509": {
       "title": "Canonical usage",
       "code": "import { Accordion } from '@1money/components-ui';\n// or\nimport { Accordion } from '@1money/components-ui/Accordion';",
-      "source": "canonical",
-      "compilable": true
-    },
-    "fe831014a074368cace22558725ed6a61ffdfa556cec55c5284d20d0357f8e2e": {
-      "title": "Canonical usage",
-      "code": "import type { ProgressPlacement } from '@1money/component-ui';",
       "source": "canonical",
       "compilable": true
     },
@@ -2647,10 +2209,10 @@
       "source": "stories",
       "compilable": false
     },
-    "fee60afafe32035844a3102b3d30152024652c2b12eb46104b0dfb5c8026dc26": {
-      "title": "Canonical usage",
-      "code": "import type { ProFormDependencyProps } from '@1money/component-ui';",
-      "source": "canonical",
+    "ffcdb76bb3216c346fc3ce624448bb8e51a3677f3fd96c8ed18c264f52ed6e31": {
+      "title": "Import",
+      "code": "import { Dropdown } from '@1money/components-ui';\n// or\nimport { Dropdown } from '@1money/components-ui/Dropdown';",
+      "source": "readme",
       "compilable": true
     }
   }

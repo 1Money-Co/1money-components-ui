@@ -1,5 +1,4 @@
 import path from 'path';
-import svgr from 'vite-plugin-svgr';
 
 import type { StorybookConfig } from '@storybook/react-vite';
 
@@ -51,7 +50,6 @@ const config: StorybookConfig = {
   viteFinal: config => {
     config.plugins = [
       ...(config.plugins ?? []),
-      svgr({ include: '**/*.svg' }),
     ];
 
     if (!config.resolve) config.resolve = {};
