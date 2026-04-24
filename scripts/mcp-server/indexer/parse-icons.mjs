@@ -1,8 +1,8 @@
 /**
  * parse-icons.mjs
  *
- * Extracts icon names from the iconRegistry object literal in icon-set/registry.ts.
- * Uses TypeScript AST parsing to find the iconRegistry variable declaration
+ * Extracts icon names from the IconList object literal in Icons.tsx.
+ * Uses TypeScript AST parsing to find the IconList variable declaration
  * and extract all property keys.
  */
 
@@ -16,12 +16,12 @@ import path from 'path';
  * @param {Object} options
  * @param {string} options.repoRoot - Repository root directory
  * @returns {Promise<Array<{ name: string }>>} - Sorted array of icon records
- * @throws {Error} If iconRegistry cannot be found or parsed
+ * @throws {Error} If IconList cannot be found or parsed
  */
 export async function parseIcons({ repoRoot }) {
   if (!repoRoot) throw new Error('parseIcons: repoRoot is required');
 
-  const iconsPath = path.join(repoRoot, 'src', 'components', 'Icons', 'icon-set', 'registry.ts');
+  const iconsPath = path.join(repoRoot, 'src', 'components', 'Icons', 'Icons.tsx');
   const source = await fs.readFile(iconsPath, 'utf8');
 
   // Parse the TypeScript file
@@ -34,18 +34,18 @@ export async function parseIcons({ repoRoot }) {
 
   const iconNames = [];
 
-  // Walk the AST to find the iconRegistry variable declaration
+  // Walk the AST to find the IconList variable declaration
   function visit(node) {
-    // Look for: export const iconRegistry = { ... } as const;
-    if (ts.isVariableDeclaration(node) && node.name.text === 'iconRegistry') {
+    // Look for: const IconList = { ... } as const;
+    if (ts.isVariableDeclaration(node) && node.name.text === 'IconList') {
       let objectLiteral = null;
 
       if (node.initializer) {
-        // Direct object literal: const iconRegistry = { ... };
+        // Direct object literal: const IconList = { ... };
         if (ts.isObjectLiteralExpression(node.initializer)) {
           objectLiteral = node.initializer;
         }
-        // As expression: const iconRegistry = { ... } as const;
+        // As expression: const IconList = { ... } as const;
         else if (ts.isAsExpression(node.initializer)) {
           const expr = node.initializer.expression;
           if (ts.isObjectLiteralExpression(expr)) {
@@ -92,7 +92,7 @@ export async function parseIcons({ repoRoot }) {
 
   if (iconNames.length === 0) {
     throw new Error(
-      `Failed to extract icon names from ${iconsPath}: iconRegistry not found or has no properties`,
+      `Failed to extract icon names from ${iconsPath}: IconList not found or has no properties`,
     );
   }
 

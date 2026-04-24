@@ -1,11 +1,8 @@
 import React from 'react';
 import {
-  CrossIcon,
-  Icon,
-  IconHover,
   IconWrapper,
   Icons,
-  LogoWithWords,
+  IconHover,
 } from './index';
 import './style';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -68,31 +65,6 @@ const copy = (name: string) => {
 
 
 type Story = StoryObj<typeof Icons>;
-
-export const EntryPoints: Story = {
-  parameters: {
-    docs: {
-      description: {
-        story: 'Prefer static components for known icons, use Icon for runtime dispatch, and keep Icons only for compatibility or alias-based consumers.',
-      },
-    },
-  },
-  render: () => (
-    <div style={{ display: 'grid', gap: 16 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-        <CrossIcon size={20} />
-        <Icon name="cross" size={20} />
-        <Icons name="depositFiatCrypto" size={20} />
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-        <LogoWithWords width={132} height={24} logoColor="#073387" wordColor="#131313" />
-        <IconHover>
-          <CrossIcon size={16} />
-        </IconHover>
-      </div>
-    </div>
-  ),
-};
 
 
 

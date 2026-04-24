@@ -128,7 +128,13 @@
       "Bash(npm config *)",
       "Bash(awk '/const IconList = \\\\{/,/\\\\} as const/')",
       "Bash(awk -F: '{print $1}')",
-      "Bash(awk -F: '{gsub\\(/^ +/,\"\",$1\\); print $1}')"
+      "Bash(awk -F: '{gsub\\(/^ +/,\"\",$1\\); print $1}')",
+      "Bash(npm ls *)",
+      "Bash(curl -s http://localhost:6206)",
+      "Bash(pkill -f \"storybook\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6206)",
+      "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/node_modules/.pnpm/@babel+runtime*/node_modules/@babel/runtime/helpers/esm/)",
+      "Bash(ls *)"
     ]
   }
 }

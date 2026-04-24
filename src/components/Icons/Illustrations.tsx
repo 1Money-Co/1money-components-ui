@@ -1,8 +1,8 @@
 import { useId } from 'react';
-import IconWrapper from '../primitives';
+import IconWrapper from './Wrapper';
 /* import types */
 import type { FC } from 'react';
-import type { IconWrapperProps } from '../primitives';
+import type { IconWrapperProps } from './interface';
 
 export interface IllustrationsCustomProps {
   borderColor?: string;
