@@ -6,8 +6,8 @@ $component: 'navigation';
   display: flex;
   flex-direction: column;
   gap: theme.spacing(scale, 600);
-  width: 280px;
-  height: 100%;
+  width: 281px;
+  height: 100vh;
   padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
   background-color: theme.palette(bg, 'default');
   border-right: 1px solid theme.palette(border, 'neutral');
@@ -39,16 +39,15 @@ $component: 'navigation';
     flex-direction: column;
     gap: theme.spacing(scale, 600);
     min-height: 0;
+    overflow: hidden;
     overflow-y: auto;
   }
 
   // ── Menu ──
   &-menu {
     display: flex;
-    flex: 1;
     flex-direction: column;
     gap: theme.spacing(gap, 100);
-    min-height: 0;
   }
 
   // ── Item wrapper ──
@@ -56,6 +55,7 @@ $component: 'navigation';
     display: flex;
     flex-direction: column;
     gap: theme.spacing(gap, 100);
+    width: 100%;
   }
 
   // ── Item (Level 1) ──
@@ -303,6 +303,7 @@ $component: 'navigation';
     display: flex;
     flex-direction: column;
     gap: theme.spacing(gap, 100);
+    margin-top: auto;
     overflow: clip;
   }
 
@@ -402,7 +403,7 @@ $component: 'navigation';
   // ── Collapsed state ──
   &-collapsed {
     align-items: center;
-    width: 84px;
+    width: 85px;
     padding: theme.spacing(scale, 1000) theme.spacing(scale, 100) theme.spacing(scale, 600);
 
     .#{theme.$prefix}-#{$component}-header {
