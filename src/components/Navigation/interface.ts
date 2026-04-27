@@ -95,8 +95,10 @@ export interface NavProps {
   ref?: RefObject<HTMLElement | null>;
   /** CSS class prefix */
   prefixCls?: string;
-  /** Additional CSS classes */
+  /** Additional CSS classes for the root <nav> element */
   className?: string;
+  /** Additional CSS classes for the inner content wrapper */
+  bodyCls?: string;
   /** Navigation items — top-level items with children render as groups */
   items: NavItem[];
 }

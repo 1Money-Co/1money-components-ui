@@ -37,6 +37,8 @@ export interface TriggerProps {
   dismissible?: boolean;
   /** Hover delay (ms), supports separate open/close */
   hoverDelay?: number | { open?: number; close?: number };
+  /** Reposition the floating panel on scroll/resize/reference movement. Default true. */
+  autoReposition?: boolean;
   /** Custom class for floating panel */
   overlayClassName?: string;
   /** Custom style for floating panel */
