@@ -56,6 +56,7 @@ const Trigger: FC<TriggerProps> = ({
   onOpen,
   onClose,
   role = 'dialog',
+  autoReposition = true,
   ref,
 }) => {
   const arrowRef = useRef<Element>(null);
@@ -88,7 +89,7 @@ const Trigger: FC<TriggerProps> = ({
     open: innerOpen,
     onOpenChange: handleOpenChange,
     placement,
-    whileElementsMounted: autoUpdate,
+    whileElementsMounted: autoReposition ? autoUpdate : undefined,
     middleware,
   });
 

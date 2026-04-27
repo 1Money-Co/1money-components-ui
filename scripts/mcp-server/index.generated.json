@@ -840,7 +840,7 @@
         },
         {
           "name": "iconStart",
-          "type": "IconName",
+          "type": "IconName | ReactNode",
           "optional": true,
           "default": null,
           "description": "",
@@ -848,7 +848,7 @@
         },
         {
           "name": "iconEnd",
-          "type": "IconName",
+          "type": "IconName | ReactNode",
           "optional": true,
           "default": null,
           "description": "",
@@ -5148,7 +5148,15 @@
           "type": "string",
           "optional": true,
           "default": null,
-          "description": "Additional CSS classes",
+          "description": "Additional CSS classes for the root <nav> element",
+          "inheritedFrom": null
+        },
+        {
+          "name": "bodyCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS classes for the inner content wrapper",
           "inheritedFrom": null
         },
         {

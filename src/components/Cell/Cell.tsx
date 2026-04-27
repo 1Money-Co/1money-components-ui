@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Icons } from '@/components/Icons';
+import { Icons, type IconName } from '@/components/Icons';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC, PropsWithChildren } from 'react';
 import type { CellProps } from './interface';
@@ -40,22 +40,26 @@ const CellComponent: FC<PropsWithChildren<CellProps>> = (props) => {
       )}
     >
       <span className={classes('content')}>
-        {iconStart ? (
-          <Icons
-            name={iconStart}
-            size={CELL_ICON_SIZE}
-            className={classes('icon-start')}
-          />
-        ) : null}
+        {iconStart
+          ? typeof iconStart === 'string'
+            ? <Icons
+                name={iconStart as IconName}
+                size={CELL_ICON_SIZE}
+                className={classes('icon-start')}
+              />
+            : iconStart
+          : null}
         <span className={classes('label')}>{children}</span>
       </span>
-      {iconEnd ? (
-        <Icons
-          name={iconEnd}
-          size={CELL_ICON_SIZE}
-          className={classes('icon-end')}
-        />
-      ) : null}
+      {iconEnd
+        ? typeof iconEnd === 'string'
+          ? <Icons
+              name={iconEnd as IconName}
+              size={CELL_ICON_SIZE}
+              className={classes('icon-end')}
+            />
+          : iconEnd
+        : null}
     </button>
   );
 };

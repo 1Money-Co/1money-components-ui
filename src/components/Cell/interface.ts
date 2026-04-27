@@ -5,8 +5,8 @@ export interface CellProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>,
   ref?: Ref<HTMLButtonElement>;
   prefixCls?: string;
   className?: string;
-  iconStart?: IconName;
-  iconEnd?: IconName;
+  iconStart?: IconName | ReactNode;
+  iconEnd?: IconName | ReactNode;
   active?: boolean;
   disabled?: boolean;
   children?: ReactNode;

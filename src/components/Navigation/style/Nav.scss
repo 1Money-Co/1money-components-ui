@@ -59,9 +59,9 @@ $component: 'nav';
 
   &-group-header-label {
     flex: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   &-group-header .#{theme.$prefix}-typography {
@@ -111,10 +111,10 @@ $component: 'nav';
 
     &-label {
       flex: 1;
-      overflow: hidden;
-      white-space: nowrap;
+      min-width: 0;
+      white-space: normal;
       text-align: left;
-      text-overflow: ellipsis;
+      overflow-wrap: anywhere;
     }
 
     &-suffix {
