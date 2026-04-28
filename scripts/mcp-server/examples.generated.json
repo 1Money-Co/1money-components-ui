@@ -445,12 +445,6 @@
       "source": "stories",
       "compilable": true
     },
-    "341d33a3398e2a18e0d6bd76c9602a448d9a775132d0ccb1e3591038cec0fa5c": {
-      "title": "Usage",
-      "code": "<Dialog\n  open={open}\n  title=\"Confirm transfer\"\n  description=\"Review the details before submitting.\"\n  onCancel={() => setOpen(false)}\n  onOk={handleSubmit}\n/>",
-      "source": "readme",
-      "compilable": true
-    },
     "34536f5f5abc20bc7255387d21700a4725ea8d6f9806b09cb947375f7afde43c": {
       "title": "Label Right",
       "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>\n      <Switch {...args} label=\"Label\" description=\"Description\" labelPlacement=\"right\" />\n      <Switch {...args} label=\"Label\" description=\"Description\" labelPlacement=\"right\" defaultChecked />\n    </div>",
@@ -1297,12 +1291,6 @@
       "source": "stories",
       "compilable": false
     },
-    "92d700fd2da1bf06587fe4c86118bff9b3b4b42eb3ec5a4c9a790f7ac8950ff6": {
-      "title": "Illustrations",
-      "code": "{\n    const handleCopy = (el: string) => {\n      copy(el);\n    };\n\n    return <div style={{ display: 'grid', gap: 24, gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusChecked' />\")}>\n        <Icons {...args} name='illusChecked' />\n        <span>illusChecked</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusEmailError' />\")}>\n        <Icons {...args} name='illusEmailError' />\n        <span>illusEmailError</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusLinkExpired' />\")}>\n        <Icons {...args} name='illusLinkExpired' />\n        <span>illusLinkExpired</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illus2FA' />\")}>\n        <Icons {...args} name='illus2FA' />\n        <span>illus2FA</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusLocked' />\")}>\n        <Icons {...args} name='illusLocked' />\n        <span>illusLocked</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusError' />\")}>\n        <Icons {...args} name='illusError' />\n        <span>illusError</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusRegionNotSupported' />\")}>\n        <Icons {...args} name='illusRegionNotSupported' />\n        <span>illusRegionNotSupported</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusID' />\")}>\n        <Icons {...args} name='illusID' />\n        <span>illusID</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusVerification' />\")}>\n        <Icons {...args} name='illusVerification' />\n        <span>illusVerification</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusPending' />\")}>\n        <Icons {...args} name='illusPending' color='#F4C600' />\n        <span>illusPending</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusPasskey' />\")}>\n        <Icons {...args} name='illusPasskey' />\n        <span>illusPasskey</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusAddAccount' />\")}>\n        <Icons {...args} name='illusAddAccount' />\n        <span>illusAddAccount</span>\n      </CopyIconBox>\n    </div>;\n  }",
-      "source": "stories",
-      "compilable": false
-    },
     "93778978611c05850a486471281bd8bb01ceeac22d3d7708ec1c59aaefb0ae95": {
       "title": "Canonical usage",
       "code": "import { Alert } from '@1money/components-ui';\n// or\nimport { Alert } from '@1money/components-ui/Alert';",
@@ -2029,6 +2017,12 @@
       "source": "readme",
       "compilable": true
     },
+    "e57037f057f4da5ac90baae9ad1d85153cb48c9cfff34a65cbe2a927bf5cb713": {
+      "title": "Usage",
+      "code": "<Dialog\n  open={open}\n  title=\"Confirm transfer\"\n  onCancel={() => setOpen(false)}\n  onOk={handleSubmit}\n/>",
+      "source": "readme",
+      "compilable": true
+    },
     "e590bf2afc81b30b930dada6662ca8d5f1563febfe83f4e804b82bdeaa55d9e3": {
       "title": "Value Enum",
       "code": "<ProForm\n      {...args}\n      onFinish={(values) => alert(JSON.stringify(values, null, 2))}\n    >\n      <ProFormSelect\n        name=\"status\"\n        label=\"Status\"\n        valueEnum={{ active: 'Active', inactive: 'Inactive', pending: { text: 'Pending', disabled: true } }}\n      />\n      <ProFormRadioGroup\n        name=\"role\"\n        label=\"Role\"\n        valueEnum={{ admin: 'Admin', editor: 'Editor', viewer: 'Viewer' }}\n      />\n    </ProForm>",
@@ -2082,6 +2076,12 @@
       "code": "<div style={STORY_LAYOUT_STYLE}>\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_DISPLAY_SIZES.map(size => (\n          <Typography.Display key={size} size={size}>\n            Display {size}\n          </Typography.Display>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_HEADLINE_SIZES.map(size => (\n          <Typography.Headline key={size} size={size}>\n            Headline {size}\n          </Typography.Headline>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_TITLE_SIZES.map(size => (\n          <Typography.Title key={size} size={size}>\n            Title {size}\n          </Typography.Title>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_BODY_SIZES.map(size => (\n          <Typography.Body key={size} size={size}>\n            Body {size} brings readable, content-first copy into forms, lists, and dense product surfaces.\n          </Typography.Body>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_LABEL_SIZES.map(size => (\n          <Typography.Label key={size} size={size}>\n            Label {size}\n          </Typography.Label>\n        ))}\n      </div>\n\n      <div style={STORY_SECTION_STYLE}>\n        {TYPOGRAPHY_LINK_SIZES.map(size => (\n          <Typography.Link key={size} size={size} href=\"https://ant.design/components/typography/\" target=\"_blank\">\n            Link {size}\n          </Typography.Link>\n        ))}\n      </div>\n    </div>",
       "source": "stories",
       "compilable": true
+    },
+    "ed5aa33f8e734dad460aa9b2a7c6fc0690efc9cda3b0854c642d59b2bbf55870": {
+      "title": "Illustrations",
+      "code": "{\n    const handleCopy = (el: string) => {\n      copy(el);\n    };\n\n    return <div style={{ display: 'grid', gap: 24, gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusChecked' />\")}>\n        <Icons {...args} name='illusChecked' />\n        <span>illusChecked</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusEmailError' />\")}>\n        <Icons {...args} name='illusEmailError' />\n        <span>illusEmailError</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusLinkExpired' />\")}>\n        <Icons {...args} name='illusLinkExpired' />\n        <span>illusLinkExpired</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illus2FA' />\")}>\n        <Icons {...args} name='illus2FA' />\n        <span>illus2FA</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusLocked' />\")}>\n        <Icons {...args} name='illusLocked' />\n        <span>illusLocked</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusError' />\")}>\n        <Icons {...args} name='illusError' />\n        <span>illusError</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusRegionNotSupported' />\")}>\n        <Icons {...args} name='illusRegionNotSupported' />\n        <span>illusRegionNotSupported</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusID' />\")}>\n        <Icons {...args} name='illusID' />\n        <span>illusID</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusVerification' />\")}>\n        <Icons {...args} name='illusVerification' />\n        <span>illusVerification</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusPending' />\")}>\n        <Icons {...args} name='illusPending' color='#F4C600' />\n        <span>illusPending</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusPasskey' />\")}>\n        <Icons {...args} name='illusPasskey' />\n        <span>illusPasskey</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusAddAccount' />\")}>\n        <Icons {...args} name='illusAddAccount' />\n        <span>illusAddAccount</span>\n      </CopyIconBox>\n      <CopyIconBox onClick={() => handleCopy(\"<Icons name='illusRewards' />\")}>\n        <Icons {...args} name='illusRewards' />\n        <span>illusRewards</span>\n      </CopyIconBox>\n    </div>;\n  }",
+      "source": "stories",
+      "compilable": false
     },
     "ede4a5629c02420f621373a9169c9671b906cc09439931df34b222da85911147": {
       "title": "With Action",

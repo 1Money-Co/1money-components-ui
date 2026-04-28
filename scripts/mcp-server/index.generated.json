@@ -2103,14 +2103,6 @@
           "inheritedFrom": null
         },
         {
-          "name": "description",
-          "type": "ReactNode",
-          "optional": true,
-          "default": null,
-          "description": "",
-          "inheritedFrom": null
-        },
-        {
           "name": "children",
           "type": "ReactNode",
           "optional": true,
@@ -2286,7 +2278,7 @@
           "source": "readme"
         },
         {
-          "hash": "341d33a3398e2a18e0d6bd76c9602a448d9a775132d0ccb1e3591038cec0fa5c",
+          "hash": "e57037f057f4da5ac90baae9ad1d85153cb48c9cfff34a65cbe2a927bf5cb713",
           "source": "readme"
         },
         {
@@ -4506,7 +4498,7 @@
           "source": "stories"
         },
         {
-          "hash": "92d700fd2da1bf06587fe4c86118bff9b3b4b42eb3ec5a4c9a790f7ac8950ff6",
+          "hash": "ed5aa33f8e734dad460aa9b2a7c6fc0690efc9cda3b0854c642d59b2bbf55870",
           "source": "stories"
         },
         {
@@ -18111,6 +18103,9 @@
     },
     {
       "name": "illusRegionNotSupported"
+    },
+    {
+      "name": "illusRewards"
     },
     {
       "name": "illusVerification"
