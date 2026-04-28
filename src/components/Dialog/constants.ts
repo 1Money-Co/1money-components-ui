@@ -31,11 +31,8 @@ export const DIALOG_SLOT = {
   inner: 'inner',
   header: 'header',
   body: 'body',
-  summary: 'summary',
   illustration: 'illustration',
-  copy: 'copy',
   title: 'title',
-  description: 'description',
   content: 'content',
   footer: 'footer',
 } as const;

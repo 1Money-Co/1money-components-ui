@@ -23,6 +23,7 @@ import {
   IllusPasskey,
   IllusAddAccount,
   IllusPending,
+  IllusRewards,
 } from './Illustrations';
 
 import {
@@ -180,6 +181,7 @@ const IconList = {
   illusPasskey: IllusPasskey,
   illusAddAccount: IllusAddAccount,
   illusPending: IllusPending,
+  illusRewards: IllusRewards,
   /* Logo */
   logo: Logo,
   logoWord: LogoWord,
@@ -358,7 +360,7 @@ export interface LogoWithBetaProps extends IconsProps, LogoWithBetaCustomProps {
 }
 
 export interface IllustrationsProps extends IconsProps, IllustrationsCustomProps {
-  name: 'illusLocked' | 'illusChecked' | 'illusError' | 'illusEmailError' | 'illusLinkExpired' | 'illus2FA' | 'illusID' | 'illusVerification' | 'illusRegionNotSupported' | 'illusPending' | 'illusPasskey' | 'illusAddAccount';
+  name: 'illusLocked' | 'illusChecked' | 'illusError' | 'illusEmailError' | 'illusLinkExpired' | 'illus2FA' | 'illusID' | 'illusVerification' | 'illusRegionNotSupported' | 'illusPending' | 'illusPasskey' | 'illusAddAccount' | 'illusRewards';
 }
 
 export interface SortIconsProps extends IconsProps {

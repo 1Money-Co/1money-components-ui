@@ -297,7 +297,6 @@ const DialogBase = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
     showBackIcon = false,
     fullWidth = false,
     title,
-    description,
     children,
     illustration,
     media,
@@ -322,7 +321,6 @@ const DialogBase = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
   const mounted = usePresence(open, DIALOG_DEFAULTS.closeTimeoutMs);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
-  const descriptionId = useId();
 
   const handleSetDialogRef = useCallback((node: HTMLDivElement | null) => {
     dialogRef.current = node;
@@ -380,11 +378,6 @@ const DialogBase = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
       {value}
     </TypographyHeadline>
   ));
-  const descriptionNode = renderTypographyNode(description, (value) => (
-    <TypographyBody size="md" as="p" strong color="default-secondary">
-      {value}
-    </TypographyBody>
-  ));
   const childrenNode = renderTypographyNode(children, (value) => (
     <TypographyBody size="md" as="p" strong color="default-secondary">
       {value}
@@ -441,7 +434,6 @@ const DialogBase = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
             role="dialog"
             aria-modal="true"
             aria-labelledby={title ? titleId : undefined}
-            aria-describedby={description ? descriptionId : undefined}
             tabIndex={-1}
             style={style}
             className={classNames(
@@ -467,30 +459,14 @@ const DialogBase = forwardRef<HTMLDivElement, DialogProps>((props, ref) => {
                 style={bodyStyle}
                 className={getClassName(prefixCls, DIALOG_SLOT.body)}
               >
-                {(illustrationNode || titleNode || descriptionNode) && (
-                  <div className={getClassName(prefixCls, DIALOG_SLOT.summary)}>
-                    {illustrationNode && (
-                      <div className={getClassName(prefixCls, DIALOG_SLOT.illustration)}>
-                        {illustrationNode}
-                      </div>
-                    )}
-                    {(titleNode || descriptionNode) && (
-                      <div className={getClassName(prefixCls, DIALOG_SLOT.copy)}>
-                        {titleNode && (
-                          <div id={titleId} className={getClassName(prefixCls, DIALOG_SLOT.title)}>
-                            {titleNode}
-                          </div>
-                        )}
-                        {descriptionNode && (
-                          <div
-                            id={descriptionId}
-                            className={getClassName(prefixCls, DIALOG_SLOT.description)}
-                          >
-                            {descriptionNode}
-                          </div>
-                        )}
-                      </div>
-                    )}
+                {illustrationNode && (
+                  <div className={getClassName(prefixCls, DIALOG_SLOT.illustration)}>
+                    {illustrationNode}
+                  </div>
+                )}
+                {titleNode && (
+                  <div id={titleId} className={getClassName(prefixCls, DIALOG_SLOT.title)}>
+                    {titleNode}
                   </div>
                 )}
                 {childrenNode && (

@@ -24,7 +24,6 @@ export interface DialogProps
   showBackIcon?: boolean;
   fullWidth?: boolean;
   title?: ReactNode;
-  description?: ReactNode;
   children?: ReactNode;
   illustration?: ReactNode | IconName;
   media?: ReactNode;
