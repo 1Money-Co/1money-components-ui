@@ -1,0 +1,7 @@
+import{j as e}from"./jsx-runtime-BjG_zV1W.js";import{f as a}from"./index-DCiaR2iG.js";import{U as l,a as i}from"./UploadFileBar-XSWJQwPi.js";import"./index-CP2yOfOm.js";import"./classnames-h1fAIaEr.js";import"./Button-B8jksPmH.js";import"./Spinner--k6QT4Qj.js";import"./iframe-k9SZMUwJ.js";import"./Typography-BK-BjBuS.js";import"./ResizeObserver-DW8-DKQf.js";import"./index-nCcupNJZ.js";import"./Icons-BzLXzN_n.js";import"./clipboard-C7s2bcmm.js";import"./Tooltip-DeIhm5fH.js";import"./index-CyN509qF.js";import"./index-CN0Pk037.js";/* empty css               */const g={title:"Components/Upload",component:l,tags:["autodocs"]},o={render:()=>e.jsxs(l,{label:"Label",description:"Description",feedback:"Feedback",children:[e.jsx(i,{fileName:"File name.PDF",onRemove:a()}),e.jsx(i,{fileName:"File name.PDF",onRemove:a()}),e.jsx(i,{fileName:"File name.PDF",status:1,message:"Upload failed",onRemove:a()})]})};var r,m,t;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  render: () => <Upload label="Label" description="Description" feedback="Feedback">
+      <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
+      <UploadFileBar fileName="File name.PDF" onRemove={fn()} />
+      <UploadFileBar fileName="File name.PDF" status={1} message="Upload failed" onRemove={fn()} />
+    </Upload>
+}`,...(t=(m=o.parameters)==null?void 0:m.docs)==null?void 0:t.source}}};const k=["MultipleFiles"];export{o as MultipleFiles,k as __namedExportsOrder,g as default};
