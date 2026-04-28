@@ -42,7 +42,7 @@ describe('Dialog', () => {
       <Dialog
         open
         title="Text Heading"
-        description="Body text"
+
         illustration="illus2FA"
         onOk={jest.fn()}
         onCancel={jest.fn()}
@@ -53,7 +53,6 @@ describe('Dialog', () => {
 
     expect(dialog).toBeInTheDocument();
     expect(screen.getByText('Text Heading')).toBeInTheDocument();
-    expect(screen.getByText('Body text')).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: DIALOG_DEFAULTS.okText }),
     ).toBeInTheDocument();
@@ -78,7 +77,7 @@ describe('Dialog', () => {
       <Dialog
         open
         title="Text Heading"
-        description="Body text"
+
         onOk={jest.fn()}
         onCancel={onCancel}
       />
@@ -101,7 +100,7 @@ describe('Dialog', () => {
       <Dialog
         open
         title="Text Heading"
-        description="Body text"
+
         maskClosable={false}
         onOk={jest.fn()}
         onCancel={onCancel}
@@ -127,7 +126,7 @@ describe('Dialog', () => {
         size={DIALOG_SIZE.large}
         showBackIcon
         title="Text Heading"
-        description="Body text"
+
         onBack={onBack}
         onOk={jest.fn()}
         onCancel={jest.fn()}

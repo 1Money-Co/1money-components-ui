@@ -63,7 +63,6 @@ const meta: Meta<typeof Dialog> = {
   },
   args: {
     title: 'Text Heading',
-    description: 'Body text',
     onOk: fn(),
     onCancel: fn(),
   },
@@ -120,11 +119,22 @@ export const WithMedia: Story = {
   args: {
     size: DIALOG_SIZE.small,
     title: 'Text Heading',
-    description: 'Body text',
     showCloseIcon: false,
     okText: 'Button',
     cancelText: 'Button',
     media: <MediaPlaceholder />,
+  },
+  render: (args) => <DialogLauncher {...args} />,
+};
+
+export const WithRewardsIllustration: Story = {
+  args: {
+    size: DIALOG_SIZE.small,
+    illustration: 'illusRewards',
+    title: 'Rewards',
+    children: 'You have earned a reward! Check your balance for details.',
+    okText: 'Claim',
+    cancelText: 'Later',
   },
   render: (args) => <DialogLauncher {...args} />,
 };
@@ -134,7 +144,6 @@ export const CustomContent: Story = {
     size: DIALOG_SIZE.small,
     title: 'Security check required',
     illustration: <Icons name="illusLocked" size={74} />,
-    description: undefined,
     children: (
       <>
         <TypographyBody size="md" strong color="default-secondary">

@@ -278,6 +278,29 @@ export const IllusPasskey: FC<IconWrapperProps & IllustrationsCustomProps> = ({ 
   );
 };
 
+export const IllusRewards: FC<IconWrapperProps & IllustrationsCustomProps> = ({ borderColor = DEFAULT_BORDER_COLOR, gradientColor = DEFAULT_GRADIENT_COLOR, ...rest }) => {
+  const gradientId = useId();
+  return (
+    <IconWrapper viewBox="0 0 74 74" {...rest}>
+      <g transform="translate(10 6)">
+        <path fillRule="evenodd" clipRule="evenodd" d="M17 60H16.5V62H17H21H25H29H33H37H37.5V60H37H33H29H25H21H17Z" fill={borderColor} />
+        <circle cx="27" cy="27" r="27" fill="white" />
+        <circle cx="27" cy="27" r="26" stroke={borderColor} strokeWidth="2" fill="transparent" />
+        <circle cx="26.997" cy="27.0009" r="20.1064" fill={`url(#${gradientId})`} />
+        <circle cx="26.997" cy="27.0009" r="19.6064" stroke={borderColor} fill="transparent" />
+        <g transform="translate(15 15)">
+          <path fillRule="evenodd" clipRule="evenodd" d="M10.2468 4.11554C11.0062 2.73216 12.9937 2.73216 13.7531 4.11554L15.7768 7.80168L19.9078 8.58718C21.4582 8.88197 22.0723 10.7722 20.9914 11.9219L18.111 14.9856L18.6405 19.1572C18.8392 20.7228 17.2313 21.891 15.8038 21.2182L12 19.4255L8.19615 21.2182C6.76862 21.891 5.16072 20.7228 5.35944 19.1572L5.88895 14.9856L3.00856 11.9219C1.92757 10.7722 2.54174 8.88197 4.09209 8.58718L8.22315 7.80168L10.2468 4.11554ZM12 5.078L9.52274 9.5904L4.46569 10.552L7.99173 14.3024L7.34352 19.409L12 17.2145L16.6564 19.409L16.0082 14.3024L19.5342 10.552L14.4772 9.5904L12 5.078Z" fill={borderColor} />
+        </g>
+      </g>
+      <defs>
+        <linearGradient id={gradientId} x1="36.997" y1="12.89453" x2="36.997" y2="53.1073" gradientUnits="userSpaceOnUse">
+          {renderGradientStops(gradientColor)}
+        </linearGradient>
+      </defs>
+    </IconWrapper>
+  );
+};
+
 export const IllusPending: FC<IconWrapperProps & IllustrationsCustomProps> = ({ borderColor = DEFAULT_BORDER_COLOR, color = DEFAULT_PENDING_COLOR, gradientColor = DEFAULT_GRADIENT_COLOR, ...rest }) => {
   const gradientId = useId();
   return (

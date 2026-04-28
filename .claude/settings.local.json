@@ -135,7 +135,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:6206)",
       "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/node_modules/.pnpm/@babel+runtime*/node_modules/@babel/runtime/helpers/esm/)",
       "Bash(ls *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "mcp__figma-remote-mcp__get_screenshot"
     ]
   }
 }

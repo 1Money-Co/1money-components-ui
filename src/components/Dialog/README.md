@@ -16,7 +16,6 @@ import { Dialog } from '@1money/components-ui/Dialog';
 <Dialog
   open={open}
   title="Confirm transfer"
-  description="Review the details before submitting."
   onCancel={() => setOpen(false)}
   onOk={handleSubmit}
 />
@@ -33,9 +32,8 @@ import { Dialog } from '@1money/components-ui/Dialog';
 | `showBackIcon` | `boolean` | `false` | Shows the back button |
 | `fullWidth` | `boolean` | `false` | Uses the full-width dialog layout |
 | `title` | `ReactNode` | — | Title content |
-| `description` | `ReactNode` | — | Description below the title |
 | `children` | `ReactNode` | — | Main dialog body content |
-| `illustration` | `ReactNode \| IconName` | — | Illustration rendered above the summary copy |
+| `illustration` | `ReactNode \| IconName` | — | Illustration rendered above the title |
 | `media` | `ReactNode` | — | Media area rendered before the dialog content |
 | `closeIcon` | `ReactNode` | `cross` icon | Custom close icon |
 | `backIcon` | `ReactNode` | `arrowLeft` icon | Custom back icon |
