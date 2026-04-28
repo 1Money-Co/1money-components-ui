@@ -17658,8 +17658,8 @@
       "name": "typography-headline-xs",
       "scss": "$om-typography-headline['xs']",
       "cssVar": "--om-typography-typography-headline-xs",
-      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
-      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
       "kind": "typography",
       "layer": "semantic"
     },
