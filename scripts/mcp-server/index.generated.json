@@ -1422,6 +1422,118 @@
       ]
     },
     {
+      "name": "Clipboard",
+      "kind": "component",
+      "category": "input",
+      "summary": "",
+      "importPath": "@1money/component-ui",
+      "subpathImport": "@1money/component-ui/Copy",
+      "sourceFile": "src/components/Copy/Clipboard.tsx",
+      "props": [
+        {
+          "name": "content",
+          "type": "string",
+          "optional": false,
+          "default": null,
+          "description": "The text content to display and copy to clipboard",
+          "inheritedFrom": null
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Optional label rendered above the content card",
+          "inheritedFrom": null
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS class names for the root element",
+          "inheritedFrom": null
+        },
+        {
+          "name": "labelCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS class names for the label",
+          "inheritedFrom": null
+        },
+        {
+          "name": "prefixCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "CSS class name prefix (default: 'clipboard')",
+          "inheritedFrom": null
+        },
+        {
+          "name": "onSuccess",
+          "type": "(value: string) => void",
+          "optional": true,
+          "default": null,
+          "description": "Callback fired when the copy operation succeeds",
+          "inheritedFrom": null
+        },
+        {
+          "name": "onError",
+          "type": "(value: string) => void",
+          "optional": true,
+          "default": null,
+          "description": "Callback fired when the copy operation fails",
+          "inheritedFrom": null
+        }
+      ],
+      "extends": [],
+      "relatedSymbols": [
+        "ClipboardProps",
+        "Copy",
+        "CopyProps"
+      ],
+      "searchTags": [
+        "clipboard",
+        "copy",
+        "copy to clipboard",
+        "copyable field",
+        "secret field"
+      ],
+      "canonicalUsage": "import { Clipboard } from '@1money/components-ui';\n\n<Clipboard\n  label=\"Setup Key\"\n  content=\"GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU\"\n  onSuccess={(v) => console.log(v)}\n/>",
+      "examples": [
+        {
+          "hash": "75fc55f93a5502c927a0f7967cd25465c98417b3afe02ec8880531efc12a3362",
+          "source": "canonical"
+        }
+      ]
+    },
+    {
+      "name": "ClipboardProps",
+      "kind": "type",
+      "category": "input",
+      "summary": "",
+      "importPath": "@1money/component-ui",
+      "subpathImport": "@1money/component-ui/Copy",
+      "sourceFile": "src/components/Copy/interface.ts",
+      "props": [],
+      "extends": [],
+      "relatedSymbols": [
+        "Clipboard",
+        "Copy",
+        "CopyProps"
+      ],
+      "searchTags": [],
+      "typeText": "interface ClipboardProps { ... }",
+      "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';",
+      "examples": [
+        {
+          "hash": "95dc922235c54890ef40e287095692b232702132d592073e3c6b66efd6929f50",
+          "source": "canonical"
+        }
+      ]
+    },
+    {
       "name": "CoachMark",
       "kind": "component",
       "category": "overlay",
@@ -1779,9 +1891,15 @@
       ],
       "extends": [],
       "relatedSymbols": [
+        "Clipboard",
+        "ClipboardProps",
         "CopyProps"
       ],
-      "searchTags": [],
+      "searchTags": [
+        "clipboard",
+        "copy",
+        "copy to clipboard"
+      ],
       "canonicalUsage": "import { Copy } from '@1money/components-ui';\n// or\nimport { Copy } from '@1money/components-ui/Copy';",
       "examples": [
         {
@@ -1797,7 +1915,19 @@
           "source": "readme"
         },
         {
+          "hash": "69f29e0647a74609f6aaa9ea3dc6ffa3559143861f405d2fd72e046abddd390a",
+          "source": "readme"
+        },
+        {
+          "hash": "6ea2fa87fa2050f0e9e5f271bfbcac33d12cf62034f24d55257ec9955430ef59",
+          "source": "readme"
+        },
+        {
           "hash": "144e248f0e0e1f5a681bdd8625add8d71643d3cca3f40bd840d914b057970d9a",
+          "source": "stories"
+        },
+        {
+          "hash": "deeed04202c3f64b444b70c4f7e483cfb165662a2c6508394c229835f70cf112",
           "source": "stories"
         }
       ]
@@ -1813,6 +1943,8 @@
       "props": [],
       "extends": [],
       "relatedSymbols": [
+        "Clipboard",
+        "ClipboardProps",
         "Copy"
       ],
       "searchTags": [],
@@ -17658,8 +17790,8 @@
       "name": "typography-headline-xs",
       "scss": "$om-typography-headline['xs']",
       "cssVar": "--om-typography-typography-headline-xs",
-      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
-      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 18px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "value": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
+      "resolved": "(\n    font-family: $om-font-display,\n    font-weight: $om-font-weight-medium,\n    font-size: 16px,\n    line-height: 26px,\n    letter-spacing: $om-tracking-none,\n  )",
       "kind": "typography",
       "layer": "semantic"
     },
