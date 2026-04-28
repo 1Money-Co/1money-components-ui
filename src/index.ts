@@ -6,7 +6,7 @@ export { Cell } from './components/Cell';
 export { Carousel } from './components/Carousel';
 export { Checkbox, CheckboxGroup } from './components/Checkbox';
 export { CoachMark } from './components/CoachMark';
-export { Copy } from './components/Copy';
+export { Copy, Clipboard } from './components/Copy';
 export { Divider } from './components/Divider';
 export { Empty } from './components/Empty';
 export { Flex } from './components/Flex';
@@ -83,7 +83,7 @@ export type {
   CheckboxGroupOption,
 } from './components/Checkbox';
 export type { CoachMarkProps, CoachMarkPlacement, CoachMarkStep, CoachMarkLabels } from './components/CoachMark';
-export type { CopyProps } from './components/Copy';
+export type { CopyProps, ClipboardProps } from './components/Copy';
 export type { DividerProps, DividerType, DividerOrientation, DividerVariant } from './components/Divider';
 export type { EmptyProps } from './components/Empty';
 export type { FlexProps } from './components/Flex';
