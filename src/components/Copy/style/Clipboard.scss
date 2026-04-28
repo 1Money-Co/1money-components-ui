@@ -1,0 +1,29 @@
+@use '@/styles/api' as theme;
+
+$component: 'clipboard';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  gap: theme.spacing(gap, 200);
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    gap: theme.spacing(gap, 200);
+    align-items: center;
+    justify-content: space-between;
+    padding: theme.spacing(scale, 200) theme.spacing(scale, 400);
+    background-color: theme.palette(bg, 'default-secondary');
+    border: 1px solid theme.palette(border, 'neutral');
+    border-radius: theme.shape(300);
+
+    &-text {
+      display: inline-block;
+      margin: 0;
+      color: theme.palette(text, 'default-tertiary');
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+}

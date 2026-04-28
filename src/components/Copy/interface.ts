@@ -26,3 +26,26 @@ export interface CopyProps {
   /** Callback fired when copy fails */
   onError?: (value: string) => void;
 }
+
+export interface ClipboardProps {
+  /** The text content to display and copy to clipboard */
+  content: string;
+
+  /** Optional label rendered above the content card */
+  label?: string;
+
+  /** Additional CSS class names for the root element */
+  className?: string;
+
+  /** Additional CSS class names for the label */
+  labelCls?: string;
+
+  /** CSS class name prefix (default: 'clipboard') */
+  prefixCls?: string;
+
+  /** Callback fired when the copy operation succeeds */
+  onSuccess?: (value: string) => void;
+
+  /** Callback fired when the copy operation fails */
+  onError?: (value: string) => void;
+}

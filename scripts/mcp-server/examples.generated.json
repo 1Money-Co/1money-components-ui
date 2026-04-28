@@ -919,6 +919,12 @@
       "source": "stories",
       "compilable": false
     },
+    "69f29e0647a74609f6aaa9ea3dc6ffa3559143861f405d2fd72e046abddd390a": {
+      "title": "Import",
+      "code": "import { Clipboard } from '@1money/components-ui';\n// or\nimport { Clipboard } from '@1money/components-ui/Copy';",
+      "source": "readme",
+      "compilable": true
+    },
     "6a4d77a29ff76bfcd465b53ac79952fae765bb337ef3ca2affc7781ce487a74f": {
       "title": "With Icon End",
       "code": "<Button {...args} iconEnd={<Icons name=\"arrowRight\" />}>\n      Icon End\n    </Button>",
@@ -959,6 +965,12 @@
       "title": "Canonical usage",
       "code": "import {\n  ProForm,\n  ProFormText,\n  ProFormSelect,\n  DialogForm,\n  QueryFilter,\n} from '@1money/components-ui';\n// or\nimport { ProForm, ProFormText } from '@1money/components-ui/ProForm';",
       "source": "canonical",
+      "compilable": true
+    },
+    "6ea2fa87fa2050f0e9e5f271bfbcac33d12cf62034f24d55257ec9955430ef59": {
+      "title": "Usage",
+      "code": "<Clipboard\n  label=\"Setup Key\"\n  content=\"GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU\"\n  onSuccess={(val) => console.log('Copied:', val)}\n  onError={(val) => console.log('Failed:', val)}\n/>",
+      "source": "readme",
       "compilable": true
     },
     "6f2b7da00479a6033fdaca36f0646a924c61cbf09cd0e07da6948a884af98a61": {
@@ -1014,6 +1026,12 @@
       "code": "<ProForm\n      {...args}\n      initialValues={{}}\n      onFinish={(values) => alert('Success: ' + JSON.stringify(values))}\n    >\n      <ProFormText\n        name=\"username\"\n        label=\"Username\"\n        rules={[\n          { required: true, message: 'Username is required' },\n          { min: 3, message: 'At least 3 characters' },\n          { max: 20, message: 'At most 20 characters' },\n        ]}\n      />\n      <ProFormText\n        name=\"email\"\n        label=\"Email\"\n        rules={[\n          { required: true, message: 'Email is required' },\n          { pattern: /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/, message: 'Invalid email' },\n        ]}\n      />\n      <ProFormPassword\n        name=\"password\"\n        label=\"Password\"\n        rules={[\n          { required: true },\n          { min: 8, message: 'At least 8 characters' },\n        ]}\n      />\n      <ProFormCheckbox\n        name=\"terms\"\n        label=\"I accept the terms\"\n        rules={[\n          {\n            validator: (value) => {\n              if (!value) return 'You must accept the terms';\n              return true;\n            },\n          },\n        ]}\n      />\n    </ProForm>",
       "source": "stories",
       "compilable": false
+    },
+    "75fc55f93a5502c927a0f7967cd25465c98417b3afe02ec8880531efc12a3362": {
+      "title": "Canonical usage",
+      "code": "import { Clipboard } from '@1money/components-ui';\n\n<Clipboard\n  label=\"Setup Key\"\n  content=\"GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU\"\n  onSuccess={(v) => console.log(v)}\n/>",
+      "source": "canonical",
+      "compilable": true
     },
     "76052e611a155b488f8eee38973e3b050274bc58b0a974f66b8c9a55e77e28b6": {
       "title": "Canonical usage",
@@ -1955,6 +1973,12 @@
       "title": "Canonical usage",
       "code": "import type { PopconfirmActionContext } from '@1money/component-ui';",
       "source": "canonical",
+      "compilable": true
+    },
+    "deeed04202c3f64b444b70c4f7e483cfb165662a2c6508394c229835f70cf112": {
+      "title": "Clipboard Field",
+      "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 16}}>\n      <Clipboard\n        label=\"Setup Key\"\n        content=\"GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU\"\n        onSuccess={COPY_SUCCESS}\n        onError={COPY_ERROR}\n      />\n      <Clipboard\n        content=\"0x96789C2b0f47B3F7BbEcbB5C12a2d0eA5d9afd89\"\n        onSuccess={COPY_SUCCESS}\n        onError={COPY_ERROR}\n      />\n    </div>",
+      "source": "stories",
       "compilable": true
     },
     "df516870a4f3b627969e2e1b0c6fc40fccc4ccb0fb7c04a34e5e169a928de479": {

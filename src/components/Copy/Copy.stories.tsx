@@ -1,7 +1,7 @@
 import React from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { Copy } from './index';
+import { Copy, Clipboard } from './index';
 import { notification } from '@/components/Notification';
 
 import './style';
@@ -53,6 +53,25 @@ export const AllVariants: Story = {
       <div>
         <Copy {...args} contained={false} />
       </div>
+    </div>
+  ),
+  tags: ['!autodocs', 'dev'],
+};
+
+export const ClipboardField: StoryObj<typeof Clipboard> = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16}}>
+      <Clipboard
+        label="Setup Key"
+        content="GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU"
+        onSuccess={COPY_SUCCESS}
+        onError={COPY_ERROR}
+      />
+      <Clipboard
+        content="0x96789C2b0f47B3F7BbEcbB5C12a2d0eA5d9afd89"
+        onSuccess={COPY_SUCCESS}
+        onError={COPY_ERROR}
+      />
     </div>
   ),
   tags: ['!autodocs', 'dev'],

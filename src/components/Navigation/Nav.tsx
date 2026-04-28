@@ -16,6 +16,7 @@ const isIconName = (icon: NavItemType['icon']): icon is IconName =>
 export const Nav: FC<NavProps> = props => {
   const {
     className = '',
+    bodyCls = '',
     prefixCls = 'nav',
     items,
     ...rest
@@ -28,7 +29,7 @@ export const Nav: FC<NavProps> = props => {
 
   return (
     <nav className={classes(void 0, className)} {...rest}>
-      <div className={classes('content')}>
+      <div className={classes('content', bodyCls)}>
         {items
           .filter(item => !item.hidden)
           .map((item, index) => (
