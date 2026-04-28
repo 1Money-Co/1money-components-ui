@@ -19,18 +19,18 @@ exports[`Clipboard renders content only 1`] = `
           <i
             class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
             role="button"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             tabindex="0"
           >
             <svg
               class="om-component-ui-icons"
               fill="none"
-              height="20"
+              height="16"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="20"
+              width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -64,18 +64,18 @@ exports[`Clipboard renders content only 1`] = `
         <i
           class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
           role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           tabindex="0"
         >
           <svg
             class="om-component-ui-icons"
             fill="none"
-            height="20"
+            height="16"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="20"
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -171,18 +171,18 @@ exports[`Clipboard renders content with label 1`] = `
           <i
             class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
             role="button"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             tabindex="0"
           >
             <svg
               class="om-component-ui-icons"
               fill="none"
-              height="20"
+              height="16"
               preserveAspectRatio="xMidYMid meet"
               shape-rendering="geometricPrecision"
               stroke="none"
               viewBox="0 0 24 24"
-              width="20"
+              width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -221,18 +221,18 @@ exports[`Clipboard renders content with label 1`] = `
         <i
           class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
           role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 20px; --icon-height: 20px;"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           tabindex="0"
         >
           <svg
             class="om-component-ui-icons"
             fill="none"
-            height="20"
+            height="16"
             preserveAspectRatio="xMidYMid meet"
             shape-rendering="geometricPrecision"
             stroke="none"
             viewBox="0 0 24 24"
-            width="20"
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
