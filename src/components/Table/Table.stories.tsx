@@ -78,6 +78,7 @@ const sectionTitleStyle: CSSProperties = {
 
 const hintStyle: CSSProperties = {
   marginBottom: 12,
+  display: 'block'
 };
 
 const figmaFrameStyle: CSSProperties = {
@@ -117,7 +118,7 @@ const expandedPanelStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   gap: 16,
-  padding: '0 0 16px 64px',
+  padding: '0 0 16px 24px',
 };
 
 const groupStyle: CSSProperties = {
@@ -128,12 +129,14 @@ const groupStyle: CSSProperties = {
 
 const accountCardStyle: CSSProperties = {
   display: 'grid',
-  gridTemplateColumns: 'minmax(240px, 1.2fr) minmax(220px, 1fr) auto',
+  gridTemplateColumns: '396fr 360fr 120fr',
   alignItems: 'center',
-  gap: 16,
-  padding: 12,
   background: '#ffffff',
   borderRadius: 12,
+};
+
+const accountCardCellStyle: CSSProperties = {
+  padding: '12px',
 };
 
 const accountActionsStyle: CSSProperties = {
@@ -228,7 +231,7 @@ const activityStatusCellStyle: CSSProperties = {
 const activityDetailsPanelStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  margin: -12,
+  margin: '0 -16px',
   background: '#f8f8f8',
 };
 
@@ -236,8 +239,11 @@ const activityDetailRowStyle: CSSProperties = {
   display: 'grid',
   gridTemplateColumns: '280fr 360fr 360fr 88fr',
   alignItems: 'center',
-  padding: '16px',
   columnGap: 0,
+};
+
+const activityDetailCellStyle: CSSProperties = {
+  padding: '16px 12px',
 };
 
 const BANK_ACCOUNT_GROUPS: WalletGroup[] = [
@@ -623,30 +629,36 @@ const WalletDetailsPanel = ({ record }: { record: WalletRegistryRow }) => (
                 className="om-component-ui-table-expandable-account-card"
                 style={accountCardStyle}
               >
-                <div style={walletCellStyle}>
-                  <FlagBadge flag={account.countryFlag} size={24} />
-                  <TypographyTitle size="sm" strong>
-                    {account.bankName}
-                  </TypographyTitle>
+                <div style={{ ...accountCardCellStyle }}>
+                  <div style={walletCellStyle}>
+                    <FlagBadge flag={account.countryFlag} size={24} />
+                    <TypographyTitle size="sm" strong>
+                      {account.bankName}
+                    </TypographyTitle>
+                  </div>
                 </div>
-                <TypographyBody size="md" color="default-tertiary">
-                  {account.rail}
-                </TypographyBody>
-                <div style={accountActionsStyle}>
-                  <Tag
-                    color={statusTag.color}
-                    label={statusTag.label}
-                    removable={false}
-                  />
-                  <Button size="small" color="grey">
-                    Send
-                  </Button>
-                  <Button
-                    size="small"
-                    color="grey"
-                    aria-label={`Open ${account.bankName}`}
-                    iconStart={<Icons name="arrowRight" size={16} />}
-                  />
+                <div style={{ ...accountCardCellStyle }}>
+                  <TypographyBody size="md" color="default-tertiary">
+                    {account.rail}
+                  </TypographyBody>
+                </div>
+                <div style={{ ...accountCardCellStyle }}>
+                  <div style={accountActionsStyle}>
+                    <Tag
+                      color={statusTag.color}
+                      label={statusTag.label}
+                      removable={false}
+                    />
+                    <Button size="small" color="grey">
+                      Send
+                    </Button>
+                    <Button
+                      size="small"
+                      color="grey"
+                      aria-label={`Open ${account.bankName}`}
+                      iconStart={<Icons name="arrowRight" size={16} />}
+                    />
+                  </div>
                 </div>
               </div>
             );
@@ -911,13 +923,17 @@ const ActivityLedgerDetailsPanel = ({
   <div style={activityDetailsPanelStyle}>
     {details.map((detail) => (
       <div key={detail.id} style={activityDetailRowStyle}>
-        <div />
-        <ActivityRuleCell ruleName={detail.ruleName} />
-        <ActivityAmountCell
-          cryptoAmount={detail.cryptoAmount}
-          fiatAmount={detail.fiatAmount}
-        />
-        <div style={activityStatusCellStyle}>
+        <div style={activityDetailCellStyle} />
+        <div style={activityDetailCellStyle}>
+          <ActivityRuleCell ruleName={detail.ruleName} />
+        </div>
+        <div style={activityDetailCellStyle}>
+          <ActivityAmountCell
+            cryptoAmount={detail.cryptoAmount}
+            fiatAmount={detail.fiatAmount}
+          />
+        </div>
+        <div style={{ ...activityDetailCellStyle, ...activityStatusCellStyle }}>
           <ActivityStatusTag />
         </div>
       </div>

@@ -163,16 +163,6 @@ function makeSortTransform<T>(config: UseTableColumnsConfig<T>): ColumnTransform
     });
 }
 
-const SPACER_COLUMN_CLS = 'om-component-ui-table-cell--spacer';
-
-function makeSpacerTransform<T>(): ColumnTransform<T> {
-  return (columns) => [
-    { key: '__spacer_start__', width: 16, title: '', className: SPACER_COLUMN_CLS, render: () => null },
-    ...columns,
-    { key: '__spacer_end__', width: 16, title: '', className: SPACER_COLUMN_CLS, render: () => null },
-  ];
-}
-
 function makeRenderTransform<T>(): ColumnTransform<T> {
   return (columns) =>
     columns.map((column) => {
@@ -221,9 +211,6 @@ export function useTableColumns<T>(config: UseTableColumnsConfig<T>) {
     }
     transforms.push(makeSortTransform(config));
     transforms.push(makeRenderTransform<T>());
-    if (variant === 'stroke') {
-      transforms.push(makeSpacerTransform<T>());
-    }
 
     return transforms.reduce((cols, fn) => fn(cols), columns);
   }, [

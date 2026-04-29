@@ -228,18 +228,73 @@ $component: 'om-component-ui-table';
   }
 
   &-stroke {
+    // Remove native borders — replaced by ::after pseudo-elements
     .#{$component}-thead > tr > th,
     .#{$component}-thead > tr > td {
       border-bottom: none;
     }
 
-
-    // Spacer columns: no border, no padding
-    .#{$component}-thead > tr > th.#{$component}-cell--spacer,
-    .#{$component}-thead > tr > td.#{$component}-cell--spacer,
-    .#{$component}-tbody > tr > td.#{$component}-cell--spacer {
-      padding: 0;
+    .#{$component}-tbody > tr > td {
       border-bottom: none;
+
+      // Inset border line via pseudo-element
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        background: theme.palette(border, 'neutral');
+        content: '';
+      }
+    }
+
+    // First cell: inset border 16px from left + extra padding
+    .#{$component}-thead > tr > :first-child,
+    .#{$component}-tbody > tr > :first-child {
+      padding-left: calc(#{theme.spacing(component-padding, 400)} + 16px);
+
+      &::after {
+        left: 16px;
+      }
+    }
+
+    // Last cell: inset border 16px from right + extra padding
+    .#{$component}-thead > tr > :last-child,
+    .#{$component}-tbody > tr > :last-child {
+      padding-right: calc(#{theme.spacing(component-padding, 400)} + 16px);
+
+      &::after {
+        right: 16px;
+      }
+    }
+
+    // Last row: no border
+    .#{$component}-tbody > tr:last-child > td::after,
+    .#{$component}-tbody > tr:has(+ .#{$component}-expanded-row:last-child) > td::after {
+      display: none;
+    }
+
+    // Small size overrides
+    &.#{$component}-small {
+      .#{$component}-thead > tr > :first-child,
+      .#{$component}-tbody > tr > :first-child {
+        padding-left: calc(#{theme.spacing(component-padding, 300)} + 16px);
+      }
+
+      .#{$component}-thead > tr > :last-child,
+      .#{$component}-tbody > tr > :last-child {
+        padding-right: calc(#{theme.spacing(component-padding, 300)} + 16px);
+      }
+    }
+
+    // Expanded row cell: edge padding only, no border pseudo-element
+    .#{$component}-tbody .#{$component}-expanded-row > td {
+      padding: 0 16px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
