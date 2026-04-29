@@ -6,7 +6,7 @@ $component: 'navigation-stepper';
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: 100%;
+  height: 100vh;
   padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
   color: theme.palette(text, 'default');
   background-color: theme.palette(bg, 'default');
