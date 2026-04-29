@@ -6,7 +6,7 @@ $component: 'navigation';
   display: flex;
   flex-direction: column;
   gap: theme.spacing(scale, 600);
-  width: 281px;
+  width: 280px;
   height: 100vh;
   padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
   background-color: theme.palette(bg, 'default');
@@ -403,7 +403,7 @@ $component: 'navigation';
   // ── Collapsed state ──
   &-collapsed {
     align-items: center;
-    width: 85px;
+    width: 84px;
     padding: theme.spacing(scale, 1000) theme.spacing(scale, 100) theme.spacing(scale, 600);
 
     .#{theme.$prefix}-#{$component}-header {

@@ -5694,6 +5694,14 @@
           "inheritedFrom": null
         },
         {
+          "name": "betaLogo",
+          "type": "boolean",
+          "optional": true,
+          "default": null,
+          "description": "Whether to render the logo with the BETA tag",
+          "inheritedFrom": null
+        },
+        {
           "name": "steps",
           "type": "NavigationStepperStep[]",
           "optional": false,
