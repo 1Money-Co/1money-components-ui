@@ -137,6 +137,8 @@ export interface NavigationStepperProps {
   footerCls?: string;
   /** Click handler for the logo button */
   onLogoClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  /** Whether to render the logo with the BETA tag */
+  betaLogo?: boolean;
   /** Step items rendered in order */
   steps: NavigationStepperStep[];
   /** Optional footer content (e.g. auto-saved timestamp) */
