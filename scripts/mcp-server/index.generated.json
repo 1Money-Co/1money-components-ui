@@ -5299,7 +5299,11 @@
         "Navigation",
         "NavigationHandlers",
         "NavigationItem",
-        "NavigationProps"
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [],
       "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
@@ -5326,7 +5330,11 @@
         "Navigation",
         "NavigationHandlers",
         "NavigationItem",
-        "NavigationProps"
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [],
       "typeText": "interface NavItem { ... }",
@@ -5354,7 +5362,11 @@
         "Navigation",
         "NavigationHandlers",
         "NavigationItem",
-        "NavigationProps"
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [],
       "typeText": "interface NavProps { ... }",
@@ -5479,7 +5491,11 @@
         "NavProps",
         "NavigationHandlers",
         "NavigationItem",
-        "NavigationProps"
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [
         "menu"
@@ -5524,7 +5540,11 @@
         "NavProps",
         "Navigation",
         "NavigationItem",
-        "NavigationProps"
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [],
       "typeText": "interface NavigationHandlers { ... }",
@@ -5552,7 +5572,11 @@
         "NavProps",
         "Navigation",
         "NavigationHandlers",
-        "NavigationProps"
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [],
       "typeText": "interface NavigationItem { ... }",
@@ -5580,10 +5604,222 @@
         "NavProps",
         "Navigation",
         "NavigationHandlers",
-        "NavigationItem"
+        "NavigationItem",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
       ],
       "searchTags": [],
       "typeText": "interface NavigationProps { ... }",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
+          "source": "canonical"
+        }
+      ]
+    },
+    {
+      "name": "NavigationStepper",
+      "kind": "component",
+      "category": "navigation",
+      "summary": "",
+      "importPath": "@1money/component-ui",
+      "subpathImport": "@1money/component-ui/Navigation",
+      "sourceFile": "src/components/Navigation/NavigationStepper.tsx",
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Root element id",
+          "inheritedFrom": null
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS classes for the root <aside> element",
+          "inheritedFrom": null
+        },
+        {
+          "name": "prefixCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "CSS class prefix",
+          "inheritedFrom": null
+        },
+        {
+          "name": "logoCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS classes for the logo button",
+          "inheritedFrom": null
+        },
+        {
+          "name": "headerCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS classes for the header container",
+          "inheritedFrom": null
+        },
+        {
+          "name": "bodyCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS classes for the steps list",
+          "inheritedFrom": null
+        },
+        {
+          "name": "footerCls",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Additional CSS classes for the footer",
+          "inheritedFrom": null
+        },
+        {
+          "name": "onLogoClick",
+          "type": "(e: MouseEvent<HTMLButtonElement>) => void",
+          "optional": true,
+          "default": null,
+          "description": "Click handler for the logo button",
+          "inheritedFrom": null
+        },
+        {
+          "name": "steps",
+          "type": "NavigationStepperStep[]",
+          "optional": false,
+          "default": null,
+          "description": "Step items rendered in order",
+          "inheritedFrom": null
+        },
+        {
+          "name": "footer",
+          "type": "ReactNode",
+          "optional": true,
+          "default": null,
+          "description": "Optional footer content (e.g.",
+          "inheritedFrom": null
+        }
+      ],
+      "extends": [],
+      "relatedSymbols": [
+        "Nav",
+        "NavItem",
+        "NavProps",
+        "Navigation",
+        "NavigationHandlers",
+        "NavigationItem",
+        "NavigationProps",
+        "NavigationStepperProps",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
+      ],
+      "searchTags": [],
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
+          "source": "canonical"
+        }
+      ]
+    },
+    {
+      "name": "NavigationStepperProps",
+      "kind": "type",
+      "category": "navigation",
+      "summary": "",
+      "importPath": "@1money/component-ui",
+      "subpathImport": "@1money/component-ui/Navigation",
+      "sourceFile": "src/components/Navigation/interface.ts",
+      "props": [],
+      "extends": [],
+      "relatedSymbols": [
+        "Nav",
+        "NavItem",
+        "NavProps",
+        "Navigation",
+        "NavigationHandlers",
+        "NavigationItem",
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperStep",
+        "NavigationStepperStepStatus"
+      ],
+      "searchTags": [],
+      "typeText": "interface NavigationStepperProps { ... }",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
+          "source": "canonical"
+        }
+      ]
+    },
+    {
+      "name": "NavigationStepperStep",
+      "kind": "type",
+      "category": "navigation",
+      "summary": "",
+      "importPath": "@1money/component-ui",
+      "subpathImport": "@1money/component-ui/Navigation",
+      "sourceFile": "src/components/Navigation/interface.ts",
+      "props": [],
+      "extends": [],
+      "relatedSymbols": [
+        "Nav",
+        "NavItem",
+        "NavProps",
+        "Navigation",
+        "NavigationHandlers",
+        "NavigationItem",
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStepStatus"
+      ],
+      "searchTags": [],
+      "typeText": "interface NavigationStepperStep { ... }",
+      "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
+      "examples": [
+        {
+          "hash": "e26c609980f32c5d66ccd1ee1a5d53d3cf09e63f85e94f7adf9acc57bfdc7276",
+          "source": "canonical"
+        }
+      ]
+    },
+    {
+      "name": "NavigationStepperStepStatus",
+      "kind": "type",
+      "category": "navigation",
+      "summary": "",
+      "importPath": "@1money/component-ui",
+      "subpathImport": "@1money/component-ui/Navigation",
+      "sourceFile": "src/components/Navigation/interface.ts",
+      "props": [],
+      "extends": [],
+      "relatedSymbols": [
+        "Nav",
+        "NavItem",
+        "NavProps",
+        "Navigation",
+        "NavigationHandlers",
+        "NavigationItem",
+        "NavigationProps",
+        "NavigationStepper",
+        "NavigationStepperProps",
+        "NavigationStepperStep"
+      ],
+      "searchTags": [],
+      "typeText": "'todo' | 'active' | 'done' | 'done-active'",
       "canonicalUsage": "import { Navigation, Nav } from '@1money/components-ui';\n// or\nimport { Navigation, Nav } from '@1money/components-ui/Navigation';",
       "examples": [
         {
@@ -12449,6 +12685,22 @@
           "inheritedFrom": null
         },
         {
+          "name": "strokeWidth",
+          "type": "number | string",
+          "optional": true,
+          "default": null,
+          "description": "Stroke width of the spinner circle (default variant only)",
+          "inheritedFrom": null
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "optional": true,
+          "default": null,
+          "description": "Stroke color of the spinner circle (default variant only).",
+          "inheritedFrom": null
+        },
+        {
           "name": "title",
           "type": "string",
           "optional": true,
@@ -12507,7 +12759,7 @@
           "source": "readme"
         },
         {
-          "hash": "5545418d49fc7cdc897ea3ab29b0c7e5326b5e6a7321eec41eece864275198a0",
+          "hash": "4895812cb79aa79fb84516e490b4c561eb58035282a76289658040eca8e5f69c",
           "source": "stories"
         }
       ]

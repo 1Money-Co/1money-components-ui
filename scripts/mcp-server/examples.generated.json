@@ -649,6 +649,12 @@
       "source": "stories",
       "compilable": false
     },
+    "4895812cb79aa79fb84516e490b4c561eb58035282a76289658040eca8e5f69c": {
+      "title": "All Variants",
+      "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n        <h3>Default</h3>\n        <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>\n          <Spinner size={20} color=\"#646464\" />\n          <Spinner size={32} />\n          <Spinner size={48} />\n        </div>\n      </div>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n        <h3>Brand</h3>\n        <Spinner type=\"brand\" size={64} title=\"Loading\" />\n      </div>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n        <h3>Brand + BG</h3>\n        <Spinner type=\"brand-bg\" size={74} title=\"Loading\" body=\"Body text\" />\n      </div>\n    </div>",
+      "source": "stories",
+      "compilable": true
+    },
     "48f6ebde7546d7db844b0cd43bd6e6ec6956746f93c55167fda6a2cd84599a3e": {
       "title": "No Animation",
       "code": "<Segment items={DEFAULT_ITEMS} animated={false} />",
@@ -755,12 +761,6 @@
       "title": "Canonical usage",
       "code": "<IconWrapper />",
       "source": "canonical",
-      "compilable": true
-    },
-    "5545418d49fc7cdc897ea3ab29b0c7e5326b5e6a7321eec41eece864275198a0": {
-      "title": "All Variants",
-      "code": "<div style={{ display: 'flex', flexDirection: 'column', gap: 48 }}>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n        <h3>Default</h3>\n        <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>\n          <Spinner size={20} />\n          <Spinner size={32} />\n          <Spinner size={48} />\n        </div>\n      </div>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n        <h3>Brand</h3>\n        <Spinner type=\"brand\" size={32} title=\"Loading\" />\n      </div>\n      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>\n        <h3>Brand + BG</h3>\n        <Spinner type=\"brand-bg\" size={74} title=\"Loading\" body=\"Body text\" />\n      </div>\n    </div>",
-      "source": "stories",
       "compilable": true
     },
     "5694ed3a17a8aaa5d7736cb50c6e16eff3b03b29a74afbbd401544ec9a894672": {
