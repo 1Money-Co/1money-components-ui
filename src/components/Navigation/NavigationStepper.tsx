@@ -21,6 +21,7 @@ export const NavigationStepper: FC<NavigationStepperProps> = props => {
     footerCls,
     logoCls,
     onLogoClick,
+    betaLogo,
     footer,
   } = props;
   const classes = classnames(prefixCls);
@@ -38,7 +39,7 @@ export const NavigationStepper: FC<NavigationStepperProps> = props => {
           onClick={handleLogoClick}
           aria-label={LOGO_BUTTON_ARIA_LABEL}
         >
-          <NavigationLogo />
+          <NavigationLogo betaLogo={betaLogo} />
         </button>
       </div>
       <ul className={classes('steps', bodyCls)}>
