@@ -102,3 +102,43 @@ export interface NavProps {
   /** Navigation items — top-level items with children render as groups */
   items: NavItem[];
 }
+
+// ── NavigationStepper Component ──
+
+export type NavigationStepperStepStatus = 'todo' | 'active' | 'done' | 'done-active';
+
+export interface NavigationStepperStep {
+  /** Unique key for the step */
+  key: string;
+  /** Display label */
+  label: ReactNode;
+  /** Step status — drives styling and trailing icon */
+  status: NavigationStepperStepStatus;
+  /** Whether the step is disabled */
+  disabled?: boolean;
+  /** Click handler */
+  onClick?: (step: NavigationStepperStep) => void;
+}
+
+export interface NavigationStepperProps {
+  /** Root element id */
+  id?: string;
+  /** Additional CSS classes for the root <aside> element */
+  className?: string;
+  /** CSS class prefix */
+  prefixCls?: string;
+  /** Additional CSS classes for the logo button */
+  logoCls?: string;
+  /** Additional CSS classes for the header container */
+  headerCls?: string;
+  /** Additional CSS classes for the steps list */
+  bodyCls?: string;
+  /** Additional CSS classes for the footer */
+  footerCls?: string;
+  /** Click handler for the logo button */
+  onLogoClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  /** Step items rendered in order */
+  steps: NavigationStepperStep[];
+  /** Optional footer content (e.g. auto-saved timestamp) */
+  footer?: ReactNode;
+}

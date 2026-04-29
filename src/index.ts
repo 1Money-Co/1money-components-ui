@@ -17,7 +17,7 @@ export { Drawer } from './components/Drawer';
 export { Dropdown } from './components/Dropdown';
 export { Link } from './components/Link';
 export { Dialog } from './components/Dialog';
-export { Navigation, Nav } from './components/Navigation';
+export { Navigation, Nav, NavigationStepper } from './components/Navigation';
 export { notification } from './components/Notification';
 export {
   Portal,
@@ -120,7 +120,16 @@ export type {
 } from './components/Dropdown';
 export type { LinkProps, LinkColor, LinkSize } from './components/Link';
 export type { DialogProps, DialogSize, DialogFooterRender } from './components/Dialog';
-export type { NavigationProps, NavigationItem, NavigationHandlers, NavProps, NavItem } from './components/Navigation';
+export type {
+  NavigationProps,
+  NavigationItem,
+  NavigationHandlers,
+  NavProps,
+  NavItem,
+  NavigationStepperProps,
+  NavigationStepperStep,
+  NavigationStepperStepStatus,
+} from './components/Navigation';
 export type {
   NotificationLinkConfig,
   NotificationStatus,

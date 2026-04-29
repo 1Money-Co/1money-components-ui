@@ -10,6 +10,10 @@ export interface SpinnerProps extends Omit<HTMLAttributes<HTMLDivElement>, 'titl
   type?: SpinnerType;
   /** Size in pixels */
   size?: number;
+  /** Stroke width of the spinner circle (default variant only) */
+  strokeWidth?: number | string;
+  /** Stroke color of the spinner circle (default variant only). Has no effect on brand / brand-bg variants */
+  color?: string;
   /** Title text shown below the logo (brand / brand-bg) */
   title?: string;
   /** Body text shown below the title (brand / brand-bg) */

@@ -1,8 +1,9 @@
 import 'jsdom-global/register';
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Navigation, Nav } from '../index';
+import { Navigation, Nav, NavigationStepper } from '../index';
+import type { NavigationStepperStep } from '../interface';
 
 const originalConsoleError = console.error;
 console.error = (message, ...optionalParams) => {
@@ -137,5 +138,57 @@ describe('Nav', () => {
       <Nav items={items} />
     );
     expect(wrapper).toMatchSnapshot();
+  });
+});
+
+const MOCK_STEPPER_STEPS: NavigationStepperStep[] = [
+  { key: '1', label: '1. Business Overview', status: 'done' },
+  { key: '2', label: '2. Business Address', status: 'active' },
+  { key: '3', label: '3. Tax Information', status: 'done-active' },
+  { key: '4', label: '4. Business Details', status: 'todo' },
+  { key: '5', label: '5. Compliance Details', status: 'todo', disabled: true },
+];
+
+describe('NavigationStepper', () => {
+  it('renders correctly', () => {
+    const wrapper = render(
+      <NavigationStepper steps={MOCK_STEPPER_STEPS} footer={<span>Auto-saved</span>} />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders without footer', () => {
+    const wrapper = render(
+      <NavigationStepper
+        steps={[
+          { key: '1', label: 'Identity', status: 'done' },
+          { key: '2', label: 'Verification', status: 'active' },
+          { key: '3', label: 'Review', status: 'todo' },
+        ]}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('invokes onClick for enabled steps and skips disabled ones', () => {
+    const onStepClick = jest.fn();
+    const onLogoClick = jest.fn();
+    const steps: NavigationStepperStep[] = [
+      { key: '1', label: 'Step 1', status: 'done', onClick: onStepClick },
+      { key: '2', label: 'Step 2', status: 'todo', disabled: true, onClick: onStepClick },
+    ];
+    const { getByText, getByLabelText } = render(
+      <NavigationStepper steps={steps} onLogoClick={onLogoClick} />
+    );
+
+    fireEvent.click(getByText('Step 1'));
+    expect(onStepClick).toHaveBeenCalledTimes(1);
+    expect(onStepClick).toHaveBeenCalledWith(steps[0]);
+
+    fireEvent.click(getByText('Step 2'));
+    expect(onStepClick).toHaveBeenCalledTimes(1);
+
+    fireEvent.click(getByLabelText('Sidebar logo'));
+    expect(onLogoClick).toHaveBeenCalledTimes(1);
   });
 });

@@ -49,6 +49,8 @@ export const Spinner: FC<SpinnerProps> = props => {
     prefixCls = 'spinner',
     type = 'default',
     size = DEFAULT_SIZE,
+    strokeWidth = 4,
+    color,
     title,
     body,
     ...rest
@@ -121,7 +123,7 @@ export const Spinner: FC<SpinnerProps> = props => {
       {...rest}
       role="progressbar"
       className={classes(void 0, className)}
-      style={{ width: size, height: size, ...style }}
+      style={{ width: size, height: size, ...style, ...(color ? { color } : null) }}
     >
       <svg className={classes('circle')} viewBox="0 0 50 50">
         <circle
@@ -130,7 +132,7 @@ export const Spinner: FC<SpinnerProps> = props => {
           cy="25"
           r="20"
           fill="none"
-          strokeWidth="4"
+          strokeWidth={strokeWidth}
         />
       </svg>
     </div>
