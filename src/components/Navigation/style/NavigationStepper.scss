@@ -1,0 +1,90 @@
+@use '@/styles/api' as theme;
+
+$component: 'navigation-stepper';
+
+.#{theme.$prefix}-#{$component} {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100%;
+  padding: theme.spacing(scale, 1000) theme.spacing(scale, 400) theme.spacing(scale, 600);
+  color: theme.palette(text, 'default');
+  background-color: theme.palette(bg, 'default');
+  border-right: 1px solid theme.palette(border, 'neutral');
+
+  &-header {
+    display: flex;
+    align-items: center;
+    padding: 0 theme.spacing(scale, 200);
+
+    &-logo {
+      display: inline-flex;
+      padding: 0;
+      color: inherit;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px solid theme.palette(border, 'brand');
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &-steps {
+    display: flex;
+    flex-direction: column;
+    gap: theme.spacing(gap, 200);
+    width: 100%;
+    margin: theme.spacing(scale, 800) 0 0;
+    padding: 0;
+    list-style: none;
+
+    .#{theme.$prefix}-#{$component}-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: theme.spacing(scale, 400) theme.spacing(scale, 300);
+      color: theme.palette(text, 'default-secondary');
+      background-color: transparent;
+      border-radius: theme.shape(300);
+      cursor: pointer;
+
+      &-label {
+        flex: 1;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      &-active {
+        color: theme.palette(text, 'default');
+        background-color: theme.palette(bg, 'brand-tertiary');
+      }
+
+      &-done {
+        color: theme.palette(text, 'default');
+
+        &-active {
+          color: theme.palette(text, 'default');
+          background-color: theme.palette(bg, 'brand-tertiary');
+        }
+      }
+
+      &-disabled {
+        color: theme.palette(text, 'disabled');
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-footer {
+    margin-top: auto;
+    color: theme.palette(text, 'default-secondary');
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+  }
+}

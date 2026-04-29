@@ -31,14 +31,14 @@ export const AllVariants: Story = {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <h3>Default</h3>
         <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
-          <Spinner size={20} />
+          <Spinner size={20} color="#646464" />
           <Spinner size={32} />
           <Spinner size={48} />
         </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <h3>Brand</h3>
-        <Spinner type="brand" size={32} title="Loading" />
+        <Spinner type="brand" size={64} title="Loading" />
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         <h3>Brand + BG</h3>
