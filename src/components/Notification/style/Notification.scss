@@ -108,7 +108,7 @@ $notification-motion-duration: 240ms;
 
   --notification-motion-offset: calc(100% + #{theme.spacing(scale, 300)});
 
-  width: min(400px, calc(100vw - #{theme.spacing(component-padding, 400)} * 2));
+  width: 375px;
   max-width: calc(100vw - #{theme.spacing(component-padding, 400)} * 2);
   pointer-events: none;
 
