@@ -4,7 +4,6 @@ import { notification } from '@/components/Notification';
 import { Tooltip } from '@/components/Tooltip';
 import classnames from '@/utils/classnames';
 import type { AnchorHTMLAttributes, CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react';
-import type { TypographyCategory } from './interface';
 import type { TypographyTextTag } from './constants';
 import type { TypographyEnhancementResult, TypographyTextPresentationOptions } from './useTypographyEnhancements';
 import { getTypographyClassName } from './utils';
@@ -54,7 +53,7 @@ export function buildTypographyTextNodeProps(
     className: getTypographyClassName({
       prefixCls,
       className,
-      category: category as TypographyCategory,
+      category,
       size,
       color,
       strong,

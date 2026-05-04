@@ -3,7 +3,7 @@ import type {
   HTMLAttributeAnchorTarget,
   MouseEventHandler,
   ReactNode,
-  RefObject,
+  Ref,
 } from 'react';
 
 /**
@@ -36,7 +36,7 @@ export interface NotificationLinkConfig {
 }
 
 export interface NotificationProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
-  ref?: RefObject<HTMLDivElement | null>;
+  ref?: Ref<HTMLDivElement>;
 
   /** CSS class prefix for BEM namespace customization */
   prefixCls?: string;

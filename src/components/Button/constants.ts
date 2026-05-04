@@ -27,6 +27,7 @@ export const BUTTON_COLOR = {
   black: 'black',
   white: 'white',
   danger: 'danger',
+  positive: 'positive',
   warning: 'warning',
 } as const;
 
@@ -37,6 +38,7 @@ export const BUTTON_COLORS = [
   BUTTON_COLOR.black,
   BUTTON_COLOR.white,
   BUTTON_COLOR.danger,
+  BUTTON_COLOR.positive,
   BUTTON_COLOR.warning,
 ] as const;
 

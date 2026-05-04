@@ -16,11 +16,65 @@ exports[`Clipboard renders content only 1`] = `
           >
             GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU
           </span>
-          <i
-            class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
+          <span
+            aria-label="Copy"
+            class="om-component-ui-copy om-component-ui-clipboard-content-icon"
             role="button"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             tabindex="0"
+          >
+            <i
+              class="om-component-ui-icons-wrapper"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
+            >
+              <svg
+                class="om-component-ui-icons"
+                fill="none"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                shape-rendering="geometricPrecision"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7 4C7 2.34315 8.34315 1 10 1H20C21.6569 1 23 2.34315 23 4V14C23 15.6569 21.6569 17 20 17H10C8.34315 17 7 15.6569 7 14V4ZM10 3C9.44772 3 9 3.44772 9 4V14C9 14.5523 9.44772 15 10 15H20C20.5523 15 21 14.5523 21 14V4C21 3.44772 20.5523 3 20 3H10Z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M4 9C3.44772 9 3 9.44772 3 10V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V16H17V20C17 21.6569 15.6569 23 14 23H4C2.34315 23 1 21.6569 1 20V10C1 8.34315 2.34315 7 4 7H8V9H4Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-component-ui-clipboard"
+    >
+      <div
+        class="om-component-ui-clipboard-content"
+      >
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-clipboard-content-text"
+        >
+          GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU
+        </span>
+        <span
+          aria-label="Copy"
+          class="om-component-ui-copy om-component-ui-clipboard-content-icon"
+          role="button"
+          tabindex="0"
+        >
+          <i
+            class="om-component-ui-icons-wrapper"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-component-ui-icons"
@@ -45,51 +99,7 @@ exports[`Clipboard renders content only 1`] = `
               />
             </svg>
           </i>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="om-component-ui-clipboard"
-    >
-      <div
-        class="om-component-ui-clipboard-content"
-      >
-        <span
-          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-clipboard-content-text"
-        >
-          GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU
         </span>
-        <i
-          class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
-          role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          tabindex="0"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="none"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M7 4C7 2.34315 8.34315 1 10 1H20C21.6569 1 23 2.34315 23 4V14C23 15.6569 21.6569 17 20 17H10C8.34315 17 7 15.6569 7 14V4ZM10 3C9.44772 3 9 3.44772 9 4V14C9 14.5523 9.44772 15 10 15H20C20.5523 15 21 14.5523 21 14V4C21 3.44772 20.5523 3 20 3H10Z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M4 9C3.44772 9 3 9.44772 3 10V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V16H17V20C17 21.6569 15.6569 23 14 23H4C2.34315 23 1 21.6569 1 20V10C1 8.34315 2.34315 7 4 7H8V9H4Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
       </div>
     </div>
   </div>,
@@ -168,11 +178,70 @@ exports[`Clipboard renders content with label 1`] = `
           >
             GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU
           </span>
-          <i
-            class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
+          <span
+            aria-label="Copy"
+            class="om-component-ui-copy om-component-ui-clipboard-content-icon"
             role="button"
-            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
             tabindex="0"
+          >
+            <i
+              class="om-component-ui-icons-wrapper"
+              style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
+            >
+              <svg
+                class="om-component-ui-icons"
+                fill="none"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                shape-rendering="geometricPrecision"
+                stroke="none"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M7 4C7 2.34315 8.34315 1 10 1H20C21.6569 1 23 2.34315 23 4V14C23 15.6569 21.6569 17 20 17H10C8.34315 17 7 15.6569 7 14V4ZM10 3C9.44772 3 9 3.44772 9 4V14C9 14.5523 9.44772 15 10 15H20C20.5523 15 21 14.5523 21 14V4C21 3.44772 20.5523 3 20 3H10Z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M4 9C3.44772 9 3 9.44772 3 10V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V16H17V20C17 21.6569 15.6569 23 14 23H4C2.34315 23 1 21.6569 1 20V10C1 8.34315 2.34315 7 4 7H8V9H4Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="om-component-ui-clipboard"
+    >
+      <label
+        class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-typography-strong om-component-ui-clipboard-label"
+      >
+        Setup Key
+      </label>
+      <div
+        class="om-component-ui-clipboard-content"
+      >
+        <span
+          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-clipboard-content-text"
+        >
+          GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU
+        </span>
+        <span
+          aria-label="Copy"
+          class="om-component-ui-copy om-component-ui-clipboard-content-icon"
+          role="button"
+          tabindex="0"
+        >
+          <i
+            class="om-component-ui-icons-wrapper"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
           >
             <svg
               class="om-component-ui-icons"
@@ -197,56 +266,7 @@ exports[`Clipboard renders content with label 1`] = `
               />
             </svg>
           </i>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="om-component-ui-clipboard"
-    >
-      <label
-        class="om-component-ui-typography om-component-ui-typography-label om-component-ui-typography-label-lg om-component-ui-typography-strong om-component-ui-clipboard-label"
-      >
-        Setup Key
-      </label>
-      <div
-        class="om-component-ui-clipboard-content"
-      >
-        <span
-          class="om-component-ui-typography om-component-ui-typography-body om-component-ui-typography-body-lg om-component-ui-clipboard-content-text"
-        >
-          GWKLDLVE25dfLIJOHUD578JPIHD24JLJGHGOUH27HLIHOUGOLIKHJ547HOU
         </span>
-        <i
-          class="om-component-ui-icons-wrapper om-component-ui-copy om-component-ui-clipboard-content-icon"
-          role="button"
-          style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; color: currentColor; font-style: normal; --icon-color: currentColor; --icon-width: 16px; --icon-height: 16px;"
-          tabindex="0"
-        >
-          <svg
-            class="om-component-ui-icons"
-            fill="none"
-            height="16"
-            preserveAspectRatio="xMidYMid meet"
-            shape-rendering="geometricPrecision"
-            stroke="none"
-            viewBox="0 0 24 24"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M7 4C7 2.34315 8.34315 1 10 1H20C21.6569 1 23 2.34315 23 4V14C23 15.6569 21.6569 17 20 17H10C8.34315 17 7 15.6569 7 14V4ZM10 3C9.44772 3 9 3.44772 9 4V14C9 14.5523 9.44772 15 10 15H20C20.5523 15 21 14.5523 21 14V4C21 3.44772 20.5523 3 20 3H10Z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M4 9C3.44772 9 3 9.44772 3 10V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V16H17V20C17 21.6569 15.6569 23 14 23H4C2.34315 23 1 21.6569 1 20V10C1 8.34315 2.34315 7 4 7H8V9H4Z"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </i>
       </div>
     </div>
   </div>,
@@ -310,6 +330,7 @@ exports[`Copy renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
+        aria-label="Copy"
         class="om-component-ui-copy-inner"
         role="button"
         tabindex="0"
@@ -346,6 +367,7 @@ exports[`Copy renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
+      aria-label="Copy"
       class="om-component-ui-copy-inner"
       role="button"
       tabindex="0"

@@ -136,7 +136,10 @@
       "Bash(ls /Users/derrick/Desktop/1money/1money-components-ui/node_modules/.pnpm/@babel+runtime*/node_modules/@babel/runtime/helpers/esm/)",
       "Bash(ls *)",
       "Bash(npm run *)",
-      "mcp__figma-remote-mcp__get_screenshot"
+      "mcp__figma-remote-mcp__get_screenshot",
+      "Bash(find /Users/derrick/Desktop/1money/1money-components-ui/src/components -name \"*.stories.tsx\" -exec wc -l {} \\\\;)",
+      "Bash(awk '{sum+=$1} END {print \"Average stories lines:\", sum/NR}')",
+      "Bash(find /Users/derrick/Desktop/1money/1money-components-ui/src/components -name \"*.tsx\" -type f -exec grep -l \"forwardRef\" {} \\\\;)"
     ]
   }
 }

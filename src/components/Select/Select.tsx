@@ -38,7 +38,7 @@ import SelectFieldShell from './SelectFieldShell';
 import SelectOptionContent from './SelectOptionContent';
 import SelectSearchControl from './SelectSearchControl';
 import SelectValueContent from './SelectValueContent';
-import { SELECT_TYPOGRAPHY } from './constants';
+import { KEYBOARD, SELECT_TYPOGRAPHY } from './constants';
 import {
   extractOptionText,
   filterOptionGroups,
@@ -98,7 +98,6 @@ export const Select: FC<SelectProps> = (props) => {
     renderOption,
     renderValue,
     ref,
-    ...rest
   } = props;
 
   const classes = rootClassnames(prefixCls);
@@ -353,13 +352,13 @@ export const Select: FC<SelectProps> = (props) => {
       return;
     }
 
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === KEYBOARD.ENTER || event.key === KEYBOARD.SPACE) {
       event.preventDefault();
       handleOpenChange(!innerOpen);
       return;
     }
 
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+    if (event.key === KEYBOARD.ARROW_DOWN || event.key === KEYBOARD.ARROW_UP) {
       event.preventDefault();
       if (!innerOpen) {
         handleOpenChange(true);
@@ -393,21 +392,21 @@ export const Select: FC<SelectProps> = (props) => {
   });
 
   const handleSearchKeyDown = useEventCallback((event: ReactKeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'ArrowDown' && firstEnabledIndex >= 0) {
+    if (event.key === KEYBOARD.ARROW_DOWN && firstEnabledIndex >= 0) {
       event.preventDefault();
       setActiveIndex(firstEnabledIndex);
       listRef.current[firstEnabledIndex]?.focus({ preventScroll: true });
       return;
     }
 
-    if (event.key === 'ArrowUp' && lastEnabledIndex !== null) {
+    if (event.key === KEYBOARD.ARROW_UP && lastEnabledIndex !== null) {
       event.preventDefault();
       setActiveIndex(lastEnabledIndex);
       listRef.current[lastEnabledIndex]?.focus({ preventScroll: true });
       return;
     }
 
-    if (event.key === 'Escape') {
+    if (event.key === KEYBOARD.ESCAPE) {
       event.preventDefault();
       handleOpenChange(false);
       triggerRef.current?.focus({ preventScroll: true });
@@ -571,7 +570,7 @@ export const Select: FC<SelectProps> = (props) => {
 
                           return (
                             <button
-                              key={option.value}
+                              key={`${group.key}-${option.value}`}
                               {...getItemProps({
                                 ref(node: HTMLButtonElement | null) {
                                   listRef.current[optionFlatIndex] = node;

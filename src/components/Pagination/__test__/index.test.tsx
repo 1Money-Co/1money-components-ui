@@ -3,7 +3,7 @@ import * as React from 'react';
 import { act, render, renderHook, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { Pagination, usePagination } from '../index';
+import { Pagination, usePagination, PAGINATION_ITEM_TYPE } from '../index';
 
 const originalConsoleError = console.error;
 const PAGINATION_CHEVRON_LEFT_PATH = 'M6.94922 11.9155L13.5884 4.83128L15.0506 6.20165L9.69584 11.9154L15.052 17.6295L13.5899 19L6.94922 11.9155Z';
@@ -27,7 +27,7 @@ afterAll(() => {
 });
 
 const getLabels = (items: ReturnType<typeof usePagination>['items']) => items.map(item => {
-  if (item.type === 'page') {
+  if (item.type === PAGINATION_ITEM_TYPE.page) {
     return item.page;
   }
 

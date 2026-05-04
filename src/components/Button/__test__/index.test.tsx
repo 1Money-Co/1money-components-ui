@@ -9,6 +9,7 @@ import '@testing-library/jest-dom';
 import { Icons } from '@/components/Icons';
 import {
   BUTTON_COLOR,
+  BUTTON_COLORS,
   BUTTON_DEFAULT_HTML_TYPE,
   BUTTON_DEFAULT_PREFIX,
   BUTTON_ICON_INHERIT_COLOR,
@@ -171,9 +172,37 @@ describe('Button', () => {
     expect(stylesSource).toContain(
       "'warning': (\n    text: theme.palette(text, 'default'),\n    bg: theme.palette(bg, 'warning'),\n    hover-bg: theme.palette(bg, 'warning-hover'),\n    disabled-text: theme.palette(text, 'disabled'),\n    disabled-bg: theme.palette(bg, 'warning-secondary-hover'),"
     );
+    expect(BUTTON_COLORS).toContain('positive');
+    expect(stylesSource).toContain(
+      "'positive': (\n    text: theme.palette(text, 'positive'),\n    bg: theme.palette(bg, 'positive-secondary'),\n    hover-bg: theme.palette(bg, 'positive-secondary-hover'),\n    disabled-text: theme.palette(text, 'positive-secondary'),\n    disabled-bg: theme.palette(bg, 'positive-tertiary'),"
+    );
     expect(stylesSource).toContain(
       "&-text-danger {\n    --om-button-text: #{theme.palette(text, 'danger')};\n    --om-button-hover-text: #{theme.palette(text, 'on-danger-secondary')};\n    --om-button-disabled-text: #{theme.palette(text, 'danger-secondary')};"
     );
+    expect(stylesSource).toContain(
+      "&-text-positive {\n    --om-button-text: #{theme.palette(text, 'positive')};\n    --om-button-hover-text: #{theme.palette(text, 'on-positive-secondary')};\n    --om-button-disabled-text: #{theme.palette(text, 'positive-secondary')};"
+    );
+  });
+
+  it('renders text variant with positive color modifier', () => {
+    render(
+      <Button
+        variant={BUTTON_VARIANT.text}
+        color={BUTTON_COLOR.positive}
+        size={BUTTON_SIZE.medium}
+        data-testid="text-positive-btn"
+      >
+        Success
+      </Button>
+    );
+
+    const button = screen.getByTestId('text-positive-btn');
+
+    expect(button.className).toContain(getButtonClassName(BUTTON_VARIANT.text));
+    expect(button.className).toContain(
+      getButtonClassName(`${BUTTON_VARIANT.text}-${BUTTON_COLOR.positive}`)
+    );
+    expect(button.className).not.toContain(getButtonClassName(BUTTON_COLOR.positive));
   });
 
   it('preserves explicit icon color and sizing props', () => {

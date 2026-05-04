@@ -9,6 +9,7 @@ export {
 export * from './constants';
 
 export type {
+  NotificationProps,
   NotificationLinkConfig,
   NotificationStatus,
   NotificationPlacement,

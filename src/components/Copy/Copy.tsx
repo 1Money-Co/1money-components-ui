@@ -17,6 +17,7 @@ export const Copy: FC<CopyProps> = props => {
     color,
     successColor = '#1F5800',
     contained = true,
+    'aria-label': ariaLabel = 'Copy',
     className,
     prefixCls = 'copy',
     onSuccess,
@@ -54,15 +55,25 @@ export const Copy: FC<CopyProps> = props => {
       name={copied ? 'check' : 'copy'}
       size={iconSize}
       color={copied ? (successColor ?? color) : color}
-      wrapperCls={contained ? undefined : classes(
-        void 0,
-        joinCls(copied && classes('copied'), className),
-      )}
-      onClick={contained ? undefined : handleClick}
     />
   );
 
-  if (!contained) return icon;
+  if (!contained) {
+    return (
+      <span
+        className={classes(
+          void 0,
+          joinCls(copied && classes('copied'), className),
+        )}
+        onClick={handleClick}
+        role="button"
+        aria-label={ariaLabel}
+        tabIndex={0}
+      >
+        {icon}
+      </span>
+    );
+  }
 
   return (
     <div
@@ -72,6 +83,7 @@ export const Copy: FC<CopyProps> = props => {
       )}
       onClick={handleClick}
       role="button"
+      aria-label={ariaLabel}
       tabIndex={0}
     >
       {icon}

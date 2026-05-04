@@ -14,6 +14,9 @@ export interface CopyProps {
   /** Whether to show the background container around the icon (default: true) */
   contained?: boolean;
 
+  /** Accessible label for the copy button (default: 'Copy') */
+  'aria-label'?: string;
+
   /** Additional CSS class names */
   className?: string;
 

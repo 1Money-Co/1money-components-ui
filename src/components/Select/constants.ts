@@ -1,5 +1,13 @@
 import type { TypographyBodySize, TypographyColor, TypographyLabelSize } from '@/components/Typography';
 
+export const KEYBOARD = {
+  ENTER: 'Enter',
+  SPACE: ' ',
+  ARROW_DOWN: 'ArrowDown',
+  ARROW_UP: 'ArrowUp',
+  ESCAPE: 'Escape',
+} as const;
+
 interface SelectTypographyConfig {
   label: {
     size: TypographyLabelSize;

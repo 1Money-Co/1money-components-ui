@@ -127,7 +127,7 @@ const normalizeAdornment = (adornment: ReactNode, size: ButtonSize) => {
 /**
  * Core button component.
  *
- * Supports two variants (`contained` | `text`), seven color tones, three sizes,
+ * Supports two variants (`contained` | `text`), eight color tones, three sizes,
  * optional start/end icon adornments, a loading state (replaces start icon with
  * a spinner), and rounded mode.
  *

@@ -70,8 +70,10 @@ const PaginationBase = forwardRef<HTMLElement, PaginationProps>((props, ref) => 
   const handleListClick = useEventCallback((e: React.MouseEvent<HTMLUListElement>) => {
     const button = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-page]');
 
-    if (button?.dataset.page) {
-      goTo(Number(button.dataset.page));
+    const page = Number(button?.dataset.page);
+
+    if (page && !Number.isNaN(page)) {
+      goTo(page);
     }
   });
 

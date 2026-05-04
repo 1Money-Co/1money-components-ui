@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { useResizeObserver } from '@/components/ResizeObserver';
 import type { CSSProperties, ReactNode } from 'react';
 import type { TooltipProps } from '@/components/Tooltip';
-import type { TypographyEllipsisConfig, TypographyCopyableConfig } from './interface';
+import type { TypographyCategory, TypographyEllipsisConfig, TypographyCopyableConfig } from './interface';
 import type { TypographyLayoutMode, TypographyTextTag } from './constants';
 import { DEFAULT_TYPOGRAPHY_TOOLTIP_MIDDLEWARES, DEFAULT_TYPOGRAPHY_TOOLTIP_PLACEMENT } from './constants';
 import type { ResolvedTypographyEllipsisConfig } from './utils';
@@ -43,7 +43,7 @@ export interface TypographyEnhancementResult {
 export interface TypographyTextPresentationOptions {
   prefixCls: string;
   className?: string;
-  category: string;
+  category: TypographyCategory;
   size: string;
   color?: string;
   strong?: boolean;
@@ -124,7 +124,7 @@ export function useTypographyEnhancements(
     setIsOverflowed(node.scrollWidth > node.clientWidth);
   });
 
-  const getMeasureNode = useEventCallback(() => measureNodeRef.current!);
+  const getMeasureNode = useEventCallback(() => measureNodeRef.current ?? document.createElement('span'));
 
   useResizeObserver(ellipsisEnabled && !!measureNodeRef.current, getMeasureNode, measureOverflow);
 
