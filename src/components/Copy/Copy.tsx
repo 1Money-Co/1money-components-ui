@@ -10,7 +10,7 @@ import './style';
 const DEFAULT_ICON_SIZE = 20;
 const COPIED_DURATION = 1500;
 
-export const Copy: FC<CopyProps> = props => {
+const CopyInner: FC<CopyProps> = props => {
   const {
     value,
     iconSize = DEFAULT_ICON_SIZE,
@@ -91,4 +91,6 @@ export const Copy: FC<CopyProps> = props => {
   );
 };
 
-export default memo(Copy);
+export const Copy = memo(CopyInner);
+
+export default Copy;

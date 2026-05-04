@@ -5,14 +5,7 @@ import { default as classnames, joinCls } from '@/utils/classnames';
 import BaseCheckbox from './BaseCheckbox';
 import { CheckboxGroupContext } from './CheckboxGroupContext';
 import './style';
-import {
-  CHECKBOX_DESCRIPTION_COLOR_DEFAULT,
-  CHECKBOX_DESCRIPTION_COLOR_DISABLED,
-  CHECKBOX_DESCRIPTION_SIZE,
-  CHECKBOX_LABEL_COLOR_DEFAULT,
-  CHECKBOX_LABEL_COLOR_DISABLED,
-  CHECKBOX_LABEL_SIZE,
-} from './constants';
+import { CHECKBOX } from './constants';
 import type { FC } from 'react';
 import type { CheckboxChangeEvent, CheckboxProps } from './interface';
 
@@ -104,14 +97,15 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
     />
   );
 
-  const labelColor = disabled ? CHECKBOX_LABEL_COLOR_DISABLED : CHECKBOX_LABEL_COLOR_DEFAULT;
-  const descriptionColor = disabled ? CHECKBOX_DESCRIPTION_COLOR_DISABLED : CHECKBOX_DESCRIPTION_COLOR_DEFAULT;
+  const colorKey = disabled ? 'disabled' : 'default';
+  const labelColor = CHECKBOX.label.color[colorKey];
+  const descriptionColor = CHECKBOX.description.color[colorKey];
 
   const labelElement = (label || description) && (
     <span className={classes('content')}>
-      {label && <TypographyBody className={classes('label')} size={CHECKBOX_LABEL_SIZE} strong color={labelColor}>{label}</TypographyBody>}
+      {label && <TypographyBody className={classes('label')} size={CHECKBOX.label.size} strong color={labelColor}>{label}</TypographyBody>}
       {description && (
-        <TypographyBody className={classes('description')} size={CHECKBOX_DESCRIPTION_SIZE} strong color={descriptionColor}>{description}</TypographyBody>
+        <TypographyBody className={classes('description')} size={CHECKBOX.description.size} strong color={descriptionColor}>{description}</TypographyBody>
       )}
     </span>
   );

@@ -8,7 +8,7 @@ import './style';
 
 const COPY_ICON_SIZE = 16;
 
-export const Clipboard: FC<ClipboardProps> = props => {
+const ClipboardInner: FC<ClipboardProps> = props => {
   const {
     content,
     className,
@@ -49,4 +49,6 @@ export const Clipboard: FC<ClipboardProps> = props => {
   );
 };
 
-export default memo(Clipboard);
+export const Clipboard = memo(ClipboardInner);
+
+export default Clipboard;

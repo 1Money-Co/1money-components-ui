@@ -5,17 +5,10 @@ import { Typography } from '@/components/Typography';
 import { default as classnames, joinCls } from '@/utils/classnames';
 import type { FC } from 'react';
 import type { AccordionItem, AccordionProps } from './interface';
+import { ACCORDION } from './constants';
 import './style';
 
-const FILL_ICON_OPEN = 'minus' as const;
-const FILL_ICON_CLOSED = 'add' as const;
-const STROKE_ICON_OPEN = 'chevronUp' as const;
-const STROKE_ICON_CLOSED = 'chevronDown' as const;
-
-const LARGE_ICON_SIZE = 24;
-const SMALL_ICON_SIZE = 20;
-
-export const Accordion: FC<AccordionProps> = props => {
+const AccordionInner: FC<AccordionProps> = props => {
   const {
     className = '',
     prefixCls = 'accordion',
@@ -52,7 +45,7 @@ export const Accordion: FC<AccordionProps> = props => {
     onChange?.(nextKeys);
   });
 
-  const iconSize = size === 'large' ? LARGE_ICON_SIZE : SMALL_ICON_SIZE;
+  const iconSize = ACCORDION.iconSize[size];
 
   return (
     <div
@@ -66,9 +59,7 @@ export const Accordion: FC<AccordionProps> = props => {
         const isActive = currentKeys.includes(item.key);
         const isDisabled = item.disabled;
 
-        const iconName = variant === 'fill'
-          ? (isActive ? FILL_ICON_OPEN : FILL_ICON_CLOSED)
-          : (isActive ? STROKE_ICON_OPEN : STROKE_ICON_CLOSED);
+        const iconName = ACCORDION.icon[variant][isActive ? 'open' : 'closed'];
 
         return (
           <div
@@ -118,4 +109,6 @@ export const Accordion: FC<AccordionProps> = props => {
   );
 };
 
-export default memo(Accordion);
+export const Accordion = memo(AccordionInner);
+
+export default Accordion;
